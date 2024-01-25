@@ -12,7 +12,7 @@ fn test_new() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let binding = get_test_context();
     let context = Some(&binding);
 
@@ -27,7 +27,7 @@ fn test_id() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let binding = get_test_context();
     let context = Some(&binding);
 
@@ -43,7 +43,7 @@ fn test_author() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let binding = get_test_context();
     let context = Some(&binding);
 
@@ -59,7 +59,7 @@ fn test_description() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let binding = get_test_context();
     let context = Some(&binding);
 
@@ -76,7 +76,7 @@ fn test_assumptions() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let binding = get_test_context();
     let context = Some(&binding);
 
@@ -94,17 +94,17 @@ fn test_causaloid() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let binding = get_test_context();
     let context = Some(&binding);
 
-    let model = Model::new(id, author, description, assumptions, causaloid, context);
+    let model = Model::new(id, author, description, assumptions, causaloid.clone(), context);
 
     assert_eq!(model.id(), id);
     assert_eq!(*model.author(), author);
     assert_eq!(*model.description(), description);
     assert!(model.assumptions().is_none());
-    assert_eq!(*model.causaloid(), causaloid);
+    assert_eq!(model.causaloid(), &causaloid);
 }
 
 #[test]
@@ -113,7 +113,7 @@ fn test_context() {
     let author = "John Doe";
     let description = "This is a test model";
     let assumptions = None;
-    let causaloid = &get_test_causaloid();
+    let causaloid = get_test_causaloid();
     let context = get_test_context();
 
     let model = Model::new(
@@ -121,7 +121,7 @@ fn test_context() {
         author,
         description,
         assumptions,
-        causaloid,
+        causaloid.clone(),
         Some(&context),
     );
 
@@ -129,7 +129,7 @@ fn test_context() {
     assert_eq!(*model.author(), author);
     assert_eq!(*model.description(), description);
     assert!(model.assumptions().is_none());
-    assert_eq!(*model.causaloid(), causaloid);
+    assert_eq!(model.causaloid(), &causaloid);
     assert!(model.context().is_some());
     assert_eq!(model.context().unwrap().id(), id);
 }

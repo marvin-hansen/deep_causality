@@ -30,8 +30,8 @@ where
     id: u64,
     author: &'l str,
     description: &'l str,
-    assumptions: Option<&'l Vec<&'l Assumption>>,
-    causaloid: &'l Causaloid<'l, D, S, T, ST, V>,
+    assumptions: Option<Vec<&'l Assumption>>,
+    causaloid: Causaloid<'l, D, S, T, ST, V>,
     context: Option<&'l Context<'l, D, S, T, ST, V>>,
 }
 
