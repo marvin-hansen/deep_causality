@@ -1,6 +1,6 @@
-use std::hash::Hash;
 // SPDX-License-Identifier: MIT
 // Copyright (c) "2023" . Marvin Hansen <marvin.hansen@gmail.com> All rights reserved.
+use std::hash::Hash;
 use std::ops::*;
 
 use deep_causality_macros::{Constructor, Getters};

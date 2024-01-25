@@ -50,8 +50,8 @@ where
     context_causal_fn: Option<ContextualCausalDataFn<'l, D, S, T, ST, V>>,
     context: Option<&'l Context<'l, D, S, T, ST, V>>,
     has_context: bool,
-    causal_coll: Option<&'l CausalVec<'l, D, S, T, ST, V>>,
-    causal_graph: Option<&'l CausalGraph<'l, D, S, T, ST, V>>,
+    causal_coll: Option<CausalVec<'l, D, S, T, ST, V>>,
+    causal_graph: Option<CausalGraph<'l, D, S, T, ST, V>>,
     description: &'l str,
     ty: PhantomData<V>,
 }
@@ -122,7 +122,7 @@ where
     /// about the correctness of the causal graph.
     pub fn from_causal_collection(
         id: IdentificationValue,
-        causal_coll: &'l Vec<Causaloid<'l, D, S, T, ST, V>>,
+        causal_coll: Vec<Causaloid<'l, D, S, T, ST, V>>,
         description: &'l str,
     ) -> Self {
         Causaloid {
@@ -146,7 +146,7 @@ where
     /// or embedded into a causal graph.
     pub fn from_causal_collection_with_context(
         id: IdentificationValue,
-        causal_coll: &'l Vec<Causaloid<'l, D, S, T, ST, V>>,
+        causal_coll: Vec<Causaloid<'l, D, S, T, ST, V>>,
         context: Option<&'l Context<'l, D, S, T, ST, V>>,
         description: &'l str,
     ) -> Self {
@@ -174,7 +174,7 @@ where
     /// about the correctness of the causal graph.
     pub fn from_causal_graph(
         id: IdentificationValue,
-        causal_graph: &'l CausaloidGraph<Causaloid<'l, D, S, T, ST, V>>,
+        causal_graph: CausaloidGraph<Causaloid<'l, D, S, T, ST, V>>,
         description: &'l str,
     ) -> Self {
         Causaloid {
@@ -198,7 +198,7 @@ where
     /// or embedded into another causal graph.
     pub fn from_causal_graph_with_context(
         id: IdentificationValue,
-        causal_graph: &'l CausaloidGraph<Causaloid<'l, D, S, T, ST, V>>,
+        causal_graph: CausaloidGraph<Causaloid<'l, D, S, T, ST, V>>,
         context: Option<&'l Context<'l, D, S, T, ST, V>>,
         description: &'l str,
     ) -> Self {
