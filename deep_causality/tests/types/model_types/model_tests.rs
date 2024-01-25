@@ -98,7 +98,14 @@ fn test_causaloid() {
     let binding = get_test_context();
     let context = Some(&binding);
 
-    let model = Model::new(id, author, description, assumptions, causaloid.clone(), context);
+    let model = Model::new(
+        id,
+        author,
+        description,
+        assumptions,
+        causaloid.clone(),
+        context,
+    );
 
     assert_eq!(model.id(), id);
     assert_eq!(*model.author(), author);
