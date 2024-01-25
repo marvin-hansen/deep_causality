@@ -23,6 +23,12 @@ where
         + Sub<V, Output = V>
         + Mul<V, Output = V>,
 {
+    /// Gets an immutable reference to this contextoid's vertex type.
+    ///
+    /// # Returns
+    ///
+    /// A reference to the vertex type.
+    ///
     fn vertex_type(&self) -> &ContextoidType<D, S, T, ST, V> {
         &self.vertex_type
     }

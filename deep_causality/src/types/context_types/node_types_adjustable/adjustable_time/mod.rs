@@ -13,6 +13,23 @@ mod display;
 mod identifiable;
 mod temporable;
 
+/// AdjustableTime struct representing adjustable temporal contextoid payload.
+///
+/// # Type Parameters
+///
+/// - `T` - Type for adjustable time values
+///
+/// # Fields
+///
+/// - `id` - Unique ID for this adjustable time contextoid
+/// - `time_scale` - The adjustable time scale
+/// - `time_unit` - The adjustable time value
+///
+/// # Trait Implementations
+///
+/// - `Debug`, `Copy`, `Clone`, `Hash`, `Eq`, `PartialEq` - Derive macros
+/// - `Add`, `Sub`, `Mul` - For math on adjustable time values
+///
 #[derive(Getters, Constructor, Debug, Copy, Clone, Hash, Eq, PartialEq)]
 pub struct AdjustableTime<T>
 where

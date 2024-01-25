@@ -11,6 +11,24 @@ mod display;
 mod identifiable;
 mod spatial;
 
+/// AdjustableSpace struct representing adjustable spatial contextoid payload.
+///
+/// # Type Parameters
+///
+/// - `T` - Type for adjustable spatial coordinate values
+///
+/// # Fields
+///
+/// - `id` - Unique ID for this adjustable space contextoid
+/// - `x` - Adjustable X coordinate
+/// - `y` - Adjustable Y coordinate
+/// - `z` - Adjustable Z coordinate
+///
+/// # Trait Implementations
+///
+/// - `Debug`, `Copy`, `Clone`, `Hash`, `Eq`, `PartialEq` - Derive macros
+/// - `Add`, `Sub`, `Mul` - For coordinate math
+///
 #[derive(Getters, Constructor, Debug, Copy, Clone, Hash, Eq, PartialEq)]
 pub struct AdjustableSpace<T>
 where

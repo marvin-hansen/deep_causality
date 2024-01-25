@@ -32,7 +32,7 @@ where
         + Sub<V, Output = V>
         + Mul<V, Output = V>,
 {
-    fn time_scale(&self) -> TimeScale;
+    fn time_scale(&self) -> &TimeScale;
     fn time_unit(&self) -> &V;
 }
 

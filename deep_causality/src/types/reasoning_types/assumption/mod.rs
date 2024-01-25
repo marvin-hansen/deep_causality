@@ -13,6 +13,25 @@ mod identifiable;
 // https://ricardomartins.cc/2016/06/25/interior-mutability-thread-safety
 type ArcRWLock<T> = Arc<RwLock<T>>;
 
+/// Assumption struct representing an assumption used in reasoning.
+///
+/// # Fields
+///
+/// - `id` - Unique identifier for the assumption
+/// - `description` - Text description of the assumption
+/// - `assumption_fn` - Function evaluating the assumption
+/// - `assumption_tested` - Tracks if assumption has been tested
+/// - `assumption_valid` - Tracks if assumption is valid
+///
+/// # Trait Implementations
+///
+/// - `Clone` - Clone implementation
+///
+/// # Interior Mutability
+///
+/// Uses `Arc<RwLock<bool>>` for thread safe interior mutability on the
+/// `assumption_tested` and `assumption_valid` fields.
+///
 #[derive(Clone)]
 pub struct Assumption {
     id: IdentificationValue,
@@ -24,6 +43,20 @@ pub struct Assumption {
 
 // Constructor
 impl Assumption {
+    /// Assumption constructor.
+    ///
+    /// Creates a new Assumption instance.
+    ///
+    /// # Arguments
+    ///
+    /// * `id` - Unique identifier for the assumption
+    /// * `description` - Text description of the assumption
+    /// * `assumption_fn` - Function evaluating the assumption
+    ///
+    /// # Returns
+    ///
+    /// New Assumption instance
+    ///
     pub fn new(
         id: IdentificationValue,
         description: DescriptionValue,
