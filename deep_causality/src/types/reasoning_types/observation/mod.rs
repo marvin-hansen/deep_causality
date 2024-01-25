@@ -9,6 +9,14 @@ mod display;
 mod identifiable;
 mod observable;
 
+/// Observation struct containing an observed data point.
+///
+/// # Fields
+///
+/// - `id` - Unique ID of the observation
+/// - `observation` - The actual observed data value
+/// - `observed_effect` - The observed effect or outcome corresponding to the observation
+///
 #[derive(Constructor, Debug, Clone, PartialEq, PartialOrd)]
 pub struct Observation {
     id: IdentificationValue,

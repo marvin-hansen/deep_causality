@@ -19,6 +19,28 @@ type ExtraContext<D, S, T, ST, V> = UltraGraph<Contextoid<D, S, T, ST, V>>;
 
 type ExtraContextMap<D, S, T, ST, V> = HashMap<u64, ExtraContext<D, S, T, ST, V>>;
 
+/// Context graph struct.
+///
+/// # Type Parameters
+///
+/// - `'l` - Lifetime of string references
+/// - `D` - Datable type
+/// - `S` - Spatial type
+/// - `T` - Temporal type
+/// - `ST` - SpatioTemporal type
+/// - `V` - Value type
+///
+/// # Fields
+///
+/// - `id` - Unique context ID
+/// - `name` - Name of the context
+/// - `base_context` - Base context graph
+/// - `extra_contexts` - Optional map of extra context graphs
+/// - `number_of_extra_contexts` - Number of extra contexts
+/// - `extra_context_id` - Counter for generating extra context IDs
+/// - `current_index_map` - Map of current node indices
+/// - `previous_index_map` - Map of previous node indices
+///
 #[derive(Clone)]
 pub struct Context<'l, D, S, T, ST, V>
 where
@@ -62,7 +84,18 @@ where
         + Sub<V, Output = V>
         + Mul<V, Output = V>,
 {
-    /// Creates a new context with the given node capacity.
+    /// Creates a new Context with the given capacity.
+    ///
+    /// # Parameters
+    ///
+    /// - `id` - Unique ID for the context
+    /// - `name` - Name of the context
+    /// - `capacity` - Initial node capacity for the base context graph
+    ///
+    /// # Returns
+    ///
+    /// A new Context instance with the given parameters and capacity.
+    ///
     pub fn with_capacity(id: u64, name: &'l str, capacity: usize) -> Self {
         Self {
             id,
