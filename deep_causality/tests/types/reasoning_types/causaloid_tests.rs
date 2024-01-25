@@ -116,12 +116,8 @@ fn test_from_causal_collection_with_context() {
     let data = [0.89, 0.89, 0.99];
     assert_eq!(data.len(), causal_coll.len());
 
-    let causaloid = Causaloid::from_causal_collection_with_context(
-        id,
-        causal_coll,
-        Some(context),
-        description,
-    );
+    let causaloid =
+        Causaloid::from_causal_collection_with_context(id, causal_coll, Some(context), description);
 
     assert!(!causaloid.is_singleton());
     assert!(causaloid.causal_collection().is_some());

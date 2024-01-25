@@ -19,6 +19,7 @@ type ExtraContext<D, S, T, ST, V> = UltraGraph<Contextoid<D, S, T, ST, V>>;
 
 type ExtraContextMap<D, S, T, ST, V> = HashMap<u64, ExtraContext<D, S, T, ST, V>>;
 
+#[derive(Clone)]
 pub struct Context<'l, D, S, T, ST, V>
 where
     D: Datable,
