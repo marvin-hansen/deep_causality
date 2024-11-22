@@ -64,7 +64,7 @@ where
     fn get_all_items(&self) -> Vec<&T>;
 
     //
-    // Default implementations for all other methods are provided below.
+    // Default implementations below.
     //
 
     /// Checks if all causes in the collection are active.

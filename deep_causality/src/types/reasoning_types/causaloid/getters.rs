@@ -24,11 +24,11 @@ where
     pub fn active(&self) -> bool {
         self.is_active()
     }
-    pub fn causal_collection(&self) -> Option<&CausalVec<'l, D, S, T, ST, V>> {
-        self.causal_coll
+    pub fn causal_collection(&self) -> Option<CausalVec<'l, D, S, T, ST, V>> {
+        self.causal_coll.clone()
     }
-    pub fn causal_graph(&self) -> Option<&CausalGraph<'l, D, S, T, ST, V>> {
-        self.causal_graph
+    pub fn causal_graph(&self) -> Option<CausalGraph<'l, D, S, T, ST, V>> {
+        self.causal_graph.clone()
     }
     pub fn description(&self) -> &'l str {
         self.description

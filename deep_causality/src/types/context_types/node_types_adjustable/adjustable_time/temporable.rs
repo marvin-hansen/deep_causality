@@ -17,8 +17,8 @@ where
         + Sub<T, Output = T>
         + Mul<T, Output = T>,
 {
-    fn time_scale(&self) -> TimeScale {
-        self.time_scale
+    fn time_scale(&self) -> &TimeScale {
+        &self.time_scale
     }
 
     fn time_unit(&self) -> &T {

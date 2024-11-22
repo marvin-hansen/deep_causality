@@ -12,6 +12,21 @@ mod contextuable;
 mod display;
 mod identifiable;
 
+/// Contextoid struct representing a node in a context graph.
+///
+/// # Type Parameters
+///
+/// - `D` - Datable trait object for node data
+/// - `S` - Spatial trait object for spatial properties
+/// - `T` - Temporal trait object for temporal properties
+/// - `ST` - SpaceTemporal trait object for spatio-temporal properties
+/// - `V` - Type for vertex values
+///
+/// # Fields
+///
+/// - `id` - Unique identifier for the contextoid
+/// - `vertex_type` - The type of this contextoid
+///
 #[derive(Debug, Copy, Clone, Hash, Eq, PartialEq)]
 pub struct Contextoid<D, S, T, ST, V>
 where
@@ -50,6 +65,17 @@ where
         + Sub<V, Output = V>
         + Mul<V, Output = V>,
 {
+    /// Creates a new Contextoid instance.
+    ///
+    /// # Parameters
+    ///
+    /// - `id` - The unique ID for this contextoid
+    /// - `vertex_type` - The type of this contextoid
+    ///
+    /// # Returns
+    ///
+    /// A new Contextoid instance
+    ///
     pub fn new(id: u64, vertex_type: ContextoidType<D, S, T, ST, V>) -> Self {
         Self {
             id,

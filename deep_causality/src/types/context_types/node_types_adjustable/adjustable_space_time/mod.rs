@@ -15,6 +15,26 @@ mod space_temporal;
 mod spatial;
 mod temporable;
 
+/// AdjustableSpaceTime struct representing adjustable spatio-temporal contextoid payload.
+///
+/// # Type Parameters
+///
+/// - `T` - Type for adjustable spatial and temporal coordinate values
+///
+/// # Fields
+///
+/// - `id` - Unique ID for this adjustable space-time contextoid
+/// - `time_scale` - The adjustable time scale
+/// - `time_unit` - The adjustable time value
+/// - `x` - Adjustable X spatial coordinate
+/// - `y` - Adjustable Y spatial coordinate
+/// - `z` - Adjustable Z spatial coordinate
+///
+/// # Trait Implementations
+///
+/// - `Debug`, `Copy`, `Clone`, `Hash`, `Eq`, `PartialEq` - Derive macros
+/// - `Add`, `Sub`, `Mul` - For coordinate math
+///
 #[derive(Getters, Constructor, Debug, Copy, Clone, Hash, Eq, PartialEq)]
 pub struct AdjustableSpaceTime<T>
 where

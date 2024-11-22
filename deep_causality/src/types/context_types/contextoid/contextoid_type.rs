@@ -17,8 +17,28 @@ use crate::prelude::*;
 // Make sure that traits are re-implement with S and T as generic parameters,
 // which then allows to implement those traits for existing node types.
 // https://www.geeksforgeeks.org/rust-generic-traits/
-
+//
 // https://stackoverflow.com/questions/69173586/either-type-a-or-b-in-rust
+
+/// Enum representing the different types of contextoids.
+///
+/// # Variants
+///
+/// - `Datoid` - A data contextoid containing data of type `D`
+/// - `Tempoid` - A temporal contextoid containing data of type `T`
+/// - `Root` - The root contextoid
+/// - `Spaceoid` - A spatial contextoid containing data of type `S`
+/// - `SpaceTempoid` - A spatio-temporal contextoid containing data of type `ST`
+/// - `_Unreachable` - Unreachable variant used for exhaustiveness checking
+///
+/// # Type Parameters
+///
+/// - `D` - Datable trait object for data contextoids
+/// - `S` - Spatial trait object for spatial contextoids
+/// - `T` - Temporal trait object for temporal contextoids
+/// - `ST` - SpaceTemporal trait object for spatio-temporal contextoids
+/// - `V` - Type for vertex values
+///
 #[derive(Debug, Copy, Clone, Hash, Eq, PartialEq)]
 pub enum ContextoidType<D, S, T, ST, V>
 where
@@ -60,6 +80,13 @@ where
         + Sub<V, Output = V>
         + Mul<V, Output = V>,
 {
+    /// Gets a reference to the Root variant if this is a Root contextoid.
+    ///
+    /// # Returns
+    ///
+    /// - `Some(&Root)` if this is a Root contextoid
+    /// - `None` otherwise
+    ///
     pub fn root(&self) -> Option<&Root> {
         if let ContextoidType::Root(b) = self {
             Some(b)
@@ -68,6 +95,13 @@ where
         }
     }
 
+    /// Gets a reference to the Datoid variant's data if this is a Datoid contextoid.
+    ///
+    /// # Returns
+    ///
+    /// - `Some(&D)` if this is a Datoid contextoid
+    /// - `None` otherwise
+    ///
     pub fn dataoid(&self) -> Option<&D> {
         if let ContextoidType::Datoid(b) = self {
             Some(b)
@@ -75,6 +109,14 @@ where
             None
         }
     }
+
+    /// Gets a reference to the Tempoid variant's data if this is a Tempoid contextoid.
+    ///
+    /// # Returns
+    ///
+    /// - `Some(&T)` if this is a Tempoid contextoid
+    /// - `None` otherwise
+    ///
     pub fn tempoid(&self) -> Option<&T> {
         if let ContextoidType::Tempoid(b) = self {
             Some(b)
@@ -82,6 +124,14 @@ where
             None
         }
     }
+
+    /// Gets a reference to the Spaceoid variant's data if this is a Spaceoid contextoid.
+    ///
+    /// # Returns
+    ///
+    /// - `Some(&S)` if this is a Spaceoid contextoid
+    /// - `None` otherwise
+    ///
     pub fn spaceiod(&self) -> Option<&S> {
         if let ContextoidType::Spaceoid(b) = self {
             Some(b)
@@ -89,6 +139,14 @@ where
             None
         }
     }
+
+    /// Gets a reference to the SpaceTempoid variant's data if this is a SpaceTempoid contextoid.
+    ///
+    /// # Returns
+    ///
+    /// - `Some(&ST)` if this is a SpaceTempoid contextoid
+    /// - `None` otherwise
+    ///
     pub fn space_tempoid(&self) -> Option<&ST> {
         if let ContextoidType::SpaceTempoid(b) = self {
             Some(b)

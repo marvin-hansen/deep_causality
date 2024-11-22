@@ -10,6 +10,24 @@ mod display;
 mod identifiable;
 mod spatial;
 
+/// Space struct representing spatial contextoid payload.
+///
+/// # Type Parameters
+///
+/// - `T` - Type for spatial coordinate values
+///
+/// # Fields
+///
+/// - `id` - Unique ID for this space contextoid
+/// - `x` - X coordinate
+/// - `y` - Y coordinate
+/// - `z` - Z coordinate
+///
+/// # Trait Implementations
+///
+/// - `Debug`, `Copy`, `Clone`, `Hash`, `Eq`, `PartialEq` - Derive macros
+/// - `Add`, `Sub`, `Mul` - For coordinate math
+///
 #[derive(Constructor, Debug, Copy, Clone, Hash, Eq, PartialEq)]
 pub struct Space<T>
 where
