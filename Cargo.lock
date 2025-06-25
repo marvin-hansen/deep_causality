@@ -184,12 +184,6 @@ checksum = "43da5946c66ffcc7745f48db692ffbb10a83bfe0afd96235c5c2a4fb23994929"
 
 [[package]]
 name = "dcl_data_structures"
-version = "0.4.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "068316d162870187e81178c217c07b9e65a449afb15d7a564f98c3e4ada24647"
-
-[[package]]
-name = "dcl_data_structures"
 version = "0.9.0"
 dependencies = [
  "criterion",
@@ -197,15 +191,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "deep_causality"
-version = "0.6.5"
+name = "dcl_data_structures"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9e3a132c3ce4bb6409d1f43157f03c9c37335bfa959df5491cd06b2c2e79bdcd"
-dependencies = [
- "dcl_data_structures 0.4.7",
- "deep_causality_macros 0.4.11 (registry+https://github.com/rust-lang/crates.io-index)",
- "ultragraph 0.5.6 (registry+https://github.com/rust-lang/crates.io-index)",
-]
+checksum = "e5ba7544057f9e0a04b7da755a8fdc89b6ae8ee4b8658bc5346d7bb241873381"
 
 [[package]]
 name = "deep_causality"
@@ -215,6 +204,17 @@ dependencies = [
  "dcl_data_structures 0.9.0",
  "deep_causality_macros 0.4.11",
  "ultragraph 0.5.6",
+]
+
+[[package]]
+name = "deep_causality"
+version = "0.7.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3698120e7632db43c472427d361a78d05a77a0c4a9c8c3f2a803963a3cb65d5a"
+dependencies = [
+ "dcl_data_structures 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "deep_causality_macros 0.4.11 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ultragraph 0.5.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -253,21 +253,21 @@ checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 name = "example-csm"
 version = "0.1.0"
 dependencies = [
- "deep_causality 0.6.5",
+ "deep_causality 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "example-smoking"
 version = "0.1.0"
 dependencies = [
- "deep_causality 0.6.5",
+ "deep_causality 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "example-starter"
 version = "0.1.0"
 dependencies = [
- "deep_causality 0.6.5",
+ "deep_causality 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
