@@ -89,15 +89,6 @@
 - [x] 11.5 Test `evaluate_single_cause_stateful_works` and `evaluate_shortest_path_between_causes_stateful_works`
 - [x] 11.6 New mod chain registered: `tests/traits/causable_graph/{mod.rs, graph_reasoning/{mod.rs, stateful_tests.rs}}`, parent `tests/traits/mod.rs` declares `pub mod causable_graph;`
 
-## 11. Tests — graph stateful evaluation
-
-- [ ] 11.1 Create file `deep_causality/tests/traits/causable_graph/graph_reasoning/stateful_tests.rs`
-- [ ] 11.2 Add a test that builds a frozen `CausaloidGraph` of three nodes wired in a path, each node's closure increments the counter field on `S`, and verifies that `evaluate_subgraph_from_cause_stateful` returns a process whose `state` reflects three increments and whose `logs` contain entries from all three nodes in traversal order
-- [ ] 11.3 Add a test that triggers an error on the second node and verifies short-circuit + state preservation as in the collection case
-- [ ] 11.4 Add a test for `RelayTo` with non-trivial state: a node emits `PropagatingEffect::RelayTo(target_index, inner_effect)` while carrying a non-trivial `state`, and the test verifies the relayed-to node observes that `state` and the final returned process reflects the relayed-to node's state mutation
-- [ ] 11.5 Add a test for `evaluate_single_cause_stateful` and a test for `evaluate_shortest_path_between_causes_stateful`, each confirming the basic state-threading guarantee
-- [ ] 11.6 Register the new test file in the corresponding `mod.rs` chain
-
 ## 12. Tests — backward-compatibility regression guard
 
 - [x] 12.1 Existing `cargo test -p deep_causality` suite continues to pass — 1013 integration tests + 24 unit tests + doctests all green; no existing source files modified beyond the additive submodule registrations
