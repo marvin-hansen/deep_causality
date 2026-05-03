@@ -23,11 +23,11 @@ mod model;
 pub mod model_config;
 mod model_types;
 
+use crate::model_types::SafetyVerdict;
 use deep_causality::*;
 use model::{estimate_step, health_fold, kalman_step, run_envelope_graph, run_sensor_collection};
 use model_config::{nominal_aircraft_config, nominal_sensor_reading, seed_estimate_for};
 use model_types::{AircraftConfig, FlightProcess, FlightState, FlightStateEstimate, SensorReading};
-use crate::model_types::SafetyVerdict;
 
 fn main() {
     println!("=== Flight Envelope Monitor — Stateful Three-Stage Pipeline ===\n");
@@ -95,7 +95,6 @@ fn run_pipeline(
             run_envelope_graph(value, state, ctx)
         })
 }
-
 
 /// Print a labelled summary of a final pipeline process.
 ///
