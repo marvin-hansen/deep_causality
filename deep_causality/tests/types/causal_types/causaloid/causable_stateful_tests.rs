@@ -179,6 +179,44 @@ fn stateless_evaluate_unchanged_for_existing_callers() {
 }
 
 #[test]
+fn evaluate_stateful_passes_through_existing_error_unchanged() {
+    // Feed an already-errored process into a healthy causaloid. The closure
+    // must not run; the original error and state must pass through.
+    let causaloid: Causaloid<u64, u64, CounterState, ConfigCtx> = Causaloid::new_with_context(
+        29,
+        stateful_increment,
+        ConfigCtx { multiplier: 4 },
+        "should not run",
+    );
+
+    let initial_state = CounterState { count: 9 };
+    let pre_existing_err =
+        CausalityError::new(CausalityErrorEnum::Custom("upstream stage failed".into()));
+    let errored_incoming: PropagatingProcess<u64, CounterState, ConfigCtx> = PropagatingProcess {
+        value: EffectValue::None,
+        state: initial_state.clone(),
+        context: Some(ConfigCtx { multiplier: 4 }),
+        error: Some(pre_existing_err.clone()),
+        logs: EffectLog::new(),
+    };
+
+    let out = causaloid.evaluate_stateful(&errored_incoming);
+
+    assert_eq!(
+        out.error.as_ref().map(|e| format!("{:?}", e)),
+        Some(format!("{:?}", pre_existing_err)),
+        "incoming error must pass through unchanged"
+    );
+    assert_eq!(out.state, initial_state, "state must be preserved");
+    // The closure should not have logged anything.
+    let log_text = format!("{:?}", out.logs);
+    assert!(
+        !log_text.contains("Causaloid 29: Incoming"),
+        "closure must not have run: {log_text}"
+    );
+}
+
+#[test]
 fn same_causaloid_evaluable_via_both_evaluate_and_evaluate_stateful() {
     // A Causaloid value built once via the existing `new_with_context`
     // can be evaluated either statelessly or statefully — no separate

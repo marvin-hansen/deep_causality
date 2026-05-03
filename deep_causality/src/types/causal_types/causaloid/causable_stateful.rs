@@ -29,6 +29,20 @@ where
         &self,
         incoming: &PropagatingProcess<I, PS, C>,
     ) -> PropagatingProcess<O, PS, C> {
+        // Short-circuit if the incoming process already carries an error.
+        // Mirrors the bind-semantics on `CausalEffectPropagationProcess`:
+        // an error process passes through downstream stages unchanged,
+        // preserving state, context, and logs accumulated up to the failure.
+        if let Some(err) = incoming.error.clone() {
+            return PropagatingProcess {
+                value: EffectValue::None,
+                state: incoming.state.clone(),
+                context: incoming.context.clone(),
+                error: Some(err),
+                logs: incoming.logs.clone(),
+            };
+        }
+
         match self.causal_type {
             CausaloidType::Singleton => {
                 let id = self.id;

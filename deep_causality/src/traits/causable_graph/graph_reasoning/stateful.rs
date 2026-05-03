@@ -39,6 +39,17 @@ where
         index: usize,
         effect: &PropagatingProcess<V, S, C>,
     ) -> PropagatingProcess<V, S, C> {
+        // Short-circuit if the incoming process already carries an error.
+        if let Some(err) = effect.error.clone() {
+            return PropagatingProcess {
+                value: EffectValue::None,
+                state: effect.state.clone(),
+                context: effect.context.clone(),
+                error: Some(err),
+                logs: effect.logs.clone(),
+            };
+        }
+
         if !self.is_frozen() {
             return PropagatingProcess {
                 value: EffectValue::None,
@@ -76,6 +87,17 @@ where
         start_index: usize,
         initial_effect: &PropagatingProcess<V, S, C>,
     ) -> PropagatingProcess<V, S, C> {
+        // Short-circuit if the incoming process already carries an error.
+        if let Some(err) = initial_effect.error.clone() {
+            return PropagatingProcess {
+                value: EffectValue::None,
+                state: initial_effect.state.clone(),
+                context: initial_effect.context.clone(),
+                error: Some(err),
+                logs: initial_effect.logs.clone(),
+            };
+        }
+
         if !self.is_frozen() {
             return PropagatingProcess {
                 value: EffectValue::None,
@@ -202,6 +224,17 @@ where
         stop_index: usize,
         initial_effect: &PropagatingProcess<V, S, C>,
     ) -> PropagatingProcess<V, S, C> {
+        // Short-circuit if the incoming process already carries an error.
+        if let Some(err) = initial_effect.error.clone() {
+            return PropagatingProcess {
+                value: EffectValue::None,
+                state: initial_effect.state.clone(),
+                context: initial_effect.context.clone(),
+                error: Some(err),
+                logs: initial_effect.logs.clone(),
+            };
+        }
+
         if !self.is_frozen() {
             return PropagatingProcess {
                 value: EffectValue::None,

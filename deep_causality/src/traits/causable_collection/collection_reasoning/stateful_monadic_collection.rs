@@ -69,6 +69,17 @@ where
         logic: &AggregateLogic,
         threshold_value: Option<NumericalValue>,
     ) -> PropagatingProcess<O, S, C> {
+        // Short-circuit if the incoming process already carries an error.
+        if let Some(err) = incoming.error.clone() {
+            return PropagatingProcess {
+                value: EffectValue::None,
+                state: incoming.state.clone(),
+                context: incoming.context.clone(),
+                error: Some(err),
+                logs: incoming.logs.clone(),
+            };
+        }
+
         let items = self.get_all_items();
 
         if items.is_empty() {

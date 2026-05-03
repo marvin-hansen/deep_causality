@@ -21,8 +21,13 @@ path = "geometric_tcas/main.rs"
 name = "hypersonic_2t"
 path = "hypersonic_2t/main.rs"
 
+[[example]]
+name = "flight_envelope_monitor"
+path = "flight_envelope_monitor/main.rs"
+
 
 [dependencies]
+deep_causality = { path = "../../deep_causality" }
 deep_causality_core = { path = "../../deep_causality_core" }
 deep_causality_tensor = { path = "../../deep_causality_tensor" }
 deep_causality_multivector = { path = "../../deep_causality_multivector" }
