@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{../styles/PRIMEarxiv} % imports style
+\input{../shared/package} % imports packages 
+
+%Header
+\pagestyle{fancy}
+\thispagestyle{empty}
+\rhead{ \textit{ }} 
+
+  
+% Update your Headers here
+\fancyhead[LO]{Formalization of the Effect Propagation Process}
+
+  
+%% Title
+\title{Formalization of the Effect Propagation Process}
+
+%% Author
+\author{
+  Marvin Hansen \\
+  \texttt{marvin.hansen@gmail.com} \\
+  Draft: \today
+}
+
+
+\begin{document}
+\maketitle
+
+%% ======================================================================
+%% Abstract
+%% ======================================================================
+
+\begin{abstract}
+\end{abstract}
+
+%% keywords
+
+\clearpage
+
+%% ======================================================================
+%% Table of Contents
+%% ======================================================================
+
+\tableofcontents
+\newpage
+
+%% Introduction
+%\input{introduction.tex}
+
+%% Foundation
+%\input{foundation.tex}
+
+%% Formalization
+\input{../epp_chapters/formalization.tex}
+
+%% Conclusion
+\input{conclusion.tex}
+
+%% Bibliography
+\newpage
+\bibliographystyle{unsrt}  
+\addcontentsline{toc}{section}{References} % Add it to the Table of Contents
+\bibliography{../epp_bib/references}  
+
+%% Glossary
+\input{../epp_chapters/glossary.tex}
+
+\end{document}
