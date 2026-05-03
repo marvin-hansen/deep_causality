@@ -1,0 +1,884 @@
+% =============================================================================
+%
+% Structure:
+%   §4.1   Definition (introduction)
+%   §4.1.1 Classical Definition of Causality
+%   §4.1.2 Decomposition into the Generalized Form
+%   §4.1.3 Generalized Definition of Causality
+%   §4.1.4 Axiom of Causality
+%   §4.1.5 Reconstruction of Classical Causality
+%   §4.1.6 Functional Conjecture
+%   §4.1.7 Higher-Order Implications
+%
+% =============================================================================
+
+\section{Causality as Effect Propagation Process}
+\label{sec:epp}
+
+The foundational premise of the EPP is the detachment of causality from a presupposed spacetime. 
+This premise necessitates a re-evaluation of the causal relation itself, shifting its conceptualization to a more general process of effect propagation. 
+ 
+% Definitions
+%
+\subsection{Definition}
+\label{sec:epp_definition}
+
+The notion of a generative process that underlies the fabric of spacetime leads to the implication that causality has to evolve beyond the strict “before-after” relation towards a spacetime-agnostic view. The critical question then becomes:
+
+\begin{quote}
+	"What is the minimum necessary and sufficient condition for a relationship to be considered causal, 
+	if one cannot use temporal precedence ('happen-before') in the definition?"
+\end{quote}
+
+The answer to this question entails the very foundation upon which computational causality is built. 
+The classical answer to this question for centuries has been: $Temporal Precedence + Counterfactual Dependence$.
+That means, the cause must come before the effect, AND the effect would not have happened without the cause. 
+
+The EPP, by its foundational act of detaching causality from spacetime, makes the "Temporal Precedence" condition untenable. It requires an answer that captures the essence of causality independent of spacetime. Finding that answer starts with the classical definition itself, decomposes it into its constituent commitments, and identifies what remains after the detachment from spacetime. The classical definition is then recoverable from the generalized form by adjoining specific restrictions, demonstrating that classical causality is a specialization of the EPP.
+
+
+\subsubsection{Classical Definition of Causality}
+
+
+The classical definition of causality, taken from Judea Pearl's foundational work\cite{pearl2000causality}: 
+
+\begin{quote}
+    IF (cause) A then (effect) B.
+    
+    AND 
+    
+    IF NOT (cause) A, then NOT (effect) B.
+\end{quote}
+
+When removing temporal order from causality, it is indeed no longer possible to discern cause from effect because, in the absence of time, there is no “happen-before” relation any longer, and therefore, the designation of cause or effect indeed becomes infeasible, just as Russell hinted at earlier on. When removing space from causality, the location of a cause or effect in space is not possible anylonger. 
+  
+  
+  
+\subsubsection{Decomposition of Classical Causality}
+\label{sec:epp_decomposition}
+
+
+The absence of spacetime raises the question: \emph{What remains in the definition of causality after spacetime is removed?}
+
+The definition of causality rests on three conditions that are independent of one another:
+
+\begin{enumerate}
+    \item Causality describes a process.
+    \item Causality determines effects.
+    \item Causality defines how effects propagate.
+\end{enumerate}
+
+
+ The first is the condition of process: causality describes change in systems and is therefore inherently a process. A process carries the state that evolves through it, the context within which it operates, the conditions under which it succeeds or fails.
+ 
+ The second is the condition of effect-determination: causality determines effects inverts the usual emphasis. One might think causality is dominated by the ``cause'' that brings effects into existence. The biconditional reveals the opposite: we know that X is the cause of effect E because E happens when X happens and because E does not happen when X does not happen either. An effect is an observable change of a cause and causality is therefore the structure that determines effects.
+  
+ The third is the condition of propagation: causal propagation becomes visible once we rewrite the classical definition without designated labels. 
+ 
+ \newpage
+ 
+ Replacing ``cause'' and ``effect'' with neutral terms shows that the biconditional has no loss of information when stated as an effect-propagation relation:
+ 
+\begin{quote}
+    If X happens, then its effect propagates to Effect E.
+ 
+    AND
+    
+    If X does not happen, then its effect does not propagate to Effect E.
+\end{quote}
+ 
+In this form, X is no longer designated as a cause. It is described in terms of its emitting effect. Therefore X can itself be seen as a preceding effect that propagates further. Without loss of information, the definition becomes:
+ 
+\begin{quote}
+	If Effect $E_1$ happens, then its effect propagates to Effect $E_2$.
+ 
+    AND
+    
+	If Effect $E_1$ does not happen, then its effect does not propagate to Effect $E_2$.
+\end{quote}
+ 
+ A pure mathematical function of the form $E_2 = f(E_1)$ would capture the effect determination, but it does capture the process. A pure function is timeless, stateless, and it only relates inputs to outputs without carrying any state or context. The first condition from the decomposition, that causality is a process, is therefore not satisfied by a pure function. What is needed is a form of functional dependency that carries the structure of a process. 
+ 
+The mathematical structure with this property is the monad. A monad consists of a type constructor that wraps values in a context, a unit operation that lifts a plain value into the context, and a bind operation that composes a value-in-context with a function that produces a new value-in-context. The bind operation is unidirectional by construction, supplying the directional flow that the third condition (propagation) requires. The context wrapped around the value can carry state, context, error and more, satisfying the first condition (process). The composition of bind operations preserves the determination relation, satisfying the second condition.
+
+The generalized form of causality is therefore derived from the classical definition through two reductions: the classical form is recovered from the pure-function form by restricting the function and adjoining temporal asymmetry, and the pure-function form is recovered from the monadic form by reducing the monadic context to its unit.
+
+  
+\subsubsection{Generalized Definition of Causality}
+\label{sub:epp_general_def_causality}
+
+The generalized definition of causality used by the EPP is therefore:
+ 
+\begin{quote}
+    A causal relation is a monadic dependency, in which one propagating effect is obtained from another by composition with a causal function in a monadic context of the causal process.
+\end{quote}
+ 
+This generalization preserves the three conditions identified in the decomposition (process, determination, propagation) and drops only the assumption of temporal asymetry, which is recoverable as a specialization. The functional dependency is the determination condition. The monadic composition is the process condition. The directional flow of bind is the propagation condition.
+
+\subsubsection{Axiom of Causality}
+\label{sub:epp_axiom_causality}
+
+
+The generalized definition is captured by a single axiom:
+ 
+\begin{quotation}
+	\textbf{$m_{2} = m_{1} \mathbin{>\!\!>\!\!=} f$}
+\end{quotation}
+    
+\noindent where $m_1$ and $m_2$ are propagating effects, $f$ is a causal function from a value to a propagating effect, and $\mathbin{>\!\!>\!\!=}$ (read ``bind'') is the monadic composition operator. The propagating effect is a structured object that carries, alongside its value, the state, and the context of the causal process up to that point. The bind operation carries them all through the composition.    
+    
+The function $f$ inside the bind is unconstrained. It may be deterministic, probabilistic, symbolic, or of arbitrary structure. It may be a simple logical expression, a structural causal model, a dynamic Bayesian network, a differential equation, or a neural network. The propagating effects $m_1$ and $m_2$ are likewise unconstrained in the kind of value they carry. The only practical constraint is that the function must compute eventually.  
+   
+\newpage  
+   
+\subsubsection{Reconstruction of Classical Causality}
+\label{sub:epp_reconstruction}
+ 
+ 
+ The reconstruction of the definition of classical causality from the generalized definition of causality follows from the inversion of the decomposition (process, determination, propagation) and restores the assumption of temporal asymmetry. 
+ 
+ The recovery proceeds in three steps: The first step recovers the pure-function form of the axiom from the monadic form by setting the monadic context to its unit type. The second step recovers the classical definition from the pure-function form by restricting to bivalent effects, restricting the function to the identity on that domain, and restricting the propagation direction to recover temporal asymmetry. The third step serves as a corollary that combines the two to give the full recovery from the monadic axiom to the classical definition.
+ 
+
+\paragraph{Preliminaries.}
+A monad in the present sense is a triple $(M, \eta, \mathbin{>\!\!>\!\!=})$ where $M$ is a type constructor, $\eta : T \to M\langle T \rangle$ is the unit (also called \texttt{return} or \texttt{pure}), and $\mathbin{>\!\!>\!\!=} : M\langle T \rangle \to (T \to M\langle U \rangle) \to M\langle U \rangle$ is the bind operation. The triple satisfies the three monad laws:
+ 
+\begin{enumerate}
+\item \emph{Left identity}: $\eta(x) \mathbin{>\!\!>\!\!=} f = f(x)$.
+\item \emph{Right identity}: $m \mathbin{>\!\!>\!\!=} \eta = m$.
+\item \emph{Associativity}: $(m \mathbin{>\!\!>\!\!=} f) \mathbin{>\!\!>\!\!=} g = m \mathbin{>\!\!>\!\!=} (\lambda x.\ f(x) \mathbin{>\!\!>\!\!=} g)$.
+\end{enumerate}
+ 
+\noindent The propagating effect of the EPP is a container $M\langle V, C_1, C_2, \ldots, C_n \rangle$ parameterized by a value type $V$ and $n$ context parameters $C_1, \ldots, C_n$, where $n \geq 0$. The container is a monad over the value parameter $V$ when all $n$ context parameters are fixed. The value of $n$ and the choice of context parameters are properties of the specific instance of the monad. The reconstruction argument that follows is independent of $n$ and of the specific type of context parameters.
+
+
+\paragraph{The unit context.}
+The \emph{unit context} is the case in which every context parameter of the monadic container is set to its unit type. Formally, the unit context is the propagating effect $M\langle V, (), (), \ldots, () \rangle$ in which all $n$ context parameters are $()$, the unit type with exactly one inhabitant. A standard result in category theory establishes that under the unit context, $M$ is isomorphic to the identity monad $I$, defined by $I\langle V \rangle = V$, $\eta_I(v) = v$, and $m \mathbin{>\!\!>\!\!=}_I f = f(m)$. The isomorphism holds regardless of $n$, since the unit type carries no information.
+
+
+\paragraph{Proposition 1 (Functional axiom is a special case of the monadic axiom).}
+\emph{Under the unit context, the monadic axiom $m_2 = m_1 \mathbin{>\!\!>\!\!=} f$ reduces to the pure-function form $E_2 = f(E_1)$.}
+ 
+\paragraph{Proof.}
+Let $m_1 = \eta(E_1)$ in the unit context. Let $f' = \eta \circ f$, that is, the lifting of the plain function $f : V \to V$ into a Kleisli arrow $f' : V \to M\langle V, (), (), \ldots, () \rangle$. By left identity:
+\[
+m_1 \mathbin{>\!\!>\!\!=} f' = \eta(E_1) \mathbin{>\!\!>\!\!=} f' = f'(E_1) = \eta(f(E_1)).
+\]
+Setting $m_2 := \eta(f(E_1))$ and stripping the unit (justified by the isomorphism between $M$ under the unit context and the identity monad), we obtain $E_2 = f(E_1)$. $\square$
+ 
+\paragraph{The classical specialization.}
+The classical definition of causality, in the form codified by Pearl\cite{pearl2000causality}, requires three further restrictions on the pure-function form $E_2 = f(E_1)$:
+ 
+\begin{enumerate}
+\item \emph{Bivalent effects}: $E_1$ and $E_2$ each take exactly two values, conventionally denoted ``happens'' and ``does not happen,'' or $\{1, 0\}$. The domain and codomain of $f$ are both $\{0, 1\}$.
+ 
+\item \emph{Biconditional dependence}: the function $f$ satisfies the biconditional $f(1) = 1$ and $f(0) = 0$. On a bivalent domain, this forces $f$ to be the identity. The negation case, $f(1) = 0$ and $f(0) = 1$, corresponds to ``$E_1$ causes the absence of $E_2$,'' which Pearl's framework handles by reformulating $E_2$ as $\neg E_2$ and restoring the identity. Either choice is admissible; the canonical case is the identity.
+ 
+\item \emph{Temporal precedence}: the propagation direction from $E_1$ to $E_2$ is interpreted as temporal precedence, meaning $E_1$ occurs at some time $t_1$ and $E_2$ occurs at some time $t_2 > t_1$.
+\end{enumerate}
+
+\newpage
+
+ 
+\paragraph{Proposition 2 (Classical causality is a special case of the functional form).}
+\emph{Under the three restrictions above, the pure-function form $E_2 = f(E_1)$ reduces to the classical definition: ``If $E_1$ happens, then $E_2$ happens; if $E_1$ does not happen, then $E_2$ does not happen; and $E_1$ precedes $E_2$ in time.''}
+
+ 
+\paragraph{Proof.}
+Restriction 1 fixes the domain and codomain to $\{0, 1\}$. Restriction 2 fixes $f$ to the identity, which gives the two implications $f(1) = 1$ (``if $E_1$ happens, $E_2$ happens'') and $f(0) = 0$ (``if $E_1$ does not happen, $E_2$ does not happen''). Restriction 3 supplies temporal precedence by interpreting the propagation direction as forward time. The conjunction of the three is exactly Pearl's classical definition. $\square$
+ 
+\paragraph{Corollary (Classical causality is a special case of the monadic axiom).}
+\emph{Under the unit context together with the three restrictions of the classical specialization (bivalent effects, biconditional dependence, temporal precedence), the monadic axiom $m_2 = m_1 \mathbin{>\!\!>\!\!=} f$ reduces to the classical definition of causality.}
+ 
+\paragraph{Proof.}
+Apply Proposition 1 to obtain $E_2 = f(E_1)$ from the unit-context form of the monadic axiom. Apply Proposition 2 to obtain the classical definition from $E_2 = f(E_1)$ under the three classical restrictions. The composition of the two reductions gives the corollary. $\square$
+
+\paragraph{Discussion.}
+The recovery establishes that classical causality is a specific subset in the EPP's parameter space. The recovery of classical causality is reached by setting the context parameters to the unit type, restricting the values to a bivalent domain, restricting the function to the identity on that domain, and restriction the propagation direction to unidirection. 
+
+Each restriction is independent of the others. Relaxing any one yields a distinct generalization. Relaxing the bivalence restriction permits multi-valued or continuous effects. Relaxing the biconditional restriction permits arbitrary deterministic functions or, with appropriate further structure on the value type, probabilistic transitions. Relaxing the temporal-precedence restriction permits propagation in spacetimes without a global time coordinate, which is where the EPP's spacetime-agnostic character earns its keep. Relaxing the unit-context restriction restores whatever the context parameters of the specific monad instance carry,
+
+\newpage
+ 
+
+
+\subsubsection{Higher-Order Implications}
+\label{sub:epp_higher_order_implications}
+
+
+The higher-order implications of a single axiomatic foundation of causality entail, among others:
+
+\begin{itemize}
+	\item If causality is monadic functional dependency, then the fundamental unit of causality must be a container for a function lifted into the monadic context. More precisely, the resulting unit will be equivalent to a higher-order function that takes a value and returns a propagating effect carrying that value alongside its context.
+	\item If the function needs inputs to operate on, then the system must provide those inputs.  
+	\item If the output of one function is to be the input of another, then it follows that input and output are isomorphic. It also follows that effects propagating from one causaloid to another, hence this is the materialization of the effect propagation process. 
+	\item If the function interacts with the outside world, then the system must provide the context. 
+	\item If the outside world changes, then the system must provide a mechanism to reflect those changes in the context. 
+	\item If these function-containers are to relate to one another, there must be a structure to hold them and define their pathways. This logically necessitates a causal graph structure.
+	\item If the causal graph model complex, real-world systems, it must be scalable and composable. 
+\end{itemize}
+
+The currently identified higher-order effects most likely will remain incomplete for the foreseeable future despite the EPP's attempt to describe and formalize an initial set. It is understood that the full exploration of the new possibilities that follow from the new axiomatic will take some meaningful time and effort. 
+
+The EPP accepts the premise of detaching causality from spacetime and embraces causality as monadic functional dependency as its core tenet. Many of the properties of the EPP are therefore necessary consequences that arise from its single axiomatic foundation. The reference implementation realizes these consequences through two architectures that satisfy the same logical requirements: a causaloid hypergraph composed with separate context hypergraphs, and a causal monad in which context, state, and audit information travel with the propagating effect through monadic composition. This monograph explores the higher-order implications and their application to computational causality across both architectures.
+% 
+% Overview
+%
+\subsection{Overview of the EPP}
+\label{sec:epp_overview}
+
+The starting point of the EPP is a generalized definition of causality as effect propagation, which detaches the concept from a presupposed spacetime. From the generalized definition of causality, a cascade of novelties followed to operationalize the EPP:
+
+\begin{enumerate}
+	\item Explicit Assumptions 
+	\item Computable Context
+	\item Unified Causal Unit
+	\item Fractal, Self-Referential Causal Structure
+	\item Multimodal Propagating Effect
+	\item Causal State Machine 
+	\item Teloid and Effect Ethos
+\end{enumerate}
+
+
+\textbf{Explicit Assumptions:}
+
+The EPP defines a "Model" as a set that comprises the core logic encapsulated in one or more causaloids, one or more contexts used by the causaloids, and a set of explicit assumptions that must hold true for the model to work. Conventionally, in classical causality, assumptions about the data are  implicit and the decision whether a causal model can be transferred to a different dataset requires additional methods such as Invariant Causal Prediction (ICP) to determine if a causal model applies to a dataset with a different distribution. In contrast, the EPP elevates assumptions as a first-class entity that serves the purpose to decide upon model transferability by encoding assumptions into explicitly testable and computable units. 
+
+\newpage
+
+\textbf{Computable Context:} 
+
+The detachment from a fixed spacetime necessitates the externalization of the environment into a first-class Context. This Context is a rich and explicit representation of the world to reason about. A context may be a static representation of facts, a complex multi-scale temporal graph, a complex coordinate system, or any combination thereof. A static context emits an invariant structure after it is defined, whereas in a dynamic context the context structure itself evolves, with elements added, removed, or adjusted to reflect new values or to correct existing ones. The adjustment mechanism allows for error correction or the adjustment for relativistic effects.
+
+ \textbf{Unified Causal Unit:} 
+ 
+ The EPP resolves the untenability of the classical 'cause-effect' separation by introducing the Causaloid. The Causaloid is a single, computable entity that unifies the mechanism of a cause with its effect. The Causaloid comprises a causal function and therefore establishes function theory and the related lambda calculus as the foundation for causality in the EPP. 
+
+\textbf{Fractal, Self-referential Causal Structure:} 
+
+The EPP inverts the classical relationship between a causal unit and its environment. In classical models, the causal structure is a pre-defined framework (such as a DAG) in which entities are placed. The EPP establishes a fundamentally entity-first, fractal, and self-referential definition of causality by defining the structure as relationships between causaloids and causaloids as the elements of the relationships. This mechanism is made operational through isomorphic recursive composition. The EPP establishes three distinct forms of causaloids that are all isomorphic, yet distinct: Singleton, Collection, Graph.  The isomorphism allows a single Causaloid node to represent either a single causaloid, a collection of causaloids, or to encapsulate an entire, arbitrarily complex Causaloid Graph, enabling the concise expression of deeply layered systems. The collection exists as a specialized form of the graph to simplify common use cases without the complexity of a graph structure. 
+
+
+\textbf{Multimodal Propagating Effect:}
+  
+To facilitate reasoning within the causal structure, the EPP unifies causal input (Evidence) and output (Effect) into a single, isomorphic type: the PropagatingEffect. The Causaloid unifies cause and effect into one logical unit and the EPP is achieving this by formulating the Causaloid as a higher-order function, one that encapsulates a causal function and applies to data for reasoning. As a direct consequence, the distinction between causal input and output becomes quite arbitrary considering that the output of one causaloid is expected to be applied to another causaloid. Therefore, the deliberate decision was made to follow the same logic of the causaloid and fold causal input (Evidence) and output (Effect) into a single, isomorphic type that uniformly represent both and thus directly enable the application of causal output from one causaloid as causal input to another causaloid. This provides a single type that enables the principled unification of deterministic and probabilistic reasoning across arbitrarily complex causal structures. 
+ 
+
+\textbf{Causal State Machine:}
+
+The EPP bridges the gap between causal reasoning and intervention with the causal state machine (CSM). The CSM uses a causal state that connects to the reasoning outcome via the  PropagatingEffect and ultimately converts all complex reasoning into a binary outcome to indicate whether to act according to the defined causal action. When the causal state of a CSM evaluates to true, it then fires its causal action. The action is a regular function that may interact with the context, the causal model, or any external system.  
+
+\textbf{Teloid and Effect Ethos}
+
+The clear separation between context, causal logic, and intervention has been designed to enable the interception of proposes actions for checks against operational rules. In regulated industries, an auditable trail for each action is legally required  and by making the causal reasoning fully explainable before deciding upon an intervention directly supports internal auditing. Therefore, the EPP adds the Teloid as a single unit of intent that encodes a specific rule and the Effect Ethos that aggregates a set of teloids into a larger rule set. A causal state machine then uses the effect ethos to check if the action derived from the causal reasoning is compliant with the rules encoded in applicable teloids.    
+
+%
+% Assumption
+%
+\subsection{Explicit Assumptions}
+\label{sec:assumptions}
+ 
+ In the EPP, model assumptions are explicit and connected to the model.  In practice, this allows to define a Model with a set of preconditions (the
+  assumptions). Before using the model for reasoning or prediction, this allows to efficiently check if all its underlying
+  assumptions hold true for the given data, ensuring the model is operating within its  valid parameters. Furthermore, transferring a model to a new environment can be
+  tested by sampling representative data and testing the samples against the model assumptions to gauge if a model transfer is feasible. In practice, even if an assumption test is positive, it is advised to test the model with an alternate context that closely resembles the new environment to gain more confidence in the degree of transferability. 
+ 
+%
+% Context
+%
+\subsection{Context}
+\label{sec:epp_context}
+
+A key contribution of the EPP is the externalization of context as a first-class entity.
+The context of a causal model is a hypergraph that encapsulates supporting data. 
+Each node in this hypergraph is a Contextoid, a unit of information that can represent:
+
+\begin{itemize}
+	\item Data
+	\item Time, Space, and Spacetime
+	\item Symbol 
+\end{itemize}
+
+The causal logic is kept distinct from the contextual data it operates on. It also directly enables the  agnosticism to the structure of space and time, accommodating Euclidean, non-Euclidean, and symbolic representations within the same architecture. Furthermore,  causal logic  may operate on one or more contexts and, equally important, a particular context might be shared between different causal logic, thus enabling efficient and scalable context representation in complex dynamic systems. 
+
+%
+% Causaloid
+%
+\subsection{Causaloid}
+\label{sec:epp_causaloid}
+
+In the Effect Propagation Process, due to the detachment from a fixed spacetime, the fundamental temporal order is absent. Consequently, the entire classical concept of causality, where a cause must happen before its effect, can no longer be fundamentally established. The distinction between a definitive 'Cause' and a definitive 'Effect' becomes untenable as Russell foresaw. When the separation between cause and effect becomes untenable, then the obvious question arises: why even preserve an untenable separation?
+
+Therefore, the Effect Propagation Process framework adopts the causaloid, a uniform entity proposed by Hardy\cite{HardyDynamicCausalStructure}, that merges the ‘cause' and 'effect' into a single entity. Instead of dealing with two nearly identical concepts discernible from each other by temporal order, the causaloid is a single entity that applies its "input" (cause), to a causal function that derives its "output" (effect), and whose relations to other causaloids define the causal structure and whose effect then propagates to the next causaloid. The nature of the causal function is not prescribed, allowing the Causaloid to encapsulate diverse logical forms, including but not limited to:
+
+\begin{itemize}
+	\item A deterministic rule (IF temp > 100).
+ 	\item A formal Structural Causal Model (SCM).
+	\item A probabilistic estimate or Bayesian network.
+	\item A specialized neural network.
+\end{itemize}
+
+For the deterministic case, the causal function takes some evidence as input, applies Boolean operators (AND, OR) or comparators, and returns a Boolean value as its PropagatingEffect. For a more complex causal scenario, the causal function encapsulates a set of structural causal equations,
+applies the corresponding calculus, and returns a probability distribution value as its PropagatingEffect.
+
+In case of a probabilistic estimate or a Bayesian network, the causal function implements a Conditional Probability Table (CPT) or a similar probabilistic model, applies a probabilistic calculus, i.e., the chain rule of probability, and returns another probability as its PropagatingEffect. If a Causaloid receives multiple PropagatingEffects, each carrying a probability, the receiving Causaloid implements the aggregation of all probabilities. This is a deliberate architectural principle rooted in the EPP's primary role as a flexible, hybrid framework. A specialized neural network embedded into a causal function will most likely return a classification score as its PropagatingEffect. In case the output of the neural network results in a complex type, for example, generative data, then it is sensible to write its output into the appropriate context as a contextoid and return the context and contextoid ID as the PropagatingEffect. 
+
+
+It is important to note that the EPP framework adopts the conceptual role of the Causaloid as a spacetime-agnostic unit of causal interaction, inspired by Hardy’s work on Quantum Gravity, but it does not use Hardy's formal definition that requires a complex process matrix.  Instead, the EPP formulates the Causaloid as an abstract data structure that embeds a causal function, thereby decoupling it from any particular physical theory while preserving its core philosophical utility and making it practically implementable in software.
+
+The term "propagation" refers to the fundamental process by which an effect is transferred within the structure from one Causaloid to another. This fundamental process is what gives rise to the appearance of propagation through spacetime in the classical view. Furthermore, while classical causality relies on a definite temporal order, the Effect Propagation Process treats temporal order as an emergent property, arising from the fundamental process itself.
+
+While the Effect Propagation Process involves the transfer of effects within the fundamental structure, it is crucial to distinguish this from mere accidental correlation. The process reflects the fundamental way the underlying structure of reality establishes dependencies between its components and how it gives rise to the non-accidental relationships we recognize as observed causal relations. This fundamental determination, rather than simple co-occurrence, is what the "Effect Propagation Process" captures at the deepest level.
+
+ The Effect Propagation Process fundamentally inverts the notion of causal structure. Before the EPP, the causal structure was presupposed (i.e., DAG, a set of equations) in which variables, events, objects are placed. The consequence of this order is the fixed and often flat causal structure observed in classical methods of computational causality. The EPP, however, inverts the order and puts the causal entities first as monoidic primitives, and then introduces structure as relationships between these. This results in the operationalization of the fractal, self-referential causal structure that directly follows from the adopted single axiomatic generalized definition of causality. 
+ 
+Specifically, the self-referential structure materializes from the following:
+
+\begin{itemize}
+	\item What is a causal structure? A set of relationships between Causaloids.
+ 	\item What is a causaloid? An entity that defines its relationships to other Causaloids. 
+	\item What is a relationship? The pathway of propagating effects between Causaloids.
+\end{itemize}
+
+Therefore, a set of causaloids can represent arbitrarily complex causal relationships because of this fractal, self-referential definition. It also follows from the definition that causality in the EPP has three primary modalities:
+\begin{itemize}
+	\item When the causal relations are fixed, the structure is static.
+ 	\item When the causal relations are changing, the structure is dynamic. 
+ 	\item When the causal relations are brought into being, the structure emerges. 
+\end{itemize}
+
+The core principle, that the entities define the structure and the structure is defined by its relationships between entities, holds true for all three modalities and, with it, establishes a principled foundation for dynamics. Because of its flexibility, the EPP can express static causal relationships similar to Pearl’s Causal DAG, it can handle probabilistic causal systems similar in spirit to Dynamic Bayesian Networks, but then goes further and  adds causal emergence and unifies both paradigms into one that is static and dynamic, deterministic and probabilistic while remaining structurally agnostic and thus allows for flexible geometric representation.
+
+%
+% Causaloid Collection
+%
+\subsection{Causaloid Collection}
+\label{sec:epp_causaloid_collection}
+
+
+Many real-world causal scenarios are not defined by a single cause but by the interplay of multiple factors. In practice, multiple modalities of causal aggregation may occur. For example, from a set of known causes, all of them must be true for an effect to occur. Then, in some cases, only one of many potential causes may lead to an effect. In other cases, more than one potential cause might be needed to trigger an effect, but not all known causes are required. To model these common collective structures, the EPP provides the Causaloid Collection.
+
+A Causaloid Collection is a first-class entity that encapsulates a set of Causaloids and an explicit, configurable Aggregate Logic. This logic dictates how the individual PropagatingEffects of the member Causaloids are combined into a single, definitive outcome for the collection as a whole. This provides an ergonomic and principled way to express common causal patterns:
+
+\begin{itemize}
+\item \textbf{Conjunction (All):} The collection is active only if all of its member Causaloids are active.
+\item \textbf{Disjunction (Any):} The collection is active if at least one of its member Causaloids is active.
+\item \textbf{Absence (None):} The collection is active only if none of its member Causaloids are active.
+\item \textbf{Threshold (Some(k)):} The collection is active only if at least a specific number, k, of its n member Causaloids are active.
+\end{itemize}
+
+In a conjunction, the causal collection is active only if all of its member Causaloids are active. For a disjunction, it is sufficient when just one cause of the causal collection is active. Negation inverts the conjunction in the sense that it's only true when all causes in a causal collection evaluate to false. For a threshold-based logic, the causal collection is active only when at least some K out of the collection of n causes are true. 
+
+ The causal collection might seem to break from the EPP's geometric foundation, as the relationships between its members are not defined by explicit hyperedges. However,  the relationship of a Causaloid within a collection is not to its peers, but to the collection's aggregate logic itself. For example, a collection with All logic is the formal equivalent of a single hyperedge connecting all member Causaloids as a source set to a single target representing a logical AND gate. Disjunctive and other logics follow a similar principle, allowing for a simpler and more intuitive alternative to modeling these common use cases with a full hypergraph. By providing the causal collection, the EPP allows for the concise and efficient modeling of the most frequent types of causal structures.
+ 
+ It is important to note that the configurable aggregate logic is only applicable to the causaloid collection. For a single causaloid, there is nothing to aggregate, and for the causal graph, the pathway through the graph provides the order of evaluation, therefore aggregation does not apply. 
+ 
+  The Causaloid Collection proves particularly useful, for example, when modeling sensor fusion logic (k-of-n), multi-source object detection (All), or verifying safety interlocks (None). The verification of safety interlocks is a particularly good example for causal collections because it allows for clear, verifiable, and auditable encoding of standard safety protocols commonly found in regulated industries such as robotics and avionics. For use cases that require nested or arbitrarily complex causal relationships, the EPP provides the Causaloid Graph.
+
+%
+% Causaloid Graph
+%
+\subsection{Causaloid Graph}
+\label{sec:epp_causaloid_graph}
+
+Modeling real-world dynamic causal systems requires a mechanism capable of managing complexity.
+Classical computational causality relies on algebra, which is rich in formalization,
+but has its limits when complexity grows and thus limits scalability. The EPP adopts 
+a geometric approach by expressing causal models as a hypergraph. The EPP
+exchanges the arithmetic complexity of solving large equation systems for the challenge of managing structural complexity that comes from the geometrization of causality.
+
+In the EPP, the fractal, self-referential definition of causality directly translates 
+to isomorphic recursive composition that enables concise expression of complex causal structures to manage structural complexity. A causal hypergraph may contain any number of nodes with any number of relations to other nodes, with each node representing a causaloid. A causaloid uniformly represents three distinct levels of abstraction:
+
+\begin{itemize}
+ 	\item Singleton Causaloid: The base case, representing a single, indivisible causal mechanism.
+ 	\item A Collection of Causaloids: A set of Causaloids that can be evaluated with an aggregate logic. 
+ 	\item A Causaloid Graph: A node can encapsulate an entire graph
+\end{itemize}
+
+Recursive isomorphism allows for building causal models in a modular and hierarchical fashion. 
+A complex sub-system can be modeled as a self-contained Causaloid Graph, then encapsulated into a single node to be used as a component in a larger, higher-level model. The causal graph enables the concise expression of deeply layered systems without sacrificing logical integrity. The architecture of the Causaloid Graph is the direct physical manifestation of the EPP's core axioms. In accordance with the definition, the pathway of propagating effects, the relationship between Causaloids, is the hyperedge that connects the causaloid nodes. The Effect Propagation Process is the operational dynamic on this graph. When triggered, Causaloids are evaluated. Their outcomes, the PropagatingEffects, propagate along these hyperedges to other Causaloids, which in turn evaluate their own functions, thus continuing the process until the graph traversal completes and a final, reasoned inference is reached.
+
+%
+% PropagatingEffect
+%
+\subsection{PropagatingEffect}
+\label{sec:propagating_effect}
+
+The EPP emphasizes uniformity and, just like the causaloid folds cause and effect into one uniform unit, the PropagatingEffect folds causal input and output into one uniform unit. Its purpose is to distill the result of the node's reasoning into a clear, actionable directive that is passed to the next causaloid as its input. The PropagatingEffect represents a unified inference outcome across different reasoning modalities. By design, the EPP supports the following reasoning modalities:
+
+\begin{itemize}	
+	\item Deterministic
+	\item Probabilistic 
+	\item Mixed, deterministic and probabilistic 
+\end{itemize}
+
+The deterministic mode facilitates logical reasoning using Boolean logic. A state is either true or false. The EPP recognizes that, while there is a clear use case for deterministic causal reasoning, there is also an equally important use case for probabilistic causal reasoning. Also, the EPP only provides the reasoning mechanism, but leaves the exact details of the reasoning mechanism as implementation details of the causaloid. The wisdom of this decision comes from the realization that the EPP may be used in different scenarios with different requirements and therefore it leaves the exact reasoning details to the practitioner. One important detail on the mixed reasoning. While it is designed internally to convert all Boolean state to probabilities and then reasons only over  probabilities, its final outcome is actually a deterministic Boolean relative to a probabilistic threshold. In the DeepCausality implementation, all reasoning modes are traits with a default implementation thus leaving the practitioner the option to overwrite the default mode with a custom implementation when the need arises. Because the mixed modalities require different input and output types, the PropagatingEffect is isomorphic recursive to represent a variety of different reasoning types such as:
+
+\begin{itemize}	
+	\item Primitive Types: Deterministic, Numerical, and Probability values
+	\item Complex Structures: Map or Graph for passing complex, structured, or relational data between causaloids.
+	\item Contextual Link: A reference to a specific fact in the context to find the PropagatingEffect . 
+	\item None: Explicitly represent no effect.
+	\item Referral: A type that contains a PropagatingEffect and reference to another causaloid to process it.
+\end{itemize}
+
+The Contextual Link accommodates for advanced causal reasoning via non-numerical representations by writing a complex reasoning outcome directly into the context and then propagating the reference to the next reasoning stage which reads the complex reasoning outcome and processes it further. For example, the Symbolic context type combined with the Contextual Link establishes a foundation for a uniform integration of multi-modal causal reasoning with advanced neuro-symbolic reasoning in a future revision of the EPP.
+
+  
+%
+% Dynamic Reasoning Modalities
+%
+\subsection{Dynamic Reasoning Modalities}
+\label{sec:epp_dynamic_modalities}
+
+  
+The EPP uses context, the causaloid, and the propagating effect to enable several distinct modes of causal reasoning: 
+
+\begin{itemize}	
+	\item \textbf{Static Reasoning}
+	\item \textbf{Dynamic Reasoning}
+	\item \textbf{Adaptive Reasoning} 
+	\item \textbf{Emergent Reasoning} 
+\end{itemize}
+
+
+\subsubsection{Static Reasoning}
+
+The entire causal graph is traversed according to its pre-defined structure. The reasoning is static because the reasoning path is always fixed. There is a large category of static causal models in practice that needs this modality. Furthermore, just by making the static context dynamic, a fundamentally static causal model becomes more valuable without any modification as the core dynamics is shifted to the context.  
+
+\subsubsection{Dynamic Reasoning}
+
+
+A sub-graph or a specific path (such as the shortest path) is evaluated, allowing for targeted, context-dependent reasoning within the larger graph. It is dynamic reasoning because the pathway through the graph is determined at runtime via one of the EPP methods for graph traversal. Furthermore, the context of a dynamic reasoning graph might be either static or dynamic. In practice, usually a combination of both is used. An immutable static context for factual data assumed to remain invariant. A classic example would be the ICD-10 catalog. And then one or more dynamic contexts to model various data streams for real-time causal inference. 
+
+\subsubsection{Adaptive Reasoning}
+
+
+The Causaloid itself determines the next step in the reasoning process conditional on its reasoning outcome. Based on its own internal logic, a Causaloid can dynamically dispatch the flow of causality to another Causaloid in the graph, enabling adaptive reasoning. To illustrate conditional reasoning, a clinical patient risk model may operate very differently for patients with normal blood pressure compared to high blood pressure patients. Therefore, two highly specialized models are defined and a dedicated dispatch causaloid queries its context for the latest blood pressure measurements and its recent history, uses its internal logic to decide the level of blood pressure and then dispatches all further reasoning to the specialized causal model for the detected blood pressure level. Adaptive Reasoning can be combined with either a static or dynamic causal graph. In a static graph, all potential reasoning pathways must be defined upfront. In a dynamic causal graph, new causaloids might be added dynamically, i.e., in response to a changing context and then the dispatch causaloid gets replaced with a new one that can dispatch to the newly created reasoning causaloids to enable dynamic adaptive contextual reasoning.  
+
+\subsubsection{Emergent Reasoning}
+
+In case a dynamic context is combined with a dynamic causal reasoning graph that may even use adaptive reasoning, the fundamental assumption of causality, determinism, may not hold true any longer. Intuitively, when the reasoning graph is dynamically constructed and possibly mixed with adaptive reasoning, one would guess that determinism might not be feasible any longer. However, that is not necessarily the case. When the rules of dynamic graph modification are carefully crafted and verified, then even in this complex scenario determinism might hold true. However, the actual problem is the dynamic context in this case. When context is constructed dynamically in response to, say, a sensor data stream and relative to the detected shift in sensor data the reasoning graph is modified dynamically, then the entire premise of determinism hangs on the generative function of the context and that is exactly where formal verification falls apart. It is simply not possible to prove that a context, dynamically constructed from a sensor stream, can be deterministic and therefore the inter-dependent dynamic causal graph, regardless of its reasoning modality, cannot be proven to be deterministic either. 
+
+It is important to understand that the "unprovability" roots in the system's coupling with an open, unpredictable world facilitated via the dynamic context. The precise problem isn't the existence of a dynamic adaptive context, but the door it opens to an open, unpredictable world that may produce states that fall outside the boundaries of the causal model that interacts with the open world through the dynamic context. 
+
+\subsubsection{Trade-off: Adaptability vs. Verifiability}
+
+
+There is a fundamental trade-off between adaptive and emergent reasoning in terms of adaptability and verifiability.     
+
+
+\begin{itemize}
+	\item \textbf{Adaptive Reasoning (Deterministic Dynamics)}
+	\item \textbf{Emergence (Non-deterministic Dynamics)}
+\end{itemize}
+
+Dynamic and adaptive reasoning in the EPP is fundamentally deterministic, but limited in adaptability. These systems may grow complex, but fundamentally remain deterministic and therefore can be formally verified. Here, the trade-off is to preserve determinism at the expense of dynamic adaptability to enable a large class of problems where the modalities are reasonably well known upfront. For example, a clinical model that can switch between a "Normal Response" subgraph and a "Drug Resistance" subgraph is adaptive relative to the known spectrum of modalities. A financial model that switches between "Bull Market" logic and "Bear Market" logic is adaptive relative to these two market modalities. Because the set of possible causal models is closed, pre-defined, and pre-validated, the system's dynamic behavior remains fully deterministic and verifiable. Here, the EPP provides a formal architecture for building systems that can adapt to changing contexts without sacrificing safety and predictability.
+ 
+Emergence on the other hand inverts the trade-off and enables dynamic adaptability at the expense of determinism and formal verification. Emergence is for systems where the causal rules themselves must be generated in response to dynamically emerging situations not foreseen by the designers. Even though determinism is not tenable any longer, restoring verifiability of dynamic emergence requires an entirely new set of methods. 
+
+The EPP deliberately supports both modalities to enable practitioners to choose the mode of dynamic that best fits their requirements and constraints. In regulated industries, emergence might be a non-starter, but a verified static causal model with a mixture of static and dynamic context might be able to get certified within clearly defined boundaries. In advanced research of system dynamics, emergence might be a good choice to explore and simulate scenarios that are otherwise complex to model. 
+
+In practice, it is realistic to see a largely deterministic system that leverages the full spectrum of static and dynamic context, static, dynamic, and even adaptive causal reasoning and only in very specific corner cases, a very small portion of a system would be designed as emergent albeit with  carefully crafted boundaries to the generating functions. The EPP already enables a large part of dynamic use cases with dynamic context, dynamic and adaptive reasoning and therefore it is most likely that dynamic emergence will be reserved for a small and highly specialized set of use cases. In that sense, the EPP scales with growing requirements, from simple static models, complex dynamic models interacting with multiple contexts, to most advanced use cases of dynamic emergence. 
+
+
+%
+% Causal State Machine
+%
+\subsection{Causal State Machine}
+\label{sec:epp_csm}
+
+The causaloid and causal graph provide the mechanism for causal inference, 
+but they lack the ability of intervention. The EPP addresses this through the Causal State Machine (CSM), which serves as the formal bridge between causal reasoning and deterministic intervention.
+
+The CSM originates in Finite State Machine (FSM) in that it aims to formalize state transition.
+However, a defining property of the Finite State Machine is its explicit 'Finiteness': the entire set of possible system states must be known at design time. The FSM paradigm is highly effective for closed-world problems where all conditions are predictable and known. However, the finiteness of states becomes untenable when applied to dynamic causality. The Causal State Machine generalizes the FSM and adapts it 
+to operationalize interventions for dynamic causality through two mechanisms:
+ 
+\begin{itemize}
+	\item A "Causal State" is an Inferred Predicate. 
+	\item The "Causal Action" is a Deterministic Intervention based on the  Causal State.
+\end{itemize}
+
+In a classical FSM, a state is an identifier from a pre-defined list (e.g., "State A").
+In the CSM, a Causal State is an inferential predicate defined as a specific Causaloid whose truthfulness is evaluated. The CSM does not need to know all possible states in advance. It only requires the causal logic (the Causaloids) necessary to infer whether the encoded predicate in the "Causal State" is true. 
+
+Each Causal State is formally linked to a Causal Action. This is a deterministic, programmatic function that is executed if and only if its corresponding Causal State is inferred to be true. This action represents a real-world intervention.
+
+The CSM is an inference-to-action state machine that is both deterministic in its execution and dynamic in its definition. The CSM is deterministic within its encoded causal states and actions, but also dynamic in its definition as it can be extended at run-time by adding new Causal States and Actions, enabling the control logic of a system to evolve in tandem with the causal understanding of its environment. 
+
+%
+% Teloid and Effect Ethos
+%
+\subsection{Teloid and Effect Ethos}
+\label{sec:epp_effect_ethos}
+
+The EffectEthos acts as a deontic (rule-based) gatekeeper for the CSM. The CausalStateMachine is responsible for determining what could happen based on causal logic, while the EffectEthos determines what should happen based on a predefined set of rules and goals. This adds a layer of governance on top of the CSM and allows to enforce safety protocols, ethical guidelines, or business rules before executing actions.
+ 
+A CSM is optionally configured with an EffectEthos upon creation. If an ethos is provided, it must be pre-verified, meaning its internal graph of norms is validated and ready for inference. The interaction begins when the CSM evaluates one of its CausalStates and a state becomes "active" if its internal evaluation yields true. This is where the EffectEthos comes into play. Before firing the CausalAction associated with the active state, the CSM performs the following checks:
+
+\begin{itemize}
+	\item It verifies if an EffectEthos was configured. If not, it fires the action directly, and the process ends here.
+	\item If an ethos exists, the CSM retrieves a Context from the active CausalState, which is crucial as it provides the situational background for the ethical evaluation.
+\end{itemize}
+
+With an active state, a context, and an ethos, the CSM then creates a ProposedAction. This is a temporary data structure that represents the action that is about to be taken. It then evaluates the ProposedAction using the provided Context. The EffectEthos then uses its internal graph of norms (Teloids) to infer a Verdict on the proposed action.
+
+The EffectEthos performs the following steps for norm resolution:
+    \begin{itemize}
+        \item Filtering: It uses the provided tags to find a candidate set of relevant Teloids 
+        \item Activation: It executes the activation\_predicate of each candidate Teloid against the Context.
+        \item \textit{Conflict Resolution}: It traverses its internal TeloidGraph to resolve conflicts among active norms using defeasible reasoning (e.g., Lex Specialis, Lex Posterior), producing a final, consistent set of justified norms before reaching a vedict.
+    \end{itemize}
+
+The CSM inspects the Verdict returned by the ethos:
+\begin{itemize}
+	\item Impermissible: If there is just one norm violated, the proposes action will be denied. 
+	\item Obligatory: The action must be taken and the causal action will be fired.
+	\item Optional: In case an action is deemed optional, the CSM receives a cost estimate associated with the optional so it can decide if the action should be fired relative to a budget stored in the context.   
+\end{itemize}
+
+The EffectEthos acts as a deontic  gatekeeper for the CSM and it provides a mechanism to evaluate whether a causally-triggered action should be executed, based on a set of predefined norms, rules, or ethical principles. 
+
+\newpage
+
+\subsection{Mapping of Classical Causal Models to the EPP}
+\label{sec:epp_subsumption_classical}
+
+One key property of the generalized definition of causality used by the EPP
+is that classical causality can be expressed as a specialized case. In
+practical terms, that also means that methods build upon the classical definition
+of causality can be expressed through the EPP. The following subsections demonstrate
+that is indeed that case for Pearl's Ladder of Causation, Dynamic Bayesian Networks,
+Granger Causality, Rubin Causal Models, and Conditional Average Treatment Effects (CATE).
+For a full formalization of the subsumption of classical methods, see section \ref{sec:subsumption_classical}
+and for a formal proof that the EPP is a strict generalization of the SCM, see Appendix A. 
+
+%
+% Mapping Pearl's Ladder of Causation 
+%
+\subsubsection{Mapping Pearl's Ladder of Causation to the EPP}
+\label{sec:epp_ladder_causation}
+
+Judea Pearl's Ladder of Causation\cite{pearl2000causality} defines three distinct levels of ability required for causal reasoning: Association, Intervention, and Counterfactuals. The EPP achieves these three rungs of the ladder by different means than the established methods of the SCM and Causal DAG.  
+
+\textbf{Rung 1: Association}
+
+The first rung, Association, concerns reasoning from observational data. 
+It answers the question, "What is the likelihood of Y, given that we have observed X?" In classical models, this is handled by conditional probabilities, i.e., $P(Y|X)$.
+
+In the EPP, association is a structured, operational process:
+
+\begin{enumerate}
+	\item The observation $(X)$ is formalized as Evidence and presented as an input to a Causaloid.
+	\item The background condition $(|)$ is represented by the context, which provides the necessary supporting data for the reasoning process.
+	\item The causal inference of $(Y)$ is performed by the causal function embedded within each Causaloid. This function takes the Evidence and any required information from the Context as its inputs and computes a result.
+	\item The inference result is emitted as a PropagatingEffect, which then travels along the graph's hyperedges, serving as Evidence for subsequent Causaloids.
+\end{enumerate}
+
+Thus, "seeing" in the EPP is the operational dynamic where initial Evidence triggers a cascade of computations via the causal functions throughout the Causaloid Graph, leading to a final, reasoned inference.
+
+\textbf{Rung 2: Intervention}
+
+The second rung, Intervention, involves predicting the effects of deliberate actions. It answers the question, "What would Y be if we do X?" This is formalized in Pearl's framework by the do-operator, which simulates an intervention on the causal model itself.
+
+The EPP provides a mechanism of intervention through the Causal State Machine (CSM). 
+The CSM  links causal inferences to deterministic actions:
+
+\begin{itemize}
+	\item A Causal State is defined as an inferential predicate. It is a specific Causaloid evaluated against a specific Context.
+	\item This Causal State is mapped to a Causal Action, a verifiable function that executes when its corresponding state is inferred to be true.
+
+\end{itemize}
+
+This Causal Action is the EPP's intervention. It is a programmatic function that changes state. 
+This change is then reflected as an update to the context, creating a complete feedback loop of inference, action, and new observation.
+
+\textbf{Rung 3: Counterfactuals}
+
+The third rung, Counterfactuals, involves reasoning about alternative possibilities given a known outcome. It answers the retrospective question, "What would Y have been if X had been different, given that we actually observed Z?"
+
+The EPP's architecture provides a Contextual Counterfactual mechanism, which leverages the EPP's externalization of context:
+
+\begin{enumerate}
+	\item Abduction is Context Pinning
+	\item Action is Contextual Alternation
+	\item Prediction is Re-evaluation over an altered context. 
+\end{enumerate}
+
+The factual observation $(Z)$ is already explicitly represented within the primary context. 
+The abduction step is therefore equivalent to identifying and "pinning" this factual context.
+
+The hypothetical premise ("if X had been different") is then established by creating a new, hypothetical context $(C_counterfactual)$ by cloning the primary context $C_factual$ and modifying the value of the relevant Contextoid. The system then executes the exact same, unmodified Causaloid Graph, but uses $C_counterfactual$ as its frame of reference. The resulting inference is the answer to the counterfactual query. 
+
+
+The EPP's mechanisms of causation differ from Structural Causal Models, 
+but they fulfill the same fundamental goals of 'seeing,' 'doing,' and 'imagining' Judea Pearl established
+via the ladder of causation. Table \ref{tab:ladder_comparison} summarizes the comparison of the EPP to the existing methods of computational causality.
+ 
+
+\begin{table}[h!]
+\centering
+\caption{Comparison of Causal Ladder Implementations}
+\label{tab:ladder_comparison}
+\begin{tabular}{|l|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Ladder Rung} & \textbf{Pearl's Framework (SCM/DAG)} & \textbf{Effect Propagation Process (EPP)} \\
+\hline
+\textbf{1. Association} &
+Statistical analysis; calculating conditional probability $P(Y|X)$. &
+Execution of a \texttt{causal function} on \texttt{Evidence} within a factual \texttt{Context} ($C_{\text{factual}}$). \\
+\hline
+\textbf{2. Intervention} &
+The \textit{do}-operator; surgical modification of the model's structural equations. &
+Execution of a \texttt{Causal Action} by the \texttt{Causal State Machine (CSM)} in response to an inferred state. \\
+\hline
+\textbf{3. Counterfactuals} &
+Three-step algorithm: Abduction (solving for latent variables), Action (model surgery), and Prediction. &
+Three-step process: Context Pinning, Contextual Alternation, and Re-evaluation of the \textit{unmodified model} over an \textit{altered context} ($C_{\text{counterfactual}}$). \\
+\hline
+\end{tabular}
+\end{table}
+
+The decision to separate causal logic (the Causaloid Graph) from its data (the Context) that underpins
+contextual alternation leads to some welcome properties. For example, through contextual alternation,  counterfactual reasoning becomes an "embarrassingly parallel" problem because, if 100 alternate contexts are derived, all of them are independent from each other and thus can be evaluated in parallel. 
+
+%
+% Mapping Dynamic Bayesian Networks
+%
+\subsubsection{Mapping Dynamic Bayesian Networks to the EPP}
+\label{sec:epp_Dynamic_Bayesian_Networks}
+
+Dynamic Bayesian Network is the established framework for modeling dynamic causal systems. A DBN models a temporal process by "unrolling" a causal graph over discrete time slices, creating separate nodes for a variable at each point in time. The EPP represents this same process   by evaluating a single, static causal model over a dynamic, temporal context hypergraph. The mapping of DBN to EPP components is as follows:
+ 
+ \textbf{Time Modeling:}
+ 
+ In a DBN, time is an implicit index of the temporal variables. In the EPP, time is made explicit within a
+ context by representing each time slice (e.g., $X_{t-1}$, $X_t$, $X_{t+1}$) as a Tempoid, a temporal type of Contextoid, with their sequential relationship defined by hyper-edges within the context hypergraph. In the EPP data might be attached to a Tempoid as a dedicated node of a different type, i.e., a Datoid. 
+
+ \textbf{State Variables:}
+ 
+A state variable in a DBN (e.g., the concept of Weather across time) corresponds to a single Causaloid in the Causaloid Graph. The Causaloid represents the variable's underlying causal mechanism and the state of "Weather at time t" is the result of evaluating the "Weather" Causaloid contextually using the Tempoid that maps to the time t. A contextual temporal graph allows a Causaloid to access uniformly multiple slices of time at different scales, i.e., weekly average rainfall and today's rainfall to inform its causal logic. 
+
+\textbf{Dependencies:}
+
+The directed edges in a DBN can reference within the same time slice or across different time slices.
+For edges within the same time slice, (e.g., $\text{Weather}_t \to \text{Umbrella}_t$), the causal function simply references its causal logic to the one tempoid at time t in the graph. If "Weather" is a complex state object, then the causaloid may loads it from another context before evaluating the causal rule that would lead to Umbrella become true.
+
+For edges between different time slices (e.g., $\text{Weather}_{t-1} \to \text{Weather}_t$) are represented by the hyperedges in the Causaloid Graph by referencing two different Tempoid nodes. Practically, one would implement a dynamic temporal graph index with accessors for frequently used "current" or "previous" values. \newline
+
+
+\textbf{Conditional Probability Tables (CPT):}
+
+Conditional Probability Tables (CPTs): The CPT defining a variable's probability given its parents
+(e.g., $P(X_t \mid Z_t, X_{t-1})$) is implemented as the causal function within the Causaloid.
+
+
+\textbf{Execution Flow:}
+
+To compute the state of the system at time t, the causal function of a Causaloid queries the Context to determine the current time slice. It receives the PropagatingEffects from its parent Causaloids (representing their states at the appropriate time slices) and uses its internal CPT logic to compute a new probability distribution. This distribution is then emitted as a new probabilistic PropagatingEffect. This process maps the EPP to the "filtering" or "unrolling" inference of a DBN.
+%
+% Mapping Granger Causality
+%
+\subsubsection{Mapping Granger Causality to the EPP}
+\label{sec:epp_Granger_Causality}
+
+Granger causality is a foundational concept for causal inference in time-series data, particularly in econometrics. It is used to solve practical problems, for instance, determining if past changes in the price of oil can be said to "Granger-cause" future changes in shipping industry activity. 
+A time series $X(oil price)$ is said to "Granger-cause" another time series $Y(shipping activity)$ if the past values of  $X$ contain information that helps predict the future values of $Y$ 
+ better than using the past values of $Y$ alone. It is fundamentally a test of predictive utility. The EPP's architecture, with its first-class treatment of time and context, provides a natural and powerful framework for modeling this scenario:
+
+\begin{itemize}
+	\item \textbf{Time-Series as a Temporal Context:} The historical data for both oil prices and shipping activity are represented within the EPP context. This is modeled as a sequence of Tempoid nodes (representing months or quarters), each linked to Datoid nodes containing the respective values for $X(oil price)$ and $Y(shipping activity)$ at time t.
+
+	\item \textbf{The Predictive Model as a Causaloid:} The predictive model for shipping activity is encapsulated within a dedicated `Causaloid`. This Causaloid's purpose is to predict the next value of shipping activity, $Y_{t+1}$, by querying the `Context` for past values.
+
+	\item \textbf{The Granger Test as a Counterfactual Query:} The core question of "Do past oil prices improve the prediction of future shipping activity?" is a fundamentally counterfactual query. The EPP models this directly using its Contextual Alternation mechanism:
+    \begin{enumerate}
+        \item A "Granger Test" Causaloid initiates two parallel, hypothetical evaluations.
+        \item In the first evaluation, the Causaloid is allowed to query the complete, factual `Context`, which contains the history of both oil prices and past shipping activity.
+        \item In the second evaluation, the Causaloid is evaluated against a hypothetical, alternate `Context`, $C'$, where the history of oil prices is deliberately excluded or masked.
+        \item The "Granger Test" Causaloid then compares the prediction error from both evaluations. If the error is significantly lower in the evaluation that included the history of oil prices, the test concludes that oil price Granger-causes shipping activity.
+    \end{enumerate}
+
+\end{itemize}
+
+The EPP's temporal Context is not restricted to linear time steps; it can be a rich hypergraph representing multiple time scales (e.g., daily price volatility and quarterly shipping trends). Furthermore, the Causaloid is not restricted to the linear models typical in econometrics. This allows for the construction of more sophisticated, non-linear, and multi-scale versions of Granger-causal tests
+
+%
+% Mapping Rubin Causal Model
+%
+\subsubsection{Mapping Rubin Causal Model (RCM) to the EPP}
+\label{sec:epp_rubin_causal_model}
+
+The Rubin Causal Model (RCM), also known as the Potential Outcomes framework, is a cornerstone of modern causal inference, particularly in statistics, econometrics, and the social sciences. The RCM defines the causal effect on a specific unit, $i$, as the difference between two potential outcomes: $Y_{i}(1)$, the outcome if the unit receives the treatment, and $Y_{i}(0)$,  the outcome if the unit does not receive the treatment. The central challenge of the RCM, termed the "fundamental problem of causal inference," is that for any given unit, only one of these two potential outcomes can ever be factually observed.  
+
+The EPP models the scenario of potential outcomes as contextual alternations. From a base context, say $C_i$, two alternate contexts are derived, one $C_i'$  with the treatment applied and another one,  $C_i''$ with the control applied. From there, the two potential outcomes for unit $i$ are therefore defined as:
+
+\begin{itemize}
+	\item  $Y_i(1)$ is the final `PropagatingEffect` that results from evaluating the system's `CausaloidGraph` against a context, $C_i'$ where the treatment has been applied.
+	\item $Y_i(0)$ is the final `PropagatingEffect` that results from evaluating the exact same `CausaloidGraph` against another hypothetical context, $C_i''$ where the control has been applied.
+	\item Estimate the difference between the PropagatingEffect resulting from $Y_i(1)$  and the PropagatingEffect resulting $Y_i(0)$ as the causal effect on a unit $i$. 
+\end{itemize}
+
+From the EPP's perspective, the "fundamental problem of causal inference" is a physical constraint that only applies to physical measurements. The EPP, as a computational framework, treats counterfactuals via its contextual alternation mechanism. The EPP can instantiate and evaluate the causal outcomes for both the treatment and control contexts in parallel, thus estimating the difference between two potential outcomes. This mapping demonstrates that the RCM's core concepts are a natural fit within the EPP's architecture and the EPP provides a mechanism to extend the RCM with a richer, dynamic, and non-Euclidean context.
+
+%
+% Mapping Conditional Average Treatment Effects (CATE)
+%
+\subsubsection{Mapping Conditional Average Treatment Effects (CATE) Inference to the EPP}
+\label{sec:epp_cate}
+
+The estimation of Conditional Average Treatment Effects (CATE) is a critical goal of modern applied causal inference, particularly in domains like personalized medicine. CATE is defined as the expected causal effect of an intervention for a specific individual or sub-population, conditioned on their unique characteristics. The purpose of CATE is to move beyond population averages and determine for whom a treatment is beneficial, harmful, or ineffective.
+
+It achieves this by leveraging the Rubin Causal Model (RCM). CATE is formally expressed as $\tau(x) = E[Y(1) - Y(0) | X=x]$, where $Y(1)$ and $Y(0)$ are the potential outcomes. While the definition is elegant, applying it to real-world observational data is a challenge, as only one potential outcome is ever observed. This challenge necessitates a two-stage process:
+\begin{itemize}
+	\item Stage 1 (Discovery): Data science discovers and validates causal links.
+	\item Stage 2 (Inference): The causal links are operationalized to answer specific CATE queries. 
+\end{itemize} 
+
+It is crucial to position the Effect Propagation Process correctly within the broader landscape of computational causality. The EPP is a foundational framework for causal reasoning, simulation, and operations. In its current form, it is not a tool for automated causal discovery from raw observational data. For contextual causal learning within the EPP, more work will be necessary. Therefore, all existing methods of causal discovery remain indispensable for inferring causal graphs from observational data. In an EPP-based workflow, these tools are invaluable for building and validating the initial causal graph. A function learned via a tool like DoWhy or EconML can be directly encapsulated within a Causaloid. The following mapping of CATE inference presumes a causal graph has been found and validated with existing methods and thus is scoped to operationalize the inference stage of CATE. The inference stage of CATE maps to the EPP in two different modalities: Static and Dynamic.
+
+
+\subsubsection*{Representing Static CATE in the EPP}
+
+The EPP models a static CATE query as a formal, computable, counterfactual simulation. This is achieved by mapping the core concepts of the query onto the EPP's architectural primitives:
+
+\begin{itemize}
+\item \textbf{The Condition $X=x$ as a Static Context:}
+The unit's complete set of pre-treatment covariates, $X=x$, is represented by a static \texttt{Context} ($C_x$). This context serves as the factual "ground truth" for the unit's state at the moment of the query.
+
+\item \textbf{The Learned Function as a `Causaloid`:}
+The causal relationships and the CATE function (`$\tau(x)$`) that were discovered in Stage 1 (e.g., using DoWhy) are encapsulated within the causal logic of one or more \texttt{Causaloids}. For a simple case, a single `CATEstimator` \texttt{Causaloid} might contain the entire learned function. In a more complex model, this might be a full \texttt{CausaloidGraph} representing the mechanistic pathways of the treatment.
+
+\item \textbf{Potential Outcomes via `Contextual Alternation`:}
+The EPP computes the potential outcomes, `$Y(1)$` and `$Y(0)$`, not through statistical adjustment, but through direct, parallel simulation. This is achieved via the EPP's core counterfactual mechanism:
+\begin{enumerate}
+    \item \textbf{Abduction:} The factual, pre-treatment state of the unit is established by "pinning" the static context, `$C_x$`.
+    \item \textbf{Action:} The system then creates two hypothetical, parallel realities by cloning this base context:
+        \begin{itemize}
+            \item A `treatment` context (`$C_1$`) is created where the treatment is applied (e.g., by introducing specific \texttt{Evidence} to a "treatment" \texttt{Causaloid}).
+            \item A `control` context (`$C_0$`) is created where the control is applied.
+        \end{itemize}
+    \item \textbf{Prediction:} The EPP evaluates the entire, unmodified \texttt{CausaloidGraph} twice—once against the treatment context `$C_1$` to compute `$Y(1)$`, and once against the control context `$C_0$` to compute `$Y(0)$`.
+\end{enumerate}
+
+\item \textbf{The CATE as the Final `PropagatingEffect`:}
+The final CATE value, `$\tau(x)$`, is the directly computed difference between the two `PropagatingEffects` representing the potential outcomes. The entire workflow can be encapsulated in a single `CATECausaloid` that orchestrates this simulation and returns the final estimate.
+\end{itemize}
+
+
+\subsection{Comparison}
+\label{sec:epp_comparison}
+
+The established methods of computational causality, particularly the frameworks developed by Pearl, Rubin, and their successors like Bareinboim, represent monumental intellectual achievements that form the foundation of the field. These methods provide a powerful and mathematically rigorous toolkit to infer a fixed causal structure (the DAG) and reason within it, even with missing data and latent confounders. At its core, the existing methods enable causal reasoning in a world of stable systems and static laws.
+
+The Effect Propagation Process (EPP) framework re-architects causality from first principles as an inherently dynamic, process-oriented, spacetime-independent functional dependency. It enables causal reasoning for dynamic systems in which the causal laws themselves can evolve. These systems exist, for instance, in quantitative finance that consistently deals with dynamic regime shifts, and system biology where dynamic pathways commonly occur. Table \ref{tab:epp_comparison} provides a detailed comparison of the core philosophical and architectural differences between the existing methods of causality and the EPP:
+
+
+\begin{table}[h!]
+\caption{Comparison Between Classical Methods and the EPP}
+\label{tab:epp_comparison}
+\begin{tabular}{|l|l|l|}
+\hline
+Feature           & Classical Causality                        & Effect Propagation Process      
+\\ \hline
+Core Axiom        & Causal Markov Condition \& Faithfulness       & Functional Dependency          \\ \hline
+Causal Structure  & Static                                       & Dynamic \& Emergent            \\ \hline
+Role of Spacetime & Implicit Background                          & Explicit \& Computable Context. \\ \hline
+Representation    & Euclidean-centric                            & Natively Non-Euclidean         \\ \hline
+Fundamental Unit  & Variables 									 & The Causaloid                  \\ \hline
+Primary Goal      & Causal Discovery \& Inference                 & Dynamic Causal Modeling         \\ \hline
+\end{tabular}
+\end{table}
+
+
+From table \ref{tab:epp_comparison}, it is evident that classical methods operate within a defined static structure, whereas the EPP is designed for less certain, dynamic structures. Therefore, classical causality provides verifiability through determinism: given a static model, one can prove the outcome of an intervention. The EPP treats static models as a specialized case for which determinism still holds. However, for its dynamic modalities, the EPP trades the predictability of a fixed structure for greater expressive power, which necessitates a different method of verifiability. The EPP provides this by shifting the focus of verification from system states to system intent. It introduces a computable teleology, enabling the formal verification of a system's actions against a predefined purpose (telos) and ethical constraints (ethos). Thus, while a system's causal structure may emerge, its behavior can be proven to remain aligned with its core principles as a prerequisite for establishing verifiable safety in complex adaptive systems.
+
+\subsection{Selection Criteria}
+
+In cases where methods of classical causality and conventional machine learning do not solve the problem at hand, methodologies rooted in EPP might be preferred. Table \ref{tab:method_matrix} provides guidance on selecting an appropriate causal modeling approach based on the temporal and spatial complexity of the system under investigation.
+
+% Please add the following required packages to your document preamble:
+\begin{table}[h!]
+\begin{tabular}{llll}
+Feature Assessed &
+  System Characteristic &
+  Classical Methods &
+  EPP Methods \\ \hline
+\multicolumn{1}{|l|}{Temporal Complexity} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} \\ \hline
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{Single timescale + linear progression} &
+  \multicolumn{1}{l|}{Preferred} &
+  \multicolumn{1}{l|}{} \\ \hline
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{Multiple timescales OR nonlinear temporal relationships} &
+  \multicolumn{1}{l|}{May struggle} &
+  \multicolumn{1}{l|}{Consider EPP} \\ \hline
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{Multiple timescales AND nonlinear temporal relationships} &
+  \multicolumn{1}{l|}{Not Possible} &
+  \multicolumn{1}{l|}{EPP Preferred} \\ \hline
+\multicolumn{1}{|l|}{Spatial Structure} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} \\ \hline
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{Euclidean space with fixed coordinates} &
+  \multicolumn{1}{l|}{Preferred} &
+  \multicolumn{1}{l|}{} \\ \hline
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{Non-Euclidean OR dynamic spatial relationships} &
+  \multicolumn{1}{l|}{Limited/Difficult} &
+  \multicolumn{1}{l|}{EPP Advantageous} \\ \hline
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{Non-Euclidean AND dynamic spatial relationships} &
+  \multicolumn{1}{l|}{Not Possible} &
+  \multicolumn{1}{l|}{EPP Preferred} \\ \hline
+\multicolumn{1}{|l|}{Combined Complexity} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} \\ \hline
+\multicolumn{1}{|l|}{Scenario 1} &
+  \multicolumn{1}{l|}{Linear Time \& Euclidean Space} &
+  \multicolumn{1}{l|}{Preferred} &
+  \multicolumn{1}{l|}{} \\ \hline
+\multicolumn{1}{|l|}{Scenario 2} &
+  \multicolumn{1}{l|}{Nonlinear Time OR Complex Spatial} &
+  \multicolumn{1}{l|}{Limited/Difficult} &
+  \multicolumn{1}{l|}{Consider EPP} \\ \hline
+\multicolumn{1}{|l|}{Scenario 3} &
+  \multicolumn{1}{l|}{Nonlinear Time AND Complex Spatial} &
+  \multicolumn{1}{l|}{Not Possible} &
+  \multicolumn{1}{l|}{EPP Preferred} \\ \hline
+\end{tabular}
+\caption{Causal Method Selection Matrix}
+\label{tab:method_matrix}
+\end{table}
+
+\textbf{Emergent Causality:} If the problem involves emergent causal structures (where the causal graph itself is not fixed and changes dynamically based on context, i.e., dynamic regime shifts), EPP-based methodologies become the only viable option.
+
+
+
+\newpage
+
+\subsection{Discussion}
+\label{sec:epp_discussion}
+
+The preceding sections have laid out the architectural components of the Effect Propagation Process. However, the capacity of the EPP to model dynamic systems where the causal structure itself can evolve introduces a class of challenges that reach beyond the scope of formalism alone. There is an important distinction between the reasoning modalities the EPP introduces:
+
+\begin{itemize}
+	\item Static
+	\item Dynamic
+	\item Adaptive 
+	\item Emergent 
+\end{itemize}
+
+For static, dynamic, and even adaptive reasoning determinism remains preserved. However, when a dynamic context is combined with a dynamic causal model, the resulting co-evolving of context and causal logic might not be deterministic any longer, and thus amounts to dynamic causal emergence. In practice, dynamic and adaptive causal reasoning already cover the vast majority of practical problems the EPP is designed to address. However, in situations where the dynamic change cannot be known upfront, the emergent modality closes the gap albeit at the expense of determinism which imposes a profound challenge. To ensure that the EPP is built upon a sound, coherent, and trustworthy foundation, it is required to first understand the inherent higher-order consequences of its dynamic design from first principles.
+
+Therefore, the subsequent philosophical chapters establish the first principles of the EPP. The Metaphysics in section \ref{sec:metaphysics} will establish the EPP's first principles of being and change. The Epistemology in section \ref{sec:epp_epistemology} will explore the far-reaching consequences for knowledge and truth in such a system. The effect ethos and teloid are expanded in section \ref{sec:teleology}. Finally, the Ontology in section \ref{sec:epp_ontology} will use these insights to structure a safe and sound set of primitives that are ready for rigorous formalization in section \ref{sec:formalization} and implementation in section \ref{sec:implementation}. 
+
+\newpage
