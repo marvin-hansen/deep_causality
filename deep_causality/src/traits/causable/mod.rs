@@ -2,6 +2,8 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
+pub mod stateful;
+
 use crate::{Identifiable, PropagatingEffect};
 
 /// The Causable trait defines the core behavior for all causal elements.

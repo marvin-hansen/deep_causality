@@ -11,6 +11,7 @@ use std::hash::Hash;
 use crate::IdentificationValue;
 use crate::{
     Causable, CausableCollectionAccessor, Identifiable, MonadicCausable, MonadicCausableCollection,
+    StatefulMonadicCausable, StatefulMonadicCausableCollection,
 };
 
 //
@@ -26,6 +27,22 @@ where
         + Sync
         + 'static
         + Debug,
+{
+}
+
+impl<I, O, S, C, T> StatefulMonadicCausableCollection<I, O, S, C, T> for [T]
+where
+    T: MonadicCausable<I, O> + StatefulMonadicCausable<I, O, S, C> + Clone + Causable,
+    I: Clone,
+    O: crate::utils::monadic_collection_utils::Aggregatable
+        + Clone
+        + Default
+        + Send
+        + Sync
+        + 'static
+        + Debug,
+    S: Clone + Default,
+    C: Clone,
 {
 }
 
@@ -67,6 +84,22 @@ where
         + Sync
         + 'static
         + Debug,
+{
+}
+
+impl<I, O, S, C, T> StatefulMonadicCausableCollection<I, O, S, C, T> for VecDeque<T>
+where
+    T: MonadicCausable<I, O> + StatefulMonadicCausable<I, O, S, C> + Causable + Clone,
+    I: Clone,
+    O: crate::utils::monadic_collection_utils::Aggregatable
+        + Clone
+        + Default
+        + Send
+        + Sync
+        + 'static
+        + Debug,
+    S: Clone + Default,
+    C: Clone,
 {
 }
 
@@ -112,6 +145,23 @@ where
 {
 }
 
+impl<I, O, S, C, K, V> StatefulMonadicCausableCollection<I, O, S, C, V> for HashMap<K, V>
+where
+    K: Eq + Hash,
+    V: MonadicCausable<I, O> + StatefulMonadicCausable<I, O, S, C> + Causable + Clone,
+    I: Clone,
+    O: crate::utils::monadic_collection_utils::Aggregatable
+        + Clone
+        + Default
+        + Send
+        + Sync
+        + 'static
+        + Debug,
+    S: Clone + Default,
+    C: Clone,
+{
+}
+
 impl<I, O, K, V> CausableCollectionAccessor<I, O, V> for HashMap<K, V>
 where
     K: Eq + Hash,
@@ -152,6 +202,23 @@ where
         + Sync
         + 'static
         + Debug,
+{
+}
+
+impl<I, O, S, C, K, V> StatefulMonadicCausableCollection<I, O, S, C, V> for BTreeMap<K, V>
+where
+    K: Ord,
+    V: MonadicCausable<I, O> + StatefulMonadicCausable<I, O, S, C> + Causable + Clone,
+    I: Clone,
+    O: crate::utils::monadic_collection_utils::Aggregatable
+        + Clone
+        + Default
+        + Send
+        + Sync
+        + 'static
+        + Debug,
+    S: Clone + Default,
+    C: Clone,
 {
 }
 

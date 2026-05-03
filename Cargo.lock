@@ -81,6 +81,7 @@ checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 name = "avionics_examples"
 version = "0.1.0"
 dependencies = [
+ "deep_causality",
  "deep_causality_core",
  "deep_causality_multivector",
  "deep_causality_tensor",

@@ -4,7 +4,7 @@
  */
 
 use crate::{CausalityError, Causaloid};
-use deep_causality_core::{EffectValue, PropagatingEffect};
+use deep_causality_core::{EffectValue, PropagatingEffect, PropagatingProcess};
 use deep_causality_haft::LogAddEntry;
 use std::fmt::Debug;
 
@@ -94,6 +94,126 @@ where
         .logs
         .add_entry(&format!("Causaloid {}: Incoming effect: {:?}", id, ev));
     effect
+}
+
+/// Stateful sibling of [`execute_causal_logic`].
+///
+/// Threads `state` and `context` from the caller into the causaloid's stored
+/// closure (preferring the context-aware variant when present) and returns the
+/// resulting `PropagatingProcess<O, S, C>` without conversion. Unlike the
+/// stateless helper, this function does **not** call `S::default()` and does
+/// **not** discard the `state` carried on the closure's output.
+///
+/// Behaviour:
+/// * If `causaloid.context_causal_fn` is set, the closure is invoked with
+///   `(EffectValue::from(input), state, context)` and its returned process is
+///   returned to the caller intact (logs preserved, state preserved).
+/// * Otherwise, if the stateless `causaloid.causal_fn` is set, it is invoked on
+///   the value and the resulting `PropagatingEffect<O>` is lifted into a
+///   `PropagatingProcess<O, S, C>` whose `state` and `context` fields are the
+///   pass-through arguments supplied by the caller.
+/// * If neither closure is set, an error process is returned with the caller's
+///   `state` and `context` preserved.
+pub(super) fn execute_causal_logic_stateful<I, O, PS, C>(
+    input: I,
+    state: PS,
+    context: Option<C>,
+    causaloid: &Causaloid<I, O, PS, C>,
+) -> PropagatingProcess<O, PS, C>
+where
+    I: Default + Clone,
+    O: Default + Clone + Debug,
+    PS: Default + Clone,
+    C: Clone,
+{
+    if let Some(context_fn) = &causaloid.context_causal_fn {
+        let ev = EffectValue::from(input);
+        // Prefer the caller-supplied context; fall back to the causaloid's own
+        // stored context only if the caller passed `None`. This mirrors the
+        // existing context-discovery behaviour of `execute_causal_logic` while
+        // honouring the caller's explicit choice when one is given.
+        let effective_ctx = context.or_else(|| causaloid.context.clone());
+        return context_fn(ev, state, effective_ctx);
+    }
+
+    if let Some(causal_fn) = &causaloid.causal_fn {
+        let stateless: PropagatingEffect<O> = causal_fn(input);
+        return PropagatingProcess {
+            value: stateless.value,
+            state,
+            context,
+            error: stateless.error,
+            logs: stateless.logs,
+        };
+    }
+
+    let err_msg = format!(
+        "Causaloid {} is missing both causal_fn and context_causal_fn",
+        causaloid.id
+    );
+    PropagatingProcess {
+        value: EffectValue::None,
+        state,
+        context,
+        error: Some(CausalityError(
+            deep_causality_core::CausalityErrorEnum::Custom(err_msg),
+        )),
+        logs: Default::default(),
+    }
+}
+
+/// Stateful sibling of [`log_input`]. Records the input on the process log
+/// while preserving the caller's `state` and `context`.
+pub(super) fn log_input_stateful<I, PS, C>(
+    input: I,
+    id: u64,
+    state: PS,
+    context: Option<C>,
+) -> PropagatingProcess<I, PS, C>
+where
+    I: Debug + Clone + Default,
+    PS: Clone,
+    C: Clone,
+{
+    let ev = EffectValue::from(input.clone());
+    let mut process: PropagatingProcess<I, PS, C> = PropagatingProcess {
+        value: EffectValue::Value(input),
+        state,
+        context,
+        error: None,
+        logs: Default::default(),
+    };
+    process
+        .logs
+        .add_entry(&format!("Causaloid {}: Incoming effect: {:?}", id, ev));
+    process
+}
+
+/// Stateful sibling of [`log_output`]. Records the output on the process log
+/// while preserving the caller's `state` and `context`.
+pub(super) fn log_output_stateful<O, PS, C>(
+    output: O,
+    id: u64,
+    state: PS,
+    context: Option<C>,
+) -> PropagatingProcess<O, PS, C>
+where
+    O: Debug + Clone + Default,
+    PS: Clone,
+    C: Clone,
+{
+    let ev = EffectValue::from(output.clone());
+    let mut process: PropagatingProcess<O, PS, C> = PropagatingProcess {
+        value: EffectValue::Value(output),
+        state,
+        context,
+        error: None,
+        logs: Default::default(),
+    };
+    process
+        .logs
+        .add_entry(&format!("Causaloid {}: Outgoing effect: {:?}", id, ev));
+    process
 }
 
 /// Logs the output from a causaloid.

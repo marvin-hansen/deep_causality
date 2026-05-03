@@ -19,6 +19,7 @@ cargo run -p avionics_examples --example <example_name>
 | [magnav](magnav/README.md) | Navigation | Magnetic Navigation using Causal Particle Filters (Bayesian estimation) |
 | [geometric_tcas](geometric_tcas/README.md) | Collision Avoidance | NextGen TCAS using Geometric Algebra collision detection and `Intervenable` safety interlocks |
 | [hypersonic_2t](hypersonic_2t/README.md) | Defense/Tracking | Tracking Hypersonic Glide Vehicles (HGV) using Dual-Time (2T) Physics in 6D phase space |
+| [flight_envelope_monitor](flight_envelope_monitor/README.md) | Health Monitoring | Three-stage stateful pipeline (sensor collection → bind chain → envelope hypergraph) demonstrating uniform composition through `PropagatingProcess<_, FlightState, AircraftConfig>` |
 
 > **See also:** [physics_examples](../physics_examples/README.md) for more Geometric Algebra applications.
 

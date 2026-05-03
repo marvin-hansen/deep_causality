@@ -46,10 +46,12 @@ pub use crate::traits::adjustable::{Adjustable, UncertainAdjustable};
 pub use crate::traits::assumable::Assumable;
 pub use crate::traits::assumable::AssumableReasoning;
 // Causable Traits
+pub use crate::traits::causable::stateful::StatefulMonadicCausable;
 pub use crate::traits::causable::{Causable, MonadicCausable};
 // Causable Graph Traits
 pub use crate::traits::causable_graph::graph::CausableGraph;
 pub use crate::traits::causable_graph::graph_reasoning::MonadicCausableGraphReasoning;
+pub use crate::traits::causable_graph::graph_reasoning::stateful::StatefulMonadicCausableGraphReasoning;
 pub use crate::traits::causable_graph::*;
 pub use crate::traits::contextuable::coordinate::Coordinate;
 pub use crate::traits::contextuable::datable::Datable;
@@ -175,6 +177,7 @@ pub use crate::utils::time_utils;
 // Causable Collection Traits
 pub use traits::causable_collection::collection_accessor::CausableCollectionAccessor;
 pub use traits::causable_collection::collection_reasoning::monadic_collection::MonadicCausableCollection;
+pub use traits::causable_collection::collection_reasoning::stateful_monadic_collection::StatefulMonadicCausableCollection;
 
 // Uncertainty types
 pub use deep_causality_uncertain::Uncertain;

@@ -3,6 +3,8 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
+pub mod stateful;
+
 use crate::*;
 use deep_causality_haft::LogAppend;
 use std::collections::VecDeque;
