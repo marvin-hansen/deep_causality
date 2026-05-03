@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.6](https://github.com/deepcausality-rs/deep_causality/compare/deep_causality-v0.13.5...deep_causality-v0.13.6) - 2026-05-03
+
+### Other
+
+- Add flight_envelope_monitor avionics example + framework error-passthrough fix
+- Add stateful Causaloid evaluation API
+
 ## [0.13.5](https://github.com/deepcausality-rs/deep_causality/compare/deep_causality-v0.13.4...deep_causality-v0.13.5) - 2026-03-12
 
 ### Other
