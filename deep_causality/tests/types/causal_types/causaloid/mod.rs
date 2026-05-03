@@ -4,6 +4,8 @@
  */
 
 #[cfg(test)]
+mod causable_stateful_tests;
+#[cfg(test)]
 mod causaloid_collection_tests;
 #[cfg(test)]
 mod causaloid_debug_tests;

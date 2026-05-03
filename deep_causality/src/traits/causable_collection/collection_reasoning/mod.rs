@@ -4,3 +4,4 @@
  */
 
 pub(crate) mod monadic_collection;
+pub(crate) mod stateful_monadic_collection;

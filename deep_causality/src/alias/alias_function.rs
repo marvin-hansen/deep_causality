@@ -38,3 +38,30 @@ pub type CausalFn<I, O> = fn(I) -> PropagatingEffect<O>;
 /// A `PropagatingEffect`.
 pub type ContextualCausalFn<I, O, S, C> =
     fn(EffectValue<I>, S, Option<C>) -> PropagatingProcess<O, S, C>;
+
+/// The unified function signature for singleton causaloids authored on the
+/// stateful evaluation path.
+///
+/// Structurally identical to [`ContextualCausalFn`] (both resolve to the same
+/// `fn` pointer type), this alias is a clearly-named ergonomic marker at the
+/// closure-author site. Use it when authoring closures intended to be evaluated
+/// via [`crate::StatefulMonadicCausable::evaluate_stateful`] or one of the
+/// stateful collection / graph reasoning methods.
+///
+/// The existing [`crate::Causaloid::new_with_context`] constructor accepts this
+/// alias as-is — no separate "stateful" constructor exists. Statefulness on a
+/// `Causaloid` is a property of the **evaluation call** (which trait method is
+/// invoked), not of the constructor.
+///
+/// # Arguments
+///
+/// * `effect` - A reference to the `EffectValue` flowing through the graph during reasoning.
+/// * `state`  - The state carried by the incoming process (preserved across evaluation).
+/// * `context` - The optional context carried by the incoming process.
+///
+/// # Returns
+///
+/// A `PropagatingProcess<O, S, C>` whose `state` and `context` are returned to
+/// the caller intact (no defaulting, no discarding).
+pub type StatefulContextualCausalFn<I, O, S, C> =
+    fn(EffectValue<I>, S, Option<C>) -> PropagatingProcess<O, S, C>;
