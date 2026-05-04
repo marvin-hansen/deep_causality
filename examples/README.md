@@ -11,6 +11,7 @@ This directory contains examples demonstrating various features and applications
 | [CSM Examples](#csm-examples) | Causal State Machine patterns |
 | [Core Examples](#core-examples) | PropagatingEffect and PropagatingProcess fundamentals |
 | [Avionics Examples](#avionics-examples) | High-assurance GNC and Safety Critical Systems |
+| [Chronometric Examples](#chronometric-examples) | Chronometric geodesy from satellite clock data |
 | [Physics Examples](#physics-examples) | Multi-physics simulations with Geometric Algebra |
 | [Medicine Examples](#medicine-examples) | Biomedical and life sciences applications |
 | [Material Examples](#material-examples) | Material Science and Metamaterials |
@@ -95,6 +96,20 @@ High-assurance examples for Aerospace, Defense, and Safety Critical systems.
 | [flight_envelope_monitor](flight_envelope_monitor/README.md) | Health Monitoring | Three-stage stateful pipeline (sensor collection → bind chain → envelope hypergraph) demonstrating uniform composition through `PropagatingProcess<_, FlightState, AircraftConfig>` | `cargo run -p avionics_examples --example flight_envelope_monitor` |
 
 See [avionics_examples/README.md](avionics_examples/README.md) for detailed documentation.
+
+---
+
+## Chronometric Examples
+
+**Location:** `examples/chronometric_examples`
+
+Chronometric geodesy demonstrations using the J2-corrected weak-field 1PN kernel from `deep_causality_physics::chronometric`. Recovers gravitational parameters from satellite clock time-dilation data, with `CausalMonad` bind-chain composition end-to-end.
+
+| Example | Domain | Description | Command |
+|---------|--------|-------------|---------|
+| [gm_recovery](chronometric_examples/README.md) | Geodesy | Recovers Earth's geocentric gravitational constant ($GM_\oplus$) and derived planetary mass ($M_\oplus = GM_\oplus / G$) from one full GPS week of Galileo broadcast clock and SP3 orbit data (satellite E14). Validates against published JGM-3 / IERS 2010 references at ~0.2 % relative error | `cargo run -p chronometric_examples --example gm_recovery` |
+
+See [chronometric_examples/README.md](chronometric_examples/README.md) for detailed documentation.
 
 ---
 
