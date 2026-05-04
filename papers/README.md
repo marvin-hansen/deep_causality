@@ -9,7 +9,7 @@ Papers, articles, and other content written by the DeepCausality team.
 All articles are formatted in [LaTex](https://www.latex-project.org) with the source code available in the [src folder](src). 
 The DeepCasuality project uses [texifier](https://www.texifier.com/mac) for type-setting of all documents shared in this repository. 
 
-## 2025
+## 2026
 
 ### [The Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/effect_propagation_process/epp.pdf)
 
@@ -17,13 +17,15 @@ Citation:
 ```latex
 @misc{Hansen2025EPP,
   author       = {Hansen, Marvin},
-  title        = {The Effect Propagation Process (EPP): A Foundation for Dynamic Causality},
+  title        = {The Effect Propagation Process (EPP): An axiomatic Foundation for Dynamic Causality},
   year         = {2026},
   month        = {May},
-  howpublished = {\url{https://github.com/deepcausality-rs/papers}},
+  howpublished = {\url{https://github.com/deepcausality-rs/deep_causality/tree/main/papers}},
   note         = {Accessed: May 2026}
 }
 ```
+
+## 2025
 
 ### [The Epistemology of the Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/epistemology_effect_propagation_process/epp_epistemology.pdf)
 
@@ -34,7 +36,7 @@ Citation:
   title        = {The Epistemology of the Effect Propagation Process},
   year         = {2025},
   month        = {June},
-  howpublished = {\url{https://github.com/deepcausality-rs/papers}},
+  howpublished = {\url{https://github.com/deepcausality-rs/deep_causality/tree/main/papers}},
   note         = {Accessed: June 2025}
 }
 ```
@@ -48,7 +50,7 @@ Citation:
   title        = {The Formalization  of the Effect Propagation Process},
   year         = {2025},
   month        = {July},
-  howpublished = {\url{https://github.com/deepcausality-rs/papers}},
+  howpublished = {\url{https://github.com/deepcausality-rs/deep_causality/tree/main/papers}},
   note         = {Accessed: July 2025}
 }
 ```
@@ -62,7 +64,7 @@ Citation:
   title        = {The Metaphysics of the Effect Propagation Process},
   year         = {2025},
   month        = {July},
-  howpublished = {\url{https://github.com/deepcausality-rs/papers}},
+  howpublished = {\url{https://github.com/deepcausality-rs/deep_causality/tree/main/papers}},
   note         = {Accessed: July 2025}
 }
 ```
@@ -76,7 +78,7 @@ Citation:
   title        = {The Ontology of the Effect Propagation Process},
   year         = {2025},
   month        = {July},
-  howpublished = {\url{https://github.com/deepcausality-rs/papers}},
+  howpublished = {\url{https://github.com/deepcausality-rs/deep_causality/tree/main/papers}},
   note         = {Accessed: July 2025}
 }
 ```
@@ -90,7 +92,7 @@ Citation:
   title        = {The Teleology of the Effect Propagation Process},
   year         = {2025},
   month        = {August},
-  howpublished = {\url{https://github.com/deepcausality-rs/papers}},
+  howpublished = {\url{https://github.com/deepcausality-rs/deep_causality/tree/main/papers}},
   note         = {Accessed: August 2025}
 }
 ```
