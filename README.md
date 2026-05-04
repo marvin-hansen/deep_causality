@@ -65,6 +65,66 @@ causality, DBNs) assume fixed background spacetime and static causal structure a
 
 Hosted as a sandbox project at the [Linux Foundation for Data & AI](https://landscape.lfai.foundation/).
 
+## Getting Started
+
+```bash
+cargo add deep_causality_core
+```
+
+### Counterfactual & Intervention Example
+
+```rust
+use deep_causality_core::{Intervenable, PropagatingEffect};
+
+fn main() {
+    // Causal chain: Dose → Absorption → Metabolism → Response
+    let observed = PropagatingEffect::pure(10.0_f64)
+        .bind(|dose, _, _| PropagatingEffect::pure(dose * 0.8))   // Absorption: 8.0
+        .bind(|level, _, _| PropagatingEffect::pure(level - 2.0)) // Metabolism: 6.0
+        .bind(|level, _, _| {
+            let response = if level > 5.0 { "Effective" } else { "Ineffective" };
+            PropagatingEffect::pure(response)
+        });
+    // Result: "Effective"
+
+    // Intervention: Replace value MID-CHAIN with do(BloodLevel := 3.0)
+    let intervened = PropagatingEffect::pure(10.0_f64)
+        .bind(|dose, _, _| PropagatingEffect::pure(dose * 0.8))   // Absorption: 8.0
+        .intervene(3.0)  // ← Force BloodLevel to 3.0, preserving log
+        .bind(|level, _, _| PropagatingEffect::pure(level - 2.0)) // Metabolism: 1.0
+        .bind(|level, _, _| {
+            let response = if level > 5.0 { "Effective" } else { "Ineffective" };
+            PropagatingEffect::pure(response)
+        });
+    // Result: "Ineffective" — intervention changed the outcome
+
+    println!("Observed:   {:?}", observed.value());   // "Effective"
+    println!("Intervened: {:?}", intervened.value()); // "Ineffective"
+}
+```
+
+This walks **Pearl's Ladder of Causation**:
+
+1. **Association** (Rung 1): `dose=10` correlates with "Effective".
+2. **Intervention** (Rung 2): `intervene(3.0)` forces a value mid-chain.
+3. **Counterfactual** (Rung 3): Same chain, different outcome under the intervention.
+
+---
+
+## Examples
+
+```bash
+# Regime change: causal structure evolves as the system crosses a physical threshold
+cargo run -p physics_examples --example event_horizon_probe
+
+# Compositional pipeline: Causaloid evaluations interleaved with CausalMonad bind
+cargo run -p avionics_examples --example flight_envelope_monitor
+```
+
+See [examples/README.md](examples/README.md) for the full catalogue of available examples.
+
+---
+
 ## What is Unique
 
 |                                                      |                                                                                                                 |
@@ -184,86 +244,6 @@ compose monadically through the HKT machinery in the foundation.
 │                     deep_causality_metric  ─── shared sign conventions
 └─────────────────────────────────────────────────┘
 ```
-
----
-
-## Getting Started
-
-```bash
-cargo add deep_causality_core
-```
-
-### Counterfactual & Intervention Example
-
-```rust
-use deep_causality_core::{Intervenable, PropagatingEffect};
-
-fn main() {
-    // Causal chain: Dose → Absorption → Metabolism → Response
-    let observed = PropagatingEffect::pure(10.0_f64)
-        .bind(|dose, _, _| PropagatingEffect::pure(dose * 0.8))   // Absorption: 8.0
-        .bind(|level, _, _| PropagatingEffect::pure(level - 2.0)) // Metabolism: 6.0
-        .bind(|level, _, _| {
-            let response = if level > 5.0 { "Effective" } else { "Ineffective" };
-            PropagatingEffect::pure(response)
-        });
-    // Result: "Effective"
-
-    // Intervention: Replace value MID-CHAIN with do(BloodLevel := 3.0)
-    let intervened = PropagatingEffect::pure(10.0_f64)
-        .bind(|dose, _, _| PropagatingEffect::pure(dose * 0.8))   // Absorption: 8.0
-        .intervene(3.0)  // ← Force BloodLevel to 3.0, preserving log
-        .bind(|level, _, _| PropagatingEffect::pure(level - 2.0)) // Metabolism: 1.0
-        .bind(|level, _, _| {
-            let response = if level > 5.0 { "Effective" } else { "Ineffective" };
-            PropagatingEffect::pure(response)
-        });
-    // Result: "Ineffective" — intervention changed the outcome
-
-    println!("Observed:   {:?}", observed.value());   // "Effective"
-    println!("Intervened: {:?}", intervened.value()); // "Ineffective"
-}
-```
-
-This walks **Pearl's Ladder of Causation**:
-
-1. **Association** (Rung 1): `dose=10` correlates with "Effective".
-2. **Intervention** (Rung 2): `intervene(3.0)` forces a value mid-chain.
-3. **Counterfactual** (Rung 3): Same chain, different outcome under the intervention.
-
----
-
-## Examples
-
-```bash
-# Regime change: causal structure evolves as the system crosses a physical threshold
-cargo run -p physics_examples --example event_horizon_probe
-
-# Compositional pipeline: Causaloid evaluations interleaved with CausalMonad bind
-cargo run -p avionics_examples --example flight_envelope_monitor
-```
-
-Additional categories:
-
-```bash
-# Classical Causality (CATE, DBN, Granger, SCM)
-cargo run -p classical_causality_examples --example scm_example
-
-# Medicine & Life Sciences
-cargo run -p medicine_examples --example protein_folding
-cargo run -p medicine_examples --example tissue_classification
-
-# Physics (Quantum, Electromagnetism, Relativity)
-cargo run -p physics_examples --example maxwell_example
-cargo run -p physics_examples --example geometric_tilt
-cargo run -p physics_examples --example quantum_counterfactual
-cargo run -p physics_examples --example gravitational_wave
-
-# Causal State Machine + Effect Ethos
-cargo run -p csm_examples --example csm_effect_ethos_example
-```
-
-See [examples/README.md](examples/README.md) for the full catalogue of available examples.
 
 ---
 
