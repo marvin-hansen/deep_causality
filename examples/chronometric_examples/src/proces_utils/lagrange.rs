@@ -367,10 +367,11 @@ where
         for j in 0..n {
             if i != j {
                 let denom = x_values[i] - x_values[j];
-                // Skip degenerate case (duplicate x values)
-                if denom == R::zero() {
-                    continue;
-                }
+                assert!(
+                    denom != R::zero(),
+                    "lagrange_interpolate: duplicate x-values at indices {i} and {j} \
+                     produce a singular basis polynomial — caller must supply distinct nodes"
+                );
                 term = term * (x - x_values[j]) / denom;
             }
         }
