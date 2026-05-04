@@ -80,7 +80,7 @@ fn test_central_body_earth_jgm3_consistency() {
 #[test]
 fn test_central_body_clone() {
     let original = CentralBody::EARTH_JGM3;
-    let cloned = original.clone();
+    let cloned = Clone::clone(&original);
     assert_eq!(original, cloned);
 }
 
@@ -157,7 +157,7 @@ fn test_space_time_coordinate_basic_construction() {
 #[test]
 fn test_space_time_coordinate_clone() {
     let coord = sample_coord();
-    let cloned = coord.clone();
+    let cloned = Clone::clone(&coord);
     assert_eq!(coord, cloned);
 }
 

@@ -5,12 +5,10 @@
 use core::fmt::Debug;
 use deep_causality_num::RealField;
 
-use crate::{CentralBody, PhysicsError, SpaceTimeCoordinate, SPEED_OF_LIGHT};
-
-
+use crate::{CentralBody, PhysicsError, SPEED_OF_LIGHT, SpaceTimeCoordinate};
 
 /// Recovers GM within the weak-field 1PN limit from two space-time coordinates.
-/// 
+///
 ///
 /// Inverts the relativistic clock equation
 ///

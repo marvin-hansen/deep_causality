@@ -2,10 +2,10 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
+use crate::{ClockData, GnssDataResult, OrbitData};
+use deep_causality_num::RealField;
 use std::io;
 use std::path::{Path, PathBuf};
-use deep_causality_num::RealField;
-use crate::{ClockData, GnssDataResult, OrbitData};
 
 /// Get the absolute path to the data input directory (data/gnss)
 pub fn get_gnss_data_input_path() -> PathBuf {
@@ -14,16 +14,12 @@ pub fn get_gnss_data_input_path() -> PathBuf {
     path
 }
 
-
-
 /// Unified data manager for all GQCD experiment data loading.
 ///
 /// Provides a centralized API for loading:
 /// - GNSS satellite data (clock, orbit, single/multi-satellite)
 #[derive(Debug, Clone)]
-pub struct DataManager {
-
-}
+pub struct DataManager {}
 
 impl Default for DataManager {
     fn default() -> Self {
@@ -33,10 +29,8 @@ impl Default for DataManager {
 
 impl DataManager {
     pub fn new() -> Self {
-        Self {
-        }
+        Self {}
     }
-
 }
 
 impl DataManager {

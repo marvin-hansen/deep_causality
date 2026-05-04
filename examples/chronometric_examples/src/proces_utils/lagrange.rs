@@ -2,10 +2,10 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) "2025" . The DeepCausality Authors and Contributors. All Rights Reserved.
  */
+use crate::{ClockData, OrbitData};
 use chrono::NaiveDateTime;
 use deep_causality_num::{FromPrimitive, RealField};
 use deep_causality_physics::{EARTH_ROTATION_RATE, SpaceTimeCoordinate};
-use crate::{ClockData, OrbitData};
 
 /// Maximum time gap (seconds) for centered finite difference in clock drift rate.
 /// Two adjacent points must be within this gap for the derivative to be computed.

@@ -5,7 +5,6 @@
 use crate::{EARTH_GM, EARTH_J2, EARTH_RADIUS_EQUATORIAL, SPEED_OF_LIGHT};
 use deep_causality_num::{FromPrimitive, RealField};
 
-
 /// Parameters describing a central gravitating body for weak-field GM recovery.
 ///
 /// J2 (the dimensionless quadrupole moment) is only meaningful relative to a

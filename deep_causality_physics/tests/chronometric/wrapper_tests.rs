@@ -60,11 +60,29 @@ fn build_coord(
 #[test]
 fn test_wrapper_success_returns_value() {
     let body = CentralBody::<f64>::new(EARTH_GM, EARTH_RADIUS_EQUATORIAL, 0.0);
-    let coord_a = build_coord(EARTH_GM, 2.93e7, 3650.0, [2.93e7, 0.0, 0.0], [0.0, 3650.0, 0.0], &body);
-    let coord_b = build_coord(EARTH_GM, 2.95e7, 3640.0, [2.95e7, 0.0, 0.0], [0.0, 3640.0, 0.0], &body);
+    let coord_a = build_coord(
+        EARTH_GM,
+        2.93e7,
+        3650.0,
+        [2.93e7, 0.0, 0.0],
+        [0.0, 3650.0, 0.0],
+        &body,
+    );
+    let coord_b = build_coord(
+        EARTH_GM,
+        2.95e7,
+        3640.0,
+        [2.95e7, 0.0, 0.0],
+        [0.0, 3640.0, 0.0],
+        &body,
+    );
 
     let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
-    assert!(effect.error.is_none(), "expected no error, got {:?}", effect.error);
+    assert!(
+        effect.error.is_none(),
+        "expected no error, got {:?}",
+        effect.error
+    );
     match effect.value {
         EffectValue::Value(gm) => {
             let rel = (gm - EARTH_GM).abs() / EARTH_GM;
@@ -82,8 +100,22 @@ fn test_wrapper_success_returns_value() {
 #[test]
 fn test_wrapper_success_with_j2() {
     let body = CentralBody::EARTH_JGM3;
-    let coord_a = build_coord(EARTH_GM, 2.93e7, 3650.0, [2.93e7, 0.0, 0.0], [0.0, 3650.0, 0.0], &body);
-    let coord_b = build_coord(EARTH_GM, 2.95e7, 3640.0, [2.95e7, 0.0, 0.0], [0.0, 3640.0, 0.0], &body);
+    let coord_a = build_coord(
+        EARTH_GM,
+        2.93e7,
+        3650.0,
+        [2.93e7, 0.0, 0.0],
+        [0.0, 3650.0, 0.0],
+        &body,
+    );
+    let coord_b = build_coord(
+        EARTH_GM,
+        2.95e7,
+        3640.0,
+        [2.95e7, 0.0, 0.0],
+        [0.0, 3640.0, 0.0],
+        &body,
+    );
 
     let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
     assert!(effect.error.is_none());
@@ -104,7 +136,8 @@ fn test_wrapper_success_with_j2() {
 fn test_wrapper_error_on_zero_radius() {
     let body = CentralBody::EARTH_JGM3;
     let coord_a = SpaceTimeCoordinate::<f64> {
-        timestamp: 0, sat_id: 0,
+        timestamp: 0,
+        sat_id: 0,
         r_m: 0.0,
         v_ms: 3650.0,
         clock_bias_s: 0.0,
@@ -112,10 +145,21 @@ fn test_wrapper_error_on_zero_radius() {
         velocity: [0.0, 0.0, 0.0],
         clock_drift_rate: 0.0,
     };
-    let coord_b = build_coord(EARTH_GM, 2.95e7, 3640.0, [2.95e7, 0.0, 0.0], [0.0, 3640.0, 0.0], &body);
+    let coord_b = build_coord(
+        EARTH_GM,
+        2.95e7,
+        3640.0,
+        [2.95e7, 0.0, 0.0],
+        [0.0, 3640.0, 0.0],
+        &body,
+    );
 
     let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
-    assert!(effect.error.is_some(), "expected error, got effect={:?}", effect);
+    assert!(
+        effect.error.is_some(),
+        "expected error, got effect={:?}",
+        effect
+    );
     // Value should be the default for the f64 success type — which is 0.0.
     match effect.value {
         EffectValue::None => {}
@@ -127,7 +171,8 @@ fn test_wrapper_error_on_zero_radius() {
 fn test_wrapper_error_on_negative_radius() {
     let body = CentralBody::EARTH_JGM3;
     let coord_a = SpaceTimeCoordinate::<f64> {
-        timestamp: 0, sat_id: 0,
+        timestamp: 0,
+        sat_id: 0,
         r_m: -1.0e6,
         v_ms: 3650.0,
         clock_bias_s: 0.0,
@@ -135,7 +180,14 @@ fn test_wrapper_error_on_negative_radius() {
         velocity: [0.0, 3650.0, 0.0],
         clock_drift_rate: 0.0,
     };
-    let coord_b = build_coord(EARTH_GM, 2.95e7, 3640.0, [2.95e7, 0.0, 0.0], [0.0, 3640.0, 0.0], &body);
+    let coord_b = build_coord(
+        EARTH_GM,
+        2.95e7,
+        3640.0,
+        [2.95e7, 0.0, 0.0],
+        [0.0, 3640.0, 0.0],
+        &body,
+    );
 
     let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
     assert!(effect.error.is_some());
@@ -145,9 +197,20 @@ fn test_wrapper_error_on_negative_radius() {
 fn test_wrapper_error_on_insufficient_separation() {
     let body = CentralBody::<f64>::new(EARTH_GM, EARTH_RADIUS_EQUATORIAL, 0.0);
     // Identical coords → epsilon guard fires.
-    let coord = build_coord(EARTH_GM, 2.93e7, 3650.0, [2.93e7, 0.0, 0.0], [0.0, 3650.0, 0.0], &body);
+    let coord = build_coord(
+        EARTH_GM,
+        2.93e7,
+        3650.0,
+        [2.93e7, 0.0, 0.0],
+        [0.0, 3650.0, 0.0],
+        &body,
+    );
     let effect = solve_gm_analytical(&coord, &coord, &body);
-    assert!(effect.error.is_some(), "expected error, got effect={:?}", effect);
+    assert!(
+        effect.error.is_some(),
+        "expected error, got effect={:?}",
+        effect
+    );
 }
 
 // =============================================================================
@@ -157,8 +220,22 @@ fn test_wrapper_error_on_insufficient_separation() {
 #[test]
 fn test_wrapper_value_can_be_extracted() {
     let body = CentralBody::<f64>::new(EARTH_GM, EARTH_RADIUS_EQUATORIAL, 0.0);
-    let coord_a = build_coord(EARTH_GM, 2.93e7, 3650.0, [2.93e7, 0.0, 0.0], [0.0, 3650.0, 0.0], &body);
-    let coord_b = build_coord(EARTH_GM, 2.95e7, 3640.0, [2.95e7, 0.0, 0.0], [0.0, 3640.0, 0.0], &body);
+    let coord_a = build_coord(
+        EARTH_GM,
+        2.93e7,
+        3650.0,
+        [2.93e7, 0.0, 0.0],
+        [0.0, 3650.0, 0.0],
+        &body,
+    );
+    let coord_b = build_coord(
+        EARTH_GM,
+        2.95e7,
+        3640.0,
+        [2.95e7, 0.0, 0.0],
+        [0.0, 3640.0, 0.0],
+        &body,
+    );
 
     let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
     let extracted: Option<f64> = match effect.value {
@@ -177,8 +254,22 @@ fn test_wrapper_logs_field_present() {
     // PropagatingEffect carries a logs field — verify it's at least
     // accessible (default-constructed) on a successful result.
     let body = CentralBody::<f64>::new(EARTH_GM, EARTH_RADIUS_EQUATORIAL, 0.0);
-    let coord_a = build_coord(EARTH_GM, 2.93e7, 3650.0, [2.93e7, 0.0, 0.0], [0.0, 3650.0, 0.0], &body);
-    let coord_b = build_coord(EARTH_GM, 2.95e7, 3640.0, [2.95e7, 0.0, 0.0], [0.0, 3640.0, 0.0], &body);
+    let coord_a = build_coord(
+        EARTH_GM,
+        2.93e7,
+        3650.0,
+        [2.93e7, 0.0, 0.0],
+        [0.0, 3650.0, 0.0],
+        &body,
+    );
+    let coord_b = build_coord(
+        EARTH_GM,
+        2.95e7,
+        3640.0,
+        [2.95e7, 0.0, 0.0],
+        [0.0, 3640.0, 0.0],
+        &body,
+    );
 
     let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
     // Just confirm the effect is well-formed (no panics, fields accessible).

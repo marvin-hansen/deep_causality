@@ -3,8 +3,8 @@
  * Copyright (c) "2025" . The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
-use deep_causality_num::RealField;
 use crate::types::gravity_types::GmDataPoint;
+use deep_causality_num::RealField;
 
 /// Apply MAD (Median Absolute Deviation) filtering to remove outliers.
 ///

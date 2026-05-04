@@ -12,7 +12,7 @@
 /// * Other values are experimental measurements with associated uncertainties (ignored here for standard f64 precision).
 pub(crate) mod atomic;
 pub(crate) mod condensed;
-pub(crate)  mod earth;
+pub(crate) mod earth;
 pub(crate) mod electro_weak;
 pub(crate) mod electromagnetic;
 pub(crate) mod particle;

@@ -13,21 +13,19 @@
 //!
 //! 1. **load**      Load `.clk` and `.sp3` for one satellite via [`DataManager`].
 //! 2. **align**     10th-order Lagrange interpolation aligns clock and orbit
-//!                  data into a [`SpaceTimeCoordinate`] vector with the
-//!                  IGS-removed periodic relativistic correction restored.
+//!    data into a [`SpaceTimeCoordinate`] vector with the
+//!    IGS-removed periodic relativistic correction restored.
 //! 3. **pair**      Form coordinate pairs with sufficient radial separation.
 //! 4. **invert**    Apply [`solve_gm_analytical`] to each pair.
 //! 5. **aggregate** MAD-filter outliers, then reduce to mean / median / σ
-//!                  and compare to the JGM-3 reference value.
+//!    and compare to the JGM-3 reference value.
 //!
 //! Generic over the precision type `R` (`f64`, `Float106`, …) so the same
 //! pipeline composes at any precision the framework supports.
 
-use core::fmt::Debug;
 use chronometric_examples::{ClockData, OrbitData};
-use deep_causality_core::{
-    CausalityError, CausalityErrorEnum, EffectValue, PropagatingEffect,
-};
+use core::fmt::Debug;
+use deep_causality_core::{CausalityError, CausalityErrorEnum, EffectValue, PropagatingEffect};
 use deep_causality_num::{FromPrimitive, RealField};
 use deep_causality_physics::{
     CentralBody, EARTH_GM, EARTH_J2, EARTH_MASS_KG, EARTH_RADIUS_EQUATORIAL,
@@ -303,14 +301,14 @@ where
     let n_r = R::from(n as f64);
     let mut sum = R::zero();
     for v in &filtered {
-        sum = sum + *v;
+        sum += *v;
     }
     let mean = sum / n_r;
 
     let mut sq = R::zero();
     for v in &filtered {
         let d = *v - mean;
-        sq = sq + d * d;
+        sq += d * d;
     }
     let std_dev = (sq / n_r).sqrt();
 
