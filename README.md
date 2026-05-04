@@ -58,61 +58,136 @@
 
 </div>
 
-# DeepCausality
+# DeepCausality: Computational Dynamic Causality
 
-**A hypergeometric computational causality library for building systems that reason about cause and effect.**
+DeepCausality is the reference implementation of the **Effect Propagation Process (EPP)**, a single axiomatic foundation for dynamic causality based on Whitehead's process metaphysics, with the consequence that the resulting framework is general-relativistic-native and quantum-native. Classical computational causality frameworks (Pearl's SCM, Granger
+causality, DBNs) assume fixed background spacetime and static causal structure and thus cannot handle dynamic causal structures; the EPP contributes **dynamic, adaptive, and emergent** causality as first-class modalities, with a programmable deontic layer for verifiable safety while [classical causality still can be expressed](https://github.com/deepcausality-rs/deep_causality/tree/main/examples/classical_causality_examples). 
 
-DeepCausality pioneers uniform reasoning across deterministic and probabilistic modalities, supporting both static and dynamic contextual causal models. The project is hosted as a sandbox project in the [Linux Foundation for Data & AI](https://landscape.lfai.foundation/).
+Hosted as a sandbox project at the [Linux Foundation for Data & AI](https://landscape.lfai.foundation/).
 
-## ✨ Key Features
+## What is Unique
 
-| Feature | Description |
-|---------|-------------|
-| **Effect Propagation Monads** | `PropagatingEffect` and `PropagatingProcess` for composable causal computations |
-| **Geometric Algebra** | Universal Clifford Algebra via `CausalMultiVector` for physics and quantum mechanics |
-| **Differential Topology** | `Manifold`, `SimplicialComplex`, and discrete exterior calculus |
-| **Tensor Operations** | `CausalTensor` with Einstein summation (`ein_sum`) and linear algebra |
-| **Causaloid Graphs** | Recursive, composable causal structures with graph-based reasoning |
-| **Effect Ethos** | Deontic guardrails using defeasible calculus for safe AI actions |
-| **Causal Discovery** | SURD and MRMR algorithms for learning causal structure from data |
-| **Multi-Physics** | Quantum mechanics, thermodynamics, electromagnetism, fluids, relativity |
-
----
-
-## 🏗️ Architecture
-
-DeepCausality's architecture is built on a unified foundation: **causality as monadic dependency** (`E₂ = f(E₁)`). From this axiom, the framework derives its core abstractions.
-
-### The Causal Monad & PropagatingEffect
-
-At the heart of DeepCausality is the **Causal Monad** pattern, implemented through two primary types:
-
-| Type | Purpose | State |
-|------|---------|-------|
-| `PropagatingEffect<T>` | Stateless effect propagation | Value + Error + Log |
-| `PropagatingProcess<T>` | Stateful effect propagation | Value + State + Context + Error + Log |
-
-These monads enable **composable causal computations** where effects flow through a pipeline of transformations with the following key properties:
-- **Error propagation**: Errors short-circuit the chain automatically.
-- **Logging**: Each step can append to an audit trail.
-- **Counterfactuals**: `bind` supports hypothetical "what-if" reasoning.
-
-### The Three Pillars
-
-#### 1. The Causaloid
-A self-contained unit of causality that holds a causal function, receives an incoming effect, and emits a new outgoing effect. Causaloids compose into graphs for complex reasoning.
-
-#### 2. The Context
-An explicit hypergraph data structure that holds all factual data about the operational environment: sensor readings, temporal structures, spatial locations, and more.
-
-#### 3. The Effect Ethos
-A programmable deontic layer that verifies whether proposed actions align with safety and mission objectives before execution.
+|                                                      |                                                                                                                 |
+|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| **One axiom, three primitives**                      | Causaloid, Context, and Causal State Machine derived from a single functional-dependency axiom                  |
+| **Three causal modalities**                          | Dynamic, adaptive, and emergent causality, going beyond the static-structure assumption                         |
+| **Effect Propagation Monads**                        | `PropagatingEffect` and `PropagatingProcess` for composable  causal pipelines                                   |
+| **Effect Ethos**                                     | Defeasible deontic calculus (after Forbus) that verifies actions against an immutable ethos before execution    |
+| **Uniform mathematics**                              | Tensors, MultiVectors, Manifolds, and `PropagatingEffect` share one categorical interface (Functor / Monad / Comonad) via arity-5 HKT in stable Rust; multi-physics pipelines compose across domains in a single monadic flow |
+| **Geometric Algebra**                                | Clifford algebras (Pauli, spacetime, conformal, projective, Dixon, Spin(10) GUA) with shared metric conventions |
+| **Differential Topology**                            | Manifolds, simplicial complexes, lattice gauge theory verified against 24 reference results from Creutz         |
+| **Float106 precision**                               | 106-bit float (~32 decimal digits) on stable Rust, several × faster than IEEE binary128                         |
+| **Causal Discovery**                                 | SURD and MRMR algorithms wrapped in a typestate DSL that closes the loop from data to model                     |
 
 ---
 
-## 🚀 Getting Started
+## Architecture
 
-Add DeepCausality to your project:
+The EPP rests on a single axiom: **`m₂ = m₁ >>= f`**. Causality becomes a monadic dependency, with no
+assumption of any background spacetime. Three computable primitives operationalize the axiom, and an optional fourth
+provides the safety layer for emergent behaviour.
+
+### The Three Primitives
+
+#### 1. Causaloid and CausalMonad
+
+The monadic axiom admits two isomorphic structural expressions of the same causal computation. Both are first-class
+causal entities; neither is more fundamental than the other.
+
+- **Causaloid.** A polymorphic container for the causal function `f` (after Hardy). It carries causal *structure* and is
+  isomorphic across three forms (**Singleton**, **Collection**, **Graph**), which lets recursive causal structures be
+  composed without changing the calling code.
+- **CausalMonad.** The bind side of the axiom, carrying causal *sequencing* through Kleisli composition. `bind`
+  short-circuits on error, accumulates the audit log, and supports counterfactual `intervene` operations.
+
+Both inhabit the same propagating-effect carrier:
+
+| Type                    | Purpose                      | Channels                              |
+|-------------------------|------------------------------|---------------------------------------|
+| `PropagatingEffect<T>`  | Stateless effect propagation | Value · Error · Log                   |
+| `PropagatingProcess<T>` | Stateful effect propagation  | Value · State · Context · Error · Log |
+
+Because both consume and produce the same carrier, they compose freely. A Causaloid evaluation can feed a `.bind()`
+step. A `.bind()` step can feed a Causaloid evaluation. State and audit log accumulate across both. One pipeline can
+mix structural and sequential reasoning, picking the right shape at each stage:
+
+* **Sequential transforms** belong in a CausalMonad bind-chain.
+* **Parallel aggregation** belongs in a Causaloid collection.
+* **Cross-influencing dependencies** belong in a Causaloid graph.
+
+The [flight envelope monitor](examples/avionics_examples/flight_envelope_monitor/) shows all three: a Causaloid
+collection over five sensor-health checks, a three-step CausalMonad bind-chain for state estimation, and a Causaloid
+hypergraph of six envelope protections, all running through one `PropagatingProcess<T, FlightState, AircraftConfig>`
+with state and audit log threaded across every stage.
+
+#### 2. Context
+
+An explicit hypergraph carrying the operational environment: sensor data, temporal structures (linear and non-linear),
+spatial locations (Euclidean and non-Euclidean). Detaching causality from a fixed background spacetime requires the
+Context to be queryable and dynamic.
+
+#### 3. Causal State Machine (CSM)
+
+The bridge from causal inference to action. The CSM separates state from action so that a proposed action can be
+verified before execution.
+
+### The Safety Layer
+
+#### Effect Ethos
+
+An optional, programmable deontic layer that uses a **defeasible deontic calculus** to resolve normative conflicts and
+decide whether a CSM-proposed action is permissible under an immutable ethos. Required wherever emergent causality is in
+play, since static verifiability is no longer possible there.
+
+### Uniform mathematics
+
+Most scientific-computing stacks force you to bridge silos: one library for tensors, another for geometric algebra, a
+third for topology, with glue code in between. The DeepCausality stack lifts every mathematical layer into the same
+categorical interface through the `deep_causality_haft` crate's arity-5 higher-kinded types:
+
+| Domain    | Type                   | Categorical role                |
+|-----------|------------------------|---------------------------------|
+| Mechanics | `CausalTensor<T>`      | Functor (map over field data)   |
+| Algebra   | `CausalMultiVector<T>` | Monad (chain operations)        |
+| Topology  | `Manifold<T>`          | Comonad (neighborhood analysis) |
+| Causality | `PropagatingEffect<T>` | Monad (sequencing + logs)       |
+
+A single `bind`-chain can therefore step from a Tensor (general relativity), through a MultiVector (geometric algebra),
+onto a Manifold (topology), and finish in a `PropagatingEffect` (causal logic) without serialisation or adapter code.
+The [GRMHD example](examples/physics_examples/grmhd/) does exactly this for relativistic magnetohydrodynamics: Einstein
+tensor curvature feeds metric selection, which feeds a multivector Lorentz force, which feeds causal stability analysis,
+all in one monadic chain. The [Maxwell example](examples/physics_examples/maxwell/) derives `E` and `B` as bivector
+grades of a single electromagnetic field `F = ∇A`, which cuts the scalar count from six to four (~50% compute reduction)
+and is directly applicable to 5G/6G phased-array antenna design.
+
+### Layered Stack
+
+The reference implementation is a layered scientific-computing stack; each layer is independently usable, and layers
+compose monadically through the HKT machinery in the foundation.
+
+```
+┌─────────────────────────────────────────────────┐
+│  Causal Discovery   deep_causality_discovery    │
+├─────────────────────────────────────────────────┤
+│  Causal Framework   deep_causality_core         │
+│                     deep_causality              │
+│                     deep_causality_ethos        │
+├─────────────────────────────────────────────────┤
+│  Physics            deep_causality_physics      │
+├─────────────────────────────────────────────────┤
+│  Mathematics        deep_causality_tensor       │
+│                     deep_causality_multivector  │
+│                     deep_causality_topology     │
+├─────────────────────────────────────────────────┤
+│  Foundation         deep_causality_num          │
+│                     deep_causality_haft         │
+│                     deep_causality_metric  ─── shared sign conventions
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## Getting Started
 
 ```bash
 cargo add deep_causality_core
@@ -150,16 +225,25 @@ fn main() {
 }
 ```
 
-This demonstrates **Pearl's Ladder of Causation**:
-1. **Association** (Rung 1): Observing dose=10 correlates with "Effective"
-2. **Intervention** (Rung 2): `intervene(3.0)` forces a value mid-chain
-3. **Counterfactual** (Rung 3): Same chain, different outcome due to intervention
+This walks **Pearl's Ladder of Causation**:
+
+1. **Association** (Rung 1): `dose=10` correlates with "Effective".
+2. **Intervention** (Rung 2): `intervene(3.0)` forces a value mid-chain.
+3. **Counterfactual** (Rung 3): Same chain, different outcome under the intervention.
 
 ---
 
-## 📂 Examples
+## Examples
 
-Run examples with:
+```bash
+# Regime change: causal structure evolves as the system crosses a physical threshold
+cargo run -p physics_examples --example event_horizon_probe
+
+# Compositional pipeline: Causaloid evaluations interleaved with CausalMonad bind
+cargo run -p avionics_examples --example flight_envelope_monitor
+```
+
+Additional categories:
 
 ```bash
 # Classical Causality (CATE, DBN, Granger, SCM)
@@ -167,63 +251,75 @@ cargo run -p classical_causality_examples --example scm_example
 
 # Medicine & Life Sciences
 cargo run -p medicine_examples --example protein_folding
-cargo run -p medicine_examples --example mri_tissue_classification
+cargo run -p medicine_examples --example tissue_classification
 
 # Physics (Quantum, Electromagnetism, Relativity)
 cargo run -p physics_examples --example maxwell_example
-cargo run -p physics_examples --example geometric_tilt_example
+cargo run -p physics_examples --example geometric_tilt
 cargo run -p physics_examples --example quantum_counterfactual
 cargo run -p physics_examples --example gravitational_wave
 
-# Causal State Machine
+# Causal State Machine + Effect Ethos
 cargo run -p csm_examples --example csm_effect_ethos_example
 ```
 
-For more examples, See [examples/README.md](examples/README.md)
+See [examples/README.md](examples/README.md) for the full catalogue of available examples.
 
 ---
 
-## 📦 Crate Ecosystem
+## Crate Ecosystem
 
-### Core Framework
-| Crate | Description |
-|-------|-------------|
-| [`deep_causality`](deep_causality/README.md) | Main library with Causaloid, Context, CSM, and Model types |
-| [`deep_causality_core`](deep_causality_core/README.md) | `PropagatingEffect`, `PropagatingProcess`, and `CausalEffectSystem` |
-| [`deep_causality_ethos`](deep_causality_ethos/README.md) | Deontic reasoning with `EffectEthos` and `Teloid` |
+### Causal Framework
 
-### Mathematics & Physics
-| Crate | Description |
-|-------|-------------|
-| [`deep_causality_multivector`](deep_causality_multivector/README.md) | Clifford Algebra with `CausalMultiVector` and `HilbertState` |
-| [`deep_causality_tensor`](deep_causality_tensor/README.md) | N-dimensional tensors with Einstein summation |
-| [`deep_causality_topology`](deep_causality_topology/README.md) | `Manifold`, `SimplicialComplex`, `Graph`, `Hypergraph`, `PointCloud` |
-| [`deep_causality_physics`](deep_causality_physics/README.md) | Quantum, thermodynamics, electromagnetism, fluids, relativity kernels |
-| [`deep_causality_sparse`](deep_causality_sparse/README.md) | Compressed sparse row matrices |
-| [`deep_causality_num`](deep_causality_num/README.md) | Complex numbers, division algebras, numeric traits |
+| Crate                                                            | Description                                                                                          |
+|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| [`deep_causality`](deep_causality/README.md)                     | Causaloid (Singleton/Collection/Graph), Context, CSM, Teloid, Effect Ethos integration               |
+| [`deep_causality_core`](deep_causality_core/README.md)           | `PropagatingEffect`, `PropagatingProcess`, `CausalMonad`, `CausalEffectSystem`, `ControlFlowBuilder` |
+| [`deep_causality_ethos`](deep_causality_ethos/README.md)         | `EffectEthos` and `Teloid` for defeasible deontic reasoning                                          |
+| [`deep_causality_uncertain`](deep_causality_uncertain/README.md) | `Uncertain<T>` and `MaybeUncertain<T>` (after Bornholt et al.)                                       |
+| [`ultragraph`](ultragraph/README.md)                             | Two-phase hypergraph backend for CausaloidGraph and Context                                          |
 
-### Data & Algorithms
-| Crate | Description |
-|-------|-------------|
-| [`deep_causality_discovery`](deep_causality_discovery/README.md) | Causal Discovery Language (CDL) with SURD and MRMR |
-| [`deep_causality_algorithms`](deep_causality_algorithms/README.md) | Feature selection and causal discovery algorithms |
-| [`deep_causality_data_structures`](deep_causality_data_structures/README.md) | Specialized data structures |
-| [`ultragraph`](ultragraph/README.md) | High-performance hypergraph backend |
+### Causal Discovery
+
+| Crate                                                              | Description                                                                           |
+|--------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [`deep_causality_discovery`](deep_causality_discovery/README.md)   | Causal Discovery Language (typestate DSL: load → clean → select → discover → analyse) |
+| [`deep_causality_algorithms`](deep_causality_algorithms/README.md) | SURD, MRMR, and feature-selection primitives                                          |
+
+### Physics
+
+| Crate                                                        | Description                                                                                                                 |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| [`deep_causality_physics`](deep_causality_physics/README.md) | Astrophysics, condensed matter, EM, fluids, MHD, nuclear, photonics, QM, relativity, thermo, waves; generic over float type |
+
+### Mathematics
+
+| Crate                                                                | Description                                                                                                                          |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| [`deep_causality_tensor`](deep_causality_tensor/README.md)           | N-dim tensors, broadcasting, Einstein summation, Functor/Applicative/Monad/Comonad                                                   |
+| [`deep_causality_multivector`](deep_causality_multivector/README.md) | Clifford algebras: Pauli, STA, CGA, PGA(3), Dixon, Spin(10) GUA                                                                      |
+| [`deep_causality_topology`](deep_causality_topology/README.md)       | Graphs, hypergraphs, simplicial complexes, manifolds, point clouds, exterior calculus, U(1)/SU(2)/SU(3)/Lorentz lattice gauge fields |
+| [`deep_causality_sparse`](deep_causality_sparse/README.md)           | CSR sparse matrices                                                                                                                  |
+
+### Foundation
+
+| Crate                                                      | Description                                                                                       |
+|------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| [`deep_causality_num`](deep_causality_num/README.md)       | Magma → Field algebraic hierarchy, `Float106`, Complex/Quaternion/Octonion division algebras      |
+| [`deep_causality_haft`](deep_causality_haft/README.md)     | Arity-5 higher-kinded types via witness pattern; Effect / Functor / Applicative / Monad / CoMonad |
+| [`deep_causality_metric`](deep_causality_metric/README.md) | Single source of truth for metric signatures (East Coast, West Coast, Cl(p,q,r))                  |
 
 ### Utilities
-| Crate | Description |
-|-------|-------------|
-| [`deep_causality_haft`](deep_causality_haft/README.md) | Higher-kinded types and abstract functional types |
-| [`deep_causality_uncertain`](deep_causality_uncertain/README.md) | `Uncertain<T>` and `MaybeUncertain<T>` for uncertainty propagation |
-| [`deep_causality_rand`](deep_causality_rand/README.md) | Random number generation and statistical distributions |
-| [`deep_causality_macros`](deep_causality_macros/README.md) | Procedural macros |
-| [`deep_causality_ast`](deep_causality_ast/README.md) | Generic abstract syntax tree |
+
+| Crate                                                                        | Description                                                  |
+|------------------------------------------------------------------------------|--------------------------------------------------------------|
+| [`deep_causality_data_structures`](deep_causality_data_structures/README.md) | Sliding-window, grid-array, and other specialised structures |
+| [`deep_causality_rand`](deep_causality_rand/README.md)                       | RNG and statistical distributions                            |
+| [`deep_causality_ast`](deep_causality_ast/README.md)                         | Generic abstract syntax tree                                 |
 
 ---
 
-
-
-## 🛠️ Build & Test
+##  Build & Test
 
 ```bash
 # Optimized build with SIMD
@@ -252,33 +348,12 @@ The repository also supports Bazel builds. Install [bazelisk](https://github.com
 
 ```bash
 bazel build //...
-bazel test //...
+bazel test  //...
 ```
 
 ---
 
-## 📚 Documentation
-
-| Resource | Link |
-|-------|------|
-| API Reference | [docs.rs/deep_causality](https://docs.rs/deep_causality/latest/deep_causality/) |
-| Core | [docs/CORE.md](docs/CORE.md) |
-| HAFT | [docs/HAFT.md](docs/HAFT.md) |
-| Ethos | [docs/ETHOS.md](docs/ETHOS.md) |
-| Discovery | [docs/DISCOVERY.md](docs/DISCOVERY.md) |
-| Tensor | [docs/TENSOR.md](docs/TENSOR.md) |
-| Topology | [docs/TOPOLOGY.md](docs/TOPOLOGY.md) |
-| Physics | [docs/PHYSICS.md](docs/PHYSICS.md) |
-| Unified Math | [docs/UNIFIED_MATH.md](docs/UNIFORM_MATH.md) |
-| Introduction | [docs/INTRO.md](docs/INTRO.md) |
-| Deep Dive | [docs/DEEP_DIVE.md](docs/DEEP_DIVE.md) |
-| Architecture | [deepcausality.com/docs/architecture](https://deepcausality.com/docs/architecture/) |
-| Concepts | [deepcausality.com/docs/concepts](https://deepcausality.com/docs/concepts/) |
-| Changelog | [CHANGELOG.md](CHANGELOG.md) |
-
----
-
-## 👨‍💻 Contributing
+## Contributing
 
 Contributions are welcome! Please read:
 
@@ -294,25 +369,27 @@ make check
 
 ---
 
-## 🙏 Credits
+## Credits
 
 Inspired by research from:
-* [Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) - Causal inference
-* [Lucien Hardy](https://perimeterinstitute.ca/people/lucien-hardy) - Causaloid framework
-* [Elias Bareinboim](https://causalai.net/) - Causal AI
-* [Microsoft Research](https://www.microsoft.com/en-us/research/group/causal-inference/) - Causality and ML
+
+* [Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html): Structural Causal Models
+* [Lucien Hardy](https://perimeterinstitute.ca/people/lucien-hardy): Causaloid framework
+* [Elias Bareinboim](https://causalai.net/): Transportability and data fusion
+* [Kenneth Forbus](https://users.cs.northwestern.edu/~forbus/): Defeasible deontic calculus
 
 Implements research from:
-* ["An Algebraic Roadmap of Particle Theories"](docs/papers/algebraic_physics.pdf) 
-* ["A Defeasible Deontic Calculus for Resolving Norm Conflicts"](docs/papers/ddic.pdf)
-* ["NWHy: A Framework for Hypergraph Analytics"](docs/papers/nwhy.pdf)
+
+* ["Probability Theories with Dynamic Causal Structure"](docs/papers/causaloid.pdf), Hardy
+* ["A Defeasible Deontic Calculus for Resolving Norm Conflicts"](docs/papers/ddic.pdf), Olson & Forbus
+* ["Uncertain⟨T⟩: A First-Order Type for Uncertain Data"](docs/papers/uncertain_t.pdf), Bornholt et al.
 * ["Observational causality by states and interaction type for scientific discovery"](docs/papers/surd-state.pdf)
-* ["Probability Theories with Dynamic Causal Structure"](docs/papers/causaloid.pdf)
-* ["Uncertain T: A First-Order Type for Uncertain Data"](docs/papers/uncertain_t.pdf)
+* ["NWHy: A Framework for Hypergraph Analytics"](docs/papers/nwhy.pdf)
+* ["An Algebraic Roadmap of Particle Theories"](docs/papers/algebraic_physics.pdf)
 
 ---
 
-## 🌐 Community
+## Community
 
 * [Discord](https://discord.gg/Bxj9P7JXSj)
 * [GitHub Discussions](https://github.com/orgs/deepcausality-rs/discussions)
@@ -320,7 +397,7 @@ Implements research from:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT license](LICENSE).
 
@@ -330,7 +407,7 @@ See [SECURITY.md](SECURITY.md) for security policies.
 
 ---
 
-## 🎁 Sponsors
+## Sponsors
 
 [![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSource)
 
