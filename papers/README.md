@@ -81,7 +81,7 @@ Citation:
 }
 ```
 
-### [https://github.com/deepcausality-rs/deep_causality/blob/main/papers/teleology_effect_propagation_process/epp_teleology.pdf)
+### [The Teleology of the Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/teleology_effect_propagation_process/epp_teleology.pdf)
 
 Citation:
 ```latex
