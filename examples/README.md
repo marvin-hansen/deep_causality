@@ -22,7 +22,7 @@ This directory contains examples demonstrating various features and applications
 
 **Location:** `examples/starter_example`
 
-Basic introduction to DeepCausality.
+Basic introduction to DeepCausality. **Start here if you are new.**
 
 | Example | Focus | Command |
 |---------|-------|---------|
@@ -111,13 +111,19 @@ Multi-physics simulations using Geometric Algebra, Tensor operations, and Topolo
 | Laser Resonator Stability | Optics | `cargo run -p physics_examples --example laser_resonator_stability` |
 | Maxwell's Unification | Electromagnetism | `cargo run -p physics_examples --example maxwell_example` |
 | GRMHD | Relativity | `cargo run -p physics_examples --example grmhd_example` |
-| Geometric Tilt | Robotics/IMU | `cargo run -p physics_examples --example geometric_tilt_example` |
+| Geometric Tilt | Robotics/IMU | `cargo run -p physics_examples --example geometric_tilt` |
 | Algebraic Scanner | Abstract Algebra | `cargo run -p physics_examples --example algebraic_scanner` |
 | Multi-Physics Pipeline | Particle Physics | `cargo run -p physics_examples --example multi_physics_pipeline` |
 | Quantum Counterfactual | Quantum | `cargo run -p physics_examples --example quantum_counterfactual` |
 | Quantum Geometric Tensor | Condensed Matter | `cargo run -p physics_examples --example quantum_geometric_tensor` |
 | IKKT Matrix Model | Quantum Gravity | `cargo run -p physics_examples --example ikkt_matrix_model` |
 | Gravitational Wave | Relativity | `cargo run -p physics_examples --example gravitational_wave` |
+| Event Horizon Probe | Relativity | `cargo run -p physics_examples --example event_horizon_probe` |
+| Gauge EM | Electromagnetism | `cargo run -p physics_examples --example gauge_em` |
+| Gauge GR | General Relativity | `cargo run -p physics_examples --example gauge_gr` |
+| Gauge Electroweak | Electroweak | `cargo run -p physics_examples --example gauge_electroweak` |
+| Gauge Weak Force | Weak Force | `cargo run -p physics_examples --example gauge_weak_force` |
+| Gauge Lattice U(1) 2D | Lattice Gauge | `cargo run -p physics_examples --example gauge_lattice_u1_2d` |
 
 See [physics_examples/README.md](physics_examples/README.md) for detailed documentation.
 
@@ -132,10 +138,11 @@ Biomedical and life sciences applications using causal monads.
 | Example | Domain | Command |
 |---------|--------|---------|
 | Protein Folding | Biophysics | `cargo run -p medicine_examples --example protein_folding` |
-| MRI Tissue Classification | Medical Imaging | `cargo run -p medicine_examples --example mri_tissue_classification` |
-| Aneurysm Risk (Hemodynamics) | Cardiovascular | `cargo run -p medicine_examples --example hemodynamics` |
+| MRI Tissue Classification | Medical Imaging | `cargo run -p medicine_examples --example tissue_classification` |
+| Aneurysm Risk (Hemodynamics) | Cardiovascular | `cargo run -p medicine_examples --example aneurysm_risk` |
+| Diving Decompression | Hyperbaric Medicine | `cargo run -p medicine_examples --example diving_decompression` |
 | Epilepsy Virtual Resection | Neurology | `cargo run -p medicine_examples --example epilepsy` |
-| Tumor Treatment (TTFields) | Oncology | `cargo run -p medicine_examples --example ttfields` |
+| Tumor Treatment (TTFields) | Oncology | `cargo run -p medicine_examples --example tumor_treatment` |
 
 See [medicine_examples/README.md](medicine_examples/README.md) for detailed documentation.
 
