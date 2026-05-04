@@ -6,25 +6,30 @@
 quantities designed for use within the DeepCausality hyper-graph simulation engine. It leverages Geometric Algebra (via
 `deep_causality_multivector`) and Causal Tensors to model complex physical interactions with high fidelity.
 
-## 📦 Usage
+## Usage
 
 Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-deep_causality_physics = { version = "0.3.0" }
+deep_causality_physics = { version = "0.5" }
 
 # For QCD hadronization (Lund string fragmentation) - use os-random feature
 # deep_causality_physics = { version = "0.3.0", features = ["os-random"] }
 ```
 
-## 🚀 Features
+## Features
 
 This crate is organized into modular domains, each providing low-level computation kernels and high-level causal
 wrappers:
 
 * **Astro**: Astrophysics kernels (Schwarzschild radius, orbital velocity, luminosity, Hubble's law, etc.).
-* **⚛Condensed**: Condensed matter physics (Quantum Geometry, Twistronics, Phase Field Models, e.g., Quantum Geometric
+* **Chronometric**: Chronometric geodesy kernels — invert the J2-corrected weak-field 1PN clock
+  equation (Bjerhammar 1975, Vermeer 1983) to recover gravitational parameters such as $GM_\oplus$
+  and the derived planetary mass $M_\oplus = GM_\oplus / G$ from satellite clock time-dilation
+  measurements. Includes `CentralBody` (gravity-model parameters), `SpaceTimeCoordinate` (clock +
+  kinematic state), and the `solve_gm_analytical` kernel and wrapper.
+* **Condensed**: Condensed matter physics (Quantum Geometry, Twistronics, Phase Field Models, e.g., Quantum Geometric
   Tensor, Bistritzer-MacDonald Hamiltonian, Ginzburg-Landau equations).
 * **Dynamics**: Classical mechanics (Kinematics, Newton's laws), state estimation (Kalman filters), and Euler
   integration.
@@ -56,10 +61,10 @@ This library is designed with a clear distinction between **computational kernel
    Theory, etc), use the **Physics Theories** modules (`src/theories`). These leverage **Geometric Algebra (GA)** and *
    *Gauge Fields** to model the entire coherent system, ensuring mathematical consistency and high precision across all operations.
 
-> 📖 **Read More**: [**Understanding Gauge Theories & Geometric Algebra**](./README_GAUGE_THEORIES.md) — A detailed guide
+>  **Read More**: [**Understanding Gauge Theories & Geometric Algebra**](./README_GAUGE_THEORIES.md) — A detailed guide
 > on how Gravity, Electromagnetism, and Weak Force have been implmented using a shared topological backend.
 
-## 🏗️ Architecture
+## Architecture
 
 The library follows a functional and causal architecture:
 
@@ -118,6 +123,37 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
+### Example: Chronometric GM Recovery
+
+```rust
+use deep_causality_physics::{
+    CentralBody, SpaceTimeCoordinate, solve_gm_analytical,
+};
+
+fn main() {
+    // Two space-time coordinate samples (position in ECI, inertial velocity,
+    // IGS clock bias and drift rate). In practice these come from preprocessed
+    // satellite broadcast clock + SP3 orbit data.
+    let coord_a: SpaceTimeCoordinate<f64> = /* ... */;
+    let coord_b: SpaceTimeCoordinate<f64> = /* ... */;
+
+    // Earth parameters: JGM-3 J2 with WGS-84 equatorial radius. The struct
+    // pairs J2 with its reference radius — they are only meaningful together.
+    let body = CentralBody::EARTH_JGM3;
+
+    // Wrapper returns PropagatingEffect<f64> for use in causaloid graphs.
+    let effect = solve_gm_analytical(&coord_a, &coord_b, &body);
+    // → recovered GM in m³/s²; divide by NEWTONIAN_CONSTANT_OF_GRAVITATION
+    //   to get Earth's mass in kg.
+}
+```
+
+A complete worked example processing one full GPS week of Galileo broadcast clock data
+(satellite E14) is in [`examples/chronometric_examples/gm_recovery`](../examples/chronometric_examples/gm_recovery).
+It demonstrates the framework's `CausalMonad` bind chain end-to-end and recovers
+$GM_\oplus$ and Earth's mass to ~0.2% relative error against published JGM-3 / IERS 2010
+references — *the planet weighed by clock time-dilation alone.*
+
 ### Example: Lund String Fragmentation (QCD Hadronization)
 
 ```rust
@@ -150,7 +186,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 Code examples are in the [repo example folder](../examples/physics_examples).
 
-## 🛠️ Configuration
+## Configuration
 
 The crate supports `no_std` environments via feature flags.
 
@@ -159,6 +195,6 @@ The crate supports `no_std` environments via feature flags.
 * `alloc`: Usage of allocation (Vec, String) without full `std`.
 * `os-random`: Enables OS-based secure random number generator and Lund string fragmentation for QCD hadronization.
 
-## 📜 License
+## License
 
 Licensed under MIT. Copyright (c) 2025 DeepCausality Authors.
