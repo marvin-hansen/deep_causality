@@ -11,7 +11,7 @@ The DeepCasuality project uses [texifier](https://www.texifier.com/mac) for type
 
 ## 2025
 
-### [The Effect Propagation Process](/effect_propagation_process/epp.pdf)
+### [The Effect Propagation Process](papers/effect_propagation_process/epp.pdf)
 
 Citation:
 ```latex
@@ -25,7 +25,7 @@ Citation:
 }
 ```
 
-### [The Epistemology of the Effect Propagation Process](/epistemology_effect_propagation_process/epp_epistemology.pdf)
+### [The Epistemology of the Effect Propagation Process](papers/epistemology_effect_propagation_process/epp_epistemology.pdf)
 
 Citation:
 ```latex
@@ -39,7 +39,7 @@ Citation:
 }
 ```
 
-### [The Formalization of the Effect Propagation Process](/formalization_effect_propagation_process/epp_formalization.pdf)
+### [The Formalization of the Effect Propagation Process](papers/formalization_effect_propagation_process/epp_formalization.pdf)
 
 Citation:
 ```latex
@@ -53,7 +53,7 @@ Citation:
 }
 ```
 
-### [The Metaphysics of the Effect Propagation Process](/metaphysics_effect_propagation_process/epp_metaphysics.pdf)
+### [The Metaphysics of the Effect Propagation Process](papers/metaphysics_effect_propagation_process/epp_metaphysics.pdf)
 
 Citation:
 ```latex
@@ -67,7 +67,7 @@ Citation:
 }
 ```
 
-### [The Ontology of the Effect Propagation Process](/ontology_effect_propagation_process/epp_ontology.pdf)
+### [The Ontology of the Effect Propagation Process](papers/ontology_effect_propagation_process/epp_ontology.pdf)
 
 Citation:
 ```latex
@@ -81,7 +81,7 @@ Citation:
 }
 ```
 
-### [The Teleology of the Effect Propagation Process](/teleology_effect_propagation_process/epp_teleology.pdf)
+### [The Teleology of the Effect Propagation Process](papers/teleology_effect_propagation_process/epp_teleology.pdf)
 
 Citation:
 ```latex
@@ -100,19 +100,6 @@ Citation:
 ### Discord
 
 * [DeepCausality Discord Server](https://discord.gg/Bxj9P7JXSj)
-
-### GitHub Discussions
-
-* Announcements
-    - [Top-level milestone messages that affect the entire ecosystem](https://github.com/orgs/deepcausality-rs/discussions/categories/announcements)
-
-* General
-    - [General technical discussions and questions](https://github.com/orgs/deepcausality-rs/discussions/categories/general)
-
-
-* Q&A
-    - [Questions & answers related to DeepCausality](https://github.com/orgs/deepcausality-rs/discussions/categories/q-a)
-
 
 ## About
 
