@@ -1,0 +1,23 @@
+[package]
+name = "chronometric_examples"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+chrono = { version = "0.4" }
+#
+deep_causality_num = { path = "../../deep_causality_num" }
+deep_causality_core = { path = "../../deep_causality_core" }
+deep_causality_physics = { path = "../../deep_causality_physics", features = [
+    "os-random",
+] }
+
+[[example]]
+name = "gm_recovery"
+path = "gm_recovery/main.rs"

@@ -58,7 +58,7 @@
 
 </div>
 
-# DeepCausality: Computational Dynamic Causality
+# DeepCausality: Dynamic Causality
 
 DeepCausality is the reference implementation of the **Effect Propagation Process (EPP)**, a single axiomatic foundation for dynamic causality based on Whitehead's process metaphysics, with the consequence that the resulting framework is general-relativistic-native and quantum-native. Classical computational causality frameworks (Pearl's SCM, Granger
 causality, DBNs) assume fixed background spacetime and static causal structure and thus cannot handle dynamic causal structures; DeepCausality contributes **dynamic, adaptive, and emergent** causality as first-class modalities, with a programmable deontic layer for verifiable safety while [classical causality still can be expressed](https://github.com/deepcausality-rs/deep_causality/tree/main/examples/classical_causality_examples). 

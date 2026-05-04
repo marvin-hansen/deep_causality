@@ -9,6 +9,7 @@ extern crate alloc;
 extern crate core;
 
 pub(crate) mod astro;
+pub(crate) mod chronometric;
 pub(crate) mod condensed;
 pub(crate) mod constants;
 pub(crate) mod dynamics;
@@ -27,6 +28,7 @@ pub(crate) mod units;
 pub(crate) mod waves;
 
 pub use astro::*;
+pub use chronometric::*;
 pub use condensed::*;
 pub use constants::*;
 pub use dynamics::*;
