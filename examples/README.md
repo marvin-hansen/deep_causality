@@ -6,17 +6,29 @@ This directory contains examples demonstrating various features and applications
 
 | Category | Description |
 |----------|-------------|
+| [Starter Example](#starter-example) | Basic introduction to DeepCausality |
 | [Classical Causality](#classical-causality-examples) | Traditional causal inference methods (CATE, DBN, Granger, RCM, SCM) |
 | [CSM Examples](#csm-examples) | Causal State Machine patterns |
 | [Core Examples](#core-examples) | PropagatingEffect and PropagatingProcess fundamentals |
-| [Physics Examples](#physics-examples) | Multi-physics simulations with Geometric Algebra |
 | [Avionics Examples](#avionics-examples) | High-assurance GNC and Safety Critical Systems |
+| [Physics Examples](#physics-examples) | Multi-physics simulations with Geometric Algebra |
 | [Medicine Examples](#medicine-examples) | Biomedical and life sciences applications |
 | [Material Examples](#material-examples) | Material Science and Metamaterials |
-| [Starter Example](#starter-example) | Basic introduction to DeepCausality |
 | [Tokio Example](#tokio-example) | Async integration with tokio runtime |
 
 ---
+
+## Starter Example
+
+**Location:** `examples/starter_example`
+
+Basic introduction to DeepCausality.
+
+| Example | Focus | Command |
+|---------|-------|---------|
+| Starter | CausaloidGraph basics | `cargo run -p starter_example --example starter_example` |
+
+---  
 
 ## Classical Causality Examples
 
@@ -69,6 +81,23 @@ Fundamental examples demonstrating the monadic API.
 
 ---
 
+## Avionics Examples
+
+**Location:** `examples/avionics_examples`
+
+High-assurance examples for Aerospace, Defense, and Safety Critical systems.
+
+| Example | Domain | Description | Command |
+|---------|--------|-------------|---------|
+| [magnav](magnav/README.md) | Navigation | Magnetic Navigation using Causal Particle Filters (Bayesian estimation) | `cargo run -p avionics_examples --example magnav` |
+| [geometric_tcas](geometric_tcas/README.md) | Collision Avoidance | NextGen TCAS using Geometric Algebra collision detection and `Intervenable` safety interlocks | `cargo run -p avionics_examples --example geometric_tcas` |
+| [hypersonic_2t](hypersonic_2t/README.md) | Defense/Tracking | Tracking Hypersonic Glide Vehicles (HGV) using Dual-Time (2T) Physics in 6D phase space | `cargo run -p avionics_examples --example hypersonic_2t` |
+| [flight_envelope_monitor](flight_envelope_monitor/README.md) | Health Monitoring | Three-stage stateful pipeline (sensor collection → bind chain → envelope hypergraph) demonstrating uniform composition through `PropagatingProcess<_, FlightState, AircraftConfig>` | `cargo run -p avionics_examples --example flight_envelope_monitor` |
+
+See [avionics_examples/README.md](avionics_examples/README.md) for detailed documentation.
+
+---
+
 ## Physics Examples
 
 **Location:** `examples/physics_examples`
@@ -91,22 +120,6 @@ Multi-physics simulations using Geometric Algebra, Tensor operations, and Topolo
 | Gravitational Wave | Relativity | `cargo run -p physics_examples --example gravitational_wave` |
 
 See [physics_examples/README.md](physics_examples/README.md) for detailed documentation.
-
----
-
-## Avionics Examples
-
-**Location:** `examples/avionics_examples`
-
-High-assurance examples for Aerospace, Defense, and Safety Critical systems.
-
-| Example | Domain | Command |
-|---------|--------|---------|
-| MagNav | Navigation | `cargo run -p avionics_examples --example magnav` |
-| Geometric TCAS | Collision Avoidance | `cargo run -p avionics_examples --example geometric_tcas` |
-| Hypersonic 2T | Defense/Tracking | `cargo run -p avionics_examples --example hypersonic_2t` |
-
-See [avionics_examples/README.md](avionics_examples/README.md) for detailed documentation.
 
 ---
 
@@ -144,18 +157,6 @@ See [material_examples/README.md](material_examples/README.md) for detailed docu
 
 ---
 
-## Starter Example
-
-**Location:** `examples/starter_example`
-
-Basic introduction to DeepCausality.
-
-| Example | Focus | Command |
-|---------|-------|---------|
-| Starter | CausaloidGraph basics | `cargo run -p starter_example --example starter_example` |
-
----
-
 ## Tokio Example
 
 **Location:** `examples/tokio_example`
@@ -168,6 +169,6 @@ Asynchronous integration with the tokio runtime.
 
 ---
 
-## 📜 License
+## License
 
 All examples are licensed under the [MIT license](LICENSE).
