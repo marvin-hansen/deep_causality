@@ -11,7 +11,7 @@ The DeepCasuality project uses [texifier](https://www.texifier.com/mac) for type
 
 ## 2025
 
-### [The Effect Propagation Process](papers/effect_propagation_process/epp.pdf)
+### [The Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/effect_propagation_process/epp.pdf)
 
 Citation:
 ```latex
@@ -25,7 +25,7 @@ Citation:
 }
 ```
 
-### [The Epistemology of the Effect Propagation Process](papers/epistemology_effect_propagation_process/epp_epistemology.pdf)
+### [The Epistemology of the Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/epistemology_effect_propagation_process/epp_epistemology.pdf)
 
 Citation:
 ```latex
@@ -39,7 +39,7 @@ Citation:
 }
 ```
 
-### [The Formalization of the Effect Propagation Process](papers/formalization_effect_propagation_process/epp_formalization.pdf)
+### [The Formalization of the Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/formalization_effect_propagation_process/epp_formalization.pdf)
 
 Citation:
 ```latex
@@ -53,7 +53,7 @@ Citation:
 }
 ```
 
-### [The Metaphysics of the Effect Propagation Process](papers/metaphysics_effect_propagation_process/epp_metaphysics.pdf)
+### [The Metaphysics of the Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/metaphysics_effect_propagation_process/epp_metaphysics.pdf)
 
 Citation:
 ```latex
@@ -67,7 +67,7 @@ Citation:
 }
 ```
 
-### [The Ontology of the Effect Propagation Process](papers/ontology_effect_propagation_process/epp_ontology.pdf)
+### [The Ontology of the Effect Propagation Process](https://github.com/deepcausality-rs/deep_causality/blob/main/papers/ontology_effect_propagation_process/epp_ontology.pdf)
 
 Citation:
 ```latex
@@ -81,7 +81,7 @@ Citation:
 }
 ```
 
-### [The Teleology of the Effect Propagation Process](papers/teleology_effect_propagation_process/epp_teleology.pdf)
+### [https://github.com/deepcausality-rs/deep_causality/blob/main/papers/teleology_effect_propagation_process/epp_teleology.pdf)
 
 Citation:
 ```latex
