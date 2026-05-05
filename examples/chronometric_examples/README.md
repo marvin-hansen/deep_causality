@@ -53,8 +53,7 @@ What each stage does, in order:
 1. **load**. Reads `.clk` and `.sp3` files for a single satellite across all
    bundled GPS-week datasets, concatenates them, sorts by timestamp.
 2. **align**. Runs a 10th-order Lagrange interpolation on the orbit data to
-   match clock timestamps, then restores the IGS-removed periodic
-   relativistic correction. Output: a vector of `SpaceTimeCoordinate` samples.
+   match clock timestamps. Output: a vector of `SpaceTimeCoordinate` samples.
 3. **pair**. Slides a window across the coordinate vector, picking pairs
    separated by roughly 50 minutes of orbital phase. The sliding scheme
    matches chronometric-geodesy convention and avoids the all-pairs failure
@@ -68,6 +67,98 @@ What each stage does, in order:
 Each stage is generic over the floating-point type. The default is
 `Float106` (double-double, around 32 decimal digits); switching to `f64` is
 a one-line change to the `FloatType` alias in `main.rs`.
+
+## 10th-order Lagrange interpolation
+
+The two GNSS product streams arrive at different intervalls:
+
+- **Clock data** (`.clk`): IGS precise clocks at **30-second** intervals
+- **Orbit data** (`.sp3`): IGS precise ephemeris at **15-minute** intervals (900 s)
+
+The 1PN kernel needs position, velocity, *and* clock drift at the same
+instant, so the align stage re-samples the coarse 15-minute orbit grid
+onto the dense 30-second clock grid with a 10th-order Lagrange
+polynomial. The implementation lives in
+[`src/proces_utils/lagrange.rs`](src/proces_utils/lagrange.rs).
+
+For each clock timestamp:
+
+1. **Locate the interpolation window.** Advance an orbit cursor so it
+   brackets the clock time, then take the surrounding 10 SP3 epochs
+   (4 before, 5 after, plus the bracket) — a slight forward bias keeps
+   most of the support ahead of the interpolation point.
+2. **Interpolate position** $P(t) = (x, y, z)$ by evaluating a
+   10th-order Lagrange polynomial through those 10 points at the clock
+   timestamp.
+3. **Compute ECEF velocity** by centered numerical derivative around
+   the clock time: $V(t) = (P(t+\varepsilon) - P(t-\varepsilon)) / 2\varepsilon$
+   with $\varepsilon = 0.01\ \text{s}$. The polynomial is reused; only
+   the evaluation point changes.
+4. **Lift ECEF velocity into ECI** via
+   $\mathbf{V}_\text{inertial} = \mathbf{V}_\text{ecef} + \boldsymbol{\Omega} \times \mathbf{r}$
+   with $\boldsymbol{\Omega} = [0, 0, \omega_\text{earth}]$. The
+   $v^2 / 2c^2$ term in the relativistic clock equation needs the
+   *inertial* speed, not the ground-frame one.
+5. **Compute clock drift rate** from `get_total_bias()` of adjacent
+   coordinates by centered finite difference:
+   $\dot\tau_i \approx (B_{i+1} - B_{i-1}) / (t_{i+1} - t_{i-1})$.
+   Endpoints fall back to one-sided differences; centered gaps wider
+   than 2 hours (or 1 hour at the boundary) leave the rate at zero so
+   data outages do not contaminate the estimate.
+
+### Why `get_total_bias()` instead of the raw clock bias
+
+IGS publishes clock biases with the **periodic relativistic correction
+stripped out**:
+
+$$\Delta t_\text{periodic} = -\frac{2\,(\mathbf{r} \cdot \mathbf{v})}{c^2}$$
+
+This term oscillates over each orbit because $\mathbf{r} \cdot \mathbf{v}$
+peaks near perigee and crosses zero at the apsides. IGS removes it so
+positioning users do not have to recompute it, but chronometric
+geodesy needs it back, because that periodic signal *is* part of the
+relativistic clock behavior the kernel inverts. `get_total_bias()`
+re-adds it using the freshly interpolated $r$ and $v$ from steps 2–4,
+which is why the drift rate is computed in a **second pass**: position
+and velocity first, then $\dot\tau = dB_\text{total}/dt$ over the fully
+reconstructed bias. This keeps the drift rate geometrically
+self-consistent with the $(r, v)$ the kernel reads from the same
+`SpaceTimeCoordinate`, which is what makes the GM inversion numerically
+stable.
+
+### Methodological note
+
+A careful reader should ask: by adding the periodic relativistic term
+back into the bias before computing $\dot\tau$, are we contaminating
+the input with the very GM signal we then claim to recover?
+
+The short answer is no, and the reasoning has three parts.
+
+**The correction is parameter-free in GM.** The added term
+
+$$\Delta t_\text{periodic} = -\frac{2\,(\mathbf{r} \cdot \mathbf{v})}{c^2}$$
+
+contains no gravitational parameter — only observed kinematic
+quantities $(\mathbf{r}, \mathbf{v})$ from the SP3 ephemeris and the
+defined constant $c$. There is no GM to inject.
+
+**The discriminating signal is already in the IGS bias.** What the
+kernel inverts is the *secular* difference in clock rate between
+satellites at different altitudes. IGS does not strip that secular
+component; it strips only the orbit-period oscillation around it.
+The information from which GM is recovered was in the data before any
+correction was applied. The periodic add-back exists so that
+*instantaneous* $(r, v, \dot\tau)$ samples are mutually consistent at
+each timestamp, which the algebraic inversion requires.
+
+**The remaining loop is quantitatively negligible at this accuracy.**
+The SP3 orbits are themselves the product of an orbit determination
+that assumed a gravity model with some baked-in GM. Strictly, that
+makes $(r, v)$ weakly dependent on a prior GM estimate. In practice
+the SP3 GM is known to sub-ppm (EGM2008-class), while this example
+recovers GM to ~0.2 % — roughly a thousand times coarser. The
+orbit-encoded GM acts as a fixed geometric reference.
+
 
 ## Data Layout
 
@@ -136,9 +227,14 @@ recovers published JGM-3 reference values on real data.
 
 This example was contributed by the Center for Dynamic Causality. It is a
 smaller, public replication of a larger experiment covering multiple years of GNSS data of the 
-Galileo constellation. The complete experiment is publicly available at:
+Galileo constellation. The complete experiment and a [preview of a peprint](https://github.com/causalcenter/chronodynamics/blob/main/papers/draft_chrono_mass.md) is publicly available at:
 
 https://github.com/causalcenter/chronodynamics
+
+The full reference data set (25 GB) is available at Zenodo:
+
+Marvin, H. (2026). Canonical dataset for chronometric analysis. 
+Zenodo. https://doi.org/10.5281/zenodo.20020236
 
 ## References
 

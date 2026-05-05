@@ -295,7 +295,6 @@ where
     // rate[i] = (bias[i+1] - bias[i-1]) / (t[i+1] - t[i-1])
     //
     // All operations are performed in R to avoid precision loss.
-
     let n = results.len();
     if n < 3 {
         return results;
