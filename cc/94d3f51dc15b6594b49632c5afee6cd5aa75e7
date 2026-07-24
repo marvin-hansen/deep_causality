@@ -1,0 +1,33 @@
+examples/avionics_examples/src/shared/constants.rs
+  s_f2afaa4ec55b4b::t_779b5a6a2e976a 179-184
+deep_causality_cfd/tests/navigation/eskf_tests.rs
+  s_f2afaa4ec55b4b::t_ba7de0e84d7bb8 280-289
+  s_f2afaa4ec55b4b::t_cca576735f4106 266-279,290-292
+  s_f2afaa4ec55b4b::t_5515648d4f76ef 265
+deep_causality_cfd/src/navigation/eskf.rs
+  s_f2afaa4ec55b4b::t_eefdd9e1ff45a9 200-203,212-219
+deep_causality_cfd/tests/navigation/reentry_nav_tests.rs
+  s_f2afaa4ec55b4b::t_ba7de0e84d7bb8 283-297,305-308
+  s_f2afaa4ec55b4b::t_959b3bf86a1f60 260-282,298-304,309
+deep_causality_cfd/src/navigation/reentry_nav.rs
+  s_f2afaa4ec55b4b::t_5fef864b805954 45-48
+  s_f2afaa4ec55b4b::t_7c94474d3ba438 83-84
+deep_causality_cfd/tests/types/flow/state_snapshot_tests.rs
+  s_f2afaa4ec55b4b::t_719a993d5dc72a 28,33-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "cc94d3f51dc15b6594b49632c5afee6cd5aa75e7",
+  "prompts": {},
+  "sessions": {
+    "s_f2afaa4ec55b4b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d37e4fb4-7aa3-4b81-9b07-55c9542bd8cc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
