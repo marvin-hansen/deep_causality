@@ -1,0 +1,29 @@
+openspec/changes/reconcile-cfd-docs-and-traceability/specs/documentation-code-parity/spec.md
+  s_f2afaa4ec55b4b::t_c9ab75b3b46b6e 1-152
+openspec/changes/reconcile-cfd-docs-and-traceability/.openspec.yaml
+  s_f2afaa4ec55b4b::t_60487ccaa283b4 1-2
+openspec/changes/reconcile-cfd-docs-and-traceability/proposal.md
+  s_f2afaa4ec55b4b::t_78eb0a52985759 1-148
+openspec/changes/reconcile-cfd-docs-and-traceability/tasks.md
+  s_f2afaa4ec55b4b::t_427f438008a29c 1-127
+openspec/changes/reconcile-cfd-docs-and-traceability/specs/constant-and-test-traceability/spec.md
+  s_f2afaa4ec55b4b::t_4f36eadb9d3519 1-61
+openspec/changes/reconcile-cfd-docs-and-traceability/design.md
+  s_f2afaa4ec55b4b::t_191275e17a83d6 1-202
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "05ea07a9fc0414371d89a661a336e13ba240417f",
+  "prompts": {},
+  "sessions": {
+    "s_f2afaa4ec55b4b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d37e4fb4-7aa3-4b81-9b07-55c9542bd8cc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
