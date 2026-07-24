@@ -1,0 +1,39 @@
+openspec/specs/eskf-filter-correctness/spec.md
+  s_f2afaa4ec55b4b::t_0226690c64f1f1 4-13
+  s_f2afaa4ec55b4b::t_ea88b139094480 1-3,14-148
+openspec/notes/cfd_audit/AUDIT-REPORT.md
+  s_f2afaa4ec55b4b::t_b55175a0d66721 787,789,791-795
+  s_f2afaa4ec55b4b::t_dbfd19c3bfe105 811-819
+  s_f2afaa4ec55b4b::t_32d18ff20595b3 692-695
+  s_f2afaa4ec55b4b::t_438edd0d5736ed 194-240
+  s_f2afaa4ec55b4b::t_6bebd5d7e19efd 689
+  s_f2afaa4ec55b4b::t_9b2ff0d730ca23 511-516
+  s_f2afaa4ec55b4b::t_9f8368d82c77bf 14-17
+  s_f2afaa4ec55b4b::t_e9330c20413124 879-883
+openspec/changes/archive/2026-07-24-fix-navigation-filter-correctness/.openspec.yaml
+  s_f2afaa4ec55b4b::t_78ebde662680b7 1-2
+openspec/changes/archive/2026-07-24-fix-navigation-filter-correctness/design.md
+  s_f2afaa4ec55b4b::t_2d8a813de2926f 1-259
+openspec/changes/archive/2026-07-24-fix-navigation-filter-correctness/proposal.md
+  s_f2afaa4ec55b4b::t_af3a34c0841d40 1-152
+openspec/changes/archive/2026-07-24-fix-navigation-filter-correctness/specs/eskf-filter-correctness/spec.md
+  s_f2afaa4ec55b4b::t_26cff2da8235c7 1-135
+openspec/changes/archive/2026-07-24-fix-navigation-filter-correctness/tasks.md
+  s_f2afaa4ec55b4b::t_97a73763c0e58f 1-195
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "21c3eb7e2ca1e0547127331548e03df6764f4037",
+  "prompts": {},
+  "sessions": {
+    "s_f2afaa4ec55b4b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d37e4fb4-7aa3-4b81-9b07-55c9542bd8cc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
