@@ -1,0 +1,451 @@
+deep_causality_cfd/src/solvers/dec/boundary/boundary_zone.rs
+  s_f2afaa4ec55b4b::t_75233bf5904ae3 24-25
+  s_f2afaa4ec55b4b::t_836e2233f623c3 67-72
+deep_causality_cfd/src/types/flow/blackout.rs
+  s_f2afaa4ec55b4b::t_39b09106cb409a 436-447
+deep_causality_cfd/src/types/flow/coupling.rs
+  s_f2afaa4ec55b4b::t_40c4e880ce9039 18-25
+deep_causality_cfd/Cargo.toml
+  s_f2afaa4ec55b4b::t_42f30de9f3fad1 51-55
+deep_causality_cfd/src/solvers/qtt/compressible/mod.rs
+  s_f2afaa4ec55b4b::t_9ca637cf0b5969 8-9
+  s_f2afaa4ec55b4b::t_aa6a4225c12e7f 36-37
+  s_f2afaa4ec55b4b::t_b89eca6394155d 7
+deep_causality_cfd/src/solvers/qtt/observe.rs
+  s_f2afaa4ec55b4b::t_fdd39b609950f0 140-149
+deep_causality_cfd/studies/qtt_rank_study/README.md
+  s_f2afaa4ec55b4b::t_06da9559de4504 28-30
+deep_causality_cfd/src/solvers/dec/dec_ns_solver/pressure.rs
+  s_f2afaa4ec55b4b::t_88bb738b5c5ad2 14-19
+deep_causality_cfd/src/types/flow/corridor/regime.rs
+  s_f2afaa4ec55b4b::t_9f2b6fcb8b7b3f 141-146
+  s_f2afaa4ec55b4b::t_1c6f06c80b2ade 214-217
+  s_f2afaa4ec55b4b::t_113f6422664d2a 195-199
+examples/avionics_examples/cfd/nozzle_operating_map/utils_print.rs
+  s_f2afaa4ec55b4b::t_898d396ee5b2d4 18-21
+  s_f2afaa4ec55b4b::t_2a50d6f16c2b8f 41,46-52
+  s_f2afaa4ec55b4b::t_3a4d0f0fec355a 53
+deep_causality_cfd/studies/README.md
+  s_f2afaa4ec55b4b::t_374672e8c8a668 28
+  s_f2afaa4ec55b4b::t_eac19bcb2a9cc1 94-98
+  s_f2afaa4ec55b4b::t_b703d30dfed287 44
+  s_f2afaa4ec55b4b::t_144d3f2942f383 59-61
+  s_f2afaa4ec55b4b::t_fd1f2d642a59c7 27
+deep_causality_cfd/verification/qtt_park2t_blackout/baseline.txt
+  s_f2afaa4ec55b4b::t_bc14bb34638e0f 1-2
+  s_1d9fbbcf426aec::t_215cd5e8bbe081 7,10,14-21,23-28
+deep_causality_cfd/verification/dec_graded_mms_verification/README.md
+  s_f2afaa4ec55b4b::t_9c56f8cf0777b5 32
+  s_f2afaa4ec55b4b::t_8a4cdd7ddcc83a 37-42
+deep_causality_cfd/verification/qtt_reentry_3d/README.md
+  s_f2afaa4ec55b4b::t_af15cd174a5696 41
+  s_f2afaa4ec55b4b::t_fa13c611773b84 49-52
+  s_f2afaa4ec55b4b::t_a8673c6ab7eb48 8-9
+deep_causality_cfd/verification/qtt_park2t_blackout/README.md
+  s_f2afaa4ec55b4b::t_1a714b04cf3dd8 34-38,40-53
+  s_f2afaa4ec55b4b::t_fefef2d4a92cad 39
+deep_causality_cfd/src/tensor_bridge/projection.rs
+  s_f2afaa4ec55b4b::t_ba4789d7978542 107-113
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/constants.rs
+  s_f2afaa4ec55b4b::t_e9309184042be3 115,125-126,145-146
+deep_causality_cfd/src/solvers/qtt/compressible/fitting.rs
+  s_f2afaa4ec55b4b::t_17634df27eef91 369-375
+examples/avionics_examples/cfd/turbulence_flow/README.md
+  s_f2afaa4ec55b4b::t_97e0e230116f46 33,39-47
+  s_f2afaa4ec55b4b::t_afb355c085d8a0 88-90
+  s_f2afaa4ec55b4b::t_124976178a38a0 57-58,65,68-69,72-73,75,78,81-82
+  s_f2afaa4ec55b4b::t_1b1b114d35608b 83
+deep_causality_cfd/src/solvers/dec/mod.rs
+  s_f2afaa4ec55b4b::t_ad31b22b744fc3 6-13
+  s_f2afaa4ec55b4b::t_dcc59130eac15c 56-66
+deep_causality_cfd/tests/types/flow/finite_rate_ionization_tests.rs
+  s_f2afaa4ec55b4b::t_99123dbea03ce3 7-9,14
+  s_f2afaa4ec55b4b::t_7653d5820feb73 64-107
+  s_f2afaa4ec55b4b::t_0b90a9fed92152 63
+deep_causality_cfd/src/solvers/dec/boundary/body_force_zone.rs
+  s_f2afaa4ec55b4b::t_5edbd709060e09 18-23
+openspec/specs/constant-and-test-traceability/spec.md
+  s_f2afaa4ec55b4b::t_4992aaa24bfacf 1-65
+deep_causality_cfd/src/theories/mod.rs
+  s_f2afaa4ec55b4b::t_96fb66731b6937 7-21
+examples/avionics_examples/cfd/turbulence_flow/main.rs
+  s_f2afaa4ec55b4b::t_63193d336c7349 107-112
+  s_f2afaa4ec55b4b::t_901d9eb49b9a16 42-58,60-63
+examples/avionics_examples/cfd/nozzle_operating_map/output.txt
+  s_f2afaa4ec55b4b::t_d6edf8d890f242 1
+  s_f2afaa4ec55b4b::t_c030765ec9b852 2-3
+  s_f2afaa4ec55b4b::t_7bb41a8d62d3a9 16,20-24
+deep_causality_cfd/verification/dec_taylor_green_re1600_verification/print_utils.rs
+  s_f2afaa4ec55b4b::t_e9bec86919ca1c 22-28
+  s_f2afaa4ec55b4b::t_98c610ebd69c20 18-21
+  s_f2afaa4ec55b4b::t_53d623df9ae77c 40-43,47,54,56,61,63,69-76
+deep_causality_cfd/src/solvers/dec/dec_ns_rate.rs
+  s_f2afaa4ec55b4b::t_e4eeee30377aad 443-449,461-465
+deep_causality_cfd/verification/qtt_blunt_body_2d/baseline.txt
+  s_f2afaa4ec55b4b::t_3ded822623dadf 1-2,10-11,16-17
+deep_causality_cfd/README.md
+  s_f2afaa4ec55b4b::t_a2623d304f1d2f 77-81
+  s_f2afaa4ec55b4b::t_bff9f8736488d1 226-227
+  s_f2afaa4ec55b4b::t_0fe151cc0205cb 303
+  s_f2afaa4ec55b4b::t_a9d33360844371 41-42
+  s_f2afaa4ec55b4b::t_1f7064f6a5ba04 115-120
+  s_f2afaa4ec55b4b::t_9e19f117788aaf 313-326
+  s_f2afaa4ec55b4b::t_d65743060782c1 43-47
+deep_causality_cfd/src/lib.rs
+  s_f2afaa4ec55b4b::t_9ead43f792dc7b 22-26
+deep_causality_cfd/tests/solvers/dec/dec_ns_rate_tests.rs
+  s_f2afaa4ec55b4b::t_305e0477287d1b 7-10
+  s_f2afaa4ec55b4b::t_879894d6a13080 135-145
+  s_f2afaa4ec55b4b::t_34c3e590322425 176-177,182-183,187-188
+  s_f2afaa4ec55b4b::t_58d8269454481e 178-179
+deep_causality_cfd/studies/srp_momentum_jet/main.rs
+  s_f2afaa4ec55b4b::t_df6c0887301a08 346-353
+deep_causality_cfd/studies/compressible_carrier_timing/output.txt
+  s_f2afaa4ec55b4b::t_e9309184042be3 2-3
+  s_f2afaa4ec55b4b::t_91c0cc1abe8558 1
+  s_f2afaa4ec55b4b::t_1a076ca53eb811 9-13,17-19,22-28
+deep_causality_cfd/studies/qtt_rank_3d/README.md
+  s_f2afaa4ec55b4b::t_720429fe6af9f7 48-49
+  s_f2afaa4ec55b4b::t_8e48c164e27c30 26-36,39-40
+deep_causality_cfd/src/solvers/dec/surface_force.rs
+  s_f2afaa4ec55b4b::t_6e6db7ff3a636a 70-81,84
+deep_causality_cfd/studies/traj_fs3_clock/README.md
+  s_f2afaa4ec55b4b::t_5c3b8ee9bb13ff 33-37
+  s_f2afaa4ec55b4b::t_aea3396594bbee 43-45
+  s_f2afaa4ec55b4b::t_fa052e53c0fa3d 23-28
+deep_causality_cfd/studies/qtt_rank_3d/main.rs
+  s_f2afaa4ec55b4b::t_5830408f9b8669 233,236-239
+  s_f2afaa4ec55b4b::t_a8662d90504acb 173,178-181
+  s_f2afaa4ec55b4b::t_e1ecbb01f03237 20-24
+  s_f2afaa4ec55b4b::t_9eade453cc1a67 164-167
+  s_f2afaa4ec55b4b::t_0eed209f623ea3 266,268
+deep_causality_cfd/studies/qtt_rank_nonlinear/README.md
+  s_f2afaa4ec55b4b::t_94bc82c290ddfe 26-38
+deep_causality_cfd/verification/qtt_cylinder_verification/print_utils.rs
+  s_f2afaa4ec55b4b::t_c12cf209db9e77 24-30
+  s_f2afaa4ec55b4b::t_c40d4a4adc6151 32-33,35-42,46-48
+  s_f2afaa4ec55b4b::t_3b6d82369f4f91 43-45
+  s_f2afaa4ec55b4b::t_89de212b419c3b 17-20
+deep_causality_cfd/studies/compressible_carrier_timing/main.rs
+  s_f2afaa4ec55b4b::t_4d0df0fb2ba071 29-32
+  s_f2afaa4ec55b4b::t_f3a64f81573005 94-95,108-116
+  s_f2afaa4ec55b4b::t_cb2bb3c7f6e685 117-130
+  s_f2afaa4ec55b4b::t_be0cda10368105 69-72
+  s_f2afaa4ec55b4b::t_902cd195138ae3 24-28
+deep_causality_cfd/src/theories/incompressible_dec.rs
+  s_f2afaa4ec55b4b::t_e90d3f03651fcf 46-49
+deep_causality_cfd/verification/README.md
+  s_f2afaa4ec55b4b::t_70d97c0bdd4fb9 127-128
+  s_f2afaa4ec55b4b::t_be7250c4b00079 282-283
+  s_f2afaa4ec55b4b::t_1a7a64a1bd4dc7 280-281,284-287
+  s_f2afaa4ec55b4b::t_d5c075b4a8cce5 308
+  s_f2afaa4ec55b4b::t_47e23aba1715af 93
+  s_f2afaa4ec55b4b::t_3ccdd6b9fce58d 91
+  s_f2afaa4ec55b4b::t_3ea6f7e8f84254 134-137
+  s_f2afaa4ec55b4b::t_f13f62cbc4eec9 266-270
+  s_f2afaa4ec55b4b::t_c55f73b0b081a3 97
+  s_f2afaa4ec55b4b::t_2840ae912b4d30 156-159
+  s_f2afaa4ec55b4b::t_35784e074744e8 126
+  s_f2afaa4ec55b4b::t_5a7872ce8a6178 382,384-390
+  s_f2afaa4ec55b4b::t_001329b3ac87b3 383
+  s_f2afaa4ec55b4b::t_275d76bc18ad20 446-447
+  s_f2afaa4ec55b4b::t_1ad4ca07c192b4 568-593
+  s_f2afaa4ec55b4b::t_b1c16f53c5ec67 232-243,245-248
+  s_f2afaa4ec55b4b::t_cda73566978930 489-490
+  s_f2afaa4ec55b4b::t_5ebba0f776cc9d 295-299
+  s_f2afaa4ec55b4b::t_d9ce3a320a74ad 99
+  s_f2afaa4ec55b4b::t_262f7721a0377a 551-556
+  s_f2afaa4ec55b4b::t_b00966801a9ff3 306-307,309-314
+  s_f2afaa4ec55b4b::t_d549e9907376bf 150-153
+  s_f2afaa4ec55b4b::t_d843301635f718 96,98,100
+  s_f2afaa4ec55b4b::t_3b778d841d7249 141-149,154
+  s_f2afaa4ec55b4b::t_0416b580470140 372-381,391-445,448-462,467-488,491-528
+  s_f2afaa4ec55b4b::t_1a6d5e6f9177e9 19-25
+  s_f2afaa4ec55b4b::t_59f202bf9e7bdb 463-466
+  s_f2afaa4ec55b4b::t_23136945a67506 122
+deep_causality_cfd/src/theories/compressible_ns.rs
+  s_f2afaa4ec55b4b::t_17bd0f89546daa 100-106
+  s_f2afaa4ec55b4b::t_8639bbc438c89a 8-15
+deep_causality_cfd/verification/qtt_reentry_3d/baseline.txt
+  s_f2afaa4ec55b4b::t_3ded822623dadf 1-2
+  s_2be4a222d6a771::t_f0bdb839a962b0 10-11
+deep_causality_cfd/verification/qtt_blunt_body_2d/README.md
+  s_f2afaa4ec55b4b::t_c14b33e30ff7aa 29
+  s_f2afaa4ec55b4b::t_a3fd2a4aa1c0b9 36
+  s_f2afaa4ec55b4b::t_3754166d4ffd84 44-45
+deep_causality_cfd/verification/dec_cylinder_wake_verification/main.rs
+  s_f2afaa4ec55b4b::t_c4088cb18aee7a 26-37
+deep_causality_physics/src/quantities/fluid_dynamics/solenoidal_field.rs
+  s_f2afaa4ec55b4b::t_74bab14d8d4034 198-210,214-223
+  s_f2afaa4ec55b4b::t_60238c27149472 211-213
+  s_f2afaa4ec55b4b::t_d343bbdc9e21a7 239-264
+  s_f2afaa4ec55b4b::t_b3948700cdccfa 9-10,12-17,20-40
+deep_causality_cfd/src/types/flow/mms.rs
+  s_f2afaa4ec55b4b::t_ef7f5284991fba 192-198
+deep_causality_cfd/src/navigation/ins_error_state.rs
+  s_f2afaa4ec55b4b::t_e7e27550dccd0a 11-23
+deep_causality_cfd/src/types/ambient.rs
+  s_f2afaa4ec55b4b::t_1a4f0b3d3035cc 59-66
+deep_causality_cfd/studies/qtt_rank_nonlinear/main.rs
+  s_f2afaa4ec55b4b::t_678cb3fd581809 176,183-184,188-189
+  s_f2afaa4ec55b4b::t_5a05ac21a10b61 136-139
+  s_f2afaa4ec55b4b::t_288d7eaa914f30 23-34
+  s_f2afaa4ec55b4b::t_8bea63de680637 178,181,186
+deep_causality_cfd/studies/qtt_rank_plume/README.md
+  s_f2afaa4ec55b4b::t_8f28cf895a7e96 46-50
+  s_f2afaa4ec55b4b::t_0516869c0d8e96 28-32
+  s_f2afaa4ec55b4b::t_aab7a51a0f8597 66-71
+deep_causality_cfd/verification/qtt_sod/baseline.txt
+  s_f2afaa4ec55b4b::t_3ded822623dadf 1-2,15-18
+deep_causality_cfd/verification/dec_cylinder_verification/re100_16_staircase.txt
+  s_f2afaa4ec55b4b::t_4daf4b47d45492 1-14
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/README.md
+  s_f2afaa4ec55b4b::t_7d7780d791313a 21,63
+deep_causality_cfd/verification/qtt_cylinder_verification/main.rs
+  s_f2afaa4ec55b4b::t_4ab1d3694a0a81 56-65
+  s_f2afaa4ec55b4b::t_5956f8c1490a66 18-25
+  s_f2afaa4ec55b4b::t_eaf96ec3fdbcbf 55
+  s_f2afaa4ec55b4b::t_ac2c193eb4c994 29-31
+  s_f2afaa4ec55b4b::t_6134fffd473105 13-15
+deep_causality_cfd/src/types/flow/study/event_fork.rs
+  s_f2afaa4ec55b4b::t_be91d28c7ef5b1 25-28,30-38
+deep_causality_cfd/tests/theories/incompressible_ns_verification_tests.rs
+  s_f2afaa4ec55b4b::t_92ace4ff38efa6 20-22
+  s_f2afaa4ec55b4b::t_38ad427476d905 32-35
+deep_causality_cfd/src/traits/metric_provider.rs
+  s_f2afaa4ec55b4b::t_0643432e35ecdc 15-27
+deep_causality_cfd/src/solvers/dec/boundary/outflow.rs
+  s_f2afaa4ec55b4b::t_186049a72b1086 21-27
+examples/avionics_examples/cfd/plasma_blackout/corridor/README.md
+  s_f2afaa4ec55b4b::t_a356a29eae86c1 15-16,20-28
+  s_f2afaa4ec55b4b::t_17ed8f9525f6c6 56-57
+  s_f2afaa4ec55b4b::t_f4acb8f71ce14f 235-237
+  s_f2afaa4ec55b4b::t_22e4547328d5c9 247,249
+  s_f2afaa4ec55b4b::t_6292ba421c056b 29
+deep_causality_cfd/studies/qtt_blend_metric/README.md
+  s_f2afaa4ec55b4b::t_66df1cac8aeaa4 33-34,36-41
+  s_f2afaa4ec55b4b::t_777aabdbd83c0b 35
+  s_f2afaa4ec55b4b::t_6accd9869abe84 43-46
+  s_f2afaa4ec55b4b::t_9e7cf933e46b6a 42
+examples/avionics_examples/cfd/plasma_blackout/corridor/model.rs
+  s_f2afaa4ec55b4b::t_d993f9e49efc92 371-373
+deep_causality_cfd/src/solvers/qtt/compressible/imex.rs
+  s_f2afaa4ec55b4b::t_ee834dea072ce0 21-27
+  s_f2afaa4ec55b4b::t_d6f67b889faaca 175,201-213
+  s_f2afaa4ec55b4b::t_111c4cd6b66d88 164,167-174
+examples/avionics_examples/cfd/plasma_blackout/corridor/main.rs
+  s_f2afaa4ec55b4b::t_d4b4c97bb5e02a 177
+  s_f2afaa4ec55b4b::t_d9c95f81082c45 6
+  s_f2afaa4ec55b4b::t_a37c19b3be2fe9 12-17
+deep_causality_cfd/src/navigation/regime_switch.rs
+  s_f2afaa4ec55b4b::t_18b44c6575ed08 65-70
+deep_causality_cfd/verification/dec_cylinder_verification/re100_16_resolved.txt
+  s_f2afaa4ec55b4b::t_ba61a60b6e7296 1-13,19
+deep_causality_cfd/verification/qtt_cylinder_verification/README.md
+  s_f2afaa4ec55b4b::t_71f07b9fdc7fb0 92-94
+  s_f2afaa4ec55b4b::t_a6a0a29798a8ae 16-20
+  s_f2afaa4ec55b4b::t_e289b17adc203e 21-44
+  s_f2afaa4ec55b4b::t_7d418f27e95411 62-63
+  s_f2afaa4ec55b4b::t_20d7f216570b4c 110-111
+  s_f2afaa4ec55b4b::t_46b429289264bf 82-84
+  s_f2afaa4ec55b4b::t_215d8ef2c8702a 66-67,69-74
+  s_f2afaa4ec55b4b::t_1584400536b7fd 100-103
+deep_causality_cfd/verification/dec_cylinder_wake_verification/README.md
+  s_f2afaa4ec55b4b::t_7167730b2af6b3 77-79
+deep_causality_cfd/src/navigation/eskf.rs
+  s_f2afaa4ec55b4b::t_ad7c6271b2dc76 152-155
+  s_f2afaa4ec55b4b::t_b2958fd4a32b25 212-219,222,225-228
+  s_f2afaa4ec55b4b::t_7c9fc44b8958f9 220-221
+  s_f2afaa4ec55b4b::t_0073f2ce548fd0 223-224
+  s_f2afaa4ec55b4b::t_d1c76197120ee5 170-175
+  s_f2afaa4ec55b4b::t_4e16ba06959ea6 201-205
+deep_causality_cfd/verification/dec_graded_mms_verification/main.rs
+  s_f2afaa4ec55b4b::t_ff2d22373bd703 24-30
+deep_causality_cfd/src/solvers/dec/uncertain_inflow/inflow_march.rs
+  s_f2afaa4ec55b4b::t_d0155299e59907 287-288,290-295
+deep_causality_cfd/studies/qtt_blend_metric/main.rs
+  s_f2afaa4ec55b4b::t_098fd6f19fe2fd 145,156-163,165
+  s_f2afaa4ec55b4b::t_a8cb0e990b2828 146-155
+  s_f2afaa4ec55b4b::t_02fe618cc950c7 14-15
+deep_causality_cfd/src/types/flow_config/march_builder.rs
+  s_f2afaa4ec55b4b::t_c7a695a2cda18e 10-16,18-20
+  s_f2afaa4ec55b4b::t_efdac9abed1551 17
+examples/avionics_examples/README.md
+  s_f2afaa4ec55b4b::t_7d7780d791313a 26
+  s_f2afaa4ec55b4b::t_211596d4f6124a 24
+deep_causality_cfd/studies/srp_momentum_jet/config.rs
+  s_f2afaa4ec55b4b::t_6a52b58afcbf60 23-24
+  s_f2afaa4ec55b4b::t_ae3dde6f81b1db 84-92
+deep_causality_cfd/src/types/flow/duct_march_run.rs
+  s_f2afaa4ec55b4b::t_a0b85ced3347c8 178-181
+deep_causality_cfd/benches/PERFORMANCE.md
+  s_f2afaa4ec55b4b::t_de705560143a14 3-10
+  s_f2afaa4ec55b4b::t_4d00fe33c6b03d 139-141
+  s_f2afaa4ec55b4b::t_649ff83efaf788 37-39
+  s_f2afaa4ec55b4b::t_84a0a6c46fb456 22-25,27
+deep_causality_cfd/verification/qtt_blunt_body_2d/main.rs
+  s_f2afaa4ec55b4b::t_af5964f489a637 127-128
+  s_f2afaa4ec55b4b::t_f7855a042b501e 181,184
+  s_f2afaa4ec55b4b::t_f2229f0e76b2f1 12-15
+deep_causality_cfd/src/coordinate/blended.rs
+  s_f2afaa4ec55b4b::t_8a0dee9b85682d 59-67
+deep_causality_physics/src/constants/hypersonic.rs
+  s_f2afaa4ec55b4b::t_f5bcb71a868f77 80-100,104,108
+  s_f2afaa4ec55b4b::t_4249c830d4066f 17-19
+  s_f2afaa4ec55b4b::t_518048014b9d5b 54-66
+deep_causality_cfd/src/solvers/dec/uncertain_inflow/uncertain_boundary_source.rs
+  s_f2afaa4ec55b4b::t_b8a11aced377a6 91-92,145-147
+  s_f2afaa4ec55b4b::t_12d4cffa7f3d97 96-100
+  s_f2afaa4ec55b4b::t_a86869d0eb6fc6 101
+examples/avionics_examples/cfd/flight_envelope_placard/README.md
+  s_f2afaa4ec55b4b::t_77606b7014fea0 30
+  s_f2afaa4ec55b4b::t_f637c7de4260ec 63
+  s_f2afaa4ec55b4b::t_8f6364b65ef2f5 64-67
+  s_f2afaa4ec55b4b::t_eda39155749596 80
+deep_causality_cfd/src/types/flow/corridor/envelope.rs
+  s_f2afaa4ec55b4b::t_a101a670f81f5f 35-40
+deep_causality_cfd/verification/dec_cylinder_verification/main.rs
+  s_f2afaa4ec55b4b::t_8ffb0352e0bba3 98-102,104
+  s_f2afaa4ec55b4b::t_812a86b458a529 380-381
+  s_f2afaa4ec55b4b::t_af894b19760bb2 77-84
+  s_f2afaa4ec55b4b::t_083797bbc24cdf 34-35
+  s_f2afaa4ec55b4b::t_acae15618eac0c 36-40
+deep_causality_cfd/verification/qtt_sod/README.md
+  s_f2afaa4ec55b4b::t_4cae9e61aafcbe 38-39
+  s_f2afaa4ec55b4b::t_2349f06c9ba4a3 40
+  s_f2afaa4ec55b4b::t_457283f31b8687 16-18
+  s_f2afaa4ec55b4b::t_2b2f4213516e77 14-15,21
+  s_f2afaa4ec55b4b::t_ef4bf404c6724f 27-29
+deep_causality_cfd/studies/qtt_rank_plume/main.rs
+  s_f2afaa4ec55b4b::t_b3646dcc51778c 265-268
+  s_f2afaa4ec55b4b::t_b87fd2ce710f97 487-489
+  s_f2afaa4ec55b4b::t_837b97f79e236d 26-37
+deep_causality_cfd/verification/qtt_taylor_green_verification/config.rs
+  s_f2afaa4ec55b4b::t_c2d60daaa22a08 76-80
+deep_causality_cfd/src/solvers/qtt/compressible/marcher_3d_fitted.rs
+  s_f2afaa4ec55b4b::t_01200b22eacb58 339-346
+  s_f2afaa4ec55b4b::t_b6f8cdf55239c8 378-380
+  s_f2afaa4ec55b4b::t_ade23d4dd97e1a 21-30
+deep_causality_cfd/src/solvers/qtt/compressible/euler_1d.rs
+  s_f2afaa4ec55b4b::t_4ab08f095a591b 67-70,72-74,82-96
+  s_f2afaa4ec55b4b::t_08291f6f6bd8da 19-21
+  s_f2afaa4ec55b4b::t_80209c495f2b92 110-111
+  s_f2afaa4ec55b4b::t_d9c8188942ceb4 42-43
+  s_f2afaa4ec55b4b::t_14db40f5ec24dc 7,9
+  s_f2afaa4ec55b4b::t_7cef228d8fe435 147
+deep_causality_cfd/studies/compressible_carrier_timing/README.md
+  s_f2afaa4ec55b4b::t_5b808848c22aba 54-57
+openspec/specs/documentation-code-parity/spec.md
+  s_f2afaa4ec55b4b::t_4992aaa24bfacf 1-156
+deep_causality_cfd/verification/dec_cylinder_verification/README.md
+  s_f2afaa4ec55b4b::t_b6aacba8d0d7d4 4-5
+  s_f2afaa4ec55b4b::t_a8951b34a07b5f 26-31
+deep_causality_cfd/src/solvers/dec/boundary/inflow.rs
+  s_f2afaa4ec55b4b::t_b9ba4ac4f70c78 23-27
+examples/avionics_examples/src/shared/constants.rs
+  s_f2afaa4ec55b4b::t_a68f68fc4b939f 48-59
+deep_causality_cfd/src/types/flow/report.rs
+  s_f2afaa4ec55b4b::t_38060ceb9b950f 18-19,22-24
+deep_causality_cfd/src/solvers/qtt/compressible/marcher_2d.rs
+  s_f2afaa4ec55b4b::t_38d5f59e40eb97 14-23
+deep_causality_cfd/verification/mms_taylor_green_verification/print_utils.rs
+  s_f2afaa4ec55b4b::t_1f4a6a3ec26633 43-44
+openspec/specs/trajectory-nav-engine/spec.md
+  s_f2afaa4ec55b4b::t_89502688335f4c 11-13,18-22
+  s_f2afaa4ec55b4b::t_2e0bcedd508941 23
+deep_causality_cfd/src/types/flow/carrier.rs
+  s_f2afaa4ec55b4b::t_5b27d5dadcedb8 500-516
+  s_f2afaa4ec55b4b::t_53d7e0600d5720 862-864
+  s_f2afaa4ec55b4b::t_d0fa8a025d6237 535-544
+  s_f2afaa4ec55b4b::t_3c42a6fe6493a9 865-866
+deep_causality_cfd/studies/qtt_rank_3d/output.txt
+  s_f2afaa4ec55b4b::t_4f9ff8a59762b1 42-44,55-56
+  s_f2afaa4ec55b4b::t_c8b5dcb4224abf 1-3,19,23-24
+deep_causality_cfd/studies/srp_momentum_jet/README.md
+  s_f2afaa4ec55b4b::t_ef3df5d44e717a 62-63
+  s_f2afaa4ec55b4b::t_41e87eb7d10d13 57-61
+deep_causality_physics/src/kernels/hypersonic/thermochemistry.rs
+  s_f2afaa4ec55b4b::t_714ba68175cba9 43-47
+deep_causality_cfd/src/types/flow/compressible_march_run.rs
+  s_f2afaa4ec55b4b::t_5772be97f580de 416-427,429-431
+  s_f2afaa4ec55b4b::t_12f368b5867ec5 79-82
+  s_f2afaa4ec55b4b::t_b08a52918ffc9d 486-489
+  s_f2afaa4ec55b4b::t_241cc26d4e172f 428
+  s_f2afaa4ec55b4b::t_1a9dec5b7f64d1 479-485
+deep_causality_cfd/verification/dec_taylor_green_re1600_verification/README.md
+  s_f2afaa4ec55b4b::t_18820aa426f6aa 80-84
+  s_f2afaa4ec55b4b::t_c0d10f9e1d8163 22-25
+  s_f2afaa4ec55b4b::t_abf4b37e34024d 96-98
+  s_f2afaa4ec55b4b::t_54f7518b8fc894 109-112
+  s_f2afaa4ec55b4b::t_53034f3255b315 86-90
+  s_f2afaa4ec55b4b::t_d1b39b701cdd5f 10
+  s_f2afaa4ec55b4b::t_1365afbadc742a 17-21
+openspec/changes/archive/2026-07-26-reconcile-cfd-docs-and-traceability/tasks.md
+  s_f2afaa4ec55b4b::t_4ceb13989e6082 85-92,94-98,118-124,210-214,239-240
+deep_causality_cfd/studies/qtt_blend_metric/output.txt
+  s_f2afaa4ec55b4b::t_a56033218fb197 1-2,7-13,16-20,22-26
+deep_causality_cfd/studies/qtt_rank_nonlinear/output.txt
+  s_f2afaa4ec55b4b::t_2c33baa677b350 1-3,40-47
+deep_causality_cfd/tests/solvers/qtt/compressible_tests.rs
+  s_f2afaa4ec55b4b::t_0aadef226029d9 229-278
+deep_causality_cfd/verification/dec_taylor_green_re1600_verification/baseline.txt
+  s_f2afaa4ec55b4b::t_20b2f80a804fd8 1-2,137-138
+deep_causality_cfd/verification/mms_taylor_green_verification/baseline.txt
+  s_1d9fbbcf426aec::t_760c3849a75faf 1-2,18-19
+openspec/audits/cfd_audit/ACTION-LIST.md
+  s_f2afaa4ec55b4b::t_0a25f2ce745997 203
+openspec/audits/cfd_audit/AUDIT-REPORT.md
+  s_f2afaa4ec55b4b::t_69dbd1cd7b1f1b 9,14-21,34-35,45-46,245-291,499,646,724-738,740-755,758-765,773,777,784-789,833,836,928-985,994-1002,1019
+openspec/audits/cfd_audit/README.md
+  s_f2afaa4ec55b4b::t_ebb06175d40854 19,49,79
+openspec/audits/cfd_audit/modules/dec-native-incompressible-navier-stokes-rate-kernel-solvers-.md
+  s_f2afaa4ec55b4b::t_09f91d3e9c41fd 510
+openspec/audits/cfd_audit/modules/deep-causality-cfd-documentation-vs-code-parity-crate-readme.md
+  s_f2afaa4ec55b4b::t_06ea273227b103 5,418
+openspec/changes/archive/2026-07-21-make-cfd-evidence-enforceable/baseline.md
+  s_f2afaa4ec55b4b::t_f3e27da30bb85a 47
+openspec/changes/archive/2026-07-21-make-cfd-evidence-enforceable/design.md
+  s_f2afaa4ec55b4b::t_da327cfcc7c7ae 148
+openspec/changes/archive/2026-07-21-make-cfd-evidence-enforceable/proposal.md
+  s_f2afaa4ec55b4b::t_05a25cb0d44b68 5
+openspec/changes/archive/2026-07-21-make-cfd-evidence-enforceable/tasks.md
+  s_f2afaa4ec55b4b::t_7e1677deffa1ae 74
+openspec/changes/archive/2026-07-23-close-qtt-solver-envelope/tasks.md
+  s_f2afaa4ec55b4b::t_3b9e6ffecf4dec 76
+openspec/changes/archive/2026-07-24-fix-ramc-vibrational-relaxation-pair/proposal.md
+  s_f2afaa4ec55b4b::t_0ec65cc7244cac 39
+openspec/changes/archive/2026-07-26-reconcile-cfd-docs-and-traceability/specs/documentation-code-parity/spec.md
+  s_f2afaa4ec55b4b::t_6a2c83970e4282 57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "e4b5c5e6c47f6ec8245a52f6f2657eb703f0ad01",
+  "prompts": {},
+  "sessions": {
+    "s_1d9fbbcf426aec": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a3da1cd549d2d681e",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_2be4a222d6a771": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a1ed871f5792861e1",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_f2afaa4ec55b4b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d37e4fb4-7aa3-4b81-9b07-55c9542bd8cc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
