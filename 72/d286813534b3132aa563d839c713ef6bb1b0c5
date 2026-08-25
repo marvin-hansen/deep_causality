@@ -1,0 +1,49 @@
+deep_causality_topology/src/types/cut_cell/geometry.rs
+  s_8d1a45b74b2107::t_03337e20826032 305-313,315-351,353,356
+  s_8d1a45b74b2107::t_b53af585c9f050 105-128,203-208,227-231
+deep_causality_topology/tests/types/gauge/gauge_field_lattice/continuum_tests.rs
+  s_8d1a45b74b2107::t_116c41912f92e5 102,105-106,108-109
+  s_8d1a45b74b2107::t_03e421c7f11c5a 113-115
+  s_8d1a45b74b2107::t_5abc30e32ecb16 86-101,103-104,107,110-112,116-131
+deep_causality_topology/tests/types/point_cloud/op_triangulate_tests.rs
+  s_8d1a45b74b2107::t_606c0fe9943d3c 7
+  s_8d1a45b74b2107::t_03e421c7f11c5a 225-226
+  s_8d1a45b74b2107::t_7c0812ce07e27f 207,232
+  s_8d1a45b74b2107::t_24b12cd87d1667 187-206,208-224,227-231,233-252
+deep_causality_topology/src/types/point_cloud/ops/op_triangulate_delaunay.rs
+  s_8d1a45b74b2107::t_4627c63700e905 27,126-128,159
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_continuum.rs
+  s_8d1a45b74b2107::t_7f815f65f1f951 157-171,173
+deep_causality_topology/tests/types/cut_cell/intersection_tests.rs
+  s_8d1a45b74b2107::t_cc6ffd203ef007 272-311
+deep_causality_topology/tests/types/point_cloud/op_triangulate_delaunay_tests.rs
+  s_8d1a45b74b2107::t_03e421c7f11c5a 375-376
+  s_8d1a45b74b2107::t_24b12cd87d1667 340-358,360-374,377-381,383-391
+  s_8d1a45b74b2107::t_7c0812ce07e27f 16,359,382
+deep_causality_topology/tests/types/cut_cell/geometry_tests.rs
+  s_8d1a45b74b2107::t_58dd92dca8e904 65-112,117-121,126-151
+  s_8d1a45b74b2107::t_03e421c7f11c5a 113-116,122-125
+deep_causality_topology/src/types/point_cloud/ops/op_triangulate.rs
+  s_8d1a45b74b2107::t_cf4a3e266c56ff 78-98,120,123-127,156
+deep_causality_topology/src/types/cut_cell/intersection.rs
+  s_8d1a45b74b2107::t_03e421c7f11c5a 93-97
+  s_8d1a45b74b2107::t_6849282477caed 77-87,107-109,145-150,152,310-315,317
+  s_8d1a45b74b2107::t_b098492fdc9e12 45-60,110-111,114,118,131,140,151,162,165,193,228,240,243,279,316,325,328,353
+  s_8d1a45b74b2107::t_af7e6008c6b479 88-92,98-106,112-113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "72d286813534b3132aa563d839c713ef6bb1b0c5",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
