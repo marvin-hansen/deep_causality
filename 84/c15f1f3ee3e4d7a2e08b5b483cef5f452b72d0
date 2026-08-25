@@ -1,0 +1,34 @@
+.cargo/mutants.toml
+  s_8d1a45b74b2107::t_774f3c56a11541 53-57,92-93
+  s_8d1a45b74b2107::t_fb4b78f72cebce 119,124-155
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_continuum.rs
+  s_8d1a45b74b2107::t_3758cf39225be6 170-173
+AGENTS.md
+  s_8d1a45b74b2107::t_3758cf39225be6 418
+  s_8d1a45b74b2107::t_b1bd4512fad284 427-432
+deep_causality_topology/tests/types/gauge/gauge_field_lattice/continuum_tests.rs
+  s_8d1a45b74b2107::t_b2e6ea7ef8ea95 116-118
+  s_8d1a45b74b2107::t_915e23bd63f9fc 89,91-96,98-115,121-124,127-144,148-158,160,164-167
+deep_causality_topology/src/types/cut_cell/intersection.rs
+  s_8d1a45b74b2107::t_4ef1caa5a1c7c2 45,47,53,55-59,79-82,84-87,89-102,105-107,111,191,277,351
+deep_causality_topology/tests/types/cut_cell/intersection_tests.rs
+  s_8d1a45b74b2107::t_5f425baafbdd21 313-351
+  s_8d1a45b74b2107::t_8bb08680a02af8 280
+  s_8d1a45b74b2107::t_ac0ff3fc2bfbb5 281
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "84c15f1f3ee3e4d7a2e08b5b483cef5f452b72d0",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
