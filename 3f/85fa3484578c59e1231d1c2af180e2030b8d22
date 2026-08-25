@@ -1,0 +1,22 @@
+Cargo.toml
+  h_080fb89ca1f0c4 42
+openspec/changes/archive/2026-07-12-add-quantum-crate/design.md
+  h_080fb89ca1f0c4 244
+openspec/notes/deep_brain/deepbrain.md
+  h_080fb89ca1f0c4 733
+openspec/notes/linear/prototype/Cargo.toml
+  h_080fb89ca1f0c4 7
+openspec/specs/quantum-crate-scaffold/spec.md
+  h_080fb89ca1f0c4 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "3f85fa3484578c59e1231d1c2af180e2030b8d22",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
