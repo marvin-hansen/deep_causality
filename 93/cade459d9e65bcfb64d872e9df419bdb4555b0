@@ -1,0 +1,116 @@
+deep_causality_metric/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 6
+deep_causality_multivector/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+website/web/src/components/nav/SiteHeader.astro
+  s_c89e11d7c17613::t_6a88c4967bac69 245-249
+  s_c89e11d7c17613::t_3d19ee30087c14 34,37-48,99,102-107,188-193,195
+openspec/notes/quantum/qcl-gaps.md
+  s_8d1a45b74b2107::t_8d1f2b2aa37791 27-32
+deep_causality_tensor/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_uncertain/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_quantum/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_haft/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_par/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+ultragraph/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 6
+deep_causality_ethos/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 6
+deep_causality_linear/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_physics/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_num_complex/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_num_rational/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_algorithms/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_core/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_cfd/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 6
+deep_causality_file/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_rand/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_algebra/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_topology/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_data_structures/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 6
+deep_causality_fft/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_discovery/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_num/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_sparse/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_num_dual/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_calculus/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+deep_causality_ast/Cargo.toml
+  s_8d1a45b74b2107::t_bdfc4dfe36a16f 3
+website/web/astro.config.mjs
+  s_c89e11d7c17613::t_3fa07f35fff657 47-50
+website/web/public/img/causal_center_logo.svg
+  s_c89e11d7c17613::t_bd60af4980c310 1-449
+website/web/public/img/causal_center_logo_dark.svg
+  s_c89e11d7c17613::t_f926c1054011f8 1-449
+website/web/public/img/project-logos/deepcausality-cfd-on-dark.svg
+  s_c89e11d7c17613::t_64ff41f020dfdf 1-52
+website/web/public/img/project-logos/deepcausality-cfd-on-light.svg
+  s_c89e11d7c17613::t_f02684581cd721 1-52
+website/web/public/img/project-logos/deepcausality-deepbrain-on-dark.svg
+  s_c89e11d7c17613::t_985c2b953ce72f 1-71
+website/web/public/img/project-logos/deepcausality-deepbrain-on-light.svg
+  s_c89e11d7c17613::t_b50cd3314ff8bc 1-71
+website/web/public/img/project-logos/deepcausality-quantum-on-dark.svg
+  s_c89e11d7c17613::t_53a5dff4090c34 1-46
+website/web/public/img/project-logos/deepcausality-quantum-on-light.svg
+  s_c89e11d7c17613::t_4c4936702e1608 1-46
+website/web/src/consts.ts
+  s_c89e11d7c17613::t_5fdd797da145cf 15-25
+website/web/src/layouts/BaseLayout.astro
+  s_c89e11d7c17613::t_7053242a806b1c 4,122,125
+website/web/src/pages/projects.astro
+  s_c89e11d7c17613::t_531141eabe6681 1-238
+website/web/src/pages/sponsors.astro
+  s_c89e11d7c17613::t_a193885081e2e3 1-189
+Cargo.lock
+  s_8d1a45b74b2107::t_bb3c9f482c2ffd 522,536,543,557,561,571,593,600,608,624,632,644,655,662,673,677,691,698,706,714,722,726,746,762,771,778,793,811,2203
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "93cade459d9e65bcfb64d872e9df419bdb4555b0",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_c89e11d7c17613": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1e5e6d57-c682-4d4d-bf36-7a02569722f1",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
