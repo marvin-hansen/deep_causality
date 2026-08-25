@@ -1,0 +1,18 @@
+Cargo.lock
+  h_080fb89ca1f0c4 673,793
+deep_causality_metric/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_topology/Cargo.toml
+  h_080fb89ca1f0c4 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "3cf0cd3440ff699ed9b15df741b7fd07c40bb50a",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
