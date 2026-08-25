@@ -1,0 +1,19 @@
+docs/LF/slides/LF_2026/SPEAKER_NOTES.md
+  s_29f0d58949ab50::t_57f78c0c1cd617 1-388
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "e9da4126480f507b5295988f221f268b2ecee159",
+  "prompts": {},
+  "sessions": {
+    "s_29f0d58949ab50": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4612c9e-0732-4328-a912-5093da8a46e3",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
