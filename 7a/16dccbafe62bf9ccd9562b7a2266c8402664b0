@@ -1,0 +1,54 @@
+AGENTS.md
+  s_10b42b758585e5::t_b0051eeadee682 387
+  s_10b42b758585e5::t_514354224469b0 388-421
+deep_causality_linear/tests/algorithms/cg_tests.rs
+  s_8d1a45b74b2107::t_d85615fb3da069 226-296
+.cargo/mutants.toml
+  s_c89e11d7c17613::t_2da32741f804f7 34-40,48,52
+  s_8d1a45b74b2107::t_ba5c7fad884af4 1-33,62
+  s_c89e11d7c17613::t_4dad6c4bbf2e55 41-43,45-47
+  s_c89e11d7c17613::t_138b49e5f37957 49-51
+  s_8d1a45b74b2107::t_ac2aa038ef93a5 44,53-61
+deep_causality_linear/tests/algorithms/decomposition_tests.rs
+  s_8d1a45b74b2107::t_d1b542273f010d 531-565,570-571,573-574,577,580,583-585,588-603,605-628,636-682,684-714,719,723,730,734,761,776,781,785
+  s_8d1a45b74b2107::t_30fafce5f6ef0d 629-633,784
+  s_8d1a45b74b2107::t_225fb9f2224785 604,634-635,683
+  s_8d1a45b74b2107::t_970feea6f26753 566-569,572,575-576,578-579,581-582,586-587,715-718,720-722,724-729,731-733,735-760,762-775,777-780,782-783
+deep_causality_linear/tests/algorithms/cholesky_tests.rs
+  s_10b42b758585e5::t_d763a2340100d2 236,240,245,248,250-252,257,259-260,262,268,272,277-279,282,285,287-288,293,309-395
+  s_10b42b758585e5::t_9e8969fd5dfd03 232-235,237-239,241-244,246-247,249,253-256,258,261,263-267,269-271,273-276,280-281,283-284,286,289-292,294-308
+build/scripts/mutants.sh
+  s_8d1a45b74b2107::t_ba5c7fad884af4 1-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "7a16dccbafe62bf9ccd9562b7a2266c8402664b0",
+  "prompts": {},
+  "sessions": {
+    "s_10b42b758585e5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fd7d7a35-2f05-41dd-bbaa-2e587e174a2d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_c89e11d7c17613": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1e5e6d57-c682-4d4d-bf36-7a02569722f1",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
