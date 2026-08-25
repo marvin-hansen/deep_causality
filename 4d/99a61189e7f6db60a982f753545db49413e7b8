@@ -1,0 +1,14 @@
+website/quantum/wrangler.toml
+  h_080fb89ca1f0c4 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "4d99a61189e7f6db60a982f753545db49413e7b8",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
