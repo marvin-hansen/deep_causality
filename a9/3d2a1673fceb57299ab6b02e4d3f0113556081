@@ -1,0 +1,182 @@
+website/quantum/src/styles/global.css
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-4,6-210,214-235,238-341,343-371,373-377
+  s_c89e11d7c17613::t_060d3f9384978b 5,211-213,236-237,342,372
+website/quantum/src/content/examples/en/quantum-geometric-tensor.mdx
+  s_c89e11d7c17613::t_34a86c190c4b4e 1-27
+website/quantum/src/components/nav/SiteHeader.astro
+  s_c89e11d7c17613::t_f31e87434c123c 1-279
+website/quantum/src/components/home/WhatItIs.astro
+  s_c89e11d7c17613::t_f8822c584e96cf 1-86
+website/quantum/README.md
+  s_c89e11d7c17613::t_b57ac2f983b07a 1-200
+website/quantum/src/components/home/LayerStack.astro
+  s_c89e11d7c17613::t_42f994a02ce4af 1-60,62,64-139
+  s_c89e11d7c17613::t_cb978fa4566b00 61,63
+website/quantum/public/fonts/README.md
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-14
+website/quantum/src/layouts/BaseLayout.astro
+  s_c89e11d7c17613::t_6265039fa01718 1-216
+website/quantum/src/components/docs/ApiTable.astro
+  s_c89e11d7c17613::t_b987252c06aaf5 1-102
+website/quantum/src/styles/fonts.css
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-44
+website/quantum/src/pages/errors/index.astro
+  s_c89e11d7c17613::t_7a2a1a56700de5 108-115
+  s_c89e11d7c17613::t_35c01c1abba3cf 1-107,116-141
+website/quantum/src/components/docs/DocDetail.astro
+  s_c89e11d7c17613::t_9288e054435c9e 3
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-2,4-152
+website/quantum/wrangler.toml
+  s_c89e11d7c17613::t_5431394663df64 1-33
+website/README.md
+  s_c89e11d7c17613::t_f7596ba4f21c68 5,7-9,16,18,20,40-44,50-52,58,61,64-67,72-74,83,91-96,106,125-128,133-136
+website/quantum/src/pages/operators/index.astro
+  s_c89e11d7c17613::t_1ee3b06938525f 1-186
+website/quantum/public/favicon.svg
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-29
+website/quantum/src/styles/tokens.css
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-141
+website/quantum/src/content/examples/en/qcm-freeze-check.mdx
+  s_c89e11d7c17613::t_dcc24b588fe069 1-63
+website/quantum/src/pages/formalization/index.astro
+  s_c89e11d7c17613::t_39641363e50586 1-168
+website/quantum/src/components/home/FreezeGate.astro
+  s_c89e11d7c17613::t_7b935a87e0435a 1-45,47-152
+  s_c89e11d7c17613::t_9df21ca449e3e9 46
+website/quantum/src/components/home/EvidenceSnapshot.astro
+  s_c89e11d7c17613::t_3c5d006c63a122 1-125
+website/quantum/public/img/social-share.source.svg
+  s_c89e11d7c17613::t_18e67d8253f6c0 1-83,97-99,102-108
+  s_c89e11d7c17613::t_be3c54d3afb7f6 85-96,101
+  s_c89e11d7c17613::t_0d0f42a7af8558 84
+  s_c89e11d7c17613::t_ffd5d36add23e5 100
+website/quantum/src/content/examples/en/hopf-fibration-multivector.mdx
+  s_c89e11d7c17613::t_34a86c190c4b4e 1-26
+.bazelignore
+  s_c89e11d7c17613::t_2da32741f804f7 27
+website/quantum/src/components/home/SupportsDiagram.astro
+  s_c89e11d7c17613::t_7560a48f88060d 1-114
+website/quantum/pnpm-workspace.yaml
+  s_c89e11d7c17613::t_70966dd603c939 1-53
+website/quantum/tsconfig.json
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-5
+website/quantum/src/content/examples/en/quantum-counterfactual.mdx
+  s_c89e11d7c17613::t_34a86c190c4b4e 1-28
+website/quantum/src/components/docs/DocPage.astro
+  s_c89e11d7c17613::t_b4969850c9f773 1-50
+website/quantum/src/data/papers.ts
+  s_c89e11d7c17613::t_1dd4c05ead2d3b 1-100
+website/quantum/.gitignore
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-4
+img/project-logos/deepbrain/deepcausality-deepbrain-on-dark.svg
+  s_10b42b758585e5::t_a6879fe1858dee 1-71
+website/quantum/src/pages/examples/[...slug].astro
+  s_c89e11d7c17613::t_1cc03704540622 1-49
+website/quantum/src/pages/gates/index.astro
+  s_c89e11d7c17613::t_ac17994fd9f6c1 1-174
+website/quantum/shiki-rust-themes.mjs
+  s_c89e11d7c17613::t_d2c22aaccb8424 1,3-73
+  s_c89e11d7c17613::t_060d3f9384978b 2
+website/quantum/src/pages/start/index.astro
+  s_c89e11d7c17613::t_5162dad8df1d94 1-182
+website/quantum/src/pages/qcm/index.astro
+  s_c89e11d7c17613::t_b5fc6cb5a6f462 1-136,140-258
+  s_c89e11d7c17613::t_aa2b431ea0656f 137-139
+website/quantum/src/pages/verdicts/index.astro
+  s_c89e11d7c17613::t_723ad470ab7717 1-171
+website/quantum/src/pages/index.astro
+  s_c89e11d7c17613::t_f61def0888c609 1-46
+website/quantum/.npmrc
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-2
+img/project-logos/deepbrain/deepcausality-deepbrain-on-light.svg
+  s_10b42b758585e5::t_a6879fe1858dee 1-71
+website/quantum/src/data/api.ts
+  s_c89e11d7c17613::t_c422a1a2a6a06e 1-602,605-724
+  s_c89e11d7c17613::t_9c5a88f51162b9 603-604
+website/quantum/src/data/formalization.ts
+  s_c89e11d7c17613::t_2e1b1ad9911e94 1-138
+website/quantum/src/content/examples/en/ikkt-matrix-model.mdx
+  s_c89e11d7c17613::t_dcc24b588fe069 1-38
+website/quantum/src/consts.ts
+  s_c89e11d7c17613::t_8b9e9fb531ae49 1-44
+website/quantum/src/pages/papers/index.astro
+  s_c89e11d7c17613::t_4cd8d5038c71fc 1-143
+website/quantum/src/pages/examples/index.astro
+  s_c89e11d7c17613::t_01444f21a17c8e 1-127
+website/quantum/public/robots.txt
+  s_c89e11d7c17613::t_5431394663df64 1-16,20-70
+  s_c89e11d7c17613::t_fe1e6d5e633ebc 17-19
+website/quantum/src/data/errors.ts
+  s_c89e11d7c17613::t_94edfefcf8c839 1-130
+website/quantum/src/styles/tokens-quantum.css
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-34,36-58
+  s_c89e11d7c17613::t_060d3f9384978b 35
+website/quantum/src/components/home/WhereItFits.astro
+  s_c89e11d7c17613::t_3010de9a1b55aa 1-134
+website/quantum/package.json
+  s_c89e11d7c17613::t_70966dd603c939 1-27
+website/quantum/src/content/examples/en/gauge-electroweak.mdx
+  s_c89e11d7c17613::t_34a86c190c4b4e 1-27
+website/quantum/src/components/home/Hero.astro
+  s_c89e11d7c17613::t_2988cf4b0e3005 1-139
+website/quantum/src/content/examples/en/topological-insulator.mdx
+  s_c89e11d7c17613::t_34a86c190c4b4e 1-28
+website/quantum/src/components/home/SectionDivider.astro
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-17
+website/quantum/src/pages/404.astro
+  s_c89e11d7c17613::t_f934b0d7660606 1-35
+website/quantum/src/pages/modalities/index.astro
+  s_c89e11d7c17613::t_e57c0c77649cac 1-180
+website/quantum/src/components/nav/ThemeToggle.astro
+  s_c89e11d7c17613::t_d2c22aaccb8424 1-67
+website/quantum/src/content.config.ts
+  s_c89e11d7c17613::t_510f600609268d 1-40
+website/quantum/astro.config.mjs
+  s_c89e11d7c17613::t_bd92217119de07 1-83
+website/quantum/pnpm-lock.yaml
+  s_8d1a45b74b2107::t_c0d28d4f0be232 1-5474
+img/project-logos/cfd/deepcausality-cfd-on-dark.svg
+  s_c89e11d7c17613::t_f167a8007fc5dc 1-52
+img/project-logos/cfd/deepcausality-cfd-on-light.svg
+  s_c89e11d7c17613::t_e44dcd586741f4 1-52
+img/project-logos/quantum/deepcausality-quantum-on-dark.svg
+  s_c89e11d7c17613::t_8f699b760ccea3 1-46
+img/project-logos/quantum/deepcausality-quantum-on-light.svg
+  s_c89e11d7c17613::t_23c51062a4d874 1-46
+website/quantum/public/img/deepcausality-quantum-on-dark.svg
+  s_c89e11d7c17613::t_350813e778baec 1-46
+website/quantum/public/img/deepcausality-quantum-on-light.svg
+  s_c89e11d7c17613::t_cad3f5015f7b47 1-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "a93d2a1673fceb57299ab6b02e4d3f0113556081",
+  "prompts": {},
+  "sessions": {
+    "s_10b42b758585e5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fd7d7a35-2f05-41dd-bbaa-2e587e174a2d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_c89e11d7c17613": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1e5e6d57-c682-4d4d-bf36-7a02569722f1",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
