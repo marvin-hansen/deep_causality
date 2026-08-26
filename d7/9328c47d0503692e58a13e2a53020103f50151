@@ -1,0 +1,32 @@
+website/quantum/src/consts.ts
+  s_c89e11d7c17613::t_bd80f90308b2b4 31-39
+website/quantum/src/pages/start/index.astro
+  s_c89e11d7c17613::t_0f9ebdf2a91a52 186
+  s_c89e11d7c17613::t_7d548236ab1a85 7-17,23,25-27,30-32,34,37,77,83-88,90-93,96
+website/quantum/src/components/home/WhereItFits.astro
+  s_c89e11d7c17613::t_010240936ba4fc 9,52-54
+website/quantum/src/layouts/BaseLayout.astro
+  s_c89e11d7c17613::t_0f9ebdf2a91a52 20-21,119-121
+website/web/src/pages/projects.astro
+  s_c89e11d7c17613::t_1bbd9bd47666a1 30,45
+website/quantum/src/components/home/Hero.astro
+  s_c89e11d7c17613::t_010240936ba4fc 10-11,15,19-22,37,40-42
+website/quantum/README.md
+  s_c89e11d7c17613::t_0f9ebdf2a91a52 88,123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "d79328c47d0503692e58a13e2a53020103f50151",
+  "prompts": {},
+  "sessions": {
+    "s_c89e11d7c17613": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1e5e6d57-c682-4d4d-bf36-7a02569722f1",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
