@@ -1,0 +1,42 @@
+website/docs/src/content/docs/formalization/linear.md
+  s_0cf4caf3424f7c::t_854945fd2dc376 1-4,6-57
+  s_0cf4caf3424f7c::t_4e102e6f648637 5
+website/docs/src/content/docs/concepts/index.md
+  s_0cf4caf3424f7c::t_5670b65ac92f77 30
+website/docs/src/content/docs/concepts/uniform-math.md
+  s_0cf4caf3424f7c::t_7aabfec89e5cca 3,8,10,12-14,16,18,20,22-31,35-77,79-87,89,104-105,110-126,128-169,172-173,176,178,180,182,184,186,188,199,201,203-210,212,214-216,218-227,229,231,233,235,237,239,241,243,245,247,249,251,253,255,257,259,261,263,265,267,269,271,273,275,277,279,281,283,285,287,289,291,293,295,297,299,301,303,305,307,310-339,342-348,350,357,359,361,363,367-370
+  s_0cf4caf3424f7c::t_17be416b1dd29b 78
+  s_0cf4caf3424f7c::t_ec7fec25ff3d47 33
+  s_0cf4caf3424f7c::t_a30c9421d105cc 90-103,106-108
+  s_0cf4caf3424f7c::t_d77b2609f05866 32,34,88,109
+website/docs/src/content/docs/getting-started/install.md
+  s_0cf4caf3424f7c::t_075057106ee919 39-45
+  s_0cf4caf3424f7c::t_d1a9fd60a216a0 46
+website/docs/src/content/docs/formalization/quantum.md
+  s_0cf4caf3424f7c::t_4e102e6f648637 5
+website/docs/src/content/docs/formalization/topology.md
+  s_0cf4caf3424f7c::t_4e102e6f648637 5
+website/docs/src/content/docs/formalization/index.md
+  s_0cf4caf3424f7c::t_2fc9e29540b938 40
+  s_0cf4caf3424f7c::t_e4111432afa178 17
+website/docs/src/content/docs/overview/innovations.md
+  s_0cf4caf3424f7c::t_656cf44324f490 22
+  s_0cf4caf3424f7c::t_315ff140a4a25a 28
+  s_0cf4caf3424f7c::t_bc3425b4cb9a07 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "7f2c8e8d7d1aadcd1a38203ce37b4d24d1a17068",
+  "prompts": {},
+  "sessions": {
+    "s_0cf4caf3424f7c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "30193dc4-497d-4699-8ba2-7ad863e7cec4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
