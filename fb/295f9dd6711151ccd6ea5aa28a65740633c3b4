@@ -1,0 +1,67 @@
+deep_causality_linear/src/lib.rs
+  s_8d1a45b74b2107::t_eb641824d899c2 69
+deep_causality_linear/tests/BUILD.bazel
+  s_8d1a45b74b2107::t_34d5b357c654b3 95
+deep_causality_topology/README.md
+  s_0cf4caf3424f7c::t_739fd765abd02e 68-70,259,263
+deep_causality_linear/tests/types/mod.rs
+  s_8d1a45b74b2107::t_4d16c90e5cbf12 13-14
+deep_causality_topology/tests/types/cup_product/implementation_agreement_tests.rs
+  s_8d1a45b74b2107::t_e534a95025d7d0 1-76
+deep_causality_topology/src/lib.rs
+  s_8d1a45b74b2107::t_9a662fa11ec18c 82
+deep_causality_topology/src/types/mod.rs
+  s_8d1a45b74b2107::t_bc95f4db83561b 14
+deep_causality_linear/tests/types/packed_gf2_vector/packed_gf2_vector_tests.rs
+  s_8d1a45b74b2107::t_4d16c90e5cbf12 1-13,17-181,183-250
+  s_8d1a45b74b2107::t_7534d7f1221423 14
+  s_8d1a45b74b2107::t_9a662fa11ec18c 182
+  s_8d1a45b74b2107::t_709faf9195c382 15-16
+deep_causality_topology/tests/types/cup_product/mod.rs
+  s_8d1a45b74b2107::t_e534a95025d7d0 7
+deep_causality_linear/src/types/mod.rs
+  s_8d1a45b74b2107::t_2610bcac625edf 10
+deep_causality_linear/tests/types/packed_gf2_vector/mod.rs
+  s_8d1a45b74b2107::t_4d16c90e5cbf12 1-6
+deep_causality_topology/src/types/gf2_chain/mod.rs
+  s_8d1a45b74b2107::t_7534d7f1221423 1-59,65-160,165-188
+  s_8d1a45b74b2107::t_9a662fa11ec18c 60-64,161-164
+deep_causality_topology/tests/types/mod.rs
+  s_8d1a45b74b2107::t_9a662fa11ec18c 15
+deep_causality_linear/src/types/packed_gf2_vector/mod.rs
+  s_8d1a45b74b2107::t_9d4771a4317131 1-8,10-114,116-120,122-124,126-259,261,269-273,275-276,286-301,305-307
+  s_8d1a45b74b2107::t_2610bcac625edf 9,115,121,125,260,262-268,274,277-285,302-304
+deep_causality_topology/tests/types/gf2_chain/gf2_chain_tests.rs
+  s_8d1a45b74b2107::t_9a662fa11ec18c 1-72,74-138
+  s_8d1a45b74b2107::t_ace99de1c475bf 73
+deep_causality_topology/tests/BUILD.bazel
+  s_8d1a45b74b2107::t_8c6132bbdfc9b5 94
+  s_8d1a45b74b2107::t_34d5b357c654b3 156-172
+  s_8d1a45b74b2107::t_5540e3a00b1da8 155
+deep_causality_topology/tests/types/gf2_chain/mod.rs
+  s_8d1a45b74b2107::t_6a58456b41ab8d 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "fb295f9dd6711151ccd6ea5aa28a65740633c3b4",
+  "prompts": {},
+  "sessions": {
+    "s_0cf4caf3424f7c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "30193dc4-497d-4699-8ba2-7ad863e7cec4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
