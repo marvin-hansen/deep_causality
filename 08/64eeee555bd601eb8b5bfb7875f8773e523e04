@@ -1,0 +1,421 @@
+.github/workflows/rust_deps.yml
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 30
+deep_causality_unified_math/deep_causality_algebra/README_ISOMORPHISM.md
+  s_bd8f90dda752d1::t_d78e79f261a859 1-325
+deep_causality_unified_math/deep_causality_haft/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-158
+lean/DeepCausalityFormal/Algebra/Monoid.lean
+  s_bd8f90dda752d1::t_ede8660be2e484 7-8,12
+lean/DeepCausalityFormal/Haft/EffectSystem.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,32
+lean/DeepCausalityFormal/Quantum/PartialTraceCounterexample.lean
+  s_bd8f90dda752d1::t_ede8660be2e484 17
+lean/DeepCausalityFormal/Haft/Applicative.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,21
+lean/DeepCausalityFormal/Haft/ArrowTerm.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,45
+deep_causality_core/tests/formalization_lean/mod.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 11
+deep_causality_quantum/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 50,60,65,70,75,80,85,90
+openspec/specs/linear-tower-integration/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 17,21,79
+deep_causality_unified_math/deep_causality_tensor/Cargo.toml
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 35
+  s_bd8f90dda752d1::t_2f8ed2915bffab 1-34,36-79
+lean/DeepCausalityFormal/Homology/ChainCondition.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,34
+deep_causality_data_structures/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 55
+lean/DeepCausalityFormal/Num/Identity.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 12
+lean/DeepCausalityFormal/Rational/Rational.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 27
+deep_causality_cfd/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 38,62,86-87,89-90,93-95,118,120-121,124-126,149-150,152-153,156-158,182,206-207,230,333,335-337,363,365-367
+examples/causal_uncertain_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 10,21-22,33
+deep_causality_unified_math/deep_causality_algebra/LEAN_ALGEBRA.md
+  s_bd8f90dda752d1::t_d78e79f261a859 1-103
+lean/DeepCausalityFormal/Algebra/Verdict.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 17
+lean/DeepCausalityFormal/Haft/Kleisli.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,24
+examples/causal_counterfactual_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 14-15
+lean/DeepCausalityFormal/Haft/SymmetricMonoidal.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,41
+openspec/notes/quantum/qcl-design-note.md
+  s_bd8f90dda752d1::t_d78e79f261a859 747
+deep_causality_unified_math/deep_causality_rand/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-40
+.github/workflows/formalization.yml
+  s_bd8f90dda752d1::t_2adb6fda1c21ca 83-93
+  s_bd8f90dda752d1::t_d92f06a9c2487a 94
+AGENTS.md
+  s_bd8f90dda752d1::t_d78e79f261a859 443,463
+  s_bd8f90dda752d1::t_cd6a3072cd6495 181-184,186-188,193-198,201
+  s_bd8f90dda752d1::t_342c14b53d3708 185,189-192,199-200,202-205
+lean/DeepCausalityFormal/Num/Cast.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 12
+openspec/notes/quantum/dynamic-qcm.md
+  s_bd8f90dda752d1::t_d78e79f261a859 192
+deep_causality_unified_math/deep_causality_homology/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-35
+lean/DeepCausalityFormal/Haft/Hkt.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7
+lean/DeepCausalityFormal/Haft/Monad.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,27
+deep_causality/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 18,23-24
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 20
+deep_causality_unified_math/deep_causality_fft/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-120
+deep_causality_discovery/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 36,40,44,49,54,66
+Cargo.toml
+  s_bd8f90dda752d1::t_7c1a48f3dab3b2 24-36
+  s_bd8f90dda752d1::t_b6c36af0d53a68 19-20,22-23
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 21
+deep_causality_unified_math/deep_causality_num/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-157
+deep_causality_cfd/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 21-30,63,74,86,97-98,109-110,121-124,135,146-147,158-159,171-172,183,195-196,207,218,229,240,251,262,273,284,295,306,317,329,341
+deep_causality_unified_math/deep_causality_algebra/src/iso/witness/test_support.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-176
+deep_causality_unified_math/deep_causality_multivector/src/types/multivector/utils/tests.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-105
+lean/DeepCausalityFormal/Haft/ParametricMonad.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,24
+examples/classical_causality_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 15
+deep_causality_unified_math/deep_causality_linear/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-37
+openspec/notes/quantum/qcl-gaps.md
+  s_bd8f90dda752d1::t_d78e79f261a859 48,72,128,208,210,216,231,248,278,438,740-741
+openspec/specs/linear-hkt-composition/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 12
+lean/DeepCausalityFormal/Algebra/DivisionAlgebra.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 12
+lean/DeepCausalityFormal/Haft/Either.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,21
+deep_causality_unified_math/deep_causality_num_complex/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-49
+examples/core_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 20,41
+build/scripts/mutants.sh
+  s_bd8f90dda752d1::t_d92f06a9c2487a 74
+  s_bd8f90dda752d1::t_4024db25859768 57-68,79-84
+deep_causality_discovery/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 17,38,56,74,94,113,135,153,171,188-189,209,229-230,250
+deep_causality_unified_math/deep_causality_calculus/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-45
+deep_causality_file/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 28,32,36
+deep_causality/LEAN_DeepCausality.md
+  s_bd8f90dda752d1::t_d78e79f261a859 13
+deep_causality_physics/README.md
+  s_bd8f90dda752d1::t_d78e79f261a859 80
+deep_causality_unified_math/deep_causality_num_complex/LEAN_NUM_COMPLEX.md
+  s_bd8f90dda752d1::t_d78e79f261a859 1-89
+deep_causality/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 19-20,40,63-65,108,165,358,413,477-478,497-500,520-523,543-546,566-569,589-592
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 412,494,517,540,563,586
+openspec/specs/algebra-formalization-docs/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 21
+openspec/specs/linear-dense-algorithms/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 92
+deep_causality_unified_math/deep_causality_haft/src/arrow/arrow_term.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-353
+deep_causality_unified_math/deep_causality_haft/src/monad/free_monad.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-146
+deep_causality_unified_math/deep_causality_multivector/tests/extensions/hkt_multifield/hkt_multifield_tests.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-260
+deep_causality_unified_math/deep_causality_num_complex/src/complex/octonion_number/algebra.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-128
+deep_causality_unified_math/deep_causality_algebra/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-31
+deep_causality_unified_math/deep_causality_algebra/src/iso/test_support.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-187
+lean/DeepCausalityFormal/Core/VerdictClosure.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 64
+lean/DeepCausalityFormal/Haft/Adjunction.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,26
+lean/DeepCausalityFormal/Haft/Foldable.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,37
+lean/DeepCausalityFormal/Haft/Morphism.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,19
+examples/material_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 14-16
+examples/material_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 9,20-21
+openspec/notes/unified_math/deep_causality_unified_math.md
+  s_bd8f90dda752d1::t_c74bcb836e2ee1 20-23,286-326
+lean/DeepCausalityFormal/Haft/Functor.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,9,21
+lean/DeepCausalityFormal/Haft/MonoidalMerge.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,25
+lean/DeepCausalityFormal/Linear/RankNullity.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7-10,28
+lean/DeepCausalityFormal/Num/Integer.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 12
+lean/DeepCausalityFormal/Topology/RiemannCurvature.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,32
+lean/DeepCausalityFormal/Algebra/Field.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 13
+deep_causality_core/LEAN_CORE.md
+  s_bd8f90dda752d1::t_d78e79f261a859 11
+lean/DeepCausalityFormal/Num/Float106.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 17
+deep_causality_cfd/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 70,84,89,94,99,104,109,116,121,130
+openspec/specs/fluiddynamics-dsl/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 81
+deep_causality_unified_math/deep_causality_haft/src/monoidal/mod.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-71
+deep_causality/Cargo.toml
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 53
+  s_bd8f90dda752d1::t_2f8ed2915bffab 45,49,67
+deep_causality_algorithms/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 16-20,51-53,64-66,80-82,96-97,111-112,126-127,141-142
+deep_causality_discovery/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 15-17,19-20,51
+lean/DeepCausalityFormal/Algebra/MonoidGeneric.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 12
+lean/DeepCausalityFormal/Algebra/Group.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 13
+deep_causality_file/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 15-17
+openspec/specs/complex-dual-formalization-docs/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 25
+lean/DeepCausalityFormal/Algebra/Module.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 14
+deep_causality_unified_math/deep_causality_homology/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-49
+deep_causality_unified_math/deep_causality_uncertain/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-139,141-194,196-213,215-220
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 140,195,214
+lean/THEOREM_MAP.md
+  s_bd8f90dda752d1::t_d78e79f261a859 29-54,103-149,154,218,220,225-230
+deep_causality_unified_math/deep_causality_fft/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-37
+examples/causal_correction_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 21,33,45,57,70
+deep_causality_physics/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 55-56,84,106-107,129-135,156-157,178-180,242,264-268,289-290,312-314,356-357,378-379,400-401,449,451-453,455-459,487,489-491,493-496,517,519-521,523-526,547,549-551,553-556,577,579-581,583-586
+examples/core_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 14
+deep_causality_unified_math/deep_causality_topology/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-41
+deep_causality_unified_math/deep_causality_tensor/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-36
+deep_causality_file/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 31,48-49,69,87,104-105,124
+lean/DeepCausalityFormal/Haft/Io.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,23
+deep_causality_unified_math/deep_causality_haft/src/natural_transformation/mod.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-58
+lean/DeepCausalityFormal/Haft/Traversable.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,30
+examples/quantum_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 9,11-12,22,24,34,36,47-48,50,60-61,71-73,85,87
+openspec/notes/deep_brain/deepbrain.md
+  s_bd8f90dda752d1::t_d78e79f261a859 165
+deep_causality_unified_math/deep_causality_num_dual/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-47
+openspec/specs/core-formalization/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 187
+lean/DeepCausalityFormal/Dual/Dual.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 16
+deep_causality_physics/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 23-24,26-32,35-39
+examples/quantum_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 15-19,22
+deep_causality_unified_math/deep_causality_multivector/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-36
+lean/DeepCausalityFormal/Haft/Profunctor.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,24
+deep_causality_unified_math/deep_causality_haft/tests/algebra/pure_tests.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-80
+deep_causality_algorithms/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 30,34,38,42,46
+openspec/specs/linear-matrix-representations/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 47
+examples/causal_counterfactual_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 32,55,66
+examples/medicine_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 10-11,21,23,33-36,47,58-59,69,71
+examples/medicine_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 16,18-20
+README_NO_STD.md
+  s_bd8f90dda752d1::t_d78e79f261a859 62,72,118
+deep_causality_unified_math/deep_causality_num_rational/LEAN_NUM_RATIONAL.md
+  s_bd8f90dda752d1::t_d78e79f261a859 1-99
+deep_causality_core/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 18-19
+deep_causality_unified_math/deep_causality_haft/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-143
+lean/DeepCausalityFormal/Complex/Complex.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 8,13
+deep_causality_unified_math/deep_causality_haft/src/monad/cofree_comonad.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-316
+examples/chronometric_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 9,11,24,26
+lean/DeepCausalityFormal/Quantum/Choi.lean
+  s_bd8f90dda752d1::t_ede8660be2e484 13-15,71-72
+lean/DeepCausalityFormal/Quantum/PartialTrace.lean
+  s_bd8f90dda752d1::t_ede8660be2e484 17-19
+deep_causality_unified_math/deep_causality_num_dual/LEAN_NUM_DUAL.md
+  s_bd8f90dda752d1::t_d78e79f261a859 1-81
+lean/DeepCausalityFormal/Haft/Interpreter.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7-8,41
+deep_causality_unified_math/deep_causality_topology/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 1-111
+deep_causality_unified_math/deep_causality_num/LEAN_NUM.md
+  s_bd8f90dda752d1::t_d78e79f261a859 1-85
+openspec/changes/deferred/hkt_gat.md
+  s_bd8f90dda752d1::t_d78e79f261a859 125,150,184,204,226,257,290,507,592,655,712,766
+deep_causality_unified_math/deep_causality_num_rational/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-32
+lean/DeepCausalityFormal/Algebra/CommutativeMonoid.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 15
+deep_causality_unified_math/deep_causality_multivector/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-119
+deep_causality_unified_math/deep_causality_num_dual/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-32
+lean/DeepCausalityFormal/Algebra/EuclideanDomain.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 22
+deep_causality_unified_math/deep_causality_topology/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-507
+deep_causality_quantum/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 22,24-29,31
+deep_causality_quantum/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 24,45-46,68-71,98-99,123,144-146,169-170
+deep_causality_unified_math/deep_causality_calculus/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-59
+examples/avionics_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 9,11,13,23-24,26,36,38-39,49,51,61,63,87,102-103,114,128,139,165
+lean/DeepCausalityFormal/Haft/Category.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,25
+deep_causality_unified_math/deep_causality_fft/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 1-86
+lean/DeepCausalityFormal/Haft/Pure.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,20
+examples/physics_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 31,33-34,46-47,49-50,60-62,73,85,98,100,110-111,123,125,135,137,139,150,152,164-165,168-171
+openspec/notes/unified_math/unified_math_gaps.md
+  s_bd8f90dda752d1::t_d78e79f261a859 89,105
+lean/DeepCausalityFormal/Haft/Signatures.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7-8,28
+openspec/changes/archive-notes.md
+  s_bd8f90dda752d1::t_342c14b53d3708 40,129-131,133-145
+  s_bd8f90dda752d1::t_d78e79f261a859 76-80,98
+  s_bd8f90dda752d1::t_bb62f14cbffa06 57-60,93-95,127,146-149
+lean/DeepCausalityFormal/Haft/Comonad.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,25
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 1-40,42-66
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 41
+deep_causality_unified_math/deep_causality_algebra/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-63
+deep_causality_unified_math/deep_causality_num_complex/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-32
+deep_causality_unified_math/deep_causality_uncertain/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-15,17-34
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 16
+examples/causal_uncertain_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 14-15
+openspec/specs/linear-f2-algebra/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 71
+lean/DeepCausalityFormal/Haft/ArrowChoice.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,40
+lean/DeepCausalityFormal/Haft/FreeMonad.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,28
+lean/DeepCausalityFormal/Haft/Arrow.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,27
+README.md
+  s_bd8f90dda752d1::t_d78e79f261a859 252,265-268,274-276,284,375,378
+  s_bd8f90dda752d1::t_46fc4e71a25da4 285
+deep_causality_core/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 40,59,98,135,154,173,192,211,230,249
+openspec/specs/linear-consumer-migration/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 69
+deep_causality_unified_math/deep_causality_ast/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_8c2aabcb61e0d4 1-16
+openspec/notes/quantum/qcl-dsl-liftback.md
+  s_bd8f90dda752d1::t_d78e79f261a859 542-545
+examples/causal_discovery_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 23,34,45,57,80
+deep_causality_unified_math/deep_causality_haft/src/arrow/choice.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-146
+lean/DeepCausalityFormal/Complex/Quaternion.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 8,14
+examples/mathematics_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 14-25
+lean/DeepCausalityFormal/Haft/NaturalIso.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,22
+examples/physics_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 17,22-30
+deep_causality_unified_math/deep_causality_linear/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-121
+examples/causal_correction_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 15
+lean/DeepCausalityFormal/Algebra/Ring.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 13
+examples/causal_discovery_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 16,18-19
+deep_causality_unified_math/deep_causality_num_rational/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-32
+deep_causality_unified_math/deep_causality_rand/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-113
+deep_causality_unified_math/deep_causality_tensor/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 1-60
+deep_causality_physics/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 51,59,63,67,71,75,79,83,87,92,97,101
+lean/DeepCausalityFormal/Algebra/Scalar.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 13
+examples/chronometric_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 15-16
+openspec/specs/haft-formalization-docs/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 21,25
+lean/DeepCausalityFormal/Haft/Endomorphism.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,9,23
+examples/mathematics_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 13,23-25,35,45,55-56,67-68,78-80,90-91,101-102,112,122,132-136,146-149,159-164,175-179,190-193,204-209,220-227,237-238,248-250,260,270-271,281-282,292,302-303,313,323-324,334-335,345-346,356-357,367-368,378-381,391-393,403-405,415-417,427-429
+deep_causality_algorithms/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 15,31,48-50,67-70
+deep_causality_core/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 33
+deep_causality_unified_math/deep_causality_haft/src/arrow/interpreter.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-155
+deep_causality_unified_math/deep_causality_haft/src/iso/test_support.rs
+  s_bd8f90dda752d1::t_46fc4e71a25da4 1-88
+examples/avionics_examples/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 63,65-69,72
+ultragraph/Cargo.toml
+  s_bd8f90dda752d1::t_2f8ed2915bffab 39
+openspec/specs/num-generic-monoid/spec.md
+  s_bd8f90dda752d1::t_d78e79f261a859 22
+lean/DeepCausalityFormal/Haft/Bifunctor.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 7,23
+lean/DeepCausalityFormal/Haft/Cofree.lean
+  s_bd8f90dda752d1::t_f22339a3ede68d 8,42
+examples/classical_causality_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_122252444ff740 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "0864eeee555bd601eb8b5bfb7875f8773e523e04",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
