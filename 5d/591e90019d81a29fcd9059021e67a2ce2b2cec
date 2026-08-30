@@ -1,0 +1,341 @@
+openspec/notes/quantum/qcl-gaps.md
+  s_8d1a45b74b2107::t_2dc7babb6586ba 28-52
+deep_causality_topology/src/types/manifold/differential/utils_differential.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 6
+  s_8d1a45b74b2107::t_909051beba815a 26
+deep_causality_topology/src/types/lattice_complex/mod.rs
+  s_8d1a45b74b2107::t_091090b611a0b4 14
+  s_8d1a45b74b2107::t_a8c5efef456577 444,456-461
+  s_8d1a45b74b2107::t_e2f0e48b086f95 497-510
+deep_causality_topology/src/types/cubical_regge_geometry/has_hodge_star.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 65
+deep_causality_linear/tests/types/packed_gf2_vector/packed_gf2_vector_tests.rs
+  s_8d1a45b74b2107::t_0fc882301eac4e 252-263,283-319,321-326,332-377,383-410,416-419,425-442,448-457,462-487,492-495,506-534,540-542
+  s_8d1a45b74b2107::t_bc5301deee89b5 14-15,327-331,378-382,411-415,420-424,443-447,458-461,488-491,496-505,535-539
+  s_8d1a45b74b2107::t_877e4dedcc036a 320
+  s_8d1a45b74b2107::t_310a20d2ffc249 264-282
+deep_causality_linear/src/types/packed_gf2_vector/mod.rs
+  s_8d1a45b74b2107::t_780a2d68ca394a 20-23,110-113
+  s_8d1a45b74b2107::t_ad3aca097f38be 147-164
+  s_8d1a45b74b2107::t_3955d094966fee 132-146,165-166
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_actions.rs
+  s_8d1a45b74b2107::t_2f7ec10650d307 11
+  s_8d1a45b74b2107::t_a01a37dedf4250 12
+deep_causality_topology/tests/types/gauge/gauge_field_lattice/lattice_gauge_field_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 13
+  s_8d1a45b74b2107::t_0401b7257ef23a 14
+  s_8d1a45b74b2107::t_389e7bb6fee592 12
+deep_causality_homology/tests/BUILD.bazel
+  s_8d1a45b74b2107::t_93cff7a3d2ced9 1-33
+  s_8d1a45b74b2107::t_743da2f651a3e8 34-49
+deep_causality_topology/src/traits/neighborhood.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 19
+  s_8d1a45b74b2107::t_909051beba815a 33
+AGENTS.md
+  s_8d1a45b74b2107::t_730b6b7ba3bf0b 278
+  s_8d1a45b74b2107::t_6bb63d15dd25a6 181,221-222,230,299-300,333
+deep_causality_topology/src/types/neighborhood/coface_adjacent.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 13
+  s_8d1a45b74b2107::t_909051beba815a 37
+deep_causality_topology/src/types/gf2_chain/mod.rs
+  s_8d1a45b74b2107::t_81c4c2c147fd29 6-15
+deep_causality_homology/tests/types/gf2_chain/gf2_chain_tests.rs
+  s_8d1a45b74b2107::t_1a6a4827b14f6a 78,100-102,140-171
+  s_8d1a45b74b2107::t_4dcf07adf02e88 238-246,255-260,265-271,276
+  s_8d1a45b74b2107::t_1e1f63eb425d86 172-237
+  s_8d1a45b74b2107::t_44ee9984ed3726 247-254,261-264,272-275
+  s_8d1a45b74b2107::t_0565c6692b6b23 12
+deep_causality_topology/tests/types/cell_complex/cell_complex_test.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 7
+  s_8d1a45b74b2107::t_dc71f7a933079c 123-126,128-137
+.gitignore
+  s_8d1a45b74b2107::t_3e6ac7e0e7355f 93-96
+deep_causality_topology/tests/types/cut_cell/cut_star_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 15
+lean/THEOREM_MAP.md
+  s_8d1a45b74b2107::t_504b7632188f23 229-230
+deep_causality_linear/src/lib.rs
+  s_8d1a45b74b2107::t_08247bf840228c 103-104
+deep_causality_topology/src/extensions/hkt_manifold/mod.rs
+  s_8d1a45b74b2107::t_fb888ae3896a27 253,264
+  s_8d1a45b74b2107::t_a9dd47bd58287f 19
+  s_8d1a45b74b2107::t_0ac5237803a822 54,122,157,197
+deep_causality_topology/src/types/manifold/api/neighbors.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 13
+  s_8d1a45b74b2107::t_909051beba815a 16
+deep_causality_topology/src/types/neighborhood/face_adjacent.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 11
+  s_8d1a45b74b2107::t_909051beba815a 34
+deep_causality_topology/tests/types/manifold/leray_weighted_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 19-21
+deep_causality_topology/src/types/cup_product/mod.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 58
+  s_8d1a45b74b2107::t_2f7ec10650d307 63,103,182
+deep_causality_topology/src/utils_tests/cup_product_utils.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 15
+MODULE.bazel
+  s_bd8f90dda752d1::t_0c5dd062f681ae 164
+deep_causality_homology/Cargo.toml
+  s_8d1a45b74b2107::t_730b6b7ba3bf0b 31,33
+  s_8d1a45b74b2107::t_6f7b0a0f1f97a7 1-30,32,34-46
+deep_causality_topology/src/types/topological_invariants/from_hodge_decomposition.rs
+  s_8d1a45b74b2107::t_909051beba815a 37
+  s_8d1a45b74b2107::t_72d59f5d701718 7
+deep_causality_topology/src/types/simplicial_complex/topology/chain_complex_impl.rs
+  s_8d1a45b74b2107::t_091090b611a0b4 14
+  s_8d1a45b74b2107::t_abbae0b6659572 36,52,54
+  s_8d1a45b74b2107::t_0f550760f3f930 69-73,75-78,82-85
+deep_causality_topology/tests/types/lattice_complex/honeycomb_lattice_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 6
+  s_8d1a45b74b2107::t_c99c9c0ff3c314 153,174
+deep_causality_topology/tests/types/simplicial_complex/chain_complex_impl_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 14-15
+  s_8d1a45b74b2107::t_dc71f7a933079c 83-85,87-88
+  s_8d1a45b74b2107::t_389e7bb6fee592 13
+deep_causality_topology/src/types/manifold/differential/exterior.rs
+  s_8d1a45b74b2107::t_909051beba815a 15
+  s_8d1a45b74b2107::t_72d59f5d701718 5
+deep_causality_topology/tests/types/lattice_complex/degenerate_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 10
+deep_causality_homology/tests/formalization_lean/chain_condition_tests.rs
+  s_8d1a45b74b2107::t_e37a97737283fa 54,86
+  s_8d1a45b74b2107::t_298e56c6f6f8fa 1-53,55-85,87-158,160-171
+  s_8d1a45b74b2107::t_273853c2c4a10f 159
+deep_causality_topology/src/types/manifold/differential/laplacian.rs
+  s_8d1a45b74b2107::t_909051beba815a 17
+  s_8d1a45b74b2107::t_72d59f5d701718 6
+deep_causality_topology/tests/types/cell_complex/cell_complex_boundary_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 6
+  s_8d1a45b74b2107::t_c99c9c0ff3c314 103
+deep_causality_homology/tests/types/gf2_chain/mod.rs
+  s_8d1a45b74b2107::t_b2951247441135 1-6
+openspec/changes/extract-homology-crate/design.md
+  s_8d1a45b74b2107::t_90d6d428d041ef 250
+  s_8d1a45b74b2107::t_b833d85019c0a4 58-64
+deep_causality_topology/src/lib.rs
+  s_8d1a45b74b2107::t_abbae0b6659572 42
+deep_causality_homology/src/errors/homology_error/mod.rs
+  s_8d1a45b74b2107::t_4adc8115ddad75 1-66
+openspec/changes/extract-homology-crate/proposal.md
+  s_8d1a45b74b2107::t_846b6ca944d820 30-34,51-52
+  s_8d1a45b74b2107::t_90d6d428d041ef 21
+  s_8d1a45b74b2107::t_b061999254ca22 75-76
+  s_8d1a45b74b2107::t_5429dc4e273124 77-79
+  s_8d1a45b74b2107::t_5d5d447beed5aa 80-87
+deep_causality_topology/tests/types/cut_cell/registry_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 11
+deep_causality_topology/tests/types/cut_cell/consistency_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 17
+  s_8d1a45b74b2107::t_0401b7257ef23a 18
+deep_causality_topology/tests/traits/chain_complex_conformance_tests.rs
+  s_8d1a45b74b2107::t_7640a624f5f40f 33-62
+  s_8d1a45b74b2107::t_1e32327fb8698e 249,273,282,288,291
+deep_causality_homology/tests/mod.rs
+  s_8d1a45b74b2107::t_298e56c6f6f8fa 6
+  s_8d1a45b74b2107::t_b2951247441135 1-5,7-8
+deep_causality_topology/BUILD.bazel
+  s_8d1a45b74b2107::t_454a9168b9a809 17
+.cargo/mutants.toml
+  s_8d1a45b74b2107::t_05f1276a42cd9c 62-72
+deep_causality_homology/tests/types/mod.rs
+  s_8d1a45b74b2107::t_b2951247441135 1-7
+deep_causality_topology/src/traits/mod.rs
+  s_8d1a45b74b2107::t_627cb58a29d2a7 47
+deep_causality_topology/src/traits/cellular_complex.rs
+  s_8d1a45b74b2107::t_9a2e70927782ff 1-61
+deep_causality_linear/src/extensions/conversions.rs
+  s_8d1a45b74b2107::t_a8893fd0e05f28 103-125
+  s_8d1a45b74b2107::t_9db08823141729 28
+deep_causality_topology/tests/types/cut_cell/coverage_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 14
+deep_causality_topology/src/traits/chain_complex.rs
+  s_8d1a45b74b2107::t_627cb58a29d2a7 6-22
+openspec/changes/extract-homology-crate/tasks.md
+  s_8d1a45b74b2107::t_638e736c0007b3 55,57,60,62,65,67,69,71
+  s_8d1a45b74b2107::t_90d6d428d041ef 114
+  s_8d1a45b74b2107::t_6db61aa7e294df 75,78-79,81,83,85-86
+  s_8d1a45b74b2107::t_686c092158e4f3 201,204,206-208
+  s_8d1a45b74b2107::t_b061999254ca22 115,117-118
+  s_8d1a45b74b2107::t_adc0ecf7d64e3e 177,180,183,185,188,192-193,196
+  s_8d1a45b74b2107::t_b3fe58af4d1e03 144,146,149,151,154,159,162,164-166
+  s_8d1a45b74b2107::t_dcd574a4d36dfb 200
+  s_8d1a45b74b2107::t_518e4ae532ab36 35,38,40,43,45
+  s_8d1a45b74b2107::t_5a5b820ec664fc 91,95,97,99,101,104-105
+  s_8d1a45b74b2107::t_3b4a97834ffb5c 109-110,112-113,116,119-123,131,133,135,137,139
+openspec/notes/homology/reference/reference.py
+  s_8d1a45b74b2107::t_e254fcdd734dbc 384-389
+  s_8d1a45b74b2107::t_3f7c998a175d2e 1-383,390-399,401-405,407-411,413-417,419-423,425-430,432-434,457-461,464-466,470,478,481-485,491-500
+  s_8d1a45b74b2107::t_dc3efe786e4af5 400,406,412,418,424,431,435-456,462-463,467-469,471-477,479-480,486-490
+deep_causality_linear/Cargo.toml
+  s_8d1a45b74b2107::t_bc5301deee89b5 3
+deep_causality_topology/src/types/manifold/differential/hodge_decomposition_impl.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 45
+  s_8d1a45b74b2107::t_909051beba815a 116,241
+deep_causality_homology/tests/types/homology_field/mod.rs
+  s_8d1a45b74b2107::t_b2951247441135 1-6
+deep_causality_topology/tests/types/cubical_regge_geometry/coverage_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 15-16
+deep_causality_topology/tests/types/cubical_regge_geometry/curvature_tests.rs
+  s_8d1a45b74b2107::t_389e7bb6fee592 13
+  s_8d1a45b74b2107::t_0401b7257ef23a 14-15
+deep_causality_topology/src/types/manifold/getters/mod.rs
+  s_8d1a45b74b2107::t_909051beba815a 13
+  s_8d1a45b74b2107::t_72d59f5d701718 10
+deep_causality_topology/src/types/cubical_regge_geometry/gradient.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 58
+deep_causality_homology/tests/traits/mod.rs
+  s_8d1a45b74b2107::t_b2951247441135 1-6
+deep_causality_topology/tests/types/cut_cell/cut_face_constraint_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 18
+lean/BUILD.bazel
+  s_bd8f90dda752d1::t_0c5dd062f681ae 44
+lean/DeepCausalityFormal/Homology/ChainCondition.lean
+  s_8d1a45b74b2107::t_24a9799e7bf7ce 65-80,128
+  s_8d1a45b74b2107::t_dd68f76e58cd04 1-64,81-127,129-131
+deep_causality_homology/src/traits/mod.rs
+  s_8d1a45b74b2107::t_71c22e5373ec11 1-6
+deep_causality_topology/tests/types/cubical_regge_geometry/has_hodge_star_tests.rs
+  s_8d1a45b74b2107::t_389e7bb6fee592 33
+  s_8d1a45b74b2107::t_0401b7257ef23a 34-35
+deep_causality_homology/src/types/mod.rs
+  s_8d1a45b74b2107::t_71c22e5373ec11 1-7
+deep_causality_homology/BUILD.bazel
+  s_8d1a45b74b2107::t_5a5b820ec664fc 8-10
+  s_8d1a45b74b2107::t_6f7b0a0f1f97a7 1-7,11-35
+deep_causality_topology/tests/types/cubical_regge_geometry/lorentzian_hodge_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 17
+.github/workflows/formalization.yml
+  s_8d1a45b74b2107::t_38e9c2ffb3d1d1 87
+openspec/changes/extract-homology-crate/specs/homology-gf2-chain/spec.md
+  s_8d1a45b74b2107::t_846b6ca944d820 3-6,8-15,18,21-24,26-29
+deep_causality_topology/src/types/gauge/gauge_field_lattice/mod.rs
+  s_8d1a45b74b2107::t_2f7ec10650d307 37
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gauge_transform.rs
+  s_8d1a45b74b2107::t_2f7ec10650d307 10
+deep_causality_cfd/src/solvers/dec/spectral_diffusion.rs
+  s_8d1a45b74b2107::t_5d4fe07190a868 34
+deep_causality_topology/tests/types/cup_product/cup_product_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 30-31
+  s_8d1a45b74b2107::t_c99c9c0ff3c314 38,52,430
+deep_causality_homology/src/types/gf2_chain/mod.rs
+  s_8d1a45b74b2107::t_d62d9678e78a70 1-8,11-40,42-70,72-91,93-107,109-172,174-216,218-231
+  s_8d1a45b74b2107::t_82cc386ba9776b 9-10,41,71,92,108,173,217
+.github/workflows/rust_deps.yml
+  s_8d1a45b74b2107::t_38e9c2ffb3d1d1 30
+deep_causality_topology/Cargo.toml
+  s_8d1a45b74b2107::t_454a9168b9a809 81-85
+  s_8d1a45b74b2107::t_0a7c88a5644453 3
+Cargo.toml
+  s_8d1a45b74b2107::t_bf09fc43c1297b 20
+deep_causality_topology/src/types/manifold/differential/hodge.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 5
+  s_8d1a45b74b2107::t_909051beba815a 17
+deep_causality_homology/src/types/homology_field/mod.rs
+  s_8d1a45b74b2107::t_71c22e5373ec11 1-74
+deep_causality_homology/tests/formalization_lean/mod.rs
+  s_8d1a45b74b2107::t_298e56c6f6f8fa 1-6
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_plague.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 12
+  s_8d1a45b74b2107::t_2f7ec10650d307 11
+deep_causality_homology/src/errors/mod.rs
+  s_8d1a45b74b2107::t_4adc8115ddad75 1-6
+deep_causality_topology/src/types/manifold/differential/codifferential.rs
+  s_8d1a45b74b2107::t_909051beba815a 16
+  s_8d1a45b74b2107::t_72d59f5d701718 5
+deep_causality_topology/src/types/cell_complex/mod.rs
+  s_8d1a45b74b2107::t_56abe353b4dae2 9
+  s_8d1a45b74b2107::t_e2f0e48b086f95 95-106
+  s_8d1a45b74b2107::t_8ea2689530f5c6 136,147,149
+deep_causality_homology/LEAN_HOMOLOGY.md
+  s_8d1a45b74b2107::t_1aa6b557bb3f8a 1-107
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_wilson.rs
+  s_8d1a45b74b2107::t_a01a37dedf4250 11
+  s_8d1a45b74b2107::t_2f7ec10650d307 10
+deep_causality_homology/src/lib.rs
+  s_8d1a45b74b2107::t_d3d4bb759de11f 35-64
+  s_8d1a45b74b2107::t_bf09fc43c1297b 1-34,65-66,70
+  s_8d1a45b74b2107::t_d62d9678e78a70 72-81
+  s_8d1a45b74b2107::t_5c9fb3c1d23928 67-69,71
+deep_causality_topology/tests/BUILD.bazel
+  s_8d1a45b74b2107::t_903bd03b83f082 39,60,79,171,190,209,232,286,307,342,378,414,436,456,478,502
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gradient_flow.rs
+  s_8d1a45b74b2107::t_a01a37dedf4250 12
+  s_8d1a45b74b2107::t_2f7ec10650d307 11
+deep_causality_homology/deep_causality_homology_sbom.spdx.json.sha
+  s_8d1a45b74b2107::t_4fc38a980f0938 1
+deep_causality_topology/src/types/homology_field/mod.rs
+  s_8d1a45b74b2107::t_81c4c2c147fd29 6,8-11,13,15
+deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_continuum.rs
+  s_8d1a45b74b2107::t_2f7ec10650d307 10
+  s_8d1a45b74b2107::t_a01a37dedf4250 11
+deep_causality_topology/tests/types/gauge/gauge_field_lattice/metropolis_coverage_tests.rs
+  s_8d1a45b74b2107::t_d016f37ae1c87b 17
+  s_8d1a45b74b2107::t_0401b7257ef23a 18
+  s_8d1a45b74b2107::t_389e7bb6fee592 16
+deep_causality_homology/src/traits/chain_complex.rs
+  s_8d1a45b74b2107::t_56f1e330e2ac47 1-5,7-87,89-109,116-119
+  s_8d1a45b74b2107::t_e8a4b0a94d34d1 6,110-115
+  s_8d1a45b74b2107::t_82cc386ba9776b 88
+deep_causality_topology/tests/types/lattice_complex/lattice_complex_test.rs
+  s_8d1a45b74b2107::t_56cee3254ffa28 183-188,196-207,209-212
+  s_8d1a45b74b2107::t_52be36ea84b588 6
+  s_8d1a45b74b2107::t_b5556985f326e0 7,208
+deep_causality_homology/tests/types/homology_field/homology_field_tests.rs
+  s_8d1a45b74b2107::t_14aa26c7e775cd 12
+  s_8d1a45b74b2107::t_12a315a01a63a9 1-11,13-66,68-84,86-111
+  s_8d1a45b74b2107::t_bf45168a3e359b 67,85
+deep_causality_homology/deep_causality_homology_sbom.spdx.json
+  s_8d1a45b74b2107::t_4fc38a980f0938 1-144
+deep_causality_topology/tests/types/lattice_complex/hinge_neighbors_tests.rs
+  s_8d1a45b74b2107::t_0401b7257ef23a 8
+deep_causality_homology/tests/traits/chain_complex_tests.rs
+  s_8d1a45b74b2107::t_12a315a01a63a9 32,150,173,178,193,206,258-263
+  s_8d1a45b74b2107::t_6329031e16695f 1-31,33-149,151-166,168-172,174-177,179-192,194-205,207-257,264-295
+  s_8d1a45b74b2107::t_45530fe0fc855d 167
+deep_causality_cfd/tests/solvers/dec/cut_cell_wiring_tests.rs
+  s_bd8f90dda752d1::t_4fa477c68f0565 22-23
+openspec/changes/extract-homology-crate/specs/topology-cell-complex-seam/spec.md
+  s_8d1a45b74b2107::t_90d6d428d041ef 4,13
+deep_causality_topology/src/types/manifold/mod.rs
+  s_8d1a45b74b2107::t_909051beba815a 48
+  s_8d1a45b74b2107::t_72d59f5d701718 26
+deep_causality_topology/src/types/manifold/differential/leray.rs
+  s_8d1a45b74b2107::t_72d59f5d701718 28
+  s_8d1a45b74b2107::t_909051beba815a 43
+deep_causality_homology/src/utils_tests/mod.rs
+  s_8d1a45b74b2107::t_c31a203522a005 31
+  s_8d1a45b74b2107::t_bd681b95515fe1 1-30,33-160,162-262
+  s_8d1a45b74b2107::t_978f7d5edf1712 32,161
+deep_causality_linear/tests/extensions/conversions_tests.rs
+  s_8d1a45b74b2107::t_65d906a01721ad 8,99-112,119-127,129-134,136-145,147-148,150-155
+  s_8d1a45b74b2107::t_bc5301deee89b5 9,113-118
+  s_8d1a45b74b2107::t_4ea56537957f3c 128,135,146,149
+Cargo.lock
+  s_8d1a45b74b2107::t_d6e65a50ca2b28 660-667,670,801,806
+MODULE.bazel.lock
+  s_bd8f90dda752d1::t_e770af46c181bc 293,365
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "5d591e90019d81a29fcd9059021e67a2ce2b2cec",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
