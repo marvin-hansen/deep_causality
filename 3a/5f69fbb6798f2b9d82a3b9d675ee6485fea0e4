@@ -1,0 +1,170 @@
+deep_causality_unified_math/deep_causality_topology/src/types/chain/algebra/module.rs
+  s_bd8f90dda752d1::t_34c36ac305083c 9,19
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_manifold/mod.rs
+  s_bd8f90dda752d1::t_6895620fdc3a63 52,270
+  s_bd8f90dda752d1::t_5ab2553da11e14 38,262
+  s_bd8f90dda752d1::t_986238b5205baa 32-37,256-261
+deep_causality_unified_math/deep_causality_topology/src/types/chain/mod.rs
+  s_bd8f90dda752d1::t_34c36ac305083c 15-30,32-33,37,40-44,53-54,62
+deep_causality_unified_math/deep_causality_topology/tests/types/cup_product/implementation_agreement_tests.rs
+  s_bd8f90dda752d1::t_6f23a95998a94c 9,11
+deep_causality_unified_math/deep_causality_topology/src/types/chain/algebra/group.rs
+  s_bd8f90dda752d1::t_34c36ac305083c 11,13,23,73,83,85,92
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_lattice_complex/mod.rs
+  s_bd8f90dda752d1::t_6895620fdc3a63 33
+  s_bd8f90dda752d1::t_b4294331ccdc66 8,11-28,36-40,43-95
+deep_causality_unified_math/deep_causality_topology/tests/extensions/hkt_field_witness_tests.rs
+  s_bd8f90dda752d1::t_1322518290fe15 19
+  s_bd8f90dda752d1::t_d31876de5dbd3c 1-18,20-213
+deep_causality_unified_math/deep_causality_topology/tests/extensions/hkt_topology_tests.rs
+  s_bd8f90dda752d1::t_6f23a95998a94c 54,66-67
+  s_bd8f90dda752d1::t_925815c88b88b0 18,29,40-41,55,57,69,71
+  s_bd8f90dda752d1::t_16a6699ccaa531 70
+  s_bd8f90dda752d1::t_330b4dc0e17ddb 72
+deep_causality_unified_math/deep_causality_topology/src/types/topology/api/constructors.rs
+  s_bd8f90dda752d1::t_550cc12d744e75 12
+  s_bd8f90dda752d1::t_19caa6bd15f094 25,27
+deep_causality_unified_math/deep_causality_topology/src/types/topology/ops/cup_product.rs
+  s_bd8f90dda752d1::t_550cc12d744e75 14,16,35
+  s_bd8f90dda752d1::t_11b9c5a95764c9 60
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_simplicial_complex/mod.rs
+  s_bd8f90dda752d1::t_5ab2553da11e14 20
+  s_bd8f90dda752d1::t_8159f0ab2503b4 89-91,93,96
+  s_bd8f90dda752d1::t_eb7c13e677f90d 77-79
+  s_bd8f90dda752d1::t_986238b5205baa 14-15,17-19,21,23
+  s_bd8f90dda752d1::t_1efce61d1e65c0 28-30,39-46,49,53,61-62
+  s_bd8f90dda752d1::t_adddc3b74299be 16,80,82,99,108,112,134,138,141
+  s_bd8f90dda752d1::t_1078cbcdfc97f6 22,24-27
+  s_bd8f90dda752d1::t_6895620fdc3a63 32
+  s_bd8f90dda752d1::t_87a055fabba771 11
+deep_causality_unified_math/deep_causality_topology/src/types/topology/constructors/constructors_impl.rs
+  s_bd8f90dda752d1::t_19caa6bd15f094 15,17
+  s_bd8f90dda752d1::t_550cc12d744e75 12
+deep_causality_unified_math/deep_causality_topology/src/types/topology/mod.rs
+  s_bd8f90dda752d1::t_550cc12d744e75 27-34,36,40,44-46
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_topology/mod.rs
+  s_bd8f90dda752d1::t_9d714c7dc7c06a 9,13,25,27,32-39,48,57,68,70,87-88
+  s_bd8f90dda752d1::t_1078cbcdfc97f6 19,21-24
+  s_bd8f90dda752d1::t_5ab2553da11e14 17
+  s_bd8f90dda752d1::t_6895620fdc3a63 29
+  s_bd8f90dda752d1::t_986238b5205baa 11-12,14-16,18,20
+  s_bd8f90dda752d1::t_e7ea097f0c0d37 56
+deep_causality_unified_math/deep_causality_topology/src/lib.rs
+  s_bd8f90dda752d1::t_b4294331ccdc66 25,28
+  s_bd8f90dda752d1::t_a01f1ac6d7c067 62,106
+openspec/notes/unified_math/HKT-LAW-FINDINGS.md
+  s_bd8f90dda752d1::t_e9d8e104a14c81 91-101,103-126,128-149,172-197,199-216
+  s_bd8f90dda752d1::t_5620d26cdde82b 127,150-171
+  s_bd8f90dda752d1::t_ed752cae611a90 198,217-236
+  s_bd8f90dda752d1::t_23463ad30dd18f 102,237
+deep_causality_unified_math/deep_causality_topology/src/types/topology/clone/mod.rs
+  s_bd8f90dda752d1::t_11b9c5a95764c9 10
+deep_causality_unified_math/deep_causality_topology/src/types/topology/getters/mod.rs
+  s_bd8f90dda752d1::t_550cc12d744e75 12
+  s_bd8f90dda752d1::t_19caa6bd15f094 13,21
+deep_causality_unified_math/deep_causality_topology/tests/extensions/adjunction_stokes_tests.rs
+  s_bd8f90dda752d1::t_6f23a95998a94c 214,309,311,315,335
+  s_bd8f90dda752d1::t_2995ca304f8670 265,305
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/hkt_lattice_gauge.rs
+  s_bd8f90dda752d1::t_aacf77a4e28f37 166-168
+  s_bd8f90dda752d1::t_8cbdaa27b26cbe 59,61-80,119-120,129
+  s_bd8f90dda752d1::t_5ab2553da11e14 81
+deep_causality_unified_math/deep_causality_topology/src/types/chain/display/mod.rs
+  s_bd8f90dda752d1::t_694628d3d711b8 9,11
+deep_causality_unified_math/deep_causality_topology/tests/extensions/mod.rs
+  s_bd8f90dda752d1::t_d31876de5dbd3c 12-13
+deep_causality_unified_math/deep_causality_topology/tests/extensions/hkt_adjunction_law_tests.rs
+  s_bd8f90dda752d1::t_6f23a95998a94c 6,15,28,44-46,49-51,69-73,75-76,79,102-103,109-111,113-114,117,136-137,139
+  s_bd8f90dda752d1::t_8005784e7af477 158-226
+  s_bd8f90dda752d1::t_ba047c12431da6 47-48
+  s_bd8f90dda752d1::t_a4d5ddc4e199c7 52-53
+  s_bd8f90dda752d1::t_8615d2b5d92fc7 74
+  s_bd8f90dda752d1::t_fd696ca567001d 112
+  s_bd8f90dda752d1::t_aeeabdf2d74a43 138
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_cell_complex/mod.rs
+  s_bd8f90dda752d1::t_23e8f9e4069fb2 46,51-69
+  s_bd8f90dda752d1::t_6895620fdc3a63 39
+  s_bd8f90dda752d1::t_faa355c4854cdb 8,11-17,19-34,43-45,70-118
+  s_bd8f90dda752d1::t_5ab2553da11e14 18
+deep_causality_unified_math/deep_causality_multivector/src/extensions/hkt_multivector/mod.rs
+  s_bd8f90dda752d1::t_e9df5c400c124f 11,194-201
+  s_bd8f90dda752d1::t_7454ec080ff6b0 100,102-115
+deep_causality_unified_math/deep_causality_multivector/tests/extensions/hkt_multivector/hkt_law_tests.rs
+  s_bd8f90dda752d1::t_dc4eebe79f5c7e 1-172
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_graph/mod.rs
+  s_bd8f90dda752d1::t_6895620fdc3a63 24
+  s_bd8f90dda752d1::t_5ab2553da11e14 19
+  s_bd8f90dda752d1::t_db5c8839d1ada8 10-18
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_mixed_graph/mod.rs
+  s_bd8f90dda752d1::t_5ab2553da11e14 26
+  s_bd8f90dda752d1::t_6895620fdc3a63 31
+  s_bd8f90dda752d1::t_6593b52de5b84f 17-25
+examples/mathematics_examples/algebra/hkt_multivector.rs
+  s_bd8f90dda752d1::t_ced9d441d8d27a 6,18-23,53-54,62-71
+deep_causality_unified_math/deep_causality_topology/src/types/simplicial_complex/ops/ops_boundary.rs
+  s_bd8f90dda752d1::t_dcc2f27157f211 71,73,92
+  s_bd8f90dda752d1::t_3f094f08b5f005 11,14-18,20,34,41,55,86,106
+deep_causality_unified_math/deep_causality_topology/tests/extensions/hkt_simplicial_complex_tests.rs
+  s_bd8f90dda752d1::t_2995ca304f8670 189-191
+  s_bd8f90dda752d1::t_6f23a95998a94c 35,57-59,63,76,90-91,98,100,122,128,133,153,168,186,205,221,236,253,262
+  s_bd8f90dda752d1::t_925815c88b88b0 36-37,61,64,79-80,82,107,111,138,158,171,208,224,239,267
+deep_causality_unified_math/deep_causality_topology/tests/types/topology/topology_tests.rs
+  s_bd8f90dda752d1::t_6f23a95998a94c 12
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_point_cloud/mod.rs
+  s_bd8f90dda752d1::t_6895620fdc3a63 28
+  s_bd8f90dda752d1::t_5ab2553da11e14 20
+  s_bd8f90dda752d1::t_8f074eee14be73 11-19
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/hkt_curvature.rs
+  s_bd8f90dda752d1::t_5ab2553da11e14 19
+deep_causality_unified_math/deep_causality_topology/src/utils_tests/hkt_law_utils.rs
+  s_bd8f90dda752d1::t_268eb9644e29f6 161
+examples/mathematics_examples/topology/chain_algebra.rs
+  s_bd8f90dda752d1::t_1078cbcdfc97f6 127
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/hkt_adjunction_stokes.rs
+  s_bd8f90dda752d1::t_84d4497d84e211 303,310,324,335,339,354,372,377
+  s_bd8f90dda752d1::t_6895620fdc3a63 38,61
+  s_bd8f90dda752d1::t_ba1ccedde0cca6 57,59,66,68,71,73,121,128,141-142,146,152,155,177,205,295,297
+  s_bd8f90dda752d1::t_a1bb1669dfab2f 80,85,90,201
+  s_bd8f90dda752d1::t_5ab2553da11e14 33,49
+  s_bd8f90dda752d1::t_1078cbcdfc97f6 51,53-56
+  s_bd8f90dda752d1::t_268eb9644e29f6 206,329,367,369
+  s_bd8f90dda752d1::t_79943e7413c0d6 191-192,195
+  s_bd8f90dda752d1::t_986238b5205baa 27-32,43-48,50,52
+  s_bd8f90dda752d1::t_eb7c13e677f90d 349
+deep_causality_unified_math/deep_causality_topology/src/types/chain/arithmetic/mod.rs
+  s_bd8f90dda752d1::t_969e7c8a806779 31,57,83,111
+  s_bd8f90dda752d1::t_694628d3d711b8 14,16,25,27,29,40,42,51,53,55,66,68,77,79,81,92,94,104,106,109
+deep_causality_unified_math/deep_causality_topology/tests/types/chain/chain_algebra_tests.rs
+  s_bd8f90dda752d1::t_2995ca304f8670 64
+deep_causality_unified_math/deep_causality_topology/tests/types/simplicial_complex/ops_boundary_tests.rs
+  s_bd8f90dda752d1::t_b24c4e713954a3 48
+deep_causality_unified_math/deep_causality_multivector/tests/extensions/hkt_multivector/mod.rs
+  s_bd8f90dda752d1::t_dc4eebe79f5c7e 8
+  s_bd8f90dda752d1::t_9bc86b71e6e169 9
+deep_causality_unified_math/deep_causality_topology/src/types/topology/display/mod.rs
+  s_bd8f90dda752d1::t_550cc12d744e75 11,13
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_hypergraph/mod.rs
+  s_bd8f90dda752d1::t_5ab2553da11e14 19
+  s_bd8f90dda752d1::t_6895620fdc3a63 24
+  s_bd8f90dda752d1::t_ed876049c96c1d 10-18
+openspec/notes/archive/hkt_gat/chain-topology-parameter-split.md
+  s_bd8f90dda752d1::t_f8debc74a0e508 1-205
+openspec/notes/archive/hkt_gat/hkt_gat_topology.md
+  s_bd8f90dda752d1::t_c96088accf06cb 354-409
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "3a5f69fbb6798f2b9d82a3b9d675ee6485fea0e4",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
