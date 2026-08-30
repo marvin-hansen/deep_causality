@@ -1,0 +1,24 @@
+openspec/changes/extract-homology-crate/design.md
+  s_8d1a45b74b2107::t_11e93f0c88469f 233-238
+  s_8d1a45b74b2107::t_17b4535b58403b 192
+  s_8d1a45b74b2107::t_9d0d1c3ecdc3e9 94,96-141
+  s_8d1a45b74b2107::t_16512aab1b272f 167-191,193-206,253-263
+openspec/changes/extract-homology-crate/tasks.md
+  s_8d1a45b74b2107::t_d8f2a024a09f0f 1-204
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "e5cce1824e421b923f1302a1ae016484371ea44a",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
