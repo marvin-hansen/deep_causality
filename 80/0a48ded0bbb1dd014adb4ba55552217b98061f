@@ -1,0 +1,35 @@
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt_tensor_train.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 32
+deep_causality_unified_math/deep_causality_haft/tests/iso/natural_iso_4_tests.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 29,36
+deep_causality_unified_math/deep_causality_haft/tests/iso/natural_iso_2_tests.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 27,34
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 39
+deep_causality_unified_math/deep_causality_haft/tests/iso/natural_iso_5_tests.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 30,37
+deep_causality_unified_math/deep_causality_haft/src/hkt/mod.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 184,188-192,203-217,453,466,479,492,505
+deep_causality_unified_math/deep_causality_haft/src/morphism/morphism_base.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 50
+openspec/notes/hkt_gat/hkt_gat.md
+  s_bd8f90dda752d1::t_3db3890d2afad5 178-186
+deep_causality_unified_math/deep_causality_haft/tests/iso/natural_iso_3_tests.rs
+  s_bd8f90dda752d1::t_3db3890d2afad5 28,35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "800a48ded0bbb1dd014adb4ba55552217b98061f",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
