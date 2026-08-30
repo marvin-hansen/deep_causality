@@ -1,0 +1,108 @@
+openspec/changes/archive/2026-08-30-extract-homology-crate/tasks.md
+  s_8d1a45b74b2107::t_9f6f28e5326651 36
+openspec/specs/linear-consumer-migration/spec.md
+  s_8d1a45b74b2107::t_9f6f28e5326651 160
+openspec/changes/archive/2026-08-30-add-linear-algebra-crate/design.md
+  s_8d1a45b74b2107::t_9f6f28e5326651 9,71
+openspec/changes/archive/2026-08-30-add-linear-algebra-crate/proposal.md
+  s_8d1a45b74b2107::t_9f6f28e5326651 9
+openspec/changes/archive/2026-08-30-add-linear-algebra-crate/specs/linear-consumer-migration/spec.md
+  s_8d1a45b74b2107::t_9f6f28e5326651 157
+openspec/notes/archive/linear/prototype/README.md
+  s_8d1a45b74b2107::t_9f6f28e5326651 47
+  s_8d1a45b74b2107::t_b2ae127ca44b77 1-46,48-81
+openspec/notes/archive/homology/reference/reference.py
+  s_8d1a45b74b2107::t_380aa87829afd6 1-500
+openspec/notes/archive/linear/FOLLOW-UPS.md
+  s_8d1a45b74b2107::t_36c44fccbcda44 1-56
+openspec/notes/archive/homology/extraction-plan.md
+  s_8d1a45b74b2107::t_7c289c786a49fe 1-242
+openspec/notes/archive/linear/BOUND-LEDGER.md
+  s_8d1a45b74b2107::t_b48dd5b7e1ad23 1-56
+openspec/notes/archive/linear/CG-CONTRACT-DIVERGENCES.md
+  s_8d1a45b74b2107::t_83c758f064766e 1-197
+openspec/notes/archive/linear/DELEGATION-BASELINE.md
+  s_57e75bcfbf0dc8::t_f813c64160621c 1-111
+openspec/notes/archive/linear/PHASE1-REVISIONS.md
+  s_8d1a45b74b2107::t_1d2928950aa96a 1-49
+openspec/notes/archive/linear/PORTING-FINDINGS.md
+  s_8d1a45b74b2107::t_3bdc7a0c806773 1-104
+openspec/notes/archive/linear/deep-causality-linear.md
+  s_8d1a45b74b2107::t_7dd4d53ace024e 1-553
+openspec/notes/archive/linear/prototype/.gitignore
+  s_8d1a45b74b2107::t_a6f3006e108dc0 1-3
+openspec/notes/archive/linear/prototype/Cargo.toml
+  s_8d1a45b74b2107::t_972d34ec66ad50 13-16
+openspec/notes/archive/linear/prototype/cm_det.py
+  s_3ef7cf3aafcbc2::t_0462cee69e1a3a 1-75
+openspec/notes/archive/linear/prototype/consumer_b/Cargo.toml
+  s_8d1a45b74b2107::t_48863d11a81a97 1-16
+openspec/notes/archive/linear/prototype/consumer_b/examples/f2_word_parallel.rs
+  s_8d1a45b74b2107::t_1db08b65bc5a12 1-135
+openspec/notes/archive/linear/prototype/consumer_b/src/dense.rs
+  s_8d1a45b74b2107::t_260b37c5abf6ee 1-160
+openspec/notes/archive/linear/prototype/consumer_b/src/lib.rs
+  s_8d1a45b74b2107::t_fa1de95872b9cf 1-15
+openspec/notes/archive/linear/prototype/consumer_b/src/packed_gf2.rs
+  s_8d1a45b74b2107::t_5c24d09996d1eb 1-149
+openspec/notes/archive/linear/prototype/consumer_b/src/tests.rs
+  s_8d1a45b74b2107::t_176ebcc28e3c30 1-267
+openspec/notes/archive/linear/prototype/linear_a/Cargo.toml
+  s_8d1a45b74b2107::t_c274b7e31b50ef 1-13
+openspec/notes/archive/linear/prototype/linear_a/src/gf2_scalar.rs
+  s_8d1a45b74b2107::t_7aa475c84658e3 1-119
+openspec/notes/archive/linear/prototype/linear_a/src/lib.rs
+  s_8d1a45b74b2107::t_2495281ddd40dc 1-156
+openspec/notes/archive/linear/prototype/linear_b/Cargo.toml
+  s_8d1a45b74b2107::t_725a0904131be2 1-18
+openspec/notes/archive/linear/prototype/linear_b/src/algorithms.rs
+  s_8d1a45b74b2107::t_931613d2a2ac64 1-131
+openspec/notes/archive/linear/prototype/linear_b/src/lib.rs
+  s_8d1a45b74b2107::t_15061e45306662 1-87
+openspec/notes/archive/linear/prototype/linear_b/src/rows_of_rows.rs
+  s_8d1a45b74b2107::t_700719c317c0f2 1-82
+openspec/notes/archive/linear/prototype/linear_c/Cargo.toml
+  s_8d1a45b74b2107::t_9f2c16b2559d8c 1-14
+openspec/notes/archive/linear/prototype/linear_c/src/lib.rs
+  s_8d1a45b74b2107::t_a4b330a5ab03e5 1-89
+openspec/notes/archive/linear/prototype/loc.sh
+  s_8d1a45b74b2107::t_8c5b88e073ccc5 1-35
+openspec/notes/archive/linear/prototype/tensor_impl/Cargo.toml
+  s_8d1a45b74b2107::t_744b321b7b675a 1-20
+openspec/notes/archive/linear/prototype/tensor_impl/src/lib.rs
+  s_8d1a45b74b2107::t_ba913c05dacf1e 1-88
+openspec/notes/archive/linear/reference/reference.py
+  s_8d1a45b74b2107::t_e6890d32bb4bd4 1-211
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c9380d4ea8027b05b4643e982e409c404ed76b38",
+  "prompts": {},
+  "sessions": {
+    "s_3ef7cf3aafcbc2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a64f1efd5171f438f",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_57e75bcfbf0dc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-afbe24062254fd3be",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
