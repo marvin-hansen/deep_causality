@@ -1,0 +1,41 @@
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_simplicial_complex/mod.rs
+  s_bd8f90dda752d1::t_24ab7e525e9547 128-142,146,153-156,158-162
+lean/DeepCausalityFormal/Core/CausalArrow.lean
+  s_bd8f90dda752d1::t_20863aa32a0de9 32
+deep_causality_unified_math/deep_causality_topology/tests/extensions/hkt_simplicial_complex_tests.rs
+  s_bd8f90dda752d1::t_dc3055035e2c66 248,250-252
+  s_bd8f90dda752d1::t_fabb50e3377e1e 142-145
+build/scripts/check_examples.sh
+  s_bd8f90dda752d1::t_ac80750509d579 16-25,30-39,41,44,75
+.github/workflows/rust_deps.yml
+  s_bd8f90dda752d1::t_eb0dfeee38839b 27-34
+build/scripts/mutants.sh
+  s_bd8f90dda752d1::t_5e9d7f4fbfc78f 72
+.github/workflows/formalization.yml
+  s_bd8f90dda752d1::t_9f2d924c7d7efd 120-122
+  s_bd8f90dda752d1::t_274c4df80f0be0 102-103,111,115-118,131-134
+  s_bd8f90dda752d1::t_20863aa32a0de9 104-110,113-114,128-130
+  s_bd8f90dda752d1::t_eb0dfeee38839b 74,77-84,91,97-101,112,119,123-127,135-137
+  s_bd8f90dda752d1::t_b5109f4b4c1b8c 138
+deep_causality_unified_math/README.md
+  s_bd8f90dda752d1::t_bf7747c035317f 78-96
+  s_bd8f90dda752d1::t_05e4bbc2d01db7 1-77,97-191
+build/scripts/sbom.sh
+  s_bd8f90dda752d1::t_418056a8154e28 12,14-17,19-25,28-29,32-33,35-36,40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "f65e282464acc04e9767ced7d199a5190a90ce48",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
