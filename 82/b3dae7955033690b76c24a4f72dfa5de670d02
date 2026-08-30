@@ -1,0 +1,21 @@
+openspec/notes/quantum/qcl-gaps.md
+  s_8d1a45b74b2107::t_57d3621b9c426c 52-83
+  s_8d1a45b74b2107::t_d54a094e53b071 597-616
+  s_8d1a45b74b2107::t_b8344c55f1b610 617
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "82b3dae7955033690b76c24a4f72dfa5de670d02",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
