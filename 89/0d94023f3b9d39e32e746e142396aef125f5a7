@@ -1,0 +1,34 @@
+openspec/specs/homology-gf2-chain/spec.md
+  s_8d1a45b74b2107::t_38636c9fed4d94 1-111
+openspec/specs/topology-cell-complex-seam/spec.md
+  s_8d1a45b74b2107::t_38636c9fed4d94 1-106
+openspec/specs/homology-chain-complex/spec.md
+  s_8d1a45b74b2107::t_38636c9fed4d94 1-99
+openspec/changes/archive/2026-08-30-extract-homology-crate/tasks.md
+  s_8d1a45b74b2107::t_38636c9fed4d94 19,35,210-211
+  s_8d1a45b74b2107::t_eb35fcbf5a7965 212
+openspec/changes/archive/2026-08-30-extract-homology-crate/specs/topology-cell-complex-seam/spec.md
+  s_8d1a45b74b2107::t_00b9e0f978be12 20,22-46
+openspec/changes/archive/2026-08-30-add-linear-algebra-crate/tasks.md
+  s_8d1a45b74b2107::t_321b385e0b2de9 128,222,242
+openspec/changes/archive/2026-08-30-extract-homology-crate/design.md
+  s_8d1a45b74b2107::t_9074d2691e5657 244
+openspec/changes/archive/2026-08-30-extract-homology-crate/proposal.md
+  s_8d1a45b74b2107::t_f27d8c69750b1d 96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "890d94023f3b9d39e32e746e142396aef125f5a7",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
