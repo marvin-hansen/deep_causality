@@ -1,0 +1,45 @@
+deep_causality_linear/tests/extensions/hkt/ported_csr_witness_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 24
+deep_causality_homology/src/utils_tests/mod.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 22
+deep_causality_homology/tests/traits/chain_complex_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 11
+deep_causality_linear/tests/types/packed_gf2_vector/packed_gf2_vector_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 261
+deep_causality_linear/src/extensions/hkt/dense_matrix_witness.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 104
+deep_causality_linear/tests/algorithms/solve_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 137
+deep_causality_linear/tests/traits/bound_ledger_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 6
+deep_causality_linear/tests/extensions/hkt/laws_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 81
+deep_causality_linear/tests/types/csr_matrix/ported_default_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 63
+deep_causality_linear/src/extensions/hkt/csr_matrix_witness.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 148
+deep_causality_homology/tests/types/homology_field/homology_field_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 8
+deep_causality_sparse/src/lib.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 38
+examples/mathematics_examples/sparse/hkt_csr_ops.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 64
+deep_causality_linear/tests/algorithms/decomposition_tests.rs
+  s_8d1a45b74b2107::t_9f6f28e5326651 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "6e7899f7e74e3fb7ffaf61ffa778b5367d8b10e5",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
