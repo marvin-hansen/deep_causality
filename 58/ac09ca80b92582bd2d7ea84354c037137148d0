@@ -1,0 +1,34 @@
+openspec/changes/extract-homology-crate/tasks.md
+  s_8d1a45b74b2107::t_973bf3734199b2 1-69
+openspec/changes/extract-homology-crate/specs/homology-chain-complex/spec.md
+  s_8d1a45b74b2107::t_758fec1d91e57d 1-95
+openspec/changes/extract-homology-crate/.openspec.yaml
+  s_8d1a45b74b2107::t_50bc29eb046274 1-2
+openspec/changes/extract-homology-crate/proposal.md
+  s_8d1a45b74b2107::t_6a89e53ef1270b 1-36,42-79
+  s_8d1a45b74b2107::t_fd743c5b9c919c 37-41
+openspec/changes/extract-homology-crate/design.md
+  s_8d1a45b74b2107::t_f714413fd80507 1-168
+openspec/notes/homology/extraction-plan.md
+  s_8d1a45b74b2107::t_58e6f920e537b1 1-242
+openspec/changes/extract-homology-crate/specs/topology-cell-complex-seam/spec.md
+  s_8d1a45b74b2107::t_17d42e37937285 1-87
+openspec/changes/extract-homology-crate/specs/homology-gf2-chain/spec.md
+  s_8d1a45b74b2107::t_32a1f81f8cd0b8 1-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "58ac09ca80b92582bd2d7ea84354c037137148d0",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
