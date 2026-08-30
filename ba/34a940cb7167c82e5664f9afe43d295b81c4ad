@@ -1,0 +1,24 @@
+openspec/notes/unified_math/deep_causality_unified_math.md
+  s_bd8f90dda752d1::t_ab553030ab07e2 6,8-10,281,283-285
+openspec/notes/hkt_gat/hkt_gat.md
+  s_bd8f90dda752d1::t_67f419e2798e8f 22-23,144,147,152,155,184-187
+  s_bd8f90dda752d1::t_f04300789e00fe 16
+  s_bd8f90dda752d1::t_4a00571f5bb365 26-29,127-136
+  s_bd8f90dda752d1::t_4b973aa7826b27 1-15,17-21,24-25,30-126,137-143,145-146,148-151,153-154,156-183,188-219
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "ba34a940cb7167c82e5664f9afe43d295b81c4ad",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
