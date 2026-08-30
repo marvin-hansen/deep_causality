@@ -1,0 +1,29 @@
+.github/workflows/rust-nightly.yml
+  s_bd8f90dda752d1::t_240a8fbd177c6d 4-13
+  s_83b39518c9e228::t_e480255a82819d 14-21
+  s_83b39518c9e228::t_0a50063b983682 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "6d0ef314b2fa8a8b4c4091913474eabc7a9a310f",
+  "prompts": {},
+  "sessions": {
+    "s_83b39518c9e228": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "beba6fbc-103c-4c94-be79-6a2929296bd2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
