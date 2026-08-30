@@ -1,0 +1,38 @@
+.github/workflows/rust_deps.yml
+  s_bd8f90dda752d1::t_55b777b1683630 30
+openspec/changes/archive-notes.md
+  s_bd8f90dda752d1::t_3aa3445c61c6a1 12-13,81-83,133
+  s_bd8f90dda752d1::t_5dc36dab8f6540 75-79
+  s_bd8f90dda752d1::t_c870204316c578 1-11,14-74,80,84-87,89-132,134-141
+  s_bd8f90dda752d1::t_dd7ff1a8b644dd 88
+AGENTS.md
+  s_bd8f90dda752d1::t_59dc5947ee3868 181,229,231-233
+  s_bd8f90dda752d1::t_1b5b02b16d2b61 332
+yanked/deep_causality_sparse/Cargo.toml
+  s_bd8f90dda752d1::t_55b777b1683630 1-16
+openspec/notes/unified_math/deep_causality_unified_math.md
+  s_bd8f90dda752d1::t_fcfeb48aabf80d 18,45,82,86,102,104,124
+  s_bd8f90dda752d1::t_67ce4d81988afe 85,139-170,194,212,214-219,221
+  s_bd8f90dda752d1::t_c69fff331ace9e 260-261,275-276,278
+  s_bd8f90dda752d1::t_77030030bce175 1-17,19-44,46-81,83-84,87-101,103,105-123,125-138,171-193,195-211,213,220,222-259,262-274,277,279-281
+yanked/deep_causality_sparse/README.md
+  s_bd8f90dda752d1::t_59dc5947ee3868 1-10
+examples/mathematics_examples/Cargo.toml
+  s_bd8f90dda752d1::t_ebd0860743ae9b 123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "589606d03382c5e3e9bc298e061a793e4093671f",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
