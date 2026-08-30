@@ -1,0 +1,31 @@
+deep_causality_unified_math/deep_causality_num_complex/src/complex/complex_number/conjugate_scalar.rs
+  s_8b8660f266dac3::t_21a7a3c39e6ad1 22-24
+deep_causality_unified_math/deep_causality_linear/src/lib.rs
+  s_8b8660f266dac3::t_d39562ab999c41 9
+deep_causality_unified_math/deep_causality_multivector/src/types/multivector/algebra/mod.rs
+  s_8b8660f266dac3::t_102dfa04caefd3 324
+deep_causality_unified_math/deep_causality_rand/src/types/distr/normal/standard_normal.rs
+  s_8b8660f266dac3::t_6b2f326a12825a 6-9,31,48-49
+deep_causality_unified_math/deep_causality_linear/src/algorithms/decomposition.rs
+  s_8b8660f266dac3::t_102dfa04caefd3 267-269
+deep_causality_unified_math/deep_causality_num/src/integer/natural.rs
+  s_8b8660f266dac3::t_b267a914471749 10
+deep_causality_unified_math/deep_causality_algebra/src/algebra/domain_integral.rs
+  s_8b8660f266dac3::t_b267a914471749 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "8d2649aed13a51f915703d514f82aaff6fa622f2",
+  "prompts": {},
+  "sessions": {
+    "s_8b8660f266dac3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a6521f48-e8be-422e-8035-eb6270092614",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
