@@ -1,0 +1,36 @@
+deep_causality_unified_math/deep_causality_num_complex/tests/extensions/mod.rs
+  s_bd8f90dda752d1::t_20f464fe09e1e9 7-8
+deep_causality_unified_math/deep_causality_num_complex/tests/extensions/hkt_monoidal_law_tests.rs
+  s_bd8f90dda752d1::t_1758713361eade 1-14,18-23,27-45,50-51,58-60,74,78-79,81-82,91,247,306
+  s_bd8f90dda752d1::t_cdb787cf6a79de 16-17,90,98,103,121,129,137,158-159,170-171,178-179,192,195,198
+  s_bd8f90dda752d1::t_a3b8cc4976be68 307-342
+  s_bd8f90dda752d1::t_20f464fe09e1e9 15,24-26,46-49,52-57,61-73,75-77,80,83-89,92-97,99-102,104-120,122-128,130-136,138-157,160-169,172-177,180-191,193-194,196-197,199-246,248-305
+deep_causality_unified_math/deep_causality_num_complex/src/extensions/hkt_octonion.rs
+  s_bd8f90dda752d1::t_79bb4149033501 7-10,60-111
+deep_causality_unified_math/deep_causality_num_complex/src/extensions/hkt_complex.rs
+  s_bd8f90dda752d1::t_79bb4149033501 7-10,49-88
+deep_causality_unified_math/deep_causality_num_complex/src/extensions/hkt_quaternion.rs
+  s_bd8f90dda752d1::t_79bb4149033501 7-10,52-95
+deep_causality_unified_math/deep_causality_num_complex/src/complex/octonion_number/debug.rs
+  s_bd8f90dda752d1::t_b84af6d43507a2 39-47
+openspec/changes/add-lax-monoidal-applicative/tasks.md
+  s_bd8f90dda752d1::t_eb499ad6e3e9a1 27-32
+deep_causality_unified_math/deep_causality_num_complex/src/extensions/mod.rs
+  s_bd8f90dda752d1::t_483d87ca6b1fc9 8,10-12,14-40,49-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "0cd306a54b9a90245c51fc2d7458ee91f5a47017",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
