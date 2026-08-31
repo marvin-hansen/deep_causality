@@ -1,0 +1,109 @@
+deep_causality_quantum/src/types/qcode/mod.rs
+  s_8d1a45b74b2107::t_4ffb4be2ad557f 1-20
+deep_causality_unified_math/deep_causality_topology/tests/BUILD.bazel
+  s_8d1a45b74b2107::t_999a5b987f7916 116
+deep_causality_quantum/tests/types/qcode/logical_equivalence_tests.rs
+  s_8d1a45b74b2107::t_cb70600085dc9f 1-22,24-185
+  s_8d1a45b74b2107::t_e3691216bda9b3 23
+deep_causality_cfd/Cargo.toml
+  s_8d1a45b74b2107::t_aa715a6ec676a2 122
+deep_causality_unified_math/deep_causality_homology/src/traits/chain_complex.rs
+  s_8d1a45b74b2107::t_da8d634938376b 284
+  s_8d1a45b74b2107::t_f6dd84069dcc72 7,10-15,131-283,285-289
+deep_causality_unified_math/deep_causality_topology/src/types/cochain/mod.rs
+  s_8d1a45b74b2107::t_fb00c56b58a5de 32,38,74,86
+  s_8d1a45b74b2107::t_422743f19e4696 1-31,33-37,39-73,75-85,87-96
+deep_causality_unified_math/deep_causality_homology/tests/traits/representatives_tests.rs
+  s_8d1a45b74b2107::t_d73eeb345e00f4 1-52,54-247
+  s_8d1a45b74b2107::t_99841d43a01683 53
+deep_causality_unified_math/deep_causality_topology/src/types/topology/ops/cup_product.rs
+  s_8d1a45b74b2107::t_21f81d317023fd 6-8,11,18,21-22,24,26-32,34-37,41-57,59-60,62-64,67-69,71-73,76-80
+deep_causality_unified_math/deep_causality_topology/tests/types/cup_product/cup_product_tests.rs
+  s_8d1a45b74b2107::t_41d3acbfcb0f60 25,54-55
+  s_8d1a45b74b2107::t_6ddf33dbc7e94f 692-770
+  s_8d1a45b74b2107::t_dd86b63730886d 31-32,37-53,56-70,79-81,114,132,155,164,173,186,194,204,211,257-258,275-276,293-294,306,320,358-359,375,387-388,399-400,417,442,471-473,541-542,552,556,583,599,614,629-630,643,654-655,688
+deep_causality_quantum/tests/formalization_lean/partial_trace_tests.rs
+  s_8d1a45b74b2107::t_1cb9b80439501f 21
+  s_8d1a45b74b2107::t_8d49bb1e481b7a 140-146,149-151,156-172,182-193,198-265
+  s_8d1a45b74b2107::t_8808bd4164fcfe 173-181,194-197
+  s_8d1a45b74b2107::t_8092303252c637 266
+deep_causality_unified_math/deep_causality_topology/src/lib.rs
+  s_8d1a45b74b2107::t_3616ebc773de6e 63
+deep_causality_unified_math/deep_causality_topology/src/types/mod.rs
+  s_8d1a45b74b2107::t_422743f19e4696 8,10
+deep_causality_unified_math/deep_causality_topology/tests/types/topology/topology_tests.rs
+  s_8d1a45b74b2107::t_7eb4c3e22caa95 118-124,133-134
+  s_8d1a45b74b2107::t_e1b34af89c76fb 138,175-186,190-198
+deep_causality_unified_math/deep_causality_topology/tests/types/cup_product/implementation_agreement_tests.rs
+  s_8d1a45b74b2107::t_956af9b4fc5b16 6,8-12,14-18,30,33-48,51,54-68,76-79,81-84,87,94-96,100-112,114-130
+  s_8d1a45b74b2107::t_41d3acbfcb0f60 89,91,113
+  s_8d1a45b74b2107::t_e1b34af89c76fb 19-26
+openspec/notes/quantum/qcl-gaps.md
+  s_8d1a45b74b2107::t_4c2ffbb40f19ff 23,891,922-960
+  s_8d1a45b74b2107::t_f10386b745a834 1148
+  s_8d1a45b74b2107::t_5a174d94b34619 626-649,663-694
+  s_8d1a45b74b2107::t_aa6b4923656187 82,984,1044-1055,1059-1100,1104-1105
+  s_8d1a45b74b2107::t_5f89a05618486a 1004-1006,1025-1027
+  s_8d1a45b74b2107::t_09ba99b1188f4e 1146,1152-1157,1162-1164
+  s_8d1a45b74b2107::t_3d098af24c21bd 331,608
+  s_8d1a45b74b2107::t_08bc1814787a10 1137-1139,1144,1168-1169
+  s_8d1a45b74b2107::t_082aab8760a168 325,366-399,602,652
+deep_causality_quantum/src/types/qcode/logical_pauli.rs
+  s_8d1a45b74b2107::t_4ffb4be2ad557f 1-91
+deep_causality_physics/Cargo.toml
+  s_8d1a45b74b2107::t_aa715a6ec676a2 102
+deep_causality_quantum/Cargo.toml
+  s_8d1a45b74b2107::t_4cdcce62fd500d 99-103
+deep_causality_algorithms/Cargo.toml
+  s_8d1a45b74b2107::t_aa715a6ec676a2 43
+lean/DeepCausalityFormal/Quantum/PartialTrace.lean
+  s_8d1a45b74b2107::t_a5c2e2d729af17 67-75,159-179
+  s_8d1a45b74b2107::t_d0b8d2379e3795 180
+deep_causality_quantum/tests/BUILD.bazel
+  s_8d1a45b74b2107::t_4cdcce62fd500d 55-72
+  s_8d1a45b74b2107::t_392a534dc028a3 54
+deep_causality_unified_math/deep_causality_topology/Cargo.toml
+  s_8d1a45b74b2107::t_e08f79162826ee 3
+deep_causality_unified_math/deep_causality_homology/tests/traits/mod.rs
+  s_8d1a45b74b2107::t_30768dd848a9b7 7
+deep_causality_quantum/tests/types/qcode/mod.rs
+  s_8d1a45b74b2107::t_cb70600085dc9f 1-6
+deep_causality_quantum/src/types/qgates/operator_linalg.rs
+  s_8d1a45b74b2107::t_526d2f4b042360 162-165,345-413,415-448
+  s_8d1a45b74b2107::t_3868cf3ca2848b 414
+deep_causality_discovery/Cargo.toml
+  s_8d1a45b74b2107::t_aa715a6ec676a2 55
+deep_causality_quantum/tests/types/mod.rs
+  s_8d1a45b74b2107::t_cb70600085dc9f 8
+openspec/specs/cup-product/spec.md
+  s_8d1a45b74b2107::t_fc983015b7fadb 6,8-11,13-29,32
+lean/THEOREM_MAP.md
+  s_8d1a45b74b2107::t_8808bd4164fcfe 253-256,262,268
+deep_causality_unified_math/deep_causality_topology/src/types/cup_product/mod.rs
+  s_8d1a45b74b2107::t_0fc4c20c66035a 59,66-67,71-75,78-80,86-87,107-108,146,149-152,170,176,191,193-195
+  s_8d1a45b74b2107::t_41d3acbfcb0f60 109,164
+deep_causality_quantum/src/types/mod.rs
+  s_8d1a45b74b2107::t_b5f841ee12afc2 9
+deep_causality_quantum/src/types/qcode/logical_equivalence.rs
+  s_8d1a45b74b2107::t_92e89b59981f0d 1-127
+Cargo.lock
+  s_8d1a45b74b2107::t_50d13348af4b2d 763,798
+deep_causality_quantum/src/lib.rs
+  s_8d1a45b74b2107::t_245216f71cccec 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "0b3cff64ce6a8724450deb79eec905d2e1704833",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
