@@ -1,0 +1,34 @@
+openspec/notes/quantum/qcl-design-note.md
+  s_8d1a45b74b2107::t_0b00ecbfd9fc02 635-664
+  s_8d1a45b74b2107::t_e2dcc30ee485a9 570-573,580-591,689-690,693,696-702
+  s_8d1a45b74b2107::t_3b90a65ff36553 400-401,409-411,413-416,454-469
+  s_8d1a45b74b2107::t_a7aa547747aaae 978-980
+  s_8d1a45b74b2107::t_e37e072ce27d0c 491-511,598-617
+  s_8d1a45b74b2107::t_d63b7abb0f505d 16-18,22-31,46-49,56,64,268-274,276-280
+  s_8d1a45b74b2107::t_96d3e2163b7ea4 986-989
+  s_8d1a45b74b2107::t_398d2a32344d46 284-285,293-305,307-315,317-320,323-325,370-386
+  s_8d1a45b74b2107::t_a6b59c1c2b4ae1 181-187,521,540-554
+  s_8d1a45b74b2107::t_642cd366ab1b05 744,759,784,815
+  s_8d1a45b74b2107::t_50488b7ec2a7b4 32-35,981-984
+  s_8d1a45b74b2107::t_0a0fc80f549e71 19-21,36-45
+  s_8d1a45b74b2107::t_9753b8ba05412a 559-560
+  s_8d1a45b74b2107::t_b9fb0e1ec36a16 776,822,876-886,888-891,893,895-897,900-903,990,993-997
+  s_8d1a45b74b2107::t_df8381c19df98a 618-634,665-681
+  s_8d1a45b74b2107::t_17eabd77c7ad6b 555,904,985
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "60fbe04e4bc919fe14bae97e9242d787d908b386",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
