@@ -1,0 +1,63 @@
+BUILD.md
+  s_bd8f90dda752d1::t_c0672d861e1bd1 29
+scripts/lean_lock.sh
+  s_bd8f90dda752d1::t_596e422a67137b 1-23,25-27,29-128,130-156,158-192,194-204,206-257,259-265,267-275
+  s_bd8f90dda752d1::t_c0672d861e1bd1 24,28,129,157,193,205,258,266
+MODULE.bazel
+  s_bd8f90dda752d1::t_c0672d861e1bd1 19,172
+lean/lake_packages.bzl
+  s_bd8f90dda752d1::t_c0672d861e1bd1 1,20
+scripts/crates.sh
+  s_bd8f90dda752d1::t_596e422a67137b 1-134
+deep_causality_unified_math/README.md
+  s_bd8f90dda752d1::t_c0672d861e1bd1 159
+.github/workflows/formalization.yml
+  s_bd8f90dda752d1::t_c0672d861e1bd1 82
+scripts/mutants.sh
+  s_bd8f90dda752d1::t_596e422a67137b 1-23,27-87
+  s_bd8f90dda752d1::t_c0672d861e1bd1 24-26
+scripts/vendor_modules.sh
+  s_bd8f90dda752d1::t_596e422a67137b 1-76
+AGENTS.md
+  s_bd8f90dda752d1::t_c0672d861e1bd1 260,437,465
+README.md
+  s_bd8f90dda752d1::t_c0672d861e1bd1 322
+lean/BUILD.bazel
+  s_bd8f90dda752d1::t_c0672d861e1bd1 15
+scripts/lean_oleans.py
+  s_bd8f90dda752d1::t_c0672d861e1bd1 1-137
+.gitignore
+  s_bd8f90dda752d1::t_c0672d861e1bd1 94
+.github/workflows/rust_deps.yml
+  s_bd8f90dda752d1::t_c0672d861e1bd1 32
+openspec/changes/extract-rules-lean/proposal.md
+  s_bd8f90dda752d1::t_c0672d861e1bd1 79
+makefile
+  s_bd8f90dda752d1::t_c0672d861e1bd1 26,31,36,41,46,51,56,61,66,71,76,81,86,91,96
+openspec/changes/extract-rules-lean/tasks.md
+  s_bd8f90dda752d1::t_c0672d861e1bd1 8,42
+scripts/lean_closure.py
+  s_bd8f90dda752d1::t_c0672d861e1bd1 1-207
+scripts/lean_packages_bzl.py
+  s_bd8f90dda752d1::t_c0672d861e1bd1 1-92
+lean/lake-lock.json
+  s_bd8f90dda752d1::t_c0672d861e1bd1 3
+scripts/lean.sh
+  s_bd8f90dda752d1::t_596e422a67137b 1-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c50236a648e29feea7f143389acb3fea9110b596",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
