@@ -1,0 +1,43 @@
+deep_causality_unified_math/deep_causality_multivector/src/extensions/hkt_multifield/mod.rs
+  s_bd8f90dda752d1::t_b641c0d2319e15 94-95
+  s_bd8f90dda752d1::t_e863a7e5b669d1 101
+  s_bd8f90dda752d1::t_0a4ba8a167db9a 31
+  s_bd8f90dda752d1::t_513638cad7f0df 43,54,58,111,115-121,126-127,129-131,134,140-151,156
+  s_bd8f90dda752d1::t_98215f9e946eec 11,70,72,74-78,80-89,97-98
+  s_bd8f90dda752d1::t_65b7523a3bdafb 29
+  s_bd8f90dda752d1::t_887998b5117418 35
+  s_bd8f90dda752d1::t_db3b3357a72459 40,106,113,133
+  s_bd8f90dda752d1::t_d9ac44d5bcedb7 47-53,55-57,59
+  s_bd8f90dda752d1::t_c0d7c232cc0b19 96
+  s_bd8f90dda752d1::t_46eb6899b9805b 124,136-138,153-155,157
+  s_bd8f90dda752d1::t_1621c73badc181 99,125,139,152
+deep_causality_unified_math/deep_causality_multivector/src/types/multifield/api/mod.rs
+  s_bd8f90dda752d1::t_0a4ba8a167db9a 9,18,45
+deep_causality_unified_math/deep_causality_multivector/src/types/multifield/mod.rs
+  s_bd8f90dda752d1::t_bbf02e618cfa0d 57,60,65-66,68-71
+  s_bd8f90dda752d1::t_418aaa4e8230eb 67
+deep_causality_unified_math/deep_causality_multivector/tests/extensions/hkt_multifield/hkt_multifield_tests.rs
+  s_bd8f90dda752d1::t_46def137f829ae 38,42-54,56,60-65
+  s_bd8f90dda752d1::t_109e453eeba270 6
+deep_causality_unified_math/deep_causality_multivector/Cargo.toml
+  s_bd8f90dda752d1::t_c0d7c232cc0b19 83
+  s_bd8f90dda752d1::t_d8670e9b426bbd 82
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/mod.rs
+  s_bd8f90dda752d1::t_55309f9b2edca9 8-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "1db241bb81e5103f0a0e23d7ee64e09ca9464556",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
