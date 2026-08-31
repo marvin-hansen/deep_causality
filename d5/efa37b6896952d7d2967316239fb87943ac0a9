@@ -1,0 +1,37 @@
+examples/mathematics_examples/README.md
+  s_bd8f90dda752d1::t_d158ff096a328f 23-24,38
+  s_bd8f90dda752d1::t_5012a0bd0ad61d 32-33
+examples/mathematics_examples/BUILD.bazel
+  s_bd8f90dda752d1::t_f389a9fe3bab50 432-551
+examples/mathematics_examples/applied_category_theory/README.md
+  s_bd8f90dda752d1::t_d2612056978225 1-33
+examples/mathematics_examples/applied_category_theory/traversable.rs
+  s_bd8f90dda752d1::t_d2612056978225 8-11
+examples/mathematics_examples/Cargo.toml
+  s_bd8f90dda752d1::t_f389a9fe3bab50 29,64-122
+  s_bd8f90dda752d1::t_0ed9981fa5dca7 123
+deep_causality_unified_math/deep_causality_haft/README.md
+  s_bd8f90dda752d1::t_d2612056978225 94,261
+examples/README.md
+  s_bd8f90dda752d1::t_d158ff096a328f 244
+AGENTS.md
+  s_bd8f90dda752d1::t_5012a0bd0ad61d 463
+deep_causality_unified_math/deep_causality_haft/examples.txt
+  s_bd8f90dda752d1::t_eda3ddab9cc6b1 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "d5efa37b6896952d7d2967316239fb87943ac0a9",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
