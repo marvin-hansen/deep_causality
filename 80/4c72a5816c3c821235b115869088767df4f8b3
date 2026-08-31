@@ -1,0 +1,41 @@
+openspec/notes/quantum/qcl-gaps.md
+  s_8d1a45b74b2107::t_d280463b009a68 807-818,821-823,871,881,897-899,914-916
+deep_causality_unified_math/deep_causality_haft/src/functor/functor_base.rs
+  s_bd8f90dda752d1::t_d7c5dd4f271d87 17-18
+deep_causality_unified_math/deep_causality_haft/src/monad/mod.rs
+  s_bd8f90dda752d1::t_d7c5dd4f271d87 35
+deep_causality_unified_math/deep_causality_num_complex/src/extensions/mod.rs
+  s_bd8f90dda752d1::t_ff1a586f219cbf 30-32
+deep_causality_unified_math/deep_causality_num_dual/src/extensions/mod.rs
+  s_bd8f90dda752d1::t_ff1a586f219cbf 28-30
+deep_causality_unified_math/README.md
+  s_bd8f90dda752d1::t_6df3c148abe5eb 8-9
+deep_causality_unified_math/deep_causality_haft/src/iso/natural_iso.rs
+  s_bd8f90dda752d1::t_d7c5dd4f271d87 23
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_bd8f90dda752d1::t_7fe65aa77e5148 83-85,87-101,123-126,128-131
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "804c72a5816c3c821235b115869088767df4f8b3",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
