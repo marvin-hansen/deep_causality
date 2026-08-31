@@ -1,0 +1,28 @@
+deep_causality_unified_math/deep_causality_haft/src/lax_monoidal/mod.rs
+  s_bd8f90dda752d1::t_9134faa04c5084 202,205-274
+  s_bd8f90dda752d1::t_500a452c2381ea 178-201,203-204
+  s_bd8f90dda752d1::t_a6531e6b472d26 1-177,275-288
+deep_causality_unified_math/deep_causality_haft/src/monoidal/mod.rs
+  s_bd8f90dda752d1::t_9bd1923262c43d 31-40
+openspec/changes/add-lax-monoidal-applicative/tasks.md
+  s_bd8f90dda752d1::t_0094aa87920a81 3-11
+deep_causality_unified_math/deep_causality_haft/src/lib.rs
+  s_bd8f90dda752d1::t_f7969166a66443 60,95-97,100-104
+  s_bd8f90dda752d1::t_f1015f89632b09 105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "bd3ccb4e69e2d876fa3c5d9cb22f18c9943a40c0",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
