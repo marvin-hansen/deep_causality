@@ -1,0 +1,47 @@
+openspec/changes/add-lax-monoidal-applicative/specs/num-dual-hkt-witness/spec.md
+  s_bd8f90dda752d1::t_b8048996eb9cc0 22,42-43,45,47-48,50,52,54-55,57-60
+  s_bd8f90dda752d1::t_17f09fab73376f 1-21,23-41,56,61-73
+  s_bd8f90dda752d1::t_135502099009c2 44,46,49,51,53
+openspec/changes/add-lax-monoidal-applicative/design.md
+  s_bd8f90dda752d1::t_c293eac923f5d7 1-84,112-139
+  s_bd8f90dda752d1::t_a6513ae5c31b2f 85-111
+openspec/changes/add-lax-monoidal-applicative/tasks.md
+  s_bd8f90dda752d1::t_2e4c37ed480d59 40
+  s_bd8f90dda752d1::t_ebc71defd904d9 1-39,41-64
+openspec/notes/unified_math/unified_math_gaps.md
+  s_bd8f90dda752d1::t_7b0f1d279c9bcf 247,255-263
+  s_bd8f90dda752d1::t_52f156d1bde3a2 264
+openspec/changes/add-lax-monoidal-applicative/specs/cayley-dickson-monoidal-applicative/spec.md
+  s_bd8f90dda752d1::t_17f09fab73376f 1-40
+openspec/changes/add-lax-monoidal-applicative/specs/haft-monoid-markers/spec.md
+  s_bd8f90dda752d1::t_17b3353c1921aa 1-40
+openspec/changes/add-lax-monoidal-applicative/specs/haft-formalization-docs/spec.md
+  s_bd8f90dda752d1::t_8f71effbc9fac7 1-27
+openspec/changes/add-lax-monoidal-applicative/specs/haft-monoidal-applicative/spec.md
+  s_bd8f90dda752d1::t_17b3353c1921aa 1-48
+openspec/changes/add-lax-monoidal-applicative/specs/haft-vec-traversable/spec.md
+  s_bd8f90dda752d1::t_8f71effbc9fac7 1-35
+openspec/changes/add-lax-monoidal-applicative/specs/haft-lax-monoidal-formalization/spec.md
+  s_bd8f90dda752d1::t_8f71effbc9fac7 1-48
+openspec/changes/add-lax-monoidal-applicative/specs/haft-lax-monoidal/spec.md
+  s_bd8f90dda752d1::t_f8b33106278913 1-53
+openspec/changes/add-lax-monoidal-applicative/proposal.md
+  s_bd8f90dda752d1::t_bff93f8b539842 1-13,15-28,30-44
+  s_bd8f90dda752d1::t_a6513ae5c31b2f 14,29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "e441929ea5630197003705c14aaa393c5f5a3b06",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
