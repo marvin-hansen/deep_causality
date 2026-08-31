@@ -1,0 +1,146 @@
+openspec/specs/causaloid-fixpoint/spec.md
+  s_bd8f90dda752d1::t_b357086422183b 36
+deep_causality_unified_math/deep_causality_haft/src/arrow/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 62-63
+deep_causality_unified_math/deep_causality_linear/LEAN_LINEAR.md
+  s_bd8f90dda752d1::t_b357086422183b 10
+deep_causality_unified_math/deep_causality_num_rational/LEAN_NUM_RATIONAL.md
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_cfd/src/tensor_bridge/projection.rs
+  s_bd8f90dda752d1::t_b357086422183b 12
+openspec/notes/archive/cfd-plasma-retropulsion/derisk-verdict.md
+  s_bd8f90dda752d1::t_efb0373b743394 218-220
+  s_bd8f90dda752d1::t_b357086422183b 211
+deep_causality_cfd/src/types/flow/retropulsion.rs
+  s_bd8f90dda752d1::t_b357086422183b 31,487
+openspec/notes/archive/cfd/cfd-gap.md
+  s_bd8f90dda752d1::t_b357086422183b 4
+deep_causality_cfd/reverted/README.md
+  s_bd8f90dda752d1::t_b357086422183b 16
+deep_causality_unified_math/deep_causality_topology/src/types/cubical_regge_geometry/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 72
+deep_causality_unified_math/deep_causality_num_dual/LEAN_NUM_DUAL.md
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_cfd/verification/dec_cylinder_verification/README.md
+  s_bd8f90dda752d1::t_b357086422183b 138
+website/cfd/README.md
+  s_bd8f90dda752d1::t_b357086422183b 62
+openspec/notes/archive/fft/add-fft.md
+  s_bd8f90dda752d1::t_b357086422183b 59
+lean/DeepCausalityFormal.lean
+  s_bd8f90dda752d1::t_b357086422183b 66-67
+deep_causality_unified_math/deep_causality_num_complex/LEAN_NUM_COMPLEX.md
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_cfd/src/traits/marchable.rs
+  s_bd8f90dda752d1::t_b357086422183b 15
+deep_causality_core/LEAN_CORE.md
+  s_bd8f90dda752d1::t_b357086422183b 10,60
+deep_causality_unified_math/deep_causality_homology/LEAN_HOMOLOGY.md
+  s_bd8f90dda752d1::t_b357086422183b 10
+lean/DeepCausalityFormal/Core/CommandInput.lean
+  s_bd8f90dda752d1::t_b357086422183b 7
+deep_causality_cfd/reverted/srp_drag_decrement/main.rs
+  s_bd8f90dda752d1::t_b357086422183b 99
+deep_causality/src/traits/causable_graph/graph_reasoning/stateful.rs
+  s_bd8f90dda752d1::t_b357086422183b 203
+deep_causality_unified_math/deep_causality_topology/src/types/cubical_regge_geometry/curvature.rs
+  s_bd8f90dda752d1::t_b357086422183b 18,34
+deep_causality_unified_math/deep_causality_fft/README.md
+  s_bd8f90dda752d1::t_b357086422183b 29
+deep_causality_unified_math/deep_causality_topology/src/types/topological_invariants/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 9
+deep_causality_unified_math/deep_causality_multivector/src/extensions/iso_multifield/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 32
+deep_causality/LEAN_DeepCausality.md
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_cfd/reverted/srp_drag_decrement/config.rs
+  s_bd8f90dda752d1::t_b357086422183b 67
+deep_causality/src/traits/causable/sealed.rs
+  s_bd8f90dda752d1::t_b357086422183b 9,16
+deep_causality_algorithms/verification/brcd/README.md
+  s_bd8f90dda752d1::t_b357086422183b 175,183
+lean/THEOREM_MAP.md
+  s_bd8f90dda752d1::t_b357086422183b 9,158
+lean/DeepCausalityFormal/Core/EffectLog.lean
+  s_bd8f90dda752d1::t_b357086422183b 20
+deep_causality_cfd/studies/qtt_rank_plume/README.md
+  s_bd8f90dda752d1::t_b357086422183b 70
+deep_causality_cfd/studies/traj_fs2_coupling/README.md
+  s_bd8f90dda752d1::t_b357086422183b 48
+deep_causality_unified_math/deep_causality_haft/src/monad/monoidal_merge.rs
+  s_bd8f90dda752d1::t_b357086422183b 34
+deep_causality_unified_math/deep_causality_homology/src/lib.rs
+  s_bd8f90dda752d1::t_b357086422183b 62
+deep_causality_cfd/studies/traj_fs1_generator/README.md
+  s_bd8f90dda752d1::t_b357086422183b 47
+lean/DeepCausalityFormal/Core/CausalMonad.lean
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_unified_math/deep_causality_fft/src/lib.rs
+  s_bd8f90dda752d1::t_b357086422183b 22
+deep_causality_core/src/types/causal_effect_propagation_process/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 48
+papers/linear_brcd/paper-thesis.md
+  s_bd8f90dda752d1::t_b357086422183b 130,245
+deep_causality_cfd/studies/srp_momentum_jet/config.rs
+  s_bd8f90dda752d1::t_b357086422183b 72
+deep_causality_cfd/studies/README.md
+  s_bd8f90dda752d1::t_b357086422183b 72
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_bd8f90dda752d1::t_b357086422183b 34
+openspec/specs/blackout-coupling-interface/spec.md
+  s_bd8f90dda752d1::t_b357086422183b 160
+deep_causality_physics/src/kernels/chronometric/forward_clock.rs
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_unified_math/deep_causality_num/LEAN_NUM.md
+  s_bd8f90dda752d1::t_b357086422183b 11
+deep_causality_unified_math/deep_causality_haft/LEAN_HAFT.md
+  s_bd8f90dda752d1::t_b357086422183b 10,42
+deep_causality/tests/traits/causable_graph/graph_reasoning/characterization_corpus_tests.rs
+  s_bd8f90dda752d1::t_b357086422183b 7
+deep_causality_unified_math/deep_causality_algebra/LEAN_ALGEBRA.md
+  s_bd8f90dda752d1::t_b357086422183b 12
+deep_causality_unified_math/deep_causality_topology/src/types/cubical_regge_geometry/volumes.rs
+  s_bd8f90dda752d1::t_b357086422183b 13-14
+deep_causality_unified_math/deep_causality_algebra/src/algebra/monoid_generic.rs
+  s_bd8f90dda752d1::t_b357086422183b 14
+deep_causality_cfd/studies/srp_momentum_jet/README.md
+  s_bd8f90dda752d1::t_b357086422183b 71
+openspec/specs/srp-derisk-verdict/spec.md
+  s_bd8f90dda752d1::t_b357086422183b 9
+deep_causality_cfd/studies/srp_momentum_jet/main.rs
+  s_bd8f90dda752d1::t_b357086422183b 9
+deep_causality_core/tests/iso/effect_process_consistency_tests.rs
+  s_bd8f90dda752d1::t_b357086422183b 27
+deep_causality_physics/src/kernels/astro/two_body.rs
+  s_bd8f90dda752d1::t_b357086422183b 8
+deep_causality_unified_math/deep_causality_haft/src/hkt/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 216
+deep_causality_cfd/studies/traj_fs3_clock/README.md
+  s_bd8f90dda752d1::t_b357086422183b 49
+openspec/changes/archive-notes.md
+  s_bd8f90dda752d1::t_b357086422183b 124
+lean/README.md
+  s_bd8f90dda752d1::t_b357086422183b 73
+openspec/specs/plume-obstruction-stage/spec.md
+  s_bd8f90dda752d1::t_b357086422183b 13
+deep_causality/src/traits/causable_graph/graph_reasoning/mod.rs
+  s_bd8f90dda752d1::t_b357086422183b 23
+deep_causality_cfd/verification/dec_taylor_green_re1600_verification/README.md
+  s_bd8f90dda752d1::t_b357086422183b 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c275243f9255fdd4da3d4fef882cb70126d6c9cb",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
