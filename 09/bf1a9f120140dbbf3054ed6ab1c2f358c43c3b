@@ -1,0 +1,14 @@
+deep_causality_unified_math/README.md
+  h_080fb89ca1f0c4 8,11,17,39-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "09bf1a9f120140dbbf3054ed6ab1c2f358c43c3b",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
