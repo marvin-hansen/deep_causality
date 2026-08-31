@@ -1,0 +1,26 @@
+openspec/changes/add-lax-monoidal-applicative/specs/haft-vec-traversable/spec.md
+  s_bd8f90dda752d1::t_4e8f5faaaa0a60 3-4,6,8,10-11,13,15-16,18-19,21,23-24,26-27
+deep_causality_unified_math/deep_causality_haft/src/extensions/hkt_vec_ext.rs
+  s_bd8f90dda752d1::t_b615d51c703123 155-167
+openspec/changes/add-lax-monoidal-applicative/tasks.md
+  s_bd8f90dda752d1::t_11934e113b1961 48,50-62
+openspec/changes/add-lax-monoidal-applicative/design.md
+  s_bd8f90dda752d1::t_11934e113b1961 12,112-148
+  s_bd8f90dda752d1::t_833933b1c2b44a 149
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "158eb5870b3febac0467fe1efd4b5804df154b47",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
