@@ -1,0 +1,42 @@
+deep_causality_unified_math/deep_causality_num_dual/src/dual/dual_number/mod.rs
+  s_bd8f90dda752d1::t_3aec7b76c91360 34-47,60
+deep_causality_unified_math/deep_causality_num_dual/BUILD.bazel
+  s_bd8f90dda752d1::t_90c2d8b83d4ba7 16
+deep_causality_unified_math/deep_causality_num_dual/tests/mod.rs
+  s_bd8f90dda752d1::t_3a7ad382a00a51 9-10
+deep_causality_unified_math/deep_causality_num_dual/src/extensions/hkt_dual.rs
+  s_bd8f90dda752d1::t_f69f7f17a633f8 1-88
+deep_causality_unified_math/deep_causality_num_dual/tests/extensions/mod.rs
+  s_bd8f90dda752d1::t_3a7ad382a00a51 1-6
+deep_causality_unified_math/deep_causality_num_dual/tests/BUILD.bazel
+  s_bd8f90dda752d1::t_867767c6b629dc 48-62
+deep_causality_unified_math/deep_causality_num_dual/Cargo.toml
+  s_bd8f90dda752d1::t_90c2d8b83d4ba7 31-32,44-45
+  s_bd8f90dda752d1::t_a53da76374f5ad 46-48
+deep_causality_unified_math/deep_causality_num_dual/src/lib.rs
+  s_bd8f90dda752d1::t_f69f7f17a633f8 15,20-23
+deep_causality_unified_math/deep_causality_num_dual/tests/extensions/hkt_dual_tests.rs
+  s_bd8f90dda752d1::t_3a7ad382a00a51 1-254
+openspec/changes/add-lax-monoidal-applicative/tasks.md
+  s_bd8f90dda752d1::t_5b870772921dba 36-46
+deep_causality_unified_math/deep_causality_num_dual/src/extensions/mod.rs
+  s_bd8f90dda752d1::t_f69f7f17a633f8 1-75
+Cargo.lock
+  s_bd8f90dda752d1::t_f5ace4fc2b9e10 718
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "36f7659c206c7463b01414347d47e919d4587240",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
