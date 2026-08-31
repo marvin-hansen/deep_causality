@@ -1,0 +1,50 @@
+deep_causality_unified_math/deep_causality_haft/src/monad/monoidal_merge.rs
+  s_bd8f90dda752d1::t_b502ad8afd9e57 24
+openspec/specs/haft-monoid-markers/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-44
+openspec/specs/num-dual-hkt-witness/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-77
+deep_causality_unified_math/deep_causality_haft/src/extensions/hkt_vec_ext.rs
+  s_bd8f90dda752d1::t_b502ad8afd9e57 167
+lean/DeepCausalityFormal/Haft/MonoidalMerge.lean
+  s_bd8f90dda752d1::t_b502ad8afd9e57 25
+openspec/specs/haft-monoidal-applicative/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-52
+deep_causality_unified_math/deep_causality_haft/src/lax_monoidal/mod.rs
+  s_bd8f90dda752d1::t_b502ad8afd9e57 38
+deep_causality_unified_math/deep_causality_num_complex/src/extensions/mod.rs
+  s_bd8f90dda752d1::t_b502ad8afd9e57 40
+openspec/specs/haft-vec-traversable/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-36
+openspec/specs/haft-lax-monoidal-formalization/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-65
+openspec/notes/unified_math/unified_math_gaps.md
+  s_bd8f90dda752d1::t_b502ad8afd9e57 251,278
+openspec/specs/haft-lax-monoidal/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-57
+deep_causality_unified_math/deep_causality_num_dual/src/extensions/mod.rs
+  s_bd8f90dda752d1::t_b502ad8afd9e57 63
+openspec/specs/cayley-dickson-monoidal-applicative/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 1-44
+openspec/notes/archive/hkt_gat/monoidal-applicative.md
+  s_bd8f90dda752d1::t_b502ad8afd9e57 1-606
+openspec/specs/haft-formalization-docs/spec.md
+  s_bd8f90dda752d1::t_39e911ad481673 8,12,20,23,29-31
+  s_bd8f90dda752d1::t_56abb6d6f6c626 32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "9471c619c66b82caf1020673ef0378ce95e09475",
+  "prompts": {},
+  "sessions": {
+    "s_bd8f90dda752d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dee1bbcb-3bfb-4b47-a580-a0e43527f142",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
