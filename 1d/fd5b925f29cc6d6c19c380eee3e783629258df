@@ -1,0 +1,107 @@
+examples/avionics_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 61-73
+deep_causality_unified_math/deep_causality_fft/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 55,58,61,64,67,71
+deep_causality_unified_math/deep_causality_tensor/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 35,38,41,44,47,50,53,56-57
+deep_causality_unified_math/deep_causality_num_complex/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 35,38,41
+  s_40060a5dffb564::t_e9e880a1ac3784 28
+examples/classical_causality_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-15
+examples/starter_example/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 14
+examples/causal_discovery_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 14-19,22
+deep_causality_unified_math/deep_causality_topology/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 46,50,53,56,59-60,63,66,69,72,75-76,79-80,83-84,87-88
+deep_causality_ethos/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 40,43
+deep_causality_cfd/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 65,68,71,74,77,80,83,86,89,92,95,99,102,105,108-109
+ultragraph/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 38-39
+examples/medicine_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 15-20
+examples/csm_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-14
+deep_causality_unified_math/deep_causality_num_rational/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 35,38
+deep_causality_unified_math/deep_causality_linear/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 34,37,40,43-44,47-48
+examples/mathematics_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-25
+examples/causal_correction_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-15
+examples/causal_counterfactual_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-15
+deep_causality_unified_math/deep_causality_homology/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 36,39
+examples/tokio_example/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 14-15
+deep_causality_discovery/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 32,35-36,39-40,43-44,47-48,51,54-55,58-59
+deep_causality_unified_math/deep_causality_multivector/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 35,38,41,44,47,50,53,56
+examples/causal_uncertain_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-15
+deep_causality/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 45-46,49,52-53,56-57,60,63-64,67,70
+deep_causality_unified_math/deep_causality_rand/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 29,32,46
+deep_causality_quantum/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 45,49,52,55,58,61,64,67,70,73,76,79,82
+deep_causality_unified_math/deep_causality_num_dual/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 35,38,41
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 33,39-40,43-44,47-48,51-52
+examples/chronometric_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13,15-19
+examples/material_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-16
+examples/physics_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 15-28
+examples/quantum_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-22
+deep_causality_core/Cargo.toml
+  s_40060a5dffb564::t_93721135964100 33
+deep_causality_file/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 28-29,32-33,36-37,41,44
+deep_causality_algorithms/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 30-31,34-35,38-39,42,45,48-49,52,67
+deep_causality_data_structures/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 54-55
+deep_causality_unified_math/deep_causality_calculus/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 40,43,46,49
+examples/core_examples/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 13-14
+deep_causality_unified_math/deep_causality_haft/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 35
+Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 31-34,42-43,45,47-48,51,54-55,59,64-65,68,70-85
+  s_40060a5dffb564::t_566fbd991a29c3 50,58,61
+  s_40060a5dffb564::t_52e33ba58d6ddc 67
+  s_40060a5dffb564::t_3e112c19cab15e 44,46,49,52-53,56-57,60,62-63,66,69
+  s_40060a5dffb564::t_7ce1ee0737bc22 35-41
+  s_40060a5dffb564::t_81215f041dece6 86
+deep_causality_physics/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 51-52,55-56,59-60,63-64,67-68,71-72,75-76,79-80,83-84,87,91,94-95,98,101-102
+deep_causality_unified_math/deep_causality_algebra/Cargo.toml
+  s_40060a5dffb564::t_1dabeea707e73f 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "1dfd5b925f29cc6d6c19c380eee3e783629258df",
+  "prompts": {},
+  "sessions": {
+    "s_40060a5dffb564": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc7f97f7-4f2b-4b6b-87bf-173c24c70d8d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
