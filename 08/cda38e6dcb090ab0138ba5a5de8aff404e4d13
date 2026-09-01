@@ -1,0 +1,49 @@
+deep_causality/BUILD.bazel
+  s_40060a5dffb564::t_da53ec1249b2be 652-669
+  s_40060a5dffb564::t_088309ad93c8de 136
+deep_causality_unified_math/deep_causality_topology/tests/types/lattice_complex/mod.rs
+  s_40060a5dffb564::t_c04888626b877f 18
+deep_causality_discovery/BUILD.bazel
+  s_40060a5dffb564::t_088309ad93c8de 142
+deep_causality_unified_math/deep_causality_num_rational/BUILD.bazel
+  s_40060a5dffb564::t_da53ec1249b2be 70-87
+deep_causality_ethos/tests/types/effect_ethos/mod.rs
+  s_40060a5dffb564::t_97b6bf6b73a05d 12
+deep_causality_discovery/tests/types/data_loader/mod.rs
+  s_40060a5dffb564::t_97b6bf6b73a05d 8
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain/mod.rs
+  s_40060a5dffb564::t_97b6bf6b73a05d 17
+deep_causality/tests/types/csm_types/csm/mod.rs
+  s_40060a5dffb564::t_97b6bf6b73a05d 10
+deep_causality_data_structures/tests/grid_type/mod.rs
+  s_40060a5dffb564::t_97b6bf6b73a05d 11
+deep_causality_unified_math/deep_causality_num_complex/BUILD.bazel
+  s_40060a5dffb564::t_da53ec1249b2be 108-125
+deep_causality_unified_math/deep_causality_topology/tests/types/cell_complex/mod.rs
+  s_40060a5dffb564::t_c04888626b877f 12
+deep_causality_unified_math/deep_causality_linear/BUILD.bazel
+  s_40060a5dffb564::t_088309ad93c8de 80
+examples/causal_discovery_examples/BUILD.bazel
+  s_40060a5dffb564::t_93a0d2ac21a645 114-128
+  s_40060a5dffb564::t_e026099a45fc31 109-113
+deep_causality/tests/traits/observable/mod.rs
+  s_40060a5dffb564::t_97b6bf6b73a05d 6
+openspec/notes/archive/bazel/rules-rs-migration.md
+  s_40060a5dffb564::t_0fb77884eaea0b 3-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "08cda38e6dcb090ab0138ba5a5de8aff404e4d13",
+  "prompts": {},
+  "sessions": {
+    "s_40060a5dffb564": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc7f97f7-4f2b-4b6b-87bf-173c24c70d8d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
