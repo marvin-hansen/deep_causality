@@ -1,0 +1,153 @@
+deep_causality_unified_math/deep_causality_homology/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 84-89
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,15,21,37-83,90
+deep_causality_unified_math/deep_causality_rand/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,14,19,24,40-159,165
+  s_40060a5dffb564::t_600b03522aed40 160-164
+deep_causality_unified_math/deep_causality_topology/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,17,33-512,518
+  s_40060a5dffb564::t_600b03522aed40 513-517
+examples/physics_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37,45-49,57-61,69-73,81-85,93-97,105-109,117-121,129-133,141-145,153-157
+deep_causality_algorithms/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-4,11,13,18,151-177,179-217
+  s_40060a5dffb564::t_a00ae7ef4e2af9 47-51,61-65,78-82,95-99,112-116,129-133,146-150
+  s_40060a5dffb564::t_600b03522aed40 218-222
+deep_causality_par/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 63-67
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,17,33-62,68
+deep_causality_quantum/BUILD.bazel
+  s_40060a5dffb564::t_1ae81d9cf5b7cd 25-30,33
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,68-245,251
+  s_40060a5dffb564::t_600b03522aed40 246-250
+deep_causality_ethos/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 246-250
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,15,20,36-245,251
+deep_causality_unified_math/deep_causality_tensor/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,17,33-81,87
+  s_40060a5dffb564::t_600b03522aed40 82-86
+examples/csm_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37
+examples/material_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25
+deep_causality_unified_math/deep_causality_num_dual/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,18,34-98,105
+  s_40060a5dffb564::t_600b03522aed40 99-104
+examples/chronometric_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-3,12,21,23-27
+  s_40060a5dffb564::t_df4d5ce3a2b9b6 8,10
+examples/avionics_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-3,12,21-27,36-42,51-57,66-72,81-87,96,98-102,111,113-117,126,128-132,141,143-147,156,158-162,171,173-177,186,188-192
+  s_40060a5dffb564::t_df4d5ce3a2b9b6 8,10
+examples/core_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37,45-49
+ultragraph/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-4,11,13,18,49-58,60-81
+  s_40060a5dffb564::t_a00ae7ef4e2af9 44-48
+  s_40060a5dffb564::t_600b03522aed40 82-86
+examples/starter_example/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13
+deep_causality_unified_math/deep_causality_ast/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-2,16,32-43
+  s_40060a5dffb564::t_600b03522aed40 3,44-48
+  s_40060a5dffb564::t_540b122c778b0e 49
+deep_causality_unified_math/deep_causality_num_rational/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,18,34-62,69
+  s_40060a5dffb564::t_600b03522aed40 63-68
+deep_causality_unified_math/deep_causality_fft/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 156-160
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,15,20,36-155,161
+examples/causal_counterfactual_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-3,12,21,23-27,36,38-42,51,53-57,66,68-72,81,83-87
+  s_40060a5dffb564::t_df4d5ce3a2b9b6 8,10
+deep_causality_discovery/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 278-282
+  s_40060a5dffb564::t_a6e767b35e4cac 1-4,11,13,18,49-201,203-277
+  s_40060a5dffb564::t_a00ae7ef4e2af9 44-48
+deep_causality_unified_math/deep_causality_num/BUILD.bazel
+  s_40060a5dffb564::t_1ae81d9cf5b7cd 22-26
+  s_40060a5dffb564::t_600b03522aed40 230-234
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,50-229,235
+deep_causality/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 646-650
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,15,20,36-645,651
+examples/classical_causality_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37,45-49,57-61,69-73,81-85,93-97,105-109,117-121
+examples/causal_discovery_examples/BUILD.bazel
+  s_40060a5dffb564::t_df4d5ce3a2b9b6 12,14
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-3,16,25-31,40-46,55-61,70,72-76,85,87-91,100,102-106
+deep_causality_unified_math/deep_causality_linear/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 161-166
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,15,21,37-160,167
+deep_causality_unified_math/deep_causality_haft/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,16,23,39-200,206
+  s_40060a5dffb564::t_600b03522aed40 201-205
+MODULE.bazel
+  s_40060a5dffb564::t_b4cbe3a0c4b099 24
+examples/quantum_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37,45-49,57-61,69-73,81-85
+deep_causality_core/BUILD.bazel
+  s_40060a5dffb564::t_ad0081caf19c02 322
+  s_40060a5dffb564::t_a61084e562df3b 1-3,10,16,21,45-321,323,330
+  s_40060a5dffb564::t_600b03522aed40 324-329
+deep_causality_unified_math/deep_causality_multivector/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 139-143
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,17,33-138,144
+deep_causality_unified_math/deep_causality_uncertain/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 243-247
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,17,33-242,248
+deep_causality_physics/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,14,21,26,52-586,592
+  s_40060a5dffb564::t_600b03522aed40 587-591
+deep_causality_data_structures/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-4,11,13,18,77-85,87-107
+  s_40060a5dffb564::t_a00ae7ef4e2af9 44-48,58-62,72-76
+  s_40060a5dffb564::t_600b03522aed40 108-112
+examples/causal_uncertain_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37
+deep_causality_unified_math/deep_causality_calculus/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 93-97
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,16,21,45-92,98
+Bazel.md
+  s_40060a5dffb564::t_b9004e5fbbe27f 48,52-54
+examples/medicine_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13,21-25,33-37,45-49,57-61,69-73
+examples/tokio_example/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-2,9-13
+deep_causality_file/BUILD.bazel
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,17,33-150,156
+  s_40060a5dffb564::t_600b03522aed40 151-155
+deep_causality_unified_math/deep_causality_algebra/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 101-105
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,18,34-100,106
+examples/causal_correction_examples/BUILD.bazel
+  s_40060a5dffb564::t_df4d5ce3a2b9b6 8,10
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-3,12,21,23-27,36,38-42,51,53-57,66,68-72,81,83-87
+deep_causality_unified_math/deep_causality_num_complex/BUILD.bazel
+  s_40060a5dffb564::t_600b03522aed40 101-106
+  s_40060a5dffb564::t_a6e767b35e4cac 1-3,10,12,18,34-100,107
+examples/mathematics_examples/BUILD.bazel
+  s_40060a5dffb564::t_01f1f3a88f2cd2 1-3,15,24-30,39-45,54-60,69-75,84-90,99-105,114-120,129-135,144-150,159-165,174-180,189-195,204-210,219,221-225,234,236-240,249,251-255,264,266-270,279-285,294-300,309-315,324-330,339-345,354-360,369-375,384-390,399-405,414-420,429-435,444-450,459-465,474-480,489-495,504-510,519-525,534-540,549-555,564-570,579-585,594-600,609-615,624-630,639-645,654-660,669-675,684-690,699-705,714-720
+  s_40060a5dffb564::t_df4d5ce3a2b9b6 11,13
+deep_causality_cfd/BUILD.bazel
+  s_40060a5dffb564::t_a00ae7ef4e2af9 54-58,68-72,82-86,96-100,110-114,124-128,138-142,152-156,166-170,180-184,194-198,208-212,222-226,236-240,250-254,264-268,278-282,292-296,306-310,320-324,334-338,348-352,362-366,376-380,390-394,404-408,418-422,432-436
+  s_40060a5dffb564::t_0bea614bc52f5d 22
+  s_40060a5dffb564::t_600b03522aed40 778-782
+  s_40060a5dffb564::t_a6e767b35e4cac 1-5,437-773,775-777
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "a7f996efc7b97a53da10e94fed3b45de6b6d6441",
+  "prompts": {},
+  "sessions": {
+    "s_40060a5dffb564": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc7f97f7-4f2b-4b6b-87bf-173c24c70d8d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
