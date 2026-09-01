@@ -1,0 +1,22 @@
+lean/THEOREM_MAP.md
+  s_d0e63ba39c4351::t_564476b036a398 262
+deep_causality_quantum/tests/formalization_lean/partial_trace_tests.rs
+  s_d0e63ba39c4351::t_8fce3bc94796ec 97,110-114,117
+  s_d0e63ba39c4351::t_c3ef74289e695e 115-116
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "d06dafd2d49eeb917d98b32a10d3f5b502696786",
+  "prompts": {},
+  "sessions": {
+    "s_d0e63ba39c4351": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac7f8dd1-f584-41bd-bbf1-ba57b3ccc895",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
