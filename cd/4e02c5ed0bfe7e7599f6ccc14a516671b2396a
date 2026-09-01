@@ -1,0 +1,25 @@
+openspec/notes/bazel/rules-rs-migration.md
+  s_40060a5dffb564::t_0d1a8cb08eb069 15,151,200
+  s_40060a5dffb564::t_e27ce99022ddca 1-14,16-73,77-150,152-199,201-300
+  s_40060a5dffb564::t_8d72a7bed6ed6f 74-76
+MODULE.bazel
+  s_40060a5dffb564::t_69d04a6d652458 11
+MODULE.bazel.lock
+  s_40060a5dffb564::t_14c7f771f44807 92-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "cd4e02c5ed0bfe7e7599f6ccc14a516671b2396a",
+  "prompts": {},
+  "sessions": {
+    "s_40060a5dffb564": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc7f97f7-4f2b-4b6b-87bf-173c24c70d8d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
