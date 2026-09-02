@@ -1,0 +1,63 @@
+deep_causality_quantum/tests/error/quantum_error_tests.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 59-61
+  s_8d1a45b74b2107::t_f23150b4d24867 58
+deep_causality_quantum/tests/types/design/experiment_design_tests.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 1-196
+deep_causality_quantum/src/lib.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 33
+deep_causality_quantum/tests/types/mod.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 11-12
+deep_causality_quantum/src/types/design/experiment_design.rs
+  s_8d1a45b74b2107::t_7dc80d1e41a6bf 29
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 1-28,30-357
+deep_causality_quantum/BUILD.bazel
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 161-182
+deep_causality_quantum/tests/types/design/adjudicate_tests.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 1-198
+deep_causality_quantum/src/error/quantum_error.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 72-78,173-177,253-256
+  s_8d1a45b74b2107::t_595b0ede3aed82 257
+deep_causality_quantum/src/types/design/adjudicate.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 1-305
+deep_causality_quantum/tests/types/design/mod.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 1-9
+openspec/changes/add-qcl/tasks.md
+  s_8d1a45b74b2107::t_c053f8c84fd733 94,96,98,100,102
+deep_causality_quantum/src/types/design/mod.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 1-23
+deep_causality_quantum/src/types/mod.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 9
+deep_causality_quantum/src/types/qpu/shot_estimate.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 111-113,115,119-134
+  s_8d1a45b74b2107::t_5c11238ce7d816 135
+deep_causality_quantum/src/types/decision/check.rs
+  s_8d1a45b74b2107::t_6d92ca576bcb4e 63-87
+docs/Conference/2026_CausalDataScienceMeeting/organizer_research.md
+  s_4aad2d1da59bfc::t_88ff5b47946192 1-168
+docs/Conference/2026_CausalDataScienceMeeting/proposal.md
+  s_4aad2d1da59bfc::t_38a06ef4f08b63 1-188
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "021b3e854488b519b7e602fba664a7a32ff06967",
+  "prompts": {},
+  "sessions": {
+    "s_4aad2d1da59bfc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ad4c6460-7366-46f0-8ef1-264befde7297",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
