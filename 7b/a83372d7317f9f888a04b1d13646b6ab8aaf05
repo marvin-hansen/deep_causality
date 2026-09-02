@@ -1,0 +1,58 @@
+openspec/notes/quantum/qcl-gaps.md
+  s_8d1a45b74b2107::t_dbe0a653714788 25-34,302-306,447-453,527-534,587-599,720-731,1236-1238
+openspec/notes/quantum/qcl-corrections.md
+  s_8d1a45b74b2107::t_29cd17272bbd79 20-468
+  s_8d1a45b74b2107::t_db1a305412547a 1-19
+openspec/changes/add-qcl/specs/qcl-hypothesis/spec.md
+  s_8d1a45b74b2107::t_4ddcb61b1b4ebc 31,33,44-88,119,121,123-124,131-143,189-191,287-301,320-333
+openspec/changes/add-qcl/specs/qcl-experiment-design/spec.md
+  s_8d1a45b74b2107::t_f4c4034f44874d 16-17,21-23,44-49,65-72
+deep_causality_quantum/tests/types/qcm/markov_freeze_tests.rs
+  s_8d1a45b74b2107::t_c1da898bd1156b 320-325,333-334
+openspec/changes/add-qcl/tasks.md
+  s_8d1a45b74b2107::t_afaad77efd99da 23-35,49-51,75-77,80-82,94-95,109-113,121-123,125-126
+openspec/changes/add-qcl/proposal.md
+  s_8d1a45b74b2107::t_fded4b3c380242 31-42,52-59,72-74,80-83,109-117
+deep_causality_quantum/tests/types/qcm/faithfulness_tests.rs
+  s_8d1a45b74b2107::t_7e4beb5bec77da 8-20,25-26,28-30,34-48,50-52,64-87,91,93-94,96-105,112-133,137,149-182,184-203,206-208
+  s_8d1a45b74b2107::t_d74bbed96a2fbd 88-90,92
+  s_8d1a45b74b2107::t_a4e5817c0aff6a 209
+deep_causality_quantum/src/error/quantum_error.rs
+  s_8d1a45b74b2107::t_dcf31e8fdbe26b 49-58
+openspec/changes/add-qcl/specs/qcl-pipeline/spec.md
+  s_8d1a45b74b2107::t_f4c4034f44874d 55,75-77,82-88,93-103,123
+openspec/changes/add-qcl/design.md
+  s_8d1a45b74b2107::t_48ae52e1337faa 25-27,50-56,68-79,88,115-122,160-166,176-180,229-248,254-257,280-318,321-325
+openspec/notes/quantum/qcl-design-note.md
+  s_8d1a45b74b2107::t_da4a5edf33f8a4 1025
+  s_8d1a45b74b2107::t_be1b4147660f26 16-29,85-94,147-156,179,198-203,364-375,419-421,428-443,496-508,819,866,875,889,893-899,918-930,1036-1039,1102-1107
+openspec/changes/add-qcl/specs/qcl-evidence/spec.md
+  s_8d1a45b74b2107::t_f4c4034f44874d 30
+deep_causality_quantum/src/types/qcm/faithfulness.rs
+  s_8d1a45b74b2107::t_74e3e3f82159ae 6-10,12-32,157-159,186-199,211-213,216-218,220-221
+  s_8d1a45b74b2107::t_7e4beb5bec77da 227-228
+openspec/changes/add-qcl/specs/qcl-code-checks/spec.md
+  s_8d1a45b74b2107::t_d0cbee8ab82381 87-88,136-138,148-156,170,177-188,226-233,244,249-351
+  s_8d1a45b74b2107::t_b969525511cec3 352
+openspec/changes/add-qcl/specs/qcl-decision-form/spec.md
+  s_8d1a45b74b2107::t_f4c4034f44874d 36-58,70
+openspec/notes/quantum/example-crosstalk-attribution.md
+  s_8d1a45b74b2107::t_da4a5edf33f8a4 263
+  s_8d1a45b74b2107::t_89769d2f1306ba 219,225,228-249
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "7ba83372d7317f9f888a04b1d13646b6ab8aaf05",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
