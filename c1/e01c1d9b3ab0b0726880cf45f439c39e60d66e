@@ -1,0 +1,33 @@
+deep_causality_quantum/tests/types/qcm/mod.rs
+  s_8d1a45b74b2107::t_fefbcadc275ef8 12-13
+openspec/changes/add-qcl/tasks.md
+  s_8d1a45b74b2107::t_cbd15d4db490e2 78,80,83,85,87-90
+deep_causality_quantum/tests/types/qcm/hypothesis_tests.rs
+  s_8d1a45b74b2107::t_fefbcadc275ef8 1-56,64-542
+  s_8d1a45b74b2107::t_d2aace61d80896 57-63
+deep_causality_quantum/src/error/quantum_error.rs
+  s_8d1a45b74b2107::t_fefbcadc275ef8 72-78,166-170,241
+deep_causality_quantum/src/types/qcm/hypothesis.rs
+  s_8d1a45b74b2107::t_fefbcadc275ef8 1-605
+deep_causality_quantum/tests/error/quantum_error_tests.rs
+  s_8d1a45b74b2107::t_fefbcadc275ef8 59-61
+  s_8d1a45b74b2107::t_1635df12485e32 58
+deep_causality_quantum/src/types/qcm/mod.rs
+  s_8d1a45b74b2107::t_fefbcadc275ef8 13,19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c1e01c1d9b3ab0b0726880cf45f439c39e60d66e",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
