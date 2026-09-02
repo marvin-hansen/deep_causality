@@ -1,0 +1,22 @@
+Cargo.lock
+  h_080fb89ca1f0c4 125,223,225,374,376,756,877,879,923,925,953,955,959,961,965,967,1170,1172,1206,1208,1278,1280,1426,1428,1522,1524,1578,1580,1915,1955,1957,2019,2021,2103,2183,2196,2198
+MODULE.bazel.lock
+  h_080fb89ca1f0c4 698,720,744,756,767,770,772,795,820,843,865,877,886,974,984,1019
+deep_causality_quantum/Cargo.toml
+  h_080fb89ca1f0c4 3
+scripts/build.sh
+  h_080fb89ca1f0c4 11
+scripts/test.sh
+  h_080fb89ca1f0c4 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "9ecacdf2c2fe112ee675784bbd39ca4f34f5254b",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
