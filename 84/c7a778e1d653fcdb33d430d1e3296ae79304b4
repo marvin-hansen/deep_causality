@@ -1,0 +1,23 @@
+.github/actions/secret-scanner/excluded_lines.patterns
+  s_50eb190d64b91c::t_0082766e35869a 1-3
+.github/actions/secret-scanner/excluded_files.patterns
+  s_50eb190d64b91c::t_c92639e370c07c 1-19
+.github/actions/secret-scanner/excluded_secrets.patterns
+  s_50eb190d64b91c::t_355b2b253e443b 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "84c7a778e1d653fcdb33d430d1e3296ae79304b4",
+  "prompts": {},
+  "sessions": {
+    "s_50eb190d64b91c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a6656ef1-ec61-4c00-84f7-291d3b5ea4f6",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
