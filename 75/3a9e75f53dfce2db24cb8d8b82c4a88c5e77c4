@@ -1,0 +1,14 @@
+REUSE.toml
+  h_080fb89ca1f0c4 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "753a9e75f53dfce2db24cb8d8b82c4a88c5e77c4",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
