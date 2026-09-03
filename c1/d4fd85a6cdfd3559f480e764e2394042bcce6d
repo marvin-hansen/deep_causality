@@ -1,0 +1,129 @@
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_algo.rs
+  s_85e2687f045cb8::t_c3605ea2777499 293
+  s_85e2687f045cb8::t_1266d4a3e99b52 359
+deep_causality_algorithms/tests/dag_sampling/sample_branch_tests.rs
+  s_85e2687f045cb8::t_d26feb7b055981 60,296,358
+deep_causality_algorithms/src/dag_sampling/sample.rs
+  s_85e2687f045cb8::t_633a153bbf288b 523-524,622,632-635
+  s_85e2687f045cb8::t_642aacba931497 636
+openspec/changes/unified-math-next/notes/c1-meek.md
+  s_85e2687f045cb8::t_9d2efd70806d51 238-262
+  s_85e2687f045cb8::t_5c8e82b63cebc6 81-125
+  s_85e2687f045cb8::t_4dadabf49cf52b 77-80
+  s_85e2687f045cb8::t_9174d1302cf2f2 207-237
+  s_85e2687f045cb8::t_1a1325378f0c20 126-206
+  s_85e2687f045cb8::t_0a0da6d0eb7384 1-76
+deep_causality_unified_math/deep_causality_topology/src/types/mixed_graph/mod.rs
+  s_85e2687f045cb8::t_7dacec4fc59f04 20,25
+deep_causality_unified_math/deep_causality_topology/src/types/mixed_graph/meek/rules.rs
+  s_85e2687f045cb8::t_d10501d1bfd384 6-65
+  s_85e2687f045cb8::t_74851d76a33b96 1-5,66
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_mec.rs
+  s_85e2687f045cb8::t_1950db12e3472b 49-50,122-126
+  s_85e2687f045cb8::t_f993b7f04ee240 127
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_boss_cpdag.rs
+  s_85e2687f045cb8::t_fbee8482c22583 15,100
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_0de702afcfe793 143-149
+  s_85e2687f045cb8::t_9174d1302cf2f2 33
+  s_85e2687f045cb8::t_b41fac7ef64024 17-19
+  s_85e2687f045cb8::t_d1998ceedab7d3 29-32,34-35
+  s_85e2687f045cb8::t_9d2efd70806d51 36-37
+  s_85e2687f045cb8::t_0487a0d017bfb6 25
+  s_85e2687f045cb8::t_5c8e82b63cebc6 26-28
+  s_85e2687f045cb8::t_903f0d576630b6 23-24
+openspec/changes/unified-math-next/specs/meek-orientation-completeness/spec.md
+  s_85e2687f045cb8::t_08a5892d1ee6b1 148,150,152-153,155-166,168-173,175-177
+deep_causality_algorithms/src/dag_sampling/mod.rs
+  s_85e2687f045cb8::t_5fbfeeb8662e3c 76
+  s_85e2687f045cb8::t_b272d4fccdd36b 78
+  s_85e2687f045cb8::t_633a153bbf288b 103,105-107,109,116
+  s_85e2687f045cb8::t_9aeac8205b5b28 108
+deep_causality_algorithms/src/causal_discovery/brcd/mod.rs
+  s_85e2687f045cb8::t_fbee8482c22583 13
+openspec/changes/unified-math-next/proposal.md
+  s_85e2687f045cb8::t_903f0d576630b6 12,20-29
+deep_causality_unified_math/deep_causality_topology/tests/types/mixed_graph/meek_parity_tests.rs
+  s_85e2687f045cb8::t_fbee8482c22583 11-13
+  s_85e2687f045cb8::t_0bec96fd93629f 1-10,14-104
+openspec/changes/unified-math-next/tdd/corner-cases.md
+  s_85e2687f045cb8::t_6a5f7bdd1341c3 1-86
+openspec/changes/unified-math-next/specs/unified-math-tdd-protocol/spec.md
+  s_85e2687f045cb8::t_0de702afcfe793 62,68-71,81-83
+  s_85e2687f045cb8::t_552876ca9ec254 84
+deep_causality_algorithms/tests/causal_discovery/brcd/mapconfig_tests.rs
+  s_85e2687f045cb8::t_62926ed17d1826 510
+deep_causality_algorithms/tests/causal_discovery/brcd/mec_tests.rs
+  s_85e2687f045cb8::t_c101f30b5af7e5 260-267,273-277
+deep_causality_algorithms/verification/brcd/brcd_eval_accuracy_compute.rs
+  s_85e2687f045cb8::t_62926ed17d1826 582
+deep_causality_unified_math/deep_causality_topology/tests/types/mixed_graph/meek_tests.rs
+  s_85e2687f045cb8::t_d6bfd1d1d8125e 218
+  s_85e2687f045cb8::t_501f10b47f2f93 8-9
+  s_85e2687f045cb8::t_3037678446e7b6 1-7,10-175,183,185,188,190,192,195-217,219-280,313
+  s_85e2687f045cb8::t_467e17c654afd9 176-182,184,186-187,189,191,193-194,281-312
+deep_causality_unified_math/deep_causality_topology/tests/types/mixed_graph/mod.rs
+  s_85e2687f045cb8::t_501f10b47f2f93 9-10,13-14
+  s_85e2687f045cb8::t_0bec96fd93629f 11-12
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_validity.rs
+  s_85e2687f045cb8::t_fbee8482c22583 71
+deep_causality_algorithms/tests/dag_sampling/count_tests.rs
+  s_85e2687f045cb8::t_8589de27e9022f 17,393-426
+  s_85e2687f045cb8::t_62926ed17d1826 61,84,94,102,110,118,127,139,149,286,345,386
+  s_85e2687f045cb8::t_d26feb7b055981 346
+deep_causality_algorithms/BUILD.bazel
+  s_85e2687f045cb8::t_410ead82f77d01 37-54
+deep_causality_algorithms/Cargo.toml
+  s_85e2687f045cb8::t_a9b7390660e47e 84-89
+openspec/changes/unified-math-next/tdd/defect-classes.md
+  s_85e2687f045cb8::t_2ce9551fa5faa2 1-86
+openspec/changes/unified-math-next/design.md
+  s_85e2687f045cb8::t_903f0d576630b6 90-94
+deep_causality_unified_math/deep_causality_topology/tests/types/mixed_graph/chordality_tests.rs
+  s_85e2687f045cb8::t_9f788f2d489147 1-39,43-108,111-137
+  s_85e2687f045cb8::t_442c57e3b8d1d5 40-42
+  s_85e2687f045cb8::t_d6bfd1d1d8125e 109-110
+deep_causality_unified_math/deep_causality_topology/src/types/mixed_graph/chordality/mod.rs
+  s_85e2687f045cb8::t_526b081a5d6fc2 6,8-9,11-13,15-16
+  s_85e2687f045cb8::t_1488ff0d253db9 1-5,7,10,14,17,20-23,25,32-33,36,118-119
+  s_85e2687f045cb8::t_815fb79b9910d8 24,34-35
+  s_85e2687f045cb8::t_3bb9468d1a03b5 19,26-31,37-117
+  s_85e2687f045cb8::t_de784eddb9fc2b 18
+deep_causality_unified_math/deep_causality_topology/src/types/mixed_graph/meek/mod.rs
+  s_85e2687f045cb8::t_2f327a96e63048 1-5,7,10,13,15,19-20,37,42,44,47,49,52,54-55,57,59,95-96
+  s_85e2687f045cb8::t_815fb79b9910d8 48,50-51,56,58
+  s_85e2687f045cb8::t_526b081a5d6fc2 6,8-9,11-12,14,16-18,21-36,38-41
+  s_85e2687f045cb8::t_9b6905e4c5b109 43,45-46,53,60-94
+deep_causality_algorithms/verification/brcd/verification_meek_r4.rs
+  s_85e2687f045cb8::t_eb7999a8843297 263,279,467-468,470-473,591-592,594-597,603-605,687-688,732,744
+  s_85e2687f045cb8::t_000b9747bae632 398,469,482-484,593,598-602,606-611,616-622,686,692-693,729-731,733-739,753-757
+  s_85e2687f045cb8::t_4ba38e03fadfbd 79-83
+  s_85e2687f045cb8::t_442c57e3b8d1d5 657
+  s_85e2687f045cb8::t_800c4ddb09c3b3 152
+  s_85e2687f045cb8::t_142e836420d99c 1-5,8,10,15,17,21,24,26,32,35-37,39-78,84-151,153-256,269,271-277,283-382,385-397,399-466,485-486,489-507,554-580,623-656,658,660-666,675-676,678-685,694-698,700-714,758-760,763-789
+  s_85e2687f045cb8::t_634625a09912bb 510,514-553,667-668,670-674,677
+  s_85e2687f045cb8::t_a476cc8a865787 474-481,581-590,689-691,715-716
+  s_85e2687f045cb8::t_0d5b344d540753 6-7,9,11-14,16,18-20,22-23,25,27-31,33-34,38,261-262,383-384,487-488,508-509,511-513
+  s_85e2687f045cb8::t_51a97615f70d64 257-260,264-268,270,278,280-282
+  s_85e2687f045cb8::t_17c63f2c65ff80 612-615,717-728,740-743,745-752
+  s_85e2687f045cb8::t_4dadabf49cf52b 659,669,761-762
+  s_85e2687f045cb8::t_9c156309469356 699
+openspec/changes/unified-math-next/tdd/anti-circularity.md
+  s_85e2687f045cb8::t_5b55abbed6f0ec 1-84
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c1d4fd85a6cdfd3559f480e764e2394042bcce6d",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
