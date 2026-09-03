@@ -1,0 +1,23 @@
+Cargo.toml
+  s_8d1a45b74b2107::t_b6c728eb395a1a 61
+Cargo.lock
+  s_8d1a45b74b2107::t_618bff95f7a811 701
+deep_causality_unified_math/deep_causality_num/Cargo.toml
+  s_8d1a45b74b2107::t_84ff3f0f8d6b2c 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "bd0cb760677d4cb86ba2507391045a0267eed5dd",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
