@@ -1,0 +1,36 @@
+openspec/changes/unified-math-next/proposal.md
+  s_85e2687f045cb8::t_3c5f4dcd2b6877 56-58,127-137
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_ed6e4f538f672c 50-70
+  s_85e2687f045cb8::t_23b3ad39c11338 48
+openspec/changes/unified-math-next/design.md
+  s_85e2687f045cb8::t_3c5f4dcd2b6877 284-292
+  s_85e2687f045cb8::t_90d9d6d11f7064 106-118
+AGENTS.md
+  s_85e2687f045cb8::t_3c5f4dcd2b6877 26
+  s_85e2687f045cb8::t_23b3ad39c11338 422
+  s_85e2687f045cb8::t_be68aae28bc120 27-29
+  s_85e2687f045cb8::t_a66494a8dc7f1f 420-421
+  s_85e2687f045cb8::t_86bf2564881fc5 423-425
+openspec/changes/unified-math-next/specs/real-bound-cbrt/spec.md
+  s_85e2687f045cb8::t_2e53848ddcfe51 15-23,84-87,127
+  s_85e2687f045cb8::t_90d9d6d11f7064 133-138,140-143,145-146,148-152,154-159,161
+openspec/changes/unified-math-next/specs/rand-realfield-sampling/spec.md
+  s_85e2687f045cb8::t_02a24751f74f58 57-64,74-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "20081f113380280a80ee216eab9192a35c0d8aa7",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
