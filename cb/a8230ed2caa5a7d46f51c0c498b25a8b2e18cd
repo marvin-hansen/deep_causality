@@ -1,0 +1,22 @@
+deep_causality_unified_math/README.md
+  s_8d1a45b74b2107::t_cf7549a554b9fa 157-159,162,168-171,173-176,182-185,187,189-191,194-200,204-208,212-223
+  s_8d1a45b74b2107::t_d3f1eb9e1b2c97 141-142
+  s_8d1a45b74b2107::t_e6303cffd60126 48,123-140,145-156,160-161,163-167,172,177-181,186,188,192-193,201-203,209-211,224-235,245
+  s_8d1a45b74b2107::t_4cac1081ae75ae 143-144
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "cba8230ed2caa5a7d46f51c0c498b25a8b2e18cd",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
