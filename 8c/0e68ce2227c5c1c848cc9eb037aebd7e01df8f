@@ -1,0 +1,21 @@
+Cargo.toml
+  s_85e2687f045cb8::t_3adf2cc1886588 27
+MODULE.bazel
+  s_85e2687f045cb8::t_8647dceec7cc61 32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "8c0e68ce2227c5c1c848cc9eb037aebd7e01df8f",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
