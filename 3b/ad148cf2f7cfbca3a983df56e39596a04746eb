@@ -1,0 +1,19 @@
+.github/workflows/secrets-gitleaks.yml
+  s_50eb190d64b91c::t_d67e24ba62dcf5 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "3bad148cf2f7cfbca3a983df56e39596a04746eb",
+  "prompts": {},
+  "sessions": {
+    "s_50eb190d64b91c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a6656ef1-ec61-4c00-84f7-291d3b5ea4f6",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
