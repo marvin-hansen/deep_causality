@@ -1,0 +1,28 @@
+deep_causality_unified_math/README.md
+  s_8d1a45b74b2107::t_9b6cbffb0ea04a 614-615,619
+  s_8d1a45b74b2107::t_a7c91f7560b70b 527-558,566-567,569-577,637-641
+  s_8d1a45b74b2107::t_1e9d28c9c01cb5 561-562,622,624-625,627-628
+  s_8d1a45b74b2107::t_ed3c26d544d4d8 361-362,407
+  s_8d1a45b74b2107::t_eefde2ecd3c491 88-110,256-257,259-360,363-388,390-404,406,414-419,421-452,454-525
+  s_8d1a45b74b2107::t_b70e08df1fb403 560,563,618,620,623,626
+  s_8d1a45b74b2107::t_e03841010a37bf 613
+  s_8d1a45b74b2107::t_553453cc59c969 559,564-565,568,578-585,589-612,616-617,621,629-636
+  s_8d1a45b74b2107::t_efa8c1a2d5a113 586-588
+  s_8d1a45b74b2107::t_f8679d1594389a 258,389,405,408-413,420,453,526
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "63f02453e1e2f911a86c7377161dc871f4948b73",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
