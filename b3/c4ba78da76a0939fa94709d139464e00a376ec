@@ -1,0 +1,19 @@
+deep_causality_unified_math/README.md
+  s_b632bb729d84f7::t_13feb8939f78fd 36-37,39-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "b3c4ba78da76a0939fa94709d139464e00a376ec",
+  "prompts": {},
+  "sessions": {
+    "s_b632bb729d84f7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a293ce9d05a4c183b",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
