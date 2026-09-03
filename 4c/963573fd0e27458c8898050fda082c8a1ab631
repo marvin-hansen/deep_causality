@@ -1,0 +1,22 @@
+openspec/notes/unified_math/unified_math_next.md
+  s_8d1a45b74b2107::t_3968840bc8c47d 221-223,402-405,409-410
+  s_8d1a45b74b2107::t_00e9ea1f69a73a 220
+  s_8d1a45b74b2107::t_8e894a23fc9e21 1-219,224-259,262-331,334-401,406-408,417-521
+  s_8d1a45b74b2107::t_ff0b9ec3df82d5 260-261,332-333,411-416
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "4c963573fd0e27458c8898050fda082c8a1ab631",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
