@@ -1,0 +1,81 @@
+deep_causality_quantum/src/types/qcode/clifford_action.rs
+  s_a3a299f255249f::t_7c71802c6a4794 380-384
+  s_a3a299f255249f::t_e345fc7f604ddf 334-336
+deep_causality_quantum/src/types/pipeline/control.rs
+  s_a3a299f255249f::t_c2085292b8519b 448-457
+openspec/changes/add-qcl/specs/qcl-pipeline/spec.md
+  s_a3a299f255249f::t_c2085292b8519b 298
+deep_causality_quantum/src/types/decision/check.rs
+  s_a3a299f255249f::t_c2085292b8519b 77,79-80
+deep_causality_unified_math/deep_causality_num/src/float/float_106_impl.rs
+  s_a3a299f255249f::t_a40bcbcfe5d52f 138,142-147
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_num_traits_tests.rs
+  s_a3a299f255249f::t_a40bcbcfe5d52f 62-67,108-113
+  s_a3a299f255249f::t_cf68d184eaeaa6 114
+deep_causality_quantum/src/types/qcm/hypothesis.rs
+  s_a3a299f255249f::t_c2085292b8519b 637
+deep_causality_quantum/tests/types/evidence/shot_estimate_tests.rs
+  s_a3a299f255249f::t_902df6ba6039d6 45-56
+  s_a3a299f255249f::t_c2085292b8519b 42-44,57-64
+deep_causality_quantum/tests/types/design/experiment_design_tests.rs
+  s_a3a299f255249f::t_c2085292b8519b 142-147
+deep_causality_unified_math/deep_causality_num/tests/casts/to_primitive/to_primitive_float_tests.rs
+  s_a3a299f255249f::t_97c25559de6fd8 70-74,387-391
+  s_a3a299f255249f::t_902df6ba6039d6 545-552
+  s_a3a299f255249f::t_c2085292b8519b 709,713,721,728
+deep_causality_quantum/src/types/decision/tolerance.rs
+  s_a3a299f255249f::t_c2085292b8519b 14-16
+deep_causality_quantum/tests/types/decision/check_tests.rs
+  s_a3a299f255249f::t_c2085292b8519b 171-177
+deep_causality_unified_math/deep_causality_num/src/float_106/traits_num.rs
+  s_a3a299f255249f::t_a40bcbcfe5d52f 21-26,28-33,37-38,40-49,81,86,91,96,101,106,111,116,121,126,131,136
+  s_a3a299f255249f::t_d9a0db515d386c 39
+deep_causality_quantum/src/types/qpu/shot_estimate.rs
+  s_a3a299f255249f::t_c2085292b8519b 47-51
+openspec/notes/unified_math/unified_math_next.md
+  s_a3a299f255249f::t_c2085292b8519b 177-178
+REUSE.toml
+  s_a3a299f255249f::t_c2085292b8519b 13-19
+.agents/skills/openspec-apply-change/SKILL.md
+  s_54bed47c366d28::t_52a432968b43a0 1-156
+.agents/skills/openspec-archive-change/SKILL.md
+  s_54bed47c366d28::t_4f5175419428e0 1-114
+.agents/skills/openspec-explore/SKILL.md
+  s_54bed47c366d28::t_c943ca06fc5585 1-288
+.agents/skills/openspec-propose/SKILL.md
+  s_54bed47c366d28::t_17fdae5e6ed153 1-110
+.agents/skills/source-command-opsx-apply/SKILL.md
+  s_54bed47c366d28::t_70056fc3ebe2f6 1-156
+.agents/skills/source-command-opsx-archive/SKILL.md
+  s_54bed47c366d28::t_9fa9b7fd4c04cb 1-161
+.agents/skills/source-command-opsx-explore/SKILL.md
+  s_54bed47c366d28::t_b616a9447990ac 1-177
+.agents/skills/source-command-opsx-propose/SKILL.md
+  s_54bed47c366d28::t_3a41cbf314c8db 1-110
+.gitignore
+  s_a3a299f255249f::t_ce18205d42b050 9-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "58769070a0b24886706206103434107e43dd1fa7",
+  "prompts": {},
+  "sessions": {
+    "s_54bed47c366d28": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0673c-ff1f-79c3-b180-57ef4dd7c6ba",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_a3a299f255249f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a06742-3e68-7980-97ca-6f1fdb1a5ef4",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
