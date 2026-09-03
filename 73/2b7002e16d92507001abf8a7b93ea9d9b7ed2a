@@ -1,0 +1,78 @@
+examples/quantum_examples/qcl_examples/qcl_crosstalk/constants.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-11,15-16,19-23
+  s_8d1a45b74b2107::t_d5298ca584602c 12-14,17-18
+deep_causality_quantum/src/types/pipeline/validate.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 339-371,373
+examples/quantum_examples/qcl_examples/qcl_geometric_qec/constants.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-13
+examples/quantum_examples/qcl_examples/qcl_qcm_freeze/README.md
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-22
+openspec/changes/add-qcl/specs/qcl-pipeline/spec.md
+  s_8d1a45b74b2107::t_4ee5ee7972031f 127-130
+examples/quantum_examples/qcl_examples/qcl_crosstalk/model.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-19,22-27,32-33,38,40-132,136-144
+  s_8d1a45b74b2107::t_d5298ca584602c 20-21,28-30,34-37,39,133-135
+  s_8d1a45b74b2107::t_5adf69daacbdc2 31
+examples/quantum_examples/qcl_examples/qcl_qcm_freeze/model.rs
+  s_8d1a45b74b2107::t_d5298ca584602c 9,12,17-19,23-26,42
+  s_8d1a45b74b2107::t_5adf69daacbdc2 20,47-51
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-8,10-11,13-16,21-22,27-41,43-46,52-78
+examples/quantum_examples/Cargo.toml
+  s_8d1a45b74b2107::t_be903fe45b5a96 21-22,24,57-68
+openspec/changes/add-qcl/tasks.md
+  s_8d1a45b74b2107::t_4ee5ee7972031f 122-123,126,129,131,133
+examples/quantum_examples/qcl_examples/qcl_crosstalk/README.md
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-33
+examples/quantum_examples/qcl_examples/qcl_geometric_qec/main.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-100,102-122
+  s_8d1a45b74b2107::t_5adf69daacbdc2 101
+examples/quantum_examples/qcl_examples/qcl_geometric_qec/model.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-8,12-16
+  s_8d1a45b74b2107::t_d5298ca584602c 10-11
+  s_8d1a45b74b2107::t_deb5bcf5ca0e07 9
+examples/quantum_examples/BUILD.bazel
+  s_8d1a45b74b2107::t_be903fe45b5a96 87-122
+examples/quantum_examples/qcl_examples/qcl_crosstalk/main.rs
+  s_8d1a45b74b2107::t_5adf69daacbdc2 144,148,152,161-162,178,197,210,213-216,222
+  s_8d1a45b74b2107::t_d5298ca584602c 33,44,57,116,188,234-235,249
+  s_8d1a45b74b2107::t_f053263e8d2fd9 232-233,248
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-30,32,34-43,45-56,58-115,117-143,145-147,149-151,153-160,163-177,179-187,189-196,198-209,211-212,217-221,223-231,236-247,250-254
+  s_8d1a45b74b2107::t_d805e1c4a42465 31
+examples/quantum_examples/qcl_examples/qcl_qcm_freeze/main.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-75,77-92,94-156
+  s_8d1a45b74b2107::t_5adf69daacbdc2 76,93
+openspec/changes/add-qcl/specs/qcl-hypothesis/spec.md
+  s_8d1a45b74b2107::t_4ee5ee7972031f 24-30
+openspec/notes/quantum/qcl-design-note.md
+  s_8d1a45b74b2107::t_09247e37438af7 973-1047
+  s_8d1a45b74b2107::t_4bb8e983f3ed04 16-25,38
+deep_causality_quantum/src/types/qcm/hypothesis.rs
+  s_8d1a45b74b2107::t_be903fe45b5a96 252,254-318
+  s_8d1a45b74b2107::t_ce33b860d7ad2e 251,253
+examples/quantum_examples/README.md
+  s_8d1a45b74b2107::t_be903fe45b5a96 27-29
+examples/quantum_examples/qcl_examples/qcl_geometric_qec/README.md
+  s_8d1a45b74b2107::t_be903fe45b5a96 1-19
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_display_tests.rs
+  s_8d1a45b74b2107::t_7a59cdd888ad82 22-24,26-42
+deep_causality_unified_math/deep_causality_num/src/float_106/display.rs
+  s_8d1a45b74b2107::t_d6615bf6877223 10-16,19-20,26-27,33-34
+Cargo.lock
+  s_8d1a45b74b2107::t_3ab12f949bd920 1659-1660,1667
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "732b7002e16d92507001abf8a7b93ea9d9b7ed2a",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
