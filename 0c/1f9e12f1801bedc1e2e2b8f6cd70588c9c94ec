@@ -1,0 +1,60 @@
+openspec/changes/unified-math-next/specs/rand-realfield-sampling/spec.md
+  s_85e2687f045cb8::t_9d39544c3328f1 1-76
+openspec/changes/unified-math-next/specs/statistics-descriptive-and-information/spec.md
+  s_85e2687f045cb8::t_0c8ca3b07afc10 1-245
+openspec/changes/deferred/engine-precision-parametric/spec.md
+  s_85e2687f045cb8::t_b89247e71cac39 1-233
+openspec/changes/unified-math-next/specs/statistics-consumer-migration/spec.md
+  s_85e2687f045cb8::t_f2d10ba799f650 1-31,34,39-50,52,56-115
+  s_85e2687f045cb8::t_88a27c254e4104 32-33,35-38,51,53-55
+openspec/changes/unified-math-next/specs/linear-adoption/spec.md
+  s_85e2687f045cb8::t_19daf8e31b8751 1-170
+openspec/changes/unified-math-next/proposal.md
+  s_85e2687f045cb8::t_fd506da2a80f9e 30-32,77,98
+  s_85e2687f045cb8::t_efe03bbb72a777 36-37,61-68,102-105,127-130,132-135,139-140
+  s_85e2687f045cb8::t_ebc7df3f9803ac 1-29,33-35,38-60,69-76,78-97,99-101,106-126,131,136-138,141-144
+openspec/changes/unified-math-next/specs/root-finding-operators/spec.md
+  s_85e2687f045cb8::t_254100065e71ba 1-142
+openspec/changes/unified-math-next/design.md
+  s_85e2687f045cb8::t_3bd5d250fa79c0 193
+  s_85e2687f045cb8::t_fd506da2a80f9e 162-171
+  s_85e2687f045cb8::t_2fad9f67f31fe1 36,47-48,252-255,288-291,302,310-318
+  s_85e2687f045cb8::t_e46baf611fd75f 203-230,250
+  s_85e2687f045cb8::t_3ae93fd80ada08 231-249
+  s_85e2687f045cb8::t_54a746a5cc3418 141-142
+  s_85e2687f045cb8::t_241e99dc12095e 1-35,37-46,49-140,143-161,172-192,194-202,251,256-287,292-301,303-309
+openspec/changes/unified-math-next/specs/statistics-crate-identity/spec.md
+  s_85e2687f045cb8::t_d418b073aa754f 1-121
+openspec/changes/unified-math-next/specs/meek-orientation-completeness/spec.md
+  s_85e2687f045cb8::t_4ebfdf06244604 1-164
+openspec/changes/unified-math-next/specs/num-verdict-algebra/spec.md
+  s_85e2687f045cb8::t_484e53f98c33a1 1-73
+openspec/changes/unified-math-next/.openspec.yaml
+  s_85e2687f045cb8::t_2b733f15dd6cb8 1-2
+openspec/changes/unified-math-next/specs/unified-math-tdd-protocol/spec.md
+  s_85e2687f045cb8::t_e87b3ba2d68399 1-9,11-20,22-236,238-264
+  s_85e2687f045cb8::t_77490a6e7a72a0 10,21
+  s_85e2687f045cb8::t_88a27c254e4104 237
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_3bd5d250fa79c0 6,90,92-96,98-105,148-153
+  s_85e2687f045cb8::t_88a27c254e4104 20,84,146
+  s_85e2687f045cb8::t_9eaca7ff4b78f3 1-5,7-19,21-83,85-89,91,97,106-145,147
+openspec/changes/unified-math-next/specs/real-bound-cbrt/spec.md
+  s_85e2687f045cb8::t_3e7bf0ec45bc63 1-141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "0c1f9e12f1801bedc1e2e2b8f6cd70588c9c94ec",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
