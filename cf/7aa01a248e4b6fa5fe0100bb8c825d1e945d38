@@ -1,0 +1,14 @@
+.github/workflows/secret-scanner.yml
+  h_080fb89ca1f0c4 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "cf7aa01a248e4b6fa5fe0100bb8c825d1e945d38",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
