@@ -1,0 +1,42 @@
+deep_causality_utils/deep_causality_file/deep_causality_file_sbom.spdx.json.sha
+  s_6461ecf2769fc4::t_5989a44b8a346e 1
+deep_causality_unified_math/README.md
+  s_6461ecf2769fc4::t_d96c0dc77d4179 15-16
+  s_6461ecf2769fc4::t_50e921ecaf1576 26,43
+deep_causality_utils/deep_causality_par/deep_causality_par_sbom.spdx.json.sha
+  s_6461ecf2769fc4::t_5989a44b8a346e 1
+website/docs/src/content/docs/concepts/uniform-math.md
+  s_6461ecf2769fc4::t_3e1d25af74ef99 16
+Cargo.toml
+  s_6461ecf2769fc4::t_1e5b2f2d47babb 35
+  s_6461ecf2769fc4::t_1de1fc4549bf4c 32-33
+  s_6461ecf2769fc4::t_9cf474a312e3ad 42,50,60
+  s_6461ecf2769fc4::t_da8471b0ecdc67 36
+  s_6461ecf2769fc4::t_d7c8a1e140274a 19-20
+deep_causality_utils/deep_causality_ast/deep_causality_ast_sbom.spdx.json.sha
+  s_6461ecf2769fc4::t_5989a44b8a346e 1
+AGENTS.md
+  s_6461ecf2769fc4::t_7d3111ce1e8f92 185-187,190,194-195,200-210
+website/docs/src/content/docs/getting-started/install.md
+  s_6461ecf2769fc4::t_3e1d25af74ef99 27,41
+README.md
+  s_6461ecf2769fc4::t_09079d36ef896b 285
+docs/LF_Repo_Lint.md
+  s_6461ecf2769fc4::t_5f9c312b6d8b61 1-167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "4e32b8824aaa18cdff66326b74bd015c5de1d98b",
+  "prompts": {},
+  "sessions": {
+    "s_6461ecf2769fc4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "842e242b-d18a-4b2f-9abf-cad689113328",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
