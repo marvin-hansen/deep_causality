@@ -1,0 +1,142 @@
+examples/avionics_examples/cfd/nozzle_operating_map/model.rs
+  s_8d1a45b74b2107::t_8d7cd641cd5f4e 17,49,90,121,124-125,127-129,136,141-142,160-161,166-170,175-179,181,190,193,195,200-201,204-207,209,217,236-237,239,274,277,316,336
+  s_8d1a45b74b2107::t_d60395a6a7733d 81,87-88,91-92,96,138,154,159
+examples/mathematics_examples/algebra/maxwell_multivector.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 7,19
+examples/medicine_examples/tumor_treatment/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 21,42-43
+examples/mathematics_examples/composable_multi_math/tensor_x_topology_laplacian/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 22,41,47-48,111
+examples/mathematics_examples/composable_multi_math/effect_diffusion_on_manifold/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 21,38,46-47,72,103,113-114,143
+examples/quantum_examples/topological_insulator/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 8,88,116,123-125,167,169
+examples/causal_counterfactual_examples/Cargo.toml
+  s_8d1a45b74b2107::t_2d331d95237d52 14
+examples/avionics_examples/cfd/viv_resonance_margin/model_config.rs
+  s_8d1a45b74b2107::t_d60395a6a7733d 68,74,108
+  s_8d1a45b74b2107::t_2d331d95237d52 18,73,75,78,89,100-101
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 18,159,206,219,241,262,451-452,570
+  s_8d1a45b74b2107::t_d60395a6a7733d 151,572,937,1015-1016
+examples/mathematics_examples/composable_multi_math/tensor_x_algebra_rotation_field/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 23,36,74,77,85-86
+examples/medicine_examples/diving_decompression/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 14,109-111
+examples/causal_counterfactual_examples/counterfactual_envelope_fault/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 13-14
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/main.rs
+  s_8d1a45b74b2107::t_d60395a6a7733d 311
+  s_8d1a45b74b2107::t_2d331d95237d52 59,80,106,128,138,181,205,247,264,316
+examples/avionics_examples/cfd/nozzle_operating_map/model_config.rs
+  s_8d1a45b74b2107::t_8d7cd641cd5f4e 15,23-26,28-30,32
+examples/avionics_examples/cfd/plasma_blackout/weather/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 18,23,80,137-139,159,172,182,216,317,322,327,332
+  s_8d1a45b74b2107::t_d60395a6a7733d 179,188,203,300,303-304,334,352,377-378,394,414
+examples/medicine_examples/diving_decompression/print_utils.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 14,134,163
+examples/mathematics_examples/composable_multi_math/capstone_spinor_minkowski/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 34,79,84,91-92,134,154,162,167,192-193
+examples/causal_correction_examples/corrective_ddos_detector/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 15,22,28,98
+examples/mathematics_examples/topology/hkt_graph_convolution.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 7,88
+examples/quantum_examples/qcl_examples/qcl_qcm_freeze/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 12
+examples/mathematics_examples/topology/cubical_heat_diffusion.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 28,48,73,113,120
+examples/causal_correction_examples/corrective_network_failover/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 13-14
+examples/avionics_examples/src/shared/utils.rs
+  s_8d1a45b74b2107::t_52c385ddfd0481 25
+  s_8d1a45b74b2107::t_2d331d95237d52 12,35,56
+examples/avionics_examples/src/shared/stages.rs
+  s_8d1a45b74b2107::t_52c385ddfd0481 41,45-49,70-72,77,100-101,274,286,299
+  s_8d1a45b74b2107::t_2d331d95237d52 21,76,130-131,180,192,201,280,284
+  s_8d1a45b74b2107::t_57366b5e443e69 93-96,98-99,102,104
+examples/avionics_examples/cfd/plasma_blackout/corridor/main.rs
+  s_8d1a45b74b2107::t_8d7cd641cd5f4e 45,88,134,140,150,162,178
+examples/physics_examples/event_horizon_probe/main.rs
+  s_8d1a45b74b2107::t_52c385ddfd0481 55-57,81,104,108,112,126,131-133,146,148,155
+  s_8d1a45b74b2107::t_2d331d95237d52 23,40,127,134,149,201
+examples/mathematics_examples/composable_multi_math/effect_kalman_predict_correct/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 25,37-41,66,77,93-94,97
+examples/causal_correction_examples/corrective_lane_keeping/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 11,14-15,25
+examples/causal_counterfactual_examples/counterfactual_treatment_effect/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 11-12
+examples/causal_correction_examples/corrective_decompression_stops/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 13-14
+examples/quantum_examples/qcl_examples/qcl_crosstalk/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 21,128-134
+examples/avionics_examples/cfd/flight_envelope_placard/model.rs
+  s_8d1a45b74b2107::t_8d7cd641cd5f4e 16,80,84,92-94,96-99,105,123,125,127,129-131,138,142,145-146,154,156,176,214
+examples/causal_counterfactual_examples/counterfactual_resection_intervention/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 12,34-35,37,86,97
+examples/causal_counterfactual_examples/counterfactual_cascade_failure/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 15,27-28
+examples/avionics_examples/navigation/magnav/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 9,43-47
+examples/medicine_examples/tumor_treatment/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 8,69,71-73,76
+examples/mathematics_examples/topology/lattice_gauge_simulation.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 23,112,124
+examples/physics_examples/maxwell/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 9,22
+examples/causal_correction_examples/Cargo.toml
+  s_8d1a45b74b2107::t_2d331d95237d52 14
+examples/avionics_examples/cfd/flight_envelope_placard/model_config.rs
+  s_8d1a45b74b2107::t_8d7cd641cd5f4e 12,35
+examples/avionics_examples/cfd/turbulence_flow/model.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 21
+examples/avionics_examples/cfd/viv_resonance_margin/model.rs
+  s_8d1a45b74b2107::t_d60395a6a7733d 63,75-77,104-106,130,144
+  s_8d1a45b74b2107::t_2d331d95237d52 13,72
+examples/causal_correction_examples/corrective_glucose_pump/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 13-14
+examples/causal_counterfactual_examples/counterfactual_treatment_options/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 9-10
+examples/mathematics_examples/composable_multi_math/triple_hkt_stress_field/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 32,333
+examples/avionics_examples/cfd/plasma_blackout/weather/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 42,89
+  s_8d1a45b74b2107::t_d60395a6a7733d 40
+examples/causal_counterfactual_examples/counterfactual_resection_intervention/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 9-10
+examples/mathematics_examples/composable_multi_math/effect_tensor_algebra_roundtrip/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 25,39-41,49,84,95-96,99
+examples/avionics_examples/cfd/plasma_blackout/corridor/model.rs
+  s_8d1a45b74b2107::t_d60395a6a7733d 97-98,198,238,247-249,344,409,448,559,566-567,588,630-633,654
+  s_8d1a45b74b2107::t_2d331d95237d52 23,30,205,242,266,338,347,352,355,361,404-405,483,487,494,498
+examples/quantum_examples/qcl_examples/qcl_crosstalk/main.rs
+  s_8d1a45b74b2107::t_232439ab95ade7 33,44,58,145,153,211-212,215,224,234-235,249
+examples/causal_counterfactual_examples/counterfactual_cascade_failure/model_types.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 14-15
+examples/avionics_examples/src/shared/world.rs
+  s_8d1a45b74b2107::t_52c385ddfd0481 64,96,445
+  s_8d1a45b74b2107::t_2d331d95237d52 45,61-63,94,100-102,105,108-111,123,152-154,159-163,175,177,180,182-183,189-191,198-200,209,214-219,222-223,226,232,282-284,290-295,297,303-304,313-319,323-329,335-339,344,346,349,351-354,358-359,375-377,380,384,389-391,400-401,407-408,424-425,442,449-451,454,457-460,467-469,471,480-489,503,505-510
+examples/mathematics_examples/topology/manifold_analysis.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 7,59
+examples/mathematics_examples/isomorphism/multifield_data_pipeline/main.rs
+  s_8d1a45b74b2107::t_2d331d95237d52 53,99,179
+Cargo.lock
+  s_8d1a45b74b2107::t_3182f2fee8c8a1 188,198
+deep_causality_unified_math/deep_causality_num/Cargo.toml
+  s_8d1a45b74b2107::t_3df773d5f7c616 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "7619e8779d875ce507338ad547d25518e5531305",
+  "prompts": {},
+  "sessions": {
+    "s_8d1a45b74b2107": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84573f6-635a-45a2-a633-f7cf12f6bcfb",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
