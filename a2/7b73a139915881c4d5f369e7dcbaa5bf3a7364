@@ -1,0 +1,19 @@
+openspec/changes/archive/2026-09-03-extract-rules-lean/tasks.md
+  s_c2da6e5bd4ac62::t_a397e8f245afea 6-9,13,15,27,31-36,41-43,47-53,57-60,64-68,72-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "a27b73a139915881c4d5f369e7dcbaa5bf3a7364",
+  "prompts": {},
+  "sessions": {
+    "s_c2da6e5bd4ac62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "84359756-cd0b-48ba-b97d-f4586d266169",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
