@@ -1,0 +1,14 @@
+.github/workflows/secrets-gitleaks.yml
+  h_080fb89ca1f0c4 1-2,7-8,11-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "396ea0a113bd4d788f2ee36254b4aff1d992f28e",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
