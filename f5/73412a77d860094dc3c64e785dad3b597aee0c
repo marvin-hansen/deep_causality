@@ -1,0 +1,46 @@
+openspec/changes/unified-math-next/specs/linear-adoption/spec.md
+  s_85e2687f045cb8::t_e4add040df6ab8 38,40,42-45,47-48,50-51,53-55,57-71,127-134,136-139,145-147,153-155
+  s_85e2687f045cb8::t_043d7dbf860839 81-83,89-91
+  s_85e2687f045cb8::t_41ba03816c56d2 156
+openspec/changes/unified-math-next/specs/statistics-descriptive-and-information/spec.md
+  s_85e2687f045cb8::t_a33216e834043a 95-97
+  s_85e2687f045cb8::t_4697dd814bfe54 139,142-153,163,165-166
+openspec/changes/unified-math-next/proposal.md
+  s_85e2687f045cb8::t_a76a7827097f54 119-129
+  s_85e2687f045cb8::t_4a0c4a943e75eb 43,147-150
+openspec/changes/unified-math-next/specs/unified-math-tdd-protocol/spec.md
+  s_85e2687f045cb8::t_32bf95a0661fe1 10,21
+openspec/changes/unified-math-next/design.md
+  s_85e2687f045cb8::t_41cb59cc90854e 268-295,298-300,319-322
+  s_85e2687f045cb8::t_9bec02e3a18e6d 176,178-179,181-185,187-192,211,338,340-342,353
+openspec/changes/unified-math-next/specs/solver-convergence-reporting/spec.md
+  s_85e2687f045cb8::t_2a736f84c8eac3 8-137
+openspec/changes/unified-math-next/specs/real-bound-cbrt/spec.md
+  s_85e2687f045cb8::t_a76a7827097f54 137-138,148-151
+openspec/changes/deferred/num-verdict-algebra/spec.md
+  s_85e2687f045cb8::t_4b32963a64ff01 1-124
+openspec/changes/unified-math-next/specs/statistics-consumer-migration/spec.md
+  s_85e2687f045cb8::t_4697dd814bfe54 79-89,95,97-102
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_14a14097a57632 19-27,118-161
+  s_85e2687f045cb8::t_7b1e5eeea24f3d 6,12-18
+openspec/changes/unified-math-next/specs/statistics-crate-identity/spec.md
+  s_85e2687f045cb8::t_043d7dbf860839 95,111-117,120-124
+  s_85e2687f045cb8::t_a33216e834043a 133-158
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "f573412a77d860094dc3c64e785dad3b597aee0c",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
