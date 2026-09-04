@@ -1,0 +1,63 @@
+deep_causality_unified_math/deep_causality_algebra/tests/bfloat16/mod.rs
+  s_dd205c79659bc6::t_aa56b1cdc5d0d3 11-12
+deep_causality_unified_math/deep_causality_algebra/src/algebra/domain_integral.rs
+  s_dd205c79659bc6::t_1d4761aec3c8aa 70
+deep_causality_unified_math/deep_causality_algebra/src/algebra/annihilating.rs
+  s_dd205c79659bc6::t_023825b7ff3026 30
+  s_dd205c79659bc6::t_02f481b95c01d7 6
+  s_dd205c79659bc6::t_1d4761aec3c8aa 63
+deep_causality_unified_math/deep_causality_algebra/src/algebra/commutative.rs
+  s_dd205c79659bc6::t_1d4761aec3c8aa 51,76
+  s_dd205c79659bc6::t_02f481b95c01d7 8
+  s_dd205c79659bc6::t_023825b7ff3026 32
+deep_causality_unified_math/deep_causality_algebra/src/algebra/associative.rs
+  s_dd205c79659bc6::t_1d4761aec3c8aa 50,77
+  s_dd205c79659bc6::t_023825b7ff3026 31
+  s_dd205c79659bc6::t_02f481b95c01d7 8
+deep_causality_unified_math/deep_causality_algebra/src/algebra/characteristic.rs
+  s_dd205c79659bc6::t_02f481b95c01d7 6
+  s_dd205c79659bc6::t_1d4761aec3c8aa 153-155,160
+deep_causality_unified_math/deep_causality_algebra/src/algebra/real.rs
+  s_dd205c79659bc6::t_023825b7ff3026 24
+deep_causality_unified_math/deep_causality_algebra/src/algebra/distributive.rs
+  s_dd205c79659bc6::t_023825b7ff3026 27
+  s_dd205c79659bc6::t_02f481b95c01d7 6
+  s_dd205c79659bc6::t_1d4761aec3c8aa 46
+deep_causality_unified_math/deep_causality_algebra/src/algebra/scalar.rs
+  s_dd205c79659bc6::t_023825b7ff3026 22
+deep_causality_unified_math/deep_causality_algebra/src/lib.rs
+  s_dd205c79659bc6::t_1d4761aec3c8aa 11
+deep_causality_unified_math/deep_causality_algebra/tests/mod.rs
+  s_dd205c79659bc6::t_1ae481dfa71c07 6
+deep_causality_unified_math/deep_causality_algebra/src/algebra/scalar_conjugate.rs
+  s_dd205c79659bc6::t_023825b7ff3026 13,82
+deep_causality_unified_math/deep_causality_algebra/src/algebra/scalar_normed.rs
+  s_dd205c79659bc6::t_023825b7ff3026 14
+deep_causality_unified_math/deep_causality_algebra/src/algebra/normed.rs
+  s_dd205c79659bc6::t_023825b7ff3026 51
+deep_causality_unified_math/deep_causality_algebra/src/algebra/invertible.rs
+  s_dd205c79659bc6::t_02f481b95c01d7 6
+  s_dd205c79659bc6::t_1d4761aec3c8aa 36
+deep_causality_unified_math/deep_causality_algebra/BUILD.bazel
+  s_dd205c79659bc6::t_fddae0785cecd9 73-89
+  s_dd205c79659bc6::t_128b559399805b 72
+deep_causality_unified_math/deep_causality_algebra/tests/bfloat16/bfloat16_normed_tests.rs
+  s_dd205c79659bc6::t_fb379f2cddb1f9 19-23,67-70,98-107
+  s_dd205c79659bc6::t_aa56b1cdc5d0d3 1-18,24-66,71-97,108-156
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "9618623f9512887e9d8655bd86bb95901f5020a5",
+  "prompts": {},
+  "sessions": {
+    "s_dd205c79659bc6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f6f45e74-4931-4f9c-bd46-9eb48f0735a4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
