@@ -1,0 +1,187 @@
+openspec/changes/archive/2026-06-29-add-cfd-qtt-immersed-body/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 29
+openspec/changes/archive/cdl-next/tasks.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 51
+openspec/changes/archive/2026-06-28-add-cfd-qtt-flow-observe/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 27
+openspec/changes/archive/2026-05-19-add-cubical-complexes/tasks.md
+  s_dd205c79659bc6::t_0271d2469150e5 21
+  s_dd205c79659bc6::t_9041ac997fbdaa 68,78
+openspec/changes/archive/specs/dual-numbers/spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 8
+openspec/notes/archive/causal-algebra/causal-arrow-state-threading-plan.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 112
+openspec/notes/archive/causal-algebra/CausalMonadProptest.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 215
+openspec/changes/archive/2026-07-19-add-retropulsion-coupled-stages/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 48
+openspec/changes/archive/2026-05-20-2026-05-20-add-iso-traits/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 5,57
+openspec/changes/archive/num_algebra_octonion.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 73
+openspec/changes/archive/2026-07-10-causaloid-formalization-stages-2-5/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 16
+openspec/changes/archive/2026-06-04-causal-arrow-foundations/specs/dual-numbers/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 5
+openspec/changes/archive/2026-06-15-add-cut-cells-and-immersed-boundaries/design.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 15
+openspec/changes/archive/2026-07-06-causal-arrow-state-threading/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 29,56
+openspec/changes/archive/2026-08-30-add-linear-algebra-crate/specs/linear-test-first-development/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 161,163
+openspec/changes/archive/2026-05-26-add-biconnected-components/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 22,66,72
+openspec/changes/archive/2026-07-17-close-plasma-retropulsion-physics-gaps/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 3
+openspec/changes/archive/2026-07-19-plasma-retropulsion-cfd-contracts/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 49
+openspec/changes/archive/specs/fluid-dynamics-theory/spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 128
+openspec/changes/archive/2026-05-26-add-fluid-dynamics-kernels/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 51
+deep_causality_unified_math/deep_causality_num/tests/float_double/mod.rs
+  s_dd205c79659bc6::t_3cb190b0fcd572 26-27
+openspec/changes/archive/2026-05-03-add-stateful-causaloid-evaluation/specs/stateful-causaloid-evaluation/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 309,350
+openspec/changes/archive/2026-06-04-causal-arrow-foundations/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 18
+openspec/changes/archive/2026-05-26-add-fluid-dynamics-kernels/specs/fluid-dynamics-kernels/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 299
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_neg_zero_tests.rs
+  s_dd205c79659bc6::t_d18f3a1d74aec0 1-5,17-19,27-28,125,168,172-173,244-245
+  s_dd205c79659bc6::t_338893cf0fba70 6-16,20-26,29-124,126-167,169-171,174-243
+deep_causality_cfd/src/solvers/dec/surface_force.rs
+  s_dd205c79659bc6::t_74cf0b050a364d 382-383
+  s_dd205c79659bc6::t_1e9179e9427269 380-381
+  s_dd205c79659bc6::t_7fc81b7575f682 178-191,194,211-221,390
+openspec/changes/unified-math-next/design.md
+  s_dd205c79659bc6::t_ae3d4ad3f7fd49 240-243
+scripts/check_tiers.py
+  s_dd205c79659bc6::t_ce3bbad7e821b9 38-62,65-66,68-72
+  s_dd205c79659bc6::t_0271d2469150e5 8-9,19-22,30,33
+  s_dd205c79659bc6::t_3de0ec99ff4828 120-122,124,126-129,131
+deep_causality_algorithms/BUILD.bazel
+  s_dd205c79659bc6::t_837a8b9698fd6c 37-40
+openspec/changes/archive/algebraic_sparse_matrix.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 487
+openspec/changes/archive/algebraic_tensor.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 64
+openspec/changes/archive/2026-07-10-causaloid-formalization-stages-2-5/design.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 121
+deep_causality_unified_math/deep_causality_topology/tests/types/mixed_graph/chordality_tests.rs
+  s_dd205c79659bc6::t_a70a892ae2b2e8 138-162
+openspec/changes/archive/topology_gauge_field_lattice_review_two.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 126
+openspec/changes/archive/2026-06-29-add-park2t-blackout-tier-a/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 85,95
+openspec/changes/archive/num_quaternion.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 147
+openspec/changes/archive/2026-08-20-add-cup-product/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 18,28,40,50
+openspec/changes/archive/2026-05-20-2026-05-20-add-iso-traits/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 64,77
+openspec/changes/unified-math-next/notes/c1-meek.md
+  s_dd205c79659bc6::t_950d07d48a7417 25-28,31-35,39-40,44-48,57-59
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 103
+openspec/changes/archive/topology_api.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 285,342
+openspec/changes/archive/2026-05-26-add-biconnected-components/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 31
+openspec/changes/archive/num_algebra_complex.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 49,56,64
+openspec/changes/archive/2026-06-04-causal-arrow-foundations/design.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 11,88
+openspec/changes/archive/2026-05-26-add-fluid-dynamics-kernels/specs/fluid-dynamics-theory/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 122
+openspec/changes/archive/2026-06-30-add-cfd-compressible-qtt-marcher/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 113
+openspec/changes/archive/2026-06-28-add-tensor-network/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 8,25,65
+openspec/changes/archive/2026-07-06-separate-control-channel/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 25
+openspec/audits/cfd_audit/modules/deep-causality-cfd-test-suite-efficacy-coverage-mapping-and-.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 5
+openspec/changes/archive/2026-06-07-causal-flow-arrow/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 7,68
+deep_causality_unified_math/deep_causality_algebra/src/algebra/field_real.rs
+  s_dd205c79659bc6::t_c4e80a43d6d824 14-16
+deep_causality_unified_math/deep_causality_num/src/float/float_106_impl.rs
+  s_dd205c79659bc6::t_c614eb2d602805 8-20,181,184,187-190,195,198,257-261,363-367,372-374,410,412,415,449-452,485-488,553-565,580-585,643-646,665-668,688-691,724-726,742-745,759-762,781,783-784
+openspec/changes/archive/2026-05-22-add-cubical-regge-calculus-analytical/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 130
+openspec/changes/reverted/revert_mlx_backend.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 604
+openspec/changes/archive/2026-05-19-add-cubical-complexes/specs/cubical-complex/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 62
+openspec/changes/unified-math-next/specs/unified-math-tdd-protocol/spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 239,241
+deep_causality_physics/README_KERNELS.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 16
+openspec/changes/archive/2026-05-22-add-hodge-decomposition/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 42
+deep_causality_unified_math/deep_causality_topology/src/types/mixed_graph/chordality/mod.rs
+  s_dd205c79659bc6::t_8c93067c101438 18,47-50
+openspec/changes/archive/2026-06-04-causal-arrow-foundations/proposal.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 34
+openspec/specs/core-formalization/spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 19,35
+openspec/specs/linear-test-first-development/spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 164,166
+openspec/notes/unified_math/bf16_tdd_record.md
+  s_dd205c79659bc6::t_e83e91986e161b 94-95,123-124,128
+deep_causality_algorithms/verification/brcd/verification_meek_r4.rs
+  s_dd205c79659bc6::t_274261938b7ab8 285-288,290,553
+  s_dd205c79659bc6::t_e051a54ba8e144 6-14,18-30,43-49,51-52,63-69,82-84,235-236,239-252,255,258-266,268,271-275,278-280,282-284,289,291,377-378,380,394,397-406,408,447-453,455-456,459-460,462-464,466,468-471,474-478,481-482,502-503,507,524,531,534,548-552,554-576,580,583-594,596-627,632,641-642,647-648,650-653,656-658,664,704-706,709,713-715,722,727,732,740-741,743,749,752-753,758,763-766,774-790,794,798,802,809,811,817,821-822,825,828-829,831-833,835-841,846,850,854,859,862-863,868,875-878
+  s_dd205c79659bc6::t_01e49012387ca2 281
+openspec/changes/archive/2026-06-02-mixed-graph/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 3
+openspec/changes/archive/2026-06-29-add-park2t-blackout-tier-a/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 20,25,49,70,94,125
+openspec/changes/reverted/revert_mlx_backend/backend_tensor.md
+  s_dd205c79659bc6::t_f20304614aba36 177
+openspec/changes/archive/2026-07-06-enforce-w-invariant/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 8
+openspec/changes/archive/specs/fluid-dynamics-kernels/spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 305
+openspec/changes/archive/2026-05-20-implement-isomorphism/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 5
+openspec/changes/archive/2026-06-11-add-dec-periodic-ns-solver/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 98
+openspec/changes/archive/2026-06-11-add-dec-solver-foundations/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 6
+openspec/changes/archive/2026-07-07-formalize-deep-causality-core/specs/core-formalization/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 26
+openspec/changes/archive/2026-05-26-add-biconnected-components/design.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 9
+openspec/changes/archive/2026-06-30-add-cfd-compressible-qtt-marcher/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 17,138
+openspec/changes/archive/2026-07-10-causaloid-formalization-stages-2-5/specs/core-formalization/spec.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 16,32
+openspec/changes/archive/2026-09-03-add-qcl/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 130
+openspec/notes/archive/tensor-network/Tensor-Network-Spec.md
+  s_dd205c79659bc6::t_94b3e6aad2cbfa 81,139,711
+openspec/changes/archive/2026-05-26-add-fluid-dynamics-kernels/design.md
+  s_dd205c79659bc6::t_0271d2469150e5 166
+  s_dd205c79659bc6::t_9041ac997fbdaa 148
+openspec/changes/archive/2026-07-19-plasma-retropulsion-de-risk/tasks.md
+  s_dd205c79659bc6::t_9041ac997fbdaa 20
+openspec/changes/unified-math-next/specs/meek-orientation-completeness/spec.md
+  s_dd205c79659bc6::t_15f5fe5bc000e2 128-131,133-134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "a8e179211ed358fa3db7c852e59400b4c72b9e23",
+  "prompts": {},
+  "sessions": {
+    "s_dd205c79659bc6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f6f45e74-4931-4f9c-bd46-9eb48f0735a4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
