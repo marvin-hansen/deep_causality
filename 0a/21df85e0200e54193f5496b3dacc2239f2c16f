@@ -1,0 +1,30 @@
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_ba416a08dd4627 22,24-31
+AGENTS.md
+  s_85e2687f045cb8::t_cea85d2a6817a6 272-274
+  s_85e2687f045cb8::t_37751ab523797d 293,296,298,301-307,310-320,323-326,329-339,342-350,353-361
+deep_causality_unified_math/README.md
+  s_85e2687f045cb8::t_02bcd894ecac06 40-54
+  s_85e2687f045cb8::t_a4fa0430446ba0 56-62
+  s_85e2687f045cb8::t_5826a93c32379c 15-17
+  s_85e2687f045cb8::t_3f9634f7de104e 55
+scripts/check_tiers.py
+  s_85e2687f045cb8::t_16431d4bd6f981 178,183-184
+  s_85e2687f045cb8::t_ff40f1a02abb50 1-177,179-182,185-203
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "0a21df85e0200e54193f5496b3dacc2239f2c16f",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
