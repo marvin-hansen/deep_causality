@@ -1,0 +1,19 @@
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_1ed3c6839d5ad3 114
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "89a9ef929d3a4eccd6e40b5146650cd021bd76c6",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
