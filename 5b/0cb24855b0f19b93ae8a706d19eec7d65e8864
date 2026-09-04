@@ -1,0 +1,38 @@
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_6629f06996ef45 71-72,114
+  s_85e2687f045cb8::t_5f6d05f28aa657 158-164
+  s_85e2687f045cb8::t_d91d12926c29c5 6-7,13-14,68,73,93-113
+  s_85e2687f045cb8::t_960f6077a5c843 115
+openspec/changes/unified-math-next/notes/c3-real-bound.md
+  s_85e2687f045cb8::t_fe516e963b1361 93-115
+deep_causality_unified_math/deep_causality_num_dual/src/dual/dual_number/real.rs
+  s_85e2687f045cb8::t_b1d305cc4092a7 121-124,126-127
+deep_causality_unified_math/deep_causality_num_dual/tests/dual/dual_number/real_tests.rs
+  s_85e2687f045cb8::t_12ed9ebce9ad06 325-482
+  s_85e2687f045cb8::t_709b8197d5b9fc 483-485
+  s_29b5441461ee76::t_91762331e914ce 486-503
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "5b0cb24855b0f19b93ae8a706d19eec7d65e8864",
+  "prompts": {},
+  "sessions": {
+    "s_29b5441461ee76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7a0db162-7d8f-4c8c-9715-b8b4b0b6e72f",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
