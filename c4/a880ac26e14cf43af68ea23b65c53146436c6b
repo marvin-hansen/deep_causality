@@ -1,0 +1,91 @@
+deep_causality_unified_math/deep_causality_algebra/tests/bfloat16/bfloat16_algebra_tests.rs
+  s_29b5441461ee76::t_9c3b2ce39820fd 1-114
+deep_causality_unified_math/deep_causality_algebra/tests/bfloat16/mod.rs
+  s_85e2687f045cb8::t_97feb74add019d 1-11
+deep_causality_unified_math/deep_causality_num/src/bfloat16/attributes.rs
+  s_29b5441461ee76::t_b27c8f2ffb4498 1-44
+deep_causality_unified_math/deep_causality_num/src/bfloat16/constants.rs
+  s_85e2687f045cb8::t_2ea5bb155e2b41 1-71
+deep_causality_unified_math/deep_causality_num/src/bfloat16/debug.rs
+  s_85e2687f045cb8::t_d1428efb12b73d 1-14
+deep_causality_unified_math/deep_causality_num/src/bfloat16/display.rs
+  s_85e2687f045cb8::t_38c7c88530a296 1-28
+deep_causality_unified_math/deep_causality_num/src/bfloat16/from.rs
+  s_85e2687f045cb8::t_968c76b99d1b9e 1-45
+deep_causality_unified_math/deep_causality_num/src/bfloat16/getters.rs
+  s_85e2687f045cb8::t_01bc6d18747263 1-26
+deep_causality_unified_math/deep_causality_num/src/bfloat16/mod.rs
+  s_29b5441461ee76::t_aa21159e1e542b 1-187
+deep_causality_unified_math/deep_causality_num/src/bfloat16/ops_arithmetic.rs
+  s_29b5441461ee76::t_a23203e8d3bfa5 1-273
+deep_causality_unified_math/deep_causality_num/src/bfloat16/ops_comparison.rs
+  s_29b5441461ee76::t_53573691e56da5 1-25
+deep_causality_unified_math/deep_causality_num/src/bfloat16/traits_algebra.rs
+  s_29b5441461ee76::t_0258abae93a201 1-41
+deep_causality_unified_math/deep_causality_num/src/bfloat16/traits_num.rs
+  s_29b5441461ee76::t_df3a41c0de7763 1-243
+deep_causality_unified_math/deep_causality_num/src/float/bfloat16_impl.rs
+  s_29b5441461ee76::t_06b6a1664e99bc 1-377
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/attributes_tests.rs
+  s_85e2687f045cb8::t_b4ec0b5cf3b3a2 1-67
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/constants_tests.rs
+  s_85e2687f045cb8::t_5ed1b7540bb6d2 1-127
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/traits_algebra_tests.rs
+  s_85e2687f045cb8::t_fcd5fcc7ada638 1-87
+deep_causality_unified_math/deep_causality_algebra/tests/bfloat16/bfloat16_traits_tests.rs
+  s_29b5441461ee76::t_d1ca1c259311ea 1-87
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/bfloat16_tests.rs
+  s_29b5441461ee76::t_f6959e7d12584b 1-680
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/debug_tests.rs
+  s_29b5441461ee76::t_c9d27e090d8edb 1-34
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/display_tests.rs
+  s_29b5441461ee76::t_a1ed374f757af6 1-70
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/from_tests.rs
+  s_29b5441461ee76::t_c15785b6331910 1-78
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/getters_tests.rs
+  s_29b5441461ee76::t_d8786f57f45be1 1-48
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/mod.rs
+  s_29b5441461ee76::t_9b29b01ee6db3e 1-57
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/ops_arithmetic_tests.rs
+  s_29b5441461ee76::t_de5e0c5ee75128 1-276
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/ops_comparison_tests.rs
+  s_29b5441461ee76::t_76a206282be84c 1-110
+deep_causality_unified_math/deep_causality_num/tests/bfloat16/traits_num_tests.rs
+  s_29b5441461ee76::t_43c6786433918d 1-349
+deep_causality_unified_math/deep_causality_num/tests/float/bfloat16_impl_tests.rs
+  s_29b5441461ee76::t_677429945916d7 1-655
+openspec/notes/unified_math/bf16_tdd_record.md
+  s_427c0013ff9ba2::t_7e46e240db15ad 1-133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c4a880ac26e14cf43af68ea23b65c53146436c6b",
+  "prompts": {},
+  "sessions": {
+    "s_29b5441461ee76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7a0db162-7d8f-4c8c-9715-b8b4b0b6e72f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_427c0013ff9ba2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-af299eb51fa2db436",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
