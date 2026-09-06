@@ -1,0 +1,26 @@
+deep_causality_physics/src/kernels/nuclear/lund/flavor.rs
+  s_85e2687f045cb8::t_a0063276c48515 149-152
+  s_85e2687f045cb8::t_59e3a4d0055ed3 12-33
+deep_causality_physics/src/kernels/nuclear/lund/kinematics.rs
+  s_85e2687f045cb8::t_058f162e081fc8 15-26
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_91b56713be52d5 83-103
+openspec/changes/unified-math-next/notes/c3b-sampling-precision.md
+  s_85e2687f045cb8::t_bbc72c3608a038 1-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "8899aff43bbd6c88911c2faf14068f3f006e4f0c",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
