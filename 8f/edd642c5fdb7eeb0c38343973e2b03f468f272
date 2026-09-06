@@ -1,0 +1,19 @@
+scripts/update.sh
+  s_dce5a86331b8ea::t_e0943d0a10789e 9-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "8fedd642c5fdb7eeb0c38343973e2b03f468f272",
+  "prompts": {},
+  "sessions": {
+    "s_dce5a86331b8ea": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "80222ca8-23c4-4f81-82aa-bb2a16daf969",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
