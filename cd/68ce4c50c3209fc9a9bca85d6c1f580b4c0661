@@ -1,0 +1,26 @@
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_2170205d6560b7 130-137,139-147,152
+  s_85e2687f045cb8::t_9d659cc6cd64b5 167-169,173-177
+openspec/changes/unified-math-next/specs/statistics-consumer-migration/spec.md
+  s_85e2687f045cb8::t_ea0ec70b878cd5 112-164
+openspec/changes/unified-math-next/notes/c2-site-inventory.md
+  s_85e2687f045cb8::t_c8e6f8d0e19b9b 1-89
+openspec/changes/unified-math-next/specs/statistics-descriptive-and-information/spec.md
+  s_85e2687f045cb8::t_0aa7dece9fb3af 119,121-124,126-133,136,138
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "cd68ce4c50c3209fc9a9bca85d6c1f580b4c0661",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
