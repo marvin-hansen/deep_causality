@@ -1,0 +1,70 @@
+Cargo.toml
+  h_080fb89ca1f0c4 29-30
+deep_causality/Cargo.toml
+  h_080fb89ca1f0c4 10-11,13
+deep_causality_algorithms/Cargo.toml
+  h_080fb89ca1f0c4 7-8,10
+deep_causality_cfd/Cargo.toml
+  h_080fb89ca1f0c4 10-12
+deep_causality_core/Cargo.toml
+  h_080fb89ca1f0c4 7-9
+deep_causality_data_structures/Cargo.toml
+  h_080fb89ca1f0c4 10-11
+deep_causality_discovery/Cargo.toml
+  h_080fb89ca1f0c4 4-8
+deep_causality_ethos/Cargo.toml
+  h_080fb89ca1f0c4 10-11
+deep_causality_physics/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_quantum/Cargo.toml
+  h_080fb89ca1f0c4 7-9
+deep_causality_unified_math/deep_causality_algebra/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_calculus/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_fft/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_haft/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_homology/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_linear/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_metric/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_multivector/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_num/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_num_complex/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_num_dual/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_unified_math/deep_causality_num_rational/Cargo.toml
+  h_080fb89ca1f0c4 6-7
+deep_causality_unified_math/deep_causality_rand/Cargo.toml
+  h_080fb89ca1f0c4 7-9
+deep_causality_unified_math/deep_causality_tensor/Cargo.toml
+  h_080fb89ca1f0c4 4-8
+deep_causality_unified_math/deep_causality_topology/Cargo.toml
+  h_080fb89ca1f0c4 7-9
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+deep_causality_utils/deep_causality_ast/Cargo.toml
+  h_080fb89ca1f0c4 4-8
+deep_causality_utils/deep_causality_file/Cargo.toml
+  h_080fb89ca1f0c4 7-9
+deep_causality_utils/deep_causality_par/Cargo.toml
+  h_080fb89ca1f0c4 7-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "7c703f6fdc9c22d803ca115aa1fa31260c5713b1",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
