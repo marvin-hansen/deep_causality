@@ -1,0 +1,16 @@
+makefile
+  h_080fb89ca1f0c4 10,39-42
+scripts/count.sh
+  h_080fb89ca1f0c4 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "79103335bd4c0c6f23f927dfcc768028938033dc",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
