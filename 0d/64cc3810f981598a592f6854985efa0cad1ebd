@@ -1,0 +1,21 @@
+MODULE.bazel
+  s_85e2687f045cb8::t_999607eee2d818 12
+MODULE.bazel.lock
+  s_85e2687f045cb8::t_1ead79fd604060 216-217,856
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "0d64cc3810f981598a592f6854985efa0cad1ebd",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
