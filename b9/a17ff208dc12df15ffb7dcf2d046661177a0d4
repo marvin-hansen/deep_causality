@@ -1,0 +1,24 @@
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_b101f5b71920cf 167-173
+  s_85e2687f045cb8::t_a33501085c68bd 174
+  s_85e2687f045cb8::t_01751e0648c8c8 164
+deep_causality_unified_math/deep_causality_stats/tests/utils_tests/assertions_tests.rs
+  s_85e2687f045cb8::t_f78d1b84c36776 182-185,189-191
+  s_85e2687f045cb8::t_88fa9c7a7036cb 186-188
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "b9a17ff208dc12df15ffb7dcf2d046661177a0d4",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
