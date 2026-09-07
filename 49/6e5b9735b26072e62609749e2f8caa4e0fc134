@@ -1,0 +1,294 @@
+examples/physics_examples/multi_physics_pipeline/main.rs
+  s_85e2687f045cb8::t_fd7ed0e821383f 205,210
+  s_85e2687f045cb8::t_5243c213c55524 203-204
+openspec/changes/unified-math-next/notes/c2-site-inventory.md
+  s_85e2687f045cb8::t_ef5bcb36372f91 12-36,120-164
+deep_causality_discovery/tests/types/feature_selector/mrmr_feature_selector_update_tests.rs
+  s_85e2687f045cb8::t_482132942dbcae 40-46,48,50-52,54-60
+  s_85e2687f045cb8::t_19628b4151b26e 49
+  s_85e2687f045cb8::t_177798ceb69ae6 53
+deep_causality_discovery/tests/types/feature_selector/mrmr_tests.rs
+  s_85e2687f045cb8::t_79584f8fc055d4 10-12,42-45,47,49-51,53-59
+  s_85e2687f045cb8::t_5ff3c6b4e5885e 48
+  s_85e2687f045cb8::t_d22a3ceddcca5c 52
+examples/causal_correction_examples/src/math_utils.rs
+  s_85e2687f045cb8::t_3215ac3a48b6c0 15-18,20
+examples/avionics_examples/cfd/plasma_blackout/weather/model.rs
+  s_85e2687f045cb8::t_b1c899f3d15384 179-181
+  s_85e2687f045cb8::t_736d7b7a859773 23
+examples/avionics_examples/Cargo.toml
+  s_85e2687f045cb8::t_83432c2c044b4f 62
+deep_causality_unified_math/README.md
+  s_85e2687f045cb8::t_ad71c04acf0e7d 25
+  s_85e2687f045cb8::t_2565e8c0d16c9c 31,33,54
+  s_85e2687f045cb8::t_9176c29afa05f7 53
+  s_85e2687f045cb8::t_57dea595ef0f92 62-65
+  s_85e2687f045cb8::t_0074d910c65f32 21-24,52,55
+  s_85e2687f045cb8::t_1d037a2861293a 56
+  s_85e2687f045cb8::t_78e2b927248aa1 66
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_f64.rs
+  s_85e2687f045cb8::t_cf228436ff2ae4 12-13
+  s_85e2687f045cb8::t_416d56509f3d76 14-17,22-25
+deep_causality_unified_math/deep_causality_tensor/Cargo.toml
+  s_85e2687f045cb8::t_5dd9e60c93fa9b 41-44
+  s_85e2687f045cb8::t_496cb5a8763818 3
+deep_causality_algorithms/Cargo.toml
+  s_85e2687f045cb8::t_f3d8ee32e6fec6 3
+  s_4582fa3ca1a2eb::t_52d9af08cbf402 41-44
+examples/classical_causality_examples/Cargo.toml
+  s_85e2687f045cb8::t_1e7768b71bcb40 14
+examples/causal_counterfactual_examples/src/math_utils.rs
+  s_85e2687f045cb8::t_5243c213c55524 15-18,20
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/correlation_tests.rs
+  s_85e2687f045cb8::t_f0673964a10ff7 64,1176
+  s_85e2687f045cb8::t_6fda5a538d7f33 1123-1157,1159-1175,1177-1181
+  s_85e2687f045cb8::t_b970fb1c38278f 1158
+deep_causality_discovery/src/types/feature_selector/mrmr.rs
+  s_4582fa3ca1a2eb::t_8f25b43f37a3b5 66
+  s_4582fa3ca1a2eb::t_998333b4270d56 11,20
+  s_85e2687f045cb8::t_0bed7d353f3ec8 12,61-64
+  s_85e2687f045cb8::t_8d2c2bec95c37b 8
+deep_causality_unified_math/deep_causality_stats/src/algorithms/covariance.rs
+  s_85e2687f045cb8::t_416869bff891e4 1-183
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_gate.rs
+  s_85e2687f045cb8::t_57428974dfab53 29
+  s_85e2687f045cb8::t_dc05fe720c0cbc 120-151,154-155
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_85e2687f045cb8::t_688fdf7d335814 79
+  s_85e2687f045cb8::t_1b6c0af7987980 86
+  s_85e2687f045cb8::t_5d3c194b256c27 88
+  s_85e2687f045cb8::t_3dde40d7c61a84 89
+  s_85e2687f045cb8::t_0165f043a230b9 76-78
+  s_85e2687f045cb8::t_902ab0f9d4541b 84
+  s_85e2687f045cb8::t_416869bff891e4 71
+deep_causality_discovery/src/types/cdl/surd_cleaned.rs
+  s_4582fa3ca1a2eb::t_1a7fd14aa0d74f 12,70
+deep_causality_algorithms/tests/feature_selection/mrmr/mrmr_algo_option_tests.rs
+  s_4582fa3ca1a2eb::t_afde3826972b49 34,67,107,116,134,161,177,208,250
+examples/causal_discovery_examples/algos/mrmr_cdl/main.rs
+  s_85e2687f045cb8::t_d56977854e52eb 9-11,41-45
+deep_causality_unified_math/deep_causality_stats/src/types/penalisation/mod.rs
+  s_85e2687f045cb8::t_961dc8e36c4df4 48-56,59-61,63-64
+  s_85e2687f045cb8::t_5d3c194b256c27 1-47,57-58,62,65-67
+deep_causality_unified_math/deep_causality_stats/tests/types/mean_accumulator_tests.rs
+  s_85e2687f045cb8::t_f19268df25bdc0 1-83
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_algo.rs
+  s_4582fa3ca1a2eb::t_a3322aec85af16 9
+  s_4582fa3ca1a2eb::t_e30f93940fd077 10,105
+  s_85e2687f045cb8::t_9b2f8cda55e2b6 11,100-104
+deep_causality_unified_math/deep_causality_stats/src/algorithms/moments.rs
+  s_85e2687f045cb8::t_0165f043a230b9 81-123
+deep_causality_unified_math/deep_causality_stats/src/algorithms/proportion.rs
+  s_85e2687f045cb8::t_688fdf7d335814 1-81
+deep_causality_algorithms/tests/feature_selection/mrmr/mrmr_algo_tests.rs
+  s_4582fa3ca1a2eb::t_6f94c82da2fe31 20,25-28,145,163,168,174,193,195-198,204,229,231-234
+deep_causality_unified_math/deep_causality_stats/src/algorithms/mod.rs
+  s_85e2687f045cb8::t_688fdf7d335814 14
+  s_85e2687f045cb8::t_416869bff891e4 8
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/proportion_tests.rs
+  s_85e2687f045cb8::t_4ffea5162095ad 8-14,28,40-42
+  s_85e2687f045cb8::t_57bf55e25967f4 1-7,15-27,29-39,43-111
+deep_causality_quantum/src/types/decision/tolerance.rs
+  s_85e2687f045cb8::t_fed5534270d341 129-132
+  s_85e2687f045cb8::t_baefdbeae1e08c 11
+examples/classical_causality_examples/classical_via_causal_monad/cate/main.rs
+  s_85e2687f045cb8::t_88e47d09d1f776 55
+examples/physics_examples/Cargo.toml
+  s_85e2687f045cb8::t_5243c213c55524 16
+openspec/changes/unified-math-next/specs/statistics-consumer-migration/spec.md
+  s_4582fa3ca1a2eb::t_38d7c3bb46afa9 136,140
+examples/causal_correction_examples/corrective_ddos_detector/model.rs
+  s_85e2687f045cb8::t_b2dfaf9da17442 96-99
+deep_causality_unified_math/deep_causality_stats/src/types/logistic_config/mod.rs
+  s_85e2687f045cb8::t_3dde40d7c61a84 1-41
+deep_causality_discovery/src/types/data_preprocessor/data_discretizer.rs
+  s_85e2687f045cb8::t_f2368d6c6a7f3e 10
+  s_85e2687f045cb8::t_be805341bc94af 117-122,124-128,133-147,149-152
+  s_85e2687f045cb8::t_b7bd8484ed91ee 72-79,81,83-89,92-102,107
+deep_causality_discovery/Cargo.toml
+  s_85e2687f045cb8::t_0bed7d353f3ec8 46-49,77
+  s_85e2687f045cb8::t_39fbaf02db8496 50-53
+deep_causality_algorithms/src/causal_discovery/surd/surd_utils/surd_utils_tests.rs
+  s_4582fa3ca1a2eb::t_7cd4fec5f1d3a0 179-207,209-214
+  s_85e2687f045cb8::t_9fe1fe1c484a55 110-115,119-123
+  s_85e2687f045cb8::t_da96a69bf5a38a 208
+examples/causal_counterfactual_examples/Cargo.toml
+  s_85e2687f045cb8::t_83432c2c044b4f 15
+deep_causality_algorithms/src/causal_discovery/surd/surd_utils/mod.rs
+  s_4582fa3ca1a2eb::t_3c071eb614073f 6,113,125,128,132-135,139
+  s_4582fa3ca1a2eb::t_b6b8fe811b49e8 7
+deep_causality_unified_math/deep_causality_stats/tests/types/mod.rs
+  s_85e2687f045cb8::t_f19268df25bdc0 8-9
+examples/causal_discovery_examples/ml/ml_rca/model.rs
+  s_85e2687f045cb8::t_0858daa5248edd 93-96,98,100
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_gaussian.rs
+  s_85e2687f045cb8::t_8b8b35cf0ef86d 106-120,122-123,125-127
+  s_85e2687f045cb8::t_b19f47e193a4f7 548,557,560,562-579,583-585
+  s_85e2687f045cb8::t_ff3a32c90c1326 660-665,667,672-683,685
+  s_85e2687f045cb8::t_2ed3b3994cabce 537-543,554-555,558-559,561
+  s_85e2687f045cb8::t_3143d572a017d5 34,37,485-493,497-508
+  s_85e2687f045cb8::t_9e0eafc6cbb9c0 630-634,636
+  s_85e2687f045cb8::t_70c1e32cd216c6 580-582
+  s_85e2687f045cb8::t_a7322207d1c94c 35-36
+  s_85e2687f045cb8::t_3d8f30f93d457c 121
+deep_causality_discovery/src/traits/precision.rs
+  s_4582fa3ca1a2eb::t_bd42c5580d9e03 7,16,18
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_statistics.rs
+  s_85e2687f045cb8::t_bf1d3772fc59c9 9,22-26,28,30,56,58,60
+  s_85e2687f045cb8::t_46b76158fc3648 79,82-89
+  s_85e2687f045cb8::t_e79649616d919c 44
+  s_85e2687f045cb8::t_c9601c6ef7735b 90
+deep_causality_unified_math/deep_causality_stats/src/types/mod.rs
+  s_85e2687f045cb8::t_902ab0f9d4541b 8
+  s_85e2687f045cb8::t_1b6c0af7987980 10
+  s_85e2687f045cb8::t_3dde40d7c61a84 13
+  s_85e2687f045cb8::t_5d3c194b256c27 12
+deep_causality_physics/tests/kernels/thermodynamics/stats_tests.rs
+  s_4582fa3ca1a2eb::t_d12c640b9e00e6 9,90,94,99,171,175,178,183
+  s_4582fa3ca1a2eb::t_9ea9a747ab1969 103-104
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_utils.rs
+  s_4582fa3ca1a2eb::t_db0980b59a9361 8,15,38,56-58,60,64,70,72-79,85,108
+  s_4582fa3ca1a2eb::t_612705388d81ba 7,14,37,84,107
+  s_4582fa3ca1a2eb::t_38d7c3bb46afa9 59,61-63,65-68
+  s_4582fa3ca1a2eb::t_e84d928902b28c 9
+  s_4582fa3ca1a2eb::t_cec380342c6af0 71
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_85e2687f045cb8::t_c3af3da90f2d27 33-36
+  s_85e2687f045cb8::t_88f9b00fad1ce7 3
+examples/causal_correction_examples/Cargo.toml
+  s_85e2687f045cb8::t_83432c2c044b4f 15
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_utils_tests.rs
+  s_4582fa3ca1a2eb::t_187e855b0cf635 9-12,15-30
+  s_4582fa3ca1a2eb::t_5c3f299d8d210d 13-14
+examples/classical_causality_examples/classical_via_causal_monad/granger/main.rs
+  s_85e2687f045cb8::t_88e47d09d1f776 116-117,119
+deep_causality_discovery/src/types/data_preprocessor/missing_value_imputer.rs
+  s_85e2687f045cb8::t_b8ec50e9c492b4 48-51,54,60,66-68
+deep_causality_algorithms/tests/feature_selection/mrmr/mod.rs
+  s_85e2687f045cb8::t_9b95786726b78f 12-13
+deep_causality_algorithms/tests/feature_selection/mrmr/mrmr_generic_bound_tests.rs
+  s_85e2687f045cb8::t_bbfd08c0d905d9 20-21
+  s_85e2687f045cb8::t_9b95786726b78f 1-19,22-30,32-92
+  s_85e2687f045cb8::t_151264f3f7ef82 31
+openspec/changes/unified-math-next/tasks.md
+  s_85e2687f045cb8::t_f82826c80962d2 237
+  s_85e2687f045cb8::t_61333511be499c 201-203
+  s_85e2687f045cb8::t_63d0552d7af28f 215
+  s_85e2687f045cb8::t_cdbdc24926be36 222-224,228-232,236
+  s_85e2687f045cb8::t_10ed5b5985cd3d 190,217-218
+  s_85e2687f045cb8::t_45a521e82e0839 198-200,204-205
+  s_85e2687f045cb8::t_3222ee382969e4 238-243
+  s_85e2687f045cb8::t_5b8b5cdc90ad21 196,206,214,216
+  s_85e2687f045cb8::t_5a7a9b77a17ada 189,194-195,197,210-213,219-220
+  s_85e2687f045cb8::t_a47e17c8b2ea23 187,192,221
+deep_causality_unified_math/deep_causality_stats/src/algorithms/logistic.rs
+  s_85e2687f045cb8::t_da73924741e274 9,121-123,125-128,175,184
+  s_85e2687f045cb8::t_961dc8e36c4df4 85-86,88-90
+  s_85e2687f045cb8::t_150a875a583648 44,70,87,91,101
+AGENTS.md
+  s_85e2687f045cb8::t_2fe4fb1ac1982a 318-319,331-332,337-338,345,357
+  s_85e2687f045cb8::t_cdb32d46388af3 320-321,323-326,347-348,353-354
+  s_85e2687f045cb8::t_2a6cc6cb865dcc 365-366
+  s_85e2687f045cb8::t_bbc90aed344af3 314-315
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_boss_bootstrap.rs
+  s_85e2687f045cb8::t_9e0eafc6cbb9c0 324-327,329
+deep_causality_unified_math/deep_causality_stats/src/types/mean_accumulator/mod.rs
+  s_85e2687f045cb8::t_89b7d809d60cee 1-84
+deep_causality_physics/src/kernels/thermodynamics/stats.rs
+  s_4582fa3ca1a2eb::t_00be09c4aa51c6 147-149,151,153-158
+deep_causality_discovery/tests/types/preprocessor/data_discretizer_tests.rs
+  s_85e2687f045cb8::t_15b3326db0c399 125-129,198-202
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/logistic_tests.rs
+  s_85e2687f045cb8::t_4325be9feb7ee8 612,628,1180,1194
+  s_85e2687f045cb8::t_b317652219917f 1230-1234
+  s_85e2687f045cb8::t_902ab0f9d4541b 84-86,452-456,515-519,575-579,661-665,695-699,727-731,803,837-841,856-860,881-885,912-916,940-944,964,979,1004-1008,1023,1046-1050,1101-1105,1141-1145
+  s_85e2687f045cb8::t_2f3ada8d6bbe59 1202-1229,1235-1272
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/ridge_tests.rs
+  s_85e2687f045cb8::t_902ab0f9d4541b 53-55,832-836,874-878,935,1027-1031,1034-1038,1412-1417
+  s_85e2687f045cb8::t_fc284e1601b0ef 1389-1411,1418-1442
+  s_85e2687f045cb8::t_4325be9feb7ee8 138,171,180,213,256,266,315,319,353,399,429,464,509,516,523,562,566,600,629,645,651,666,672,694,733,739,744,786,797,873,929,962,980,987,1005,1086,1103,1136,1201,1213,1227,1239,1263,1293,1332,1376
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_stats.rs
+  s_85e2687f045cb8::t_14af8800a2bdb5 158-160,164
+  s_85e2687f045cb8::t_00fb7068e821c5 12-15,22-33,109,115,120,131-133,142-143,165-166,168-177
+deep_causality_quantum/src/types/qpu/shot_estimate.rs
+  s_85e2687f045cb8::t_fed5534270d341 53-55,59
+  s_85e2687f045cb8::t_baefdbeae1e08c 28
+  s_85e2687f045cb8::t_1b6c0af7987980 56-57
+examples/chronometric_examples/gm_recovery/pipeline.rs
+  s_85e2687f045cb8::t_1e7768b71bcb40 252-254
+  s_85e2687f045cb8::t_b1c899f3d15384 263-268
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/mod.rs
+  s_85e2687f045cb8::t_57bf55e25967f4 27-28
+deep_causality_quantum/src/types/qpu/bridge.rs
+  s_85e2687f045cb8::t_54f6dd19519840 90-98
+examples/causal_discovery_examples/ml/ml_rca/utils.rs
+  s_85e2687f045cb8::t_0858daa5248edd 76-88
+deep_causality_unified_math/deep_causality_stats/src/algorithms/ridge.rs
+  s_85e2687f045cb8::t_961dc8e36c4df4 90-91,93-95
+  s_85e2687f045cb8::t_b7660b9a96bc6e 224-225,227-229
+  s_85e2687f045cb8::t_59cd9c7c1bc61c 25,41-43,45-46,52-68,72,74,82,92,96,99,101,119,125-128,130-132,160,162,167
+  s_85e2687f045cb8::t_7d96e3db2507fb 9,183-197,200,205,207-223,230-293
+  s_85e2687f045cb8::t_902ab0f9d4541b 226
+deep_causality_algorithms/src/causal_discovery/surd/surd_utils/surd_utils_cdl.rs
+  s_4582fa3ca1a2eb::t_76825926bbddeb 6,137,149,152-154,161-175,191
+  s_85e2687f045cb8::t_523569bb672abf 155-159
+  s_4582fa3ca1a2eb::t_a69be5cc8f3ca6 7
+deep_causality_physics/Cargo.toml
+  s_4582fa3ca1a2eb::t_7295d6331577a8 79-82
+  s_85e2687f045cb8::t_5144e5ec4d4c1a 3
+deep_causality_unified_math/deep_causality_stats/src/types/ridge_config/mod.rs
+  s_85e2687f045cb8::t_3dde40d7c61a84 1-38
+deep_causality_physics/src/error/physics_error.rs
+  s_4582fa3ca1a2eb::t_7295d6331577a8 137-141,143-150
+  s_4582fa3ca1a2eb::t_50408e280bfce6 142
+deep_causality_algorithms/benches/mrmr_benchmark.rs
+  s_85e2687f045cb8::t_c18d3349ae05a9 43,51
+deep_causality_quantum/Cargo.toml
+  s_85e2687f045cb8::t_baefdbeae1e08c 80-83
+  s_85e2687f045cb8::t_903da1c8b7b112 3
+deep_causality_quantum/BUILD.bazel
+  s_85e2687f045cb8::t_88a049bd785b45 42
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_algo.rs
+  s_85e2687f045cb8::t_9e0eafc6cbb9c0 539-543,545
+examples/classical_causality_examples/classical_via_causaloid/cate/main.rs
+  s_85e2687f045cb8::t_88e47d09d1f776 117
+examples/classical_causality_examples/classical_via_causaloid/granger/model.rs
+  s_85e2687f045cb8::t_83432c2c044b4f 85,89
+  s_85e2687f045cb8::t_88e47d09d1f776 84
+deep_causality_physics/src/kernels/thermodynamics/wrappers.rs
+  s_4582fa3ca1a2eb::t_ffefa3b2568d12 82-83,85,87
+examples/causal_discovery_examples/Cargo.toml
+  s_85e2687f045cb8::t_5b1468ae5d6881 15
+deep_causality_physics/tests/kernels/thermodynamics/wrappers_tests.rs
+  s_4582fa3ca1a2eb::t_79719f709374ba 8,106,113
+Cargo.lock
+  s_85e2687f045cb8::t_a369173d6c712a 86,190,201,214,266,328,551,558,624,626,710,747,761,768,781,807,818,842,849,1591
+deep_causality_unified_math/deep_causality_num/Cargo.toml
+  s_85e2687f045cb8::t_b3d6e53ea37b31 3
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_linear.rs
+  s_85e2687f045cb8::t_60bc952ae2fbe6 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "496e5b9735b26072e62609749e2f8caa4e0fc134",
+  "prompts": {},
+  "sessions": {
+    "s_4582fa3ca1a2eb": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a079ec-3757-7e01-8cac-343efba43dae",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
