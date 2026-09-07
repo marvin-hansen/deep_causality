@@ -1,0 +1,29 @@
+openspec/changes/unified-math-next/specs/statistics-consumer-migration/spec.md
+  s_4582fa3ca1a2eb::t_992ec270efc74a 154-158
+  s_4582fa3ca1a2eb::t_ff90ec3655b95b 127-130
+  s_4582fa3ca1a2eb::t_a2624fffe800ba 8,10,12-15,17,19,21,23-26,28-30,32,34,36,38-42,44-47,49,51,53,55,57-60,62-65,67-70,72-75,77,79,81,83-86,88-91,93-95,97,99,101,103,105-109,111-114,116-119,121,123,125,160-163,165-168,170-249
+  s_4582fa3ca1a2eb::t_2bada48bd5d846 132,134,136,138-141,143-146,148-152
+openspec/changes/unified-math-next/tasks.md
+  s_4582fa3ca1a2eb::t_2cecba5afdd978 188-212,218-241
+  s_4582fa3ca1a2eb::t_992ec270efc74a 216
+  s_4582fa3ca1a2eb::t_2bada48bd5d846 213-215
+  s_4582fa3ca1a2eb::t_778e1002215eaa 217
+  s_4582fa3ca1a2eb::t_974dab3059c82d 242
+  s_4582fa3ca1a2eb::t_aa12f35e99baef 178-186
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "27350f3fbb7fb493fa2b364d280d6249b4d08d0c",
+  "prompts": {},
+  "sessions": {
+    "s_4582fa3ca1a2eb": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a079ec-3757-7e01-8cac-343efba43dae",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
