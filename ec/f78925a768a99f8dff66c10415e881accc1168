@@ -1,0 +1,109 @@
+deep_causality_unified_math/deep_causality_fft/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-29,31-32
+  s_f147c6c9835fbe::t_c6362146f8ce9b 13,30,42
+  s_f147c6c9835fbe::t_1e3618063baa55 12
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 40-41,43-44
+deep_causality_unified_math/deep_causality_linear/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-31
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 39-42
+  s_f147c6c9835fbe::t_8875e6a2641d03 70-73
+  s_f147c6c9835fbe::t_1e3618063baa55 12
+deep_causality_data_structures/BUILD.bazel
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 39-42
+  s_f147c6c9835fbe::t_1e3618063baa55 12-15
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-31
+ultragraph/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-31
+  s_f147c6c9835fbe::t_1e3618063baa55 12-15
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 39-42
+deep_causality_cfd/BUILD.bazel
+  s_f147c6c9835fbe::t_c6362146f8ce9b 14,30,41
+deep_causality_unified_math/deep_causality_num_rational/BUILD.bazel
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 37-39
+  s_f147c6c9835fbe::t_1e3618063baa55 11-13
+  s_f147c6c9835fbe::t_ed0084444caa9a 27-29
+deep_causality_unified_math/deep_causality_stats/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-31
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 39-42
+  s_f147c6c9835fbe::t_1e3618063baa55 12
+deep_causality_unified_math/deep_causality_tensor/BUILD.bazel
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 38-41
+  s_f147c6c9835fbe::t_ed0084444caa9a 27-30
+  s_f147c6c9835fbe::t_1e3618063baa55 11-14
+deep_causality_unified_math/deep_causality_metric/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 26,37
+  s_f147c6c9835fbe::t_1e3618063baa55 10
+  s_f147c6c9835fbe::t_8875e6a2641d03 1,42-86
+deep_causality_unified_math/deep_causality_topology/BUILD.bazel
+  s_f147c6c9835fbe::t_c6362146f8ce9b 12-14,26-28,36-38
+deep_causality_core/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 29,40
+  s_f147c6c9835fbe::t_1e3618063baa55 13
+deep_causality_unified_math/deep_causality_calculus/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 29,40
+  s_f147c6c9835fbe::t_1e3618063baa55 13
+deep_causality_unified_math/deep_causality_homology/BUILD.bazel
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 39-42
+  s_f147c6c9835fbe::t_1e3618063baa55 12
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-31
+deep_causality_utils/deep_causality_ast/BUILD.bazel
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 37-40
+  s_f147c6c9835fbe::t_1e3618063baa55 11-14
+  s_f147c6c9835fbe::t_ed0084444caa9a 26-29
+deep_causality_unified_math/deep_causality_num_complex/BUILD.bazel
+  s_f147c6c9835fbe::t_1e3618063baa55 11-13
+  s_f147c6c9835fbe::t_ed0084444caa9a 27-29
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 37-39
+deep_causality_unified_math/deep_causality_algebra/BUILD.bazel
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 37-39
+  s_f147c6c9835fbe::t_ed0084444caa9a 27-29
+  s_f147c6c9835fbe::t_8875e6a2641d03 134-151
+  s_f147c6c9835fbe::t_1e3618063baa55 11-13
+deep_causality_unified_math/deep_causality_rand/BUILD.bazel
+  s_f147c6c9835fbe::t_5d77d388e5f472 19,37,50
+  s_f147c6c9835fbe::t_1e3618063baa55 16-17
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 46-49,51
+  s_f147c6c9835fbe::t_8875e6a2641d03 115-120
+  s_f147c6c9835fbe::t_ed0084444caa9a 33-36,38
+deep_causality_unified_math/deep_causality_num_dual/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 27-29
+  s_f147c6c9835fbe::t_1e3618063baa55 11-13
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 37-39
+deep_causality_unified_math/deep_causality_haft/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 29-32
+  s_f147c6c9835fbe::t_1e3618063baa55 13
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 40-43
+deep_causality_utils/deep_causality_par/BUILD.bazel
+  s_f147c6c9835fbe::t_c6362146f8ce9b 13,30,42
+  s_f147c6c9835fbe::t_1e3618063baa55 11-12,14-15
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 40-41,43-44
+  s_f147c6c9835fbe::t_ed0084444caa9a 28-29,31-32
+deep_causality_unified_math/deep_causality_multivector/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 27-30
+  s_f147c6c9835fbe::t_1e3618063baa55 11-14
+  s_f147c6c9835fbe::t_a9a2e3f6227e00 38-41
+deep_causality_quantum/BUILD.bazel
+  s_f147c6c9835fbe::t_ed0084444caa9a 34,37,47,50
+  s_f147c6c9835fbe::t_1e3618063baa55 13,16
+deep_causality_physics/BUILD.bazel
+  s_f147c6c9835fbe::t_1e3618063baa55 17,19
+  s_f147c6c9835fbe::t_ed0084444caa9a 35,37,48,50
+Cargo.toml
+  s_f147c6c9835fbe::t_85e8415bbe9431 84-91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "ecf78925a768a99f8dff66c10415e881accc1168",
+  "prompts": {},
+  "sessions": {
+    "s_f147c6c9835fbe": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "43410051-b3a9-4184-868c-959eedbb3d37",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
