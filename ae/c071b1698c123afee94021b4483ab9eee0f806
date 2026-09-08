@@ -1,0 +1,110 @@
+CHANGELOG.md
+  h_080fb89ca1f0c4 10-34
+Cargo.lock
+  h_080fb89ca1f0c4 531,545,568,572,582,605,612,620,638,646,658,669,676,684,695,699,720,729,738,746,792,826,2240
+Cargo.toml
+  h_080fb89ca1f0c4 34,39-40,42,61
+deep_causality/Cargo.toml
+  h_080fb89ca1f0c4 6
+deep_causality_cfd/CHANGELOG.md
+  h_080fb89ca1f0c4 10-39
+deep_causality_cfd/Cargo.toml
+  h_080fb89ca1f0c4 6
+deep_causality_core/CHANGELOG.md
+  h_080fb89ca1f0c4 10-25
+deep_causality_core/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_data_structures/CHANGELOG.md
+  h_080fb89ca1f0c4 24-42
+deep_causality_data_structures/Cargo.toml
+  h_080fb89ca1f0c4 6
+deep_causality_discovery/CHANGELOG.md
+  h_080fb89ca1f0c4 10-33
+deep_causality_discovery/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_ethos/CHANGELOG.md
+  h_080fb89ca1f0c4 10-23
+deep_causality_ethos/Cargo.toml
+  h_080fb89ca1f0c4 6
+deep_causality_unified_math/deep_causality_algebra/CHANGELOG.md
+  h_080fb89ca1f0c4 10-26
+deep_causality_unified_math/deep_causality_algebra/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_calculus/CHANGELOG.md
+  h_080fb89ca1f0c4 10-19
+deep_causality_unified_math/deep_causality_calculus/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_fft/CHANGELOG.md
+  h_080fb89ca1f0c4 10-19
+deep_causality_unified_math/deep_causality_fft/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_haft/CHANGELOG.md
+  h_080fb89ca1f0c4 10-19
+deep_causality_unified_math/deep_causality_haft/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_homology/CHANGELOG.md
+  h_080fb89ca1f0c4 1-19
+deep_causality_unified_math/deep_causality_homology/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_linear/CHANGELOG.md
+  h_080fb89ca1f0c4 1-24
+deep_causality_unified_math/deep_causality_linear/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_metric/CHANGELOG.md
+  h_080fb89ca1f0c4 10-19
+deep_causality_unified_math/deep_causality_metric/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_multivector/CHANGELOG.md
+  h_080fb89ca1f0c4 10-23
+deep_causality_unified_math/deep_causality_multivector/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_num_complex/CHANGELOG.md
+  h_080fb89ca1f0c4 10-25
+deep_causality_unified_math/deep_causality_num_complex/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_num_dual/CHANGELOG.md
+  h_080fb89ca1f0c4 10-24
+deep_causality_unified_math/deep_causality_num_dual/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_num_rational/CHANGELOG.md
+  h_080fb89ca1f0c4 1-19
+deep_causality_unified_math/deep_causality_num_rational/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_rand/CHANGELOG.md
+  h_080fb89ca1f0c4 10-23
+deep_causality_unified_math/deep_causality_rand/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_unified_math/deep_causality_stats/CHANGELOG.md
+  h_080fb89ca1f0c4 1-26
+deep_causality_unified_math/deep_causality_topology/CHANGELOG.md
+  h_080fb89ca1f0c4 10-29
+deep_causality_unified_math/deep_causality_topology/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_utils/deep_causality_ast/CHANGELOG.md
+  h_080fb89ca1f0c4 10-20
+deep_causality_utils/deep_causality_ast/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_utils/deep_causality_file/CHANGELOG.md
+  h_080fb89ca1f0c4 10-16
+deep_causality_utils/deep_causality_file/Cargo.toml
+  h_080fb89ca1f0c4 3
+deep_causality_utils/deep_causality_par/CHANGELOG.md
+  h_080fb89ca1f0c4 10-20
+deep_causality_utils/deep_causality_par/Cargo.toml
+  h_080fb89ca1f0c4 3
+ultragraph/CHANGELOG.md
+  h_080fb89ca1f0c4 10-24
+ultragraph/Cargo.toml
+  h_080fb89ca1f0c4 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "aec071b1698c123afee94021b4483ab9eee0f806",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
