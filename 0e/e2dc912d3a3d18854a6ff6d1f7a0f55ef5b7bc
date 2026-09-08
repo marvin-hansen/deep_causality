@@ -1,0 +1,32 @@
+.cargo/mutants.toml
+  s_6625a582c8b733::t_c8b733c1d40de7 267-282
+  s_6625a582c8b733::t_f4cedad802d9a4 241-266
+deep_causality_utils/deep_causality_par/tests/traits/maybe_parallel_tests.rs
+  s_6625a582c8b733::t_98c584510ca043 33-48
+deep_causality_utils/deep_causality_par/BUILD.bazel
+  s_6625a582c8b733::t_1c4d039ca931ed 98-166
+deep_causality_utils/deep_causality_par/tests/functions/scoped_map_tests.rs
+  s_6625a582c8b733::t_c4aa0436841f70 64-65,67-68,72-76,82-97,99-100,106
+  s_6625a582c8b733::t_6a10e8463af06e 103-105
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_sp3_tests.rs
+  s_6625a582c8b733::t_d376fbb5cc846a 240-265
+  s_6625a582c8b733::t_7d8c668b73b2c3 239
+website/web/public/img/lfaidata-project-badge-sandbox-white.svg
+  s_6625a582c8b733::t_f4b4109c4e1ff1 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "0ee2dc912d3a3d18854a6ff6d1f7a0f55ef5b7bc",
+  "prompts": {},
+  "sessions": {
+    "s_6625a582c8b733": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "92266816-0029-45cf-999b-6e8e9ff270a5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
