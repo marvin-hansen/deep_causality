@@ -1,0 +1,20 @@
+deep_causality_physics/src/kernels/astro/ks_propagator.rs
+  s_051d4c2caa9f9c::t_f4d011f3a535b6 184,213-229,237-241,243-248
+  s_051d4c2caa9f9c::t_6065f1dd76fee6 201-203
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "9159b58500f372f05df3fe7bd75e49fc57ba42c4",
+  "prompts": {},
+  "sessions": {
+    "s_051d4c2caa9f9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0806a-56dc-7de3-8e0a-3e4937c6deb4",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
