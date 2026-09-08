@@ -1,0 +1,24 @@
+openspec/notes/test_audit/physics/README.md
+  s_464adb79fbfda4::t_9175ea439ac7c5 23-24
+openspec/notes/test_audit/physics/agentic-audit-comparison.md
+  s_464adb79fbfda4::t_48339db2ab1ed0 10-13
+  s_464adb79fbfda4::t_9175ea439ac7c5 1-9,14-178
+openspec/notes/test_audit/physics/audit_tests_v2.py
+  s_464adb79fbfda4::t_91a6d92825c905 247-253,279-282,423-430
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "84b061609b2fe89b7a99dd5a14b1d281cd321d95",
+  "prompts": {},
+  "sessions": {
+    "s_464adb79fbfda4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a08051-41b1-7d40-8b89-0dcb3e412ce8",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
