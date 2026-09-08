@@ -1,0 +1,14 @@
+scripts/release.sh
+  h_080fb89ca1f0c4 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "4d61ad53908a6dd9f83fbf12c28cae8a5ea2bbf9",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
