@@ -1,0 +1,18 @@
+deep_causality_unified_math/deep_causality_stats/LICENSE
+  h_080fb89ca1f0c4 1-23
+deep_causality_unified_math/deep_causality_stats/deep_causality_stats_sbom.spdx.json
+  h_080fb89ca1f0c4 1-154
+deep_causality_unified_math/deep_causality_stats/deep_causality_stats_sbom.spdx.json.sha
+  h_080fb89ca1f0c4 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "7da612166750b38f9592668e3cfc7af1cee2f898",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
