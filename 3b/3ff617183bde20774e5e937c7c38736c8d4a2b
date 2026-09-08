@@ -1,0 +1,67 @@
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_trace_tests.rs
+  s_6625a582c8b733::t_ebf8a2a81c96da 90-128,133-134
+  s_6625a582c8b733::t_83bb762e2670e0 129-132
+deep_causality_utils/deep_causality_par/tests/functions/scoped_map_tests.rs
+  s_6625a582c8b733::t_bd109df2a0e2e1 7-9,12-13,70-95
+  s_6625a582c8b733::t_b1f10ef073d299 96
+deep_causality_utils/deep_causality_file/tests/types/table_types_tests.rs
+  s_6625a582c8b733::t_d0b7b56c4a40f3 40-42
+  s_6625a582c8b733::t_3235305bf2ee7c 15,18-23
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_table_tests.rs
+  s_6625a582c8b733::t_098615ca8e5523 145-153,155-160
+  s_6625a582c8b733::t_ebf8a2a81c96da 126-129,133-144
+  s_6625a582c8b733::t_83bb762e2670e0 130-132,154
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_gnss_tests.rs
+  s_6625a582c8b733::t_098615ca8e5523 41-44,47-48,53-59
+  s_6625a582c8b733::t_83bb762e2670e0 49-52
+deep_causality_utils/deep_causality_file/src/types/loaders/read_clk.rs
+  s_6625a582c8b733::t_50b8b9d6e89ef6 69-83
+deep_causality_utils/deep_causality_file/tests/load_real_galileo.rs
+  s_6625a582c8b733::t_83bb762e2670e0 31-34
+  s_6625a582c8b733::t_8ca1f2397fdef4 7,17-19,23-27,45-49
+deep_causality_utils/deep_causality_file/tests/types/snapshot/snapshot_io_tests.rs
+  s_6625a582c8b733::t_e068b1c27056be 10,177,179,181,183,186,188,190,194-195,199,201,203,214,216,224,226,228,232,234,238,240,243,253,257,259,261,269,280-325,331-382,388-425,430-449
+  s_6625a582c8b733::t_83bb762e2670e0 197,200,221-223,225,326-330,426-429
+  s_6625a582c8b733::t_8967b567d14249 271-279
+  s_6625a582c8b733::t_92c67367f0faff 383-387
+  s_6625a582c8b733::t_f068d0ea74baed 165-176,178,180,182,184-185,187,189,191-193,196,198,202,204-213,215,217-220,227,229-231,233,235-237,239,241-242,244-252,254-256,258,260,262-268,270
+deep_causality_utils/deep_causality_file/tests/types/writers/write_table_tests.rs
+  s_6625a582c8b733::t_8967b567d14249 61-81
+  s_6625a582c8b733::t_3c84db9e99d5f0 60
+deep_causality_utils/deep_causality_file/tests/types/writers/write_rows_tests.rs
+  s_6625a582c8b733::t_d0b7b56c4a40f3 62-100
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_sp3_tests.rs
+  s_6625a582c8b733::t_b6fc1ab7d57fb0 9,247-257,261-272
+  s_6625a582c8b733::t_098615ca8e5523 189-238
+  s_6625a582c8b733::t_83bb762e2670e0 258-260
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_clk_tests.rs
+  s_6625a582c8b733::t_83bb762e2670e0 187-191,193-195
+  s_6625a582c8b733::t_8ba39f405f5207 6-7,9,182-186,192,196-205
+  s_6625a582c8b733::t_50b8b9d6e89ef6 90-93,98-100
+  s_6625a582c8b733::t_fcffd8672a7c52 34-89,94-97,101-106,138
+  s_6625a582c8b733::t_668ce4baea28e4 139-151
+deep_causality_utils/deep_causality_file/tests/types/snapshot_types_tests.rs
+  s_6625a582c8b733::t_18d7eb0b2c3c07 80-110
+deep_causality_utils/deep_causality_file/BUILD.bazel
+  s_6625a582c8b733::t_b401d5158f3937 109
+deep_causality_utils/deep_causality_par/BUILD.bazel
+  s_6625a582c8b733::t_6cc5c57037de9e 54-60,79-85
+examples/chronometric_examples/BUILD.bazel
+  s_6625a582c8b733::t_1c59c5e36860ff 29-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "3b3ff617183bde20774e5e937c7c38736c8d4a2b",
+  "prompts": {},
+  "sessions": {
+    "s_6625a582c8b733": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "92266816-0029-45cf-999b-6e8e9ff270a5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
