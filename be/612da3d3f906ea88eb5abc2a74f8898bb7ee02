@@ -1,0 +1,37 @@
+website/web/src/components/home/examples.ts
+  s_6625a582c8b733::t_9490697a7c9f87 17-36,39-56
+  s_6625a582c8b733::t_3895cb6c265c7d 15-16
+  s_6625a582c8b733::t_63c7a30d72213a 57-59
+website/web/src/content/examples/en/aerospace-flight-envelope.mdx
+  s_1bf50d81bcdc8f::t_3e39e8b33f0adf 2,4,17
+website/web/src/content/examples/en/counterfactual-weather.mdx
+  s_1bf50d81bcdc8f::t_41872bb8fe8938 1-75
+website/web/src/content/examples/en/physics-maxwell.mdx
+  s_1bf50d81bcdc8f::t_c79d14c4a65d3c 2,4
+website/web/src/content/examples/en/service-root-cause.mdx
+  s_1bf50d81bcdc8f::t_39063c9bb2d2be 1-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "be612da3d3f906ea88eb5abc2a74f8898bb7ee02",
+  "prompts": {},
+  "sessions": {
+    "s_1bf50d81bcdc8f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a081c3-5453-7853-8e38-5d3e0e8bfab7",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_6625a582c8b733": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "92266816-0029-45cf-999b-6e8e9ff270a5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
