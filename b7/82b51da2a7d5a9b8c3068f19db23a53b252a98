@@ -1,0 +1,64 @@
+website/web/DESIGN.md
+  s_1bf50d81bcdc8f::t_4280c10cde991e 720,728
+  s_6625a582c8b733::t_4e96df94e55cec 465,588-593
+deep_causality_utils/deep_causality_ast/src/const_tree/mod.rs
+  s_6625a582c8b733::t_a762981f68d80f 76-77
+deep_causality_utils/deep_causality_ast/tests/const_tree/api_tests.rs
+  s_6625a582c8b733::t_1ed9d793a7b887 8-11,14-20,22,28-31,33,35-36,38-68
+deep_causality_utils/deep_causality_ast/tests/const_tree/debug_tests.rs
+  s_6625a582c8b733::t_d7ebd1bf88f179 15-41
+deep_causality_utils/deep_causality_ast/tests/const_tree/accessors_tests.rs
+  s_6625a582c8b733::t_be98c92ae27061 46-57,86-88,92-93,97-99,101-102,105-108,110,112-113,115
+deep_causality_utils/deep_causality_ast/tests/const_tree/iter_tests.rs
+  s_6625a582c8b733::t_2db3af908a1e1a 33-38,43,46-87
+deep_causality_utils/deep_causality_ast/tests/const_tree/into_iter_tests.rs
+  s_6625a582c8b733::t_1ed9d793a7b887 6-10,15-21,26,37-43,48,53-59,65
+deep_causality_utils/deep_causality_ast/tests/const_tree/partial_eq_tests.rs
+  s_6625a582c8b733::t_d7ebd1bf88f179 28-61
+deep_causality_utils/deep_causality_ast/tests/const_tree/display_tests.rs
+  s_6625a582c8b733::t_8bc0019ad5afab 7,33-77
+  s_6625a582c8b733::t_d7ebd1bf88f179 16-32,78
+deep_causality_utils/deep_causality_ast/tests/const_tree/map_tests.rs
+  s_6625a582c8b733::t_bac97030a78267 10-19,22-27,29-52,57-64,70-87,89-95,97-112,117-158
+  s_6625a582c8b733::t_b02a29738901a6 88
+deep_causality_utils/deep_causality_ast/tests/const_tree/mod_tests.rs
+  s_6625a582c8b733::t_a762981f68d80f 31-67
+deep_causality_utils/deep_causality_ast/tests/const_tree/clone_tests.rs
+  s_6625a582c8b733::t_2db3af908a1e1a 15-35
+website/web/src/components/home/CausalStack.astro
+  s_1bf50d81bcdc8f::t_8053d9209a17a4 28,49
+deep_causality_utils/deep_causality_ast/tests/const_tree/from_tests.rs
+  s_6625a582c8b733::t_2db3af908a1e1a 22-35
+website/web/src/components/FoundationBadge.astro
+  s_6625a582c8b733::t_06a0b8afb6cb05 1-17
+website/web/src/layouts/BaseLayout.astro
+  s_6625a582c8b733::t_70b5ce47e68dff 3,154
+website/web/src/pages/about.astro
+  s_6625a582c8b733::t_a477ae28865763 2,51-52
+website/web/src/pages/overview/index.astro
+  s_6625a582c8b733::t_53137f499d6eeb 8,14-19,21,26-80,82-85,87-90,92,94,96-98,101-104,107,109-126,129-130,133,135-140,142-148,150-152,158-159,161,163-164,166-178
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "b782b51da2a7d5a9b8c3068f19db23a53b252a98",
+  "prompts": {},
+  "sessions": {
+    "s_1bf50d81bcdc8f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a081c3-5453-7853-8e38-5d3e0e8bfab7",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_6625a582c8b733": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "92266816-0029-45cf-999b-6e8e9ff270a5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
