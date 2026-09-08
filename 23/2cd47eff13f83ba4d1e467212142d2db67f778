@@ -1,0 +1,58 @@
+deep_causality_unified_math/deep_causality_num/tests/float_bfloat16/mod.rs
+  s_85e2687f045cb8::t_fd231e38abb17f 14
+openspec/changes/archive/2026-09-08-unified-math-next/tasks.md
+  s_85e2687f045cb8::t_fd231e38abb17f 1-111,113-432
+  s_85e2687f045cb8::t_3a7372cb246db1 112
+openspec/specs/meek-orientation-completeness/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-176
+openspec/specs/real-bound-cbrt/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-163
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/logistic_tests.rs
+  s_85e2687f045cb8::t_fd231e38abb17f 38
+deep_causality_unified_math/deep_causality_topology/tests/types/mixed_graph/meek_tests.rs
+  s_85e2687f045cb8::t_fd231e38abb17f 215
+openspec/specs/linear-adoption/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-220
+openspec/changes/archive-notes.md
+  s_85e2687f045cb8::t_f8e04b004f13f6 134-136
+  s_85e2687f045cb8::t_1c66c3cbde3a54 126,129-133
+  s_85e2687f045cb8::t_a75741f3a080d0 138-141
+  s_85e2687f045cb8::t_5f57df4a35ab05 137
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/ridge_tests.rs
+  s_85e2687f045cb8::t_fd231e38abb17f 1061
+openspec/specs/solver-convergence-reporting/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-136
+openspec/specs/statistics-consumer-migration/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-248
+openspec/specs/rand-realfield-sampling/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 49-121
+  s_85e2687f045cb8::t_6188fcb98888e5 122
+openspec/specs/unified-math-tdd-protocol/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-268
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/binning_tests.rs
+  s_85e2687f045cb8::t_fd231e38abb17f 42
+openspec/specs/statistics-crate-identity/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-157
+openspec/specs/statistics-descriptive-and-information/spec.md
+  s_85e2687f045cb8::t_a0606ef8e18fc6 1-260
+openspec/changes/archive/2026-09-08-unified-math-next/specs/unified-math-tdd-protocol/spec.md
+  s_85e2687f045cb8::t_fd87559dfaf4b2 246-254,263-266
+openspec/notes/archive/unified_math/bf16_tdd_record.md
+  s_85e2687f045cb8::t_0f6ab07090a172 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "232cd47eff13f83ba4d1e467212142d2db67f778",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
