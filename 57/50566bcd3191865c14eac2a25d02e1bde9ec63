@@ -1,0 +1,14 @@
+deep_causality_physics/src/kernels/astro/ks_propagator.rs
+  h_080fb89ca1f0c4 222,227
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "5750566bcd3191865c14eac2a25d02e1bde9ec63",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
