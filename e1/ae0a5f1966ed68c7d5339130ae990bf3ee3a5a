@@ -1,0 +1,27 @@
+openspec/notes/test_audit/dc_all/README.md
+  s_464adb79fbfda4::t_4fc2d08c608154 1-116,118-279
+  s_464adb79fbfda4::t_11c044da1d36bd 117
+openspec/notes/test_audit/physics/audit_tests_v2.py
+  s_464adb79fbfda4::t_ae5d8da0b83c0e 17,292-304
+  s_464adb79fbfda4::t_de116f9e49ab26 1-16,18-291,305-512
+Cargo.lock
+  s_464adb79fbfda4::t_0200c7d050dfd9 771
+deep_causality_quantum/Cargo.toml
+  s_464adb79fbfda4::t_f1b8503817df0f 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "e1ae0a5f1966ed68c7d5339130ae990bf3ee3a5a",
+  "prompts": {},
+  "sessions": {
+    "s_464adb79fbfda4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a08051-41b1-7d40-8b89-0dcb3e412ce8",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
