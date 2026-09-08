@@ -1,0 +1,145 @@
+examples/causal_discovery_examples/ml/ml_rca/model.rs
+  s_85e2687f045cb8::t_668a5cccc9ce94 92-95,99,104-105
+.cargo/mutants.toml
+  s_85e2687f045cb8::t_aa2bc196584b30 207-209
+  s_85e2687f045cb8::t_93d3a8a2925d13 64-66
+  s_85e2687f045cb8::t_a20490fd47e53c 92-107
+  s_85e2687f045cb8::t_d5be1df5f2e5d9 114
+  s_85e2687f045cb8::t_1f8759e943dcbd 110-113
+  s_85e2687f045cb8::t_e566a78217b550 219-240
+deep_causality_physics/tests/kernels/astro/solver_convergence_tests.rs
+  s_85e2687f045cb8::t_560c1425e093c3 231-328
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/moments_bfloat16_tests.rs
+  s_85e2687f045cb8::t_7364e6a3372784 39
+  s_85e2687f045cb8::t_d3f84ac5434eae 49,578-658
+deep_causality_physics/src/error/physics_error.rs
+  s_85e2687f045cb8::t_6bda9d85ebf64c 192-197,206
+deep_causality_unified_math/deep_causality_stats/src/algorithms/covariance.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 20-24,31-36,132-142,145-147,167-184
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/binning_tests.rs
+  s_85e2687f045cb8::t_7cc571da8af725 1001,1006,1022,1026,1035,1040,1056,1058-1111
+  s_85e2687f045cb8::t_e0a36a3cdd58cb 68,989-1000,1002-1005,1007-1021,1023-1025,1027-1034,1036-1039,1041-1055,1057,1112
+deep_causality_unified_math/deep_causality_topology/src/types/manifold/differential/interior_product_simplicial.rs
+  s_85e2687f045cb8::t_abf8971fc7e5eb 199-208,210-216
+  s_85e2687f045cb8::t_264920c740be2d 96-97
+deep_causality_discovery/src/types/data_preprocessor/data_discretizer.rs
+  s_85e2687f045cb8::t_240de3304e9af1 85-100
+deep_causality_unified_math/deep_causality_num/src/float_106/ops_arithmetic.rs
+  s_85e2687f045cb8::t_4ee3d6fb2c308a 37-50
+  s_85e2687f045cb8::t_d3b26e6474988c 51-53
+  s_85e2687f045cb8::t_d8756f52c8b4b6 304-311
+  s_85e2687f045cb8::t_a60da84a1fc9fe 151-162,181-187,228-232,234-237,257,259-261
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_algo.rs
+  s_85e2687f045cb8::t_8ce3fb1e38d2d1 38
+deep_causality_physics/tests/error/physics_error_tests.rs
+  s_85e2687f045cb8::t_2f636852e57461 225-261
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/moments_f64_tests.rs
+  s_85e2687f045cb8::t_d3f84ac5434eae 29,548-628
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/moments_float106_tests.rs
+  s_85e2687f045cb8::t_7364e6a3372784 20
+  s_85e2687f045cb8::t_d3f84ac5434eae 31,560-640
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/mod.rs
+  s_85e2687f045cb8::t_0e5342917c7ef4 11-12
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/entropy_tests.rs
+  s_85e2687f045cb8::t_1ff3d4909284cf 1765-1788,1790-1842,1844-1886
+  s_85e2687f045cb8::t_e7898e46843907 1789,1843
+deep_causality_unified_math/deep_causality_topology/tests/types/manifold/interior_product_simplicial_tests.rs
+  s_85e2687f045cb8::t_dd03aa53f7e707 463-515
+deep_causality_physics/src/kernels/astro/two_body.rs
+  s_85e2687f045cb8::t_e3102fa93819ea 184-193
+deep_causality_physics/tests/kernels/mhd/ideal_tests.rs
+  s_85e2687f045cb8::t_17fa3b281efa70 700-753
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/covariance_tests.rs
+  s_85e2687f045cb8::t_02bbc203bfc149 1-83,90-157,163-228,236-296
+  s_85e2687f045cb8::t_40acd033ab6f87 84-89
+  s_85e2687f045cb8::t_54da1578f31a3a 158-162,229-235
+deep_causality_unified_math/deep_causality_num_rational/Cargo.toml
+  s_85e2687f045cb8::t_3a13c7cd49f084 6
+deep_causality_unified_math/deep_causality_stats/src/errors/stats_error/mod.rs
+  s_85e2687f045cb8::t_02675e468e857d 144-149
+deep_causality_quantum/Cargo.toml
+  s_85e2687f045cb8::t_02841e31821dbf 33,35
+deep_causality_unified_math/deep_causality_stats/src/algorithms/ridge.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 97-98,182-195,222-224,243-248
+  s_85e2687f045cb8::t_332d2dfc0d20ec 249
+deep_causality_physics/src/kernels/mhd/ideal.rs
+  s_85e2687f045cb8::t_0cc3bba8083646 159-167,175-182
+  s_85e2687f045cb8::t_038dfc4130a808 168-174
+  s_85e2687f045cb8::t_dbf6c22c487136 100-103
+deep_causality_unified_math/deep_causality_stats/src/algorithms/log_sum_exp.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 14,16-24,31-42,60-65,67-70,73
+deep_causality_unified_math/deep_causality_stats/src/algorithms/correlation.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 8,22-24,38-50,75-79,92-117,120-138,140,144
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/ridge_tests.rs
+  s_85e2687f045cb8::t_9395886a1459d8 1443-1457,1460-1462,1464-1465,1473,1477
+  s_85e2687f045cb8::t_6c22217de42785 1458-1459,1463,1466-1472,1474-1476
+deep_causality_discovery/tests/types/preprocessor/data_discretizer_tests.rs
+  s_85e2687f045cb8::t_86ce6bd57a6e2c 206-258
+  s_85e2687f045cb8::t_4d2ee926f8b919 205
+deep_causality_unified_math/deep_causality_linear/src/algorithms/small.rs
+  s_85e2687f045cb8::t_b4431b9d26e6ca 252-257
+  s_85e2687f045cb8::t_37575d001d6b58 294-315,317-318,324-327,331,336-338
+  s_85e2687f045cb8::t_1508931a3ae665 355,359-360,365-374
+  s_85e2687f045cb8::t_1bdd84db2fdd4e 375-376
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_gaussian.rs
+  s_85e2687f045cb8::t_3051f576d2b5a5 477-479,481-487,499-502
+deep_causality_algorithms/src/causal_discovery/brcd/mod.rs
+  s_85e2687f045cb8::t_6f07d7a28435d2 46-51
+  s_85e2687f045cb8::t_8ce3fb1e38d2d1 80
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/proportion_tests.rs
+  s_85e2687f045cb8::t_c546fcaeb9c502 18,112-143,146-192,196-202,204-208
+  s_85e2687f045cb8::t_cf01b31d80fc94 144-145,193-195,203
+  s_85e2687f045cb8::t_9395886a1459d8 17
+deep_causality_unified_math/deep_causality_stats/src/algorithms/entropy.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 29,33,38-53,77,83,85-93,99-102,114-123,125-126
+deep_causality_unified_math/deep_causality_stats/src/algorithms/proportion.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 57-73,91-115
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/correlation_tests.rs
+  s_85e2687f045cb8::t_f3bb60902c430a 765-809,811-825,830-838,842-843
+  s_85e2687f045cb8::t_7cc571da8af725 826-829
+  s_85e2687f045cb8::t_298245a0b13d08 810,839-841
+deep_causality_unified_math/deep_causality_tensor/Cargo.toml
+  s_85e2687f045cb8::t_898336e8861db5 31,33
+examples/classical_causality_examples/classical_via_causal_monad/cate/main.rs
+  s_85e2687f045cb8::t_61dc6f3a58e2fc 50-53,55-57,63
+  s_85e2687f045cb8::t_d6c18717d930e9 54
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_project.rs
+  s_85e2687f045cb8::t_4145efa3f18f6d 1-26,28-34
+  s_85e2687f045cb8::t_50f2137e221b24 27
+deep_causality_unified_math/deep_causality_stats/src/algorithms/moments.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 11-18,28-40,52-60,72-119,144,183
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/moments_f32_tests.rs
+  s_85e2687f045cb8::t_d3f84ac5434eae 29,548-628
+scripts/update.sh
+  s_85e2687f045cb8::t_f2adac4fb178bb 11-21
+deep_causality_unified_math/deep_causality_stats/src/algorithms/binning.rs
+  s_85e2687f045cb8::t_48992d1efa21d2 15,24-32,50,53,57-66,74-75,108-115,117-125
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_ops_tests.rs
+  s_85e2687f045cb8::t_380e8ab8a34ef6 352-388,494
+  s_85e2687f045cb8::t_170162211b2d9d 389-443,449-485,490-493
+  s_85e2687f045cb8::t_7cc571da8af725 444-448
+  s_85e2687f045cb8::t_841f0ef1191aba 486-489
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/log_sum_exp_tests.rs
+  s_85e2687f045cb8::t_6994763de9c3f0 1046-1082,1093-1149
+  s_85e2687f045cb8::t_7cc571da8af725 1083-1092
+deep_causality_algorithms/src/causal_discovery/brcd/brcd_boss_bootstrap.rs
+  s_85e2687f045cb8::t_b972ef07b462ba 38
+deep_causality_unified_math/deep_causality_linear/tests/algorithms/small_tests.rs
+  s_85e2687f045cb8::t_a8cdf9a686bb85 1099-1154
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "e77999d3edc21bd8ffb8cc619764b07c4b5ef510",
+  "prompts": {},
+  "sessions": {
+    "s_85e2687f045cb8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "660498cc-bcd9-4327-9962-e14722ae1d15",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
