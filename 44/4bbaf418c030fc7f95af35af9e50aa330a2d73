@@ -1,0 +1,21 @@
+openspec/notes/test_audit/unified_math/README.md
+  s_464adb79fbfda4::t_7c5fd7803d7fcd 1-88,91-107,109-110,112-116,118-123,125-181,183-184,186,188-242
+  s_464adb79fbfda4::t_ef509e218c28f3 89,108,111,117,124,182,185,187
+  s_464adb79fbfda4::t_c39cab0f2dba84 90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "444bbaf418c030fc7f95af35af9e50aa330a2d73",
+  "prompts": {},
+  "sessions": {
+    "s_464adb79fbfda4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a08051-41b1-7d40-8b89-0dcb3e412ce8",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
