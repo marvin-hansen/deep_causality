@@ -1,0 +1,51 @@
+deep_causality_quantum/src/types/abstraction/fault_set.rs
+  s_a31005946f38f3::t_10fe8191fdf404 90-93,144-147,153-164
+  s_a31005946f38f3::t_f53f276829b23b 1-89,94-143,148-152,165-390
+openspec/changes/add-qcl2-abstraction/specs/qcl-fault-tolerance/spec.md
+  s_a31005946f38f3::t_73bf3ef2cdf580 10-15,24-25,82-91,112-127,141-144
+deep_causality_quantum/src/types/abstraction/qc_model.rs
+  s_a31005946f38f3::t_f53f276829b23b 95,158
+openspec/changes/add-qcl2-abstraction/tasks.md
+  s_a31005946f38f3::t_73bf3ef2cdf580 98,100,105,108,110,112
+deep_causality_quantum/tests/types/abstraction/mod.rs
+  s_a31005946f38f3::t_71c5e6450f605e 10-11
+deep_causality_quantum/src/types/abstraction/abstraction.rs
+  s_a31005946f38f3::t_f53f276829b23b 153-168
+deep_causality_quantum/tests/types/abstraction/fault_tolerance_tests.rs
+  s_a31005946f38f3::t_71c5e6450f605e 1-434
+openspec/changes/add-qcl2-abstraction/notes/tdd-group-5.md
+  s_a31005946f38f3::t_73bf3ef2cdf580 1-71
+deep_causality_quantum/src/types/abstraction/fault_tolerance.rs
+  s_a31005946f38f3::t_10fe8191fdf404 1-356
+deep_causality_quantum/src/types/circuit_model/queries.rs
+  s_a31005946f38f3::t_f53f276829b23b 225-281
+  s_a31005946f38f3::t_10fe8191fdf404 13
+  s_a31005946f38f3::t_f88abe1110c67f 282-283
+deep_causality_quantum/src/types/abstraction/mod.rs
+  s_a31005946f38f3::t_f53f276829b23b 15-16,27-28
+deep_causality_quantum/src/types/abstraction/code_abstraction.rs
+  s_a31005946f38f3::t_10fe8191fdf404 215
+deep_causality_quantum/tests/types/abstraction/fault_set_tests.rs
+  s_a31005946f38f3::t_71c5e6450f605e 1-168
+deep_causality_quantum/src/types/abstraction/query.rs
+  s_a31005946f38f3::t_f53f276829b23b 7,29-30,41,100-107
+  s_a31005946f38f3::t_5025cd34adc7d3 108-109
+openspec/changes/add-qcl2-abstraction/design.md
+  s_a31005946f38f3::t_73bf3ef2cdf580 217-227
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "62f1f811d90f2190a3ea546d48d561daeb86591b",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
