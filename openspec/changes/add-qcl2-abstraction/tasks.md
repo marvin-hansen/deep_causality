@@ -25,15 +25,17 @@ A commit message is prepared at each group boundary; nothing is committed by the
       and a grouping that is not a partition
 - [ ] 1.2 Add the exact semantics: a Clifford program as its symplectic action through
       `clifford_conjugate`, a diagonal Table 1 gate as a `DiagonalPhase`; `SemanticsPath::Exact`
-- [ ] 1.3 Add the numeric semantics kernel: density-matrix evolution of a `GateOp` program with
-      `Channel` boxes through `embed_on_legs` and `apply_kraus`, and the Choi of the composite
-      `2^n → 2^k` channel; `SemanticsPath::Numeric`
-- [ ] 1.4 Add the entry-count cap on the numeric path, default `2^24`, counted on `NumberType`
-      with a checked product, `NaturalityDimensionExceeded { n, k, entries, cap }` before
-      allocating, and the examined count on success
-- [ ] 1.5 Decide the small fixture: build `LatticeComplex::<2, _>::square_torus(2)` and assert
-      `β₁ = 2` and `∂₁∂₂ = 0`; on failure add the hand-built `[[4,2,2]]` chain complex to
-      `utils_tests` and record the decision in the change's notes
+- [ ] 1.3 Add the numeric semantics kernel at the Kraus level: each gate's unitary embedded through
+      `embed_on_legs` and multiplied into the running family, each `Channel` box multiplying the
+      family out, and the Choi of the composite `2^n → 2^k` channel formed once through
+      `choi_from_kraus`; the program's own Choi is never formed; `SemanticsPath::Numeric`
+- [ ] 1.4 Add the two caps on the numeric path, both counted on `NumberType` with checked
+      products and refused before allocating: `NaturalityDimensionExceeded { n, k, entries, cap }`
+      at `2^24` entries and `KrausFamilyExceeded { operators, cap }` at `2^12` operators; report the
+      examined count on success
+- [ ] 1.5 Add the `[[8,2,2]]` fixture from `LatticeComplex::<2, _>::square_torus(2)` (confirmed
+      valid: `β = (1, 2, 1)`, `∂₁∂₂ = 0`, weight-2 representatives) and the hand-built `[[4,2,2]]`
+      chain complex to `utils_tests`, each with its derivation in the module doc
 - [ ] 1.6 Verify: the numeric kernel against `apply_kraus` on one qubit and against a hand-computed
       two-qubit `CZ` Choi; the 18-qubit request refused with the exact entry count; both semantics
       agree on `Z̄` and `H̄` over the small fixture; defect audit and `cargo mutants` on the kernel
@@ -66,8 +68,9 @@ A commit message is prepared at each group boundary; nothing is committed by the
 - [ ] 3.4 Add `check_naturality` as a `Check<R>`: one record per query, the `SemanticsPath`, the
       norm, the amplification factor and the examined count beside the report; the ε-abstraction
       definition in the doc block with the paper cited for the exact case
-- [ ] 3.5 Derive the Frobenius-to-diamond factor in `notes/` of this change, write it into the
-      docstring, and test it against the `2 sin(θ/2)` closed form over a `θ` sweep
+- [ ] 3.5 Write the two-sided bound `r / d_in ≤ diamond ≤ √(d_in d_out) · r` and its derivation
+      (`notes/open-questions-resolved.md` §2) into the docstring and the report, and test both ends
+      against the `2 sin(θ/2)` closed form over a `θ` sweep, expecting `r = 2√2 sin(θ/2)`
 - [ ] 3.6 Verify: vacuous signature reads `Vacuous`; a swapped program rejects and names the query;
       both paths agree on the small fixture; defect audit and `cargo mutants` on the residual kernel
 
@@ -94,30 +97,34 @@ A commit message is prepared at each group boundary; nothing is committed by the
 
 - [ ] 5.1 Add `FaultSet` with `pauli_weight(t)`, `declared` and `from_dem`, counted on
       `NumberType` as `C(n, t) · 3^t` and refused above the cap before allocating
-- [ ] 5.2 Add the Pauli-basis propagator: one term through Clifford gates by the tableau rule,
-      branching through `T`, `T†`, `CS†`, `CCZ` and wide `Cmz`, coefficients in `Complex<R>`, term
-      count checked against `PauliTermCountExceeded` before allocating
-- [ ] 5.3 Add correctability against `LogicalBasis`'s stabilizer generators: a normalizer term that
-      is not a stabilizer is a logical fault
+- [ ] 5.2 Add `GaugeFieldGate` (blocks as `Gf2Chain`s, phase function on `{0,1}^m` as `Turns`),
+      constructors for every Table 1 diagonal gate from Eq. (3.63), and the propagator: Clifford
+      layers through `clifford_conjugate`, diagonal gates by parity flips through `Gf2Chain::inner`
+      with the remainder as a `GaugeFieldGate`, and `NoPropagationNormalForm` for a program with two
+      non-Clifford layers separated by a non-diagonal Clifford
+- [ ] 5.3 Add the exact decision: a fault is tolerated iff the remainder's phase function is
+      constant on `{0,1}^m`, with the flipped parity pattern and the phase table as witness; on the
+      numeric path, report the remainder's Pauli coefficients
 - [ ] 5.4 Add `check_fault_tolerance` over the enlarged signature: per-fault residuals, the worst,
       the count, the witness `(location, Pauli, term)`, the `SemanticsPath` per record
-- [ ] 5.5 Derive the oracle facts by hand in `notes/` of this change (`Z̄`, `X̄` weight-one FT;
-      `S̄` with CZ pairs not, on `[[18,2,3]]`), then add the Haruna filter with per-gate labels
-      `Exact` and `PauliBasisToCap`
-- [ ] 5.6 Verify: `X` through `S̄` gives `X Z Z` up to phase; `X` through `T` gives two terms of
-      modulus `1/√2`; the filter matches the derived oracle; `T̄`'s record is labelled; empty set
-      reads `Vacuous`; defect audit and `cargo mutants` on the propagator
+- [ ] 5.5 Add the Haruna filter with every verdict labelled `Exact`, its expected values carrying
+      the Eq. (3.63) derivation of `notes/open-questions-resolved.md` §3 as provenance
+- [ ] 5.6 Verify: `X_q` through `S̄(γ)` gives `X_q Z̄(γ)` up to phase; `X_q` through `T̄(γ)` gives the
+      remainder `exp(±iπ/4 Z̄(γ))` with two terms of modulus `1/√2` at `w = 3, 4, 5`; `X_q X_r`
+      through `T̄` does not spread; `Z_q` passes through unchanged; the filter matches the derivation
+      on both torus fixtures; the two-layer program is refused by name; the empty set reads
+      `Vacuous`; defect audit and `cargo mutants` on the propagator
 
 ## 6. Composition and the three chain consumers
 
-- [ ] 6.1 Add `Abstraction::compose`: `π = π₁ ∘ π₂`, `τ = τ₂ ∘ τ₁`, both constants as largest
-      singular values of the composition superoperators on Choi space, the norm and the bound in the
-      report's provenance
+- [ ] 6.1 Add `Abstraction::compose`: `π = π₁ ∘ π₂`, `τ = τ₂ ∘ τ₁`, both constants as the
+      Frobenius-induced norms of `τ₂` and `τ₁` from the Gram matrix of each natural representation
+      through `eigen_hermitian`, the norm and the bound in the report's provenance
 - [ ] 6.2 Add `lean/DeepCausalityFormal/Quantum/Abstraction.lean` with Proposition 17 in the exact
       case over the pair-indexed matrix model, and bind it in `lean/THEOREM_MAP.md` to the exact
       composition test; register the Bazel `lean_test` target
 - [ ] 6.3 Add the three chain consumers under `examples/quantum_examples/qcl_examples/`:
-      concatenated `[[4,2,2]]`, code switching with the gadget as low-level query, and a distillation
+      the concatenated hand-built `[[4,2,2]]`, code switching with the gadget as low-level query, and a distillation
       round labelled as an example; each with a `rust_binary` in `BUILD.bazel`, a `FloatType` alias
       in `main.rs`, and the lifts from `deep_causality_num`
 - [ ] 6.4 Verify: exact links compose to residual zero; the tightness pair exceeds a bound with

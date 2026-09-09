@@ -102,6 +102,11 @@ fallback is a hand-built `[[4,2,2]]` chain complex (one 2-cell with `∂₂` the
 0-cell with `δ₀` the all-ones row, `∂₁∂₂ = 4 ≡ 0`). The torus fixtures `[[18,2,3]]` and `[[32,2,4]]`
 are reached by the exact path only, and the change says so wherever it names them.
 
+*Amended 2026-09-09.* `square_torus(2)` was probed against the tree and is a valid complex with
+Betti numbers 1, 2, 1 over ℤ and 𝔽₂, weight-2 representatives, and every v1 code check holding; it
+is the numeric fixture, and the `[[4,2,2]]` complex is a second small fixture rather than a fallback
+(`changes/add-qcl2-abstraction/notes/open-questions-resolved.md` §1).
+
 ### V-3 — The Haruna filter's non-Clifford gates are neither exact nor numerically reachable — **S1**
 
 **Where.** Road map §5, "Run `check_fault_tolerance` on each Table 1 gate's emitted program under
@@ -126,6 +131,15 @@ for `T̄`, `CS̄†`, `CC̄Z`, and the report carries the label per gate. The ex
 map lists (`Z̄`, `X̄` transversal and weight-1 FT; `S̄` with CZ pairs not, on the toric code) are
 kept as the oracle and derived by hand in the change's notes before the test that asserts them is
 written, per the anti-circularity protocol.
+
+*Amended 2026-09-09.* The Pauli-basis expansion and its cap are unnecessary for Table 1. Haruna
+defines every diagonal gate as `O_k(γ₁, …, γ_m) = exp(iπ/2^{k−1} · p₁⋯p_m)` in the logical
+`Z̄(γᵢ)` (Eq. 3.63), so a propagated fault has at most `2^m` Pauli terms for a gate on `m` logical
+qubits, independent of the representative weight; `T̄` under a single `X` leaves exactly
+`exp(±iπ/4 Z̄(γ))`, two terms, verified at `w = 3, 4, 5`. The change's D7 replaces the cap with a
+`GaugeFieldGate` carrier and a `Turns` comparison, keeps a named refusal for programs outside the
+normal form, and corrects the naming: Table 1 has no `CS̄†` or `CC̄Z` rows, those are physical gates
+inside `T̄`'s decomposition (`open-questions-resolved.md` §3).
 
 ### V-4 — Theorem 51 is a theorem about classical causal models — **S2**
 
@@ -252,8 +266,9 @@ composed from these parts.
 
 What the tree does not have, and the change adds: a density-matrix evolution of a `GateOp` program
 on `n` qubits with noise boxes (composed from `embed_on_legs` and `apply_kraus`; cost `O(gates · 8^n)`
-naive, under the V-2 cap); a Pauli-basis propagator (V-3); the Choi of a `2^n → 2^k` composite; a
-Stim detector-error-model text parser; and the superoperator norms of V-5. There is no SDP anywhere
+naive, under the V-2 cap); a `GaugeFieldGate` propagator (V-3, as amended); the Choi of a
+`2^n → 2^k` composite; a Stim detector-error-model text parser; and the Frobenius-induced channel
+norms of V-5. There is no SDP anywhere
 in the workspace, so the diamond norm stays optional as D2-2 has it.
 
 ### V-10 — Phase 0 is landed in code — **S3**
@@ -281,6 +296,11 @@ dimensions, `‖Φ‖_⋄ ≤ d_in · ‖J(Φ)‖_1 ≤ d_in · √(d_in d_out) 
 factor it used, and one test compares it against a pair whose diamond distance has a closed form
 (two unitary channels differing by a rotation by `θ` on one qubit). If the derivation at
 implementation time gives a different constant, the docstring follows the derivation.
+
+*Amended 2026-09-09.* The constant is `√(d_in d_out)`; the `d_in` in front was valid and loose. The
+chain is `‖Φ‖_⋄ ≤ ‖J‖_1` by the `(I ⊗ A)|Ω̃⟩` argument, `‖J‖_1 ≤ √(d_in d_out) ‖J‖_F`, and from
+below `‖J‖_F ≤ ‖J‖_1 ≤ d_in ‖Φ‖_⋄`, so `r / d_in ≤ diamond ≤ √(d_in d_out) · r`. Checked on the
+`R_z(θ)` pair at every `θ` and on 300 random channel pairs (`open-questions-resolved.md` §2).
 
 ### V-12 — Phases 1 to 3 carry a representability decision — **S3**
 
@@ -327,7 +347,7 @@ by hand.
 |---|---|---|---|
 | V-1 | S1 | Phase 0 exit | Live `qcl-*` specs are empty; restore first, write QCL-2 deltas as `ADDED` |
 | V-2 | S1 | Phase 2, D2-2 | Choi naturality is 17 TB on `[[18,2,3]]`; two semantics, exact and capped numeric; small fixture |
-| V-3 | S1 | Phase 4 | Non-Clifford gates under Pauli faults need Pauli-basis propagation to a cap; label per gate |
+| V-3 | S1 | Phase 4 | Non-Clifford gates leave a logical remainder in the `Z̄(γᵢ)` algebra, `2^m` terms, no cap (amended) |
 | V-4 | S2 | §4.1, §10 | Theorem 51 is classical; quantum use is a necessary condition, documented as such |
 | V-5 | S2 | Phase 5 | `ε ≤ ‖τ₂‖·ε₁ + ‖τ₁‖·ε₂`; compute both constants; diamond gives `ε₁ + ε₂` |
 | V-6 | S2 | Phase 1 exit | Crosstalk factors are not Choi operators; reproduce the decision, not the values |
@@ -335,7 +355,7 @@ by hand.
 | V-8 | S2 | §11 | Surjectivity by a section `E` with `τ ∘ E = id`, not by rank |
 | V-9 | S3 | all | Dependency map into unified math; the five kernels the tree lacks |
 | V-10 | S3 | Phase 0 | X-1, X-2, X-4, X-5, X-6, X-15 landed; three consumers, not two |
-| V-11 | S3 | D2-2, §10 | Derive the Frobenius-to-diamond constant; test on a closed-form pair |
+| V-11 | S3 | D2-2, §10 | Frobenius-to-diamond constant is `√(d_in d_out)`, two-sided; tested on a closed-form pair (amended) |
 | V-12 | S3 | §12 | Phases 1 to 3 carry two design decisions; say so |
 | V-13 | S3 | §10 | Proposition 17 goes in `Abstraction.lean`; the ε-law stays Rust |
 | V-14 | S3 | §11 | Abstraction layer is `alloc`; `Dilation`, `DemModel` are `qcm`; Stim is `dem` |

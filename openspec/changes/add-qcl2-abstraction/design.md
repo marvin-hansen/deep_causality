@@ -69,14 +69,21 @@ the query admits:
   with its `Rational<i64>` phase polynomial. A square commutes exactly when the images agree up
   to stabilizers through `LogicalBasis::are_logically_equivalent` and the phase ratio is integral
   through `DiagonalPhase::phase_at`. No width limit; the residual is zero or it is not.
-- **Numeric.** A general program with noise boxes is evolved as a density matrix by embedding each
-  gate's unitary or each noise box's Kraus family on the register through `embed_on_legs` and
-  `apply_kraus`; both sides of the square are formed as Choi operators of the composite
-  `2^n → 2^k` channel and compared in Frobenius norm against `Tolerance::state()`. The path carries
-  a cap on the entry count, default `2^24` (so `n + k ≤ 12`), refuses above it with
-  `NaturalityDimensionExceeded { n, k, entries, cap }` before allocating, and reports the entries
-  it formed. This is the discipline D1 and D7 of `add-qcl` apply to the code-space enumeration and
-  the design cover.
+- **Numeric.** A general program is carried at the Kraus level, never as a Choi operator of its
+  own: each gate's unitary is embedded on the register through `embed_on_legs` and multiplied into
+  the running Kraus family, and a noise box multiplies the family out by its own Kraus operators.
+  The Choi operator is formed once, for the composite `2^n → 2^k` channel `τ ∘ U`, from the
+  family `{K_j U}` through the shipped `choi_from_kraus`, and the two sides of the square are
+  compared in Frobenius norm against `Tolerance::state()`. The distinction matters at the fixture:
+  the composite Choi on `[[8,2,2]]` is `2^20` entries, while the Choi of the 8-qubit program alone
+  would be `2^32`, and evolving `2^16` basis inputs through the program to build the composite
+  column by column would cost about `5·10^13` flops. The path carries two caps, both counted on
+  `NumberType` with checked products and both refused before allocating: the composite entry count,
+  default `2^24` (so `n + k ≤ 12`), as `NaturalityDimensionExceeded { n, k, entries, cap }`, and
+  the Kraus family size `∏ kᵢ` over the noise boxes, default `2^12`, as
+  `KrausFamilyExceeded { operators, cap }`. A fault set inserts one error channel with at most four
+  Kraus operators, so the fault path never approaches the second cap. This is the discipline D1 and
+  D7 of `add-qcl` apply to the code-space enumeration and the design cover.
 
 The report carries `SemanticsPath::{Exact, Numeric}` beside the norm and the amplification, and a
 scenario asserts that a query decidable by both paths gets the same verdict on a fixture the
@@ -158,38 +165,99 @@ With `τ = τ₂ ∘ τ₁` and `π = π₁ ∘ π₂`, the composite defect spl
 are one. In Frobenius norm on Choi operators neither is one in general, and the road map's law
 dropped the second factor.
 
-`Abstraction::compose` computes both constants as the largest singular values of the composition
-superoperators on Choi space, which are finite matrices under the D1 cap, and records them with the
-norm in the composite report's provenance. The exact case `ε₁ = ε₂ = 0 ⇒ ε = 0` is Proposition 17
+In Frobenius norm the two constants are the Frobenius-induced norms `‖τ₂‖_{F→F}` and
+`‖τ₁‖_{F→F}` of the channels themselves: post-composition acts on a Choi operator as `id ⊗ τ₂`,
+pre-composition as the transpose of `τ₁` on the input factor, and neither the tensor with an
+identity nor a transposition changes the induced norm on a Hilbert-space norm. So the constants do
+not need the composition superoperators on Choi space, whose dimension `(d_in d_out)²` reaches
+`10^6` on the fixture. Each is the largest singular value of the channel's natural representation,
+a `d_out² × d_in²` matrix (`16 × 65 536` for the `[[8,2,2]]` decoder), obtained as the square root
+of the largest eigenvalue of its `d_out² × d_out²` Gram matrix through the shipped
+`eigen_hermitian`. `Abstraction::compose` computes both, records them with the norm in the
+composite report's provenance, and the exact case `ε₁ = ε₂ = 0 ⇒ ε = 0` is Proposition 17
 and is the Lean statement. The tightness test is on a constructed pair where both constants exceed
 one, so a law with either constant assumed to be one fails it.
 
-### D7. Faults propagate in the Pauli basis, to a cap
+### D7. Faults propagate through Table 1 in the algebra of the logical `Z̄`s, with no cap
 
-`clifford_conjugate` refuses `T`, `Tdg`, `Csdg`, `Ccz` and `Cmz` on three or more qubits, correctly:
-their conjugation action is not a Pauli. `logical_t` emits all three over the support, its pairs and
-its triples. A single Pauli fault before a `CS†` or `CCZ` in `T̄`'s program therefore leaves the
-tableau, and D1 rules out simulating an 18-qubit register.
+**What the road map assumed, and a first draft of this design repeated.** A Pauli fault carried
+through `T̄`'s program of `T`, `CS†` and `CCZ` branches into a Pauli superposition bounded only by
+`4^w` for the representative weight `w`, so the propagator needed a term cap and the qLDPC family,
+with `w` in the tens to hundreds, was out of reach.
 
-A fault is carried through the program as a linear combination of Paulis on the qubits it has
-touched, with coefficients in `Complex<R>`. Through a Clifford gate it stays one term. Through `T`,
-`CS†` or `CCZ` it branches, and the term count is bounded by `4^w` for the support weight `w` it
-can spread over; the propagator counts first and refuses above `PauliTermCountExceeded` (default
-`2^16` terms) before allocating. Correctability of the resulting error set is decided against the
-stabilizer generators `LogicalBasis` carries: a term in the normalizer that is not a stabilizer is a
-logical fault, and the report's witness names the fault location and that term. The Haruna filter's
-verdict carries `Exact` for the Clifford subset (`Z̄`, `X̄`, `S̄`, `CZ̄`, `H̄`) and `PauliBasisToCap`
-for `T̄`, `CS̄†` and `CC̄Z`. The external-oracle facts the road map lists are derived by hand in the
-change's notes before the asserting test is written.
+**What Haruna's construction says.** Every diagonal gate of Table 1 is defined as a function of the
+logical `Z̄(γᵢ)` operators and its physical decomposition is derived from that by expanding modulo 2:
+`S̄(γ) = exp(iπ/2 · (I − Z̄(γ))/2)` (Eq. 3.14), `CZ̄(γ₁, γ₂) = exp(iπ · p₁p₂)` (3.37),
+`C^{m−1}Z̄ = exp(iπ · p₁⋯p_m)` (3.49), `T̄(γ) = exp(iπ/4 · (I − Z̄(γ))/2)` (3.56), and in general
+`O_k(γ₁, …, γ_m) = exp(iπ/2^{k−1} · p₁⋯p_m)` with `pᵢ = (I − Z̄(γᵢ))/2` (3.63). Such a gate `G`
+lies in the commutative algebra generated by the `m` Paulis `Z̄(γᵢ)`, of dimension `2^m`.
+Conjugating a Pauli fault `P = X^a Z^b` gives `G P G† = P · (P† G P) G†`, and `P† G P` is `G` with
+each `Z̄(γᵢ)` replaced by `(−1)^{⟨a, γᵢ⟩} Z̄(γᵢ)`. The remainder `(P† G P) G†` is therefore a
+function of the `m` logical parities with at most `2^m` Pauli terms, each `P · Z̄(γ_S)` for a subset
+`S` of the gate's logical qubits, and the representative weight `w` never enters. For a single-block
+gate `O_k(γ)` and a fault with `⟨a, γ⟩ = 1` the remainder is `exp(iπ/2^{k−1}) · O_{k−1}(γ)†`, one
+level down the Clifford hierarchy: `Z̄` for `S̄`, `exp(±iπ/4 Z̄)` for `T̄`; with `⟨a, γ⟩ = 0` it is
+the identity. Z-type faults commute with every diagonal gate and never spread.
 
-### D8. The Frobenius-to-diamond factor is derived before it is documented
+**Checked.** On `w = 3, 4, 5` with the crate's polynomial `(2n³ − 3n² + 2n)/8`, which equals the
+paper's product entry for entry, `T̄ Z₀ T̄† = Z₀` and `T̄ X₀ T̄†` has exactly two Pauli terms, `X₀`
+and `X₀ Z̄(γ)`, of modulus `1/√2` each. A first algebraic attempt predicted `2^{w−1}` terms and was
+wrong; the numerics caught it and Eq. (3.63) explains it. `C³Z` on four qubits sends `X₀` to
+`X₀ · CCZ₁₂₃`, a genuine non-Clifford remainder with eight terms, which is `2^m` for `m = 4`.
 
-For a Hermiticity-preserving `Φ` with unnormalised Choi operator `J(Φ)` on `d_in · d_out`
-dimensions, `‖Φ‖_⋄ ≤ d_in · ‖J(Φ)‖_1 ≤ d_in · √(d_in d_out) · ‖J(Φ)‖_F`. The naturality report
-carries the factor it used. One test compares the bound against a pair whose diamond distance has
-a closed form, two single-qubit unitary channels differing by a rotation by `θ`. If the derivation
-at implementation time yields a different constant, the docstring follows the derivation; the
-requirement is that a stated factor be recorded and tested, not that this one be it.
+**The carrier.** `GaugeFieldGate`: the blocks `γ₁, …, γ_m` as `Gf2Chain`s and the phase function
+on `{0,1}^m` as `2^m` values of `Turns`, which is Table 1's third column and `DiagonalPhase`
+generalised from one block to `m`. Conjugation by a Pauli costs `m` inner products through
+`Gf2Chain::inner` and yields another `GaugeFieldGate` on the same blocks. Clifford layers (`H̄`'s
+transversal `H`, `S̄`, `CZ̄`) go through the tableau as before. The propagator therefore needs no
+Pauli-basis expansion and no term cap for any Table 1 gate or any product of them; the emitter's
+tuple cap on `logical_t` remains, because the physical program is a real cost, but the fault
+analysis never materialises the program.
+
+**The decision.** After the fault's own Pauli is recovered, the remainder acts on the code space as
+`exp(2πi · Δg(p̂))` with `p̂` the logical parity operators. It is a non-trivial logical unitary
+exactly when `Δg` is not constant on `{0,1}^m`, because the `γᵢ` are independent homology classes
+and every `Z̄(γ_S)` with `S ≠ ∅` is a non-trivial logical operator. So the fault is tolerated iff the
+`2^m` values of `Δg` agree, a comparison of `Turns`, and the witness is the flipped parity pattern
+together with the remainder's phase table. No exact cyclotomic arithmetic is needed for the
+decision; the Pauli coefficients of the remainder, sums of eighth roots of unity, are reported on
+the numeric path only. The Haruna filter's answer under `pauli_weight(1)` then follows from the
+algebra for every CSS code and every `w`: `Z̄` and `X̄` do not spread, and every other Table 1 gate
+fails a single X-type fault on its support, which confirms and extends the road map's oracle. The
+implementation computes the verdict; the algebra is the provenance of the test's expected values.
+
+**Where a cap remains.** A user program that interleaves two or more non-Clifford layers with
+non-diagonal Cliffords has no normal form of polynomial size that this design knows; there the
+propagator refuses with `NoPropagationNormalForm` naming the layers, rather than expanding to a cap.
+The per-gate label is `Exact` throughout Table 1, and `PauliBasisToCap` is retired.
+
+*Naming.* Table 1 has no logical `CS̄†` or `CC̄Z` rows; `CS†` and `CCZ` are physical gates inside
+`T̄`'s decomposition (3.59). The logical controlled gates are `CZ̄`, `C^{m−1}Z̄` and, in general,
+`O_k` with `m ≥ 2`. Text elsewhere in this change that names `CS̄†` and `CC̄Z` as Table 1 gates
+means `T̄` and `C^{m−1}Z̄`.
+
+### D8. The Frobenius-to-diamond factor is `√(d_in d_out)`, and the bound is two-sided
+
+For any linear map `Φ : L(X) → L(Y)` with the crate's unnormalised Choi operator
+`J(Φ) = Σ_{ij} |i⟩⟨j| ⊗ Φ(|i⟩⟨j|)`:
+
+1. `‖Φ‖_⋄ ≤ ‖J(Φ)‖_1`. Every unit vector on `X ⊗ X` is `(I ⊗ A)|Ω̃⟩` with `|Ω̃⟩ = Σᵢ |i⟩|i⟩` and
+   `‖A‖_F = 1`, so `(Φ ⊗ id)(|ψ⟩⟨ψ|) = (I ⊗ A) J(Φ) (I ⊗ A)†` has trace norm at most
+   `‖A‖_∞² ‖J(Φ)‖_1 ≤ ‖J(Φ)‖_1`. No Hermiticity assumption is used.
+2. `‖J‖_1 ≤ √(rank J) · ‖J‖_F ≤ √(d_in d_out) · ‖J‖_F`, Cauchy–Schwarz on the singular values.
+3. `J(Φ)/d_in = (Φ ⊗ id)(ω)` for the maximally entangled state `ω`, so `‖J‖_F ≤ ‖J‖_1 ≤ d_in ‖Φ‖_⋄`.
+
+For a Frobenius residual `r` between two channels, `r / d_in ≤ ‖E − F‖_⋄ ≤ √(d_in d_out) · r`.
+The register's first candidate carried an extra factor `d_in` on the upper bound; it was valid and
+loose. The naturality report carries both ends, so a Frobenius residual of zero certifies a
+diamond distance of zero.
+
+**Checked.** On `id` against `R_z(θ)` on one qubit, whose diamond distance is `2 sin(θ/2)`:
+`‖J‖_F = 2√2 sin(θ/2)` and `‖J‖_1 = 4 sin(θ/2)` at every `θ` in `(0, π]`, so the upper bound
+exceeds the distance by the constant `2√2` and the lower bound `r/2 = √2 sin(θ/2)` sits below it.
+Over 300 random pairs of two-Kraus channels on `d = 2` and `d = 3`, a diamond lower bound from 61
+pure inputs never exceeded `‖J‖_1`, and `‖J‖_1` never exceeded `√(d_in d_out) · ‖J‖_F`, the worst
+ratio being 1.98 against the factor 2. The θ-sweep is the requirement's test.
 
 ### D9. Interchange queries are validated at construction
 
@@ -240,10 +308,17 @@ survivor. The factor values change; the screen and the plan do not.
 ### D14. Fixtures
 
 The exact path runs on `[[18,2,3]]` (`square_torus(3)`) and `[[32,2,4]]` (`square_torus(4)`) as the
-code path does today. The numeric path runs on `[[8,2,2]]` from `square_torus(2)` if a 2×2 periodic
-lattice builds as a valid complex, which the tree does not exercise; the fallback is a hand-built
-`[[4,2,2]]` chain complex with one 2-cell (`∂₂` the all-ones column), four 1-cells and one 0-cell
-(`δ₀` the all-ones row), which satisfies `∂₁∂₂ = 4 ≡ 0` and has `k = 2`. The classical fixtures for
+code path does today. The numeric path runs on `[[8,2,2]]` from `square_torus(2)`, which a probe against the working
+tree confirmed is a valid complex: 4 vertices, 8 edges, 4 faces, Euler characteristic 0, `∂₁∂₂ = 0`
+over ℤ, every face boundary four distinct edges with coefficients ±1, every edge in exactly two
+faces, Betti numbers 1, 2, 1 over both ℤ and 𝔽₂; `derive_code` reads `[[8, 2]]` with weight-4
+checks, both logical representatives have weight 2, and `check_class_invariance` for `Z̄, S̄, T̄` and
+`check_clifford_action_on_qubit` for `H̄` hold on both qubits. Its composite Choi is `2^20` entries,
+inside the numeric cap. The hand-built `[[4,2,2]]` chain complex (one 2-cell with `∂₂` the all-ones
+column, four 1-cells, one 0-cell with `δ₀` the all-ones row, `∂₁∂₂ = 4 ≡ 0`, `k = 2`) stays as a
+second small fixture, not as a fallback. Distance 2 means the numeric fault path on `[[8,2,2]]`
+detects a weight-one fault but has no unique recovery for it; fault tolerance is decided on the
+exact path, and the numeric path's role on faults is agreement on the remainder's Pauli terms. The classical fixtures for
 D5 are the paper's Examples 54 and 55. Every published wall-clock figure carries the machine
 (M3 Max, 16 cores, 128 GB).
 
@@ -259,9 +334,14 @@ real quantity follows `FloatType`, as `add-qcl` D6 has it. Configuration literal
 workhorse. Its job is to agree with the exact path on the small fixture and to carry noise boxes and
 general channels where the exact path cannot. The cap makes the limit visible before it is a hang.
 
-**[The Pauli-basis propagator's cap bites on qLDPC representatives]** → `4^w` at weight `w` in the
-tens is out of reach. The cap errors and names the count, as `TUPLE_ENUMERATION_CAP` does for the
-same family; a per-gate `PauliBasisToCap` label says which verdicts were reached.
+**[The fault analysis was expected to scale with the representative weight]** → It does not (D7):
+the remainder lives in the `2^m`-dimensional algebra of the gate's logical `Z̄`s, and `m ≤ 3` for
+every Table 1 gate but `C^{m−1}Z̄`. The qLDPC family is reached at no extra cost. Only the emitter's
+tuple cap on `logical_t` remains, and the fault analysis does not call the emitter.
+
+**[A general program outside Table 1's two layer types has no normal form]** → The propagator refuses
+it by name (`NoPropagationNormalForm`) rather than expanding to a cap; the numeric path under its own
+caps is the fallback where the register is small.
 
 **[Theorem 51's quantum scope is a necessary condition only]** → Stated on the type, in the report
 and in the docs (D5). A layout that fails the precheck fails for a reason the paper proves; one that
@@ -279,8 +359,10 @@ squares the per-node dimension. The design-time positioning absorbs it; the cap 
 that was reviewed and archived, adds nothing, and is one mechanical task with `openspec validate`
 as its check.
 
-**[The square_torus(2) fixture may not build]** → The hand-built `[[4,2,2]]` complex is the
-fallback and is four lines of `CsrMatrix`.
+**[The numeric path on `[[8,2,2]]` cannot decide fault tolerance]** → Distance 2 has no unique
+recovery for a weight-one fault. The exact path decides fault tolerance on `[[18,2,3]]` and
+`[[32,2,4]]`; the numeric path's fault scenarios on `[[8,2,2]]` compare the remainder's Pauli terms
+against the exact path's, which is the agreement the bridge needs.
 
 **[Stim's format changes]** → The parser handles the `error(p) D… L…` and `detector`/`logical_observable`
 lines of the current text format, sits behind `dem`, and `DemModel` takes any `CausaloidGraph`.
@@ -291,11 +373,33 @@ Additive. No shipped signature changes. `Validate` on the model and plant subjec
 the circuit subject is a fourth constructor. Callers holding only marginals keep v1's behaviour,
 including `CertificateNotInherited`. release-plz derives the bump from the commit messages.
 
+## Mathematical foundation
+
+Nothing needs to be added to the unified math stack for this change. Every kernel the design names
+is composed from primitives that ship:
+
+| Kernel | Primitive | Crate |
+|---|---|---|
+| Kraus-level evolution, composite Choi | `embed_on_legs`, `apply_kraus`, `choi_from_kraus`, `CausalTensor::matmul` | `deep_causality_quantum`, `deep_causality_tensor` |
+| ε-law constants (D6) | Gram matrix of the natural representation, `eigen_hermitian` | `deep_causality_linear` |
+| code-space isometry `E` and decoder `τ` for the numeric path | code projector `∏ (I + Sᵢ)/2`, `eigen_hermitian` or `qr` for an orthonormal basis of its range | `deep_causality_linear` |
+| `GaugeFieldGate` (D7) | `Gf2Chain::inner`, `Rational<i64>` as `Turns` | `deep_causality_homology`, `deep_causality_num_rational` |
+| `α(X)`, parallelisable sets, induced DAG | reachability on the model's own DAG | in-crate |
+| logical triviality, normalizer membership | `PackedGf2`, `rank_gf2`, `image_basis_gf2` through `LogicalBasis` | `deep_causality_linear`, `deep_causality_homology` |
+| Frobenius residuals and the two-sided bound (D8) | `frobenius_norm`, `eigen_hermitian` for the trace norm where reported | in-crate, `deep_causality_linear` |
+| classical channels in QC (`DemModel`) | Kraus family `{√p(y|x) |y⟩⟨x|}` through `Channel::from_kraus` | in-crate |
+
+Three things were considered and are not needed. Exact cyclotomic arithmetic over `Q(ζ₈)` for the
+remainder's Pauli coefficients: the fault decision compares `Turns` (D7), and the coefficients are
+reported on the numeric path only. A complex SVD: the constants of D6 come from a Hermitian Gram
+matrix, and `svd` exists in `deep_causality_linear` in any case. A diamond-norm SDP: out of scope by
+D2-2, with the two-sided Frobenius bound of D8 in its place. The change can be implemented against
+the stack as it stands.
+
 ## Open Questions
 
-- Whether `LatticeComplex::<2, _>::square_torus(2)` is a valid complex with `β₁ = 2` (D14). Decided
-  at the first task of the abstraction group; the fallback is fixed.
-- The exact Frobenius-to-diamond constant (D8). The requirement is that a derived, tested factor be
-  recorded.
-- Whether the Pauli-basis propagator's default term cap should follow the support weight rather
-  than a fixed count. Decided from the `[[18,2,3]]` `T̄` measurement in the fault group.
+None. The three questions the first draft carried are closed above: `square_torus(2)` builds and is
+`[[8,2,2]]` (D14); the Frobenius-to-diamond constant is `√(d_in d_out)` with a two-sided chain
+(D8); the propagator's term cap is unnecessary for Table 1 and is replaced by the `GaugeFieldGate`
+carrier, with a named refusal for programs outside its normal form (D7). The evidence for all three
+is in [`notes/open-questions-resolved.md`](notes/open-questions-resolved.md).

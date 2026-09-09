@@ -47,11 +47,14 @@ formalisms cover and a numeric semantics for every program, and every value deri
 SHALL carry `SemanticsPath::{Exact, Numeric}`.
 
 The exact semantics carries a Pauli or Clifford program as its symplectic action through the
-shipped `clifford_conjugate`, and a diagonal Table 1 gate as a `DiagonalPhase` with its exact
-rational phase polynomial. It has no register-width limit. The numeric semantics evolves a density
-matrix on the register by embedding each gate's unitary or each noise box's Kraus family through
-the shipped `embed_on_legs` and `apply_kraus`, and forms the Choi operator of the channel from the
-declared inputs to the declared outputs. A `Channel`-boxed noise model is reachable by the numeric
+shipped `clifford_conjugate`, and a diagonal Table 1 gate as a `GaugeFieldGate`, the blocks as
+`Gf2Chain`s and the phase function on the `m` logical parities as exact `Turns`, which is
+`DiagonalPhase` generalised to `m` blocks. It has no register-width limit. The numeric semantics
+carries the program at the Kraus level: each gate's unitary is embedded on the register through the
+shipped `embed_on_legs` and multiplied into the running Kraus family, a noise box multiplies the
+family out by its own operators, and the Choi operator is formed once, for the composite channel
+from the declared inputs to the declared outputs, through the shipped `choi_from_kraus`. The Choi
+of the program alone is never formed. A `Channel`-boxed noise model is reachable by the numeric
 semantics only.
 
 #### Scenario: A Clifford program is decided exactly on a wide register
@@ -68,15 +71,19 @@ semantics only.
 - **THEN** it returns `QuantumError::CalculationError` stating that a channel box has no exact
   semantics, and the numeric semantics answers the same question with `SemanticsPath::Numeric`
 
-### Requirement: The numeric semantics is capped by entry count before allocating
+### Requirement: The numeric semantics is capped by entry count and by Kraus family size before allocating
 
-The numeric semantics SHALL compute the entry count `2^(2n + 2k)` of the Choi operator it would
-form for a channel from `n` qubits to `k` qubits, SHALL refuse above a cap with
-`QuantumError::NaturalityDimensionExceeded { n, k, entries, cap }` before allocating, and SHALL
+The numeric semantics SHALL compute the entry count `2^(2n + 2k)` of the composite Choi operator it
+would form for a channel from `n` qubits to `k` qubits and SHALL refuse above a cap with
+`QuantumError::NaturalityDimensionExceeded { n, k, entries, cap }` before allocating; it SHALL
+compute the Kraus family size `∏ kᵢ` over the program's noise boxes and SHALL refuse above a second
+cap with `QuantumError::KrausFamilyExceeded { operators, cap }` before allocating; and it SHALL
 report the entries it formed on success.
 
-The default cap is `2^24` entries. The count is ℕ on `NumberType` and the product is checked, so a
-register that would overflow the count reads as above any cap rather than as small.
+The default caps are `2^24` entries and `2^12` operators. Both counts are ℕ on `NumberType` with
+checked products, so a register or a family that would overflow the count reads as above any cap
+rather than as small. A fault-set query inserts one error channel of at most four operators, so the
+fault path stays far below the second cap.
 
 #### Scenario: The 18-qubit torus is refused
 
@@ -95,6 +102,19 @@ register that would overflow the count reads as above any cap rather than as sma
 - **WHEN** `n + k` is large enough that `2^(2n + 2k)` does not fit the count type
 - **THEN** the check reports `NaturalityDimensionExceeded` with `entries` saturated, not a wrapped
   small number
+
+#### Scenario: A program with many noise boxes is refused by family size
+
+- **WHEN** a program carries thirteen two-operator noise boxes, so `∏ kᵢ = 2^13`
+- **THEN** the numeric semantics returns `KrausFamilyExceeded { operators: 2^13, cap: 2^12 }` and
+  allocates no family
+
+#### Scenario: A unitary program's composite is cheap
+
+- **WHEN** the composite Choi of a noiseless 8-qubit program followed by a four-operator decoder
+  `τ` is formed
+- **THEN** it is built from the four operators `K_j U` through `choi_from_kraus`, has `2^20`
+  entries, and no operator of `2^32` entries is formed on the way
 
 ### Requirement: The dilation marginalises a circuit under a fixed leg convention
 

@@ -22,9 +22,9 @@ encoding on the code space. Products of types align as monoidal products of the 
 
 #### Scenario: A code's decoder and isometry align
 
-- **WHEN** `TypeAlignment::for_code(&logical_basis)` is built on the `[[4,2,2]]` fixture
+- **WHEN** `TypeAlignment::for_code(&logical_basis)` is built on the `[[8,2,2]]` fixture
 - **THEN** `τ ∘ E` on the `4 × 4` logical space equals the identity within `Tolerance::state()`,
-  `π(logical qubit)` lists all four physical qubits, and the alignment is admitted
+  `π(logical qubit)` lists all eight physical qubits, and the alignment is admitted
 
 #### Scenario: A channel that does not invert its section is refused
 
@@ -109,8 +109,8 @@ doc block says so and cites it.
 
 #### Scenario: The two paths agree where both reach
 
-- **WHEN** `check_naturality` runs on the `[[8,2,2]]` fixture (or the `[[4,2,2]]` fallback) for
-  `Z̄` and `H̄` once under each path
+- **WHEN** `check_naturality` runs on the `[[8,2,2]]` fixture of `square_torus(2)` for `Z̄`, `S̄`,
+  `T̄` and `H̄` once under each path
 - **THEN** both verdicts agree per query, the numeric residuals are below `Tolerance::state()`, and
   the numeric report names its amplification factor
 
@@ -125,22 +125,31 @@ doc block says so and cites it.
 - **THEN** the record for `S̄` rejects, `first_rejection` names it, and the report's verdict is
   `Rejected`
 
-### Requirement: The Frobenius proxy carries a derived, tested amplification factor
+### Requirement: The Frobenius proxy carries the two-sided diamond bound
 
-The numeric path's report SHALL state the factor by which the Frobenius norm of the Choi difference
-bounds the diamond distance, the docstring SHALL carry its derivation, and one test SHALL compare
-the bound against a channel pair whose diamond distance has a closed form.
+The numeric path's report SHALL state, for a Frobenius residual `r` between the two Choi operators
+of a square, the bounds `r / d_in ≤ ‖E − F‖_⋄ ≤ √(d_in d_out) · r`, the docstring SHALL carry the
+derivation, and one test SHALL compare both ends against a channel pair whose diamond distance has
+a closed form.
 
-The candidate derivation is `‖Φ‖_⋄ ≤ d_in · ‖J(Φ)‖_1 ≤ d_in · √(d_in d_out) · ‖J(Φ)‖_F` for a
-Hermiticity-preserving `Φ` with unnormalised Choi operator `J(Φ)`. If the derivation at
-implementation time yields a different constant, the docstring and the report follow the
-derivation. The requirement is that a stated factor be recorded and tested, not that this one be it.
+The derivation, for any linear map with the crate's unnormalised Choi operator `J`: every unit
+vector on `X ⊗ X` is `(I ⊗ A)|Ω̃⟩` with `‖A‖_F = 1`, so `‖Φ‖_⋄ ≤ ‖J‖_1`; Cauchy–Schwarz on the
+singular values gives `‖J‖_1 ≤ √(d_in d_out) · ‖J‖_F`; and `J / d_in = (Φ ⊗ id)(ω)` for the maximally
+entangled state `ω` gives `‖J‖_F ≤ ‖J‖_1 ≤ d_in ‖Φ‖_⋄`. A Frobenius residual of zero therefore
+certifies a diamond distance of zero.
 
-#### Scenario: The bound holds on a closed-form pair
+#### Scenario: Both bounds hold on a closed-form pair
 
 - **WHEN** two single-qubit unitary channels differing by a rotation by `θ` about `Z` are compared
-- **THEN** the reported factor times the Frobenius residual is at least the closed-form diamond
-  distance `2 sin(θ/2)`, at every `θ` in a sweep over `(0, π]`
+- **THEN** the residual is `2√2 sin(θ/2)`, the upper bound `2r` is at least the closed-form
+  diamond distance `2 sin(θ/2)` and the lower bound `r/2` is at most it, at every `θ` in a sweep
+  over `(0, π]`
+
+#### Scenario: A zero residual certifies zero distance
+
+- **WHEN** the numeric path reports residual zero on a square
+- **THEN** the report's lower bound reads zero and the diamond distance is stated as zero, not as
+  "below the proxy"
 
 ### Requirement: The structural precheck computes Definition 49 and states what it licenses
 
@@ -212,9 +221,15 @@ group, and nothing about a noisy or composite abstraction is claimed until it pa
 
 `Abstraction::compose(self, next)` SHALL produce the composite abstraction with
 `π = π₁ ∘ π₂` and `τ = τ₂ ∘ τ₁`, and its report SHALL carry the bound
-`ε ≤ ‖τ₂‖_post · ε₁ + ‖τ₁‖_pre · ε₂` with both constants computed as the largest singular values of
-the composition superoperators in the norm the residuals were measured in, and recorded with the
-norm in the report's provenance.
+`ε ≤ ‖τ₂‖_post · ε₁ + ‖τ₁‖_pre · ε₂` with both constants computed as the Frobenius-induced norms
+of the channels `τ₂` and `τ₁`, the largest singular value of each channel's `d_out² × d_in²` natural
+representation obtained through the Gram matrix and the shipped `eigen_hermitian`, and recorded with
+the norm in the report's provenance.
+
+Post-composition acts on a Choi operator as `id ⊗ τ₂` and pre-composition as a transpose of `τ₁`
+on the input factor; neither changes the induced norm on a Hilbert-space norm, so the constants are
+the channels' own norms and the `(d_in d_out)²`-dimensional composition superoperators are never
+formed.
 
 Exact composition, `ε₁ = ε₂ = 0 ⇒ ε = 0`, is Lorenz & Tull Proposition 17 and is the Lean statement
 in `lean/DeepCausalityFormal/Quantum/Abstraction.lean`, bound through `lean/THEOREM_MAP.md`. The
@@ -256,6 +271,6 @@ the residual it measures.
 
 #### Scenario: The concatenated code's bound holds
 
-- **WHEN** the `[[4,2,2]]` fixture is concatenated with itself as inner and outer code and
-  `check_naturality` runs on the composite for `Z̄` and `H̄`
+- **WHEN** the hand-built `[[4,2,2]]` complex is concatenated with itself as inner and outer code
+  and `check_naturality` runs on the composite for `Z̄` and `H̄`
 - **THEN** the measured residual is at most the composite bound recorded by `compose`

@@ -32,8 +32,8 @@ map as corrected by that register.
 
 - **The circuit as the stored object.** `CircuitModel<R>` is a compositional model in QC: a
   `QuantumCircuit` with typed wires, noise boxes, a box-to-node grouping and declared outputs, with
-  two semantics functors. The numeric one forms Choi operators and density matrices under a
-  dimension cap. The exact one carries Pauli and Clifford programs as symplectic 𝔽₂ data and
+  two semantics functors. The numeric one carries the program at the Kraus level and forms one
+  Choi operator, for the composite `2^n → 2^k` channel, under two caps. The exact one carries Pauli and Clifford programs as symplectic 𝔽₂ data and
   diagonal gates as rational phases, with no width limit. `Dilation` marginalises a circuit to
   `(ProcessFactors, FactorSupports)` under a fixed leg convention, and `.over_circuit` joins
   `.over_model` on `QclBuilder`. A bare process operator still validates as in v1 and cannot enter
@@ -52,12 +52,15 @@ map as corrected by that register.
   `check_class_invariance` and `check_clifford_action` on every gate and every fixture.
 - **Fault sets and the fault-tolerance predicate.** `FaultSet` (`pauli_weight(t)`, `declared`,
   `from_dem`) enlarges the low-level signature; `check_fault_tolerance` is `check_naturality` over
-  it, reporting per-fault residuals and the witnessing fault. Faults propagate in the Pauli basis
-  under a term cap, exactly through Clifford gates and to the cap through `T`, `CS†` and `CCZ`. The
-  Haruna filter runs it over Table 1 and labels each gate's verdict by the path that decided it.
+  it, reporting per-fault residuals and the witnessing fault. Faults propagate exactly and without
+  a cap through every Table 1 gate: Clifford layers through the tableau, diagonal gates through the
+  algebra of their logical `Z̄(γᵢ)` operators (Haruna Eq. 3.63), in which a propagated fault has at
+  most `2^m` Pauli terms for a gate on `m` logical qubits, whatever the representative weight. The
+  Haruna filter runs it over Table 1; its answer under weight-one faults follows from that algebra
+  and is confirmed by the computation.
 - **Composition.** `Abstraction::compose` applies
-  `ε ≤ ‖τ₂‖_post · ε₁ + ‖τ₁‖_pre · ε₂` with both constants computed from the superoperators and
-  recorded, exact composition being the paper's Proposition 17. Three consumers are abstraction
+  `ε ≤ ‖τ₂‖_post · ε₁ + ‖τ₁‖_pre · ε₂` with both constants the Frobenius-induced norms of `τ₂` and
+  `τ₁`, computed and recorded, exact composition being the paper's Proposition 17. Three consumers are abstraction
   chains: concatenated codes, code switching, and a distillation round as the non-strict
   quantum-to-quantum case the paper leaves open.
 - **The decoder as an abstraction.** `DemModel` imports a detector error model as a classical
@@ -76,8 +79,8 @@ map as corrected by that register.
   `check_naturality` with its two paths and its report, `check_alignment_structure` with its
   scoped claim, `CodeAbstraction` and the generation regression, `Abstraction::compose` and the
   ε-law.
-- `qcl-fault-tolerance`: `FaultSet`, Pauli-basis propagation with its cap, `check_fault_tolerance`,
-  the Haruna filter and the narrowed fault-tolerance claim.
+- `qcl-fault-tolerance`: `FaultSet`, the `GaugeFieldGate` carrier and exact propagation through
+  Table 1, `check_fault_tolerance`, the Haruna filter and the narrowed fault-tolerance claim.
 - `qcl-decoder-abstraction`: `DemModel`, the `dem` feature and its Stim text import,
   `DecoderAbstraction`, and the logical attribution query.
 
@@ -96,8 +99,10 @@ shipped `qgates` (Choi operators, `embed_on_legs`, `apply_kraus`), `carriers` (`
 `decision` (`Check<R>`, `CheckReport<R>`), `qcode` (`LogicalBasis`, `clifford_conjugate`,
 `DiagonalPhase`), `qcm` (`ProcessFactors`, `Hypothesis::compose`) and `qpu/circuit` (`GateOp`,
 `QuantumCircuit`) layers without reimplementing them. Five kernels are new: density-matrix
-evolution of a `GateOp` program with noise boxes, the Pauli-basis propagator, the Choi of a
-`2^n → 2^k` composite, the superoperator norms of the ε-law, and a detector-error-model parser.
+evolution of a `GateOp` program with noise boxes at the Kraus level, the `GaugeFieldGate`
+propagator, the Choi of a `2^n → 2^k` composite, the Frobenius-induced channel norms of the ε-law,
+and a detector-error-model parser. Nothing is added to the unified math stack; the design's
+foundation section maps each kernel to a shipped primitive.
 Each is a numeric kernel and follows the unified-math TDD protocol (anti-circularity, corner-case
 rows A to K, defect audit, `cargo mutants`).
 
@@ -116,7 +121,7 @@ enabled in `BUILD.bazel` beside `qpu`.
 
 **APIs.** Additive. `QclBuilder` gains `.over_circuit`; `Validate` gains `check_alignment_structure`
 and `check_naturality`; `QuantumError` gains `NoCompositionalModel`, `NaturalityDimensionExceeded`,
-`PauliTermCountExceeded`, `NotParallelisable` and `SectionNotInverse`. release-plz derives the
+`KrausFamilyExceeded`, `NoPropagationNormalForm`, `NotParallelisable` and `SectionNotInverse`. release-plz derives the
 version bump from the commit messages; nothing edits `CHANGELOG.md` or the version by hand.
 
 **Verification.** Proposition 17 in the exact case goes in `lean/DeepCausalityFormal/Quantum/

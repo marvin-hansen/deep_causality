@@ -28,97 +28,112 @@ realistic sets come from a detector error model rather than from enumeration.
 - **THEN** construction returns `QuantumError::CalculationError` naming the count and the cap, and
   no queries are allocated
 
-### Requirement: Faults propagate in the Pauli basis, exactly through Clifford gates and to a cap otherwise
+### Requirement: Faults propagate exactly through every Table 1 gate, with no term cap
 
-The fault propagator SHALL carry a Pauli fault through the low-level program as a linear
-combination of Paulis with coefficients in `Complex<R>`, SHALL keep one term through every Clifford
-gate by the shipped `clifford_conjugate` rule, SHALL branch through `T`, `T†`, `CS†`, `CCZ` and
-`C^{m−1}Z` on three or more qubits, and SHALL count the terms it would produce and refuse above a
-cap with `QuantumError::PauliTermCountExceeded { terms, cap }` before allocating.
+The fault propagator SHALL carry a Pauli fault through a Clifford layer by the shipped
+`clifford_conjugate` rule and through a diagonal Table 1 gate by conjugation in the algebra of the
+gate's logical `Z̄(γᵢ)` operators, SHALL represent the diagonal gates as `GaugeFieldGate` values
+(the blocks `γ₁, …, γ_m` as `Gf2Chain`s and the phase function on `{0,1}^m` as `2^m` values of
+`Turns`), and SHALL refuse a program outside that normal form with
+`QuantumError::NoPropagationNormalForm` naming the layers, rather than expanding it to a cap.
 
-The tableau refuses non-Clifford gates because their conjugation action is not a Pauli; the
-propagator lifts that refusal to a branching with a bound. The term count is bounded by `4^w` for
-the support weight `w` the fault can spread over, the default cap is `2^16`, and the count is ℕ on
-`NumberType` with a checked product.
+Haruna defines every diagonal logical gate as `O_k(γ₁, …, γ_m) = exp(iπ/2^{k−1} · p₁⋯p_m)` with
+`pᵢ = (I − Z̄(γᵢ))/2` (Eq. 3.63; `S̄` 3.14, `CZ̄` 3.37, `C^{m−1}Z̄` 3.49, `T̄` 3.56) and derives the
+physical decomposition from it. Conjugating a Pauli `P = X^a Z^b` through such a gate `G` gives
+`P · (P† G P) G†`, where `P† G P` is `G` with each `Z̄(γᵢ)` replaced by `(−1)^{⟨a, γᵢ⟩} Z̄(γᵢ)`. The
+remainder is a `GaugeFieldGate` on the same blocks, computed from `m` inner products through
+`Gf2Chain::inner`, and has at most `2^m` Pauli terms whatever the representative weight. Z-type
+faults commute with every diagonal gate. The physical program of the gate is never materialised by
+the propagator, so the emitter's tuple cap on `logical_t` does not bear on the fault analysis.
 
-#### Scenario: A Clifford program keeps one term
+#### Scenario: A Clifford layer keeps one term
 
-- **WHEN** an `X` fault on qubit `0` is propagated through `S̄(γ)` with `γ` of weight 3 containing
-  qubit `0`
-- **THEN** the result is one term, `X₀ Z_a Z_b` for the other two support qubits up to phase, which
-  is what `CZ` does to `X` on its control
+- **WHEN** an `X` fault on qubit `q ∈ γ` is propagated through `S̄(γ)` with `γ` of weight 3
+- **THEN** the result is the single Pauli `X_q Z̄(γ)` up to phase, which is `X_q` times the
+  remainder `Z̄(γ)` of `S̄` under a flipped parity
 
-#### Scenario: A `T` gate branches
+#### Scenario: `T̄` leaves a two-term remainder at every weight
 
-- **WHEN** an `X` fault is propagated through a single `T` on the same qubit
-- **THEN** the result has two terms, `X` and `Y`, each with coefficient of modulus `1/√2`, and no
-  term of any other Pauli
+- **WHEN** an `X` fault on `q ∈ γ` is propagated through `T̄(γ)` for `γ` of weight 3, 4 and 5
+- **THEN** the remainder is `exp(±iπ/4 · Z̄(γ))` in each case, its Pauli terms are `I` and `Z̄(γ)`
+  with coefficients of modulus `1/√2`, and the term count does not change with the weight
 
-#### Scenario: The cap is refused before allocation
+#### Scenario: An even-overlap fault does not spread
 
-- **WHEN** a fault is propagated through `T̄` on a representative whose weight makes `4^w` exceed
-  the cap
-- **THEN** the propagator returns `PauliTermCountExceeded` naming the count and the cap, and
-  allocates no terms
+- **WHEN** `X_q X_r` with `q, r ∈ γ` is propagated through `T̄(γ)`
+- **THEN** `⟨a, γ⟩ = 0`, the remainder is the identity, and the result is `X_q X_r`
+
+#### Scenario: A Z-type fault passes through unchanged
+
+- **WHEN** `Z_q` is propagated through `T̄(γ)` and through `CZ̄(γ₁, γ₂)`
+- **THEN** the result is `Z_q` in both cases
+
+#### Scenario: A program outside the normal form is refused by name
+
+- **WHEN** a user program applies `T̄(γ)`, then transversal `H` on `γ`, then `T̄(γ)` again
+- **THEN** the propagator returns `NoPropagationNormalForm` naming the second non-Clifford layer,
+  and allocates no expansion
 
 ### Requirement: Fault tolerance is the naturality check over the enlarged signature
 
 `check_fault_tolerance(abstraction, fault_set)` SHALL run `check_naturality` over the abstraction's
 signature enlarged by every fault in the set, SHALL report per-fault residuals, the worst, the
-count examined and the witnessing fault as `(location, Pauli, offending term)`, and SHALL decide
-correctability of a propagated error set against the stabilizer generators `LogicalBasis` carries:
-a term in the normalizer that is not a stabilizer is a logical fault.
+count examined and the witnessing fault, and on the exact path SHALL decide each fault by whether
+the remainder's phase function is constant on `{0,1}^m`, as a comparison of `Turns`.
 
-The report carries a witness rather than a margin for the reason D10 of `add-qcl` gives: which
-fault broke the square is the information, and how badly is secondary. Each per-gate verdict carries
-the `SemanticsPath` that decided it.
+After the fault's own Pauli is recovered, the remainder acts on the code space as
+`exp(2πi · Δg(p̂))` with `p̂` the logical parity operators. Because the `γᵢ` are independent
+homology classes, every `Z̄(γ_S)` with `S ≠ ∅` is a non-trivial logical operator, so the remainder is
+a non-trivial logical unitary exactly when `Δg` is not constant. The witness is the flipped parity
+pattern and the remainder's phase table. The report carries a witness rather than a margin for the
+reason D10 of `add-qcl` gives: which fault broke the square is the information. Each record carries
+the `SemanticsPath` that decided it, and on Table 1 that path is `Exact`.
 
 #### Scenario: A transversal gate under weight-one noise passes
 
 - **WHEN** `check_fault_tolerance` runs on `Z̄(γ)` of the `[[18,2,3]]` torus under
   `pauli_weight(1)`
-- **THEN** every fault propagates to a single-qubit Pauli, none is in the normalizer without being
-  a stabilizer, the report accepts with examined count `3 · 18`, and every record reads
-  `SemanticsPath::Exact`
+- **THEN** every fault propagates to a single-qubit Pauli with the identity remainder, the report
+  accepts with examined count `3 · 18`, and every record reads `SemanticsPath::Exact`
 
-#### Scenario: A failing fault is named
+#### Scenario: A non-constant remainder is a logical fault, and is named
 
-- **WHEN** a program spreads a weight-one fault to an operator logically equivalent to `X̄(γ̃)`
-- **THEN** the report rejects, its witness names the location, the injected Pauli and the offending
-  term, and `first_rejection` returns that record
+- **WHEN** `check_fault_tolerance` runs on `T̄(γ)` of the `[[18,2,3]]` torus under `pauli_weight(1)`
+- **THEN** every `X` or `Y` fault on `γ` rejects with the remainder `exp(±iπ/4 · Z̄(γ))` as witness,
+  every `Z` fault and every fault off `γ` accepts, and the report's examined count is `3 · 18`
 
 #### Scenario: An empty fault set is vacuous
 
 - **WHEN** `check_fault_tolerance` runs with `FaultSet::declared(&[])`
 - **THEN** the report's verdict is `Vacuous` with examined count zero
 
-### Requirement: The Haruna filter labels each gate by the path that decided it
+### Requirement: The Haruna filter's answer is derived and then computed
 
-The Haruna filter SHALL run `check_fault_tolerance` under `pauli_weight(1)` on each Table 1 gate's
-emitted program over a CSS code, SHALL output the subset that holds, and SHALL label each gate's
-verdict `Exact` for `Z̄`, `X̄`, `S̄`, `CZ̄` and `H̄` and `PauliBasisToCap` for `T̄`, `CS̄†` and `CC̄Z`, so a
-verdict reached under the term cap is never read as one reached exactly.
+The Haruna filter SHALL run `check_fault_tolerance` under `pauli_weight(1)` on each Table 1 gate
+over a CSS code, SHALL output the subset that holds, and SHALL label every verdict `Exact`.
 
-The oracle facts the filter is validated against are derived by hand in the change's notes before
-the asserting test is written, and each expected value in the test carries that derivation as its
-provenance.
+The answer follows from Eq. (3.63) for every CSS code and every representative weight: `Z̄` and `X̄`
+do not spread, and every other Table 1 gate fails a single X-type fault on its support because its
+remainder is a non-trivial logical operator (`Z̄(γ)` for `S̄`, `exp(±iπ/4 Z̄(γ))` for `T̄`, `Z̄(γ₂)` for
+`CZ̄` under a fault on `γ₁`, and the Clifford image through the tableau for `H̄`). That derivation is
+the provenance of the test's expected values, as the anti-circularity protocol asks; the filter
+computes the verdicts and the test compares them to it.
 
-#### Scenario: The filter agrees with the derived oracle on the small torus
+#### Scenario: The filter agrees with the derivation on both torus fixtures
 
-- **WHEN** the filter runs on `[[18,2,3]]`
-- **THEN** `Z̄` and `X̄` hold under weight-one faults with label `Exact`, `S̄` with its CZ pairs does
-  not, with a named witness, and each verdict's label matches its gate family
+- **WHEN** the filter runs on `[[18,2,3]]` and on `[[32,2,4]]`
+- **THEN** `Z̄` and `X̄` hold under weight-one faults, `S̄`, `H̄`, `CZ̄` and `T̄` do not, each rejection
+  names its witness, and every record reads `Exact`
 
-#### Scenario: A non-Clifford verdict is labelled
+#### Scenario: The filter's cost does not grow with the representative weight
 
-- **WHEN** the filter reports `T̄`
-- **THEN** its record carries `PauliBasisToCap` with the term count it reached, and a reader cannot
-  mistake it for an exact verdict
+- **WHEN** the filter runs `T̄` on a representative of weight `w` for `w = 3` and `w = 4`
+- **THEN** the number of remainder terms examined is two in both cases
 
 ### Requirement: The fault-tolerance claim is narrowed, not removed
 
-Every fault-tolerance report SHALL state its fault set, its residual and its semantics path, and the
-crate SHALL make no claim of a threshold, a distance or asymptotic suppression.
+Every fault-tolerance report SHALL state its fault set, its residual or remainder and its semantics
+path, and the crate SHALL make no claim of a threshold, a distance or asymptotic suppression.
 
 #### Scenario: The report names its fault set
 
