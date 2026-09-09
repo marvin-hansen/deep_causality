@@ -1,0 +1,30 @@
+deep_causality_quantum/tests/types/qgates/mechanics_tests.rs
+  s_6625a582c8b733::t_bb2c574f876ee0 156-157,159-219,224,252-253,255-287,335-359
+  s_6625a582c8b733::t_07034a83edb1ee 220-223
+  s_6625a582c8b733::t_fa623fc1f7c301 9,130,371,432,513
+  s_6625a582c8b733::t_9b3770e073fa4a 126-129,131-132,236-240,369-370,372-373,430-431,433-434,447-449,451,511-512,514-515
+  s_6625a582c8b733::t_eae6fd98de8267 288-334
+  s_6625a582c8b733::t_174c1f6b0af613 450
+  s_6625a582c8b733::t_52d2baa39e7dbe 13-76
+  s_6625a582c8b733::t_12f7023d1b2e25 383,385-420,463-501,520-522,561-593
+  s_6625a582c8b733::t_81c82cb8107b9e 594
+deep_causality_quantum/tests/types/qgates/wrappers_tests.rs
+  s_6625a582c8b733::t_07034a83edb1ee 67-69
+  s_6625a582c8b733::t_e24d5f2e877ec9 15-66,70-71,89,92,94-97,116,119-135,153-172,190-200,218-219,222,224-225
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "0595f6feec6c923b362e1493f175bcef45da61c2",
+  "prompts": {},
+  "sessions": {
+    "s_6625a582c8b733": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "92266816-0029-45cf-999b-6e8e9ff270a5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
