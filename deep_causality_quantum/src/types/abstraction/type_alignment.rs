@@ -190,6 +190,12 @@ where
         };
         let mut entries = self.entries.clone();
         for e in &self.entries {
+            // A fresh input replaces the outputs of an opened mechanism, so it carries the output
+            // type: input-side entries are never copied, and a copied output-side entry serves
+            // both sides of the opened query.
+            if e.side == AlignmentSide::Input {
+                continue;
+            }
             let high_hits = e
                 .high
                 .iter()
@@ -225,7 +231,7 @@ where
             high.sort_unstable();
             low.sort_unstable();
             entries.push(AlignmentEntry {
-                side: e.side,
+                side: AlignmentSide::Any,
                 high,
                 low,
                 tau: e.tau.clone(),

@@ -238,3 +238,34 @@ fn test_sided_entries_apply_to_their_side_only() {
         vec![0, 1]
     );
 }
+
+/// Extension along an opening: a fresh input carries the output type of the opened mechanism, so
+/// the input-side entry is not copied and the output-side entry is copied on both sides.
+#[test]
+fn test_extension_copies_output_entries_to_fresh_wires_on_both_sides() {
+    let a = TypeAlignment::new_sided(vec![
+        (AlignmentSide::Input, (vec![0], vec![0], id(), id())),
+        (
+            AlignmentSide::Output,
+            (vec![0], vec![0, 1], trace_b(), prepare_b()),
+        ),
+    ])
+    .unwrap();
+    let e = a.extended(&[(0, 1)], &[(0, 2), (1, 3)]).unwrap();
+    assert_eq!(e.entries().len(), 3);
+    let fresh = &e.entries()[2];
+    assert_eq!(fresh.side(), AlignmentSide::Any);
+    assert_eq!(fresh.high(), &[1]);
+    assert_eq!(fresh.low(), &[2, 3]);
+    assert_eq!(
+        e.low_for_side(&[1], AlignmentSide::Input).unwrap(),
+        vec![2, 3]
+    );
+    assert_eq!(
+        e.low_for_side(&[1], AlignmentSide::Output).unwrap(),
+        vec![2, 3]
+    );
+    // The original input entry still answers the original wire and only that.
+    assert_eq!(e.low_for_side(&[0], AlignmentSide::Input).unwrap(), vec![0]);
+    assert!(e.low_for_side(&[1, 0], AlignmentSide::Input).is_ok());
+}

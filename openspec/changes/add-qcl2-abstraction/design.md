@@ -343,6 +343,24 @@ Every cap and every count is ℕ on `NumberType`, every dimension product is `ch
 real quantity follows `FloatType`, as `add-qcl` D6 has it. Configuration literals enter through
 `lift`; `f64` appears at the display boundary and nowhere else.
 
+### D16. Fresh inputs carry the output type, and the logical measurement query is deferred
+
+An `Open` query replaces a mechanism's outputs by fresh inputs, so a fresh wire has the type of the
+output it replaces. `TypeAlignment::extended` therefore copies output-side entries to the fresh
+wires as entries for both sides and never copies input-side ones. For a code in the Example 58
+shape this makes `Open(S̄) ↦ Open(π(S̄))` typed: the opened low-level query has the logical inputs
+and `n` fresh physical inputs, the latter aligned through the recovery, and both sides of the
+square read `Tr_k ⊗ τ`. The opened square on `[[8,2,2]]` is a ten-qubit register and the default
+cap refuses it; `check_naturality_on` checks a subset of the signature so the `Io` square is still
+decided there, and the opened square is decided on `[[4,2,2]]`.
+
+`Observe(Ō)` to the measurement of the logical operator `Z̄(γ)` is not in this change. The
+alignment carries classical wires as the identity and requires equal outcome counts across the
+square; a computational measurement of the physical support has `2^|γ|` outcomes where the logical
+measurement has two, so the low-level side needs either an operator-valued observe query or a
+classical coarse-graining `τ` (the parity of the support). Either is a spec extension and goes to a
+follow-up change; the fault-tolerance predicate (D7) does not depend on it.
+
 ## Risks / Trade-offs
 
 **[The numeric path reaches almost nothing physical]** → It is the bridge to the exact path, not the

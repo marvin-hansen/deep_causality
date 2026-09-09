@@ -11,6 +11,7 @@ use crate::QuantumError;
 use crate::types::abstraction::abstraction::Abstraction;
 use crate::types::abstraction::diamond_bound::DiamondBound;
 use crate::types::abstraction::qc_model::QcModel;
+use crate::types::abstraction::query::Query;
 use crate::types::circuit_model::{NumericCaps, SemanticsPath};
 use crate::types::decision::{Check, CheckItem, CheckReport, Tolerance};
 use alloc::vec::Vec;
@@ -65,10 +66,35 @@ where
         &self,
         caps: &NumericCaps,
     ) -> Result<NaturalityReport<R>, QuantumError> {
-        let mut checks = Vec::with_capacity(self.signature().len());
+        self.check_naturality_on(self.signature().queries(), caps)
+    }
+
+    /// The numeric naturality check over the listed queries of the signature only. Records keep
+    /// their index in the signature. A fixture may reach the caps on one query and not another:
+    /// the opening of an eight-qubit code doubles its register.
+    ///
+    /// # Errors
+    ///
+    /// [`QuantumError::CalculationError`] for a query not in the signature; otherwise as
+    /// [`check_naturality`](Self::check_naturality).
+    pub fn check_naturality_on(
+        &self,
+        queries: &[Query],
+        caps: &NumericCaps,
+    ) -> Result<NaturalityReport<R>, QuantumError> {
+        let all = self.signature().queries();
+        if let Some(q) = queries.iter().find(|q| !all.contains(q)) {
+            return Err(QuantumError::CalculationError(alloc::format!(
+                "the query {q:?} is not in the signature"
+            )));
+        }
+        let mut checks = Vec::with_capacity(queries.len());
         let mut entries: u64 = 0;
         let mut worst = (R::zero(), 1usize, 1usize);
-        for (i, high) in self.signature().queries().iter().enumerate() {
+        for (i, high) in all.iter().enumerate() {
+            if !queries.contains(high) {
+                continue;
+            }
             let (left, right) = self.square(high, caps)?;
             let (residual, formed) = left.frobenius_distance(&right, caps)?;
             entries = entries.saturating_add(formed);

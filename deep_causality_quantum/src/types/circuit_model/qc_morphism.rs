@@ -404,26 +404,28 @@ where
         out_dims: &[usize],
         out_order: &[usize],
     ) -> Result<Self, QuantumError> {
-        let p_in = leg_permutation::<R>(in_dims, in_order, self.d_in)?;
-        let p_out = leg_permutation::<R>(out_dims, out_order, self.d_out)?;
-        let p_in_t = p_in
-            .dagger()
-            .map_err(|e| QuantumError::CalculationError(format!("dagger: {e:?}")))?;
+        let map_in = leg_index_map(in_dims, in_order, self.d_in)?;
+        let map_out = leg_index_map(out_dims, out_order, self.d_out)?;
         let mut out = Self::new(
             self.d_in,
             self.d_out,
             self.classical_in.clone(),
             self.classical_out.clone(),
         )?;
+        let zero = Complex::new(R::zero(), R::zero());
         for ((x, y), kraus) in &self.blocks {
             let mut moved = Vec::with_capacity(kraus.len());
             for k in kraus {
-                moved.push(
-                    p_out
-                        .matmul(k)
-                        .and_then(|m| m.matmul(&p_in_t))
-                        .map_err(|e| QuantumError::CalculationError(format!("matmul: {e:?}")))?,
-                );
+                // (P_out K P_in†)[map_out(r), map_in(c)] = K[r, c]: a gather, not two products
+                // with permutation matrices, which cost d_out · d_in · (d_out + d_in).
+                let src = k.as_slice();
+                let mut data = vec![zero; self.d_out * self.d_in];
+                for r in 0..self.d_out {
+                    for c in 0..self.d_in {
+                        data[map_out[r] * self.d_in + map_in[c]] = src[r * self.d_in + c];
+                    }
+                }
+                moved.push(CausalTensor::from_slice(&data, &[self.d_out, self.d_in]));
             }
             out.push(x.clone(), y.clone(), moved)?;
         }
@@ -518,16 +520,10 @@ pub(crate) fn ceil_log2(d: usize) -> usize {
     n
 }
 
-/// The permutation matrix that sends the row-major index over `dims` in the current order to the
-/// index over the legs reordered by `order`: row `new`, column `old`.
-pub(crate) fn leg_permutation<R>(
-    dims: &[usize],
-    order: &[usize],
-    d: usize,
-) -> Result<CausalTensor<Complex<R>>, QuantumError>
-where
-    R: RealField,
-{
+/// The index map of a leg permutation: `map[old]` is the position of the basis state `old` over
+/// `dims` after the legs are reordered so that `order[k]` is the `k`-th leg, first leg most
+/// significant.
+fn leg_index_map(dims: &[usize], order: &[usize], d: usize) -> Result<Vec<usize>, QuantumError> {
     let product: usize = dims.iter().product();
     if product != d || order.len() != dims.len() {
         return Err(QuantumError::DimensionMismatch(format!(
@@ -544,8 +540,8 @@ where
         seen[o] = true;
     }
     let new_dims: Vec<usize> = order.iter().map(|&o| dims[o]).collect();
-    let mut data = vec![Complex::new(R::zero(), R::zero()); d * d];
-    for old in 0..d {
+    let mut map = vec![0usize; d];
+    for (old, slot) in map.iter_mut().enumerate() {
         // Digits of `old` over `dims`.
         let mut digits = vec![0usize; dims.len()];
         let mut rest = old;
@@ -557,7 +553,7 @@ where
         for (k, &o) in order.iter().enumerate() {
             new = new * new_dims[k] + digits[o];
         }
-        data[new * d + old] = Complex::new(R::one(), R::zero());
+        *slot = new;
     }
-    Ok(CausalTensor::from_slice(&data, &[d, d]))
+    Ok(map)
 }

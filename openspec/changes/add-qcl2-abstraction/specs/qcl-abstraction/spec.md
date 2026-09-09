@@ -27,9 +27,11 @@ encoding on the code space. Products of types align as monoidal products of the 
 
 #### Scenario: A code's decoder and isometry align
 
-- **WHEN** `TypeAlignment::for_code(&logical_basis)` is built on the `[[8,2,2]]` fixture
+- **WHEN** the alignment of `CodeAbstraction::numeric_abstractions` is built on the `[[8,2,2]]`
+  fixture
 - **THEN** `τ ∘ E` on the `4 × 4` logical space equals the identity within `Tolerance::state()`,
-  `π(logical qubit)` lists all eight physical qubits, and the alignment is admitted
+  the output-side entry's `π(logical qubits)` lists all eight physical qubits, the input-side entry
+  aligns the two logical wires by the identity, and the alignment is admitted
 
 #### Scenario: A channel that does not invert its section is refused
 
@@ -209,9 +211,11 @@ offending pair of high-level vertices.
 
 `CodeAbstraction` SHALL build the strict `Abstraction<L, H>` of a CSS code from a `LogicalBasis`,
 with `π` sending each logical qubit to its block, `τ` the ideal decoding channel, `E` the code-space
-isometry, and the query map sending a logical gate to the program the Table 1 emitter produces,
-`Open(S̄)` to `Open(π(S̄))` and `Observe(Ō)` to the measurement of the corresponding logical
-operator. For a noiseless physical model, `check_naturality` on it SHALL agree with
+isometry, and the query map sending a logical gate to the program the Table 1 emitter produces and
+`Open(S̄)` to `Open(π(S̄))`, whose fresh inputs align through the recovery. `Observe(Ō)`, the
+measurement of the corresponding logical operator, needs a classical coarse-graining in the
+alignment that this change does not carry and is deferred (design D16). For a noiseless physical
+model, `check_naturality` on it SHALL agree with
 `check_class_invariance` on every diagonal Table 1 gate and with `check_clifford_action` on `H̄`,
 on every gate and every fixture, in verdict and in witness.
 
@@ -290,3 +294,11 @@ the residual it measures.
 - **WHEN** the hand-built `[[4,2,2]]` complex is concatenated with itself as inner and outer code
   and `check_naturality` runs on the composite for `Z̄` and `H̄`
 - **THEN** the measured residual is at most the composite bound recorded by `compose`
+
+#### Scenario: The opened square commutes on the small code
+
+- **WHEN** `check_naturality` runs on the `[[4,2,2]]` code abstraction for `Z̄`, `X̄` and `CZ̄`
+- **THEN** both the `Io` square and the `Open` square have residual zero, the opened low-level
+  input type is the two logical wires and four fresh physical wires, and on `[[8,2,2]]` the opened
+  square is refused by the default cap with `n: 10, k: 8, entries: 2^26` while the `Io` square
+  alone is checked through `check_naturality_on`

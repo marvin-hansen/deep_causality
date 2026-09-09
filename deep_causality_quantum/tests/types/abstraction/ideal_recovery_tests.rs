@@ -118,6 +118,24 @@ fn test_eight_two_two_recovery() {
     let complex = LatticeComplex::<2, f64>::square_torus(2);
     let basis = LogicalBasis::<u64>::from_complex(&complex, 1).unwrap();
     check_code(&basis, 64);
+    let rec = IdealRecovery::<f64>::from_basis(&basis).unwrap();
+    // On the 2 × 2 torus the two edges of a row join the same vertex pair and the two edges of a
+    // column the same face pair, so single-edge X errors give 4 distinct syndromes, single-edge Z
+    // errors 4, and single-edge Y errors one per edge, 8: sixteen weight-one corrections, and the
+    // remaining 47 syndromes need weight two or more.
+    let weights: Vec<usize> = rec
+        .corrections()
+        .iter()
+        .map(|(x, z)| x.iter().zip(z).filter(|(a, b)| **a || **b).count())
+        .collect();
+    assert_eq!(weights[0], 0, "the trivial syndrome corrects nothing");
+    assert_eq!(weights.iter().filter(|w| **w == 1).count(), 16);
+    assert!(rec.max_correction_weight() >= 2);
+    assert_eq!(
+        rec.max_correction_weight(),
+        *weights.iter().max().unwrap(),
+        "the reported weight is the table's largest"
+    );
 }
 
 #[test]

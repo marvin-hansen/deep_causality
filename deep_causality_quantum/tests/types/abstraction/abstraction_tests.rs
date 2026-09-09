@@ -17,8 +17,8 @@
 use deep_causality_num_complex::Complex;
 use deep_causality_quantum::{
     Abstraction, Axis, Channel, CheckVerdict, CircuitBox, CircuitModel, FROBENIUS_ON_CHOI, GateOp,
-    NumericCaps, QcMorphism, QuantumErrorEnum, QubitOperator, Query, SemanticsPath, TypeAlignment,
-    WireType,
+    NumericCaps, QcMorphism, QuantumErrorEnum, QubitOperator, Query, SemanticsPath, StructureScope,
+    TypeAlignment, WireType,
 };
 use deep_causality_tensor::CausalTensor;
 
@@ -315,4 +315,48 @@ fn test_concrete_do_is_derived_and_agrees_on_both_sides() {
         a_io.concrete_do(&Query::Io, &state, &caps).unwrap_err().0,
         QuantumErrorEnum::CalculationError(_)
     ));
+}
+
+/// Theorem 51's scope: `Equivalent` only when both models are classical; a quantum model on either
+/// side makes the predicates a necessary condition. The classical model here is a wire-only model
+/// with no mechanism, the only all-classical circuit model there is.
+#[test]
+fn test_scope_is_equivalent_only_when_both_sides_are_classical() {
+    let classical =
+        || CircuitModel::<f64>::ungrouped(vec![WireType::bit()], vec![], vec![], vec![]).unwrap();
+    let empty = || TypeAlignment::<f64>::new(vec![]).unwrap();
+    let both = Abstraction::new(
+        classical(),
+        classical(),
+        empty(),
+        vec![(Query::Io, Query::Io)],
+    )
+    .unwrap();
+    assert_eq!(
+        both.check_alignment_structure(&[]).unwrap().scope,
+        StructureScope::Equivalent
+    );
+    let quantum_low = Abstraction::new(
+        low(GateOp::X(1)),
+        classical(),
+        empty(),
+        vec![(Query::Io, Query::Io)],
+    )
+    .unwrap();
+    assert_eq!(
+        quantum_low.check_alignment_structure(&[]).unwrap().scope,
+        StructureScope::Necessary
+    );
+    // A quantum high-level model has vertices that a classical low-level one cannot supply blocks
+    // for, so that side of the conjunction is decided by the quantum-low case above.
+    let circuit = Abstraction::new(
+        low(GateOp::X(1)),
+        high(),
+        alignment(),
+        vec![(Query::Io, Query::Io)],
+    )
+    .unwrap();
+    let s = circuit.check_alignment_structure(&[vec![0]]).unwrap();
+    assert_eq!(s.scope, StructureScope::Necessary);
+    assert!(s.simple && s.extra_simple && s.full);
 }

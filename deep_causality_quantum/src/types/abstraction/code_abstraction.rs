@@ -337,7 +337,10 @@ impl<W: NaturalNumber> CodeAbstraction<W> {
     /// low-level model encodes the logical input on its first `k` wires into the code, then runs
     /// the physical program, on `n` qubits; the high-level model runs the logical gate on `k`
     /// qubits. The input types align by the identity and the output types through the ideal
-    /// recovery, so the square reads `τ ∘ U_phys ∘ W = U_log`. For codes of at most ten qubits.
+    /// recovery, so the square reads `τ ∘ U_phys ∘ W = U_log`. The query map sends `Io` to `Io`
+    /// and the opening of the logical gate, `Open(S̄)`, to the opening of the physical program,
+    /// `Open(π(S̄))`, whose fresh inputs align through the recovery. For codes of at most ten
+    /// qubits.
     ///
     /// # Errors
     ///
@@ -421,7 +424,15 @@ impl<W: NaturalNumber> CodeAbstraction<W> {
             ])?;
             out.push((
                 gate.clone(),
-                Abstraction::new(low, high, alignment, vec![(Query::Io, Query::Io)])?,
+                Abstraction::new(
+                    low,
+                    high,
+                    alignment,
+                    vec![
+                        (Query::Io, Query::Io),
+                        (Query::Open(vec![0]), Query::Open(vec![1])),
+                    ],
+                )?,
             ));
         }
         Ok(out)

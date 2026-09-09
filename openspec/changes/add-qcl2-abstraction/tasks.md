@@ -76,20 +76,20 @@ A commit message is prepared at each group boundary; nothing is committed by the
 
 ## 4. The structural precheck and the code as an abstraction
 
-- [ ] 4.1 Add `check_alignment_structure`: `α(X)` by blocked reachability on the low-level DAG, the
+- [x] 4.1 Add `check_alignment_structure`: `α(X)` by blocked reachability on the low-level DAG, the
       simple, extra-simple and full predicates, the offending pair as witness, and the scope field
       `Equivalent | Necessary` with the doc stating Theorem 51's classical scope and Remark 56's
       argument for the quantum case
-- [ ] 4.2 Add the paper's Examples 54 and 55 as fixtures and pin their predicate values
-- [ ] 4.3 Write the generation regression first: `check_naturality` on the strict
+- [x] 4.2 Add the paper's Examples 54 and 55 as fixtures and pin their predicate values
+- [x] 4.3 Write the generation regression first: `check_naturality` on the strict
       `CodeAbstraction` against `check_class_invariance` and `check_clifford_action` on
       `[[18,2,3]]` and `[[32,2,4]]`, every emitted gate, verdict and witness
-- [ ] 4.4 Add `CodeAbstraction` from a `LogicalBasis`: `π` to the block, `τ` the ideal decoder from
+- [x] 4.4 Add `CodeAbstraction` from a `LogicalBasis`: `π` to the block, `τ` the ideal decoder from
       the stabilizer generators, `E` the code-space isometry, the query map through the Table 1
-      emitters, `Open(S̄) ↦ Open(π(S̄))`, `Observe(Ō)` to the logical measurement
-- [ ] 4.5 Wire `check_alignment_structure` and `check_naturality` into `Validate` on the circuit
+      emitters, `Open(S̄) ↦ Open(π(S̄))`; `Observe(Ō)` to the logical measurement deferred (D16)
+- [x] 4.5 Wire `check_alignment_structure` and `check_naturality` into `Validate` on the circuit
       subject, in that order, sticky failure, named stages
-- [ ] 4.6 Verify: the regression passes on both fixtures; omitting `S̄`'s CZ pairs fails it; the
+- [x] 4.6 Verify: the regression passes on both fixtures; omitting `S̄`'s CZ pairs fails it; the
       precheck on a `CircuitModel` reads `Necessary`; a rejecting precheck stops `check_naturality`
       from forming a matrix
 

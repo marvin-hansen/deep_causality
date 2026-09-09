@@ -12,9 +12,10 @@
 //! function gives `0`. On `[[8,2,2]]` the numeric path agrees with the exact one on every gate.
 
 use deep_causality_homology::ChainComplex;
+use deep_causality_quantum::utils_tests::four_two_two;
 use deep_causality_quantum::{
-    CheckVerdict, CodeAbstraction, DiagonalPhase, GateOp, LogicalGate, NumericCaps,
-    QuantumErrorEnum, SemanticsPath,
+    AlignmentSide, CheckVerdict, CodeAbstraction, DiagonalPhase, GateOp, LogicalGate, NumericCaps,
+    QuantumErrorEnum, Query, SemanticsPath,
 };
 use deep_causality_topology::LatticeComplex;
 
@@ -146,7 +147,12 @@ fn test_numeric_path_agrees_with_the_exact_path_on_the_small_torus() {
     assert_eq!(numeric.len(), gates.len());
     for ((gate, abstraction), verdict) in numeric.iter().zip(&exact.gates) {
         assert_eq!(gate, &verdict.gate);
-        let r = abstraction.check_naturality(&caps).unwrap();
+        // The `Io` square only: opening the program doubles the register to ten qubits, which the
+        // default cap refuses; that refusal is checked below.
+        let r = abstraction
+            .check_naturality_on(&[Query::Io], &caps)
+            .unwrap();
+        assert_eq!(r.report.examined(), 1);
         assert_eq!(r.path, SemanticsPath::Numeric);
         assert_eq!(
             r.report.verdict(),
@@ -180,4 +186,95 @@ fn test_construction_errors() {
     let exact = ca.check_naturality_exact::<f64>().unwrap();
     assert_eq!(exact.report.verdict(), CheckVerdict::Vacuous);
     assert!(ca.gates().is_empty());
+}
+
+/// Opening the physical program on `[[8,2,2]]` makes a ten-qubit register (two logical inputs and
+/// eight fresh physical ones) and the working storage `2^16 · 2^10 = 2^26` exceeds the default cap;
+/// the refusal names both counts and no matrix is formed.
+#[test]
+fn test_opening_the_eight_qubit_code_is_refused_by_the_cap() {
+    let ca = CodeAbstraction::<W>::new(&torus(2), vec![LogicalGate::S(0)]).unwrap();
+    let numeric = ca.numeric_abstractions::<f64>().unwrap();
+    let (_, abstraction) = &numeric[0];
+    assert_eq!(abstraction.signature().len(), 2);
+    let err = abstraction
+        .check_naturality(&NumericCaps::default())
+        .unwrap_err();
+    match err.0 {
+        QuantumErrorEnum::NaturalityDimensionExceeded { n, k, entries, cap } => {
+            assert_eq!((n, k), (10, 8));
+            assert_eq!(entries, 1u64 << 26);
+            assert_eq!(cap, 1u64 << 24);
+        }
+        other => panic!("{other:?}"),
+    }
+    let unknown = abstraction
+        .check_naturality_on(&[Query::Observe(vec![0])], &NumericCaps::default())
+        .unwrap_err();
+    assert!(
+        matches!(unknown.0, QuantumErrorEnum::CalculationError(ref m) if m.contains("not in the signature"))
+    );
+}
+
+/// On the `[[4,2,2]]` code both squares, `Io` and the opening of the logical gate against the
+/// opening of the physical program, commute for the Pauli gates and `CZ̄`: the opened square is
+/// `Tr_k ⊗ τ` on both sides.
+#[test]
+fn test_open_square_commutes_on_the_four_two_two_code() {
+    let complex = four_two_two();
+    let gates = vec![LogicalGate::Z(0), LogicalGate::X(1), LogicalGate::Cz(0, 1)];
+    let ca = CodeAbstraction::<W>::new(&complex, gates.clone()).unwrap();
+    let caps = NumericCaps::default();
+    let numeric = ca.numeric_abstractions::<f64>().unwrap();
+    assert_eq!(numeric.len(), gates.len());
+    for (gate, abstraction) in &numeric {
+        let r = abstraction.check_naturality(&caps).unwrap();
+        assert_eq!(r.report.examined(), 2, "{}", gate.name());
+        assert_eq!(
+            r.report.verdict(),
+            CheckVerdict::Accepted,
+            "{}: {}",
+            gate.name(),
+            r.worst_residual()
+        );
+        assert!(
+            r.worst_residual() < 1e-8,
+            "{}: {}",
+            gate.name(),
+            r.worst_residual()
+        );
+        // The opened square is wider than the Io square: 2^(2+4) inputs against 2^2.
+        let (left, _) = abstraction.square(&Query::Open(vec![0]), &caps).unwrap();
+        assert_eq!(left.d_in(), 64);
+        assert_eq!(left.d_out(), 4);
+    }
+}
+
+/// The code alignment in the shape of Example 58: the input side aligns the two logical wires by
+/// the identity, the output side aligns them with all eight physical qubits through the recovery.
+#[test]
+fn test_code_alignment_lists_all_physical_qubits_on_the_output_side() {
+    let ca = CodeAbstraction::<W>::new(&torus(2), vec![LogicalGate::Z(0)]).unwrap();
+    let numeric = ca.numeric_abstractions::<f64>().unwrap();
+    let alignment = numeric[0].1.alignment();
+    assert_eq!(alignment.entries().len(), 2);
+    let input = &alignment.entries()[0];
+    assert_eq!(input.side(), AlignmentSide::Input);
+    assert_eq!(input.high(), &[0, 1]);
+    assert_eq!(input.low(), &[0, 1]);
+    assert_eq!((input.tau().d_in(), input.tau().d_out()), (4, 4));
+    let output = &alignment.entries()[1];
+    assert_eq!(output.side(), AlignmentSide::Output);
+    assert_eq!(output.high(), &[0, 1]);
+    assert_eq!(output.low(), &(0..8).collect::<Vec<_>>());
+    assert_eq!((output.tau().d_in(), output.tau().d_out()), (256, 4));
+    assert_eq!(
+        (output.section().d_in(), output.section().d_out()),
+        (4, 256)
+    );
+    let low = numeric[0].1.low();
+    assert_eq!(low.inputs(), &[0, 1]);
+    assert_eq!(low.outputs(), &(0..8).collect::<Vec<_>>());
+    assert_eq!(low.boxes()[0].kind(), "kraus");
+    assert_eq!(low.boxes()[1].kind(), "unitary");
 }

@@ -6,8 +6,9 @@
 //! The fourth subject: a circuit on the builder, screened through its dilation.
 
 use deep_causality_quantum::{
-    Axis, Channel, CircuitBox, CircuitModel, CommutatorTolerance, Factorization, QclBuilder,
-    QuantumErrorEnum, QubitOperator, ScreenOrigin, WireType,
+    Abstraction, Axis, Channel, CircuitBox, CircuitModel, CommutatorTolerance, Factorization,
+    NumericCaps, QcMorphism, QclBuilder, QuantumErrorEnum, QubitOperator, Query, ScreenOrigin,
+    TypeAlignment, WireType,
 };
 
 type FloatType = f64;
@@ -142,4 +143,127 @@ fn test_a_model_subject_cannot_enter_an_abstraction() {
     assert!(
         matches!(err.0, QuantumErrorEnum::NoCompositionalModel(ref m) if m.contains("Marginal"))
     );
+}
+
+/// A two-node chain with its wire as input and output, and the identity abstraction onto a copy
+/// of itself: the partition `[[0], [1]]` is simple, `[[1], [0]]` puts the second gate's block
+/// upstream of the first's and is not.
+fn io_chain() -> CircuitModel<FloatType> {
+    CircuitModel::ungrouped(
+        vec![WireType::qubit()],
+        vec![ry(0.7), ry(0.9)],
+        vec![0],
+        vec![0],
+    )
+    .unwrap()
+}
+
+fn identity_abstraction(
+    low: CircuitModel<FloatType>,
+) -> Abstraction<FloatType, CircuitModel<FloatType>, CircuitModel<FloatType>> {
+    let identity = QcMorphism::<FloatType>::identity(2).unwrap();
+    Abstraction::new(
+        low,
+        io_chain(),
+        TypeAlignment::new(vec![(vec![0], vec![0], identity.clone(), identity)]).unwrap(),
+        vec![(Query::Io, Query::Io)],
+    )
+    .unwrap()
+}
+
+#[test]
+fn test_both_abstraction_stages_record_in_order() {
+    let cfg = QclBuilder::config::<FloatType, NumberType>()
+        .over_circuit(io_chain())
+        .build()
+        .unwrap();
+    let abstraction = identity_abstraction(io_chain());
+    let screened = QclBuilder::validate(&cfg)
+        .check_alignment_structure(&abstraction, &[vec![0], vec![1]])
+        .check_naturality(&abstraction, &NumericCaps::default())
+        .finalize()
+        .expect("a simple partition and a commuting square");
+    let stages = screened.stages();
+    assert_eq!(stages.len(), 2);
+    assert_eq!(stages[0].0, "check_alignment_structure");
+    assert_eq!(
+        stages[0].1.examined(),
+        2,
+        "two ordered pairs of high-level vertices"
+    );
+    assert_eq!(stages[1].0, "check_naturality");
+    assert_eq!(stages[1].1.examined(), 1, "one query");
+    let report = screened.report().unwrap();
+    assert!(report.accepted());
+    assert_eq!(report.examined(), 3);
+}
+
+#[test]
+fn test_a_rejecting_precheck_stops_the_naturality_check() {
+    let cfg = QclBuilder::config::<FloatType, NumberType>()
+        .over_circuit(io_chain())
+        .build()
+        .unwrap();
+    let abstraction = identity_abstraction(io_chain());
+    // A zero cap: had the naturality stage run, it would have failed with the cap, not with the
+    // partition.
+    let no_matrix = NumericCaps {
+        max_entries: 0,
+        max_operators: 0,
+    };
+    let err = QclBuilder::validate(&cfg)
+        .check_alignment_structure(&abstraction, &[vec![1], vec![0]])
+        .check_naturality(&abstraction, &no_matrix)
+        .finalize()
+        .err()
+        .expect("the partition is not simple");
+    match err.0 {
+        QuantumErrorEnum::CalculationError(msg) => {
+            assert!(msg.contains("not simple"), "{msg}");
+            assert!(msg.contains("α(0) meets π(1)"), "{msg}");
+            assert!(msg.contains("Necessary"), "{msg}");
+        }
+        other => panic!("{other:?}"),
+    }
+    // The same zero cap with a simple partition reaches the naturality stage and fails there.
+    let err = QclBuilder::validate(&cfg)
+        .check_alignment_structure(&abstraction, &[vec![0], vec![1]])
+        .check_naturality(&abstraction, &no_matrix)
+        .finalize()
+        .err()
+        .expect("the zero cap refuses the square");
+    assert!(matches!(
+        err.0,
+        QuantumErrorEnum::NaturalityDimensionExceeded { .. }
+            | QuantumErrorEnum::KrausFamilyExceeded { .. }
+    ));
+}
+
+#[test]
+fn test_an_abstraction_over_another_circuit_is_refused_by_both_stages() {
+    let cfg = QclBuilder::config::<FloatType, NumberType>()
+        .over_circuit(io_chain())
+        .build()
+        .unwrap();
+    let other = CircuitModel::ungrouped(
+        vec![WireType::qubit()],
+        vec![ry(0.1), ry(0.9)],
+        vec![0],
+        vec![0],
+    )
+    .unwrap();
+    let abstraction = identity_abstraction(other);
+    for stage in 0..2 {
+        let v = QclBuilder::validate(&cfg);
+        let v = if stage == 0 {
+            v.check_alignment_structure(&abstraction, &[vec![0], vec![1]])
+        } else {
+            v.check_naturality(&abstraction, &NumericCaps::default())
+        };
+        let err = v.finalize().err().expect("refused");
+        assert!(
+            matches!(err.0, QuantumErrorEnum::CalculationError(ref m) if m.contains("not the screened circuit")),
+            "stage {stage}: {err:?}"
+        );
+    }
 }
