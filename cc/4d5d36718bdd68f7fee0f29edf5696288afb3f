@@ -1,0 +1,174 @@
+openspec/specs/qcl-decision-form/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-217
+deep_causality_quantum/src/types/circuit_model/numeric_semantics.rs
+  s_a31005946f38f3::t_03bac98817b651 1-13,15,17-23,25-74,79-80,84-92,96,101-141,150-167,171,176-232,235-352,357-453
+  s_a31005946f38f3::t_1bcd7900184267 14
+  s_a31005946f38f3::t_edf61fe67fccd8 75-78,81-83,93-95,97-100,142-149,168-170,172-175,233-234,353-356
+  s_a31005946f38f3::t_7d678b86dc973d 16
+  s_a31005946f38f3::t_d023452a0ea443 24
+openspec/changes/add-qcl2-abstraction/notes/tdd-group-1.md
+  s_a31005946f38f3::t_0f62c0da09abbb 1-73
+deep_causality_quantum/tests/types/mod.rs
+  s_a31005946f38f3::t_0433ebdd870c30 8-9
+deep_causality_quantum/src/types/circuit_model/semantics_path.rs
+  s_a31005946f38f3::t_b1f23e856d5c99 1-29
+openspec/specs/qcl-experiment-design/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-190
+deep_causality_quantum/src/types/circuit_model/wire.rs
+  s_a31005946f38f3::t_b1f23e856d5c99 1-68
+openspec/specs/qcl-evidence/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-188
+deep_causality_quantum/tests/types/circuit_model/circuit_box_tests.rs
+  s_a31005946f38f3::t_5e31712b2df9e0 1-61
+deep_causality_quantum/src/error/quantum_error.rs
+  s_a31005946f38f3::t_de9a874c084d9c 102-131,234-240,242-263,339-341,343-358
+  s_a31005946f38f3::t_edf61fe67fccd8 241,342
+deep_causality_quantum/src/types/circuit_model/induced_dag.rs
+  s_a31005946f38f3::t_cd359bd5810c63 86
+  s_a31005946f38f3::t_b1f23e856d5c99 1-85,87-154
+deep_causality_quantum/src/types/qcode/mod.rs
+  s_a31005946f38f3::t_1de155b2189947 19,26
+deep_causality_quantum/tests/types/circuit_model/mod.rs
+  s_a31005946f38f3::t_7d678b86dc973d 1-14
+deep_causality_quantum/src/types/circuit_model/queries.rs
+  s_a31005946f38f3::t_38870eb3908d43 1-336
+  s_a31005946f38f3::t_a1964226f329c4 337-339
+deep_causality_quantum/src/types/circuit_model/mod.rs
+  s_a31005946f38f3::t_1de155b2189947 1-12,14-15,17-23,25,27-28
+  s_a31005946f38f3::t_38870eb3908d43 16,26
+  s_a31005946f38f3::t_1bcd7900184267 13,24
+deep_causality_quantum/src/types/circuit_model/qc_morphism.rs
+  s_a31005946f38f3::t_edf61fe67fccd8 292-294
+  s_a31005946f38f3::t_38870eb3908d43 304-425,512-555
+  s_a31005946f38f3::t_61414b2b01a220 1-291,295-303,426-511,556
+  s_a31005946f38f3::t_f5597bb91b5a3b 557-558
+deep_causality_quantum/tests/types/circuit_model/induced_dag_tests.rs
+  s_a31005946f38f3::t_7d678b86dc973d 1-98
+  s_a31005946f38f3::t_cd359bd5810c63 99-131
+  s_a31005946f38f3::t_b8233278e54376 132-134
+deep_causality_quantum/tests/types/circuit_model/circuit_model_tests.rs
+  s_a31005946f38f3::t_5e31712b2df9e0 1-102,105-156,161-168,183,186,198,205-233,237-243,247-253,257-263,267-273,284-299,303-313,317-327,331-340,344,354-364,377-387,398
+  s_a31005946f38f3::t_edf61fe67fccd8 103-104,157-160,169-182,184-185,187-197,199-204,234-236,244-246,254-256,264-266,274-283,300-302,314-316,328-330,341-343,345-353,365-376,388-397
+deep_causality_quantum/tests/types/circuit_model/numeric_semantics_tests.rs
+  s_a31005946f38f3::t_edf61fe67fccd8 28-31,73-76,108-116,154-157,213-217,240-247,252-253,256-261,263-269,274-279,299-313,336-339,358-360,373-378
+  s_a31005946f38f3::t_1bcd7900184267 135
+  s_a31005946f38f3::t_63a3cdeb94195d 1-27,32-72,77-107,117-134,136-153,158-212,218-239,248-251,254-255,262,270-273,280-298,314-335,340-357,361-372,379
+deep_causality_quantum/src/types/pipeline/validate.rs
+  s_a31005946f38f3::t_3416587ffa25b9 9-10,101-124,327-379
+  s_a31005946f38f3::t_2eee11322f06cb 380
+deep_causality_quantum/tests/types/circuit_model/exact_semantics_tests.rs
+  s_a31005946f38f3::t_0433ebdd870c30 1-16,18-149,154-162,177-186,192-206,213-243,251-255,261-267,272,288-294,303,308
+  s_a31005946f38f3::t_caa1ff29f004b0 17
+  s_a31005946f38f3::t_edf61fe67fccd8 150-153,163-176,187-191,207-212,244-250,256-260,268-271,273-287,295-302,304-307
+deep_causality_quantum/tests/types/circuit_model/semantics_path_tests.rs
+  s_a31005946f38f3::t_7d678b86dc973d 1-13
+openspec/changes/add-qcl2-abstraction/tasks.md
+  s_a31005946f38f3::t_5be9b6ee965897 45,48,50,52,54
+  s_a31005946f38f3::t_402f34c560fa9d 15,17
+  s_a31005946f38f3::t_235828db09f63d 22,26,28,32,36
+deep_causality_quantum/BUILD.bazel
+  s_a31005946f38f3::t_0433ebdd870c30 113-123,125-156
+  s_a31005946f38f3::t_e5f2bf6abcc60e 124
+deep_causality_quantum/src/types/circuit_model/exact_semantics.rs
+  s_a31005946f38f3::t_03bac98817b651 1-170,173-175,178-230
+  s_a31005946f38f3::t_edf61fe67fccd8 171-172,176-177
+deep_causality_quantum/tests/types/qcm/dilation_tests.rs
+  s_a31005946f38f3::t_aedbaeaeddc2e0 35-41,49-53,56-60,63-65,84-92,99-102,104-106,111-118,123-127,138-148,159-161,165-173,176-181,183-186,191-199,202-205,212-214,219-221,223-225,231-236,243-245,248-251,253-261,267-298,302-308,323-326,331-333,342-351,355-362
+  s_a31005946f38f3::t_30bd9f61a5c334 1-34,42-48,54-55,61-62,66-83,93-98,103,107-110,119-122,128-137,149-158,162-164,174-175,182,187-190,200-201,206-211,215-218,222,226-230,237-242,246-247,252,262-266,299-301,309-322,327-330,334-341,352-354,363-364
+deep_causality_quantum/tests/mod.rs
+  s_a31005946f38f3::t_0433ebdd870c30 8
+deep_causality_quantum/tests/error/quantum_error_tests.rs
+  s_a31005946f38f3::t_b1f23e856d5c99 78-101,165-169,171-183
+  s_a31005946f38f3::t_edf61fe67fccd8 170
+  s_a31005946f38f3::t_41ae2508572cd3 184
+openspec/specs/qcl-code-checks/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-460
+openspec/specs/qcl-hypothesis/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-361
+deep_causality_quantum/src/types/circuit_model/circuit_box.rs
+  s_a31005946f38f3::t_d43696571a5d0a 1-105
+deep_causality_quantum/src/lib.rs
+  s_a31005946f38f3::t_1de155b2189947 28,33
+deep_causality_quantum/src/types/qcode/gauge_field_gate.rs
+  s_a31005946f38f3::t_1de155b2189947 1-86,91-211,215-216,221-317,321-353,357,363-404,410-416
+  s_a31005946f38f3::t_edf61fe67fccd8 87-90,212-214,217-220,318-320,354-356,358-362,405-409
+deep_causality_quantum/tests/utils_tests/fixtures_tests.rs
+  s_a31005946f38f3::t_0433ebdd870c30 1-25,30-54
+  s_a31005946f38f3::t_edf61fe67fccd8 26-29
+openspec/specs/qcl-pipeline/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-323
+deep_causality_quantum/tests/types/qcode/mod.rs
+  s_a31005946f38f3::t_0433ebdd870c30 10
+deep_causality_quantum/src/types/circuit_model/gate_unitary.rs
+  s_a31005946f38f3::t_d43696571a5d0a 1-35,40-76,81-99
+  s_a31005946f38f3::t_554fe30f4f4874 77
+  s_a31005946f38f3::t_edf61fe67fccd8 36-39
+  s_a31005946f38f3::t_cd359bd5810c63 78-80
+deep_causality_quantum/src/types/qcm/mod.rs
+  s_a31005946f38f3::t_7fa3d3cbd76a6a 11,18
+deep_causality_quantum/tests/utils_tests/mod.rs
+  s_a31005946f38f3::t_0433ebdd870c30 1-7
+deep_causality_quantum/tests/types/qcode/gauge_field_gate_tests.rs
+  s_a31005946f38f3::t_edf61fe67fccd8 42-45,65-69,91-95,101-104,111-114,118-125,132-143,157-158,160-173,188-196,202-209,212-214
+  s_a31005946f38f3::t_0433ebdd870c30 1-41,46-64,70-90,96-100,105-110,115-117,126-131,144-156,159,174-187,197-201,210-211,215-218
+deep_causality_quantum/src/types/mod.rs
+  s_a31005946f38f3::t_1de155b2189947 7
+deep_causality_quantum/tests/types/qcm/mod.rs
+  s_a31005946f38f3::t_30bd9f61a5c334 8-9
+deep_causality_quantum/tests/types/circuit_model/gate_unitary_tests.rs
+  s_a31005946f38f3::t_1bcd7900184267 60,69
+  s_a31005946f38f3::t_7d678b86dc973d 1-59,61-68,70-95,99-116
+  s_a31005946f38f3::t_edf61fe67fccd8 96-98
+deep_causality_quantum/src/utils_tests/mod.rs
+  s_a31005946f38f3::t_1de155b2189947 1-13
+deep_causality_quantum/src/types/pipeline/config.rs
+  s_a31005946f38f3::t_3416587ffa25b9 8,140-200,255-260,538-557
+  s_a31005946f38f3::t_1f9cf623df7b26 558
+deep_causality_quantum/tests/types/pipeline/mod.rs
+  s_a31005946f38f3::t_aedbaeaeddc2e0 9
+  s_a31005946f38f3::t_a78f03180215e1 8
+deep_causality_quantum/src/types/qcm/dilation.rs
+  s_a31005946f38f3::t_aedbaeaeddc2e0 157-162,236-245,262-266,326-328,357-361,369-371,436-441,447-448,460-462,482-484
+  s_a31005946f38f3::t_82aec7db1c54e3 329
+  s_a31005946f38f3::t_7fa3d3cbd76a6a 1-156,163-235,246-261,267-325,330-356,362-368,372-435,442-446,449-459,463-481,485-498
+deep_causality_quantum/src/utils_tests/hand_built_complex.rs
+  s_a31005946f38f3::t_1de155b2189947 1-68
+deep_causality_quantum/tests/types/pipeline/circuit_subject_tests.rs
+  s_a31005946f38f3::t_30bd9f61a5c334 1-23,31-66,79,82-84,89-92,98-108,115-118,125-141,145
+  s_a31005946f38f3::t_6f7f93e0236037 80-81,96-97
+  s_a31005946f38f3::t_d6a15c8847f7fe 68-69
+  s_a31005946f38f3::t_aedbaeaeddc2e0 24-30,67,70-78,85-88,93-95,109-114,119-124,142-144
+deep_causality_quantum/tests/types/circuit_model/qc_morphism_tests.rs
+  s_a31005946f38f3::t_63a3cdeb94195d 1-18,20-23,33-57,60-98,106-139,145,150-156,183-187
+  s_a31005946f38f3::t_cd06d9ccad6133 157-182
+  s_a31005946f38f3::t_caa1ff29f004b0 58-59
+  s_a31005946f38f3::t_edf61fe67fccd8 19,24-32,99-105,140-144,146-149
+deep_causality_quantum/src/types/circuit_model/model.rs
+  s_a31005946f38f3::t_aedbaeaeddc2e0 196-198,274-286
+  s_a31005946f38f3::t_7fa3d3cbd76a6a 1-195,199-273,287-584
+openspec/specs/qcl-carriers/spec.md
+  s_a31005946f38f3::t_7835db5c5748d4 1-205
+deep_causality_quantum/tests/utils_tests/hand_built_complex_tests.rs
+  s_a31005946f38f3::t_0433ebdd870c30 1-13,18-26,42-57
+  s_a31005946f38f3::t_edf61fe67fccd8 14-17,27-41
+deep_causality_quantum/tests/types/circuit_model/wire_tests.rs
+  s_a31005946f38f3::t_7d678b86dc973d 1-20
+deep_causality_quantum/src/utils_tests/fixtures.rs
+  s_a31005946f38f3::t_1de155b2189947 1-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "cc4d5d36718bdd68f7fee0f29edf5696288afb3f",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
