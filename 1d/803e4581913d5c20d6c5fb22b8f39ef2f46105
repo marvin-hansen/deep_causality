@@ -1,0 +1,58 @@
+website/docs/src/content/docs/concepts/effect-ethos.md
+  s_fa561c5e2caef2::t_7ca4d03b21d5c1 16,18
+  s_fa561c5e2caef2::t_f664f8dd4965c3 65
+  s_fa561c5e2caef2::t_455592bd4f44ce 3
+  s_fa561c5e2caef2::t_98c459ebfa8bc8 81
+  s_fa561c5e2caef2::t_cf06e3f06fb8dd 74
+  s_fa561c5e2caef2::t_bf8c0a5f391c7d 28
+website/docs/src/content/docs/formalization/index.md
+  s_fa561c5e2caef2::t_7562d50e18808a 55
+website/docs/src/content/docs/formalization/num.md
+  s_fa561c5e2caef2::t_7562d50e18808a 8
+website/docs/src/content/docs/formalization/linear.md
+  s_fa561c5e2caef2::t_7562d50e18808a 56
+website/docs/src/content/docs/overview/innovations.md
+  s_fa561c5e2caef2::t_7562d50e18808a 22,24,28
+website/docs/src/content/docs/getting-started/install.md
+  s_fa561c5e2caef2::t_7562d50e18808a 39
+website/docs/src/content/docs/concepts/csm.md
+  s_fa561c5e2caef2::t_e0f5c9406260d3 74-75
+website/docs/src/content/docs/concepts/causal-flow.md
+  s_fa561c5e2caef2::t_4b5d6053cba64b 140
+website/docs/src/content/docs/formalization/algebra.md
+  s_fa561c5e2caef2::t_7562d50e18808a 8
+website/docs/src/content/docs/concepts/axiom.md
+  s_fa561c5e2caef2::t_4b5d6053cba64b 93,99
+website/docs/src/content/docs/concepts/dynamic-causality.md
+  s_fa561c5e2caef2::t_4b5d6053cba64b 64,72
+website/docs/src/content/docs/concepts/uniform-math.md
+  s_fa561c5e2caef2::t_76893e1604de3a 310-313
+  s_fa561c5e2caef2::t_6549a778bc8111 220,222-223
+  s_fa561c5e2caef2::t_20a5b2c57e2af4 162-173
+  s_fa561c5e2caef2::t_9a9a39d6beb0ba 105,110,120,144
+  s_fa561c5e2caef2::t_d14c2eb4a1d583 408-410
+  s_fa561c5e2caef2::t_71ae9ce52379c3 268,284-290
+  s_fa561c5e2caef2::t_6dd620a54390e6 2,10,12,14-18
+  s_fa561c5e2caef2::t_f41e6a80069ea4 363-374,381-398
+  s_fa561c5e2caef2::t_59ad8d1122c4d0 37-39,43,48,50-59,61,63-65
+  s_fa561c5e2caef2::t_60de5f72d44393 240,244-246
+  s_fa561c5e2caef2::t_88818d24c42391 247,291
+website/docs/src/content/docs/concepts/index.md
+  s_fa561c5e2caef2::t_7562d50e18808a 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "1d803e4581913d5c20d6c5fb22b8f39ef2f46105",
+  "prompts": {},
+  "sessions": {
+    "s_fa561c5e2caef2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c19a1e2e-e498-4c01-b106-946fee1f3872",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
