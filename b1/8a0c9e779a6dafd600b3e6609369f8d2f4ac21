@@ -1,0 +1,14 @@
+.github/workflows/rust_coverage.yaml
+  h_080fb89ca1f0c4 25-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "b18a0c9e779a6dafd600b3e6609369f8d2f4ac21",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
