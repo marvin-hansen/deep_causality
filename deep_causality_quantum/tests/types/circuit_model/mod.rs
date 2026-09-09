@@ -10,5 +10,6 @@ mod gate_unitary_tests;
 mod induced_dag_tests;
 mod numeric_semantics_tests;
 mod qc_morphism_tests;
+mod queries_tests;
 mod semantics_path_tests;
 mod wire_tests;

@@ -29,6 +29,7 @@ pub mod utils_tests;
 
 pub use crate::error::quantum_error::{QuantumError, QuantumErrorEnum};
 
+pub use crate::types::abstraction::*;
 pub use crate::types::carriers::*;
 pub use crate::types::circuit_model::*;
 pub use crate::types::decision::*;

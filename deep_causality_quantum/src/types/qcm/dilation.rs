@@ -216,7 +216,10 @@ where
             ));
         }
         for (b, bx) in self.boxes().iter().enumerate() {
-            if !matches!(bx, CircuitBox::Unitary { .. } | CircuitBox::Channel { .. }) {
+            if !matches!(
+                bx,
+                CircuitBox::Unitary { .. } | CircuitBox::Channel { .. } | CircuitBox::Kraus { .. }
+            ) {
                 return Err(QuantumError::CalculationError(format!(
                     "box {b} is a {}; a dilation needs a quantum-only model of unitaries and channels",
                     bx.kind()
@@ -464,27 +467,11 @@ where
                 }
             }
             CircuitBox::Channel { wires, channel } => {
-                let kraus: Vec<CausalTensor<Complex<R>>> = QcMorphism::from_channel(channel)?
-                    .blocks()
-                    .values()
-                    .flatten()
-                    .cloned()
-                    .collect();
-                let box_wires: BTreeSet<usize> = wires.iter().copied().collect();
-                let count = (family.len() as u64).saturating_mul(kraus.len() as u64);
-                if count > caps.max_operators {
-                    return Err(QuantumError::KrausFamilyExceeded(count, caps.max_operators));
-                }
-                let mut next = Vec::with_capacity(count as usize);
-                for k in &kraus {
-                    let embedded = embed_on_legs(k, &box_wires, &space)?;
-                    for f in &family {
-                        next.push(embedded.matmul(f).map_err(|e| {
-                            QuantumError::CalculationError(format!("matmul: {e:?}"))
-                        })?);
-                    }
-                }
-                family = next;
+                let kraus = QcMorphism::from_channel(channel)?.kraus();
+                family = compose_kraus(family, &kraus, wires, &space, &caps)?;
+            }
+            CircuitBox::Kraus { wires, kraus } => {
+                family = compose_kraus(family, kraus, wires, &space, &caps)?;
             }
             other => {
                 return Err(QuantumError::CalculationError(format!(
@@ -495,4 +482,35 @@ where
         }
     }
     choi_from_kraus(&family)
+}
+
+/// Every product `K_j · F_i` of a box's Kraus operators, embedded on the leg, with the family so
+/// far; the operator count is capped.
+fn compose_kraus<R>(
+    family: Vec<CausalTensor<Complex<R>>>,
+    kraus: &[CausalTensor<Complex<R>>],
+    wires: &[usize],
+    space: &BTreeMap<usize, usize>,
+    caps: &NumericCaps,
+) -> Result<Vec<CausalTensor<Complex<R>>>, QuantumError>
+where
+    R: RealField + FromPrimitive + Default + core::fmt::Debug,
+{
+    let box_wires: BTreeSet<usize> = wires.iter().copied().collect();
+    let count = (family.len() as u64).saturating_mul(kraus.len() as u64);
+    if count > caps.max_operators {
+        return Err(QuantumError::KrausFamilyExceeded(count, caps.max_operators));
+    }
+    let mut next = Vec::with_capacity(count as usize);
+    for k in kraus {
+        let embedded = embed_on_legs(k, &box_wires, space)?;
+        for f in &family {
+            next.push(
+                embedded
+                    .matmul(f)
+                    .map_err(|e| QuantumError::CalculationError(format!("matmul: {e:?}")))?,
+            );
+        }
+    }
+    Ok(next)
 }

@@ -139,6 +139,21 @@ low-level sharp states per Proposition 18 and are not stored (road map §3).
 *Alternative rejected.* A rank test on `τ`'s Choi operator. Rank is a numeric-path quantity, has no
 exact-path form, and does not exhibit the state Proposition 18 needs.
 
+*Amended during implementation (2026-09-09).* `τ_X` and `E_X` are `QcMorphism` values, not
+`Channel`s: a `Channel` carries a dense Choi operator of `(d_in d_out)²` entries, which is
+`2^32` for an eight-qubit unitary, and the alignment never reads it. The alignment entries carry a
+side. A code's numeric abstraction is posed in the shape of Example 58, `E ; U ; N`: the low-level
+model is the encoder unitary `W` on all `n` physical wires followed by the physical program, with
+the first `k` wires as inputs, so its input type is the logical space and aligns by the identity,
+and its output type is the physical space and aligns through the ideal decoder. Posing the square
+on the full `2^n` input space instead fails for every non-Pauli gate, since the decoder's syndrome
+corrections do not commute with `S̄` or `T̄` off the code space: the residual on `[[8,2,2]]` was
+`30.5`. The encoder unitary is `|x⟩|0…0⟩ ↦ |x̄⟩`, completed by the coset states
+`|c, χ⟩ = |S_X|^{-1/2} Σ_s χ(s) |c + s⟩` of the `X`-stabilizer group, one per coset and character,
+which is an orthonormal basis containing the code words; Gram–Schmidt over the standard basis was
+tried first and costs `O(d³)` in a debug build. It is held in a `CircuitBox::Kraus`, a box given by
+Kraus operators alone, added for the same reason.
+
 ### D5. `check_alignment_structure` states what Theorem 51 licenses
 
 Theorem 51 is stated for causal models in a Markov, cd or Cartesian structure category, each of

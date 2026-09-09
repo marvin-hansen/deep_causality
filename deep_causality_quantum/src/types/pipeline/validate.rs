@@ -4,6 +4,8 @@
  */
 
 use crate::QuantumError;
+use crate::types::abstraction::{Abstraction, QcModel};
+use crate::types::circuit_model::{CircuitModel, NumericCaps};
 use crate::types::decision::{Check, CheckItem, CheckReport};
 use crate::types::pipeline::config::{
     CircuitSubject, CodeSubject, Config, ModelSubject, PlantSubject, QclBuilder, ScreenOrigin,
@@ -372,6 +374,82 @@ where
             .and_then(|h| h.check_decomposable_from_supports(inputs, outputs));
         match result {
             Ok(report) => self.record("check_decomposable", report),
+            Err(e) => self.fail(e),
+        }
+        self
+    }
+}
+
+impl<'c, R, N> Validate<'c, R, N, CircuitSubject<R>>
+where
+    R: RealField + FromPrimitive + Default + core::fmt::Debug,
+    N: NaturalNumber,
+{
+    /// Definition 49's structural precheck of an abstraction whose low-level model is the screened
+    /// circuit, before any operator is formed. A partition that is not simple is the stage's
+    /// failure, naming the offending pair.
+    pub fn check_alignment_structure<H: QcModel<R>>(
+        mut self,
+        abstraction: &Abstraction<R, CircuitModel<R>, H>,
+        partition: &[Vec<usize>],
+    ) -> Self {
+        if self.failure.is_some() {
+            return self;
+        }
+        if abstraction.low() != self.cfg.subject().model() {
+            self.fail(QuantumError::CalculationError(
+                "the abstraction's low-level model is not the screened circuit".into(),
+            ));
+            return self;
+        }
+        match abstraction.check_alignment_structure(partition) {
+            Ok(structure) => {
+                self.record("check_alignment_structure", structure.report());
+                if let Some((x, y)) = structure.simple_witness {
+                    self.fail(QuantumError::CalculationError(alloc::format!(
+                        "the partition is not simple: α({x}) meets π({y}); scope {:?}",
+                        structure.scope
+                    )));
+                }
+            }
+            Err(e) => self.fail(e),
+        }
+        self
+    }
+
+    /// The numeric naturality check of an abstraction whose low-level model is the screened
+    /// circuit. A rejected square is the stage's failure, naming the query.
+    pub fn check_naturality<H: QcModel<R>>(
+        mut self,
+        abstraction: &Abstraction<R, CircuitModel<R>, H>,
+        caps: &NumericCaps,
+    ) -> Self {
+        if self.failure.is_some() {
+            return self;
+        }
+        if abstraction.low() != self.cfg.subject().model() {
+            self.fail(QuantumError::CalculationError(
+                "the abstraction's low-level model is not the screened circuit".into(),
+            ));
+            return self;
+        }
+        match abstraction.check_naturality(caps) {
+            Ok(naturality) => {
+                if let Some(rejected) = naturality.report.first_rejection() {
+                    let CheckItem::Index(i) = rejected.item else {
+                        unreachable!("naturality records are indexed")
+                    };
+                    self.fail(QuantumError::CalculationError(alloc::format!(
+                        "the naturality square for {:?} does not commute: residual {:?} in {} \
+                         against {:?}",
+                        abstraction.signature().queries()[i],
+                        rejected.measured,
+                        naturality.norm,
+                        rejected.threshold
+                    )));
+                }
+                self.record("check_naturality", naturality.report);
+            }
             Err(e) => self.fail(e),
         }
         self

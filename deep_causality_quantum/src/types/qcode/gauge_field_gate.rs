@@ -231,6 +231,142 @@ impl<W: NaturalNumber> GaugeFieldGate<W> {
         Ok(acc)
     }
 
+    /// The gate a diagonal physical program implements, read off the program rather than assumed:
+    /// the phase of every computational basis state over the gates' support is summed from the
+    /// gates that fire on it, and the result must depend on the state only through the parities of
+    /// `blocks`. This is how an emitted Table 1 program is checked against the gauge-field
+    /// expression it was derived from, and it fails on a program that omits a factor.
+    ///
+    /// # Errors
+    ///
+    /// [`QuantumError::CalculationError`] if a gate is not diagonal, acts on a qubit outside the
+    /// blocks, or if two basis states with the same block parities carry different phases, naming
+    /// the state; [`QuantumError::DimensionMismatch`] if the support exceeds 20 qubits or the
+    /// blocks' parities are not independent on it.
+    pub fn from_diagonal_program(
+        num_qubits: usize,
+        ops: &[GateOp],
+        blocks: Vec<Gf2Chain<W>>,
+    ) -> Result<Self, QuantumError> {
+        let first = blocks.first().ok_or_else(|| {
+            QuantumError::DimensionMismatch("a gate needs at least one block".into())
+        })?;
+        let (len, degree) = (first.len(), first.degree());
+        if len != num_qubits {
+            return Err(QuantumError::DimensionMismatch(format!(
+                "the blocks are over {len} qubits, the program over {num_qubits}"
+            )));
+        }
+        let m = blocks.len();
+        // Support of the program and the turns each gate contributes when all its qubits are set.
+        let mut support: Vec<usize> = Vec::new();
+        let mut gates: Vec<(Vec<usize>, Turns)> = Vec::with_capacity(ops.len());
+        for op in ops {
+            let turns = match op {
+                GateOp::Z(_) | GateOp::Cz { .. } | GateOp::Ccz { .. } | GateOp::Cmz { .. } => {
+                    Rational::new(1, 2)
+                }
+                GateOp::S(_) => Rational::new(1, 4),
+                GateOp::Sdg(_) | GateOp::Csdg { .. } => Rational::new(3, 4),
+                GateOp::T(_) => Rational::new(1, 8),
+                GateOp::Tdg(_) => Rational::new(7, 8),
+                other => {
+                    return Err(QuantumError::CalculationError(format!(
+                        "{other:?} is not diagonal; a gauge-field gate reads diagonal programs only"
+                    )));
+                }
+            };
+            let qubits = op.qubits();
+            for &q in &qubits {
+                if q >= num_qubits {
+                    return Err(QuantumError::DimensionMismatch(format!(
+                        "{op:?} names qubit {q} on a {num_qubits}-qubit register"
+                    )));
+                }
+                if !blocks.iter().any(|b| b.support().any(|s| s == q)) {
+                    return Err(QuantumError::CalculationError(format!(
+                        "{op:?} acts on qubit {q}, which lies in no block; the phase would depend on \
+                         more than the blocks' parities"
+                    )));
+                }
+                if !support.contains(&q) {
+                    support.push(q);
+                }
+            }
+            gates.push((qubits, turns));
+        }
+        support.sort_unstable();
+        if support.len() > 20 {
+            return Err(QuantumError::DimensionMismatch(format!(
+                "the program's support has {} qubits; the enumeration stops at 20",
+                support.len()
+            )));
+        }
+        let position = |q: usize| support.iter().position(|&s| s == q).expect("in support");
+        let block_masks: Vec<usize> = blocks
+            .iter()
+            .map(|b| {
+                b.support()
+                    .filter(|q| support.contains(q))
+                    .fold(0usize, |acc, q| acc | (1 << position(q)))
+            })
+            .collect();
+        let gate_masks: Vec<(usize, Turns)> = gates
+            .iter()
+            .map(|(qs, t)| {
+                (
+                    qs.iter().fold(0usize, |acc, &q| acc | (1 << position(q))),
+                    *t,
+                )
+            })
+            .collect();
+        let mut table: Vec<Option<Turns>> = vec![None; 1usize << m];
+        for x in 0..(1usize << support.len()) {
+            let mut phase = Rational::new(0, 1);
+            for (mask, t) in &gate_masks {
+                if x & mask == *mask {
+                    phase = reduce_turns(phase + *t);
+                }
+            }
+            let mut pattern = 0usize;
+            for (i, mask) in block_masks.iter().enumerate() {
+                if (x & mask).count_ones() % 2 == 1 {
+                    pattern |= 1 << i;
+                }
+            }
+            match table[pattern] {
+                None => table[pattern] = Some(phase),
+                Some(seen) if seen == phase => {}
+                Some(seen) => {
+                    return Err(QuantumError::CalculationError(format!(
+                        "the program is not a function of the block parities: basis state {x:#b} \
+                         over the support carries {phase:?} where pattern {pattern:#b} carried {seen:?}"
+                    )));
+                }
+            }
+        }
+        // A block the program never touches is a free parity: the phase cannot depend on it, so
+        // its patterns copy the pattern with that bit cleared. A block the program touches whose
+        // parity cannot be set independently of the others is an error.
+        let reach_mask = block_masks
+            .iter()
+            .enumerate()
+            .filter(|(_, mask)| **mask != 0)
+            .fold(0usize, |acc, (i, _)| acc | (1 << i));
+        let mut phases = Vec::with_capacity(1usize << m);
+        for pattern in 0..(1usize << m) {
+            let reachable = pattern & reach_mask;
+            let t = table[reachable].ok_or_else(|| {
+                QuantumError::DimensionMismatch(format!(
+                    "parity pattern {reachable:#b} is unreachable on the program's support; the \
+                     blocks' parities are not independent there"
+                ))
+            })?;
+            phases.push(t);
+        }
+        Self::new(len, degree, blocks, phases)
+    }
+
     /// The register width.
     pub fn len(&self) -> usize {
         self.len

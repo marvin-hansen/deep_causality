@@ -148,15 +148,10 @@ where
             .map(|&w| self.wires()[w].cardinality())
             .collect();
 
-        // Both caps, before anything is allocated.
-        let blocks_upper = in_counts
-            .iter()
-            .chain(&out_counts)
-            .fold(1u64, |a, &c| a.saturating_mul(c as u64));
-        let d_pair = (d_in as u64).saturating_mul(d_out as u64);
-        let choi_entries = d_pair.saturating_mul(d_pair).saturating_mul(blocks_upper);
-        let working = (d_total as u64).saturating_mul(d_in as u64);
-        let entries = choi_entries.max(working);
+        // Both caps, before anything is allocated. The entry cap here is on the working storage,
+        // one register state vector per input basis state; the Choi operator is capped where it is
+        // formed, in `QcMorphism::choi_blocks`, since the program's own Choi is never formed.
+        let entries = (d_total as u64).saturating_mul(d_in as u64);
         if entries > caps.max_entries {
             return Err(QuantumError::NaturalityDimensionExceeded(
                 ceil_log2(d_in),
@@ -227,11 +222,13 @@ where
                     let _ = wires;
                 }
                 CircuitBox::Channel { channel, .. } => {
-                    let family = QcMorphism::from_channel(channel)?;
-                    let kraus: Vec<CausalTensor<Complex<R>>> =
-                        family.blocks().values().flatten().cloned().collect();
+                    let kraus = QcMorphism::from_channel(channel)?.kraus();
                     branches =
                         branch_over(branches, &kraus, None, &dims, &strides, &positions, caps)?;
+                }
+                CircuitBox::Kraus { kraus, .. } => {
+                    branches =
+                        branch_over(branches, kraus, None, &dims, &strides, &positions, caps)?;
                 }
                 CircuitBox::Instrument { outcome, kraus, .. } => {
                     let mut next: Vec<Branch<R>> = Vec::new();

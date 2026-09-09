@@ -245,6 +245,10 @@ where
                     wires: wires.iter().map(|&w| m(w)).collect(),
                     channel: channel.clone(),
                 },
+                CircuitBox::Kraus { wires, kraus } => CircuitBox::Kraus {
+                    wires: wires.iter().map(|&w| m(w)).collect(),
+                    kraus: kraus.clone(),
+                },
                 CircuitBox::Instrument {
                     wires,
                     outcome,
@@ -507,6 +511,20 @@ where
                     "box {b} (channel) is {} → {} but its wires {ws:?} imply {d}",
                     channel.d_in(),
                     channel.d_out()
+                )));
+            }
+        }
+        CircuitBox::Kraus { wires: ws, kraus } => {
+            let d = quantum_dim(ws)?;
+            if kraus.is_empty() {
+                return Err(QuantumError::DimensionMismatch(format!(
+                    "box {b} (kraus) has no Kraus operators"
+                )));
+            }
+            if let Some(k) = kraus.iter().find(|k| k.shape() != [d, d]) {
+                return Err(QuantumError::DimensionMismatch(format!(
+                    "box {b} (kraus) has an operator of shape {:?} but its wires {ws:?} imply {d} × {d}",
+                    k.shape()
                 )));
             }
         }

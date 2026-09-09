@@ -396,3 +396,54 @@ fn test_encoder_measurement_and_instrument_checks() {
         matches!(unwritten_output.0, QuantumErrorEnum::DimensionMismatch(ref m) if m.contains("written by no box"))
     );
 }
+
+/// A Kraus box whose operators do not match its wires, or that has none, is refused with the box
+/// index and the wires named.
+#[test]
+fn test_mis_dimensioned_kraus_box_names_the_wire_and_the_box() {
+    let two_by_two = QubitOperator::<f64>::hadamard().matrix().clone();
+    let err = CircuitModel::<f64>::ungrouped(
+        vec![WireType::qubit(), WireType::qubit()],
+        vec![CircuitBox::Kraus {
+            wires: vec![0, 1],
+            kraus: vec![two_by_two],
+        }],
+        vec![0, 1],
+        vec![0, 1],
+    )
+    .unwrap_err();
+    match err.0 {
+        QuantumErrorEnum::DimensionMismatch(msg) => {
+            assert!(
+                msg.contains("box 0") && msg.contains("[0, 1]") && msg.contains("[2, 2]"),
+                "{msg}"
+            )
+        }
+        other => panic!("{other:?}"),
+    }
+    let empty = CircuitModel::<f64>::ungrouped(
+        vec![WireType::qubit()],
+        vec![CircuitBox::Kraus {
+            wires: vec![0],
+            kraus: vec![],
+        }],
+        vec![0],
+        vec![0],
+    )
+    .unwrap_err();
+    assert!(
+        matches!(empty.0, QuantumErrorEnum::DimensionMismatch(ref m) if m.contains("no Kraus"))
+    );
+    let ok = CircuitModel::<f64>::ungrouped(
+        vec![WireType::qubit()],
+        vec![CircuitBox::Kraus {
+            wires: vec![0],
+            kraus: vec![QubitOperator::<f64>::hadamard().matrix().clone()],
+        }],
+        vec![0],
+        vec![0],
+    )
+    .unwrap();
+    assert_eq!(ok.boxes()[0].kind(), "kraus");
+    assert_eq!(ok.boxes()[0].quantum_wires(), &[0]);
+}

@@ -142,6 +142,11 @@ where
         }
     }
 
+    /// The Kraus operators of every block, in block order.
+    pub fn kraus(&self) -> Vec<CausalTensor<Complex<R>>> {
+        self.blocks.values().flatten().cloned().collect()
+    }
+
     /// The identity morphism on a `d`-dimensional quantum system.
     pub fn identity(d: usize) -> Result<Self, QuantumError> {
         let mut data = vec![Complex::new(R::zero(), R::zero()); d * d];

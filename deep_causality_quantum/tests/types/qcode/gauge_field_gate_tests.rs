@@ -216,3 +216,52 @@ fn test_construction_errors_and_reduction() {
     let gb = GaugeFieldGate::multi_cz(many_b).unwrap();
     assert!(ga.product(&gb).is_err());
 }
+
+#[test]
+fn test_from_diagonal_program_reads_table_one_back_and_rejects_an_incomplete_one() {
+    use deep_causality_quantum::{logical_cz, logical_s, logical_t};
+    let g = chain(5, &[0, 1, 2]);
+    let s = GaugeFieldGate::<W>::from_diagonal_program(5, &logical_s(&g), vec![g.clone()]).unwrap();
+    assert_eq!(s, GaugeFieldGate::s(g.clone()).unwrap());
+    let t = GaugeFieldGate::<W>::from_diagonal_program(5, &logical_t(&g).unwrap(), vec![g.clone()])
+        .unwrap();
+    assert_eq!(t, GaugeFieldGate::t(g.clone()).unwrap());
+    let h = chain(5, &[3, 4]);
+    let cz = GaugeFieldGate::<W>::from_diagonal_program(
+        5,
+        &logical_cz(&g, &h).unwrap(),
+        vec![g.clone(), h.clone()],
+    )
+    .unwrap();
+    assert_eq!(cz, GaugeFieldGate::cz(g.clone(), h.clone()).unwrap());
+    // S on the support without the CZ pairs is n/4: two set qubits give 1/2 where parity gives 0.
+    let only_s: Vec<GateOp> = g.support().map(GateOp::S).collect();
+    let err = GaugeFieldGate::<W>::from_diagonal_program(5, &only_s, vec![g.clone()]).unwrap_err();
+    assert!(
+        matches!(err.0, QuantumErrorEnum::CalculationError(ref m) if m.contains("not a function of the block parities"))
+    );
+    // A non-diagonal gate, a gate off the blocks, and a wrong register are refused.
+    let err = GaugeFieldGate::<W>::from_diagonal_program(5, &[GateOp::H(0)], vec![g.clone()])
+        .unwrap_err();
+    assert!(
+        matches!(err.0, QuantumErrorEnum::CalculationError(ref m) if m.contains("not diagonal"))
+    );
+    let err = GaugeFieldGate::<W>::from_diagonal_program(5, &[GateOp::Z(4)], vec![g.clone()])
+        .unwrap_err();
+    assert!(
+        matches!(err.0, QuantumErrorEnum::CalculationError(ref m) if m.contains("in no block"))
+    );
+    let err = GaugeFieldGate::<W>::from_diagonal_program(4, &[GateOp::Z(0)], vec![g.clone()])
+        .unwrap_err();
+    assert!(matches!(err.0, QuantumErrorEnum::DimensionMismatch(_)));
+    // Two identical blocks leave the odd/even mixed patterns unreachable.
+    let err =
+        GaugeFieldGate::<W>::from_diagonal_program(5, &[GateOp::Z(0)], vec![g.clone(), g.clone()])
+            .unwrap_err();
+    assert!(
+        matches!(err.0, QuantumErrorEnum::DimensionMismatch(ref m) if m.contains("unreachable"))
+    );
+    // An empty program on a block is the identity table.
+    let id = GaugeFieldGate::<W>::from_diagonal_program(5, &[], vec![g]).unwrap();
+    assert!(id.is_constant());
+}

@@ -44,6 +44,15 @@ pub enum CircuitBox<R: RealField> {
         /// The channel, validated CPTP once at its construction.
         channel: Channel<R>,
     },
+    /// A CPTP map on quantum wires given by its Kraus operators, each `2^|wires| × 2^|wires|`.
+    /// The numeric semantics is Kraus-level, so a wide box, an encoder unitary on every qubit of a
+    /// code for one, is held here without the Choi operator a [`Channel`] carries.
+    Kraus {
+        /// The quantum wires, first most significant.
+        wires: Vec<WireId>,
+        /// The Kraus operators.
+        kraus: Vec<CausalTensor<Complex<R>>>,
+    },
     /// A quantum instrument: for each classical outcome `y`, a Kraus family `kraus[y]` on the
     /// wires; jointly trace-preserving over `y`.
     Instrument {
@@ -71,6 +80,7 @@ impl<R: RealField> CircuitBox<R> {
             Self::Encoder { outputs, .. } => outputs,
             Self::Unitary { wires, .. }
             | Self::Channel { wires, .. }
+            | Self::Kraus { wires, .. }
             | Self::Instrument { wires, .. }
             | Self::Measurement { wires, .. } => wires,
         }
@@ -98,6 +108,7 @@ impl<R: RealField> CircuitBox<R> {
             Self::Encoder { .. } => "encoder",
             Self::Unitary { .. } => "unitary",
             Self::Channel { .. } => "channel",
+            Self::Kraus { .. } => "kraus",
             Self::Instrument { .. } => "instrument",
             Self::Measurement { .. } => "measurement",
         }

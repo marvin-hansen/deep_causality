@@ -12,8 +12,10 @@ Definition 59: a signature of boxes and typed wires together with a semantics fo
 which the induced DAG of Example 61 is derived and not stored.
 
 The boxes are encoders (classical input to quantum), unitaries (a `GateOp` program on named
-wires), channels (a `Channel` on named wires, the noise boxes), instruments (a controlled Kraus
-family with a classical outcome wire) and measurements (quantum to classical). Wires are quantum,
+wires), channels (a `Channel` on named wires, the noise boxes), Kraus boxes (a CPTP map given by
+its Kraus operators alone, for a wide box such as a code's encoder unitary whose Choi operator the
+`Channel` carrier could not hold), instruments (a controlled Kraus family with a classical outcome
+wire) and measurements (quantum to classical). Wires are quantum,
 carrying a Hilbert dimension, or classical, carrying a finite outcome set. A box-to-node grouping
 names which boxes form one vertex of the model's DAG, so that a gate-level circuit can be viewed as
 a model of a coarser DAG, which the paper calls a strict component-level abstraction (Example 63).
@@ -73,8 +75,9 @@ semantics only.
 
 ### Requirement: The numeric semantics is capped by entry count and by Kraus family size before allocating
 
-The numeric semantics SHALL compute the entry count `2^(2n + 2k)` of the composite Choi operator it
-would form for a channel from `n` qubits to `k` qubits and SHALL refuse above a cap with
+The numeric semantics SHALL compute the entry count of what it would allocate, the working storage
+of a program evaluation and the `2^(2n + 2k)` entries of a composite Choi operator from `n` to `k`
+qubits where one is formed, and SHALL refuse above a cap with
 `QuantumError::NaturalityDimensionExceeded { n, k, entries, cap }` before allocating; it SHALL
 compute the Kraus family size `∏ kᵢ` over the program's noise boxes and SHALL refuse above a second
 cap with `QuantumError::KrausFamilyExceeded { operators, cap }` before allocating; and it SHALL
@@ -87,10 +90,12 @@ fault path stays far below the second cap.
 
 #### Scenario: The 18-qubit torus is refused
 
-- **WHEN** the numeric semantics is asked for the composite Choi of a channel from 18 qubits to 2
-  logical qubits under the default cap
-- **THEN** it returns `NaturalityDimensionExceeded { n: 18, k: 2, entries: 2^40, cap: 2^24 }` and
-  allocates nothing
+- **WHEN** the numeric semantics is asked to evaluate an 18-qubit program with two output qubits
+  under the default cap
+- **THEN** it returns `NaturalityDimensionExceeded { n: 18, k: 2, entries: 2^36, cap: 2^24 }`, the
+  working storage of `2^18` state vectors of `2^18` amplitudes it would allocate, before allocating;
+  the composite Choi of `2^40` entries is refused by the same variant at the point it would be
+  formed
 
 #### Scenario: The small torus is formed and its cost reported
 

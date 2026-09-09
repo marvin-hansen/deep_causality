@@ -8,9 +8,14 @@ Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Right
 ### Requirement: A type alignment carries a channel and its section for every high-level type
 
 `TypeAlignment` SHALL record, for each high-level type `X`, the list `π(X)` of low-level types, a
-channel `τ_X : π(X) → X` validated CPTP once at construction through the shipped `Channel`, and a
-section `E_X : X → π(X)` with `τ_X ∘ E_X = id_X` checked against `Tolerance::state()`, refusing with
-`QuantumError::SectionNotInverse` otherwise.
+QC morphism `τ_X : π(X) → X` as a `QcMorphism` (a Kraus family, no Choi operator), and a section
+`E_X : X → π(X)` with `τ_X ∘ E_X = id_X` checked against `Tolerance::state()`, refusing with
+`QuantumError::SectionNotInverse` otherwise. Each entry SHALL name the side it applies to,
+`AlignmentSide::{Any, Input, Output}`: a query's input and output types may align through different
+morphisms, as they do for a code in the shape of Lorenz & Tull's Example 58, where the low-level
+model is `encoder ; program`, its input type is the logical space aligned by the identity, and its
+output type is the physical space aligned by the ideal decoder. Wires SHALL be disjoint among the
+entries that can apply to one side.
 
 Lorenz & Tull Definition 14 asks for an epic `τ_X`. In QC the witness of surjectivity is a section:
 every high-level sharp state is `τ_X ∘ s` for the low-level sharp state `s = E_X ∘ (that state)`,
@@ -35,8 +40,19 @@ encoding on the code space. Products of types align as monoidal products of the 
 
 #### Scenario: A non-CPTP `τ` is refused by the carrier
 
-- **WHEN** a `τ_X` is given as a Kraus family whose Choi operator has a negative eigenvalue
-- **THEN** the shipped `Channel::from_kraus` returns `NonCptpChannel` and the alignment is not built
+- **WHEN** a `τ_X` is given as a Kraus family whose Choi operator has a negative eigenvalue and is
+  validated through the shipped `Channel::from_kraus` before `QcMorphism::from_channel`
+- **THEN** `Channel::from_kraus` returns `NonCptpChannel` and the alignment is not built; a
+  `QcMorphism` built from Kraus operators directly is not validated, and its `τ ∘ E = id` check is
+  the alignment's own guard
+
+#### Scenario: Sided entries answer their side only
+
+- **WHEN** an alignment has an `Input` entry aligning high wire 0 with low wire 0 by the identity
+  and an `Output` entry aligning high wire 0 with low wires 0 and 1 through a partial trace
+- **THEN** the input-side `τ` for wire 0 has input dimension 2 and the output-side `τ` has input
+  dimension 4, two `Input` entries sharing a wire are refused, and an unsided alignment answers
+  both sides
 
 ### Requirement: Query signatures are validated at construction
 

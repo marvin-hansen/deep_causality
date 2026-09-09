@@ -362,3 +362,79 @@ fn test_dilation_refuses_classical_boxes_and_cycles() {
     ));
     assert_eq!(d.instruments().len(), 2);
 }
+
+#[test]
+fn test_opening_on_the_circuit_equals_mechanism_replacement_on_the_dilation() {
+    // Open node 1 on the circuit: the fresh input passes straight to the output, so an input state
+    // ρ = R_y(0.5)|0⟩⟨0|R_y† reads |1⟩ with probability sin²(0.25). On the dilation, the same
+    // opening is `intervene_mechanism` at node 1 with the mechanism "prepare ρ on the input half,
+    // identity elsewhere", evaluated with the identity instrument composed with P₁ at node 1. The
+    // two sides share no code path: one runs the Kraus semantics, the other the process-operator
+    // trace.
+    let model = chain();
+    let expected = (0.25f64).sin().powi(2);
+    let r = QubitOperator::rotation(Axis::Y, 0.5).unwrap();
+    let p0 = CausalTensor::from_slice(
+        &[
+            C::new(1.0, 0.0),
+            C::new(0.0, 0.0),
+            C::new(0.0, 0.0),
+            C::new(0.0, 0.0),
+        ],
+        &[2, 2],
+    );
+    let rho = r
+        .matrix()
+        .matmul(&p0)
+        .and_then(|m| m.matmul(&r.matrix().dagger().unwrap()))
+        .unwrap();
+    // Circuit side.
+    let opened = model.opened(&[1]).unwrap();
+    let sem = opened.numeric_semantics(&NumericCaps::default()).unwrap();
+    let out =
+        deep_causality_quantum::apply_kraus(sem.blocks().get(&(vec![], vec![])).unwrap(), &rho)
+            .unwrap();
+    assert!((out.as_slice()[3].re - expected).abs() < 1e-12);
+    // Dilation side: legs 0 and 1 of dimension 4 each, index = leg0 · 4 + (in · 2 + out).
+    let d = model.dilation().unwrap();
+    let mut data = vec![C::new(0.0, 0.0); 256];
+    for l0 in 0..4 {
+        for i in 0..2 {
+            for ip in 0..2 {
+                for o in 0..2 {
+                    let row = l0 * 4 + i * 2 + o;
+                    let col = l0 * 4 + ip * 2 + o;
+                    data[row * 16 + col] = rho.as_slice()[i * 2 + ip];
+                }
+            }
+        }
+    }
+    let mechanism = CausalTensor::from_slice(&data, &[16, 16]);
+    let intervened = d
+        .hypothesis("chain")
+        .unwrap()
+        .intervene_mechanism(1, mechanism)
+        .unwrap();
+    let p1 = CausalTensor::from_slice(
+        &[
+            C::new(0.0, 0.0),
+            C::new(0.0, 0.0),
+            C::new(0.0, 0.0),
+            C::new(1.0, 0.0),
+        ],
+        &[2, 2],
+    );
+    let mut overrides = BTreeMap::new();
+    overrides.insert(1usize, choi_from_kraus(&[p1]).unwrap());
+    let tau = d.joint_instrument(&overrides).unwrap();
+    let p = intervened.evaluate(&tau).unwrap();
+    assert!((p - expected).abs() < 1e-12, "{p} vs {expected}");
+    // The intervened factorization is still Markov, with its own certificate.
+    let report = quantum_markov_check_report(
+        intervened.factors().unwrap(),
+        intervened.supports().unwrap(),
+        &CommutatorTolerance::new(),
+    )
+    .unwrap();
+    assert!(report.accepted());
+}

@@ -11,8 +11,8 @@
 //! entry at `((3,3),(0,0))` is `−1` and at `((0,1),(0,1))` zero; a perfect classical channel has
 //! probability one on `y = x`; the amplitude-damping channel with `γ = 0.3` has Kraus operators
 //! `[[1, 0], [0, √0.7]]` and `[[0, √0.3], [0, 0]]` (Nielsen & Chuang §8.3.5). Corner cases: (A) a
-//! circuit with no boxes, (B) one box, (D) a request whose composite would be `2^40` entries,
-//! refused with that count, (E) an encoder reading an unwritten wire, (F) the operator cap on a
+//! circuit with no boxes, (B) one box, (D) an 18-qubit request whose working storage, `2^18` state
+//! vectors of `2^18` amplitudes, would be `2^36` entries, refused with that count, (E) an encoder reading an unwritten wire, (F) the operator cap on a
 //! chain of measurements, (I) the mask length mismatch.
 
 use deep_causality_num_complex::Complex;
@@ -284,6 +284,7 @@ fn test_no_boxes_is_the_identity_and_traced_legs_are_summed() {
 
 #[test]
 fn test_eighteen_qubits_are_refused_with_the_exact_entry_count() {
+    // The composite Choi with two logical qubits would be 2^40; the working storage alone is 2^36.
     let wires = vec![WireType::qubit(); 18];
     let inputs: Vec<usize> = (0..18).collect();
     let model = CircuitModel::<f64>::ungrouped(
@@ -307,7 +308,7 @@ fn test_eighteen_qubits_are_refused_with_the_exact_entry_count() {
                 k: 2,
                 entries,
                 cap
-            } if entries == 1u64 << 40 && cap == 1u64 << 24
+            } if entries == 1u64 << 36 && cap == 1u64 << 24
         ),
         "{err}"
     );
@@ -376,4 +377,35 @@ fn test_encoder_reading_an_unwritten_wire_and_a_bad_mask_are_errors() {
     assert!(
         matches!(err.0, QuantumErrorEnum::CalculationError(ref m) if m.contains("never written"))
     );
+}
+
+/// A Kraus box evaluates as the same map as `apply_kraus` with the same operators, and as the
+/// `Channel` box built from them; the asymmetric amplitude-damping family and a state with
+/// off-diagonal weight make a dropped or transposed operator visible.
+#[test]
+fn test_kraus_box_agrees_with_apply_kraus_on_one_qubit() {
+    let kraus = amplitude_damping();
+    let model = CircuitModel::<f64>::ungrouped(
+        vec![WireType::qubit()],
+        vec![CircuitBox::Kraus {
+            wires: vec![0],
+            kraus: kraus.clone(),
+        }],
+        vec![0],
+        vec![0],
+    )
+    .unwrap();
+    let m = model.numeric_semantics(&NumericCaps::default()).unwrap();
+    let family = single_block(&m);
+    assert_eq!(family.len(), 2);
+    let rho = re(&[0.25, 0.25, 0.25, 0.75], &[2, 2]);
+    let direct = apply_kraus(&kraus, &rho).unwrap();
+    let through = apply_kraus(&family, &rho).unwrap();
+    assert!(close(&direct, &through));
+    // Hand values: the damped state is [[0.25 + 0.3·0.75, 0.25·√0.7], [0.25·√0.7, 0.7·0.75]].
+    let expect = re(
+        &[0.475, 0.25 * 0.7f64.sqrt(), 0.25 * 0.7f64.sqrt(), 0.525],
+        &[2, 2],
+    );
+    assert!(close(&through, &expect));
 }

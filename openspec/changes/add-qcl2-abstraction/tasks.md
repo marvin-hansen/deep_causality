@@ -36,7 +36,7 @@ A commit message is prepared at each group boundary; nothing is committed by the
 - [x] 1.5 Add the `[[8,2,2]]` fixture from `LatticeComplex::<2, _>::square_torus(2)` (confirmed
       valid: `β = (1, 2, 1)`, `∂₁∂₂ = 0`, weight-2 representatives) and the hand-built `[[4,2,2]]`
       chain complex to `utils_tests`, each with its derivation in the module doc
-- [ ] 1.6 Verify: the numeric kernel against `apply_kraus` on one qubit and against a hand-computed
+- [x] 1.6 Verify: the numeric kernel against `apply_kraus` on one qubit and against a hand-computed
       two-qubit `CZ` Choi; the 18-qubit request refused with the exact entry count; both semantics
       agree on `Z̄` and `H̄` over the small fixture; defect audit and `cargo mutants` on the kernel
 
@@ -57,21 +57,21 @@ A commit message is prepared at each group boundary; nothing is committed by the
 
 ## 3. The abstraction object and the naturality check
 
-- [ ] 3.1 Add `TypeAlignment` with `τ_X` as `Channel`, the section `E_X`, the `τ ∘ E = id` check
+- [x] 3.1 Add `TypeAlignment` with `τ_X` as a `QcMorphism`, the section `E_X`, the `τ ∘ E = id` check
       against `Tolerance::state()`, `SectionNotInverse`, and monoidal products of types
-- [ ] 3.2 Add `QuerySignature` with `Io`, `Open(S)`, `Inc(S₁…Sₙ)` and `Observe(O)`; the
+- [x] 3.2 Add `QuerySignature` with `Io`, `Open(S)`, `Inc(S₁…Sₙ)` and `Observe(O)`; the
       parallelisable check at construction with `NotParallelisable` naming the path; `Open` given
       semantics as box deletion and shown equal to `intervene_mechanism` with the identity
       instrument on the dilation
-- [ ] 3.3 Add `Abstraction<L, H>` with the total query map, and the derived upward abstraction per
+- [x] 3.3 Add `Abstraction<L, H>` with the total query map, and the derived upward abstraction per
       Proposition 18 computed on demand
-- [ ] 3.4 Add `check_naturality` as a `Check<R>`: one record per query, the `SemanticsPath`, the
+- [x] 3.4 Add `check_naturality` as a `Check<R>`: one record per query, the `SemanticsPath`, the
       norm, the amplification factor and the examined count beside the report; the ε-abstraction
       definition in the doc block with the paper cited for the exact case
-- [ ] 3.5 Write the two-sided bound `r / d_in ≤ diamond ≤ √(d_in d_out) · r` and its derivation
+- [x] 3.5 Write the two-sided bound `r / d_in ≤ diamond ≤ √(d_in d_out) · r` and its derivation
       (`notes/open-questions-resolved.md` §2) into the docstring and the report, and test both ends
       against the `2 sin(θ/2)` closed form over a `θ` sweep, expecting `r = 2√2 sin(θ/2)`
-- [ ] 3.6 Verify: vacuous signature reads `Vacuous`; a swapped program rejects and names the query;
+- [x] 3.6 Verify: vacuous signature reads `Vacuous`; a swapped program rejects and names the query;
       both paths agree on the small fixture; defect audit and `cargo mutants` on the residual kernel
 
 ## 4. The structural precheck and the code as an abstraction

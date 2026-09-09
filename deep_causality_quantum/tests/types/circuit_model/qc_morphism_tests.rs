@@ -185,3 +185,80 @@ fn test_default_caps_are_the_design_values() {
     assert_eq!(caps.max_entries, 1 << 24);
     assert_eq!(caps.max_operators, 1 << 12);
 }
+
+#[test]
+fn test_tensor_classical_identity_state_and_leg_permutation() {
+    use deep_causality_quantum::{GateOp, gate_unitary};
+    let caps = NumericCaps::default();
+    let id2 = QcMorphism::<f64>::identity(2).unwrap();
+    let id4 = QcMorphism::<f64>::identity(4).unwrap();
+    assert!(
+        id2.tensor(&id2, &caps)
+            .unwrap()
+            .frobenius_distance(&id4, &caps)
+            .unwrap()
+            .0
+            < 1e-15
+    );
+    let cid = QcMorphism::<f64>::classical_identity(&[2, 3]).unwrap();
+    assert_eq!(cid.blocks().len(), 6);
+    assert!(cid.blocks().keys().all(|(x, y)| x == y));
+    assert!(QcMorphism::<f64>::classical_identity(&[0]).is_err());
+    // A state then Z: |+⟩ ↦ |−⟩.
+    let s = std::f64::consts::FRAC_1_SQRT_2;
+    let plus = QcMorphism::<f64>::state(&[C::new(s, 0.0), C::new(s, 0.0)]).unwrap();
+    let zc = QcMorphism::from_kraus(&[z()]).unwrap();
+    let after = plus.then(&zc, &caps).unwrap();
+    let k = &after.blocks().get(&(vec![], vec![])).unwrap()[0];
+    assert_eq!(k.shape(), &[2, 1]);
+    assert!((k.as_slice()[0].re - s).abs() < 1e-15 && (k.as_slice()[1].re + s).abs() < 1e-15);
+    assert!(QcMorphism::<f64>::state(&[]).is_err());
+    // Permuting the two legs of CNOT(0 → 1) gives CNOT(1 → 0).
+    let (_, forward) = gate_unitary::<f64>(&GateOp::Cnot {
+        control: 0,
+        target: 1,
+    })
+    .unwrap();
+    let (_, backward) = gate_unitary::<f64>(&GateOp::Cnot {
+        control: 1,
+        target: 0,
+    })
+    .unwrap();
+    let m = QcMorphism::from_kraus(&[forward]).unwrap();
+    let swapped = m.permute_legs(&[2, 2], &[1, 0], &[2, 2], &[1, 0]).unwrap();
+    let expect = QcMorphism::from_kraus(&[backward]).unwrap();
+    assert!(swapped.frobenius_distance(&expect, &caps).unwrap().0 < 1e-15);
+    assert!(m.permute_legs(&[2, 2], &[0, 0], &[2, 2], &[0, 1]).is_err());
+    assert!(m.permute_legs(&[3, 2], &[0, 1], &[2, 2], &[0, 1]).is_err());
+}
+
+#[test]
+fn test_tensor_order_against_the_kronecker_product() {
+    // `I ⊗ Z = diag(1, −1, 1, −1)`, `Z ⊗ I = diag(1, 1, −1, −1)`: entry (1, 1) tells them apart.
+    let caps = NumericCaps::default();
+    let id2 = QcMorphism::<f64>::identity(2).unwrap();
+    let zc = QcMorphism::from_kraus(&[z()]).unwrap();
+    let iz = id2.tensor(&zc, &caps).unwrap();
+    let k = &iz.blocks().get(&(vec![], vec![])).unwrap()[0];
+    assert!(
+        (k.as_slice()[4 + 1].re + 1.0).abs() < 1e-15,
+        "I ⊗ Z has −1 at (1, 1)"
+    );
+    assert!(
+        (k.as_slice()[2 * 4 + 2].re - 1.0).abs() < 1e-15,
+        "and +1 at (2, 2)"
+    );
+    let identity = CausalTensor::from_slice(
+        &[
+            C::new(1.0, 0.0),
+            C::new(0.0, 0.0),
+            C::new(0.0, 0.0),
+            C::new(1.0, 0.0),
+        ],
+        &[2, 2],
+    );
+    let expect = identity.kronecker(&z()).unwrap();
+    for (a, b) in k.as_slice().iter().zip(expect.as_slice()) {
+        assert!((a.re - b.re).abs() < 1e-15 && (a.im - b.im).abs() < 1e-15);
+    }
+}

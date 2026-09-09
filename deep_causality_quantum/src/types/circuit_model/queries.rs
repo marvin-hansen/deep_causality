@@ -47,6 +47,10 @@ fn rewire<R: RealField>(
             wires: wires.iter().map(|&w| f(w)).collect(),
             channel: channel.clone(),
         },
+        CircuitBox::Kraus { wires, kraus } => CircuitBox::Kraus {
+            wires: wires.iter().map(|&w| f(w)).collect(),
+            kraus: kraus.clone(),
+        },
         CircuitBox::Instrument {
             wires,
             outcome,
@@ -80,6 +84,19 @@ where
     /// [`new`](Self::new) on the rewired model, which include a classical output no box writes
     /// any more.
     pub fn opened(&self, nodes: &[NodeId]) -> Result<Self, QuantumError> {
+        self.opened_with_map(nodes).map(|(m, _)| m)
+    }
+
+    /// [`opened`](Self::opened) together with the renaming it performed: `(original wire, fresh
+    /// input)` for every cut wire, in the order of first encounter.
+    ///
+    /// # Errors
+    ///
+    /// As [`opened`](Self::opened).
+    pub fn opened_with_map(
+        &self,
+        nodes: &[NodeId],
+    ) -> Result<(Self, Vec<(WireId, WireId)>), QuantumError> {
         for &n in nodes {
             if n >= self.nodes().len() {
                 return Err(QuantumError::DimensionMismatch(format!(
@@ -93,6 +110,7 @@ where
         // Current name of each original wire: a cut wire is renamed to its fresh continuation.
         let mut current: Vec<WireId> = (0..wires.len()).collect();
         let mut fresh_inputs: Vec<WireId> = Vec::new();
+        let mut renamed: Vec<(WireId, WireId)> = Vec::new();
         let mut boxes: Vec<CircuitBox<R>> = Vec::new();
         let mut kept_box_node: Vec<NodeId> = Vec::new();
         for (b, bx) in self.boxes().iter().enumerate() {
@@ -104,6 +122,7 @@ where
                         let fresh = wires.len() - 1;
                         current[w] = fresh;
                         fresh_inputs.push(fresh);
+                        renamed.push((w, fresh));
                     }
                 }
                 continue;
@@ -142,7 +161,7 @@ where
                 }
             })
             .collect();
-        Self::new(wires, boxes, new_nodes, inputs, outputs)
+        Self::new(wires, boxes, new_nodes, inputs, outputs).map(|m| (m, renamed))
     }
 
     /// The fresh input wires an opening at `nodes` would create, in order: one per quantum wire
@@ -213,6 +232,19 @@ where
     /// [`QuantumError::DimensionMismatch`] on a node out of range; the errors of
     /// [`new`](Self::new).
     pub fn interchanged(&self, sets: &[Vec<NodeId>]) -> Result<Self, QuantumError> {
+        self.interchanged_with_map(sets).map(|(m, _)| m)
+    }
+
+    /// [`interchanged`](Self::interchanged) together with the renaming of the model's inputs to
+    /// their copies: `(original input, copy)` for each set in order.
+    ///
+    /// # Errors
+    ///
+    /// As [`interchanged`](Self::interchanged).
+    pub fn interchanged_with_map(
+        &self,
+        sets: &[Vec<NodeId>],
+    ) -> Result<(Self, Vec<(WireId, WireId)>), QuantumError> {
         let dag = self.induced_dag();
         for set in sets {
             for &n in set {
@@ -237,6 +269,7 @@ where
         let mut boxes: Vec<CircuitBox<R>> = Vec::new();
         let mut nodes: Vec<Vec<BoxId>> = Vec::new();
         let mut inputs: Vec<WireId> = self.inputs().to_vec();
+        let mut renamed: Vec<(WireId, WireId)> = Vec::new();
         // Swaps to insert at the position of each replaced box: (main wire, copy wire).
         let mut swaps_at: Vec<Vec<(WireId, WireId)>> = vec![Vec::new(); self.boxes().len()];
         let mut replaced: BTreeSet<BoxId> = BTreeSet::new();
@@ -288,6 +321,7 @@ where
             for &w in self.inputs() {
                 if let Some(c) = copy[w] {
                     inputs.push(c);
+                    renamed.push((w, c));
                 }
             }
             // The copy's boxes go first, each its own node.
@@ -322,7 +356,7 @@ where
             };
             nodes[target].push(boxes.len() - 1);
         }
-        Self::new(wires, boxes, nodes, inputs, self.outputs().to_vec())
+        Self::new(wires, boxes, nodes, inputs, self.outputs().to_vec()).map(|m| (m, renamed))
     }
 }
 
