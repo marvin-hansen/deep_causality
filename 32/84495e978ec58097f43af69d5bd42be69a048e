@@ -1,0 +1,38 @@
+openspec/changes/add-qcl2-abstraction/specs/qcl-circuit-model/spec.md
+  s_a31005946f38f3::t_a5601ef7a8bb33 1-148
+openspec/changes/add-qcl2-abstraction/tasks.md
+  s_a31005946f38f3::t_8b28a3ad6c0bb3 1-156
+openspec/changes/add-qcl2-abstraction/proposal.md
+  s_a31005946f38f3::t_cac48cc4c469c8 1-136
+openspec/changes/add-qcl2-abstraction/specs/qcl-decoder-abstraction/spec.md
+  s_a31005946f38f3::t_7130e89a90cd92 1-100
+openspec/notes/quantum/qcl2-roadmap-verification.md
+  s_a31005946f38f3::t_569d193e220300 1-348
+openspec/changes/add-qcl2-abstraction/specs/qcl-abstraction/spec.md
+  s_a31005946f38f3::t_ff893ac46fcf47 1-261
+openspec/changes/add-qcl2-abstraction/design.md
+  s_a31005946f38f3::t_4684a6d7b26fda 1-301
+openspec/changes/add-qcl2-abstraction/specs/qcl-pipeline/spec.md
+  s_a31005946f38f3::t_fe01a9fca58978 53-56,70-73
+  s_a31005946f38f3::t_692d10c7d87bde 1-52,57-69,74-83
+openspec/changes/add-qcl2-abstraction/.openspec.yaml
+  s_a31005946f38f3::t_33e4ae671f2fd5 1-2
+openspec/changes/add-qcl2-abstraction/specs/qcl-fault-tolerance/spec.md
+  s_a31005946f38f3::t_6920d0e56d14d0 1-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "3284495e978ec58097f43af69d5bd42be69a048e",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
