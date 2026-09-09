@@ -212,7 +212,7 @@ impl<W: NaturalNumber> CodeAbstraction<W> {
     }
 
     /// The gauge-field expression a diagonal gate should implement, `O_k` on its blocks.
-    fn expected_gauge(
+    pub(crate) fn expected_gauge(
         &self,
         gate: &LogicalGate,
     ) -> Option<Result<GaugeFieldGate<W>, QuantumError>> {

@@ -10,6 +10,7 @@
 //! the numeric semantics of a query is the numeric semantics of the rewired model.
 
 use crate::QuantumError;
+use crate::types::abstraction::fault_set::Fault;
 use crate::types::carriers::Channel;
 use crate::types::circuit_model::circuit_box::CircuitBox;
 use crate::types::circuit_model::model::CircuitModel;
@@ -219,6 +220,65 @@ where
             outputs.push(outcome);
         }
         Self::new(wires, boxes, nodes, self.inputs().to_vec(), outputs)
+    }
+
+    /// The faulted model: the fault's Pauli program as a unitary box on its wires, inserted after
+    /// the last box of the named node, or before the first box when no node is named, as a node of
+    /// its own. Wires, inputs and outputs are unchanged.
+    ///
+    /// # Errors
+    ///
+    /// [`QuantumError::DimensionMismatch`] if a fault wire is not a quantum wire or the node does
+    /// not exist; the errors of [`new`](Self::new).
+    pub fn faulted(&self, fault: &Fault) -> Result<Self, QuantumError> {
+        for w in fault.wires() {
+            match self.wires().get(w) {
+                Some(t) if t.is_quantum() => {}
+                _ => {
+                    return Err(QuantumError::DimensionMismatch(format!(
+                        "fault wire {w} is not a quantum wire of the model"
+                    )));
+                }
+            }
+        }
+        let position = match fault.after() {
+            None => 0,
+            Some(n) => {
+                let members = self.nodes().get(n).ok_or_else(|| {
+                    QuantumError::DimensionMismatch(format!(
+                        "the fault follows node {n}, but the model has {} nodes",
+                        self.nodes().len()
+                    ))
+                })?;
+                members.iter().copied().max().map_or(0, |b| b + 1)
+            }
+        };
+        let mut boxes = self.boxes().to_vec();
+        boxes.insert(
+            position,
+            CircuitBox::Unitary {
+                wires: fault.wires(),
+                program: fault.program(),
+            },
+        );
+        let mut nodes: Vec<Vec<BoxId>> = self
+            .nodes()
+            .iter()
+            .map(|members| {
+                members
+                    .iter()
+                    .map(|&b| if b >= position { b + 1 } else { b })
+                    .collect()
+            })
+            .collect();
+        nodes.push(vec![position]);
+        Self::new(
+            self.wires().to_vec(),
+            boxes,
+            nodes,
+            self.inputs().to_vec(),
+            self.outputs().to_vec(),
+        )
     }
 
     /// The interchange model (§7.2, `Inc(S₁, …, Sₙ)`): for each set, a copy of every box that is an

@@ -92,6 +92,7 @@ where
             Query::Open(nodes) => self.opened(nodes),
             Query::Inc(sets) => self.interchanged(sets),
             Query::Observe(wires) => self.observed(wires),
+            Query::Fault(fault) => self.faulted(fault),
         }
     }
 }
@@ -154,7 +155,7 @@ where
 
     fn query_wire_map(&self, query: &Query) -> Result<Vec<(WireId, WireId)>, QuantumError> {
         match query {
-            Query::Io | Query::Observe(_) => Ok(Vec::new()),
+            Query::Io | Query::Observe(_) | Query::Fault(_) => Ok(Vec::new()),
             Query::Open(nodes) => self.opened_with_map(nodes).map(|(_, m)| m),
             Query::Inc(sets) => self.interchanged_with_map(sets).map(|(_, m)| m),
         }

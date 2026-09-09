@@ -7,10 +7,12 @@ Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Right
 
 ### Requirement: A fault set is a query signature over the low-level model, counted and capped
 
-`FaultSet` SHALL be a finite signature of low-level queries, each an opening at a wire followed by
-insertion of an error channel, with constructors `pauli_weight(t)`, `declared(&[...])` and
-`from_dem(...)`, and `pauli_weight(t)` on `n` locations SHALL count `C(n, t) · 3^t` queries on
-`NumberType` and SHALL refuse above a cap before allocating, naming the count and the cap.
+`FaultSet` SHALL be a finite signature of low-level queries, each a `Query::Fault` inserting a
+Pauli error on named wires after a named node of the circuit (or before its first box), with
+constructors `pauli_weight(locations, after, t, cap)`, `declared(&[Fault])` and
+`from_dem(mechanisms, after)` taking the Pauli supports of a detector error model's mechanisms, and
+`pauli_weight` on `n` locations SHALL count `C(n, t) · 3^t` queries in checked `u64` arithmetic and
+SHALL refuse above the cap before allocating, naming the count and the cap.
 
 A fault is a comb in the paper's sense, a general intervention that is not a Do-query. The count
 is the same exponential D7 of `add-qcl` caps for the design cover; the default weight is one, and
@@ -19,7 +21,8 @@ realistic sets come from a detector error model rather than from enumeration.
 #### Scenario: Weight-one Paulis on the small torus
 
 - **WHEN** `FaultSet::pauli_weight(1)` is built over the 8 locations of the `[[8,2,2]]` circuit
-- **THEN** it holds `24` queries, one per `(location, Pauli)`, and its count reads `24`
+- **THEN** it holds `24` queries, one per `(location, Pauli)`, its count reads `24`, and it displays
+  as `pauli_weight(1) (24 faults)`
 
 #### Scenario: A set above the cap is refused
 
@@ -76,10 +79,16 @@ the propagator, so the emitter's tuple cap on `logical_t` does not bear on the f
 
 ### Requirement: Fault tolerance is the naturality check over the enlarged signature
 
-`check_fault_tolerance(abstraction, fault_set)` SHALL run `check_naturality` over the abstraction's
-signature enlarged by every fault in the set, SHALL report per-fault residuals, the worst, the
-count examined and the witnessing fault, and on the exact path SHALL decide each fault by whether
-the remainder's phase function is constant on `{0,1}^m`, as a comparison of `Turns`.
+`check_fault_tolerance` SHALL run the naturality square over the abstraction's signature enlarged
+by every fault in the set, SHALL report per-fault residuals, the worst, the count examined and the
+witnessing fault, and on the exact path SHALL decide each fault by whether the remainder's phase
+function is constant on `{0,1}^m`, as a comparison of `Turns`, and whether the propagated Pauli
+has no more weight than the fault, so that a recovery built for the set's weight still corrects it.
+On the exact path the check is `CodeAbstraction::check_fault_tolerance(gate, set)`; on the numeric
+path it is `Abstraction::check_fault_tolerance(set, caps)` over a circuit model, each fault as a
+`Query::Fault` against the high-level `Io`. The two paths answer neighbouring questions: whether the
+gate spreads the fault, and whether `τ` absorbs the spread fault; they agree when `τ` corrects every
+error of the set's weight.
 
 After the fault's own Pauli is recovered, the remainder acts on the code space as
 `exp(2πi · Δg(p̂))` with `p̂` the logical parity operators. Because the `γᵢ` are independent
@@ -100,7 +109,22 @@ the `SemanticsPath` that decided it, and on Table 1 that path is `Exact`.
 
 - **WHEN** `check_fault_tolerance` runs on `T̄(γ)` of the `[[18,2,3]]` torus under `pauli_weight(1)`
 - **THEN** every `X` or `Y` fault on `γ` rejects with the remainder `exp(±iπ/4 · Z̄(γ))` as witness,
-  every `Z` fault and every fault off `γ` accepts, and the report's examined count is `3 · 18`
+  its phase table `[1/8, 7/8]` and two Pauli terms, every `Z` fault and every fault off `γ`
+  accepts, and the report's examined count is `3 · 18`
+
+#### Scenario: A Clifford gate that spreads a fault is named by the weight
+
+- **WHEN** `check_fault_tolerance` runs on `H̄(γ)` of the `[[18,2,3]]` torus under `pauli_weight(1)`
+- **THEN** every rejected fault has a constant remainder and a propagated Pauli of weight above
+  one, and the witness names the weight and whether the carried operator is a non-trivial logical
+  operator
+
+#### Scenario: A traced-out fault is tolerated on the numeric path
+
+- **WHEN** `check_fault_tolerance` runs on a two-wire circuit whose `τ` traces the second wire,
+  under a declared set with faults on both wires
+- **THEN** the faults on the traced wire have residual zero and the faults on the kept wire a
+  positive residual, every record reads `SemanticsPath::Numeric`, and the witness names the norm
 
 #### Scenario: An empty fault set is vacuous
 
@@ -114,8 +138,10 @@ over a CSS code, SHALL output the subset that holds, and SHALL label every verdi
 
 The answer follows from Eq. (3.63) for every CSS code and every representative weight: `Z̄` and `X̄`
 do not spread, and every other Table 1 gate fails a single X-type fault on its support because its
-remainder is a non-trivial logical operator (`Z̄(γ)` for `S̄`, `exp(±iπ/4 Z̄(γ))` for `T̄`, `Z̄(γ₂)` for
-`CZ̄` under a fault on `γ₁`, and the Clifford image through the tableau for `H̄`). That derivation is
+remainder is a non-trivial logical operator (`i · Z̄(γ)` for `S̄`, phase table `[1/4, 3/4]`;
+`exp(±iπ/4 Z̄(γ))` for `T̄`, table `[1/8, 7/8]`; `Z̄(γ₂)` for `CZ̄` under a fault on `γ₁`, table
+`[0, 0, 1/2, 1/2]`; and the Clifford image through the tableau for `H̄`, a Pauli of weight above
+one). That derivation is
 the provenance of the test's expected values, as the anti-circularity protocol asks; the filter
 computes the verdicts and the test compares them to it.
 

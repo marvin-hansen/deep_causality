@@ -4,6 +4,7 @@
  */
 
 use crate::QuantumError;
+use crate::types::abstraction::fault_set::Fault;
 use crate::types::circuit_model::{InducedDag, NodeId, WireId};
 use alloc::format;
 use alloc::vec::Vec;
@@ -25,6 +26,8 @@ pub enum Query {
     Inc(Vec<Vec<NodeId>>),
     /// Measure the named output wires in the computational basis.
     Observe(Vec<WireId>),
+    /// Insert a Pauli error at a location of the circuit: a comb that is not a Do-query.
+    Fault(Fault),
 }
 
 impl Query {
@@ -35,6 +38,7 @@ impl Query {
             Self::Open(_) => "open",
             Self::Inc(_) => "interchange",
             Self::Observe(_) => "observe",
+            Self::Fault(_) => "fault",
         }
     }
 }
@@ -91,6 +95,16 @@ impl QuerySignature {
                                 )));
                             }
                         }
+                    }
+                }
+                Query::Fault(fault) => {
+                    if let Some(n) = fault.after()
+                        && n >= dag.num_vertices()
+                    {
+                        return Err(QuantumError::DimensionMismatch(format!(
+                            "the fault follows node {n}, but the model has {} nodes",
+                            dag.num_vertices()
+                        )));
                     }
                 }
                 Query::Io | Query::Observe(_) => {}

@@ -95,21 +95,21 @@ A commit message is prepared at each group boundary; nothing is committed by the
 
 ## 5. Fault sets and the fault-tolerance predicate
 
-- [ ] 5.1 Add `FaultSet` with `pauli_weight(t)`, `declared` and `from_dem`, counted on
+- [x] 5.1 Add `FaultSet` with `pauli_weight(t)`, `declared` and `from_dem`, counted on
       `NumberType` as `C(n, t) · 3^t` and refused above the cap before allocating
-- [ ] 5.2 Add `GaugeFieldGate` (blocks as `Gf2Chain`s, phase function on `{0,1}^m` as `Turns`),
+- [x] 5.2 Add `GaugeFieldGate` (blocks as `Gf2Chain`s, phase function on `{0,1}^m` as `Turns`),
       constructors for every Table 1 diagonal gate from Eq. (3.63), and the propagator: Clifford
       layers through `clifford_conjugate`, diagonal gates by parity flips through `Gf2Chain::inner`
       with the remainder as a `GaugeFieldGate`, and `NoPropagationNormalForm` for a program with two
       non-Clifford layers separated by a non-diagonal Clifford
-- [ ] 5.3 Add the exact decision: a fault is tolerated iff the remainder's phase function is
+- [x] 5.3 Add the exact decision: a fault is tolerated iff the remainder's phase function is
       constant on `{0,1}^m`, with the flipped parity pattern and the phase table as witness; on the
       numeric path, report the remainder's Pauli coefficients
-- [ ] 5.4 Add `check_fault_tolerance` over the enlarged signature: per-fault residuals, the worst,
+- [x] 5.4 Add `check_fault_tolerance` over the enlarged signature: per-fault residuals, the worst,
       the count, the witness `(location, Pauli, term)`, the `SemanticsPath` per record
-- [ ] 5.5 Add the Haruna filter with every verdict labelled `Exact`, its expected values carrying
+- [x] 5.5 Add the Haruna filter with every verdict labelled `Exact`, its expected values carrying
       the Eq. (3.63) derivation of `notes/open-questions-resolved.md` §3 as provenance
-- [ ] 5.6 Verify: `X_q` through `S̄(γ)` gives `X_q Z̄(γ)` up to phase; `X_q` through `T̄(γ)` gives the
+- [x] 5.6 Verify: `X_q` through `S̄(γ)` gives `X_q Z̄(γ)` up to phase; `X_q` through `T̄(γ)` gives the
       remainder `exp(±iπ/4 Z̄(γ))` with two terms of modulus `1/√2` at `w = 3, 4, 5`; `X_q X_r`
       through `T̄` does not spread; `Z_q` passes through unchanged; the filter matches the derivation
       on both torus fixtures; the two-layer program is refused by name; the empty set reads

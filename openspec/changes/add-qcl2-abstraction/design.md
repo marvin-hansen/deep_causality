@@ -214,6 +214,17 @@ gate `O_k(γ)` and a fault with `⟨a, γ⟩ = 1` the remainder is `exp(iπ/2^{k
 level down the Clifford hierarchy: `Z̄` for `S̄`, `exp(±iπ/4 Z̄)` for `T̄`; with `⟨a, γ⟩ = 0` it is
 the identity. Z-type faults commute with every diagonal gate and never spread.
 
+**Amended during implementation (2026-09-09).** The decision has a second clause for the Clifford
+path: `H̄` and `X̄` propagate a fault through the tableau with the identity remainder, and `H̄`
+spreads a weight-one fault to a Pauli of larger weight that carries a logical operator. A fault is
+therefore tolerated when the remainder is constant *and* the propagated Pauli has no more weight
+than the fault, so a recovery built for the set's weight still corrects it; the witness names the
+weight and, through `LogicalBasis::is_logically_trivial`, whether the carried operator is a
+non-trivial logical. The remainder tables come out with their global phase: `[1/4, 3/4]` for `S̄`,
+which is `i · Z̄(γ)`, and `[1/8, 7/8]` for `T̄`. Fault sets are `Query::Fault` values, a Pauli box
+inserted after a node of the circuit; `from_dem` takes the mechanisms' Pauli supports, which
+`DemModel` (D10) will produce.
+
 **Checked.** On `w = 3, 4, 5` with the crate's polynomial `(2n³ − 3n² + 2n)/8`, which equals the
 paper's product entry for entry, `T̄ Z₀ T̄† = Z₀` and `T̄ X₀ T̄†` has exactly two Pauli terms, `X₀`
 and `X₀ Z̄(γ)`, of modulus `1/√2` each. A first algebraic attempt predicted `2^{w−1}` terms and was

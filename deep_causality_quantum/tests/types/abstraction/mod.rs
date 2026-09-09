@@ -7,6 +7,8 @@ mod abstraction_tests;
 mod alignment_structure_tests;
 mod code_abstraction_tests;
 mod diamond_bound_tests;
+mod fault_set_tests;
+mod fault_tolerance_tests;
 mod ideal_recovery_tests;
 mod query_tests;
 mod type_alignment_tests;

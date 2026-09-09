@@ -150,6 +150,22 @@ where
         let low_q = self.image(high).ok_or_else(|| {
             QuantumError::CalculationError(format!("the query {high:?} is not in the signature"))
         })?;
+        self.square_with(high, low_q, caps)
+    }
+
+    /// The two sides of the square for a high-level query against an explicit low-level query,
+    /// which need not be the signature's image: the fault-tolerance check asks the high-level `Io`
+    /// against every faulted low-level query.
+    ///
+    /// # Errors
+    ///
+    /// As [`square`](Self::square).
+    pub fn square_with(
+        &self,
+        high: &Query,
+        low_q: &Query,
+        caps: &NumericCaps,
+    ) -> Result<(QcMorphism<R>, QcMorphism<R>), QuantumError> {
         let th = self.high.query_type(high)?;
         let tl = self.low.query_type(low_q)?;
         let alignment = self.alignment.extended(
