@@ -1,0 +1,53 @@
+deep_causality_quantum/tests/types/qcode/logical_pauli_tests.rs
+  s_6625a582c8b733::t_e51d842812846e 1-140
+deep_causality_quantum/tests/types/qcode/mod.rs
+  s_6625a582c8b733::t_5017191f9480f0 9
+  s_6625a582c8b733::t_e51d842812846e 11
+deep_causality_quantum/tests/types/qcode/diagonal_phase_tests.rs
+  s_6625a582c8b733::t_60e008d2dc5208 84-90,97,101-106
+  s_6625a582c8b733::t_5017191f9480f0 1-83,91-96,98-100,107-191
+deep_causality_quantum/tests/types/qpu/mod.rs
+  s_6625a582c8b733::t_9efd22635676cc 12-13
+deep_causality_quantum/tests/types/evidence/prng_tests.rs
+  s_6625a582c8b733::t_52b99f1a916edb 31-48
+  s_6625a582c8b733::t_549aef72069785 1-30,49-139
+deep_causality_quantum/tests/types/pipeline/validate_tests.rs
+  s_6625a582c8b733::t_4be1f361a8030a 37-44,118,121,123,141,144,147,149,179-186,202,204
+  s_6625a582c8b733::t_552e379cc91cbf 30,65,286-288
+  s_6625a582c8b733::t_a14ba98083c0fb 1-12,19-29,31-36,45-64,66-108,112-117,119-120,122,124-140,142-143,145-146,148,150-178,187-201,203,205-250,291
+  s_6625a582c8b733::t_dd498e6997b178 13-18,109-111,251-285,289-290
+deep_causality_quantum/tests/types/pipeline/config_tests.rs
+  s_6625a582c8b733::t_552e379cc91cbf 117,135
+  s_6625a582c8b733::t_3964fbe13b8337 136
+  s_6625a582c8b733::t_f0b92fcf7885e6 24-25,137-138,140-142
+  s_6625a582c8b733::t_344957a7a5916d 1-23,26-116,118-134,139,143-201
+deep_causality_quantum/tests/types/pipeline/spec_tests.rs
+  s_6625a582c8b733::t_5bde724dfbb3ee 1-92
+deep_causality_quantum/tests/types/pipeline/mod.rs
+  s_6625a582c8b733::t_344957a7a5916d 9
+  s_6625a582c8b733::t_a14ba98083c0fb 8,18-19
+  s_6625a582c8b733::t_5bde724dfbb3ee 16-17
+deep_causality_quantum/tests/types/qpu/sampler_tests.rs
+  s_6625a582c8b733::t_9efd22635676cc 1-23,25-63,69-120,124-126
+  s_6625a582c8b733::t_552e379cc91cbf 24,64-68,121-123
+deep_causality_quantum/tests/types/evidence/mod.rs
+  s_6625a582c8b733::t_31d23032ccc909 11-12
+openspec/notes/quantum/qcl2-roadmap.md
+  s_6625a582c8b733::t_c88ae2a1d36704 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "38a632c1d71d7b88d26fa2c9886a75e563d83ae3",
+  "prompts": {},
+  "sessions": {
+    "s_6625a582c8b733": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "92266816-0029-45cf-999b-6e8e9ff270a5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
