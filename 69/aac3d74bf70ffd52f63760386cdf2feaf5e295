@@ -1,0 +1,50 @@
+deep_causality_quantum/tests/types/pipeline/circuit_subject_tests.rs
+  s_a31005946f38f3::t_f876f256d84910 9-11,147-217,220-232,235-237,239-262,264-269
+  s_a31005946f38f3::t_7e7749caf13f55 233-234,238
+  s_a31005946f38f3::t_f85ad43a67c65c 218-219,263
+openspec/changes/add-qcl2-abstraction/tasks.md
+  s_a31005946f38f3::t_f876f256d84910 79,83-84,87,89-90,92
+deep_causality_quantum/tests/types/abstraction/ideal_recovery_tests.rs
+  s_a31005946f38f3::t_d30dc034619822 121,126-131,134,138
+  s_a31005946f38f3::t_7f3c2c7c5d3954 122-125,132-133,135-137
+deep_causality_quantum/src/types/abstraction/naturality.rs
+  s_a31005946f38f3::t_f876f256d84910 14,69-91,94-97
+deep_causality_quantum/src/types/circuit_model/qc_morphism.rs
+  s_a31005946f38f3::t_f876f256d84910 407-408,415,419-428,523-526,543-544,556,558
+openspec/changes/add-qcl2-abstraction/notes/tdd-group-4.md
+  s_a31005946f38f3::t_d30dc034619822 1-16,18-51,53-57
+  s_a31005946f38f3::t_6a189e83090f51 17,52
+deep_causality_quantum/tests/types/abstraction/code_abstraction_tests.rs
+  s_a31005946f38f3::t_f876f256d84910 15,17-18,150-155,190-280
+openspec/changes/add-qcl2-abstraction/specs/qcl-abstraction/spec.md
+  s_a31005946f38f3::t_f876f256d84910 30-31,33-34,214-218,297-304
+deep_causality_quantum/tests/types/abstraction/abstraction_tests.rs
+  s_a31005946f38f3::t_7e7749caf13f55 326
+  s_a31005946f38f3::t_fb66de71c35d80 350-351
+  s_a31005946f38f3::t_f876f256d84910 20-21,319-325,327-349,352-361
+  s_a31005946f38f3::t_073878a8154841 362
+openspec/changes/add-qcl2-abstraction/design.md
+  s_a31005946f38f3::t_f876f256d84910 346-363
+deep_causality_quantum/tests/types/abstraction/type_alignment_tests.rs
+  s_a31005946f38f3::t_f876f256d84910 241-271
+deep_causality_quantum/src/types/abstraction/code_abstraction.rs
+  s_a31005946f38f3::t_7920cb1ff96c2c 340-343,427-435
+deep_causality_quantum/src/types/abstraction/type_alignment.rs
+  s_a31005946f38f3::t_05bf83b28f0f4e 193-198,234
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "69aac3d74bf70ffd52f63760386cdf2feaf5e295",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
