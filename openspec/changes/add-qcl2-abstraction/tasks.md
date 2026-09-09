@@ -12,28 +12,28 @@ A commit message is prepared at each group boundary; nothing is committed by the
 
 ## 0. Restore the live specifications
 
-- [ ] 0.1 Copy the seven archived `add-qcl` deltas into `openspec/specs/qcl-*/spec.md` as their
+- [x] 0.1 Copy the seven archived `add-qcl` deltas into `openspec/specs/qcl-*/spec.md` as their
       live text, requirement counts 7, 11, 7, 7, 7, 9 and 9
-- [ ] 0.2 Verify: `openspec validate --specs` green; this change still validates with the
+- [x] 0.2 Verify: `openspec validate --specs` green; this change still validates with the
       `qcl-pipeline` delta as `ADDED`
 
 ## 1. The circuit model and its two semantics
 
-- [ ] 1.1 Add `CircuitModel<R>` under `types/circuit_model/`: boxes (encoder, unitary, channel,
+- [x] 1.1 Add `CircuitModel<R>` under `types/circuit_model/`: boxes (encoder, unitary, channel,
       instrument, measurement), typed wires, the box-to-node grouping, declared outputs, and
       `induced_dag()` per Example 61; construction rejects mis-dimensioned wires, double writers
       and a grouping that is not a partition
-- [ ] 1.2 Add the exact semantics: a Clifford program as its symplectic action through
+- [x] 1.2 Add the exact semantics: a Clifford program as its symplectic action through
       `clifford_conjugate`, a diagonal Table 1 gate as a `DiagonalPhase`; `SemanticsPath::Exact`
-- [ ] 1.3 Add the numeric semantics kernel at the Kraus level: each gate's unitary embedded through
+- [x] 1.3 Add the numeric semantics kernel at the Kraus level: each gate's unitary embedded through
       `embed_on_legs` and multiplied into the running family, each `Channel` box multiplying the
       family out, and the Choi of the composite `2^n → 2^k` channel formed once through
       `choi_from_kraus`; the program's own Choi is never formed; `SemanticsPath::Numeric`
-- [ ] 1.4 Add the two caps on the numeric path, both counted on `NumberType` with checked
+- [x] 1.4 Add the two caps on the numeric path, both counted on `NumberType` with checked
       products and refused before allocating: `NaturalityDimensionExceeded { n, k, entries, cap }`
       at `2^24` entries and `KrausFamilyExceeded { operators, cap }` at `2^12` operators; report the
       examined count on success
-- [ ] 1.5 Add the `[[8,2,2]]` fixture from `LatticeComplex::<2, _>::square_torus(2)` (confirmed
+- [x] 1.5 Add the `[[8,2,2]]` fixture from `LatticeComplex::<2, _>::square_torus(2)` (confirmed
       valid: `β = (1, 2, 1)`, `∂₁∂₂ = 0`, weight-2 representatives) and the hand-built `[[4,2,2]]`
       chain complex to `utils_tests`, each with its derivation in the module doc
 - [ ] 1.6 Verify: the numeric kernel against `apply_kraus` on one qubit and against a hand-computed
@@ -42,16 +42,16 @@ A commit message is prepared at each group boundary; nothing is committed by the
 
 ## 2. The dilation and the circuit subject
 
-- [ ] 2.1 Add `Dilation` under `qcm`: leg dimension `d_in · d_out` per node through `set_leg_dim`,
+- [x] 2.1 Add `Dilation` under `qcm`: leg dimension `d_in · d_out` per node through `set_leg_dim`,
       input outer and output inner, `ρ_{A|Pa(A)}` embedded as the identity on the unused halves,
       supports encoding the induced DAG
-- [ ] 2.2 Add `CircuitModel::glue` along a shared wire, and its dilation as the induced
+- [x] 2.2 Add `CircuitModel::glue` along a shared wire, and its dilation as the induced
       factorization of the composite
-- [ ] 2.3 Add `CircuitSubject` and `.over_circuit` to `QclBuilder`; `build()` rejects a cyclic
+- [x] 2.3 Add `CircuitSubject` and `.over_circuit` to `QclBuilder`; `build()` rejects a cyclic
       induced DAG as `CyclicStructureUnsupported`; `Screened<R>` records its origin
-- [ ] 2.4 Add `NoCompositionalModel` and return it from every abstraction constructor handed a
+- [x] 2.4 Add `NoCompositionalModel` and return it from every abstraction constructor handed a
       model subject
-- [ ] 2.5 Verify: the dilation of a two-node unitary circuit is Markov for its induced DAG at
+- [x] 2.5 Verify: the dilation of a two-node unitary circuit is Markov for its induced DAG at
       Q-TOL with provenance `Rederived`; the glued dilation produces no `CertificateNotInherited`;
       `.over_model` behaviour unchanged against the existing pipeline tests
 

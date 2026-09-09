@@ -6,7 +6,8 @@
 use crate::QuantumError;
 use crate::types::decision::{Check, CheckItem, CheckReport};
 use crate::types::pipeline::config::{
-    CodeSubject, Config, ModelSubject, PlantSubject, QclBuilder, Structural,
+    CircuitSubject, CodeSubject, Config, ModelSubject, PlantSubject, QclBuilder, ScreenOrigin,
+    Structural, SubjectOrigin,
 };
 use crate::types::qcm::faithfulness::CausalStructure;
 use crate::types::qcm::hypothesis::{Hypothesis, Marginalised};
@@ -94,6 +95,30 @@ impl<R: RealField, N: NaturalNumber, S> Screened<R, N, S> {
     /// Whether the report is current.
     pub fn status(&self) -> ScreenStatus<R> {
         self.status
+    }
+}
+
+impl<R: RealField, N: NaturalNumber, S: SubjectOrigin> Screened<R, N, S> {
+    /// Where the screened subject's factorization came from.
+    pub fn origin(&self) -> ScreenOrigin {
+        S::origin()
+    }
+
+    /// Admits the screen into an abstraction, which needs a compositional model.
+    ///
+    /// # Errors
+    ///
+    /// [`QuantumError::NoCompositionalModel`] unless the origin is a circuit: a process operator
+    /// without its circuit is the marginal of a compositional model and not one itself (Lorenz &
+    /// Tull, Example 62), so it validates as in v1 and stops.
+    pub fn require_compositional(&self) -> Result<(), QuantumError> {
+        match self.origin() {
+            ScreenOrigin::Circuit => Ok(()),
+            other => Err(QuantumError::NoCompositionalModel(alloc::format!(
+                "a {other:?} subject is the marginal of a compositional model and not one itself; \
+                 only a circuit subject, whose dilation carries the model, can enter an abstraction"
+            ))),
+        }
     }
 }
 
@@ -293,6 +318,60 @@ where
                 let check = Check::new(CheckItem::Whole, R::zero(), R::zero());
                 self.record("check_decomposable", CheckReport::new(vec![check], blocks));
             }
+            Err(e) => self.fail(e),
+        }
+        self
+    }
+}
+
+// ---------------------------------------------------------------------------
+// The circuit subject: the dilation's factorization, screened as a model would be.
+// ---------------------------------------------------------------------------
+
+impl<'c, R, N> Validate<'c, R, N, CircuitSubject<R>>
+where
+    R: RealField + FromPrimitive + Default + core::fmt::Debug,
+    N: NaturalNumber,
+{
+    /// The Markov commutativity check on the dilation's factors, provenance `Rederived`.
+    pub fn check_markov(mut self, tolerance: &CommutatorTolerance<R>) -> Self {
+        if self.failure.is_some() {
+            return self;
+        }
+        let dilated = match self.cfg.subject().model().dilation() {
+            Ok(d) => d,
+            Err(e) => {
+                self.fail(e);
+                return self;
+            }
+        };
+        match quantum_markov_check_report(dilated.factors(), dilated.supports(), tolerance) {
+            Ok(report) => {
+                if let Err(e) = markov_certificate(&report) {
+                    self.fail(e);
+                }
+                self.record("check_markov", report);
+            }
+            Err(e) => self.fail(e),
+        }
+        self
+    }
+
+    /// C₃-exclusion over the structure the dilation's supports encode, between the declared node
+    /// systems.
+    pub fn check_decomposable(mut self, inputs: &[usize], outputs: &[usize]) -> Self {
+        if self.failure.is_some() {
+            return self;
+        }
+        let result = self
+            .cfg
+            .subject()
+            .model()
+            .dilation()
+            .and_then(|d| d.hypothesis("circuit"))
+            .and_then(|h| h.check_decomposable_from_supports(inputs, outputs));
+        match result {
+            Ok(report) => self.record("check_decomposable", report),
             Err(e) => self.fail(e),
         }
         self

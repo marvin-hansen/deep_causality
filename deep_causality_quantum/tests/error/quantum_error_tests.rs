@@ -76,6 +76,30 @@ fn test_display_covers_every_variant() {
             "Non-Clifford Gate: T(2) at position 5",
         ),
         (
+            QuantumError::NoCompositionalModel("bare marginal".into()),
+            "No Compositional Model: bare marginal",
+        ),
+        (
+            QuantumError::NaturalityDimensionExceeded(18, 2, 1 << 40, 1 << 24),
+            "Naturality Dimension Exceeded: a channel from 18 to 2 qubits has a composite Choi of 1099511627776 entries, above the cap of 16777216",
+        ),
+        (
+            QuantumError::KrausFamilyExceeded(8192, 4096),
+            "Kraus Family Exceeded: 8192 operators, above the cap of 4096",
+        ),
+        (
+            QuantumError::NoPropagationNormalForm("layer 1".into()),
+            "No Propagation Normal Form: layer 1",
+        ),
+        (
+            QuantumError::NotParallelisable("X -> Y".into()),
+            "Not Parallelisable: X -> Y",
+        ),
+        (
+            QuantumError::SectionNotInverse("residual 0.2".into()),
+            "Section Not Inverse: residual 0.2",
+        ),
+        (
             QuantumError::CalculationError("x".into()),
             "Calculation Error: x",
         ),
@@ -137,4 +161,24 @@ fn test_eq_and_clone() {
     let b = a.clone();
     assert_eq!(a, b);
     assert_ne!(a, QuantumError::NonFiniteValue("inf".into()));
+}
+
+#[test]
+fn test_dimension_variant_carries_its_counts() {
+    let err = QuantumError::NaturalityDimensionExceeded(8, 2, 1 << 20, 1 << 24);
+    match &err.0 {
+        QuantumErrorEnum::NaturalityDimensionExceeded { n, k, entries, cap } => {
+            assert_eq!((*n, *k), (8, 2));
+            assert_eq!(*entries, 1 << 20);
+            assert_eq!(*cap, 1 << 24);
+        }
+        other => panic!("expected NaturalityDimensionExceeded, got {:?}", other),
+    }
+    let err = QuantumError::KrausFamilyExceeded(3, 2);
+    match &err.0 {
+        QuantumErrorEnum::KrausFamilyExceeded { operators, cap } => {
+            assert_eq!((*operators, *cap), (3, 2));
+        }
+        other => panic!("expected KrausFamilyExceeded, got {:?}", other),
+    }
 }

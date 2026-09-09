@@ -99,6 +99,36 @@ pub enum QuantumErrorEnum {
     /// its conjugation action on a Pauli is not a symplectic update and the
     /// program cannot be pushed through. Names the gate and its position.
     NonCliffordGate(String),
+    /// An abstraction constructor was handed a process operator without its
+    /// circuit. A bare `ProcessFactors` store is the marginal of a compositional
+    /// model and not one itself (Lorenz & Tull, arXiv:2602.16612, Example 62),
+    /// so it validates as in v1 and cannot enter an abstraction.
+    NoCompositionalModel(String),
+    /// The numeric semantics would form a composite Choi operator of
+    /// `2^(2n + 2k)` entries above its cap: `n` and `k` are the input and output
+    /// qubit counts (rounded up from the dimensions), `entries` the count it
+    /// would allocate, `cap` the limit. Refused before allocating.
+    NaturalityDimensionExceeded {
+        n: usize,
+        k: usize,
+        entries: u64,
+        cap: u64,
+    },
+    /// The numeric semantics would carry a Kraus family (the product of the
+    /// operator counts of every noise box and measurement outcome) above its cap.
+    /// Refused before allocating.
+    KrausFamilyExceeded { operators: u64, cap: u64 },
+    /// A fault was asked to propagate through a program with no normal form of
+    /// polynomial size: two non-Clifford layers separated by a non-diagonal
+    /// Clifford. Names the layers. The propagator refuses rather than expanding.
+    NoPropagationNormalForm(String),
+    /// An interchange query named sets that are not parallelisable: a directed
+    /// path joins two members of one set (Lorenz & Tull §7.2). Names the path.
+    NotParallelisable(String),
+    /// A type alignment's section does not invert its channel: `τ_X ∘ E_X`
+    /// differs from the identity by more than the state tolerance. Carries the
+    /// residual and the tolerance.
+    SectionNotInverse(String),
     /// Numerical conversion or general calculation failure.
     CalculationError(String),
 }
@@ -202,6 +232,36 @@ impl QuantumError {
     }
 
     #[allow(non_snake_case)]
+    pub fn NoCompositionalModel(msg: String) -> Self {
+        Self(QuantumErrorEnum::NoCompositionalModel(msg))
+    }
+
+    #[allow(non_snake_case)]
+    pub fn NaturalityDimensionExceeded(n: usize, k: usize, entries: u64, cap: u64) -> Self {
+        Self(QuantumErrorEnum::NaturalityDimensionExceeded { n, k, entries, cap })
+    }
+
+    #[allow(non_snake_case)]
+    pub fn KrausFamilyExceeded(operators: u64, cap: u64) -> Self {
+        Self(QuantumErrorEnum::KrausFamilyExceeded { operators, cap })
+    }
+
+    #[allow(non_snake_case)]
+    pub fn NoPropagationNormalForm(msg: String) -> Self {
+        Self(QuantumErrorEnum::NoPropagationNormalForm(msg))
+    }
+
+    #[allow(non_snake_case)]
+    pub fn NotParallelisable(msg: String) -> Self {
+        Self(QuantumErrorEnum::NotParallelisable(msg))
+    }
+
+    #[allow(non_snake_case)]
+    pub fn SectionNotInverse(msg: String) -> Self {
+        Self(QuantumErrorEnum::SectionNotInverse(msg))
+    }
+
+    #[allow(non_snake_case)]
     pub fn CalculationError(msg: String) -> Self {
         Self(QuantumErrorEnum::CalculationError(msg))
     }
@@ -276,6 +336,26 @@ impl Display for QuantumError {
                 generator, detail
             ),
             QuantumErrorEnum::NonCliffordGate(msg) => write!(f, "Non-Clifford Gate: {}", msg),
+            QuantumErrorEnum::NoCompositionalModel(msg) => {
+                write!(f, "No Compositional Model: {}", msg)
+            }
+            QuantumErrorEnum::NaturalityDimensionExceeded { n, k, entries, cap } => write!(
+                f,
+                "Naturality Dimension Exceeded: a channel from {} to {} qubits has a composite Choi of {} entries, above the cap of {}",
+                n, k, entries, cap
+            ),
+            QuantumErrorEnum::KrausFamilyExceeded { operators, cap } => write!(
+                f,
+                "Kraus Family Exceeded: {} operators, above the cap of {}",
+                operators, cap
+            ),
+            QuantumErrorEnum::NoPropagationNormalForm(msg) => {
+                write!(f, "No Propagation Normal Form: {}", msg)
+            }
+            QuantumErrorEnum::NotParallelisable(msg) => write!(f, "Not Parallelisable: {}", msg),
+            QuantumErrorEnum::SectionNotInverse(msg) => {
+                write!(f, "Section Not Inverse: {}", msg)
+            }
             QuantumErrorEnum::CalculationError(msg) => write!(f, "Calculation Error: {}", msg),
         }
     }

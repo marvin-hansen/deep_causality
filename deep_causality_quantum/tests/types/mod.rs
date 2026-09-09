@@ -5,6 +5,8 @@
 #[cfg(test)]
 mod carriers;
 #[cfg(test)]
+mod circuit_model;
+#[cfg(test)]
 mod decision;
 mod density_matrix_tests;
 #[cfg(test)]
