@@ -1,0 +1,26 @@
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/HOW_TO_RENDER.md
+  h_080fb89ca1f0c4 1-231
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/README.md
+  h_080fb89ca1f0c4 1-46
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/build_corridor_sequence.py
+  h_080fb89ca1f0c4 1-477
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/corridor_render_prompt.md
+  h_080fb89ca1f0c4 1-165
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/finish_540.sh
+  h_080fb89ca1f0c4 1-9
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/hud_composite.py
+  h_080fb89ca1f0c4 1-191
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/telemetry.csv
+  h_080fb89ca1f0c4 1-1441
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "53f5a5bd91881bcfd75b8fc07443344b3af5286c",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
