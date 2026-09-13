@@ -1,0 +1,37 @@
+openspec/changes/add-hkt-traversable-cochain/tasks.md
+  s_81cdfd9e41c17d::t_76841bcc68a7b8 21-28
+  s_81cdfd9e41c17d::t_e24a0bc8f581d1 14-17
+deep_causality_unified_math/deep_causality_haft/src/traversable/mod.rs
+  s_81cdfd9e41c17d::t_fdc09aa4dfb267 111-128
+deep_causality_unified_math/deep_causality_haft/src/extensions/hkt_vec_ext.rs
+  s_81cdfd9e41c17d::t_2514ddd0424b9e 125-126,142-145
+  s_81cdfd9e41c17d::t_855487f959a30a 8
+  s_81cdfd9e41c17d::t_e98ccf415e28d0 146
+  s_81cdfd9e41c17d::t_387d88fa61bb66 157-158
+  s_81cdfd9e41c17d::t_af2058d8dc6d9f 159
+  s_81cdfd9e41c17d::t_abead9aeddc9cf 163-164,166,170-175,177-181,183-185,187-192
+  s_81cdfd9e41c17d::t_b1bb7bc31698c9 127-141,147-156
+  s_81cdfd9e41c17d::t_e9f744f06d6206 160-162
+deep_causality_unified_math/deep_causality_haft/tests/extensions/hkt_vec_ext_tests.rs
+  s_81cdfd9e41c17d::t_94f6c5d78aa18e 6-9,114-304
+deep_causality_unified_math/deep_causality_haft/tests/algebra/traversable_tests.rs
+  s_81cdfd9e41c17d::t_8564dad3c571ed 6,39-73
+openspec/changes/add-hkt-traversable-cochain/corner-cases.md
+  s_81cdfd9e41c17d::t_8e9879a3921cdb 1-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dd9e816049bd59c93cd756971c519cf9362a3ed1",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
