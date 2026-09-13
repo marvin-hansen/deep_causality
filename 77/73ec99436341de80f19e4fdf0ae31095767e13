@@ -1,0 +1,36 @@
+deep_causality_unified_math/deep_causality_haft/tests/formalization_lean/mod.rs
+  s_81cdfd9e41c17d::t_bfd16de754a6b9 74-75
+lean/THEOREM_MAP.md
+  s_81cdfd9e41c17d::t_5b73e66ab51b3f 212-214
+deep_causality_unified_math/README.md
+  s_81cdfd9e41c17d::t_d034f6d46783c3 135-136
+openspec/notes/unified_math/hkt_gaps.md
+  s_81cdfd9e41c17d::t_521e1c965e5978 110-114,116-120,186,194,196-197,201
+  s_81cdfd9e41c17d::t_68a033d5b41de9 216-220
+openspec/changes/add-hkt-traversable-cochain/tasks.md
+  s_81cdfd9e41c17d::t_d7133d4275d16c 90-91,95-99,103
+  s_81cdfd9e41c17d::t_51906e480d8b2f 58-82
+  s_81cdfd9e41c17d::t_9307dd17f7c8fa 104-106
+deep_causality_unified_math/deep_causality_haft/tests/formalization_lean/traversable_list_tests.rs
+  s_81cdfd9e41c17d::t_ea3a1407ee1947 18-20
+  s_81cdfd9e41c17d::t_bfd16de754a6b9 1-17,21-100
+openspec/changes/add-hkt-traversable-cochain/scenario-coverage.md
+  s_81cdfd9e41c17d::t_85943c841b845a 1-84
+  s_81cdfd9e41c17d::t_9307dd17f7c8fa 85-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7773ec99436341de80f19e4fdf0ae31095767e13",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
