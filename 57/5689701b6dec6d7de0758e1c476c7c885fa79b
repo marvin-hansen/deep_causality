@@ -1,0 +1,19 @@
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/build_corridor_sequence.py
+  s_cd74b0373d0abf::t_9080ba5fe3419c 263,276,294
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "575689701b6dec6d7de0758e1c476c7c885fa79b",
+  "prompts": {},
+  "sessions": {
+    "s_cd74b0373d0abf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3e9a6e18-3a9a-4cd3-bc80-4f44ff30bfe3",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
