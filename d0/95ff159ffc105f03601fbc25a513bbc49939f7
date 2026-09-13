@@ -1,0 +1,27 @@
+deep_causality_unified_math/deep_causality_tensor/tests/extensions/causal_tensor_ext_hkt_tests.rs
+  s_81cdfd9e41c17d::t_6fcf7715045961 6-9,408-633
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_81cdfd9e41c17d::t_97bd8450e9b882 195
+  s_81cdfd9e41c17d::t_e9942179565f68 11,149,177-180
+  s_81cdfd9e41c17d::t_35bb3b5a47e358 150-176,181,183-193
+  s_81cdfd9e41c17d::t_f6bbc22750734f 182,194
+  s_81cdfd9e41c17d::t_9bdd512c3bc25e 196-198
+openspec/changes/add-hkt-traversable-cochain/tasks.md
+  s_81cdfd9e41c17d::t_cdac5cb910d7ed 40-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d095ff159ffc105f03601fbc25a513bbc49939f7",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
