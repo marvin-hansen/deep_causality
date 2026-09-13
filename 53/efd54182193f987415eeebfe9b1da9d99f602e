@@ -1,0 +1,23 @@
+website/web/src/pages/sponsors.astro
+  s_b58a5536f695ba::t_269821a53d3844 71
+website/web/src/consts.ts
+  s_b58a5536f695ba::t_c113935a22078d 18
+website/web/src/pages/projects.astro
+  s_b58a5536f695ba::t_98ae9a6c3575d6 3,9,17,54,62,64-66,120
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "53efd54182193f987415eeebfe9b1da9d99f602e",
+  "prompts": {},
+  "sessions": {
+    "s_b58a5536f695ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "85b3d537-625f-48fa-8c39-02de81f36d33",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
