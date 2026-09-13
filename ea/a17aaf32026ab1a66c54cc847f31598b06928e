@@ -1,0 +1,44 @@
+openspec/changes/retrofit-sampling-layer/specs/sampling-hkt-composition/spec.md
+  s_81cdfd9e41c17d::t_f4858409de3f2b 1-140
+  s_81cdfd9e41c17d::t_da658ab7241d7d 141-181
+openspec/changes/retrofit-sampling-layer/design.md
+  s_81cdfd9e41c17d::t_f55e2f400768ec 1-215
+  s_81cdfd9e41c17d::t_2990292feca690 216-271
+deep_causality_unified_math/deep_causality_num/src/gf2/mod.rs
+  s_81cdfd9e41c17d::t_385d32863e9004 6
+openspec/changes/retrofit-sampling-layer/proposal.md
+  s_81cdfd9e41c17d::t_f40ee54641df11 1-54,62-101,103-108,114-171
+  s_81cdfd9e41c17d::t_e5e0248a906e68 55-61,102,109-113
+openspec/notes/unified_math/hkt_gaps.md
+  s_81cdfd9e41c17d::t_60b6bea1575135 187,190-258,268
+openspec/changes/retrofit-sampling-layer/specs/entropy-source/spec.md
+  s_81cdfd9e41c17d::t_64750431f8ae30 1-108
+openspec/changes/retrofit-sampling-layer/tasks.md
+  s_81cdfd9e41c17d::t_dbd89234fa97cf 1-78,80,237-255,282-283,285-356
+  s_81cdfd9e41c17d::t_4bf932e71371ee 79,81,90-91
+  s_81cdfd9e41c17d::t_13ada840ee09fe 82-89,92-207
+  s_81cdfd9e41c17d::t_6352234c9cb458 208-228,256-281,284
+  s_81cdfd9e41c17d::t_d1169838aa44c4 229-236
+openspec/changes/retrofit-sampling-layer/specs/stats-sampling/spec.md
+  s_81cdfd9e41c17d::t_9c23a9fd2fda05 223,233-246,259-266
+  s_81cdfd9e41c17d::t_a73c77f6a57c15 187-222,224-232,247-258,267
+  s_81cdfd9e41c17d::t_3565f27351ed1e 1-186,268-365
+openspec/changes/retrofit-sampling-layer/.openspec.yaml
+  s_81cdfd9e41c17d::t_129ed26957ee5c 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "eaa17aaf32026ab1a66c54cc847f31598b06928e",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
