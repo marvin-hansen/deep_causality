@@ -1,0 +1,70 @@
+deep_causality_quantum/src/types/circuit_model/exact_semantics.rs
+  s_a31005946f38f3::t_4fb8ff42164354 92-93,104-110,115-122
+  s_a31005946f38f3::t_1787a330249d1e 221-224
+deep_causality_quantum/tests/types/pipeline/circuit_subject_tests.rs
+  s_a31005946f38f3::t_1787a330249d1e 144
+openspec/changes/add-qcl2-abstraction/design.md
+  s_a31005946f38f3::t_978734aad473cb 360-363
+deep_causality_quantum/src/types/pipeline/validate.rs
+  s_a31005946f38f3::t_1787a330249d1e 120,514-520,527,536-541
+deep_causality_quantum/tests/types/abstraction/type_alignment_tests.rs
+  s_a31005946f38f3::t_e188e47559e503 65,67
+  s_a31005946f38f3::t_1787a330249d1e 66
+deep_causality_quantum/src/types/circuit_model/numeric_semantics.rs
+  s_a31005946f38f3::t_2adcc9ac23b2c7 151-162,166-168,223,226,229-235,239,243,250-251,259,263,291-293,348-385,390,392,396,402,406,411
+deep_causality_quantum/tests/types/circuit_model/exact_semantics_tests.rs
+  s_a31005946f38f3::t_1787a330249d1e 233-240
+deep_causality_quantum/tests/error/quantum_error_tests.rs
+  s_a31005946f38f3::t_1787a330249d1e 79-80,91-92,95-96
+  s_a31005946f38f3::t_e188e47559e503 99-100
+deep_causality_quantum/src/types/qcm/dilation.rs
+  s_a31005946f38f3::t_1f579306d7a55c 32,148-151,157-166,474-475,520-521,532-573
+  s_a31005946f38f3::t_788942d0826a13 574
+deep_causality_quantum/tests/types/circuit_model/queries_tests.rs
+  s_a31005946f38f3::t_1787a330249d1e 187-194
+deep_causality_quantum/src/types/circuit_model/gate_unitary.rs
+  s_a31005946f38f3::t_4fb8ff42164354 16-19,31-32,57-62
+  s_a31005946f38f3::t_7cae048546fe49 63-64
+deep_causality_quantum/src/error/quantum_error.rs
+  s_a31005946f38f3::t_1787a330249d1e 105-106,123-131,238-239,253-254,258-259,342-346,357-366
+  s_a31005946f38f3::t_e188e47559e503 132-134,263-264,367-368
+deep_causality_quantum/src/types/abstraction/naturality.rs
+  s_a31005946f38f3::t_1787a330249d1e 93,106-112,120-122
+deep_causality_quantum/src/types/abstraction/query.rs
+  s_a31005946f38f3::t_1787a330249d1e 85
+deep_causality_quantum/src/types/circuit_model/model.rs
+  s_a31005946f38f3::t_2adcc9ac23b2c7 511-514,621
+  s_a31005946f38f3::t_4fb8ff42164354 71-73,76-90,507-510,515-529,571,586,601-604,606-607,611,614-619,622-633,639-643,645,647
+deep_causality_quantum/src/types/circuit_model/queries.rs
+  s_a31005946f38f3::t_1787a330249d1e 317,343
+  s_a31005946f38f3::t_4fb8ff42164354 18,195-196,211-215,298-300,316,325-338,353-354,373-374,400,404-406
+deep_causality_quantum/src/types/abstraction/type_alignment.rs
+  s_a31005946f38f3::t_e188e47559e503 168-170
+  s_a31005946f38f3::t_1787a330249d1e 166-167,171
+deep_causality_quantum/src/types/circuit_model/qc_morphism.rs
+  s_a31005946f38f3::t_2adcc9ac23b2c7 253-254,259-261,286,319-322,328-335,340,525-546,558-562
+deep_causality_quantum/tests/types/abstraction/query_tests.rs
+  s_a31005946f38f3::t_1787a330249d1e 18-20
+deep_causality_quantum/src/lib.rs
+  s_a31005946f38f3::t_c8216879a20658 28-30
+deep_causality_quantum/src/utils_tests/hand_built_complex.rs
+  s_a31005946f38f3::t_1a65a56af548fe 24-26,40-50,78-83
+website/drafts/math_blogpost_draft.md
+  s_a31005946f38f3::t_8ace4d0c052f48 1-429
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "07fd3c40e1aae134ac30d2c2f895dabc49ae4a57",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
