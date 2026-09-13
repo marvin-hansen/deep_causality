@@ -1,0 +1,55 @@
+openspec/changes/add-hkt-traversable-cochain/design.md
+  s_81cdfd9e41c17d::t_7cf9d9a639377d 27-29,41-42,86,88-91
+  s_81cdfd9e41c17d::t_95bfa9ab7051ad 37-38,53-55,183-189,198-221,231-238
+  s_81cdfd9e41c17d::t_8a34963857f62c 222-230
+  s_81cdfd9e41c17d::t_0566d852d975f0 98-103,175-182,190-197
+  s_81cdfd9e41c17d::t_37b49cbf7f630d 1-26,30-36,39-40,43-52,56-85,87,92-97,104-174,239-295
+openspec/changes/add-hkt-traversable-cochain/specs/hkt-traversable-containers/spec.md
+  s_81cdfd9e41c17d::t_4cc0a0b15f7bbc 143-173
+  s_81cdfd9e41c17d::t_4f0072083c4941 1-142,174-188
+openspec/notes/unified_math/hkt_uncertain.md
+  s_31a35e97614baa::t_bf5bba94156923 1-551
+openspec/changes/add-hkt-traversable-cochain/specs/topology-cochain-witness/spec.md
+  s_81cdfd9e41c17d::t_1f9fb5a1bc67a7 1-93
+openspec/changes/add-hkt-traversable-cochain/proposal.md
+  s_81cdfd9e41c17d::t_32c6f9d963ab3f 32-34,38-67,90-94
+  s_81cdfd9e41c17d::t_95bfa9ab7051ad 27-30,119-122
+  s_81cdfd9e41c17d::t_2b3fae89dfe599 1-26,31,35-37,68-89,95-118
+openspec/changes/add-hkt-traversable-cochain/.openspec.yaml
+  s_81cdfd9e41c17d::t_d7dabd71d250d1 1-2
+openspec/changes/add-hkt-traversable-cochain/specs/haft-vec-traversable/spec.md
+  s_81cdfd9e41c17d::t_1a75b4dd523b2a 1-10,33-35,39,44-47,53-63,66,72,74,77,79-80,82-92
+  s_81cdfd9e41c17d::t_6e135d7d34d4f4 11-32,36-38,40-43,48-52,64-65,67-71,73,75-76,78,81
+openspec/changes/add-hkt-traversable-cochain/tasks.md
+  s_81cdfd9e41c17d::t_dd16be15724b87 49
+  s_81cdfd9e41c17d::t_8a34963857f62c 66-67
+  s_81cdfd9e41c17d::t_db409cb40f882d 1-14,18-22,24-27,29-48,50-53,55-57,59-61
+  s_81cdfd9e41c17d::t_4cc0a0b15f7bbc 62-65,68-84
+  s_81cdfd9e41c17d::t_d3f742b54b0d8b 15-17,23,28,54,58
+openspec/notes/unified_math/hkt_gaps.md
+  s_31a35e97614baa::t_0dc819047784f2 1-227
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ab08b910acd88ddeba08b99691a15ad54a48605c",
+  "prompts": {},
+  "sessions": {
+    "s_31a35e97614baa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dc52bcc8-bb7b-43d3-ba87-42f128d3031d",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
