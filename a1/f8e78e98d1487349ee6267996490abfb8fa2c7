@@ -1,0 +1,32 @@
+deep_causality_quantum/src/utils_tests/hand_built_complex.rs
+  s_cd74b0373d0abf::t_46f1e6c42d7ca8 41-50
+deep_causality_unified_math/README.md
+  s_cd74b0373d0abf::t_2d5fa288ac128c 614
+deep_causality_quantum/src/types/circuit_model/qc_morphism.rs
+  s_cd74b0373d0abf::t_d9911207a335c6 546
+deep_causality_quantum/src/types/circuit_model/queries.rs
+  s_cd74b0373d0abf::t_9657c57380f6b3 318-322,344-345
+deep_causality_quantum/tests/utils_tests/hand_built_complex_tests.rs
+  s_cd74b0373d0abf::t_12c2db393ba01c 88-111
+deep_causality_quantum/tests/types/circuit_model/queries_tests.rs
+  s_cd74b0373d0abf::t_02e293d08255d5 272-285,287-288
+  s_cd74b0373d0abf::t_c26aba7c44ffb1 18,286
+openspec/changes/add-qcl2-abstraction/design.md
+  s_cd74b0373d0abf::t_6966db1b2b6936 357
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a1f8e78e98d1487349ee6267996490abfb8fa2c7",
+  "prompts": {},
+  "sessions": {
+    "s_cd74b0373d0abf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3e9a6e18-3a9a-4cd3-bc80-4f44ff30bfe3",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
