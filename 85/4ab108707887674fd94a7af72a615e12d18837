@@ -1,0 +1,40 @@
+openspec/changes/add-hkt-traversable-cochain/specs/hkt-traversable-containers/spec.md
+  s_81cdfd9e41c17d::t_f011f728a5478e 118-119,126-135,170-173
+  s_81cdfd9e41c17d::t_0adfdfcf3edd39 29-35,42,45-55
+  s_81cdfd9e41c17d::t_01d3d439bd4e77 141-154
+  s_81cdfd9e41c17d::t_517ae61f91950f 136-140,165,167-168
+  s_81cdfd9e41c17d::t_34a845a37ff03d 169
+openspec/changes/add-hkt-traversable-cochain/design.md
+  s_81cdfd9e41c17d::t_882679498f18e5 175,277-287
+  s_81cdfd9e41c17d::t_01d3d439bd4e77 196-211
+  s_81cdfd9e41c17d::t_517ae61f91950f 212-237
+  s_81cdfd9e41c17d::t_f011f728a5478e 188-194,265-275
+  s_81cdfd9e41c17d::t_29bd4dabd04c6c 81-110,340-344
+  s_81cdfd9e41c17d::t_7ce08b197cfb57 195,276
+website/drafts/math_blogpost_outline.md
+  s_31a35e97614baa::t_e7aea4f8bbc453 1-366
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "854ab108707887674fd94a7af72a615e12d18837",
+  "prompts": {},
+  "sessions": {
+    "s_31a35e97614baa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dc52bcc8-bb7b-43d3-ba87-42f128d3031d",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
