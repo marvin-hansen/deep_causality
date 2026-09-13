@@ -1,0 +1,86 @@
+deep_causality_quantum/src/types/abstraction/code_abstraction.rs
+  s_a31005946f38f3::t_d707f003e8f71a 35,130,135-163,210-211,216,245-248,252-253,259,278-281,283,287-288,315-381
+  s_a31005946f38f3::t_84cdf4e86e6a3a 382
+deep_causality_quantum/tests/types/abstraction/fault_tolerance_tests.rs
+  s_a31005946f38f3::t_60db9c7d97cfd1 435-455
+deep_causality_quantum/src/types/abstraction/fault_tolerance.rs
+  s_a31005946f38f3::t_305a441a862291 188-189,194,335-337
+deep_causality_quantum/tests/types/abstraction/type_alignment_tests.rs
+  s_a31005946f38f3::t_c06c55514abddf 173-175
+  s_a31005946f38f3::t_60db9c7d97cfd1 280-329,331-408,443-444
+  s_a31005946f38f3::t_666b2d3f47b17a 15,161-162,166,170,172,176,260-262,409-442
+  s_a31005946f38f3::t_684f84af09de84 330
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/build_corridor_sequence.py
+  s_a31005946f38f3::t_916902e52f879d 12-14,17,22-27,34-38
+deep_causality_quantum/tests/types/qcm/dilation_tests.rs
+  s_a31005946f38f3::t_cdf262726b94a6 441-548,550-564
+  s_a31005946f38f3::t_1b0dc08c9aa34f 549
+deep_causality_quantum/tests/types/circuit_model/queries_tests.rs
+  s_a31005946f38f3::t_205e4f9759f07e 201-313
+deep_causality_quantum/tests/types/circuit_model/exact_semantics_tests.rs
+  s_a31005946f38f3::t_cdf262726b94a6 309-361
+deep_causality_quantum/tests/types/circuit_model/gate_unitary_tests.rs
+  s_a31005946f38f3::t_cdf262726b94a6 117-119,121-141
+  s_a31005946f38f3::t_05def633b3f293 120
+deep_causality_quantum/tests/types/abstraction/code_abstraction_tests.rs
+  s_a31005946f38f3::t_0be28f64fbb13a 341-342,345-354,373-377
+  s_a31005946f38f3::t_60db9c7d97cfd1 281-340,343-344,355-372,378-405
+deep_causality_quantum/src/types/abstraction/diamond_bound.rs
+  s_a31005946f38f3::t_bfd41ad22f29da 22-39,42,44,46,54-56,58-81,83
+deep_causality_quantum/src/types/pipeline/validate.rs
+  s_a31005946f38f3::t_305a441a862291 363-364,369-374,380-388
+deep_causality_quantum/tests/types/pipeline/circuit_subject_tests.rs
+  s_a31005946f38f3::t_60db9c7d97cfd1 270-301
+openspec/specs/qcl-experiment-design/spec.md
+  s_a31005946f38f3::t_916902e52f879d 48-56,87-93,108-110
+deep_causality_quantum/tests/types/circuit_model/qc_morphism_tests.rs
+  s_a31005946f38f3::t_cdf262726b94a6 265-332
+deep_causality_quantum/tests/types/abstraction/qc_model_tests.rs
+  s_a31005946f38f3::t_60db9c7d97cfd1 1-9,12-30,36-37,42-56
+  s_a31005946f38f3::t_0be28f64fbb13a 10-11,31-35,38-41
+deep_causality_quantum/tests/types/abstraction/abstraction_tests.rs
+  s_a31005946f38f3::t_666b2d3f47b17a 19-21,439-491
+  s_a31005946f38f3::t_60db9c7d97cfd1 363-438,492
+deep_causality_quantum/tests/types/circuit_model/circuit_model_tests.rs
+  s_a31005946f38f3::t_205e4f9759f07e 450-591
+deep_causality_quantum/src/types/abstraction/alignment_structure.rs
+  s_a31005946f38f3::t_305a441a862291 102-103,119-132,145
+examples/avionics_examples/cfd/plasma_blackout/corridor_render/corridor_render_prompt.md
+  s_a31005946f38f3::t_916902e52f879d 5-8,33,43-50,52,64,90,96-97,99,102,105
+deep_causality_quantum/src/types/abstraction/qc_model.rs
+  s_a31005946f38f3::t_305a441a862291 158-159
+deep_causality_quantum/tests/types/abstraction/mod.rs
+  s_a31005946f38f3::t_60db9c7d97cfd1 13
+deep_causality_quantum/src/types/abstraction/abstraction.rs
+  s_a31005946f38f3::t_666b2d3f47b17a 156-159,163-165,172-173,179,218-221,254,256,260-265
+deep_causality_quantum/tests/types/abstraction/alignment_structure_tests.rs
+  s_a31005946f38f3::t_60db9c7d97cfd1 185-225
+deep_causality_quantum/tests/utils_tests/hand_built_complex_tests.rs
+  s_a31005946f38f3::t_9a9e20491335de 58-87
+deep_causality_quantum/tests/types/abstraction/diamond_bound_tests.rs
+  s_a31005946f38f3::t_818318a635d9e9 122-124
+  s_a31005946f38f3::t_c06c55514abddf 112-116,132-136
+  s_a31005946f38f3::t_666b2d3f47b17a 11,13,53-111,117-121,125-131,137-141
+deep_causality_quantum/tests/types/circuit_model/numeric_semantics_tests.rs
+  s_a31005946f38f3::t_cdf262726b94a6 412-572
+deep_causality_quantum/src/types/abstraction/type_alignment.rs
+  s_a31005946f38f3::t_666b2d3f47b17a 13,100-101,126-133,188-195,204,206-210,216,219-223,259,383-391,416-427,436-440,445-478
+  s_a31005946f38f3::t_c06c55514abddf 441-444
+  s_a31005946f38f3::t_7c8b21bd15a4a5 479
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2e17914e76a5353174ee07d32a780d82e40632bc",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
