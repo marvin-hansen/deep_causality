@@ -1,0 +1,45 @@
+openspec/changes/retrofit-sampling-layer/tasks.md
+  s_81cdfd9e41c17d::t_ee69cb1d5b0ff6 401,404,407-429
+deep_causality_unified_math/deep_causality_haft/src/traversable/diagonal.rs
+  s_81cdfd9e41c17d::t_391d4d08ab815c 1-57
+deep_causality_unified_math/deep_causality_tensor/tests/extensions/mod.rs
+  s_81cdfd9e41c17d::t_93823f847907c2 24
+  s_81cdfd9e41c17d::t_ee69cb1d5b0ff6 23
+deep_causality_unified_math/deep_causality_linear/src/extensions/hkt/dense_vector_witness.rs
+  s_81cdfd9e41c17d::t_84df3c1ad870ab 7,172-185,195
+  s_81cdfd9e41c17d::t_84b5239a72cd7e 186-194,196
+deep_causality_unified_math/deep_causality_haft/src/lib.rs
+  s_81cdfd9e41c17d::t_391d4d08ab815c 151
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_81cdfd9e41c17d::t_31ce136c2d1f72 304
+  s_81cdfd9e41c17d::t_84df3c1ad870ab 11,263-264,276-282
+  s_81cdfd9e41c17d::t_1729321adfffd2 265-275,283-303,305-307
+deep_causality_unified_math/deep_causality_tensor/tests/extensions/ext_hkt_diagonal_tests.rs
+  s_81cdfd9e41c17d::t_93823f847907c2 1-150
+  s_81cdfd9e41c17d::t_040e82572cdc04 151-174
+deep_causality_unified_math/deep_causality_haft/src/traversable/mod.rs
+  s_81cdfd9e41c17d::t_391d4d08ab815c 5-6
+openspec/changes/retrofit-sampling-layer/notes/tdd-group-6.md
+  s_81cdfd9e41c17d::t_d2f80ecb075f55 44,46,85-118
+  s_81cdfd9e41c17d::t_6df1a4e71b9025 1-43,45,47-84
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/dense_vector_diagonal_tests.rs
+  s_81cdfd9e41c17d::t_1f5c7293dd834b 1-82
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/mod.rs
+  s_81cdfd9e41c17d::t_8e9814bce6b54e 11-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6fa9eb853e2687ca5dd3796b4820061ab9f97fbe",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
