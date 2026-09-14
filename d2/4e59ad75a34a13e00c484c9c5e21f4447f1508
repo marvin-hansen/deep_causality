@@ -1,0 +1,26 @@
+openspec/specs/linear-crate-identity/spec.md
+  s_81cdfd9e41c17d::t_50afe537740e0a 58-59
+AGENTS.md
+  s_81cdfd9e41c17d::t_34f0cb113b2ac3 240-242,274-276,315-316,346,349-351,374,377,387,390,397-399
+  s_81cdfd9e41c17d::t_50afe537740e0a 609-611
+  s_81cdfd9e41c17d::t_54fe8bcd8dc25c 363-366
+website/docs/src/content/docs/overview/architecture.md
+  s_81cdfd9e41c17d::t_a9bdf595ad9b9a 8
+  s_81cdfd9e41c17d::t_50afe537740e0a 78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d24e59ad75a34a13e00c484c9c5e21f4447f1508",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
