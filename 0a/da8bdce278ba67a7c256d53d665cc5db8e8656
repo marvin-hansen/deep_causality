@@ -1,0 +1,45 @@
+website/drafts/math_blogpost_outline.md
+  s_37743ae81b393e::t_69c28380730fc1 527-529,611-613
+  s_37743ae81b393e::t_4b95b769ee28df 1,75-99,103-225,227,229,231-233,235,237-337,339,341-454,456,458-526,530-598,600,602,604-609,615,617-622,624-626,628,630,632-633,635-637,639-641,643-644,646-647,651-673,677-693
+deep_causality_unified_math/deep_causality_rand/src/traits/rng.rs
+  s_81cdfd9e41c17d::t_978eb9324c5b93 12-14,31,109
+deep_causality_unified_math/deep_causality_stats/tests/traits/generic_sampling_tests.rs
+  s_81cdfd9e41c17d::t_9c20bf98b79cd8 1-31
+deep_causality_unified_math/README.md
+  s_81cdfd9e41c17d::t_eb39a487f934a4 45,52,211,450,463,494
+openspec/changes/retrofit-sampling-layer/tasks.md
+  s_81cdfd9e41c17d::t_1df1639377c0d5 433,443,446,451-467,470-471,478,481,484,488-490
+  s_81cdfd9e41c17d::t_37912791de557e 491
+deep_causality_unified_math/deep_causality_rand/src/lib.rs
+  s_81cdfd9e41c17d::t_f07f0beaa0b57b 6-39
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_81cdfd9e41c17d::t_f07f0beaa0b57b 40-71
+deep_causality_unified_math/deep_causality_stats/tests/traits/mod.rs
+  s_81cdfd9e41c17d::t_9c20bf98b79cd8 12-13
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/mod.rs
+  s_81cdfd9e41c17d::t_96a40435c34519 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0ada8bdce278ba67a7c256d53d665cc5db8e8656",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
