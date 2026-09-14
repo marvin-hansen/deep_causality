@@ -1,0 +1,23 @@
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/sampler_seed.rs
+  s_81cdfd9e41c17d::t_ac22d52401527b 51,53-54
+openspec/changes/retrofit-sampling-layer/notes/tdd-group-1.md
+  s_81cdfd9e41c17d::t_c0985e2a12510b 162-201
+openspec/changes/retrofit-sampling-layer/tasks.md
+  s_81cdfd9e41c17d::t_a5b416678b9397 20-25,60-65,281-284
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "235a5ba4f631d104e216804fa542fa83e32ef457",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
