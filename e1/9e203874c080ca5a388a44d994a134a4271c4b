@@ -1,0 +1,35 @@
+openspec/specs/stats-sampling/spec.md
+  s_81cdfd9e41c17d::t_fd4681927901f5 1-380
+openspec/changes/archive/2026-09-14-retrofit-sampling-layer/specs/sampling-hkt-composition/spec.md
+  s_37743ae81b393e::t_9681ad22116f3e 118-126,136,138-139
+openspec/changes/archive/2026-09-14-retrofit-sampling-layer/specs/stats-sampling/spec.md
+  s_37743ae81b393e::t_9681ad22116f3e 202-207,220-227
+openspec/specs/entropy-source/spec.md
+  s_81cdfd9e41c17d::t_fd4681927901f5 1-123
+openspec/specs/sampling-hkt-composition/spec.md
+  s_81cdfd9e41c17d::t_fd4681927901f5 1-188
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e19e203874c080ca5a388a44d994a134a4271c4b",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
