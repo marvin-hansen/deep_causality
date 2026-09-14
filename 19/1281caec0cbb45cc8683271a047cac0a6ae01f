@@ -1,0 +1,104 @@
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 157,159
+deep_causality_unified_math/deep_causality_rand/src/traits/rng.rs
+  s_81cdfd9e41c17d::t_abcccd9a658651 42-45,47-48
+  s_81cdfd9e41c17d::t_f9bbed455f7c95 6,62,70
+deep_causality_unified_math/deep_causality_stats/src/types/distr/normal/standard_normal.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,34
+  s_81cdfd9e41c17d::t_a3fdb40878a038 9
+deep_causality_unified_math/deep_causality_stats/src/types/distr/weibull/mod.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,63
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/mod.rs
+  s_81cdfd9e41c17d::t_05d91571b60b1d 10-11
+deep_causality_unified_math/deep_causality_topology/src/types/cubical_regge_geometry/metropolis.rs
+  s_81cdfd9e41c17d::t_143885d60feb7c 51
+  s_81cdfd9e41c17d::t_a39ece53d80847 52,87-89
+deep_causality_unified_math/deep_causality_rand/src/types/qmc/sobol.rs
+  s_81cdfd9e41c17d::t_f9bbed455f7c95 17,91,112
+deep_causality_unified_math/deep_causality_stats/src/types/distr/exponential/mod.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,61
+deep_causality_unified_math/deep_causality_stats/src/types/distr/poisson/mod.rs
+  s_81cdfd9e41c17d::t_a3fdb40878a038 10
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,98
+examples/mathematics_examples/composable_multi_math/ensemble_x_lattice_ising/main.rs
+  s_81cdfd9e41c17d::t_a39ece53d80847 56,128,157
+deep_causality_unified_math/deep_causality_rand/tests/traits/sample_borrow_tests.rs
+  s_81cdfd9e41c17d::t_16c0f821e5b1be 6,13
+deep_causality_unified_math/deep_causality_stats/src/types/distr/cauchy/mod.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,70
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/mod.rs
+  s_81cdfd9e41c17d::t_25ec6853c00c7f 12
+  s_81cdfd9e41c17d::t_cfc0dd2f04491d 7-8,10-11
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/unit_draws.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 17-18,22-25,29,32,38,58,76
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/uniform_float.rs
+  s_81cdfd9e41c17d::t_6760ea99d68e34 36,40,53,78-81,139,162,165,169-223
+  s_81cdfd9e41c17d::t_06948637e68891 49,65,71,105-123,141,224
+  s_81cdfd9e41c17d::t_86410e895fac60 37-39
+  s_81cdfd9e41c17d::t_25ec6853c00c7f 13-18,56-59
+  s_81cdfd9e41c17d::t_3c088ed567af34 6-12,19-21,24-31,33-35,41-43,45-46,48,50-52,54-55,60-64,66-70,72-77,82-104,124-138,140,142-153,158-161,163-164,166-168
+deep_causality_unified_math/deep_causality_rand/src/traits/sample_range.rs
+  s_81cdfd9e41c17d::t_460541dff133ca 6,10-14,20-28,34-36
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/random.rs
+  s_81cdfd9e41c17d::t_143885d60feb7c 7
+  s_81cdfd9e41c17d::t_a39ece53d80847 9,31
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/uniform_tests.rs
+  s_81cdfd9e41c17d::t_b5f59a2132ca54 8-36,96-102,106
+  s_81cdfd9e41c17d::t_0c4f04ceefd274 113-114,117-118,126,128-129,132,134,201,204,209-210,212,223,229
+  s_81cdfd9e41c17d::t_16c0f821e5b1be 62,67,73,78,85-87,91-93,103-105
+  s_81cdfd9e41c17d::t_5186fedef3b9d4 127,133,200,205,208,211,221-222,224,227-228
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/uniform_unsigned.rs
+  s_81cdfd9e41c17d::t_25ec6853c00c7f 17-19,100,130-134
+  s_81cdfd9e41c17d::t_22b63401fb3037 120-129
+  s_81cdfd9e41c17d::t_634bff3b78e8a1 29
+  s_81cdfd9e41c17d::t_264eaabdee8f96 6-15,20-21,23-28,30-34,36-40,43-44,51-53,56-58,67-69,72-81,85-90,92-93,95-99,101-105,110-119,135,137
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/parity_probe_tests.rs
+  s_81cdfd9e41c17d::t_05d91571b60b1d 6,8,14-20,23-24,33-34,51-60,63-73
+  s_81cdfd9e41c17d::t_7bb4f0d19ce914 28,35-38,46-47
+  s_81cdfd9e41c17d::t_856427f4e6d141 9
+  s_81cdfd9e41c17d::t_506dba20c75634 11-13,21-22,25-27,29-30,39-45,48
+  s_81cdfd9e41c17d::t_c6a27293924fb0 31
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/standard_word.rs
+  s_81cdfd9e41c17d::t_6b171b4fa5e04c 10-12
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/all_scalars/all_scalars_tests.rs
+  s_81cdfd9e41c17d::t_c2abfd225a821a 22
+  s_81cdfd9e41c17d::t_a1db3f2bf0e69b 43
+  s_81cdfd9e41c17d::t_52afb5ac1a1e62 16
+deep_causality_unified_math/deep_causality_stats/tests/traits/generic_sampling_tests.rs
+  s_81cdfd9e41c17d::t_a1db3f2bf0e69b 10,14,16
+deep_causality_unified_math/deep_causality_rand/src/traits/sample_uniform.rs
+  s_81cdfd9e41c17d::t_fd53737319337b 8-26
+deep_causality_unified_math/deep_causality_rand/src/traits/sample_borrow.rs
+  s_81cdfd9e41c17d::t_7b61c56e248030 10,17
+deep_causality_unified_math/deep_causality_stats/src/types/distr/log_normal/mod.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,68
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/precision_tests.rs
+  s_81cdfd9e41c17d::t_09704e731f0af0 9
+  s_81cdfd9e41c17d::t_52afb5ac1a1e62 8
+  s_81cdfd9e41c17d::t_c2abfd225a821a 11
+  s_81cdfd9e41c17d::t_a1db3f2bf0e69b 22,60,104-112,114-140,142-150,152,154,166,246
+  s_81cdfd9e41c17d::t_5c0949cb630deb 113
+deep_causality_unified_math/deep_causality_stats/src/types/distr/categorical/mod.rs
+  s_81cdfd9e41c17d::t_86a79972dde4f1 8,85
+deep_causality_unified_math/deep_causality_rand/src/lib.rs
+  s_81cdfd9e41c17d::t_6b171b4fa5e04c 60
+  s_81cdfd9e41c17d::t_f9bbed455f7c95 35
+  s_81cdfd9e41c17d::t_25ec6853c00c7f 59
+  s_81cdfd9e41c17d::t_2deb769d2c68f6 64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "191281caec0cbb45cc8683271a047cac0a6ae01f",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
