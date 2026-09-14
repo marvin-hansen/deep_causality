@@ -1,0 +1,225 @@
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/all_scalars/all_scalars_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 77-82,153-156
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/normal/normal_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 48-51
+examples/chronometric_examples/src/proces_utils/lagrange.rs
+  s_37743ae81b393e::t_7e53bfc4044342 8,52,62-64,69,82,84,87,114,196,205-207,210,236,284,314,327,336
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/categorical/categorical_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 85-88,124-127,129-132,138-142,194-197
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/uniform_int/uniform_int_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 51-54
+deep_causality_physics/src/theories/weak_force/weak_field_ops_impl.rs
+  s_37743ae81b393e::t_2188cc068a3f90 19,39,42,45,48,61,63,86,88,95-96,108-110,118-121,126,131-134,137,142-145,150-152,155-157,160-162,165-167,174-175
+  s_37743ae81b393e::t_37f3cc890e560c 113,124,135,146
+  s_37743ae81b393e::t_93dc2f81dfce60 12
+deep_causality_utils/deep_causality_file/src/types/loaders/read_gnss.rs
+  s_37743ae81b393e::t_a23cc415fc1488 26,55,70,83
+  s_37743ae81b393e::t_e6834c619dedfa 14
+deep_causality_algorithms/tests/causal_discovery/brcd/boss_learn_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 9
+examples/quantum_examples/gauge_electroweak/main.rs
+  s_37743ae81b393e::t_7e53bfc4044342 19,31
+deep_causality_utils/deep_causality_file/src/types/loaders/read_clk.rs
+  s_37743ae81b393e::t_a23cc415fc1488 30,53,105
+  s_37743ae81b393e::t_bc60eea0ef0449 12
+deep_causality_unified_math/deep_causality_stats/tests/utils/inverse_cdf_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 12-15
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/weibull/weibull_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 9,27-32,81-86,96-99
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/hkt_curvature.rs
+  s_37743ae81b393e::t_fdf8c22acce888 75,159,192
+deep_causality_unified_math/deep_causality_stats/src/types/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 6,14
+deep_causality_unified_math/deep_causality_rand/src/extensions/uniform/uniform_float.rs
+  s_37743ae81b393e::t_f0d5895d60587b 18
+deep_causality_unified_math/deep_causality_tensor/src/types/causal_tensor/arithmetic/scalar_tensor/op_scalar_tensor_bfloat16.rs
+  s_37743ae81b393e::t_546ec6f3f806a7 1-140
+deep_causality_physics/src/theories/general_relativity/adm_state.rs
+  s_37743ae81b393e::t_2188cc068a3f90 19,39,42,46,57,155,174,222,310,321
+  s_37743ae81b393e::t_97142c1a9238c1 8
+deep_causality_unified_math/deep_causality_tensor/tests/extensions/ext_hkt_diagonal_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 33-35,70,76-78,113-117,119-123,145,149-151
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 21
+deep_causality_unified_math/deep_causality_topology/src/types/cubical_regge_geometry/metropolis.rs
+  s_37743ae81b393e::t_f0d5895d60587b 52
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 8,91-92
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_37743ae81b393e::t_f0d5895d60587b 11-14
+examples/chronometric_examples/gm_recovery/display.rs
+  s_37743ae81b393e::t_7e53bfc4044342 27
+  s_37743ae81b393e::t_c1c8436ab48cf4 9
+deep_causality_physics/src/theories/general_relativity/gr_ops_impl.rs
+  s_37743ae81b393e::t_2188cc068a3f90 19,28,336-337,399,422
+deep_causality_unified_math/deep_causality_topology/src/types/differential_form/mod.rs
+  s_37743ae81b393e::t_fdf8c22acce888 115,119
+  s_37743ae81b393e::t_e4d2359de335c6 11
+deep_causality_utils/deep_causality_file/src/types/loaders/read_sp3.rs
+  s_37743ae81b393e::t_a23cc415fc1488 33,55,143-145
+  s_37743ae81b393e::t_0fb2a33ddf1ef6 12
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gradient_flow.rs
+  s_37743ae81b393e::t_4761a6304e263c 14
+  s_37743ae81b393e::t_fdf8c22acce888 42,46-47
+deep_causality_physics/src/theories/electroweak/electroweak_params.rs
+  s_37743ae81b393e::t_2188cc068a3f90 52,65-66,70,74,88-89,92,94,96,111,124-125,140-141,150,154,165,198,205,212-213,229-230,234,237,244,250-252,281,283,289,293,295,300,302,312-313,331-332,336-337,352-353,356-357,376,388,392-393,401,403,407,410,413,432,443-444,451,483,496,506,508
+  s_37743ae81b393e::t_c9b42e7d903268 9
+deep_causality_physics/src/theories/electroweak/electroweak_impl.rs
+  s_37743ae81b393e::t_2188cc068a3f90 19,87,90,93
+  s_37743ae81b393e::t_0300dec2f7488c 11
+deep_causality_physics/src/kernels/chronometric/wrapper.rs
+  s_37743ae81b393e::t_2188cc068a3f90 30
+  s_37743ae81b393e::t_4eb0b14082a8d7 6
+examples/mathematics_examples/isomorphism/multifield_data_pipeline/main.rs
+  s_37743ae81b393e::t_7c633e4d594043 126,136
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/standard_word_bool_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 59-62,84-87,93-96
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/exponential/exponential_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 45-50,83-86,122-125
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/bernoulli/bernoulli_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 123-132
+deep_causality_unified_math/deep_causality_stats/tests/traits/mod.rs
+  s_81cdfd9e41c17d::t_8c68a4a782b246 14-15
+  s_37743ae81b393e::t_f0d5895d60587b 11-13
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/hkt_adjunction_stokes.rs
+  s_37743ae81b393e::t_fdf8c22acce888 263
+  s_37743ae81b393e::t_4761a6304e263c 22
+examples/physics_examples/gauge_em/main.rs
+  s_37743ae81b393e::t_7e53bfc4044342 29,43
+deep_causality_unified_math/deep_causality_topology/src/types/point_cloud/ops/op_triangulate_delaunay.rs
+  s_37743ae81b393e::t_fdf8c22acce888 30,57,71,90,95,111,209-210
+deep_causality_unified_math/deep_causality_stats/src/errors/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 8
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 18-19
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_37743ae81b393e::t_f0d5895d60587b 143-144,146
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/dist_float_32_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 7
+deep_causality_unified_math/deep_causality_haft/src/traversable/diagonal.rs
+  s_37743ae81b393e::t_f0d5895d60587b 54-57
+deep_causality_unified_math/deep_causality_tensor/tests/types/causal_tensor/op_scalar_tensor_tests.rs
+  s_37743ae81b393e::t_8b51061c03ee1c 247-260,263-303,307-316
+  s_37743ae81b393e::t_f0d5895d60587b 261-262,304-306
+deep_causality_physics/src/theories/electroweak/radiative.rs
+  s_37743ae81b393e::t_2188cc068a3f90 36,38-40,42-43,58,60,76,78,103,109-110,113-114,120,130-131,134,139,141,147,173-174
+  s_37743ae81b393e::t_b26b844cd32f74 9
+deep_causality_physics/src/theories/general_relativity/adm_ops.rs
+  s_37743ae81b393e::t_2188cc068a3f90 21
+  s_37743ae81b393e::t_164674a2d30daa 12
+deep_causality_unified_math/deep_causality_stats/tests/traits/probe_eps_tmp.rs
+  s_81cdfd9e41c17d::t_8c68a4a782b246 1-20,22-23,25-28
+  s_81cdfd9e41c17d::t_1fc72d7167597e 21,24
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/hkt_gauge_witness.rs
+  s_81cdfd9e41c17d::t_670f5b40ce460e 23,331-333
+  s_37743ae81b393e::t_f0d5895d60587b 8
+deep_causality_physics/src/theories/electroweak/electroweak_ops.rs
+  s_37743ae81b393e::t_2188cc068a3f90 13
+  s_37743ae81b393e::t_21799ee7b01b79 7
+examples/mathematics_examples/README.md
+  s_37743ae81b393e::t_454d0814e46dab 167-169
+deep_causality_physics/src/kernels/relativity/gravity.rs
+  s_37743ae81b393e::t_2188cc068a3f90 8,28,53,83,147,219,229,243-246
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/precision_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 109-113,372-375
+examples/chronometric_examples/src/proces_utils/mad_filter.rs
+  s_37743ae81b393e::t_7e53bfc4044342 21,36,50,55,71,82,104
+  s_37743ae81b393e::t_1e43ab20590fe4 8
+examples/physics_examples/gauge_lattice_u1_2d/main.rs
+  s_37743ae81b393e::t_7e53bfc4044342 24,39
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 6-7
+deep_causality_unified_math/deep_causality_rand/tests/traits/rng_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 57-60,71-74,78-81,90-93,108-111
+deep_causality_physics/src/theories/electromagnetism/gauge_em_ops_impl.rs
+  s_37743ae81b393e::t_2188cc068a3f90 11,21,192,204,233,242,290,303,316,340
+examples/physics_examples/gauge_weak_force/main.rs
+  s_37743ae81b393e::t_7e53bfc4044342 18,32
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/dist_float_64_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 7
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/log_normal/log_normal_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 9,52-57,70-73,91-95
+deep_causality_physics/src/kernels/chronometric/solve_gm.rs
+  s_37743ae81b393e::t_2188cc068a3f90 163,198
+  s_37743ae81b393e::t_37f3cc890e560c 165,172,180,208-209
+  s_37743ae81b393e::t_67604e81ff43f8 8
+deep_causality_unified_math/deep_causality_stats/tests/errors/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 10-11
+deep_causality_utils/deep_causality_file/src/types/loaders/read_trace.rs
+  s_37743ae81b393e::t_a23cc415fc1488 44,64,168
+  s_37743ae81b393e::t_5ccc85c69981b7 19
+deep_causality_physics/src/theories/weak_force/weak_field_ops.rs
+  s_37743ae81b393e::t_2188cc068a3f90 38
+  s_37743ae81b393e::t_ec3e25d72729eb 12
+examples/physics_examples/gauge_gr/main.rs
+  s_37743ae81b393e::t_7e53bfc4044342 17,33,36
+deep_causality_unified_math/deep_causality_stats/src/types/distr/normal/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 10
+deep_causality_unified_math/deep_causality_tensor/src/types/causal_tensor/arithmetic/scalar_tensor/mod.rs
+  s_37743ae81b393e::t_546ec6f3f806a7 2,5
+deep_causality_unified_math/deep_causality_topology/src/types/curvature_tensor/mod.rs
+  s_37743ae81b393e::t_f0d5895d60587b 289,461,493,499
+  s_37743ae81b393e::t_8eb2d6041485f9 13,126,137,218,222-228,246,266,270,293,308,312,323,362,432,460,467,469,502-504,515,517,520,522,525,527,530,532,563
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/dist_float_106_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 8
+deep_causality_unified_math/deep_causality_topology/tests/types/curvature_tensor/curvature_tensor_scalar_tests.rs
+  s_37743ae81b393e::t_21c2d8318811dd 75-83
+  s_37743ae81b393e::t_5ea600f3c68bda 1-74,84-98
+deep_causality_physics/src/theories/general_relativity/gr_ops.rs
+  s_37743ae81b393e::t_2188cc068a3f90 16,46,108,147,189,220-222
+deep_causality_physics/src/theories/electromagnetism/gauge_em_ops.rs
+  s_37743ae81b393e::t_2188cc068a3f90 47
+  s_37743ae81b393e::t_7b455a2d8c789f 8
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_metropolis.rs
+  s_37743ae81b393e::t_f0d5895d60587b 15
+deep_causality_unified_math/deep_causality_linear/src/extensions/hkt/dense_vector_witness.rs
+  s_37743ae81b393e::t_f0d5895d60587b 7-10
+deep_causality_physics/src/kernels/relativity/spacetime.rs
+  s_37743ae81b393e::t_2188cc068a3f90 12,249,342
+deep_causality_unified_math/deep_causality_tensor/src/types/causal_tensor/arithmetic/scalar_tensor/op_scalar_tensor_float106.rs
+  s_37743ae81b393e::t_546ec6f3f806a7 1-140
+deep_causality_physics/src/theories/general_relativity/gr_utils.rs
+  s_37743ae81b393e::t_2188cc068a3f90 8,15,45,63,67
+deep_causality_algorithms/verification/brcd/verification_boss.rs
+  s_37743ae81b393e::t_f0d5895d60587b 34
+examples/chronometric_examples/gm_recovery/pipeline.rs
+  s_37743ae81b393e::t_7e53bfc4044342 32,120,169,183,199,221,224-226,228,254,256,273,279,285,287
+deep_causality_unified_math/deep_causality_stats/tests/traits/density_and_sampler_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 13-15
+deep_causality_unified_math/deep_causality_rand/tests/utils/sobol_tests.rs
+  s_37743ae81b393e::t_f0d5895d60587b 110-111
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/unit_draws.rs
+  s_37743ae81b393e::t_f0d5895d60587b 62-63
+deep_causality_unified_math/deep_causality_topology/src/types/point_cloud/ops/op_triangulate.rs
+  s_37743ae81b393e::t_b6fbcbde58c066 35,101
+deep_causality_unified_math/deep_causality_topology/tests/types/curvature_tensor/mod.rs
+  s_37743ae81b393e::t_4e5827a9e9f7e5 9-10
+examples/mathematics_examples/topology/differential_field.rs
+  s_37743ae81b393e::t_07fb279368d1f2 13
+scripts/check_precision.sh
+  s_37743ae81b393e::t_86aaad614c5857 34-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "56867fe213651d2ec78ca68917bb171d1d0275a4",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
