@@ -1,0 +1,38 @@
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain_maybe/uncertain_maybe_f64_tests.rs
+  s_81cdfd9e41c17d::t_515eee526f7560 6,9-16,74,83
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain_maybe/uncertain_maybe_f106_tests.rs
+  s_81cdfd9e41c17d::t_515eee526f7560 11,14-21,73,82
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain_maybe/uncertain_maybe_bool_tests.rs
+  s_81cdfd9e41c17d::t_515eee526f7560 6-14,70,100,198
+deep_causality_unified_math/deep_causality_uncertain/tests/integration_tests/float106_precision_tests.rs
+  s_81cdfd9e41c17d::t_515eee526f7560 12-20,55,68
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_faf04df9bfb083 8-10,24,26,50
+deep_causality_unified_math/deep_causality_uncertain/tests/integration_tests/complex_operations_tests.rs
+  s_81cdfd9e41c17d::t_515eee526f7560 6,20-27,31,77
+openspec/changes/renovate-uncertain/baseline.md
+  s_81cdfd9e41c17d::t_faf04df9bfb083 80-107
+  s_81cdfd9e41c17d::t_a94cba84dcdcbd 1-79,108-166
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain/uncertain_sampling_tests.rs
+  s_81cdfd9e41c17d::t_f5dff74809a533 5-7
+  s_81cdfd9e41c17d::t_d31d72a98464c5 10-17,31,39,50,67,113,154
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain/uncertain_tests.rs
+  s_81cdfd9e41c17d::t_f5dff74809a533 6-8
+  s_81cdfd9e41c17d::t_ff35b216a1da8a 9-16,47,75,132,150,178,215,281
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ea6d34676bbfe5b4e662bafe609ee9561c5ce54a",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
