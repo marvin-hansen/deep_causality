@@ -1,0 +1,28 @@
+openspec/changes/renovate-uncertain/specs/uncertain-ensemble-carrier/spec.md
+  s_81cdfd9e41c17d::t_ac9fc2aa41cf35 40,57,59
+deep_causality_unified_math/deep_causality_haft/src/collectable/mod.rs
+  s_81cdfd9e41c17d::t_64c315fbcaef81 71-91
+openspec/changes/renovate-uncertain/design.md
+  s_81cdfd9e41c17d::t_ac9fc2aa41cf35 113-115
+deep_causality_unified_math/deep_causality_haft/src/extensions/hkt_vec_ext.rs
+  s_81cdfd9e41c17d::t_fd2cf527b5f501 7-8,87-97
+  s_81cdfd9e41c17d::t_b106138bda94db 98-100
+deep_causality_unified_math/deep_causality_haft/tests/extensions/hkt_vec_ext_tests.rs
+  s_81cdfd9e41c17d::t_281ca96f57aff9 7-8,298-350
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "72ef3bc4e2cac8535ef7e1e98725163f296c1fb5",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
