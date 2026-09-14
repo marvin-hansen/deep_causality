@@ -1,0 +1,39 @@
+openspec/changes/renovate-uncertain/specs/sampling-hkt-composition/spec.md
+  s_81cdfd9e41c17d::t_170e2fe432df92 1-99
+openspec/changes/renovate-uncertain/specs/uncertain-sample-session/spec.md
+  s_81cdfd9e41c17d::t_9b76d5875d2279 1-110
+openspec/changes/renovate-uncertain/specs/qcl-evidence/spec.md
+  s_81cdfd9e41c17d::t_ffab1b9332a510 1-46
+openspec/changes/renovate-uncertain/proposal.md
+  s_81cdfd9e41c17d::t_0fcfd884030e30 1-146
+openspec/changes/renovate-uncertain/specs/uncertain-ensemble-carrier/spec.md
+  s_81cdfd9e41c17d::t_1e6d574d24e896 1-98
+openspec/changes/renovate-uncertain/specs/uncertain-realfield-generic/spec.md
+  s_81cdfd9e41c17d::t_549748056e237a 1-68
+openspec/changes/renovate-uncertain/.openspec.yaml
+  s_81cdfd9e41c17d::t_125f6415ea544e 1-2
+openspec/changes/renovate-uncertain/specs/uncertain-arrow-graph/spec.md
+  s_81cdfd9e41c17d::t_0e064313b8903b 1-69
+openspec/changes/renovate-uncertain/design.md
+  s_81cdfd9e41c17d::t_1ef53f9a689589 1-244
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_885814b0a61ab4 1-79
+openspec/changes/renovate-uncertain/specs/qmc-sampler/spec.md
+  s_81cdfd9e41c17d::t_a358d95c98deaa 1-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "66e55935231b086d56807b79191c9041ce382751",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
