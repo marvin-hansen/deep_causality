@@ -1,0 +1,29 @@
+openspec/changes/blanket-scalar-sampling/specs/entropy-source/spec.md
+  s_81cdfd9e41c17d::t_66262de570f727 1-59
+openspec/changes/blanket-scalar-sampling/tasks.md
+  s_81cdfd9e41c17d::t_86d1892f438b4d 1-26
+openspec/changes/blanket-scalar-sampling/design.md
+  s_81cdfd9e41c17d::t_86d1892f438b4d 1-64
+openspec/changes/blanket-scalar-sampling/specs/stats-sampling/spec.md
+  s_81cdfd9e41c17d::t_0afe170f390b39 1-74
+openspec/changes/blanket-scalar-sampling/proposal.md
+  s_81cdfd9e41c17d::t_04b325e09b0dc4 1-43
+openspec/changes/blanket-scalar-sampling/.openspec.yaml
+  s_81cdfd9e41c17d::t_a092e71dd6b4b1 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7c63468d1cffd62de21a0e560349ee7198a62a2f",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
