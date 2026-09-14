@@ -1,0 +1,57 @@
+deep_causality_unified_math/deep_causality_haft/src/lib.rs
+  s_81cdfd9e41c17d::t_7ba3da18a32b06 50,131
+deep_causality_algorithms/tests/causal_discovery/brcd/mapconfig_tests.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 26
+deep_causality_algorithms/verification/brcd/verification_boss.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 33
+deep_causality_unified_math/deep_causality_tensor/tests/extensions/ext_hkt_collectable_tests.rs
+  s_81cdfd9e41c17d::t_29cca2bcf6d8f1 1-11,13-83
+  s_81cdfd9e41c17d::t_0f88dee60277b9 12
+deep_causality_algorithms/tests/causal_discovery/brcd/boss_learn_tests.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 8
+deep_causality_discovery/examples/brcd_cache_cold_vs_warm.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 31
+deep_causality_unified_math/deep_causality_tensor/tests/extensions/mod.rs
+  s_81cdfd9e41c17d::t_aa9ff3671e00de 24-25
+deep_causality_unified_math/deep_causality_haft/src/collectable/mod.rs
+  s_81cdfd9e41c17d::t_d65e44da9805a6 1-74
+deep_causality_unified_math/deep_causality_linear/src/extensions/hkt/dense_vector_witness.rs
+  s_81cdfd9e41c17d::t_14c474e7b83729 8-9,41-51
+  s_81cdfd9e41c17d::t_4d401582748d28 52-54
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/mod.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 6-7
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/mod.rs
+  s_81cdfd9e41c17d::t_9e01d5cf70861d 6-7
+deep_causality_algorithms/tests/causal_discovery/brcd/boss_search_tests.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 9
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_e5f3d8c0266d52 57-58
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/uniform_tests.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 106-109
+deep_causality_unified_math/deep_causality_tensor/src/extensions/ext_hkt.rs
+  s_81cdfd9e41c17d::t_de9b0592ae9178 12-13,71-86
+  s_81cdfd9e41c17d::t_5c8febada80a13 87-89
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/dense_vector_collectable_tests.rs
+  s_81cdfd9e41c17d::t_48f864be183e25 11
+  s_81cdfd9e41c17d::t_c8fbcf4edd4730 1-10,12-73
+deep_causality_algorithms/verification/brcd/brcd_eval_accuracy_compute.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 37
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/parity_probe_tests.rs
+  s_81cdfd9e41c17d::t_c190fa7075006c 47-50,58-81,90-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8552bd871c27e3fa402bf921e0aa312a49889bf4",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
