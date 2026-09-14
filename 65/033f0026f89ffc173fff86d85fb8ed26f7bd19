@@ -1,0 +1,30 @@
+openspec/notes/unified_math/hkt_uncertain.md
+  s_81cdfd9e41c17d::t_f13de6d00909b4 511-514,567,580-582,621-625,628-633
+  s_81cdfd9e41c17d::t_ffa1b6cc247585 161-162,186,197-198
+  s_81cdfd9e41c17d::t_218b267a3342b3 204-206,216
+  s_81cdfd9e41c17d::t_1e0588dfbcfe46 203,220-221,252-254,337,345-349
+  s_81cdfd9e41c17d::t_25c483383efa8c 8-9,12-16,33-35
+  s_81cdfd9e41c17d::t_9576a752f2d301 431-460,462,464,466-469,471-472,474-481,483-484
+  s_81cdfd9e41c17d::t_01206a48f2b1ed 144,146-152,154-159,164-167,169-185,191-192,200-202
+  s_81cdfd9e41c17d::t_c048239e544eb2 187-190
+  s_81cdfd9e41c17d::t_90a2461f22b45b 219,225-228
+  s_81cdfd9e41c17d::t_ed26430f3b48ac 36-37
+  s_81cdfd9e41c17d::t_05af5b74888f93 626-627
+  s_81cdfd9e41c17d::t_6d3a984d71d9a3 229
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "65033f0026f89ffc173fff86d85fb8ed26f7bd19",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
