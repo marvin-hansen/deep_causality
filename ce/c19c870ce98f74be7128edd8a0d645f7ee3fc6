@@ -1,0 +1,218 @@
+deep_causality_algorithms/src/dag_sampling/sample.rs
+  s_81cdfd9e41c17d::t_d01281f581d9bc 74
+deep_causality_unified_math/deep_causality_stats/tests/errors/normal_error_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-55
+deep_causality_unified_math/deep_causality_rand/tests/types/rand/std_rng_tests.rs
+  s_81cdfd9e41c17d::t_b116e5301b4691 7
+deep_causality_unified_math/deep_causality_uncertain/src/types/distribution/mod.rs
+  s_81cdfd9e41c17d::t_45ba7790bbfe88 7-10
+deep_causality_unified_math/deep_causality_rand/tests/utils/sobol_tests.rs
+  s_81cdfd9e41c17d::t_5179deea99f1a4 11
+  s_81cdfd9e41c17d::t_f7d5a6ee493375 13-19,152
+  s_81cdfd9e41c17d::t_c654df722070ca 12
+deep_causality_unified_math/deep_causality_stats/tests/errors/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 8-11
+deep_causality_algorithms/tests/causal_discovery/brcd/update_tests.rs
+  s_81cdfd9e41c17d::t_41f9b9658258ce 9-10
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/dist_float_106_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-67
+deep_causality_unified_math/deep_causality_topology/tests/types/cubical_regge_geometry/coverage_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 297
+openspec/changes/retrofit-sampling-layer/tasks.md
+  s_81cdfd9e41c17d::t_54a49ba7a5d746 72-101
+deep_causality_unified_math/deep_causality_topology/src/types/cubical_regge_geometry/metropolis.rs
+  s_81cdfd9e41c17d::t_cd37a0e0197e0f 52,89
+deep_causality_unified_math/deep_causality_rand/src/lib.rs
+  s_81cdfd9e41c17d::t_3d869099304ffb 30-31
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 1-16
+deep_causality_unified_math/deep_causality_rand/tests/errors/mod.rs
+  s_81cdfd9e41c17d::t_4876130d8b3271 5
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/dist_float_106.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-68
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/link_variable/link_variable_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 331,353,526
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/gradient_flow_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 54,97,117,210
+deep_causality_unified_math/deep_causality_uncertain/tests/errors/uncertain_error_tests.rs
+  s_81cdfd9e41c17d::t_df6bed95421870 6-7
+deep_causality_unified_math/deep_causality_rand/src/extensions/uniform/uniform_f106.rs
+  s_81cdfd9e41c17d::t_fcc3a9d31b4e2e 7,12-20
+deep_causality_algorithms/tests/causal_discovery/brcd/boss_learn_tests.rs
+  s_81cdfd9e41c17d::t_9bf5351c336ea7 7
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/metropolis_coverage_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 14
+deep_causality_unified_math/deep_causality_stats/src/utils/ziggurat_sampler.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-4,6-68
+  s_81cdfd9e41c17d::t_f6e8eb72b1713e 5
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/normal/normal_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-92
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/dist_float_32_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-114
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/random.rs
+  s_81cdfd9e41c17d::t_cd37a0e0197e0f 7
+  s_81cdfd9e41c17d::t_b23f57b51b4fbc 11-15
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/qmc_sampler.rs
+  s_81cdfd9e41c17d::t_45ba7790bbfe88 25-28
+deep_causality_physics/src/kernels/nuclear/lund/flavor.rs
+  s_81cdfd9e41c17d::t_d01281f581d9bc 39-40
+deep_causality_algorithms/verification/brcd/verification_boss.rs
+  s_81cdfd9e41c17d::t_9bf5351c336ea7 32
+deep_causality_unified_math/deep_causality_stats/BUILD.bazel
+  s_81cdfd9e41c17d::t_0252326a709cfe 118-171
+openspec/changes/retrofit-sampling-layer/specs/stats-sampling/spec.md
+  s_81cdfd9e41c17d::t_77c398a986d635 35-36
+deep_causality_unified_math/deep_causality_stats/tests/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 8,10
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/dist_float_64.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-31
+deep_causality_physics/src/kernels/nuclear/lund/kinematics.rs
+  s_81cdfd9e41c17d::t_c6fe3d37e82d08 32
+openspec/changes/retrofit-sampling-layer/specs/entropy-source/spec.md
+  s_81cdfd9e41c17d::t_77c398a986d635 18,33-44,46-51
+deep_causality_discovery/examples/brcd_cache_cold_vs_warm.rs
+  s_81cdfd9e41c17d::t_a826cabe0e1708 30-31
+deep_causality_unified_math/deep_causality_rand/tests/types/dist/uniform/standard_word_bool_tests.rs
+  s_81cdfd9e41c17d::t_df586af5d5952a 12,101-167
+deep_causality_unified_math/deep_causality_rand/src/traits/rng.rs
+  s_81cdfd9e41c17d::t_5a66fa74a4e0c6 7
+deep_causality_unified_math/deep_causality_rand/tests/utils/mod.rs
+  s_81cdfd9e41c17d::t_4876130d8b3271 5
+deep_causality_unified_math/deep_causality_stats/tests/utils/inverse_cdf_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-147
+deep_causality_unified_math/deep_causality_topology/tests/types/cubical_regge_geometry/metropolis_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 54,80,118,151,178,214
+deep_causality_unified_math/deep_causality_stats/tests/types/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 10-11
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/dist_float_32.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-31
+deep_causality_algorithms/benches/brcd_benchmark.rs
+  s_81cdfd9e41c17d::t_41f9b9658258ce 17-18
+deep_causality_unified_math/deep_causality_rand/tests/traits/sample_range_tests.rs
+  s_81cdfd9e41c17d::t_5db802919f54b0 6,34-44,77-81
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/mod.rs
+  s_81cdfd9e41c17d::t_0375261139df7a 6
+  s_81cdfd9e41c17d::t_3d869099304ffb 63
+deep_causality_unified_math/deep_causality_stats/src/types/distr/bernoulli/mod.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-109
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/lattice_coverage_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 13
+deep_causality_unified_math/deep_causality_stats/src/types/mod.rs
+  s_81cdfd9e41c17d::t_b2268e92e86b37 16-17
+deep_causality_unified_math/deep_causality_stats/src/types/distr/normal/mod.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-81
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/bernoulli/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 1-8
+deep_causality_algorithms/verification/brcd/brcd_eval_accuracy_compute.rs
+  s_81cdfd9e41c17d::t_a826cabe0e1708 36-37
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/standard_uniform_tests.rs
+  s_81cdfd9e41c17d::t_df586af5d5952a 1-15
+deep_causality_unified_math/deep_causality_stats/tests/traits/density_and_sampler_tests.rs
+  s_81cdfd9e41c17d::t_0bcfdb8519ab89 1-44
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/mod.rs
+  s_81cdfd9e41c17d::t_cd37a0e0197e0f 193,208,215
+deep_causality_unified_math/deep_causality_rand/tests/types/rand/os_random_rng_tests.rs
+  s_81cdfd9e41c17d::t_b116e5301b4691 9
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/lattice_gauge_field_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 335,349,359,452,468,492,623,648,658
+deep_causality_unified_math/deep_causality_stats/src/utils/mod.rs
+  s_81cdfd9e41c17d::t_b2268e92e86b37 1-9
+deep_causality_unified_math/deep_causality_stats/tests/utils/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 1-9
+deep_causality_unified_math/deep_causality_rand/src/types/distr/uniform/standard_word.rs
+  s_81cdfd9e41c17d::t_0375261139df7a 1-38
+deep_causality_unified_math/deep_causality_stats/src/errors/mod.rs
+  s_81cdfd9e41c17d::t_b2268e92e86b37 7-8
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/metropolis_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 7
+deep_causality_unified_math/deep_causality_stats/Cargo.toml
+  s_81cdfd9e41c17d::t_ce18990dd195bd 34-36
+deep_causality_unified_math/deep_causality_stats/tests/traits/random_ext_tests.rs
+  s_81cdfd9e41c17d::t_43a1a215ce5415 1-64
+deep_causality_unified_math/deep_causality_stats/src/traits/mod.rs
+  s_81cdfd9e41c17d::t_544e938fbb1683 1-6
+deep_causality_unified_math/deep_causality_stats/tests/errors/bernoulli_error_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-36
+deep_causality_unified_math/deep_causality_stats/tests/traits/mod.rs
+  s_81cdfd9e41c17d::t_0bcfdb8519ab89 9-11
+  s_81cdfd9e41c17d::t_43a1a215ce5415 1-8
+examples/classical_causality_examples/classical_via_causaloid/dbn/main.rs
+  s_81cdfd9e41c17d::t_a239bf0927cf2e 11
+deep_causality_unified_math/deep_causality_stats/src/types/distr/mod.rs
+  s_81cdfd9e41c17d::t_b2268e92e86b37 1-10
+deep_causality_unified_math/deep_causality_stats/src/types/distr/normal/standard_normal.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-68
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/normal/standard_normal_tests.rs
+  s_81cdfd9e41c17d::t_fb229da3384dfe 6,139-150,152-159,162,166,172
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-5,7-138,151,160-161,163-165,167-171,173-176
+openspec/changes/retrofit-sampling-layer/proposal.md
+  s_81cdfd9e41c17d::t_34dbd322d8fd3e 76-94
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/normal/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 1-11
+deep_causality_unified_math/deep_causality_topology/Cargo.toml
+  s_81cdfd9e41c17d::t_ce18990dd195bd 33,67
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/verification_tests.rs
+  s_81cdfd9e41c17d::t_6729b614e7e69a 420,443,491,516,574,610,631,698,747,847
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gauge_transform.rs
+  s_81cdfd9e41c17d::t_cd37a0e0197e0f 120
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_81cdfd9e41c17d::t_544e938fbb1683 63,118
+  s_81cdfd9e41c17d::t_6729b614e7e69a 119
+  s_81cdfd9e41c17d::t_b2268e92e86b37 65
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 94-117
+deep_causality_algorithms/verification/brcd/verification_base.rs
+  s_81cdfd9e41c17d::t_41f9b9658258ce 20-21
+openspec/changes/retrofit-sampling-layer/notes/tdd-group-2.md
+  s_81cdfd9e41c17d::t_405faec25be266 55-130
+  s_81cdfd9e41c17d::t_871a526105121c 1-54
+deep_causality_unified_math/deep_causality_rand/src/traits/sample_range.rs
+  s_81cdfd9e41c17d::t_52ea38c12d8b95 23-25,41-43
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/standard_uniform.rs
+  s_81cdfd9e41c17d::t_b2268e92e86b37 1-15
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/mod.rs
+  s_81cdfd9e41c17d::t_cd37a0e0197e0f 211,239
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/mod.rs
+  s_81cdfd9e41c17d::t_b2268e92e86b37 1-13
+deep_causality_algorithms/tests/causal_discovery/brcd/boss_search_tests.rs
+  s_81cdfd9e41c17d::t_9bf5351c336ea7 10
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/mod.rs
+  s_81cdfd9e41c17d::t_9cd32cdd1925e3 1-8
+deep_causality_algorithms/benches/brcd_benchmark_wide.rs
+  s_81cdfd9e41c17d::t_41f9b9658258ce 23-24
+deep_causality_unified_math/deep_causality_uncertain/src/errors/uncertain_error.rs
+  s_81cdfd9e41c17d::t_45ba7790bbfe88 6-7
+deep_causality_algorithms/tests/causal_discovery/brcd/mapconfig_tests.rs
+  s_81cdfd9e41c17d::t_a826cabe0e1708 25-26
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/unit_interval/dist_float_64_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-114
+deep_causality_unified_math/deep_causality_stats/src/types/distr/unit_interval/dist_float_common.rs
+  s_81cdfd9e41c17d::t_6c40253a88a9ca 1-60
+deep_causality_unified_math/deep_causality_stats/src/traits/random_ext.rs
+  s_81cdfd9e41c17d::t_544e938fbb1683 1-53
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/bernoulli/bernoulli_tests.rs
+  s_81cdfd9e41c17d::t_373da291c72f9e 1-104
+deep_causality_algorithms/tests/causal_discovery/brcd/boss_bootstrap_tests.rs
+  s_81cdfd9e41c17d::t_41f9b9658258ce 9-10
+deep_causality_unified_math/deep_causality_rand/tests/mod.rs
+  s_81cdfd9e41c17d::t_4876130d8b3271 5
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_metropolis.rs
+  s_81cdfd9e41c17d::t_cd37a0e0197e0f 11,69,151,185
+Cargo.lock
+  s_81cdfd9e41c17d::t_773451d548c5a3 839
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cec19c870ce98f74be7128edd8a0d645f7ee3fc6",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
