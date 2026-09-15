@@ -1,0 +1,63 @@
+deep_causality_unified_math/deep_causality_stats/src/algorithms/ridge.rs
+  s_81cdfd9e41c17d::t_52127d2971bf6c 9,99-102,117,120,130-132,253-255,270,273,281-283
+  s_81cdfd9e41c17d::t_fff3535a91cca8 168,175,177
+  s_81cdfd9e41c17d::t_f61b16dfb4ee73 306,313,315
+deep_causality_unified_math/deep_causality_stats/src/algorithms/covariance.rs
+  s_81cdfd9e41c17d::t_80a9507c178d80 104-110,116,120
+  s_81cdfd9e41c17d::t_f14a9bc48921ce 13,65,68-69,72
+deep_causality_unified_math/deep_causality_stats/tests/types/pairwise_sum_tests.rs
+  s_81cdfd9e41c17d::t_c4e94e6f47c501 69-72,76-83
+  s_81cdfd9e41c17d::t_458eeb940fde7f 1-68,73-75,84-325
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/logistic_tests.rs
+  s_81cdfd9e41c17d::t_47f0cd92b38bff 1273-1309,1321-1324,1333-1336,1341-1343,1345-1353,1357-1369,1371,1380-1386,1388-1391
+  s_81cdfd9e41c17d::t_18791083cfe793 1310-1319
+  s_81cdfd9e41c17d::t_51473164e02ae7 1325,1331-1332,1372-1373,1375-1377,1379
+  s_81cdfd9e41c17d::t_5f7282645c67af 1320,1326-1330,1337-1340,1344,1354-1356,1370,1387
+  s_81cdfd9e41c17d::t_3cbc4bc7109b26 1374
+  s_81cdfd9e41c17d::t_2ea46a742c0df7 1378
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/accumulation.rs
+  s_81cdfd9e41c17d::t_3363f9b166f84e 1-38
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/mod.rs
+  s_81cdfd9e41c17d::t_3363f9b166f84e 17
+deep_causality_unified_math/deep_causality_stats/src/algorithms/correlation.rs
+  s_81cdfd9e41c17d::t_083d02a9661fe6 82-84,88-90,92,109-111,115-117,119
+  s_81cdfd9e41c17d::t_c038f18562452e 10
+deep_causality_unified_math/deep_causality_stats/src/types/pairwise_sum/mod.rs
+  s_81cdfd9e41c17d::t_8e16d6296e21f9 74-84
+  s_81cdfd9e41c17d::t_35883119104bc9 59-64,67-72
+  s_81cdfd9e41c17d::t_87b2d7245d41d6 73
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_8da33ffa0b931d 52,54,56-64
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/correlation_tests.rs
+  s_81cdfd9e41c17d::t_3e88723c0e8f52 66,68,1261-1301,1303-1351
+  s_81cdfd9e41c17d::t_2438e714c062f6 1302
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/covariance_tests.rs
+  s_81cdfd9e41c17d::t_1effbe4f73e0a0 35-36
+  s_81cdfd9e41c17d::t_6cbc59b199af9e 33,404-424,427-429,431-436,438-442,444-446
+  s_81cdfd9e41c17d::t_3110f8f7a39a8a 425-426,430,437,443
+  s_81cdfd9e41c17d::t_053987e6263b7f 31,298-403
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/ridge_tests.rs
+  s_81cdfd9e41c17d::t_9747b760ba27a6 1478-1497,1507-1556
+  s_81cdfd9e41c17d::t_18791083cfe793 1498-1506
+deep_causality_unified_math/deep_causality_stats/tests/types/mod.rs
+  s_81cdfd9e41c17d::t_420694f7a7287a 10-11
+deep_causality_unified_math/deep_causality_stats/src/algorithms/logistic.rs
+  s_81cdfd9e41c17d::t_3666567192eb34 103-107,118,121,125-127
+  s_81cdfd9e41c17d::t_59864bbd6e9e40 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b5fb4b4265468d78f6b3cad54faee965a3f19ca3",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
