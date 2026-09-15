@@ -1,0 +1,31 @@
+deep_causality_utils/deep_causality_par/Cargo.toml
+  s_a31005946f38f3::t_279d577531d3e6 36
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_6a22d9bf17d198::t_f770f55f1ddf20 60-61
+deep_causality_unified_math/deep_causality_linear/Cargo.toml
+  s_a31005946f38f3::t_6456cdc27aa3b5 48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "552f92435b135f16e6cee7a433fc4f24a7cb89d6",
+  "prompts": {},
+  "sessions": {
+    "s_6a22d9bf17d198": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "df4908d4-0804-4183-9ac4-d358229d1d62",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
