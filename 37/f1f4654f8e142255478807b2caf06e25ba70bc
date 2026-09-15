@@ -1,0 +1,31 @@
+deep_causality_unified_math/deep_causality_num/tests/float/fma_single_rounding_tests.rs
+  s_37743ae81b393e::t_30e5935877c8ab 1-7,10,14,17-19,24,28,32-34,36,38,40-41,43-44,49-63,65-68,70-73,93-94,101-102,118
+  s_37743ae81b393e::t_591570cdde28bc 8-9,11-13,15-16,20-23,25-27,29-31,35,37,42,45-48,64,69,74-92,95-100,103-117
+  s_37743ae81b393e::t_be72b8de946d74 39
+deep_causality_unified_math/deep_causality_num/tests/float/mod.rs
+  s_37743ae81b393e::t_30e5935877c8ab 24-29
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_float_tests.rs
+  s_37743ae81b393e::t_df01835c828408 838-899,905-907,913-915,921-1003
+  s_37743ae81b393e::t_591570cdde28bc 900-904,908-912,916-920
+deep_causality_unified_math/deep_causality_num/src/float/float_106_impl.rs
+  s_37743ae81b393e::t_b987abf938df9e 5,219-223,227,233,250,253-258,260,264,278-280
+  s_37743ae81b393e::t_c2d6ef1761e4b2 224-226,228-232,234-248,251-252,259,261-263,265-277
+deep_causality_unified_math/deep_causality_num/Cargo.toml
+  s_37743ae81b393e::t_a568ca6dc0925f 30-31,33,36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "37f1f4654f8e142255478807b2caf06e25ba70bc",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
