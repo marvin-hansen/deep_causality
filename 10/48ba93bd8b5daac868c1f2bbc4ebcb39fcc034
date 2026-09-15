@@ -1,0 +1,76 @@
+examples/mathematics_examples/README.md
+  s_37743ae81b393e::t_8a073b75f4a970 92
+website/docs/src/content/docs/concepts/uniform-math.md
+  s_37743ae81b393e::t_8a073b75f4a970 373,424
+examples/mathematics_examples/3_applications/relativistic_spinor_transport/README.md
+  s_37743ae81b393e::t_619a25bd79168f 1-65
+examples/mathematics_examples/3_applications/electromagnetic_field/main.rs
+  s_37743ae81b393e::t_ea86ad3e24222e 32
+  s_37743ae81b393e::t_8f8f8e3b9b16e8 5-30,33-122,124-126,128,139,142,146,148-151,153-154,157,159,161,163-171,173-174
+examples/mathematics_examples/BUILD.bazel
+  s_37743ae81b393e::t_0b29f9b4341bfd 19-21,64-66,79-81,94-96,124-126,214-216,274-276,529-531
+examples/mathematics_examples/3_applications/differentiate_under_integral/main.rs
+  s_37743ae81b393e::t_432a8c57d11ca0 18-90,92
+deep_causality_unified_math/deep_causality_multivector/README.md
+  s_37743ae81b393e::t_8a073b75f4a970 221
+examples/mathematics_examples/3_applications/lattice_gauge_thermalization/main.rs
+  s_37743ae81b393e::t_fcb3ed9a8d9d5e 1-213,217-222
+  s_37743ae81b393e::t_1171998de48263 214-216
+examples/mathematics_examples/3_applications/relativistic_mhd/main.rs
+  s_37743ae81b393e::t_1171998de48263 173-176
+  s_37743ae81b393e::t_1c51186c47c536 6-26,28-155,158,161,165,167,169,171-172,177,179,181,183-185,187-189,191-193,195,197,203,205
+deep_causality_unified_math/README.md
+  s_37743ae81b393e::t_8a073b75f4a970 98,129-130
+examples/README.md
+  s_37743ae81b393e::t_8a073b75f4a970 252,259,261,263,268
+  s_37743ae81b393e::t_5616448f382725 245
+examples/mathematics_examples/3_applications/standard_model_symmetry/main.rs
+  s_37743ae81b393e::t_09aa2cbe992d3a 6-56,59-109,113
+  s_37743ae81b393e::t_0f741603938aa7 57-58,110-111
+examples/mathematics_examples/3_applications/structural_stress_on_mesh/main.rs
+  s_37743ae81b393e::t_1171998de48263 246-247
+  s_37743ae81b393e::t_f75c5cfa48f37d 1-245,248-521
+examples/mathematics_examples/3_applications/README.md
+  s_37743ae81b393e::t_17b80763aae9ff 1-57
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_smearing.rs
+  s_37743ae81b393e::t_4216d74e29bb7d 115-122,124
+examples/mathematics_examples/3_applications/imu_tilt_estimation/main.rs
+  s_37743ae81b393e::t_ec7b354d021442 260
+  s_37743ae81b393e::t_1171998de48263 169-173,191-196,331-333
+  s_37743ae81b393e::t_be5cd04e304569 1-47,49-54,63-101,105-155,179-190,197-259,261-299,305,311-314,317,325-326,334-446,452-454,473
+  s_37743ae81b393e::t_0130601f030c8a 55-62,102-104,168,174-178
+  s_37743ae81b393e::t_c131ddac2f9d0d 48,156-167,300-304,306-310,315-316,318-324,327-330,447-451,455-472
+examples/mathematics_examples/3_applications/structural_stress_on_mesh/README.md
+  s_37743ae81b393e::t_619a25bd79168f 1-262
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_metropolis.rs
+  s_37743ae81b393e::t_84d93fc0917f74 175-183,185-188,207-208,237
+examples/mathematics_examples/Cargo.toml
+  s_37743ae81b393e::t_0b29f9b4341bfd 322-323,326-327,330-331,334-335,338-339,342-343,346-347,350-351
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/metropolis_tests.rs
+  s_37743ae81b393e::t_8ed167efd81c7c 12,152-212
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/lattice_coverage_tests.rs
+  s_37743ae81b393e::t_730efc9604edaa 15,115-130,134,142-149,151-152
+  s_37743ae81b393e::t_2de8026f8b7151 131-133,135-141,150
+  s_37743ae81b393e::t_3db54b330ca73d 153
+examples/mathematics_examples/3_applications/relativistic_spinor_transport/main.rs
+  s_37743ae81b393e::t_4af4933faae57c 1-94,98-277
+  s_37743ae81b393e::t_1171998de48263 95-97
+deep_causality_unified_math/deep_causality_topology/README.md
+  s_37743ae81b393e::t_8a073b75f4a970 287
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1048ba93bd8b5daac868c1f2bbc4ebcb39fcc034",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
