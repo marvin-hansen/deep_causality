@@ -1,0 +1,47 @@
+website/docs/src/content/docs/formalization/linear.md
+  s_37743ae81b393e::t_3e5f404f7af52d 8,55
+website/docs/src/content/docs/concepts/uncertainty.md
+  s_37743ae81b393e::t_a007fe64444ace 14,16,21,23-24,27-29,34-46,49-51,58,65
+  s_37743ae81b393e::t_3f808de7c23bbd 69,82
+  s_37743ae81b393e::t_3e5f404f7af52d 8,90
+  s_37743ae81b393e::t_647ae641654801 19,91
+website/docs/src/content/docs/overview/the-problem.md
+  s_37743ae81b393e::t_3f808de7c23bbd 73
+website/docs/src/content/docs/concepts/context.md
+  s_37743ae81b393e::t_3f808de7c23bbd 104
+website/docs/src/content/docs/concepts/cdl.md
+  s_37743ae81b393e::t_3e5f404f7af52d 92
+website/docs/src/content/docs/concepts/hkt.md
+  s_37743ae81b393e::t_3e5f404f7af52d 12
+website/docs/src/content/docs/concepts/uniform-math.md
+  s_37743ae81b393e::t_86717925d9d569 46,48,55,57,61-63,292-296,318-324,328-330
+website/docs/src/content/docs/concepts/axiom.md
+  s_37743ae81b393e::t_de1a374fa4811b 172,174,177,184,194-195,198
+website/docs/src/content/docs/concepts/glossary.md
+  s_37743ae81b393e::t_3e5f404f7af52d 44
+website/docs/src/content/docs/getting-started/install.md
+  s_37743ae81b393e::t_3e5f404f7af52d 27,41-43
+  s_37743ae81b393e::t_de1a374fa4811b 37,44
+website/docs/src/content/docs/concepts/algorithms.md
+  s_37743ae81b393e::t_3f808de7c23bbd 48
+website/docs/src/content/docs/overview/architecture.md
+  s_37743ae81b393e::t_df28ec70a84535 62
+website/docs/src/content/docs/overview/innovations.md
+  s_37743ae81b393e::t_ee3d4b662be6e8 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a7ebe067c2adac1c3620c031c074033f3eec2ab5",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
