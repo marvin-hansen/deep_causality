@@ -1,0 +1,28 @@
+openspec/notes/unified_math/hkt_extenions_gap.md
+  s_37743ae81b393e::t_ec9e3c34505bde 57,80,83,87-118
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/mod.rs
+  s_37743ae81b393e::t_1720ecf1772244 15-16
+deep_causality_unified_math/deep_causality_linear/tests/extensions/hkt/zip_dense_vector_foldable_tests.rs
+  s_37743ae81b393e::t_d3283b41ea1f93 124-127
+  s_37743ae81b393e::t_1720ecf1772244 1-123,128-135
+deep_causality_unified_math/deep_causality_linear/src/extensions/hkt/zip_dense_vector_witness.rs
+  s_37743ae81b393e::t_c9d11134f71482 69-91
+  s_37743ae81b393e::t_d3283b41ea1f93 7-9
+  s_37743ae81b393e::t_2714e12e0324a1 92-94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cced58ad9e692c0f7fc5ba9e71a0468ef324babe",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
