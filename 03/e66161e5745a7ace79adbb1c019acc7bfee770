@@ -1,0 +1,88 @@
+deep_causality_unified_math/deep_causality_stats/src/types/distr/bernoulli/mod.rs
+  s_81cdfd9e41c17d::t_10fef5af5ded54 60-73
+deep_causality_unified_math/deep_causality_stats/tests/utils/inverse_cdf_tests.rs
+  s_81cdfd9e41c17d::t_d045658d1d8395 13-14
+  s_81cdfd9e41c17d::t_5f5ccbbb2902e9 151-247
+deep_causality_unified_math/deep_causality_stats/src/types/mod.rs
+  s_81cdfd9e41c17d::t_272dfdef8dea03 13
+deep_causality_unified_math/deep_causality_stats/tests/algorithms/moments_bfloat16_tests.rs
+  s_81cdfd9e41c17d::t_463b6175ead264 15,20,23-29
+  s_81cdfd9e41c17d::t_a620a4834931f8 760-801
+  s_81cdfd9e41c17d::t_716ec19ed668ef 664-699,701-711,713-738
+  s_81cdfd9e41c17d::t_f45ca595dc10cc 700,712
+  s_81cdfd9e41c17d::t_8d99a6ddcb6d9a 739-759
+  s_81cdfd9e41c17d::t_96a0bf33b99fb3 30
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_81cdfd9e41c17d::t_48e93263999eb4 74-83
+  s_81cdfd9e41c17d::t_42bc68380c6b93 155-156
+deep_causality_unified_math/deep_causality_stats/src/types/pairwise_sum/mod.rs
+  s_81cdfd9e41c17d::t_2ba5fb75f40547 1-5,7-33,35-66
+  s_81cdfd9e41c17d::t_6751cfb4cc80d4 6,34,76
+  s_81cdfd9e41c17d::t_32a239663944a7 67-75,77-84
+deep_causality_unified_math/deep_causality_stats/src/algorithms/entropy.rs
+  s_81cdfd9e41c17d::t_cc1958a3222292 101-107
+  s_81cdfd9e41c17d::t_d045658d1d8395 12
+  s_81cdfd9e41c17d::t_34e8f4f8e90137 80,93,121,130,137
+deep_causality_unified_math/deep_causality_stats/src/utils/inverse_cdf.rs
+  s_81cdfd9e41c17d::t_c9a9148bc6d2ba 118-154
+  s_81cdfd9e41c17d::t_42bc68380c6b93 18
+deep_causality_unified_math/deep_causality_stats/src/algorithms/moments.rs
+  s_81cdfd9e41c17d::t_274129a0b21508 43-44
+  s_81cdfd9e41c17d::t_32a239663944a7 31
+  s_81cdfd9e41c17d::t_34e8f4f8e90137 25
+  s_81cdfd9e41c17d::t_c25c2722b7341e 12,15-24,26-28
+  s_81cdfd9e41c17d::t_79beccc3f11641 99-100
+  s_81cdfd9e41c17d::t_d4e6f05f8b275a 62,70,111,113,125,127
+deep_causality_unified_math/deep_causality_stats/src/algorithms/log_sum_exp.rs
+  s_81cdfd9e41c17d::t_34e8f4f8e90137 8,51
+deep_causality_unified_math/deep_causality_stats/tests/types/distr/bernoulli/bernoulli_tests.rs
+  s_81cdfd9e41c17d::t_d045658d1d8395 186-189
+  s_81cdfd9e41c17d::t_3a66f955af36d3 154-185,190-191
+  s_81cdfd9e41c17d::t_e21ae04837349c 5
+deep_causality_unified_math/deep_causality_num/src/lift/mod.rs
+  s_81cdfd9e41c17d::t_79092a2a3b9f11 37
+deep_causality_unified_math/deep_causality_rand/src/traits/rng.rs
+  s_81cdfd9e41c17d::t_83130a6146992e 45-60
+deep_causality_unified_math/deep_causality_rand/tests/traits/rng_tests.rs
+  s_81cdfd9e41c17d::t_c23e75615e2f5a 8-9,125-169
+  s_81cdfd9e41c17d::t_f6cd112f609d1b 170
+deep_causality_unified_math/deep_causality_uncertain/BUILD.bazel
+  s_81cdfd9e41c17d::t_ddd24447b465d0 270-286
+  s_81cdfd9e41c17d::t_0cd4a8c00c48ea 269
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_ce6f7022612fa3 52-55
+  s_81cdfd9e41c17d::t_23b8450ada2e0e 38,40-41
+  s_81cdfd9e41c17d::t_383c270bb5fc91 28,31-36,77-79
+  s_81cdfd9e41c17d::t_af38183fe24367 30,37,44-51
+  s_81cdfd9e41c17d::t_e08ace7b8a1db0 42
+  s_81cdfd9e41c17d::t_295bb539259eea 43
+  s_81cdfd9e41c17d::t_4ecfd35846af55 29,39
+deep_causality_unified_math/deep_causality_stats/src/types/mean_accumulator/mod.rs
+  s_81cdfd9e41c17d::t_56efea237b0e13 7,56,63,87
+  s_81cdfd9e41c17d::t_22c03fb590be26 35-39,42
+  s_81cdfd9e41c17d::t_c0310f68b05fd0 15-18
+deep_causality_unified_math/deep_causality_stats/tests/types/mean_accumulator_tests.rs
+  s_81cdfd9e41c17d::t_1ffc9d93318c8f 12,19-21,42-60
+  s_81cdfd9e41c17d::t_22a50c14771f00 61-62
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/precision.rs
+  s_81cdfd9e41c17d::t_2ba85ddd145acf 151
+  s_81cdfd9e41c17d::t_dab9b5c2794d40 59-69
+  s_81cdfd9e41c17d::t_e7605c07385250 133-137
+  s_81cdfd9e41c17d::t_1f14fca5ed9ddb 87-89
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "03e66161e5745a7ace79adbb1c019acc7bfee770",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
