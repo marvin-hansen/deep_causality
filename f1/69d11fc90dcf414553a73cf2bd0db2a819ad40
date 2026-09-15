@@ -1,0 +1,19 @@
+openspec/notes/unified_math/hkt_extenions_gap.md
+  s_37743ae81b393e::t_02968f284286ac 59-117,132-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f169d11fc90dcf414553a73cf2bd0db2a819ad40",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
