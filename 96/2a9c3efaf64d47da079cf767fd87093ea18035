@@ -1,0 +1,47 @@
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_81cdfd9e41c17d::t_f50e009fea7fa4 55-58
+  s_81cdfd9e41c17d::t_98837c21b1908e 62
+  s_81cdfd9e41c17d::t_b9f2fa3ebe593d 63-66
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_ensemble.rs
+  s_81cdfd9e41c17d::t_7f6d9083c9f052 75-76
+  s_81cdfd9e41c17d::t_3f1f7817559cb9 1-40,42,47,60-74,77-149
+  s_81cdfd9e41c17d::t_770f1848b9d47c 41,43-46,48-53,55-59
+  s_81cdfd9e41c17d::t_5987b4154d8fe7 54
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain/uncertain_ensemble_tests.rs
+  s_81cdfd9e41c17d::t_1233867e498b0f 1-274
+  s_81cdfd9e41c17d::t_c74bb866beb1c4 289,295
+  s_81cdfd9e41c17d::t_770f1848b9d47c 275-288,290-294,296-316
+deep_causality_unified_math/deep_causality_uncertain/tests/types/uncertain/mod.rs
+  s_81cdfd9e41c17d::t_6869908c7f44bf 11
+openspec/changes/renovate-uncertain/specs/uncertain-ensemble-carrier/spec.md
+  s_81cdfd9e41c17d::t_9a7ef89cfb20fa 57-62,76-77
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/mod.rs
+  s_81cdfd9e41c17d::t_fff081f7939809 15
+deep_causality_unified_math/deep_causality_uncertain/src/extensions/mod.rs
+  s_81cdfd9e41c17d::t_b9f2fa3ebe593d 1-4
+deep_causality_unified_math/deep_causality_uncertain/src/lib.rs
+  s_81cdfd9e41c17d::t_e70ede4148c041 60-77,79-87,89-98
+  s_81cdfd9e41c17d::t_c051a4dc9d9166 78,88
+  s_81cdfd9e41c17d::t_7f6d9083c9f052 38-59
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_9a7ef89cfb20fa 100-102
+  s_81cdfd9e41c17d::t_fffe3eda5c7c37 103
+Cargo.lock
+  s_81cdfd9e41c17d::t_38ee3163ca3935 851-852,856
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "962a9c3efaf64d47da079cf767fd87093ea18035",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
