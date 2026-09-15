@@ -1,0 +1,59 @@
+deep_causality_physics/README_GAUGE_THEORIES.md
+  s_37743ae81b393e::t_00ea1ca5925256 69
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/lattice_gauge_field_ops.rs
+  s_37743ae81b393e::t_84e9e2623343f1 6,8-10,12-16,18-19,29,31-32,43
+  s_37743ae81b393e::t_00ea1ca5925256 1-5,7,11,17,20-28,30,33-42,44-291
+deep_causality_physics/src/theories/weak_force/weak_field_ops_impl.rs
+  s_37743ae81b393e::t_00ea1ca5925256 14,177
+deep_causality_unified_math/deep_causality_haft/src/lax_monoidal/mod.rs
+  s_37743ae81b393e::t_00ea1ca5925256 71
+deep_causality_unified_math/deep_causality_topology/tests/extensions/mod.rs
+  s_37743ae81b393e::t_d5088e3df7af72 8-9,38-39
+deep_causality_physics/src/theories/general_relativity/gr_ops_impl.rs
+  s_37743ae81b393e::t_00ea1ca5925256 21,163
+deep_causality_unified_math/deep_causality_topology/src/lib.rs
+  s_37743ae81b393e::t_00ea1ca5925256 39,41
+deep_causality_unified_math/deep_causality_haft/LEAN_HAFT.md
+  s_37743ae81b393e::t_00ea1ca5925256 94
+deep_causality_unified_math/deep_causality_topology/tests/extensions/gauge_field_ops_tests.rs
+  s_37743ae81b393e::t_00ea1ca5925256 1-67,70-387,390-410
+  s_37743ae81b393e::t_d5088e3df7af72 68-69,388-389
+deep_causality_physics/tests/theories/electromagnetism/em_tests.rs
+  s_37743ae81b393e::t_00ea1ca5925256 12,337,340
+deep_causality_physics/src/theories/electroweak/electroweak_impl.rs
+  s_37743ae81b393e::t_d5088e3df7af72 13
+  s_37743ae81b393e::t_00ea1ca5925256 48,71
+deep_causality_physics/src/theories/electromagnetism/gauge_em_ops_impl.rs
+  s_37743ae81b393e::t_00ea1ca5925256 14,116
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/mod.rs
+  s_37743ae81b393e::t_00ea1ca5925256 36
+  s_37743ae81b393e::t_d5088e3df7af72 33
+  s_37743ae81b393e::t_84e9e2623343f1 6,8-11,13-15,29
+deep_causality_unified_math/deep_causality_topology/tests/extensions/lattice_gauge_field_ops_tests.rs
+  s_37743ae81b393e::t_00ea1ca5925256 1-160
+deep_causality_physics/src/theories/general_relativity/gr_ops.rs
+  s_37743ae81b393e::t_00ea1ca5925256 37,230
+deep_causality_unified_math/deep_causality_topology/src/extensions/hkt_gauge/gauge_field_ops.rs
+  s_37743ae81b393e::t_84e9e2623343f1 12-16
+  s_37743ae81b393e::t_00ea1ca5925256 1-11,17-574
+deep_causality_physics/src/theories/electromagnetism/gauge_em_ops.rs
+  s_37743ae81b393e::t_00ea1ca5925256 186,190
+openspec/notes/unified_math/hkt_gaps.md
+  s_37743ae81b393e::t_00ea1ca5925256 50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cbf3af23b2023bd601947e49d4216034d2c170e4",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
