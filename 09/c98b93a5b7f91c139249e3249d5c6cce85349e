@@ -1,0 +1,206 @@
+deep_causality_ethos/tests/types/effect_ethos/effect_ethos_norm_tests.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 6-8,68,93
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_hypothesis.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 11
+  s_81cdfd9e41c17d::t_2076efa0af3d39 9
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_bool/display.rs
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 6,9
+  s_81cdfd9e41c17d::t_0a0b932e338aa5 5,7
+  s_81cdfd9e41c17d::t_2076efa0af3d39 13
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_f64/datable.rs
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 9
+  s_81cdfd9e41c17d::t_2076efa0af3d39 7
+  s_81cdfd9e41c17d::t_c1d4468714818a 5-6,10
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/sequential_sampler.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 10
+  s_81cdfd9e41c17d::t_6ea78bb171d567 18,68,105
+openspec/changes/renovate-uncertain/tasks.md
+  s_81cdfd9e41c17d::t_a1a00aee5c31e8 109-110
+  s_81cdfd9e41c17d::t_fa1a19f529460e 88-94
+deep_causality_cfd/src/solvers/dec/uncertain_inflow/uncertain_boundary_source.rs
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 15,31,55
+  s_81cdfd9e41c17d::t_5f01094219f391 34-41,62-64,77-79,236-244
+  s_81cdfd9e41c17d::t_b1165adeff4e15 245
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_op_arithmetic.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 7
+  s_81cdfd9e41c17d::t_6ea78bb171d567 14,22,30,38,46,57
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_bool/mod.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 11
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 19,24
+  s_81cdfd9e41c17d::t_0a0b932e338aa5 10,13-17,21,25,29-31
+deep_causality_quantum/src/types/qpu/bridge.rs
+  s_81cdfd9e41c17d::t_672febbb215b4b 22,34,44,65
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_bool/datable.rs
+  s_81cdfd9e41c17d::t_0a0b932e338aa5 5-6,10
+  s_81cdfd9e41c17d::t_2076efa0af3d39 7
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 9
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/qmc_sampler.rs
+  s_81cdfd9e41c17d::t_0a88d1f6777979 15-17,43-45,66,228,235,246,293-294
+  s_81cdfd9e41c17d::t_6ea78bb171d567 46,58,67,113,148,216,229
+  s_81cdfd9e41c17d::t_2076efa0af3d39 22,286
+deep_causality_cfd/src/types/flow_config/uncertain_march_config.rs
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 17,21,32,41
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_verdict.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 29
+  s_81cdfd9e41c17d::t_6ea78bb171d567 31
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_sampling.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 20
+  s_81cdfd9e41c17d::t_2076efa0af3d39 10
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_f64/display.rs
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 6,9
+  s_81cdfd9e41c17d::t_c1d4468714818a 5,7,11
+deep_causality/src/utils/monadic_collection_utils.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 6
+  s_81cdfd9e41c17d::t_bafc7c6048d072 184
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_part_eq.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 6,8
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_bool/identifiable.rs
+  s_81cdfd9e41c17d::t_0a0b932e338aa5 5-6
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 7,9
+deep_causality_cfd/tests/solvers/dec/uncertain_boundary_source_f32_tests.rs
+  s_81cdfd9e41c17d::t_f4698c2603d412 6-34,37-38,40-55,58-59,61-76
+  s_81cdfd9e41c17d::t_a32b8a47b1eb46 35-36,39,56-57,60
+deep_causality/src/extensions/evaluable/mod.rs
+  s_81cdfd9e41c17d::t_da7f7523fbaf13 8
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_default.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 6,9
+deep_causality_unified_math/deep_causality_uncertain/src/utils/ratio.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 9,16,23,34
+deep_causality_cfd/tests/solvers/dec/uncertain_boundary_source_tests.rs
+  s_81cdfd9e41c17d::t_bffe33a2eff01c 146
+  s_81cdfd9e41c17d::t_2076efa0af3d39 17
+deep_causality_cfd/src/traits/marchable.rs
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 99
+deep_causality_unified_math/deep_causality_uncertain/tests/acceptance/precision_parameter_tests.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 28
+  s_81cdfd9e41c17d::t_6ea78bb171d567 35,38-39
+deep_causality/tests/utils/monadic_collection_utils_tests.rs
+  s_81cdfd9e41c17d::t_12871bd0649ea8 100-101,176
+  s_81cdfd9e41c17d::t_2076efa0af3d39 190
+  s_81cdfd9e41c17d::t_f1b03b03862373 7
+deep_causality_unified_math/deep_causality_uncertain/tests/types/sampler/qmc_static_structure_tests.rs
+  s_81cdfd9e41c17d::t_6c936f97452c4e 7-13,15
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_default.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 6,13
+openspec/changes/renovate-uncertain/specs/uncertain-realfield-generic/spec.md
+  s_81cdfd9e41c17d::t_a1a00aee5c31e8 11-14,16-21
+deep_causality/tests/formalization_lean/verdict_closure_tests.rs
+  s_81cdfd9e41c17d::t_aad9de4167929f 133
+deep_causality/tests/traits/causable_collection/collection_reasoning/stateful_monadic_collection_tests.rs
+  s_81cdfd9e41c17d::t_12871bd0649ea8 75
+  s_81cdfd9e41c17d::t_2076efa0af3d39 139
+deep_causality/tests/extensions/evaluable/csm_evaluable_tests.rs
+  s_81cdfd9e41c17d::t_aad9de4167929f 6
+  s_81cdfd9e41c17d::t_12871bd0649ea8 27-28
+deep_causality/src/lib.rs
+  s_81cdfd9e41c17d::t_0a0b932e338aa5 109-114
+deep_causality_unified_math/deep_causality_uncertain/src/types/computation/node/mod.rs
+  s_81cdfd9e41c17d::t_7e7669d7df3b4b 27,30-33,45-52,135
+deep_causality_unified_math/deep_causality_uncertain/src/algos/hypothesis/sprt_eval.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 37,124,126
+  s_81cdfd9e41c17d::t_2076efa0af3d39 8
+deep_causality_unified_math/deep_causality_uncertain/src/types/distribution/mod.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 15,36,38
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_op_logic.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 15,22,29,36,47
+  s_81cdfd9e41c17d::t_2076efa0af3d39 9
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_bool/adjustable.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 8
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 10
+  s_81cdfd9e41c17d::t_0a0b932e338aa5 5-7,11
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_map.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 9
+  s_81cdfd9e41c17d::t_6ea78bb171d567 12
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_part_eq.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 6,8
+deep_causality/src/utils_test/test_utils.rs
+  s_81cdfd9e41c17d::t_da7f7523fbaf13 8-9
+  s_81cdfd9e41c17d::t_bafc7c6048d072 110,112
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/mod.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 12
+  s_81cdfd9e41c17d::t_6ea78bb171d567 28,42
+deep_causality_unified_math/deep_causality_uncertain/src/types/leaf_ordinals/mod.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 10
+  s_81cdfd9e41c17d::t_6ea78bb171d567 57,62,70,109
+  s_81cdfd9e41c17d::t_0a88d1f6777979 121,133
+deep_causality_unified_math/deep_causality_uncertain/src/lib.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 10,61
+  s_81cdfd9e41c17d::t_2097e0a5536d88 11-12,56-59
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_op_comparison.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 17
+  s_81cdfd9e41c17d::t_2076efa0af3d39 8
+deep_causality_cfd/src/types/flow/uncertain_march_run.rs
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 28,32,51,56
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_verdict.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 15
+  s_81cdfd9e41c17d::t_6ea78bb171d567 17
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/leaf_draws.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 24,42,89
+  s_81cdfd9e41c17d::t_2076efa0af3d39 9
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_maybe/mod.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 39,162
+  s_81cdfd9e41c17d::t_2076efa0af3d39 11
+deep_causality/tests/types/context_node_types/data_uncertain/data_uncertain_bool_tests.rs
+  s_81cdfd9e41c17d::t_64f9ea3008dbc3 54-55
+  s_81cdfd9e41c17d::t_d97ac1f6e031da 50,82
+  s_81cdfd9e41c17d::t_12871bd0649ea8 13,22,30,38,42,62,66,75
+  s_81cdfd9e41c17d::t_aad9de4167929f 6-8
+deep_causality/tests/types/context_node_types/data_uncertain/data_uncertain_f64_tests.rs
+  s_81cdfd9e41c17d::t_64f9ea3008dbc3 54-57
+deep_causality/src/alias/alias_uncertain.rs
+  s_81cdfd9e41c17d::t_da7f7523fbaf13 5-21,29
+deep_causality_cfd/src/solvers/dec/uncertain_inflow/inflow_march.rs
+  s_81cdfd9e41c17d::t_41d4479d09b431 95,100
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 30,113,135,305
+deep_causality/src/traits/contextuable/datable_uncertain.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 6
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 20
+  s_81cdfd9e41c17d::t_ddbd092b912c74 18,26,29
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_statistics.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 11,14
+  s_81cdfd9e41c17d::t_2076efa0af3d39 7
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_f64/mod.rs
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 22,27
+  s_81cdfd9e41c17d::t_2076efa0af3d39 6
+  s_81cdfd9e41c17d::t_c1d4468714818a 5,13-20,24,28,32-38
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_f64/identifiable.rs
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 7,9
+  s_81cdfd9e41c17d::t_c1d4468714818a 5-6
+deep_causality_cfd/src/types/flow_config/cfd_config_builder.rs
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 83
+deep_causality_cfd/src/solvers/dec/uncertain_inflow/uncertain_inflow_zone.rs
+  s_81cdfd9e41c17d::t_dafb77b7bb27ee 40
+  s_81cdfd9e41c17d::t_e8c8db97ec6760 56-57,60-62
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_sampling.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 9
+  s_81cdfd9e41c17d::t_6ea78bb171d567 27
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_maybe/uncertain_maybe_ops.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 16,19,30,41,52,63
+deep_causality_unified_math/deep_causality_uncertain/src/traits/sampler/mod.rs
+  s_81cdfd9e41c17d::t_2076efa0af3d39 7
+  s_81cdfd9e41c17d::t_6ea78bb171d567 10
+deep_causality/src/types/context_node_types/data_uncertain/data_uncertain_f64/adjustable.rs
+  s_81cdfd9e41c17d::t_c1d4468714818a 5-7,9-15,17-28
+  s_81cdfd9e41c17d::t_8ad66cd52b4edb 8,16
+deep_causality_cfd/tests/solvers/dec/uncertain_inflow_tests.rs
+  s_81cdfd9e41c17d::t_bffe33a2eff01c 334,343
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/mod.rs
+  s_81cdfd9e41c17d::t_6ea78bb171d567 40
+  s_81cdfd9e41c17d::t_2076efa0af3d39 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "09c98b93a5b7f91c139249e3249d5c6cce85349e",
+  "prompts": {},
+  "sessions": {
+    "s_81cdfd9e41c17d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8acfed92-de4f-437a-970e-2160353169b5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
