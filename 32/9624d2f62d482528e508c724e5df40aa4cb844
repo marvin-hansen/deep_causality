@@ -1,0 +1,58 @@
+openspec/specs/qcl-decoder-abstraction/spec.md
+  s_a31005946f38f3::t_14f5c743c272a2 1-114
+openspec/specs/qcl-circuit-model/spec.md
+  s_a31005946f38f3::t_14f5c743c272a2 1-177
+openspec/specs/qcl-pipeline/spec.md
+  s_a31005946f38f3::t_14f5c743c272a2 324-406
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/main.rs
+  s_a31005946f38f3::t_9c13d8dc2ca70e 1-264
+openspec/specs/qcl-fault-tolerance/spec.md
+  s_a31005946f38f3::t_14f5c743c272a2 1-172
+openspec/notes/quantum/qcl-design-note.md
+  s_a31005946f38f3::t_3dcf34724da721 1049-1050,1052-1088
+  s_a31005946f38f3::t_ed6f7bcae781f6 1051
+  s_a31005946f38f3::t_b1764ae00017ce 1089
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/README.md
+  s_a31005946f38f3::t_9c13d8dc2ca70e 1-24
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/model.rs
+  s_a31005946f38f3::t_9c13d8dc2ca70e 1-181
+examples/quantum_examples/Cargo.toml
+  s_a31005946f38f3::t_9c13d8dc2ca70e 81-84
+examples/quantum_examples/README.md
+  s_a31005946f38f3::t_9c13d8dc2ca70e 33
+deep_causality_quantum/LEAN_QUANTUM.md
+  s_a31005946f38f3::t_3dcf34724da721 38,50-59
+  s_a31005946f38f3::t_785f1127b48c31 60
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/constants.rs
+  s_a31005946f38f3::t_9c13d8dc2ca70e 1-29
+openspec/specs/qcl-abstraction/spec.md
+  s_a31005946f38f3::t_14f5c743c272a2 1-317
+examples/quantum_examples/BUILD.bazel
+  s_a31005946f38f3::t_9c13d8dc2ca70e 159-170
+openspec/notes/quantum/qcl2-roadmap-verification.md
+  s_a31005946f38f3::t_ed6f7bcae781f6 364
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/design.md
+  s_a31005946f38f3::t_ad41033cc473f3 436-448
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-group-8.md
+  s_a31005946f38f3::t_fa2c8f359f3175 1-41
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/specs/qcl-pipeline/spec.md
+  s_a31005946f38f3::t_23e48147df321c 55-57,60-63,67-72
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/tasks.md
+  s_a31005946f38f3::t_99537dbf3c659a 151,154,156,158,161,163-165
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "329624d2f62d482528e508c724e5df40aa4cb844",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
