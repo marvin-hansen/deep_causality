@@ -1,0 +1,101 @@
+deep_causality_quantum/tests/types/circuit_model/qc_morphism_tests.rs
+  s_a31005946f38f3::t_872e3998aa52f3 393-396
+  s_a31005946f38f3::t_812ea310ece152 333-392,397-445
+deep_causality_quantum/tests/types/abstraction/decoder_abstraction_tests.rs
+  s_a31005946f38f3::t_365418bc673cd2 202-215
+deep_causality_quantum/src/types/abstraction/composition.rs
+  s_a31005946f38f3::t_969f86f1d5ecbd 166-171,176-178,196-201,232-254
+deep_causality_quantum/src/types/circuit_model/qc_morphism.rs
+  s_a31005946f38f3::t_c5ec1df2a924da 151-154,156-161,522-539,543-545,548-565,568-569,572,584-592,594-597,608-612,616-633,737-738,740-743,755-758
+  s_a31005946f38f3::t_68a9eda458de41 566-567,570-571,581-582
+  s_a31005946f38f3::t_f10d527504204a 583
+deep_causality_quantum/tests/types/abstraction/composition_tests.rs
+  s_a31005946f38f3::t_44deb99148d529 21-26,31-33,128-129,265-266,397-404,408-412,511-602,607-611
+  s_a31005946f38f3::t_fd8ab8b9af0f2c 27
+  s_a31005946f38f3::t_58043e75971b53 603-606
+deep_causality_quantum/tests/types/qcm/dem_model_tests.rs
+  s_a31005946f38f3::t_872e3998aa52f3 14,314-317,349-355
+  s_a31005946f38f3::t_365418bc673cd2 13,296-313,318-348,356-374
+deep_causality_quantum/src/utils_tests/fixtures.rs
+  s_a31005946f38f3::t_365418bc673cd2 42-54
+deep_causality_quantum/tests/types/abstraction/abstraction_tests.rs
+  s_a31005946f38f3::t_969f86f1d5ecbd 552-569,578-580,589-600,604-636
+  s_a31005946f38f3::t_58043e75971b53 20-22,570-577,581-588,601-603
+  s_a31005946f38f3::t_44deb99148d529 262-263,270,272,341-342,344,497-551
+deep_causality_quantum/src/types/abstraction/chains.rs
+  s_a31005946f38f3::t_872e3998aa52f3 15-21,46,53,152-153,157-160,171-176,178-196,225,228,230,233,235-241,243-249,252-253,261-262,264-266,268-270,272-284,304-306,324-330,408-447,531,581
+  s_a31005946f38f3::t_b6dc312e64240e 234
+  s_a31005946f38f3::t_298957f1ff1b2a 242,263,267,271
+deep_causality_quantum/src/types/abstraction/decoder_abstraction.rs
+  s_a31005946f38f3::t_872e3998aa52f3 51-53,62-73
+deep_causality_quantum/tests/types/abstraction/chains_tests.rs
+  s_a31005946f38f3::t_365418bc673cd2 1-52,55-103
+  s_a31005946f38f3::t_872e3998aa52f3 53-54
+deep_causality_quantum/src/types/qcm/dem_model.rs
+  s_a31005946f38f3::t_872e3998aa52f3 16-19,78-81,87-96,248-258,260-265,440-445,449,452-468
+  s_a31005946f38f3::t_c120fd72487fc6 39-42
+openspec/specs/qcl-abstraction/spec.md
+  s_a31005946f38f3::t_6bacbcd4a6768f 22-24
+  s_a31005946f38f3::t_1fae1fec401ebe 69-75,104-107,160-165,167
+deep_causality_quantum/tests/utils_tests/fixtures_tests.rs
+  s_a31005946f38f3::t_a25d7e473b5309 7-8,11,56-84
+deep_causality_quantum/src/types/abstraction/abstraction.rs
+  s_a31005946f38f3::t_58043e75971b53 12
+  s_a31005946f38f3::t_969f86f1d5ecbd 27-42,61-65,69-71,78-104,106-140,142-143,150-154,255-271,279-284,321-322,337-344,352-363,421-425,429,443,447,450-469
+deep_causality_quantum/tests/types/abstraction/mod.rs
+  s_a31005946f38f3::t_365418bc673cd2 8
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/README.md
+  s_a31005946f38f3::t_45478a9b205a62 22-26
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/model.rs
+  s_a31005946f38f3::t_c14c4c575d82cd 13-17
+lean/DeepCausalityFormal/Quantum/Abstraction.lean
+  s_a31005946f38f3::t_c1772073e610ef 38-39,56-57
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/design.md
+  s_a31005946f38f3::t_b940fedc7b6551 444-447
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/audits/README.md
+  s_a31005946f38f3::t_2f0d3ec1ba33e4 1-21
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/audits/audit_g5.py
+  s_a31005946f38f3::t_72eec2cf8dd475 1-33
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/audits/audit_g6.py
+  s_a31005946f38f3::t_7e1c8b25b72eb4 1-33
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/audits/audit_g7.py
+  s_a31005946f38f3::t_3ec95162d243d5 1-32
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-group-1.md
+  s_a31005946f38f3::t_05a9d4557c5484 52
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-group-5.md
+  s_a31005946f38f3::t_ed0d11b1af6c42 40
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-group-6.md
+  s_a31005946f38f3::t_4435bfed15d6de 47
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-group-7.md
+  s_a31005946f38f3::t_868712af2ba28e 47
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-group-8.md
+  s_a31005946f38f3::t_b465aa04a529ca 21
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/notes/tdd-groups-2-3.md
+  s_a31005946f38f3::t_84481a2fbde5fc 46
+openspec/changes/archive/2026-09-15-add-qcl2-abstraction/specs/qcl-decoder-abstraction/spec.md
+  s_a31005946f38f3::t_01138de0e8c446 20-22,70-75,81-84
+openspec/specs/qcl-circuit-model/spec.md
+  s_a31005946f38f3::t_71b6fb7f5a8a3b 33-36,40-43,103-111,182-188
+openspec/specs/qcl-decoder-abstraction/spec.md
+  s_a31005946f38f3::t_d288238811ab0a 24-26,74-79,85-88
+openspec/specs/qcl-fault-tolerance/spec.md
+  s_a31005946f38f3::t_bd3527b0b9b092 19-21,142-144,150-155
+openspec/specs/qcl-pipeline/spec.md
+  s_a31005946f38f3::t_9f2c736936edff 357-358,378-382,400-405,407,409-411
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8ee8c0b1cdb9f9ef46e0f252e500c7a1b7715da5",
+  "prompts": {},
+  "sessions": {
+    "s_a31005946f38f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0286e8e8-856e-4efa-99c7-8b0baa6eb625",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
