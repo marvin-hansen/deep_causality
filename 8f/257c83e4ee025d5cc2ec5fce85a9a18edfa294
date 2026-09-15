@@ -1,0 +1,109 @@
+examples/mathematics_examples/1_foundation/num/precision_boundary.rs
+  s_37743ae81b393e::t_47d0c783f7f269 1-19,25-64,71-99,101,104-109,121-123,129-195,197-200,204-211,216-234
+  s_37743ae81b393e::t_a860effe32803c 20-24,100,102-103,110-112,115-120,196,212-215
+  s_37743ae81b393e::t_f4488554c61b4d 65-70,113-114,124-128,201-203
+examples/mathematics_examples/1_foundation/haft/bifunctor.rs
+  s_37743ae81b393e::t_cfec78476157d6 6-21,92-117,119-122,144-148
+  s_37743ae81b393e::t_915f6450c67d9b 118
+  s_37743ae81b393e::t_b0a87bd7e5fed9 149-150
+deep_causality_unified_math/deep_causality_num_complex/tests/complex/octonion_number/multiplication_bug_repro_tests.rs
+  s_37743ae81b393e::t_44a39f3384c602 6-12,15-38,40-46,48-57,59-62,64-66,68-76,78-85,87-88,90-91,94-112
+examples/README.md
+  s_37743ae81b393e::t_f4488554c61b4d 268
+deep_causality_unified_math/deep_causality_num_complex/src/complex/octonion_number/arithmetic.rs
+  s_37743ae81b393e::t_f399fcac4ae657 6,257-268,270-275,277-278,280-303,305-306,308
+examples/mathematics_examples/1_foundation/tensor/README.md
+  s_37743ae81b393e::t_b9ea74b8071b40 11-12
+examples/mathematics_examples/1_foundation/num/scalars_and_precision.rs
+  s_37743ae81b393e::t_855789885a500a 42-44,85,87-89,96-98,104,106,155,157-160,163-171,186-188,191,238,240,242,246-248,255-256
+  s_37743ae81b393e::t_212ca558bdb241 1-28,34-41,45-84,86,103,105,110-154,156,161-162,172-173,192-230,232-233,239,244-245,249-254,260
+  s_37743ae81b393e::t_191fdcc6da689e 231
+  s_37743ae81b393e::t_984bb16066d39c 29-33,90-95,99-102,107-109,174-185,189-190,234-237,241,243,257-259
+examples/mathematics_examples/BUILD.bazel
+  s_37743ae81b393e::t_790e6187ddb5df 737-1069,1071-1084,1086-1099,1101-1114,1116-1126
+  s_37743ae81b393e::t_bb3b38367d8769 1070,1085,1100,1115
+  s_37743ae81b393e::t_f4488554c61b4d 1127-1171
+examples/mathematics_examples/1_foundation/linear/README.md
+  s_37743ae81b393e::t_b9ea74b8071b40 9
+examples/mathematics_examples/1_foundation/topology/manifold_curvature.rs
+  s_37743ae81b393e::t_915f6450c67d9b 98-103,157-159,219
+  s_37743ae81b393e::t_e04dcdf300ab1a 1-97,104-156,160-218,220-250
+examples/mathematics_examples/1_foundation/multivector/multifield_witness.rs
+  s_37743ae81b393e::t_915f6450c67d9b 166-169
+  s_37743ae81b393e::t_d5217513ed05b8 1-165,170-221
+examples/mathematics_examples/1_foundation/topology/fields_on_complexes.rs
+  s_37743ae81b393e::t_915f6450c67d9b 77-78,311
+  s_37743ae81b393e::t_32b1e24cfd9197 1-76,79-187,189-310,312-342
+  s_37743ae81b393e::t_5f52e5e48d4142 188
+examples/mathematics_examples/Cargo.toml
+  s_37743ae81b393e::t_bdc273bde9740d 153-156
+  s_37743ae81b393e::t_c215fc96e6cc3d 217-224
+  s_37743ae81b393e::t_212ca558bdb241 225-228
+  s_37743ae81b393e::t_32df44d310e3eb 86-88
+  s_37743ae81b393e::t_32b1e24cfd9197 265-268
+  s_37743ae81b393e::t_e967dd26bcd804 261-264
+  s_37743ae81b393e::t_d83ae004a9163f 229-232
+  s_37743ae81b393e::t_47d0c783f7f269 233-236
+  s_37743ae81b393e::t_b3088690adee64 213-216
+  s_37743ae81b393e::t_ba7d992bc38881 257-260
+  s_37743ae81b393e::t_d5217513ed05b8 174-176
+  s_37743ae81b393e::t_e04dcdf300ab1a 85,173,269-272
+examples/mathematics_examples/1_foundation/haft/README.md
+  s_37743ae81b393e::t_b9ea74b8071b40 35,62
+examples/mathematics_examples/1_foundation/num/README.md
+  s_37743ae81b393e::t_f4488554c61b4d 1,3-5,15-42
+  s_37743ae81b393e::t_b9ea74b8071b40 2,6-14
+examples/mathematics_examples/1_foundation/num/binary_field_gf2.rs
+  s_37743ae81b393e::t_f4488554c61b4d 177,228-235,239-254,265-268,274-277,283-286,299-302
+  s_37743ae81b393e::t_1458c0526e837f 50-53,153,156-157
+  s_37743ae81b393e::t_28ac575c15dce0 78-81,85,87-88,92,94,134,143,165
+  s_37743ae81b393e::t_d83ae004a9163f 1-49,54-77,82-84,86,89-91,93,95-133,135-142,144-152,154-155,158-164,166-176,178-227,236-238,255-264,269-273,278-282,287-298,303-327
+examples/mathematics_examples/1_foundation/tensor/tensor_train_compression.rs
+  s_37743ae81b393e::t_a190f38abf59fd 35,108
+  s_37743ae81b393e::t_915f6450c67d9b 118-122,221
+  s_37743ae81b393e::t_b3088690adee64 1-34,36-107,109-117,123-220,222-234
+examples/mathematics_examples/1_foundation/topology/neighbourhoods_three_ways.rs
+  s_37743ae81b393e::t_ba7d992bc38881 1-32,34-341
+  s_37743ae81b393e::t_7e6833e5eb3bec 33
+examples/mathematics_examples/1_foundation/topology/chain_cochain_pairing.rs
+  s_37743ae81b393e::t_e967dd26bcd804 1-119,122-287
+  s_37743ae81b393e::t_915f6450c67d9b 120-121
+deep_causality_unified_math/deep_causality_num_complex/src/complex/octonion_number/mod.rs
+  s_37743ae81b393e::t_44a39f3384c602 33,35-36,38-62
+examples/mathematics_examples/1_foundation/haft/free_and_cofree.rs
+  s_37743ae81b393e::t_915f6450c67d9b 121-126
+  s_37743ae81b393e::t_32df44d310e3eb 1-120,127-211
+examples/mathematics_examples/1_foundation/linear/dense_matrix_stencil.rs
+  s_37743ae81b393e::t_58fc708b8db103 32,91,128
+  s_37743ae81b393e::t_915f6450c67d9b 96-98,136-139
+  s_37743ae81b393e::t_bdc273bde9740d 1-31,33-90,92-95,99-127,129-135,140-208
+deep_causality_unified_math/deep_causality_num_complex/tests/complex/octonion_number/arithmetic_tests.rs
+  s_37743ae81b393e::t_44a39f3384c602 76-78,80,82,84
+examples/mathematics_examples/1_foundation/multivector/README.md
+  s_37743ae81b393e::t_b9ea74b8071b40 31
+examples/mathematics_examples/1_foundation/num/cayley_dickson_ladder.rs
+  s_37743ae81b393e::t_c215fc96e6cc3d 1-141,143-202,215-295,297-348
+  s_37743ae81b393e::t_915f6450c67d9b 142,296
+  s_37743ae81b393e::t_be369130046b48 203-214
+examples/mathematics_examples/1_foundation/README.md
+  s_37743ae81b393e::t_b9ea74b8071b40 4
+  s_37743ae81b393e::t_f4488554c61b4d 36
+examples/mathematics_examples/1_foundation/topology/README.md
+  s_37743ae81b393e::t_b9ea74b8071b40 12-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8f257c83e4ee025d5cc2ec5fce85a9a18edfa294",
+  "prompts": {},
+  "sessions": {
+    "s_37743ae81b393e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "26eca633-db96-4505-9dec-fc3ee06c3d4e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
