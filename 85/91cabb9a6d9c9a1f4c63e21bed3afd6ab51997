@@ -1,0 +1,70 @@
+examples/physics_examples/grmhd/main.rs
+  s_8c6d398c69b384::t_ac1e222127f62e 36,40-41,43,45-47,49,51-53,63-64,67-71,100-102,105-107
+examples/physics_examples/maxwell/model.rs
+  s_8c6d398c69b384::t_f382449f92c66d 17,31-33,35,42-46,58,154,201-202,208
+examples/physics_examples/multi_physics_pipeline/main.rs
+  s_8c6d398c69b384::t_0146402b752b92 245-247,250
+  s_8c6d398c69b384::t_c7a82d3d007e59 34,46-48,50-52,55,57-58,77,79,81-82,111-112,159,161,165-167,217,260,267-268,272,275,310-312,314-315,322,326,332,339
+  s_8c6d398c69b384::t_f13b44f5bd7447 60-75
+  s_8c6d398c69b384::t_dec2b3731236dd 342-345
+examples/physics_examples/grmhd/model.rs
+  s_8c6d398c69b384::t_ac1e222127f62e 19,33-41,107,109,111,113,116-117,194,216,234,249
+  s_8c6d398c69b384::t_dec2b3731236dd 175,206
+examples/physics_examples/event_horizon_probe/main.rs
+  s_8c6d398c69b384::t_75d3a678786e70 24,35-58,65,78-80,109,135,145,149,163-164,169-171,183,185-186,192
+examples/physics_examples/maxwell/main.rs
+  s_8c6d398c69b384::t_f382449f92c66d 36,39-41,44,55-57,122-124
+examples/physics_examples/gauge_weak_force/main.rs
+  s_8c6d398c69b384::t_fc1b34b1fcd552 18,29-35
+  s_8c6d398c69b384::t_b3872424ad5d35 121,148,178
+examples/physics_examples/gauge_gr/main.rs
+  s_8c6d398c69b384::t_512b7f3f443ca8 31-48,141-142,146,165,188,191,234,236-237,251,284-285,301-303,308,359-360,377,382,397,428-429,434,452,456,465
+  s_8c6d398c69b384::t_dec2b3731236dd 436
+  s_7a8519dba84209::t_f899ffcf08e6c1 17
+examples/physics_examples/carnot_cycle_engine/main.rs
+  s_8c6d398c69b384::t_aee58ee0bb96b9 255
+  s_8c6d398c69b384::t_77bf00c73743bf 30,36-39,41,43,45,47,49,51-55,57,59-61,72-73,79-81,134-135,258,261,264,269,275-276,298,309-311,335-338
+  s_8c6d398c69b384::t_49678a3960e23d 182,184
+examples/physics_examples/gauge_em/main.rs
+  s_8c6d398c69b384::t_dec2b3731236dd 319
+  s_8c6d398c69b384::t_6a4d996731539b 29,39-47,113,196,198,204,213,246,255,370,372
+examples/physics_examples/bernoulli_flow_network/main.rs
+  s_8c6d398c69b384::t_aee58ee0bb96b9 30,35-38,40,42-44,46-48,50,52-54,58,69-71,104,116,128-129,141,143,198,214-216,233,238,249-253
+  s_8c6d398c69b384::t_dec2b3731236dd 228
+examples/physics_examples/laser_resonator_stability/main.rs
+  s_8c6d398c69b384::t_b58a9e00058bf7 34,42-46,48-49,51,53,55,57-60,63,65,75,79-81,121,147,155,160,168,175,180,196-197,200,240,277,285-287,292,342,348
+  s_8c6d398c69b384::t_39c3efc2b65488 316-318,320,322-325,329
+examples/physics_examples/multi_physics_pipeline/model.rs
+  s_8c6d398c69b384::t_c7a82d3d007e59 10,23-26,49,53,60
+examples/physics_examples/gauge_lattice_u1_2d/main.rs
+  s_8c6d398c69b384::t_ca9de1721448bb 52,62,69-75,135,140,143,146,159-160,175-177,182,184,193,205,228-229,273-274,278-279
+  s_8c6d398c69b384::t_2c131ed4f02ba0 39,180,195,207
+examples/physics_examples/gravitational_wave/main.rs
+  s_8c6d398c69b384::t_1f8836227bdf84 288
+  s_8c6d398c69b384::t_73721123df9fd8 45,56,58,63,67,71-78,183,189,191,201,234-236,243-244,268,285,318-319,336-337,373,375-376,379-382
+  s_8c6d398c69b384::t_dec2b3731236dd 208
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8591cabb9a6d9c9a1f4c63e21bed3afd6ab51997",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8c6d398c69b384": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "686ffdfd-af9f-4baf-a561-f4e1a42a99fb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
