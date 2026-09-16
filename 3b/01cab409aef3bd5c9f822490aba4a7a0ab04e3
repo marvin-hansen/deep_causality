@@ -1,0 +1,36 @@
+deep_causality_unified_math/deep_causality_num/src/lift/lift_const.rs
+  s_7a8519dba84209::t_b54fed1895a488 6-162
+  s_7a8519dba84209::t_5d4392cf608d7c 1-5
+deep_causality_unified_math/deep_causality_num/src/lift/lift_try.rs
+  s_7a8519dba84209::t_1c8834984407b8 6-122
+  s_7a8519dba84209::t_8520cd574e5cb2 1-5
+deep_causality_unified_math/deep_causality_num/tests/lift/lift_const_tests.rs
+  s_7a8519dba84209::t_b17dfcf64667c5 24,118
+  s_7a8519dba84209::t_2618087842fb61 60,79,86-89,116,135-136,155,169
+  s_7a8519dba84209::t_bef7999f71d1e4 1-23,25-59,61-78,80-85,90-115,117,119-134,137-154,156-168,170
+deep_causality_unified_math/deep_causality_num/src/lib.rs
+  s_7a8519dba84209::t_2618087842fb61 53-58
+deep_causality_unified_math/deep_causality_num/src/lift/mod.rs
+  s_7a8519dba84209::t_988ce863f51767 21-27,55-59
+  s_7a8519dba84209::t_1c8834984407b8 68,70-77,79
+  s_7a8519dba84209::t_a04c3e5debf3c2 60,67
+deep_causality_unified_math/deep_causality_num/tests/lift/mod.rs
+  s_7a8519dba84209::t_34ce16f6aab9e4 7
+  s_7a8519dba84209::t_63b8554da1ac2d 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3b01cab409aef3bd5c9f822490aba4a7a0ab04e3",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
