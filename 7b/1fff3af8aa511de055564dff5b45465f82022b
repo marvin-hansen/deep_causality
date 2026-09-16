@@ -1,0 +1,239 @@
+examples/mathematics_examples/1_foundation/fft/fft_plans.rs
+  s_8c6d398c69b384::t_379abdc7850461 24,38-42,52,60,71-72,82-83,86,90,104,113,125,140,148
+  s_8c6d398c69b384::t_7eb694da60101f 98,119-120
+examples/mathematics_examples/1_foundation/multivector/matrix_representation.rs
+  s_8c6d398c69b384::t_0ad9029a5107fd 7,62
+  s_8c6d398c69b384::t_379abdc7850461 41-43,83
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 35-40,47-48
+examples/mathematics_examples/1_foundation/multivector/multi_field_differential.rs
+  s_8c6d398c69b384::t_4a7f69db5e9166 7
+  s_8c6d398c69b384::t_379abdc7850461 41-44,47,109
+examples/mathematics_examples/1_foundation/multivector/causal_multi_field_basics.rs
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 34-36,53,60-61
+  s_8c6d398c69b384::t_379abdc7850461 37-41,45,84,99
+  s_8c6d398c69b384::t_0ad9029a5107fd 9
+examples/mathematics_examples/1_foundation/topology/manifold_curvature.rs
+  s_8c6d398c69b384::t_c887e9652f92a2 39,48,54,57,67,93,97,112,130,140
+  s_8c6d398c69b384::t_379abdc7850461 62-65,68,181
+  s_8c6d398c69b384::t_7eb694da60101f 102
+examples/mathematics_examples/1_foundation/multivector/clifford_mhd_multivector.rs
+  s_8c6d398c69b384::t_379abdc7850461 24-28,66,70,87
+  s_8c6d398c69b384::t_4a7f69db5e9166 7
+examples/mathematics_examples/1_foundation/haft/free_and_cofree.rs
+  s_8c6d398c69b384::t_c887e9652f92a2 50,76
+  s_8c6d398c69b384::t_7eb694da60101f 95
+  s_8c6d398c69b384::t_379abdc7850461 35,55-57
+examples/mathematics_examples/2_composition/duality/multifield_data_pipeline/main.rs
+  s_8c6d398c69b384::t_7eb694da60101f 146,162
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 54,65-72,80,119,123,149
+examples/mathematics_examples/1_foundation/algebra/precision_as_a_parameter.rs
+  s_8c6d398c69b384::t_379abdc7850461 28,39-41,70
+examples/mathematics_examples/1_foundation/haft/unbound_haft.rs
+  s_8c6d398c69b384::t_379abdc7850461 9,15-19,101
+  s_8c6d398c69b384::t_7eb694da60101f 77,155-156
+examples/mathematics_examples/1_foundation/haft/collectable.rs
+  s_8c6d398c69b384::t_379abdc7850461 22,27-30,58-59
+examples/mathematics_examples/1_foundation/haft/foldable.rs
+  s_8c6d398c69b384::t_379abdc7850461 7,26-28,51
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 21-25,35,40,45
+examples/mathematics_examples/3_applications/lattice_gauge_thermalization/main.rs
+  s_8c6d398c69b384::t_ea58ab5206ca19 54-55,111-112
+  s_8c6d398c69b384::t_c887e9652f92a2 40,44,65,82
+  s_8c6d398c69b384::t_563cfaac8e1b81 27
+  s_8c6d398c69b384::t_c7fc18f31898c9 61-63,128
+examples/mathematics_examples/1_foundation/haft/monad.rs
+  s_8c6d398c69b384::t_4a7f69db5e9166 8
+  s_8c6d398c69b384::t_379abdc7850461 18-21,44,106
+examples/mathematics_examples/3_applications/electromagnetic_field/main.rs
+  s_8c6d398c69b384::t_13be512bb2be30 31,91,101
+  s_8c6d398c69b384::t_c887e9652f92a2 42-43,56,70-71
+  s_8c6d398c69b384::t_2becb8250c34e3 34
+  s_8c6d398c69b384::t_8128e1c88f708b 74
+  s_8c6d398c69b384::t_4c24e8bcec7fa9 40,133-136,140
+  s_8c6d398c69b384::t_e5202907000c71 37-39
+  s_8c6d398c69b384::t_c7fc18f31898c9 61-63,112
+examples/mathematics_examples/2_composition/chaining/effect_tensor_algebra_roundtrip/main.rs
+  s_8c6d398c69b384::t_a1d8ce1b7d3ffe 25
+  s_8c6d398c69b384::t_7eb694da60101f 42-44
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 33-38,70,98,100
+examples/mathematics_examples/2_composition/duality/stokes_adjunction/main.rs
+  s_8c6d398c69b384::t_4a7f69db5e9166 38
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 53-55,67
+examples/mathematics_examples/1_foundation/topology/chain_cochain_pairing.rs
+  s_8c6d398c69b384::t_379abdc7850461 63-65,92,124,138
+  s_8c6d398c69b384::t_c887e9652f92a2 31,56,58,99,111
+  s_8c6d398c69b384::t_7eb694da60101f 123
+examples/mathematics_examples/1_foundation/topology/fields_on_complexes.rs
+  s_8c6d398c69b384::t_c887e9652f92a2 53-54,58,61-63,66,169,179-180,191,198-200
+  s_8c6d398c69b384::t_379abdc7850461 71-73,131,156
+  s_8c6d398c69b384::t_cf11a037775c82 32
+examples/mathematics_examples/1_foundation/topology/neighbourhoods_three_ways.rs
+  s_8c6d398c69b384::t_c887e9652f92a2 32,61,64,67,120,148,253
+  s_8c6d398c69b384::t_379abdc7850461 72-76,121,131,150,261
+  s_8c6d398c69b384::t_7eb694da60101f 127-128,146
+examples/mathematics_examples/1_foundation/algebra/real_and_complex_uniformly.rs
+  s_8c6d398c69b384::t_379abdc7850461 44-48,59-60,72,87
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 33,40-43,101-102
+examples/mathematics_examples/2_composition/operators/cubical_heat_diffusion/main.rs
+  s_8c6d398c69b384::t_0ad9029a5107fd 31-33,148
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 51-53
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 54-57,65-66,154
+examples/mathematics_examples/3_applications/relativistic_spinor_transport/main.rs
+  s_8c6d398c69b384::t_c7fc18f31898c9 73-77,86-87,135,164,168,172,205
+  s_8c6d398c69b384::t_c887e9652f92a2 41,67,206
+  s_8c6d398c69b384::t_7eb694da60101f 80
+examples/mathematics_examples/1_foundation/haft/comonad.rs
+  s_8c6d398c69b384::t_379abdc7850461 7,28-30,62
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 25-27,34-35
+examples/mathematics_examples/1_foundation/topology/complex_operators.rs
+  s_8c6d398c69b384::t_379abdc7850461 19,26-29,45,50
+examples/mathematics_examples/2_composition/extension/sparse_matrix_contextual_sum/main.rs
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 15,21-28,34,40,56,63,68
+  s_8c6d398c69b384::t_7eb694da60101f 31
+examples/mathematics_examples/1_foundation/topology/basic_graph.rs
+  s_8c6d398c69b384::t_0ad9029a5107fd 15
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 22-25,31
+  s_8c6d398c69b384::t_379abdc7850461 26-28
+examples/mathematics_examples/1_foundation/tensor/basic_causal_tensor.rs
+  s_8c6d398c69b384::t_e1d8c409959cf3 64
+  s_8c6d398c69b384::t_bd2ebabab6dda1 24-28
+  s_8c6d398c69b384::t_379abdc7850461 15,29-32,62,97
+  s_8c6d398c69b384::t_7eb694da60101f 61
+examples/mathematics_examples/1_foundation/stats/descriptive_and_distributions.rs
+  s_8c6d398c69b384::t_379abdc7850461 27,44-51,73,87,95-96,108
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 41-43,64,78-79
+  s_8c6d398c69b384::t_7eb694da60101f 91,107
+examples/mathematics_examples/1_foundation/multivector/multifield_witness.rs
+  s_8c6d398c69b384::t_c887e9652f92a2 48,51,54,68,89,130
+  s_8c6d398c69b384::t_7eb694da60101f 157-160
+  s_8c6d398c69b384::t_cf11a037775c82 37
+  s_8c6d398c69b384::t_379abdc7850461 59-63,73,135,147
+examples/mathematics_examples/2_composition/operators/field_gradient_flow/main.rs
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 45-52,59,68,78,97
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 27,42-44,108-109
+  s_8c6d398c69b384::t_7eb694da60101f 133
+examples/mathematics_examples/1_foundation/haft/functor_causal_tensor.rs
+  s_8c6d398c69b384::t_7eb694da60101f 46
+  s_8c6d398c69b384::t_379abdc7850461 6,15,21-26,30,33,39,41
+examples/mathematics_examples/1_foundation/haft/hkt_multivector.rs
+  s_8c6d398c69b384::t_bd2ebabab6dda1 33-34
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 35-45,54,58,75
+  s_8c6d398c69b384::t_379abdc7850461 46-50,56,61
+  s_8c6d398c69b384::t_7eb694da60101f 55,76
+  s_8c6d398c69b384::t_0ad9029a5107fd 86
+  s_8c6d398c69b384::t_e1d8c409959cf3 8,64
+examples/mathematics_examples/1_foundation/num/cayley_dickson_ladder.rs
+  s_8c6d398c69b384::t_379abdc7850461 55-58,88
+  s_8c6d398c69b384::t_7eb694da60101f 173
+  s_8c6d398c69b384::t_c887e9652f92a2 36,47,50,95,111,128
+examples/mathematics_examples/2_composition/chaining/effect_kalman_predict_correct/main.rs
+  s_8c6d398c69b384::t_7eb694da60101f 44-45
+  s_8c6d398c69b384::t_4a7f69db5e9166 25
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 33-40,65,88,112-113,115
+examples/mathematics_examples/2_composition/alignment/zip_and_convolve/main.rs
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 30,38-46,64,75-78,107-108,117-118,123-124
+examples/mathematics_examples/2_composition/extension/diffusion_space_and_time/main.rs
+  s_8c6d398c69b384::t_4a7f69db5e9166 22
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 33,42-47,52-53,97,108-109
+  s_8c6d398c69b384::t_7eb694da60101f 71-73,134-137
+examples/mathematics_examples/2_composition/alignment/ensemble_x_lattice_ising/main.rs
+  s_8c6d398c69b384::t_7eb694da60101f 54-56,233
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 100-102
+examples/mathematics_examples/1_foundation/multivector/basic_multivector.rs
+  s_8c6d398c69b384::t_379abdc7850461 31-35,49-50,55,62-63,68,79-80
+  s_8c6d398c69b384::t_4a7f69db5e9166 20
+examples/mathematics_examples/1_foundation/linear/basic_csr_ops.rs
+  s_8c6d398c69b384::t_379abdc7850461 13,19-21,32
+examples/mathematics_examples/2_composition/extension/manifold_laplacian_stencil/main.rs
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 22,34-37,49-50,103
+examples/mathematics_examples/1_foundation/multivector/algebraic_scanner/main.rs
+  s_8c6d398c69b384::t_379abdc7850461 30-34,62-63,69-70
+  s_8c6d398c69b384::t_4a7f69db5e9166 22
+examples/mathematics_examples/1_foundation/topology/chain_algebra.rs
+  s_8c6d398c69b384::t_4a7f69db5e9166 8
+  s_8c6d398c69b384::t_7eb694da60101f 123
+  s_8c6d398c69b384::t_379abdc7850461 16-20,142
+examples/mathematics_examples/2_composition/extension/graph_convolution/main.rs
+  s_8c6d398c69b384::t_563cfaac8e1b81 24
+  s_8c6d398c69b384::t_c887e9652f92a2 33,36,59,73
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 43-46,71,97
+  s_8c6d398c69b384::t_7eb694da60101f 60
+examples/mathematics_examples/2_composition/operators/differential_field/main.rs
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 8,16-21,41-42,49,60
+examples/mathematics_examples/3_applications/differentiate_under_integral/main.rs
+  s_8c6d398c69b384::t_cf11a037775c82 18
+  s_8c6d398c69b384::t_c7fc18f31898c9 29-32,40-41,57,62
+  s_8c6d398c69b384::t_c887e9652f92a2 22,34
+examples/mathematics_examples/3_applications/imu_tilt_estimation/main.rs
+  s_8c6d398c69b384::t_c7fc18f31898c9 122-126,135-136,173,228,273,290,297,301,315,319,378,395,405,416
+  s_8c6d398c69b384::t_c887e9652f92a2 62,67,72,77,80,84,88,97-98,103,137,185,249,253-254,300,312-314
+  s_8c6d398c69b384::t_e1d8c409959cf3 48
+  s_8c6d398c69b384::t_7eb694da60101f 260,324,333,421
+  s_8c6d398c69b384::t_f31f6f6482f56f 426,430,433
+  s_8c6d398c69b384::t_bd2ebabab6dda1 120-121,227
+examples/mathematics_examples/2_composition/nesting/tensor_x_algebra_rotation_field/main.rs
+  s_8c6d398c69b384::t_4a7f69db5e9166 23
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 34-38,43,73,76,86-87
+examples/mathematics_examples/2_composition/chaining/einstein_field_causal_tensor/main.rs
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 15,24-26,37
+  s_8c6d398c69b384::t_e1d8c409959cf3 71-72
+  s_8c6d398c69b384::t_bd2ebabab6dda1 22-23
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 27-30,35,116
+examples/mathematics_examples/3_applications/structural_stress_on_mesh/main.rs
+  s_8c6d398c69b384::t_c7fc18f31898c9 35,121-127,143,262,269-270,287,311,338,344,349,404,409,429
+  s_8c6d398c69b384::t_c887e9652f92a2 95,97,101-103,290-293
+  s_8c6d398c69b384::t_7eb694da60101f 131-132,456-457
+examples/mathematics_examples/3_applications/relativistic_mhd/main.rs
+  s_8c6d398c69b384::t_c887e9652f92a2 29,43-44,47-48,77,86-87,114
+  s_8c6d398c69b384::t_c7fc18f31898c9 58-60,92,102,142
+examples/mathematics_examples/1_foundation/haft/constrained_functors.rs
+  s_8c6d398c69b384::t_379abdc7850461 29,37-39,59
+examples/mathematics_examples/1_foundation/haft/applicative.rs
+  s_8c6d398c69b384::t_379abdc7850461 22-24,41
+  s_8c6d398c69b384::t_4a7f69db5e9166 7
+examples/mathematics_examples/1_foundation/haft/profunctor.rs
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 16-19,57,106
+  s_8c6d398c69b384::t_7eb694da60101f 89
+  s_8c6d398c69b384::t_379abdc7850461 7,20-22
+examples/mathematics_examples/2_composition/duality/tensor_sparse_memory_budget/main.rs
+  s_8c6d398c69b384::t_0ad9029a5107fd 90
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 43,52-54
+examples/mathematics_examples/1_foundation/tensor/tensor_train_compression.rs
+  s_8c6d398c69b384::t_379abdc7850461 54-61,99,116,125,142-145
+  s_8c6d398c69b384::t_7eb694da60101f 158-161
+  s_8c6d398c69b384::t_c887e9652f92a2 43,46,49,71,92,112,120
+  s_8c6d398c69b384::t_cf11a037775c82 33
+examples/mathematics_examples/2_composition/operators/sampled_integration/main.rs
+  s_8c6d398c69b384::t_0ad9029a5107fd 31
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 46-48,115-116
+  s_8c6d398c69b384::t_7eb694da60101f 60,65
+  s_8c6d398c69b384::t_c887e9652f92a2 37,55
+  s_8c6d398c69b384::t_ad77bb6d5f2a2e 49-53,59,99-100,122,132,138
+examples/mathematics_examples/1_foundation/linear/dense_matrix_stencil.rs
+  s_8c6d398c69b384::t_7eb694da60101f 102,128
+  s_8c6d398c69b384::t_c887e9652f92a2 33,49,52,86,120
+  s_8c6d398c69b384::t_379abdc7850461 57-62,113
+examples/mathematics_examples/1_foundation/calculus/differentiation_and_integration.rs
+  s_8c6d398c69b384::t_9d3a18cac9e7e8 43-45,83
+  s_8c6d398c69b384::t_7eb694da60101f 80
+  s_8c6d398c69b384::t_379abdc7850461 32,46-52,59,61,68,71-72,90,93,95
+examples/mathematics_examples/1_foundation/topology/manifold_analysis.rs
+  s_8c6d398c69b384::t_379abdc7850461 18-20,60
+  s_8c6d398c69b384::t_4a7f69db5e9166 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7b1fff3af8aa511de055564dff5b45465f82022b",
+  "prompts": {},
+  "sessions": {
+    "s_8c6d398c69b384": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "686ffdfd-af9f-4baf-a561-f4e1a42a99fb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
