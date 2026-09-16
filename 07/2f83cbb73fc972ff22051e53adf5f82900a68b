@@ -1,0 +1,72 @@
+examples/mathematics_examples/2_composition/README.md
+  s_8c6d398c69b384::t_bf64e337b9ee40 22-25
+examples/mathematics_examples/3_applications/standard_model_symmetry/main.rs
+  s_8c6d398c69b384::t_981f0bb24366ce 87
+examples/mathematics_examples/2_composition/chaining/einstein_field_causal_tensor/main.rs
+  s_8c6d398c69b384::t_b1b81a21abefef 135
+examples/mathematics_examples/3_applications/imu_tilt_estimation/main.rs
+  s_8c6d398c69b384::t_5ed7986edfeb9d 447-448
+examples/medicine_examples/protein_folding/main.rs
+  s_7a8519dba84209::t_56d8688e32ff3b 32,46
+examples/mathematics_examples/2_composition/extension/sparse_matrix_contextual_sum/main.rs
+  s_8c6d398c69b384::t_5ed7986edfeb9d 93
+examples/mathematics_examples/3_applications/differentiate_under_integral/main.rs
+  s_8c6d398c69b384::t_5ed7986edfeb9d 68-69
+examples/mathematics_examples/3_applications/relativistic_mhd/main.rs
+  s_8c6d398c69b384::t_4a6b3e2f06d0e3 165
+examples/mathematics_examples/3_applications/README.md
+  s_8c6d398c69b384::t_bf64e337b9ee40 26,37-41
+examples/medicine_examples/epilepsy/main.rs
+  s_7a8519dba84209::t_996976e83b3979 32,43
+examples/mathematics_examples/2_composition/extension/graph_convolution/main.rs
+  s_8c6d398c69b384::t_a12280465669fc 6-22,28-40,46,49-52,54-56,63,65-66,71-101,107-108,113,116-118
+examples/mathematics_examples/2_composition/alignment/zip_and_convolve/main.rs
+  s_8c6d398c69b384::t_4a6b3e2f06d0e3 151
+examples/mathematics_examples/3_applications/electromagnetic_field/main.rs
+  s_8c6d398c69b384::t_4a6b3e2f06d0e3 146
+examples/mathematics_examples/2_composition/duality/multifield_data_pipeline/main.rs
+  s_8c6d398c69b384::t_4a6b3e2f06d0e3 183
+examples/mathematics_examples/2_composition/operators/differential_field/main.rs
+  s_8c6d398c69b384::t_4a6b3e2f06d0e3 115
+examples/mathematics_examples/3_applications/lattice_gauge_thermalization/main.rs
+  s_8c6d398c69b384::t_5ed7986edfeb9d 148
+examples/medicine_examples/epilepsy/model.rs
+  s_7a8519dba84209::t_07ca23066ec1ee 19-20
+  s_7a8519dba84209::t_996976e83b3979 97
+examples/mathematics_examples/2_composition/duality/stokes_adjunction/main.rs
+  s_8c6d398c69b384::t_4a6b3e2f06d0e3 145
+examples/mathematics_examples/2_composition/duality/tensor_sparse_memory_budget/main.rs
+  s_8c6d398c69b384::t_48ff0724747d56 8
+  s_8c6d398c69b384::t_5ed7986edfeb9d 191-192
+  s_8c6d398c69b384::t_24569af54cbb52 141,146,159,172,180
+  s_8c6d398c69b384::t_4ae77b75cb30ac 41,84
+examples/mathematics_examples/2_composition/operators/cubical_heat_diffusion/main.rs
+  s_8c6d398c69b384::t_b1b81a21abefef 62,100-103
+  s_8c6d398c69b384::t_5f7b66ff350514 104
+Cargo.lock
+  s_7a8519dba84209::t_8adf914f03e855 1351,1354-1355,1358
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "072f83cbb73fc972ff22051e53adf5f82900a68b",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8c6d398c69b384": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "686ffdfd-af9f-4baf-a561-f4e1a42a99fb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
