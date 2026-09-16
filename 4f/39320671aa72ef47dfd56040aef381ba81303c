@@ -1,0 +1,62 @@
+examples/physics_examples/Cargo.toml
+  s_8c6d398c69b384::t_dd5175c4e8b1df 15
+  s_8c6d398c69b384::t_e463fe0488b912 24,31,41-44
+deep_causality_physics/src/constants/earth.rs
+  s_8c6d398c69b384::t_55a03a246b77b8 17
+deep_causality_physics/BUILD.bazel
+  s_8c6d398c69b384::t_55a03a246b77b8 7-8
+examples/physics_examples/README.md
+  s_8c6d398c69b384::t_6d5530e6faf67c 27
+examples/avionics_examples/navigation/ins_gnss_blackout/README.md
+  s_8c6d398c69b384::t_1f0d08f1db3a13 52
+examples/physics_examples/BUILD.bazel
+  s_8c6d398c69b384::t_46dd94bae2f9b5 29-39,171-182
+  s_8c6d398c69b384::t_f3a362e2123c83 28
+examples/physics_examples/chronometric_gm_recovery/pipeline.rs
+  s_8c6d398c69b384::t_36de6c75ac246f 1-30,32-310
+  s_8c6d398c69b384::t_f8fe2ceff6d34b 31
+deep_causality_unified_math/deep_causality_rand/BUILD.bazel
+  s_8c6d398c69b384::t_55a03a246b77b8 6-7
+examples/physics_examples/chronometric_gm_recovery/README.md
+  s_8c6d398c69b384::t_69dee139dddfbc 1-252
+examples/README.md
+  s_8c6d398c69b384::t_d8248adcb3dd9c 260-262,280
+examples/physics_examples/chronometric_gm_recovery/main.rs
+  s_8c6d398c69b384::t_33dfb87841ee1d 1-87
+examples/physics_examples/chronometric_gm_recovery/paths.rs
+  s_8c6d398c69b384::t_f89931c43e10c4 1-38
+deep_causality_utils/deep_causality_file/tests/load_real_galileo.rs
+  s_8c6d398c69b384::t_1f0d08f1db3a13 7,19
+  s_8c6d398c69b384::t_f8fe2ceff6d34b 21
+examples/physics_examples/chronometric_gm_recovery/proces_utils/lagrange.rs
+  s_8c6d398c69b384::t_f8fe2ceff6d34b 7
+  s_8c6d398c69b384::t_36de6c75ac246f 1-6,8-382
+deep_causality_physics/README_KERNELS.md
+  s_8c6d398c69b384::t_55a03a246b77b8 132-133
+deep_causality_utils/deep_causality_file/BUILD.bazel
+  s_8c6d398c69b384::t_1f0d08f1db3a13 109
+examples/physics_examples/chronometric_gm_recovery/data_manager/mod.rs
+  s_8c6d398c69b384::t_f89931c43e10c4 1-19
+examples/avionics_examples/navigation/ins_gnss_blackout/main.rs
+  s_8c6d398c69b384::t_1f0d08f1db3a13 97
+Cargo.lock
+  s_8c6d398c69b384::t_ac44048c7f54ea 1574,1579
+deep_causality_quantum/Cargo.toml
+  s_8c6d398c69b384::t_623c01795cc04d 32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4f39320671aa72ef47dfd56040aef381ba81303c",
+  "prompts": {},
+  "sessions": {
+    "s_8c6d398c69b384": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "686ffdfd-af9f-4baf-a561-f4e1a42a99fb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
