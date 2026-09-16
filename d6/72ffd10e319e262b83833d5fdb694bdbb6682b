@@ -1,0 +1,23 @@
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_neg_zero_tests.rs
+  s_7a8519dba84209::t_3c3c1e3564b07c 183-241
+deep_causality_unified_math/deep_causality_num/tests/float_double/double_float_tests.rs
+  s_7a8519dba84209::t_69c965e0780262 585-590,592,595-597
+deep_causality_unified_math/deep_causality_num/src/float/float_106_impl.rs
+  s_7a8519dba84209::t_30c4457eec08ed 608-620,622-633
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d672ffd10e319e262b83833d5fdb694bdbb6682b",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
