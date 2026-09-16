@@ -1,0 +1,31 @@
+deep_causality_unified_math/deep_causality_topology/tests/types/manifold/manifold_topology_tests.rs
+  s_7a8519dba84209::t_d4fcf9d3c523cd 7-9
+deep_causality_unified_math/deep_causality_topology/tests/traits/mod.rs
+  s_7a8519dba84209::t_78957e5c095799 6
+deep_causality_unified_math/deep_causality_topology/tests/types/manifold/utils_manifold_tests.rs
+  s_7a8519dba84209::t_8091b636f559b5 15-16
+deep_causality_unified_math/deep_causality_topology/src/traits/base_topology.rs
+  s_7a8519dba84209::t_7af81edfa18c96 74-103,109-110
+  s_7a8519dba84209::t_87518e6d77e193 104-108
+deep_causality_unified_math/deep_causality_topology/src/traits/mod.rs
+  s_7a8519dba84209::t_7af81edfa18c96 36-38
+deep_causality_unified_math/deep_causality_topology/tests/traits/base_topology_tests.rs
+  s_7a8519dba84209::t_ef5f289efd760d 142,173,202
+  s_7a8519dba84209::t_78957e5c095799 1-141,143-172,174-201,203-224
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6018aa35d8cdc67186e2da8bc273899583046ffb",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
