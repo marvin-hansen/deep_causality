@@ -1,0 +1,21 @@
+examples/medicine_examples/tissue_classification/model.rs
+  s_7a8519dba84209::t_64680a4e38dcfa 90-93,102
+deep_causality_physics/src/error/physics_error.rs
+  s_7a8519dba84209::t_3eeff9763bada7 8,10,16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d8abb40396e6b88aab8e9bfcddec60077a6f7af1",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
