@@ -1,0 +1,20 @@
+deep_causality_physics/src/error/physics_error.rs
+  s_8c6d398c69b384::t_4d95b50c663904 9,15
+  s_8c6d398c69b384::t_9b93e83b02d7d3 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "210a88b2ea96a9637d9375806baab84d6bbac579",
+  "prompts": {},
+  "sessions": {
+    "s_8c6d398c69b384": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "686ffdfd-af9f-4baf-a561-f4e1a42a99fb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
