@@ -1,0 +1,37 @@
+examples/physics_examples/maxwell/main.rs
+  s_7a8519dba84209::t_ddb758fb8e4b52 23-30,38,40,42-43,45,47-48,50,53-68,72,78,86-90,92,95-103,108,113,117-122,124,126,128-129,133-135,144-145,149-152,156-157
+examples/physics_examples/maxwell/utils_print.rs
+  s_7a8519dba84209::t_ddb758fb8e4b52 1-77
+examples/physics_examples/gravitational_wave/main.rs
+  s_7a8519dba84209::t_d76ec4bf09b4b1 27,29-30,33-39,53,76-78,88-94,100,114-118,124-125,168-170,189,246-249,255-265,271-273,277,290-296,298-299,301,303-306,311-318,320-326,329-332,339-341,345,349,406-409,413-415,421-424,429,431-432,439,441-442,447-451,453
+  s_7a8519dba84209::t_d971d80f8d440e 446
+  s_7a8519dba84209::t_c4d0522c86ced9 416-420
+  s_7a8519dba84209::t_c1c12e9fddb444 95-99
+examples/physics_examples/grmhd/main.rs
+  s_7a8519dba84209::t_f99618225e2383 20-21,24-33,37,41,43-47,51-53,56,58,60-61,66-81,96-98,104-115,118-124,127-130,132-136
+examples/physics_examples/maxwell/model.rs
+  s_7a8519dba84209::t_ddb758fb8e4b52 15,18,40-49,55-56,59-61,98-102,110,123-125,127-129,159,176,188
+examples/physics_examples/gravitational_wave/README.md
+  s_7a8519dba84209::t_c1c12e9fddb444 3,11-12,22,44-50,52,58,62-64,67-73,76-96
+examples/physics_examples/grmhd/utils_print.rs
+  s_7a8519dba84209::t_c4d0522c86ced9 50
+  s_7a8519dba84209::t_f99618225e2383 1-49,51-128
+examples/physics_examples/grmhd/model.rs
+  s_7a8519dba84209::t_f99618225e2383 9-12,21,23,29-31,40-41,46-52,63,65,67,78-79,84,86,93-97,100-103,118-119,121-125,143,150,161-163,181-182,213-219,225-226,228,230-231,241-245,248-249,256-259,261-263,265-267,269,272-292
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6b5e284cc19b81254ae260a727d8e88ae7b35177",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
