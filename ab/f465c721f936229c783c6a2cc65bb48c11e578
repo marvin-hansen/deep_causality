@@ -1,0 +1,45 @@
+deep_causality_unified_math/deep_causality_num/src/lift/lift_const.rs
+  s_7a8519dba84209::t_5d4392cf608d7c 1-5
+  s_7a8519dba84209::t_38d02673e8e07b 8-11,13-16,18-20,122-124,147-149
+  s_7a8519dba84209::t_b54fed1895a488 6-7,12,17,21-42,44-46,49-59,62-68,71-74,76-78,80-82,84-86,88-100,102-104,106-108,110-112,114-121,125-128,130-131,134-138,140,142-146,150-153,155-156,158-162,164,166-167
+  s_7a8519dba84209::t_2ef4c6bbdfea92 43,47-48,60-61,69-70,75,79,83,87,101,105,109,113,129,132-133,139,141,154,157,163,165
+deep_causality_unified_math/deep_causality_num/src/lift/lift_try.rs
+  s_7a8519dba84209::t_8520cd574e5cb2 1-5
+  s_7a8519dba84209::t_1c8834984407b8 6-122
+deep_causality_unified_math/deep_causality_num/src/lib.rs
+  s_7a8519dba84209::t_424f5a876efe45 53-58
+deep_causality_unified_math/deep_causality_num/tests/lift/mod.rs
+  s_7a8519dba84209::t_63b8554da1ac2d 6
+  s_7a8519dba84209::t_34ce16f6aab9e4 7
+deep_causality_unified_math/deep_causality_num/tests/lift/lift_const_tests.rs
+  s_7a8519dba84209::t_b17dfcf64667c5 120
+  s_7a8519dba84209::t_2618087842fb61 62,81,88-91,118,137-138,157,171
+  s_7a8519dba84209::t_bef7999f71d1e4 1-9,13-23,27-33,35-37,43-50,54-59,63-70,72,74-80,82-84,86,92-94,96-98,104-112,116-117,119,121-123,126-129,131,135-136,139-147,150-156,158-163,165-166,168-170,172
+  s_7a8519dba84209::t_38d02673e8e07b 10-12
+  s_7a8519dba84209::t_2ef4c6bbdfea92 34,39-42,52-53,61,73,87,95,100-103,114-115,125,132-134,148-149,164,167
+  s_7a8519dba84209::t_424f5a876efe45 24-26
+  s_7a8519dba84209::t_5cb548fed78ef3 38,51,60,71,85,99,113,124,130
+deep_causality_unified_math/deep_causality_num/src/lift/mod.rs
+  s_7a8519dba84209::t_38d02673e8e07b 18,22,27-28,56-59
+  s_7a8519dba84209::t_988ce863f51767 23-26,60-61
+  s_7a8519dba84209::t_a04c3e5debf3c2 62,69
+  s_7a8519dba84209::t_1c8834984407b8 70,73-79,81
+  s_7a8519dba84209::t_2ef4c6bbdfea92 72
+  s_7a8519dba84209::t_e459734bc9259b 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "abf465c721f936229c783c6a2cc65bb48c11e578",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": null
+    }
+  }
+}
