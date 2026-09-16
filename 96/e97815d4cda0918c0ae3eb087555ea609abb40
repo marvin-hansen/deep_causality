@@ -1,0 +1,55 @@
+examples/quantum_examples/qcl_examples/qcl_crosstalk_circuits/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 64,69,211-220
+examples/quantum_examples/qcl_examples/qcl_code_switching/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 70,97-101
+examples/quantum_examples/quantum_counterfactual/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 60-61,122-124,126-127,131-144
+  s_7a8519dba84209::t_f490a0fe2083eb 145
+examples/quantum_examples/qcl_examples/qcl_concatenated_code/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 62,118-126
+examples/quantum_examples/qcl_examples/qcl_qcm_freeze/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 123-126,149,160,181,189-190
+  s_7a8519dba84209::t_55d12cd29d1468 191
+examples/quantum_examples/hopf_fibration_multivector/utils_print.rs
+  s_7a8519dba84209::t_3b6e47dbb38985 90-93,95-96,98-103,108-109
+examples/quantum_examples/qcm_freeze_check/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 48-49,59,70,79,86,94,101-103
+examples/quantum_examples/qcl_examples/qcl_crosstalk/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 87,92,263-265
+  s_7a8519dba84209::t_ff1bee90b4b836 266
+examples/quantum_examples/Cargo.toml
+  s_7a8519dba84209::t_143b91e21fbf2c 84
+examples/quantum_examples/ikkt_matrix_model/model.rs
+  s_7a8519dba84209::t_d7de532cd10fad 171-182,190-215,244-245,248-251
+examples/quantum_examples/quantum_counterfactual/model.rs
+  s_7a8519dba84209::t_3b6e47dbb38985 87-88,90-93,262-263,274
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 22,228-240,242-243,275-278
+  s_7a8519dba84209::t_482d795cf74c2c 241
+  s_7a8519dba84209::t_5856adb30a9599 279
+examples/quantum_examples/ikkt_matrix_model/main.rs
+  s_7a8519dba84209::t_d7de532cd10fad 60-61,111-112
+examples/quantum_examples/quantum_geometric_tensor/model.rs
+  s_7a8519dba84209::t_3b6e47dbb38985 97,100-102,107-110
+examples/quantum_examples/qcl_examples/qcl_geometric_qec/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 115-121
+examples/quantum_examples/ikkt_matrix_model/utils_print.rs
+  s_7a8519dba84209::t_3b6e47dbb38985 69-75,88-89,96-97,103-106,108-111
+examples/quantum_examples/qcl_examples/qcl_distillation_round/main.rs
+  s_7a8519dba84209::t_f5ebd0a9dd06a8 52,81-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "96e97815d4cda0918c0ae3eb087555ea609abb40",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
