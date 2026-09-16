@@ -1,0 +1,108 @@
+examples/medicine_examples/README.md
+  s_7a8519dba84209::t_65093a6a2f38fe 3,13-60,63-71,75-77
+examples/medicine_examples/tissue_classification/utils_print.rs
+  s_7a8519dba84209::t_bc62e6ed369433 1-11,13-19,24-27,35,50-52,54-70
+  s_7a8519dba84209::t_5d0108499a5d52 28,38-42,48
+  s_7a8519dba84209::t_fceed90ed8e679 20-23,29-34,43-47
+  s_7a8519dba84209::t_d122370909bff7 12,36-37,49,53
+examples/medicine_examples/aneurysm_risk/main.rs
+  s_7a8519dba84209::t_00adfb8a93c6fd 6,8-10,12-21,25-26,31-32,37-38,44,46-47,49-52,54-57,60,63-64,69-73,75-79,81,93-100,103-105
+  s_7a8519dba84209::t_a484f6fe66d8a6 61-62
+  s_7a8519dba84209::t_fceed90ed8e679 85-92
+  s_7a8519dba84209::t_3e76b61d6179d7 22-24,27-30,34-35,39-43,58-59,65-68,80,82-83,101-102
+  s_7a8519dba84209::t_392596837c6eb6 84
+examples/medicine_examples/epilepsy/main.rs
+  s_7a8519dba84209::t_d83974696ae767 6,8-11,13-27,29-30,32-33,35-36,38-44,46-48,50-51,55-62,66
+examples/medicine_examples/protein_folding/main.rs
+  s_7a8519dba84209::t_805f0ebcda8d71 32,46
+  s_7a8519dba84209::t_a0cb4c13f1803b 6,8-11,13-15,17-27,29-30,33,35-36,38-39,41-44,47,49-50,52-53,55-57,59-60,62-63,65-66,70
+examples/medicine_examples/aneurysm_risk/utils_print.rs
+  s_7a8519dba84209::t_a97831c7af1a6a 1-106
+examples/medicine_examples/tumor_treatment/README.md
+  s_7a8519dba84209::t_91e3b917962c12 34
+examples/medicine_examples/protein_folding/model.rs
+  s_7a8519dba84209::t_805f0ebcda8d71 134-170
+  s_7a8519dba84209::t_5528850faba14e 1-16,18-133
+  s_7a8519dba84209::t_fceed90ed8e679 17
+examples/medicine_examples/aneurysm_risk/model.rs
+  s_7a8519dba84209::t_249615aaa1fb0c 107
+  s_7a8519dba84209::t_fceed90ed8e679 17
+  s_7a8519dba84209::t_2031bfdcd58968 1-16,18-106,108-162
+examples/medicine_examples/diving_decompression/utils_print.rs
+  s_7a8519dba84209::t_fceed90ed8e679 28-36,56-60,94-98,182-185,244
+  s_7a8519dba84209::t_6ec8205c51c1a1 237-238,241
+  s_7a8519dba84209::t_00c97a60c989bc 1-27,37-55,61-93,99-164,172-181,186-236,239-240,242-243,245-249
+  s_7a8519dba84209::t_e0c398a0ecefae 165-171
+examples/medicine_examples/tissue_classification/README.md
+  s_7a8519dba84209::t_91e3b917962c12 8
+examples/medicine_examples/epilepsy/utils_print.rs
+  s_7a8519dba84209::t_d83974696ae767 1-20,23,27-52,54-71,76-79
+  s_7a8519dba84209::t_fceed90ed8e679 21-22,24-26,53,72-75
+examples/medicine_examples/tissue_classification/main.rs
+  s_7a8519dba84209::t_5d0108499a5d52 21,24-28,58-59,61
+  s_7a8519dba84209::t_fceed90ed8e679 34
+  s_7a8519dba84209::t_bc62e6ed369433 6,8-10,12-14,16-20,22-23,30-31,33,35,37-40,42-43,45-46,48,52-54,57
+  s_7a8519dba84209::t_d122370909bff7 55,62
+examples/medicine_examples/protein_folding/utils_print.rs
+  s_7a8519dba84209::t_98e1fd354b816f 1-26,31-62
+  s_7a8519dba84209::t_fceed90ed8e679 27-30
+examples/medicine_examples/diving_decompression/model.rs
+  s_7a8519dba84209::t_ffbdbb02707568 156-157
+  s_7a8519dba84209::t_d358f6324b8fc7 429-432,434-437,439-442,444-509,512-519,521-563
+  s_7a8519dba84209::t_4591a9c04d2512 83-84,179-185,188-189,191-193
+  s_7a8519dba84209::t_186742bf0751bb 6-7,9-11,13-15,18,21,23-25,28,30-36,40-42,46-48,52-71,81-82,85-92,94,97-106,110-111,114,122-134,137,162-164,166-168,170-176,196,199,208,213,218-220,224,227-228,231,233-243,245-261,263-266,268-279,285-286,291-294,297,308,312-316,318-319,321-326,329-358,383-384,389-397,401-414,416-422,424-426
+  s_7a8519dba84209::t_21866fc1c1314e 107,115-119,135-136,139-155,158
+  s_7a8519dba84209::t_b6c069ecedcf2e 20
+  s_7a8519dba84209::t_86188191118098 201-203
+  s_7a8519dba84209::t_fceed90ed8e679 232,280-284,298-305,398-400
+  s_7a8519dba84209::t_a484f6fe66d8a6 12,244,262,289-290
+  s_7a8519dba84209::t_8820b2494cc9b0 433,438,564-585
+  s_7a8519dba84209::t_71b383685b9070 138,200,204-205,209-210,214-215,359-364,366-374,377-380,385-387
+  s_7a8519dba84209::t_7b2d3ab6c28f80 388
+examples/medicine_examples/tumor_treatment/model.rs
+  s_7a8519dba84209::t_f58649b8cc3f99 6-15,17,19-20,22-27,29-32,35-36,38-42,47-50,55-58,63-135,138-166
+  s_7a8519dba84209::t_55343fe89796aa 136-137
+examples/medicine_examples/Cargo.toml
+  s_7a8519dba84209::t_5b3482e1d1783d 15,18-19,21
+examples/medicine_examples/tumor_treatment/utils_print.rs
+  s_7a8519dba84209::t_bd1495996ad4d5 1-59,64-65
+  s_7a8519dba84209::t_fceed90ed8e679 60-63
+examples/medicine_examples/aneurysm_risk/README.md
+  s_7a8519dba84209::t_91e3b917962c12 7,19-20,22-24,26-33,44
+  s_7a8519dba84209::t_dd11ab7e932200 25
+examples/medicine_examples/tumor_treatment/main.rs
+  s_7a8519dba84209::t_bd1495996ad4d5 6,8-12,14-27,29,32,34-35,42-48,51-55,60-69,71,73-75
+  s_7a8519dba84209::t_fbd506f38d828f 31,37-40
+examples/medicine_examples/tissue_classification/model.rs
+  s_7a8519dba84209::t_d122370909bff7 18,73-83,85,89-92,94-97,103-110
+  s_7a8519dba84209::t_5d0108499a5d52 131-136,138-142
+  s_7a8519dba84209::t_fceed90ed8e679 98-102
+  s_7a8519dba84209::t_30d3c429b07f12 1-17,19-72,84,86-88,93,111-130,137,143-168
+examples/medicine_examples/epilepsy/model.rs
+  s_7a8519dba84209::t_f1d7ba2ef1925d 1-17,19-27,29-49,78-159,161-163,183-205,207-263
+  s_7a8519dba84209::t_86188191118098 28,168-171
+  s_7a8519dba84209::t_dc08c18cfd443e 18,50-77
+  s_7a8519dba84209::t_55343fe89796aa 176,180,206
+  s_7a8519dba84209::t_0d099539e7504a 160,164-167,172-175,177-179,181-182
+examples/medicine_examples/diving_decompression/main.rs
+  s_7a8519dba84209::t_6ec8205c51c1a1 33,65
+  s_7a8519dba84209::t_6b8ae0527f96a8 6,13,15-26,29,32,34-47,51,58-61,63-64,66-67
+  s_7a8519dba84209::t_8820b2494cc9b0 53-54,56-57
+  s_7a8519dba84209::t_86188191118098 8-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ec1aac0fa6f4e2c79f9fc5ec0f757abb0386e261",
+  "prompts": {},
+  "sessions": {
+    "s_7a8519dba84209": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ea98ecc-35a5-4254-b3ee-d885980e2ec8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
