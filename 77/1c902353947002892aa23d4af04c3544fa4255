@@ -1,0 +1,37 @@
+deep_causality_physics/src/kernels/mhd/grmhd.rs
+  s_3d28fd4329020a::t_715cbdeb60e2fa 26,28-31
+deep_causality_physics/tests/kernels/mhd/resistive_tests.rs
+  s_3d28fd4329020a::t_f1812eddb0f916 160-192
+deep_causality_physics/tests/kernels/mhd/plasma_tests.rs
+  s_3d28fd4329020a::t_8566d0f7ef2fed 14-25,28-42
+  s_3d28fd4329020a::t_575509ab8e7075 237
+  s_3d28fd4329020a::t_a0c69bede7c6b7 129
+  s_3d28fd4329020a::t_0a8242007fab74 114-116,120
+  s_3d28fd4329020a::t_32669969691da6 207-236,238-254
+  s_3d28fd4329020a::t_95fd298da74cfc 68-74,80-113,117-119,121-127,130-136
+  s_3d28fd4329020a::t_4df639d9e4948e 128
+deep_causality_physics/tests/kernels/mhd/ideal_tests.rs
+  s_3d28fd4329020a::t_01e2577ccc8271 150-186
+  s_3d28fd4329020a::t_5c15b0730b9dbf 45-82
+  s_3d28fd4329020a::t_b981537ee98318 44
+  s_3d28fd4329020a::t_0e460227fbaa40 149
+deep_causality_physics/tests/kernels/mhd/grmhd_tests.rs
+  s_3d28fd4329020a::t_76a53646b52530 98-149,153-166
+  s_3d28fd4329020a::t_575509ab8e7075 150-152
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "771c902353947002892aa23d4af04c3544fa4255",
+  "prompts": {},
+  "sessions": {
+    "s_3d28fd4329020a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "11d75ff9-de6f-46e5-b673-95bf9e6e5ec4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
