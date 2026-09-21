@@ -1,0 +1,21 @@
+examples/physics_examples/event_horizon_probe/main.rs
+  s_57618eebc5dcc8::t_6db412cbc3e95f 171-192
+examples/physics_examples/gravitational_wave/main.rs
+  s_57618eebc5dcc8::t_6db412cbc3e95f 329-331,335
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9ee6731c8bf643cc63322c84fe3f633793a82478",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
