@@ -1,0 +1,62 @@
+deep_causality_physics/tests/kernels/astro/wrappers_tests.rs
+  s_3d28fd4329020a::t_f5ed36034ab625 7-8,20-22,24-28,30,33,36,90,92-96,98,101,104
+  s_3d28fd4329020a::t_76c011eead5065 32,34-35,100,102-103
+deep_causality_physics/tests/theories/general_relativity/metrics_tests.rs
+  s_3d28fd4329020a::t_44ce3b835e1838 233-234
+deep_causality_physics/tests/kernels/waves/wrappers_tests.rs
+  s_3d28fd4329020a::t_f5ed36034ab625 7-8,36-37,39-43,45,47-51
+deep_causality_physics/tests/kernels/condensed/qgt_tests.rs
+  s_3d28fd4329020a::t_f3e39fb80e3299 101-112,114-123,125-147,149-150,152-174,296-299,305-317
+deep_causality_physics/tests/kernels/materials/wrappers_tests.rs
+  s_3d28fd4329020a::t_89b5984fcc9e4b 7-8,18-25,30,33-35,38,65-66,68-77,97,99-113
+  s_3d28fd4329020a::t_9980754518690a 28-29,31-32,36-37
+deep_causality_physics/tests/kernels/photonics/ray_tests.rs
+  s_3d28fd4329020a::t_44ce3b835e1838 69-70
+deep_causality_physics/tests/kernels/condensed/phase_tests.rs
+  s_3d28fd4329020a::t_6544865f287221 136-143,153,159-164
+openspec/prompts/test-review-prompt.md
+  s_3d28fd4329020a::t_47f232f21869b2 77,186-202,204,206,209,238-244
+deep_causality_physics/tests/kernels/relativity/spacetime_tests.rs
+  s_3d28fd4329020a::t_44ce3b835e1838 115-116
+deep_causality_physics/tests/kernels/quantum/wrappers_tests.rs
+  s_3d28fd4329020a::t_3c3240fdeeb944 6,44-45,47-53
+deep_causality_physics/tests/kernels/dynamics/estimation_tests.rs
+  s_3d28fd4329020a::t_8d03a9724686b4 99-105,107-109,111-113,115-117,121-123,125-129,131-136,140,144,146-163,165-166,169-195,199-201
+deep_causality_physics/tests/kernels/dynamics/wrappers_tests.rs
+  s_3d28fd4329020a::t_76c011eead5065 32,55-56
+  s_3d28fd4329020a::t_f5ed36034ab625 10-11,28-29,31,33-35,37,52,54,57-58,60
+  s_3d28fd4329020a::t_ff04d99fb3701f 39-40,62-63
+deep_causality_physics/tests/kernels/chronometric/solve_gm_tests.rs
+  s_3d28fd4329020a::t_d358ae89b48e38 10-17,22,39-41,89-117
+  s_3d28fd4329020a::t_305761dc52aa6b 118-119
+deep_causality_physics/tests/kernels/em/wrappers_tests.rs
+  s_3d28fd4329020a::t_3c3240fdeeb944 171,173,175-177,195,198-200,203-204,209,212-214,217-218,228-230,232-238,240-241
+  s_3d28fd4329020a::t_44ce3b835e1838 266-268,272-280
+  s_3d28fd4329020a::t_2751508f39c7e3 8-11,85-86,88-90,92-94,124,126-128,130-132
+  s_3d28fd4329020a::t_9c102726e5d185 91,129,174,201-202,215-216
+deep_causality_physics/tests/kernels/photonics/polarization_tests.rs
+  s_3d28fd4329020a::t_1eb253d4ab84e4 14-40,42-46,48-100
+  s_3d28fd4329020a::t_44ce3b835e1838 165-167
+deep_causality_physics/tests/kernels/photonics/beam_tests.rs
+  s_3d28fd4329020a::t_44ce3b835e1838 62-66
+deep_causality_physics/tests/kernels/em/fields_tests.rs
+  s_3d28fd4329020a::t_9d9f9d198cc419 750-858
+  s_3d28fd4329020a::t_9563000999e245 859-901
+  s_3d28fd4329020a::t_8ae659809f6432 665-674
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4e8bdc3dcff7b7ff1e0a8d189f2c61e21ae77b49",
+  "prompts": {},
+  "sessions": {
+    "s_3d28fd4329020a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "11d75ff9-de6f-46e5-b673-95bf9e6e5ec4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
