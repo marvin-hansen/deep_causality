@@ -1,0 +1,22 @@
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/metropolis_tests.rs
+  s_3d28fd4329020a::t_653bbff2c05df2 269,273,278,280-281,284-286,291-310,312,314-315,318,322-352
+  s_3d28fd4329020a::t_87cf674cc07a00 316-317,319-321
+  s_3d28fd4329020a::t_f545c553144d0d 288,313,353
+  s_3d28fd4329020a::t_5d073e8477c0bd 264-268,270-272,274-277,282-283,289-290
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "793e4c487b16b408a543bd14b9de8a103a025038",
+  "prompts": {},
+  "sessions": {
+    "s_3d28fd4329020a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "11d75ff9-de6f-46e5-b673-95bf9e6e5ec4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
