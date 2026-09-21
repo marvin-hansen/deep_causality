@@ -1,0 +1,53 @@
+deep_causality_physics/tests/kernels/astro/solver_convergence_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 134,136-137
+deep_causality_physics/tests/kernels/fluids/compressible_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 417-418
+deep_causality_physics/tests/kernels/chronometric/wrapper_tests.rs
+  s_3d28fd4329020a::t_ca998bf254a131 252
+deep_causality_physics/tests/kernels/condensed/phase_tests.rs
+  s_3d28fd4329020a::t_ca998bf254a131 145
+deep_causality_physics/tests/kernels/astro/ks_reachability_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 23-27,29-31
+deep_causality_physics/tests/quantities/fluids_quantities/velocity_gradient_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 77-80
+deep_causality_physics/src/kernels/astro/two_body.rs
+  s_3d28fd4329020a::t_f1c27837aa27d2 190-192
+deep_causality_physics/src/kernels/condensed/qgt.rs
+  s_3d28fd4329020a::t_f1c27837aa27d2 84-85
+deep_causality_physics/src/kernels/mhd/ideal.rs
+  s_3d28fd4329020a::t_2157a5da4d4abf 110-113,115-116,121
+deep_causality_physics/tests/kernels/condensed/qgt_tests.rs
+  s_3d28fd4329020a::t_ca998bf254a131 154-156,328
+deep_causality_physics/tests/kernels/fluids/wrappers_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 1420-1422
+deep_causality_physics/tests/kernels/fluids/kinematics_tests.rs
+  s_3d28fd4329020a::t_ca998bf254a131 59-60
+deep_causality_physics/tests/kernels/em/wrappers_tests.rs
+  s_3d28fd4329020a::t_ca998bf254a131 302
+deep_causality_physics/src/kernels/mhd/grmhd.rs
+  s_3d28fd4329020a::t_2157a5da4d4abf 34-38
+deep_causality_physics/tests/kernels/dynamics/estimation_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 174-175
+deep_causality_physics/tests/theories/electromagnetism/em_tests.rs
+  s_3d28fd4329020a::t_1cd8ea3c2ba445 493
+deep_causality_physics/tests/kernels/materials/mechanics_tests.rs
+  s_3d28fd4329020a::t_ca998bf254a131 28-29
+deep_causality_physics/tests/kernels/mhd/ideal_tests.rs
+  s_3d28fd4329020a::t_62cdf21973ea97 202-204,309-311,320-321,342-343,353-358,383-385,407-409,430,432-435,751
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e86cc75e1268aa36ed4c90dfe7431eb46e048b98",
+  "prompts": {},
+  "sessions": {
+    "s_3d28fd4329020a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "11d75ff9-de6f-46e5-b673-95bf9e6e5ec4",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
