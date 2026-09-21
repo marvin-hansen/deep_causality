@@ -1,0 +1,115 @@
+deep_causality_context/src/types/context_node_types/space/geo_space/adjustable.rs
+  s_57618eebc5dcc8::t_012e09c9bf4e46 32,82
+deep_causality_context/tests/types/context_types/context_graph/extendable_context_edge_tests.rs
+  s_57618eebc5dcc8::t_10f375551a3f20 534-536,539-542,545,559,561-563,565-566,568-571,577,584-612
+  s_57618eebc5dcc8::t_1b227715a67ebb 537-538,543-544,546-558,560,564,567,572-576,578-583
+deep_causality_context/tests/types/context_types/context_graph/context_tests.rs
+  s_57618eebc5dcc8::t_5808ab1d61765e 8
+  s_57618eebc5dcc8::t_1337b4524831dd 259-363
+deep_causality_context/tests/types/context_node_types/space/ecef_space/ecef_space_tests.rs
+  s_57618eebc5dcc8::t_72dc057eafe74f 113-114
+  s_57618eebc5dcc8::t_b3a660dc6317d3 56-112,115-121
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/adjustable.rs
+  s_57618eebc5dcc8::t_e19957b91eb562 128
+deep_causality_context/tests/types/context_node_types/space_time/tangent_spacetime/space_temporal_interval_tests.rs
+  s_57618eebc5dcc8::t_8821d9b3b07f06 77-78
+  s_57618eebc5dcc8::t_93f86f2a075932 5,20-76,79-100,106-107,113-114,120-121,127-177
+  s_57618eebc5dcc8::t_5808ab1d61765e 101-105,108-112,115-119,122-126
+deep_causality_context/tests/types/context_node_types/space_time/lorentzian/space_temporal_interval_tests.rs
+  s_57618eebc5dcc8::t_3c2b12d2f2c031 80-110,115-138,150,155-183,192-201
+  s_57618eebc5dcc8::t_5808ab1d61765e 111-114,184-191
+  s_57618eebc5dcc8::t_72dc057eafe74f 139-149,151-154
+deep_causality_context/src/types/context_node_types/space/ned_space/adjustable.rs
+  s_57618eebc5dcc8::t_012e09c9bf4e46 28,74
+deep_causality_context/src/traits/contextuable/temporal.rs
+  s_57618eebc5dcc8::t_03a45572833d6b 18-20,28
+deep_causality_context/tests/types/context_node_types/space/euclidean_space/euclidean_space_tests.rs
+  s_57618eebc5dcc8::t_b3a660dc6317d3 56-120
+deep_causality_context/tests/types/context_node_types/data_uncertain/uncertain_data_tests.rs
+  s_57618eebc5dcc8::t_ba2a51e242d6ff 7,60-73,79-105,111-119,123-124,128-145
+  s_57618eebc5dcc8::t_5808ab1d61765e 74-78,106-110,120-122,125-127
+deep_causality_context/tests/types/context_types/mod.rs
+  s_57618eebc5dcc8::t_4042b6cb73036c 10
+deep_causality_context/src/types/context_node_types/time/lorentzian_time/mod.rs
+  s_57618eebc5dcc8::t_012e09c9bf4e46 90
+deep_causality_context/src/types/context_node_types/data_uncertain/uncertain_data/adjustable.rs
+  s_57618eebc5dcc8::t_5c8b4023450b27 11,13-15
+deep_causality_context/tests/types/context_types/vertical_datum/mod.rs
+  s_57618eebc5dcc8::t_4042b6cb73036c 1-6
+deep_causality_context/src/types/context_node_types/space_time/euclidean_spacetime/adjustable.rs
+  s_57618eebc5dcc8::t_012e09c9bf4e46 85
+deep_causality_context/src/types/context_node_types/data/mod.rs
+  s_57618eebc5dcc8::t_6c1eeebfc62f90 19-20,24-25
+deep_causality_context/BUILD.bazel
+  s_57618eebc5dcc8::t_009baaa9c29b68 266-284,322-340
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/space_temporal_interval.rs
+  s_57618eebc5dcc8::t_d2bf652aea4c18 23,25
+deep_causality_context/tests/utils_test/test_utils_tests.rs
+  s_57618eebc5dcc8::t_d49b2061c2a854 70-71
+  s_57618eebc5dcc8::t_4042b6cb73036c 1-69,72-75
+deep_causality_context/src/types/context_node_types/space_time/tangent_spacetime/adjustable.rs
+  s_57618eebc5dcc8::t_012e09c9bf4e46 88
+deep_causality_context/tests/types/context_types/vertical_datum/vertical_datum_tests.rs
+  s_57618eebc5dcc8::t_4042b6cb73036c 1-67
+deep_causality_context/tests/types/context_node_types/space/geo_space/metric_tests.rs
+  s_57618eebc5dcc8::t_c15b436962868c 1-24,26-63,66-88,91-92
+  s_57618eebc5dcc8::t_155461cffcbf68 25,64-65,89-90
+AGENTS.md
+  s_1ee0a713700e6a::t_fb8ed2862451bf 203,268,389
+.gitignore
+  s_57618eebc5dcc8::t_eac54326723705 41
+deep_causality_context/src/types/context_node_types/space/geo_space/display.rs
+  s_57618eebc5dcc8::t_953ba4f0afa42f 15
+deep_causality_context/src/traits/contextuable/distance.rs
+  s_57618eebc5dcc8::t_890e0918504ab8 6-7
+  s_57618eebc5dcc8::t_9c9ab52a6c09f8 19
+deep_causality_context/src/types/context_node_types/time/euclidean_time/mod.rs
+  s_57618eebc5dcc8::t_63483ee66c7bb9 94
+deep_causality_context/tests/types/context_types/contextoid/contextoid_type_tests.rs
+  s_57618eebc5dcc8::t_831534aa794184 8,59-127
+deep_causality_context/src/types/context_node_types/space/ecef_space/mod.rs
+  s_57618eebc5dcc8::t_b0eb2fe1480b81 41
+deep_causality_context/tests/types/context_node_types/space/geo_space/mod.rs
+  s_57618eebc5dcc8::t_97c0faa2b6a7a7 10-11
+deep_causality_context/README.md
+  s_57618eebc5dcc8::t_91a917c7a74c86 40-44
+  s_57618eebc5dcc8::t_366defd4cb2815 4-5,9-10,12-15,24-25,45-61
+deep_causality_context/src/types/context_node_types/space/geo_space/metric.rs
+  s_57618eebc5dcc8::t_1d815fff581efb 50-51
+  s_57618eebc5dcc8::t_d3493151018eac 21-32,34-38,47-49
+deep_causality_context/src/types/context_node_types/time/time_kind/mod.rs
+  s_57618eebc5dcc8::t_30835e78297ed8 71
+  s_57618eebc5dcc8::t_89f9412205a698 36,41
+deep_causality_context/tests/utils_test/mod.rs
+  s_57618eebc5dcc8::t_4042b6cb73036c 1-6
+deep_causality_context/tests/mod.rs
+  s_57618eebc5dcc8::t_4042b6cb73036c 10
+deep_causality_context/src/types/context_node_types/time/euclidean_time/adjustable.rs
+  s_57618eebc5dcc8::t_ff186baf6af962 46,63
+deep_causality_context/src/types/context_node_types/time/lorentzian_time/adjustable.rs
+  s_57618eebc5dcc8::t_b4f6785009cbdc 54,61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6cf24d1b4527a699d8afe80592e9709e689abf3d",
+  "prompts": {},
+  "sessions": {
+    "s_1ee0a713700e6a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4455ab18-418b-45ad-acb6-496e0bd79b84",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
