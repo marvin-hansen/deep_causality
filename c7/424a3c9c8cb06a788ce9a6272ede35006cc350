@@ -1,0 +1,14 @@
+deep_causality_core/src/alias/mod.rs
+  h_080fb89ca1f0c4 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c7424a3c9c8cb06a788ce9a6272ede35006cc350",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
