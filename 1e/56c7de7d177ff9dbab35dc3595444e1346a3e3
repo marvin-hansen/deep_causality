@@ -1,0 +1,62 @@
+openspec/changes/extract-context-crate/design.md
+  s_57618eebc5dcc8::t_ab4db0642e7f60 209-213
+  s_57618eebc5dcc8::t_a7c0ca180b1db3 37-43
+  s_57618eebc5dcc8::t_6134bfedd0e446 197-202
+  s_57618eebc5dcc8::t_c194a23b0bc189 221,223
+  s_57618eebc5dcc8::t_e3947168530104 222,224-226
+  s_57618eebc5dcc8::t_00da0cfdbf8d0e 1-36,48-117,119-120,123,127,183-196,203-208,214-220,227-231
+  s_57618eebc5dcc8::t_6c30ffe8d8ee92 149-182
+  s_57618eebc5dcc8::t_9c352973f03dd9 44-47
+  s_57618eebc5dcc8::t_768c8e27266b9d 232-236
+  s_57618eebc5dcc8::t_a243ad53629c9b 118,121-122,124-126
+  s_57618eebc5dcc8::t_91a03f3ea4d4dc 128-148
+openspec/changes/extract-context-crate/tasks.md
+  s_57618eebc5dcc8::t_fe2a77718a78cc 45-47,76-89,109,114,142,144,146-147,149,151,153,183,186
+  s_57618eebc5dcc8::t_5539e9f0c934bd 135-137,140-141
+  s_57618eebc5dcc8::t_ce8c4a31b3970e 110-111,113,115,117,119,121,123,125,127,129,131-133,138,143,145,148,150,152,155,157,160-161,163,165-167,169,171,173-174,178,180,182,187,189
+  s_57618eebc5dcc8::t_9b50b01186d21b 175-176
+  s_57618eebc5dcc8::t_67f6f2fedb6d72 184-185
+  s_57618eebc5dcc8::t_c28e93660bdc4d 1-44,48-75,112,116,118,120,122,124,126,128,130,134,139,154,156,158-159,162,164,168,170,172,177,179,181,188
+  s_57618eebc5dcc8::t_a1da7b727b3382 90-108
+openspec/changes/extract-context-crate/proposal.md
+  s_57618eebc5dcc8::t_2aa232f3a59c92 132-137
+  s_57618eebc5dcc8::t_d5828ba5879a19 35-43,64-65,70,80-83,111-131,143
+  s_57618eebc5dcc8::t_d5eb67eb59760a 58-63
+  s_57618eebc5dcc8::t_77363027f6a355 44-57
+  s_57618eebc5dcc8::t_d42e88be583834 84-86
+  s_57618eebc5dcc8::t_0d056eeefe9aca 4-9
+  s_57618eebc5dcc8::t_6553e085779657 1-3,10-34,66-69,71-79,90-110,144,149,160
+  s_57618eebc5dcc8::t_7b2f3c9a0db4e4 138-142
+  s_57618eebc5dcc8::t_e6add0549b3f54 87-89
+  s_57618eebc5dcc8::t_d8cd6dbaa1452b 145-148
+  s_57618eebc5dcc8::t_c1d84f43f2105c 150-159,161-164
+openspec/changes/extract-context-crate/specs/context-data-node-payload/spec.md
+  s_57618eebc5dcc8::t_6564a697063bea 1-73
+openspec/changes/extract-context-crate/.openspec.yaml
+  s_57618eebc5dcc8::t_7803bd95cc1d8f 1-2
+openspec/changes/extract-context-crate/specs/core-shared-vocabulary/spec.md
+  s_57618eebc5dcc8::t_f49c8af78e5fbf 1-69
+openspec/changes/extract-context-crate/specs/context-crate-identity/spec.md
+  s_57618eebc5dcc8::t_e555e81f9ef3df 1-14,18-52,56-66,68,72-94
+  s_57618eebc5dcc8::t_19022fd38d88ed 15-17
+  s_57618eebc5dcc8::t_4c3563bd484934 67,69-71
+  s_57618eebc5dcc8::t_a29823512eb45c 53-55
+openspec/changes/extract-context-crate/specs/context-explicit-dependency/spec.md
+  s_57618eebc5dcc8::t_a735f46b0ba924 1-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1e56c7de7d177ff9dbab35dc3595444e1346a3e3",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
