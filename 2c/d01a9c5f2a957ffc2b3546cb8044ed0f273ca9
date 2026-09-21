@@ -1,0 +1,71 @@
+openspec/changes/consolidate-context-signature/design.md
+  s_57618eebc5dcc8::t_b94e494fdc843a 329-341,344
+  s_57618eebc5dcc8::t_da3a71d9a40156 40,194-217
+  s_57618eebc5dcc8::t_9d2db0138eecee 45-50,236-253,255-259,277-291
+  s_57618eebc5dcc8::t_adf0c6b4ab07c5 168-186
+  s_57618eebc5dcc8::t_bb5ad16391b8f8 1-37,41-44,51-167,187-193,235,292-328,342-343
+  s_57618eebc5dcc8::t_7c6c689dfbd7b5 38-39,218-234
+  s_57618eebc5dcc8::t_9c284f3e8baa93 254,260-276
+openspec/changes/consolidate-context-signature/specs/context-associated-value-types/spec.md
+  s_57618eebc5dcc8::t_768eb130c5c5d6 5-7,33-35,52-53
+  s_57618eebc5dcc8::t_4725d0320c337e 1-4,8-32,36-51,54-67
+openspec/changes/consolidate-context-signature/specs/context-scalar-parameter/spec.md
+  s_57618eebc5dcc8::t_750207ab6c954c 1-55
+openspec/changes/consolidate-context-signature/tasks.md
+  s_57618eebc5dcc8::t_7c6c689dfbd7b5 97,103-107,123-125
+  s_57618eebc5dcc8::t_e5b49bd5ee61e4 44-45,49-52,56-58,66,126-127,156-160,167-168
+  s_57618eebc5dcc8::t_2c98400eafb54f 93-96
+  s_57618eebc5dcc8::t_b94e494fdc843a 53-55
+  s_57618eebc5dcc8::t_b4798fef3d8caf 120-122,135-136
+  s_57618eebc5dcc8::t_156470e9ca6b31 1-43,67-81,113-119,128-134,137-155,161-166,169-170
+  s_57618eebc5dcc8::t_9c284f3e8baa93 46-48,59-65
+  s_57618eebc5dcc8::t_8fd2f6081d0d2b 82-92,98-102,108-112
+openspec/changes/consolidate-context-signature/specs/context-crate-identity/spec.md
+  s_57618eebc5dcc8::t_13a63a0ba2820b 1-60
+openspec/changes/consolidate-context-signature/specs/context-frame/spec.md
+  s_57618eebc5dcc8::t_5bc6bb6463561d 24,27-28,30-33,35-37,50-55
+  s_57618eebc5dcc8::t_439fb30c7d05e6 25-26,29,34,38-49,56
+  s_57618eebc5dcc8::t_750207ab6c954c 1-23,57-106
+openspec/changes/consolidate-context-signature/proposal.md
+  s_57618eebc5dcc8::t_aad40640f98e29 82-86,118-119,143
+  s_57618eebc5dcc8::t_9103792f19c87f 1-15,17-34,37-49,55-59,72-75,97-107,112-117,120-123,126-135,137-142,148-155
+  s_57618eebc5dcc8::t_7c6c689dfbd7b5 87-96
+  s_57618eebc5dcc8::t_ad90199fff7ebd 16,35-36,60-66,108-111,136
+  s_57618eebc5dcc8::t_adf0c6b4ab07c5 50-54,67-71
+  s_57618eebc5dcc8::t_9c284f3e8baa93 76-81,124-125,144-147
+docs/Conference/2026_CausalDataScienceMeeting/organizer_research.md
+  s_57618eebc5dcc8::t_e9b29e1cadfac3 164
+openspec/notes/archive/bazel/rules-rs-migration.md
+  s_57618eebc5dcc8::t_3536be6d1c12f4 59-60,75,90-92
+  s_57618eebc5dcc8::t_e9b29e1cadfac3 22,156,170
+  s_57618eebc5dcc8::t_dc5cd70ada846d 76-79
+openspec/changes/consolidate-context-signature/specs/context-id-parameter/spec.md
+  s_57618eebc5dcc8::t_16b748f91bc04d 8-10,13,25-30
+  s_57618eebc5dcc8::t_439fb30c7d05e6 1-7,11-12,14-24,31-78
+openspec/changes/consolidate-context-signature/specs/context-coordinate-families/spec.md
+  s_57618eebc5dcc8::t_4834bf1377d01d 6,12-15,25-34,36-38,40-42,44-45,47,49-50,52,54-55
+  s_57618eebc5dcc8::t_13a63a0ba2820b 1-5,7-11,16-24,35,39,43,46,48,51,53,56,85-92,97-101
+  s_57618eebc5dcc8::t_824e7728613a21 57-84,93-96
+openspec/changes/consolidate-context-signature/.openspec.yaml
+  s_57618eebc5dcc8::t_43038a486d5dcb 1-2
+openspec/changes/consolidate-context-signature/specs/context-symbolic-dimension-removed/spec.md
+  s_57618eebc5dcc8::t_768eb130c5c5d6 1-34
+openspec/changes/consolidate-context-signature/specs/core-shared-vocabulary/spec.md
+  s_57618eebc5dcc8::t_16b748f91bc04d 1-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2cd01a9c5f2a957ffc2b3546cb8044ed0f273ca9",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
