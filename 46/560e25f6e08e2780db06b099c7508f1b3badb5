@@ -1,0 +1,16 @@
+Cargo.lock
+  h_080fb89ca1f0c4 127,230,232,240,242,941,943,1549,1551,1846,1848,1930,2034,2036,2045,2047,2051,2118,2198,2231,2233,2319,2460,2462,2466,2501,2503,2507
+Cargo.toml
+  h_080fb89ca1f0c4 72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "46560e25f6e08e2780db06b099c7508f1b3badb5",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
