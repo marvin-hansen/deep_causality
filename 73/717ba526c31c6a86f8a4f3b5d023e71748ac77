@@ -1,0 +1,26 @@
+deep_causality_unified_math/deep_causality_metric/tests/conventions/west_coast_tests.rs
+  s_57618eebc5dcc8::t_cb4d5dceecdb42 6
+  s_57618eebc5dcc8::t_fd6f9509fe2ade 169-223
+deep_causality_unified_math/deep_causality_metric/tests/types/metric_tests.rs
+  s_57618eebc5dcc8::t_687692799e532a 469-842
+  s_57618eebc5dcc8::t_651eebf6fb9fbf 6,8
+deep_causality_unified_math/deep_causality_metric/tests/conventions/east_coast_tests.rs
+  s_57618eebc5dcc8::t_cb4d5dceecdb42 6
+  s_57618eebc5dcc8::t_fd6f9509fe2ade 166-220
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "73717ba526c31c6a86f8a4f3b5d023e71748ac77",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
