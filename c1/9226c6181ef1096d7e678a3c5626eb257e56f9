@@ -1,0 +1,21 @@
+deep_causality_unified_math/deep_causality_metric/tests/conventions/east_coast_tests.rs
+  s_57618eebc5dcc8::t_5808ab1d61765e 214
+deep_causality_unified_math/deep_causality_metric/tests/conventions/west_coast_tests.rs
+  s_57618eebc5dcc8::t_5808ab1d61765e 217
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c19226c6181ef1096d7e678a3c5626eb257e56f9",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
