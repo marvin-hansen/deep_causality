@@ -1,0 +1,85 @@
+deep_causality_unified_math/deep_causality_uncertain/deep_causality_uncertain_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_algebra/deep_causality_algebra_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_stats/deep_causality_stats_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-47,52-53,56-57,62,66-69,72,79,82-141,148,151-152,157-158,161-162,167-168,172-206,210,213,215,218-220,223,225,228,230,233-235,238,240,243,245,248,250,253,255,258,260
+deep_causality_unified_math/deep_causality_rand/deep_causality_rand_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_num/deep_causality_num_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_multivector/deep_causality_multivector_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-48,50,53-54,57-58,60,63-84,87-113,116,120,123-132,135-136,139,142,146,149-150,152,155-156,159-160,162,165-166,169-170,172,175-176,179-180,182,185-186,189-190,195,199-202,205-206,208,211-228,233-248,250,253,255,258,260,263,265,268,270,273,275,278,280,283,285,288,290,293-298,300,303,305,308,310,313,315,318,320,323,325,328,330,333,335,338,340,343,345,348,350,353,355,358,360,363,365,368,370,373-375,378,380,383-420,423,425
+deep_causality_unified_math/deep_causality_uncertain/deep_causality_uncertain_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-51,56,62-63,66-67,69,72-73,76-77,82,86-96,99-100,103-124,129,133-136,139-140,145,151-152,155,158,162,165-166,171,175-188,193-198,203-233,238,240,243,245-255,263,265,268,270,273-278,280,283,285,288,290,293,295,298,300,303,305,308,310
+deep_causality_unified_math/deep_causality_num_complex/deep_causality_num_complex_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-31,33,36-37,40,43,47,64-83,88,90,93,95,98,100,103,105,108,113,115-120,123,125
+deep_causality_unified_math/deep_causality_linear/deep_causality_linear_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_rand/deep_causality_rand_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-51,56,60-63,82-83,88,92-96,114-123,143-145,148,150,153,155,158-160,165,168,170,173-175,178,183,188-190
+deep_causality_unified_math/deep_causality_haft/deep_causality_haft_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,29-48,66,69,73,78-80,83-85,88-90,93,95,98-100
+deep_causality_unified_math/deep_causality_multivector/deep_causality_multivector_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_num_rational/deep_causality_num_rational_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_stats/deep_causality_stats_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_tensor/deep_causality_tensor_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30,33,37,40-41,43,46-47,50,53,57,60-61,63,66-67,70-71,73,76-77,80-93,96-97,99,102-118,121-136,152-208,213,215,218,220,223-235,238,240,243,245,248,250,253,255,258,260,263,265,268,270,273-278,283-288,290,293,295,298,300,303,305,308,310,313,315,318,320,323,325,328-363,365,368,370
+deep_causality_unified_math/deep_causality_haft/deep_causality_haft_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_algebra/deep_causality_algebra_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,29-48,68,70-75,83,85
+deep_causality_unified_math/deep_causality_num_dual/deep_causality_num_dual_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_topology/deep_causality_topology_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_fft/deep_causality_fft_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_num_dual/deep_causality_num_dual_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-50,53,57,76,79,83,88,90,93-95,98,103,105,108,110,113,115,118,120,123-125
+deep_causality_unified_math/deep_causality_linear/deep_causality_linear_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-33,36-37,40-41,43,46-47,50-51,53,56-57,60-69,72-73,76-77,79,82-83,88-90,93,95,98,100,103-108,110,118,120,123-125
+deep_causality_unified_math/deep_causality_topology/deep_causality_topology_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-31,36,42-43,46-47,52,58-59,62-63,68,74-75,78-96,98,101-102,105,108,112,115-118,121-122,125-126,131,137-138,141-142,144,147-148,151-152,157,161,164-165,168,171,175,178-179,184,188,191-192,195-196,198,201-202,205-216,221,225-228,231-232,234,237-238,241-242,247,253-254,257-258,263,267-270,273,276,280-289,293-294,296,299-300,303-304,306,309-310,313-314,319,323,326-367,372,374,377,379,382,384,387,389,392,394,397,399,402,404,407,409,412,414,417,419,422,424,427,429,432,434,437,439,442,444,447,449,452,454,457,459,462,464,467,469,472,474,477-482,484,487,489,492,494,497,499,502,504,507,509,512,514-524,529,532,534,537,539,542,544,547,549,552,554,557,559,562,564,567,569,572,574,577,579,582-584,587,589,592,594,597-599,602,604,607,609,612,614,617,619,622,624,627,629,632,634,637,639,642,644,647,649-659,662,664,667,669,672,674,677,679,682,684,687,689,692,694,697,699
+deep_causality_unified_math/deep_causality_calculus/deep_causality_calculus_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_num/deep_causality_num_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,29-38,65,68
+deep_causality_unified_math/deep_causality_calculus/deep_causality_calculus_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-31,33,36-37,40-49,52-53,56,59,63,66-67,69,72-73,76,79,83,86-89,92-93,98,100,103,105,108,110,113,115,118-120,123,125,128,130,133-135,138,140,143-145,148,150,153-155
+deep_causality_unified_math/deep_causality_homology/deep_causality_homology_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_metric/deep_causality_metric_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_tensor/deep_causality_tensor_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_homology/deep_causality_homology_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,29-48,66,69,73,76-77,79,82-83,86-87,89,92-93,98,100,103,105,108,110,113-115,118,120,123,125,128,130,133,135,143-145
+deep_causality_unified_math/deep_causality_metric/deep_causality_metric_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30,33,37,45-49
+deep_causality_unified_math/deep_causality_num_complex/deep_causality_num_complex_sbom.spdx.json.sha
+  s_57618eebc5dcc8::t_971b4f047f8cc3 1
+deep_causality_unified_math/deep_causality_fft/deep_causality_fft_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30,33,37,56-87,92,98-99,102-113,118,122,125-126,129-130,135,141-142,145-146,148,151-152,155-156,161,165,168-169,172-173,178,182,185-186,189-190,195,201-202,207,209,212,214,217,219,222,224,227,229,232,234,237-239,242,244,247,249,252,254,257,259,262,264,267,269,272,274,277,279,282,284,287-289,292,294,297,302,304
+deep_causality_unified_math/deep_causality_num_rational/deep_causality_num_rational_sbom.spdx.json
+  s_57618eebc5dcc8::t_971b4f047f8cc3 4,10,17,30-31,33,36-37,56-57,59,62-63,66-67,69,72-73,78,80,83-85,93-95,98,100,103,105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "370463d6fe2cdd87d9faa8fa7af0f22a277e66cc",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
