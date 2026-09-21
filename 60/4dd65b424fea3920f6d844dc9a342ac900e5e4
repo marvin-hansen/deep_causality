@@ -1,0 +1,37 @@
+deep_causality_context/src/types/context_types/context_graph/extendable_contextuable_graph.rs
+  s_57618eebc5dcc8::t_861709e4c695c1 219-228
+deep_causality_context/src/types/context_node_types/space_time/space_time_kind/mod.rs
+  s_57618eebc5dcc8::t_72d43cf0edea5c 9-10
+deep_causality_context/src/alias/mod.rs
+  s_57618eebc5dcc8::t_e95129d17c6716 110,146
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/coordinate.rs
+  s_57618eebc5dcc8::t_e95129d17c6716 11
+deep_causality_context/src/types/context_node_types/mod.rs
+  s_57618eebc5dcc8::t_e95129d17c6716 31
+deep_causality/src/alias/alias_uniform.rs
+  s_57618eebc5dcc8::t_e95129d17c6716 36,77,148,187
+deep_causality_context/tests/types/context_types/context_graph/extendable_context_edge_tests.rs
+  s_57618eebc5dcc8::t_7653e95b932178 492-533
+deep_causality_context/src/traits/contextuable_graph/mod.rs
+  s_57618eebc5dcc8::t_5679b40966b50a 278-293
+openspec/changes/consolidate-context-signature/tasks.md
+  s_57618eebc5dcc8::t_0762f3690e0e27 65-66,104,108-118
+deep_causality_context/tests/types/context_node_types/space_time/space_time_kind/space_time_kind_tests.rs
+  s_57618eebc5dcc8::t_af251e96beb619 14,51-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "604dd65b424fea3920f6d844dc9a342ac900e5e4",
+  "prompts": {},
+  "sessions": {
+    "s_57618eebc5dcc8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62427b3a-1e90-43c1-b598-0ac4d6372c35",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
