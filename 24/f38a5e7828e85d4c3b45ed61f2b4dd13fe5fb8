@@ -1,0 +1,67 @@
+deep_causality_context_store/tests/types/time_scale/time_scale_tests.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-45
+deep_causality_context_store/tests/types/substrate_ref/substrate_ref_tests.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-58
+deep_causality_context_store/tests/types/relation_kind/relation_kind_tests.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-34
+deep_causality_context_store/src/constants/mod.rs
+  s_73bfa279652898::t_44e6e285b27618 1-4
+deep_causality_context_store/tests/types/mod.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-9
+deep_causality_context_store/LICENSE
+  s_73bfa279652898::t_44e6e285b27618 1-23
+deep_causality_context_store/src/utils_test/mod.rs
+  s_73bfa279652898::t_44e6e285b27618 1-4
+openspec/changes/add-context-store-crate/tasks.md
+  s_73bfa279652898::t_9dde093839bc82 3,7,10,13-14,20,24,28,32
+deep_causality_context_store/src/types/substrate_ref/mod.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-48
+deep_causality_context_store/src/types/mod.rs
+  s_73bfa279652898::t_e0c912f4f19331 5-9
+  s_73bfa279652898::t_44e6e285b27618 1-4
+deep_causality_context_store/tests/types/substrate_ref/mod.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-6
+deep_causality_context_store/tests/types/vertical_datum/vertical_datum_tests.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-85
+deep_causality_context_store/BUILD.bazel
+  s_73bfa279652898::t_44e6e285b27618 1-112
+deep_causality_context_store/src/traits/mod.rs
+  s_73bfa279652898::t_44e6e285b27618 1-4
+deep_causality_context_store/src/alias/mod.rs
+  s_73bfa279652898::t_44e6e285b27618 1-4
+deep_causality_context_store/src/errors/mod.rs
+  s_73bfa279652898::t_44e6e285b27618 1-4
+deep_causality_context/Cargo.toml
+  s_73bfa279652898::t_e0c912f4f19331 47-49
+deep_causality_context_store/src/lib.rs
+  s_73bfa279652898::t_44e6e285b27618 1-20
+  s_73bfa279652898::t_e0c912f4f19331 21-28
+deep_causality_context_store/Cargo.toml
+  s_73bfa279652898::t_44e6e285b27618 1-36
+Cargo.toml
+  s_73bfa279652898::t_44e6e285b27618 11,43
+deep_causality_context/src/lib.rs
+  s_73bfa279652898::t_e0c912f4f19331 110-113
+deep_causality_context_store/README.md
+  s_73bfa279652898::t_44e6e285b27618 1-26
+deep_causality_context_store/tests/mod.rs
+  s_73bfa279652898::t_e0c912f4f19331 1-6
+Cargo.lock
+  s_73bfa279652898::t_a1e1c4479ccfc8 599,608-611
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "24f38a5e7828e85d4c3b45ed61f2b4dd13fe5fb8",
+  "prompts": {},
+  "sessions": {
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
