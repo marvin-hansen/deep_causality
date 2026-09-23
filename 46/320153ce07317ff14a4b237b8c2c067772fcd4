@@ -1,0 +1,25 @@
+deep_causality_context_store/src/utils_test/memory_storage/memory_state.rs
+  s_17aa9b94996585::t_58aaab34359013 251-253
+deep_causality_context/tests/types/context_types/context_store/store_branch_tests.rs
+  s_17aa9b94996585::t_58aaab34359013 355
+deep_causality_context/tests/types/context_types/context_store/substrate_tests.rs
+  s_17aa9b94996585::t_45321b22b5cc7f 26,280,282,289,304,311,405
+deep_causality_context_store/tests/types/context_write/context_write_tests.rs
+  s_17aa9b94996585::t_b86d0f6d7eca61 34-38,42-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "46320153ce07317ff14a4b237b8c2c067772fcd4",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
