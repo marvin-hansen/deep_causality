@@ -1,0 +1,146 @@
+deep_causality_context_store/tests/types/context_write/mod.rs
+  s_17aa9b94996585::t_89e6c5a7b4e671 1-6
+deep_causality_context_store/src/utils_test/memory_storage/mod.rs
+  s_17aa9b94996585::t_477db738866592 25
+deep_causality_context_store/tests/types/context_write/context_write_tests.rs
+  s_17aa9b94996585::t_89e6c5a7b4e671 1-39
+deep_causality_context_store/src/types/container_ref/mod.rs
+  s_17aa9b94996585::t_d21154fa8271c1 1-16
+deep_causality_context/tests/types/context_types/context_graph/apply_tests.rs
+  s_73bfa279652898::t_43959544faffba 293-314
+deep_causality_context_store/tests/traits/recordable_tests.rs
+  s_17aa9b94996585::t_99a5f178aef839 7,49-54
+  s_17aa9b94996585::t_9029924d894270 55-56
+deep_causality_context_store/src/lib.rs
+  s_17aa9b94996585::t_d21154fa8271c1 47,49
+deep_causality_context/src/types/context_types/context_graph/apply.rs
+  s_73bfa279652898::t_58ff2b3bbe4e58 75
+deep_causality_context_store/tests/errors/memory_storage_error_tests.rs
+  s_17aa9b94996585::t_14cdeae1bb5deb 46-49
+  s_17aa9b94996585::t_89e6c5a7b4e671 45,70-74,76
+deep_causality_context/src/types/context_types/context_graph/snapshot.rs
+  s_73bfa279652898::t_58ff2b3bbe4e58 26-30,55,76-84
+deep_causality_context/tests/extensions/storable/reference_tests.rs
+  s_17aa9b94996585::t_bd303d22fd1f48 16-21
+  s_17aa9b94996585::t_bd1d03b62c530e 23-24
+deep_causality_context/src/extensions/storable/software_scalars.rs
+  s_17aa9b94996585::t_4c6f123743bad0 35
+  s_73bfa279652898::t_58ff2b3bbe4e58 10-11
+deep_causality_context/src/types/context_types/context_store/subscribe.rs
+  s_17aa9b94996585::t_ec9452666c6fd3 36
+deep_causality_context_store/tests/types/mod.rs
+  s_17aa9b94996585::t_89e6c5a7b4e671 6,8
+deep_causality_context/tests/types/context_node_types/space/geo_space/recordable_tests.rs
+  s_17aa9b94996585::t_0b58756ae01605 73-93,95,101-126,140-145,148-149,155,164-169,172
+  s_17aa9b94996585::t_bd1d03b62c530e 94,146,170
+deep_causality_context/tests/types/context_node_types/space/euclidean_space/recordable_tests.rs
+  s_17aa9b94996585::t_bd1d03b62c530e 92,134,155
+  s_17aa9b94996585::t_0b58756ae01605 73-91,93,99-116,129-133,136-137,142,150-154,157
+deep_causality_context_store/tests/utils_test/memory_storage/context_storage_tests.rs
+  s_17aa9b94996585::t_477db738866592 6,19-20,24-26,474-595
+deep_causality_context/src/types/context_types/context_graph/extendable_contextuable_graph.rs
+  s_73bfa279652898::t_58ff2b3bbe4e58 24-27,58
+deep_causality_context/tests/types/context_types/context_store/substrate_tests.rs
+  s_73bfa279652898::t_43959544faffba 280,324-325,327,329-336,338,340-347,349
+  s_17aa9b94996585::t_bd1d03b62c530e 350-355,357-373,379-389,419-420
+  s_73bfa279652898::t_cdf64374691714 28,282,284-286,296-304,308,311-316,321-323,326,337,339,348
+  s_17aa9b94996585::t_7bfd04855e1a29 281,305,390-418
+  s_17aa9b94996585::t_1f0d7dc69a3c2e 26-27,283,287-295,306-307,309-310,317-320,328,356,374-378
+deep_causality_context_store/tests/utils_test/memory_storage/context_storage_stream_tests.rs
+  s_17aa9b94996585::t_14cdeae1bb5deb 255
+deep_causality_context_store/src/types/mod.rs
+  s_17aa9b94996585::t_d21154fa8271c1 6,8
+deep_causality_context_store/src/types/context_write/mod.rs
+  s_17aa9b94996585::t_d21154fa8271c1 1-29
+deep_causality_context/src/types/context_types/context_store/substrate.rs
+  s_17aa9b94996585::t_9d5e2a9ed9e1c6 8-10,16-20,26-31,33-50
+deep_causality_context/tests/extensions/storable/software_scalars_tests.rs
+  s_17aa9b94996585::t_bd303d22fd1f48 14-15,110-123
+  s_17aa9b94996585::t_f92c89b473f409 124
+deep_causality_context_store/src/types/context_event/mod.rs
+  s_17aa9b94996585::t_85ca71f831aaf4 14-17,20
+  s_73bfa279652898::t_58ff2b3bbe4e58 8-9,12-13
+deep_causality_context/tests/types/context_types/context_store/store_branch_tests.rs
+  s_17aa9b94996585::t_ec9452666c6fd3 24,220-231,233,237-242,309-318,337
+  s_73bfa279652898::t_8ba81970fcf56f 27
+  s_73bfa279652898::t_f28dbf90d77bec 363-367,369-370
+  s_17aa9b94996585::t_bd1d03b62c530e 390-391,400-515
+  s_17aa9b94996585::t_1f0d7dc69a3c2e 392-399
+  s_73bfa279652898::t_43959544faffba 349-362,368,371-389
+  s_17aa9b94996585::t_290800561c5221 23,25
+deep_causality_context_store/src/utils_test/memory_storage/memory_state.rs
+  s_17aa9b94996585::t_14cdeae1bb5deb 425
+  s_17aa9b94996585::t_d13f75d0c37492 7-9,300-335
+deep_causality_context/src/types/context_types/context_graph/mod.rs
+  s_73bfa279652898::t_58ff2b3bbe4e58 42-44,66,91
+deep_causality_context_store/tests/traits/context_storage_tests.rs
+  s_17aa9b94996585::t_8968ab1878caf8 6,15-16,115-125,167,195-199
+deep_causality_context_store/src/utils_test/memory_substrate/mod.rs
+  s_17aa9b94996585::t_477db738866592 14-15
+deep_causality_context_store/tests/types/container_ref/mod.rs
+  s_17aa9b94996585::t_89e6c5a7b4e671 1-6
+deep_causality_context/src/types/context_types/context_store/store_branch.rs
+  s_17aa9b94996585::t_9d5e2a9ed9e1c6 12,22-28,44-50,52-55,57,88-92,95,97-114,116-140,150,152-162,165,167
+  s_17aa9b94996585::t_82405cf9054983 8-10,29-30,56,58-72,74,77-87,93,164,166,168-175,177-192
+  s_17aa9b94996585::t_5e5f18ca63ce9d 14-15,96,149,176
+  s_17aa9b94996585::t_142b57c79d661b 13,94
+deep_causality_context/README.md
+  s_73bfa279652898::t_028e9d8448966e 145
+  s_17aa9b94996585::t_516a6477fcc359 88-90
+  s_17aa9b94996585::t_6bcd885d9b98cb 87
+deep_causality_context_store/tests/traits/context_storage_stream_tests.rs
+  s_17aa9b94996585::t_21a000d73553da 15
+  s_17aa9b94996585::t_8968ab1878caf8 122-127
+deep_causality_context/tests/types/context_types/context_graph/snapshot_tests.rs
+  s_73bfa279652898::t_80b532c7384fe0 244-268
+deep_causality_context_store/tests/types/container_ref/container_ref_tests.rs
+  s_17aa9b94996585::t_89e6c5a7b4e671 1-22
+deep_causality_context_store/src/traits/context_storage_stream.rs
+  s_17aa9b94996585::t_85ca71f831aaf4 37
+deep_causality_context_store/src/traits/substrate.rs
+  s_17aa9b94996585::t_3d570ade972a36 15-19,26-27
+deep_causality_context_store/src/errors/memory_storage_error.rs
+  s_17aa9b94996585::t_14cdeae1bb5deb 32-33,46-47,84-88,108-112,135-137,162
+  s_17aa9b94996585::t_3ba202f4369f7f 138,161,163-164
+deep_causality_context_store/src/types/id_reserve/mod.rs
+  s_73bfa279652898::t_58ff2b3bbe4e58 14-15
+deep_causality_context_store/README.md
+  s_17aa9b94996585::t_6bcd885d9b98cb 65,84,100-104,141-143,158-159
+deep_causality_context_store/BUILD.bazel
+  s_17aa9b94996585::t_89e6c5a7b4e671 114-132,140-158
+deep_causality_context/tests/alias/alias_tests.rs
+  s_17aa9b94996585::t_e32a3113410534 18-21,59-93
+  s_17aa9b94996585::t_bd1d03b62c530e 30
+deep_causality_context_store/tests/types/id_reserve/id_reserve_tests.rs
+  s_73bfa279652898::t_58ff2b3bbe4e58 47,49
+deep_causality_context/src/traits/contextuable_graph/mod.rs
+  s_17aa9b94996585::t_ee6d64f8a4d1fe 102-104
+deep_causality_context_store/src/traits/context_storage.rs
+  s_17aa9b94996585::t_457342fe649772 7-8,36-38,122-131
+deep_causality_context_store/src/utils_test/memory_storage/context_storage.rs
+  s_17aa9b94996585::t_eab246945ad44d 9-10,17,51,58,65,72,80,88,96,104,112-126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "78b4789fdca2d826d882f1ee53715458c59b6360",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
