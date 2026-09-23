@@ -1,0 +1,36 @@
+deep_causality_context/src/types/context_types/context_graph/restore.rs
+  s_17aa9b94996585::t_a9d5b00bb86e95 26,52-58
+openspec/specs/context-named-extra-contexts/spec.md
+  s_17aa9b94996585::t_8bd954ffaf759f 74-96
+  s_17aa9b94996585::t_59160ea69ae1ae 73
+deep_causality_context/tests/types/context_types/context_store/subscribe_tests.rs
+  s_17aa9b94996585::t_738d057987b1e0 167-232
+openspec/specs/context-store-streaming/spec.md
+  s_17aa9b94996585::t_59160ea69ae1ae 117-118
+deep_causality_context/tests/types/context_types/context_graph/apply_tests.rs
+  s_17aa9b94996585::t_738d057987b1e0 409-416,425,427-478
+  s_17aa9b94996585::t_b3e635b24521c7 419-424,426
+  s_17aa9b94996585::t_3b2a253acde0a9 18-19,417-418
+deep_causality_context/README.md
+  s_17aa9b94996585::t_8bd954ffaf759f 148-151
+deep_causality_context/src/types/context_types/context_graph/extra_context.rs
+  s_17aa9b94996585::t_a9d5b00bb86e95 9,12-14,25,39
+deep_causality_context/src/types/context_types/context_graph/apply.rs
+  s_17aa9b94996585::t_a9d5b00bb86e95 42-48,62,68-71,94-108,227-228,230-233,235-237,239-254,256
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7b4e0ab4897aef06ed890007a8cda6542dae3a7e",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
