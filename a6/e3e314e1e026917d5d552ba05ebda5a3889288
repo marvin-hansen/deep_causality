@@ -1,0 +1,60 @@
+deep_causality_utils/deep_causality_tempfile/src/types/named_temp_file/mod.rs
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-65
+openspec/changes/replace-tempfile-with-internal-temp/notes.md
+  s_be4cc1051574d5::t_71eb06660a8498 1-21
+deep_causality_utils/deep_causality_tempfile/BUILD.bazel
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-32
+deep_causality_utils/deep_causality_tempfile/LICENSE
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-23
+deep_causality_utils/deep_causality_tempfile/src/lib.rs
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-19
+Cargo.toml
+  s_be4cc1051574d5::t_9bb6b46d694a56 64
+openspec/changes/replace-tempfile-with-internal-temp/tasks.md
+  s_be4cc1051574d5::t_f038017e487a54 5
+  s_be4cc1051574d5::t_4726cc97a29a24 3-4,9,11-12,14-15,26,29,39,45-47,67-70,74,81-89,98-106
+  s_be4cc1051574d5::t_356c2b7ab2d470 13,16,18,21,25,28
+deep_causality_utils/deep_causality_tempfile/Cargo.toml
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-30
+deep_causality_utils/deep_causality_tempfile/src/types/mod.rs
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-6
+openspec/changes/replace-tempfile-with-internal-temp/proposal.md
+  s_be4cc1051574d5::t_93bdef4b2da886 5-6,10-11,15-16,19,22-29,36-44,51-57,61-64
+openspec/changes/replace-tempfile-with-internal-temp/specs/tempfile-crate/spec.md
+  s_be4cc1051574d5::t_57b84d11cbd270 136
+  s_be4cc1051574d5::t_763375eb89a87d 111-121
+openspec/changes/replace-tempfile-with-internal-temp/design.md
+  s_be4cc1051574d5::t_43a277d59ad532 19,21-23,28-30,44-48,54-56,113-116,121-128
+deep_causality_utils/deep_causality_tempfile/src/types/temp_dir/mod.rs
+  s_be4cc1051574d5::t_9bb6b46d694a56 1-47
+deep_causality_utils/deep_causality_tempfile/README.md
+  s_be4cc1051574d5::t_b5c4b26adba27f 1-49
+Cargo.lock
+  s_be4cc1051574d5::t_e491c31ffa63d8 819-822
+deep_causality_utils/deep_causality_tempfile/src/types/named_temp_file/named_temp_file_drop.rs
+  s_be4cc1051574d5::t_441ae309c3411c 1-10
+deep_causality_utils/deep_causality_tempfile/src/types/named_temp_file/named_temp_file_write.rs
+  s_be4cc1051574d5::t_a5515996446e52 1-17
+deep_causality_utils/deep_causality_tempfile/src/types/temp_dir/temp_dir_drop.rs
+  s_be4cc1051574d5::t_cdd27b71709713 1-10
+deep_causality_utils/deep_causality_tempfile/src/utils/mod.rs
+  s_be4cc1051574d5::t_8f89b572ff9cf1 1-5
+deep_causality_utils/deep_causality_tempfile/src/utils/temp_name.rs
+  s_be4cc1051574d5::t_0dcb41829ff856 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a6e3e314e1e026917d5d552ba05ebda5a3889288",
+  "prompts": {},
+  "sessions": {
+    "s_be4cc1051574d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc2e1f23-4334-44a2-9f87-001bc40e575b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
