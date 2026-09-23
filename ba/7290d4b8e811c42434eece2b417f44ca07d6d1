@@ -1,0 +1,133 @@
+deep_causality_context_store/src/errors/memory_storage_error.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 1-25,27-34,36-145
+  s_73bfa279652898::t_2a3d07fe8a5a9e 26
+  s_73bfa279652898::t_f88a9bb61ce3e9 35
+deep_causality_context_store/src/utils_test/memory_substrate/mod.rs
+  s_73bfa279652898::t_c8e5e45f8d6e3f 13-14,24-26,31,35
+  s_73bfa279652898::t_4c8fbcca2992ee 1-12,15-23,27-30,32-34,36-47
+deep_causality_context_store/tests/utils_test/memory_substrate/substrate_tests.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-71
+deep_causality_context_store/tests/utils_test/memory_events/mod.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-8
+deep_causality_context_store/tests/utils_test/memory_substrate/memory_substrate_tests.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-32,37-39
+  s_73bfa279652898::t_c8e5e45f8d6e3f 33-36
+deep_causality_context/src/types/context_types/context_graph/extendable_contextuable_graph.rs
+  s_73bfa279652898::t_cb148182530f77 7,23,32,40,61,70,75-76,116,140,155,227,242,256,264,297,314,331,348
+  s_73bfa279652898::t_389b1ea13f39fb 274
+  s_73bfa279652898::t_488f2fb2c8c416 24-31,33,44-49,71-74,178,203
+deep_causality_context/tests/types/context_types/context_graph/extra_context_tests.rs
+  s_73bfa279652898::t_488f2fb2c8c416 71,77-78
+  s_73bfa279652898::t_389b1ea13f39fb 1-70,72-76,79-86
+openspec/changes/add-context-store-crate/tdd-notes.md
+  s_73bfa279652898::t_54bea23e106695 118-187
+  s_73bfa279652898::t_adc9682fac139b 229-264
+  s_73bfa279652898::t_018679d0d98e5c 265-270
+  s_73bfa279652898::t_d12ded31845c42 188-228
+deep_causality_context/tests/types/context_types/context_graph/context_tests.rs
+  s_73bfa279652898::t_cb148182530f77 350
+  s_73bfa279652898::t_3857d252ce0360 357-358
+deep_causality_context_store/src/utils_test/memory_storage/context_storage.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 1-6,8,11-13,28-32,35-40,45-50,52-57,59-64,66-71,73-79,81-87,89-95,97-103,105-111,113-118,120-125,127-128
+  s_73bfa279652898::t_c8e5e45f8d6e3f 7,9-10,14-27,33-34,41-44,51,58,65,72,80,88,96,104,112,119,126
+deep_causality_context_store/tests/utils_test/memory_storage/context_storage_tests.rs
+  s_73bfa279652898::t_6e7e739766f779 16-18,441-470
+  s_73bfa279652898::t_5c97bf2ef93c65 1-15,19-132,137-187,190-225,230-293,295-312,315-401,407-421,471
+  s_73bfa279652898::t_d28d58b6c33a4c 294
+  s_73bfa279652898::t_c8e5e45f8d6e3f 133-136,188-189,226-229,313-314,402-406,422-440
+deep_causality_context_store/src/utils_test/memory_storage/context_storage_stream.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 1-5,7,9-19,39-44,51-56,69-70
+  s_73bfa279652898::t_c8e5e45f8d6e3f 6,8,20-38,45-50,57-68
+deep_causality_context/src/types/context_types/context_graph/extra_context.rs
+  s_73bfa279652898::t_cb148182530f77 1-38
+deep_causality_context/src/types/context_types/context_graph/mod.rs
+  s_73bfa279652898::t_cb148182530f77 16,21
+deep_causality_context_store/src/utils_test/mod.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 6-7,10-12,15-17
+deep_causality_context_store/src/utils_test/memory_storage/memory_state.rs
+  s_73bfa279652898::t_63b2b6318bb67d 25
+  s_73bfa279652898::t_4c8fbcca2992ee 1-6,9-24,26-28,31-35,43-46,109-110,123,128-130,139-144,149-154,174-179,184-189,210-216,223-229,244-250,260-266,282-288,297-299,329-332,334,352-356,358,363-369,400-401
+  s_73bfa279652898::t_c8e5e45f8d6e3f 7-8,29-30,36-42,47-108,111-122,124-127,131-138,145-148,155-173,180-183,190-209,217-222,230-243,251-259,267-281,289-296,300-328,335-351,359-362,370-399
+  s_73bfa279652898::t_54f0587b0a22a3 333,357
+deep_causality_context/src/traits/contextuable_graph/mod.rs
+  s_73bfa279652898::t_cb148182530f77 100,102-104,107,113-114,116,118-119,122-124,132,136,141-142
+  s_73bfa279652898::t_1e488bca67754c 143
+deep_causality_context_store/tests/errors/memory_storage_error_tests.rs
+  s_73bfa279652898::t_c8e5e45f8d6e3f 77-82,84,86
+  s_73bfa279652898::t_a61561fd822bd0 1-76,83,85,87-97
+deep_causality_context_store/src/errors/mod.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 6-7,10-11
+deep_causality_context_store/src/utils_test/memory_events/mod.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 1-6,8,10-28,30,36-39,65-66
+  s_73bfa279652898::t_c8e5e45f8d6e3f 7,31-35,40-42,45-64
+  s_73bfa279652898::t_7cc52d947806d4 9,43-44
+  s_73bfa279652898::t_c3e0f24bd311ff 29
+deep_causality_context_store/tests/utils_test/memory_events/memory_events_tests.rs
+  s_73bfa279652898::t_590d83cfef8c64 11-13,51-62
+  s_73bfa279652898::t_5c97bf2ef93c65 1-10,14-50,63
+deep_causality_context_store/tests/utils_test/memory_storage/memory_state_tests.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-48,51-61
+  s_73bfa279652898::t_c8e5e45f8d6e3f 49-50
+deep_causality_context/tests/types/context_types/context_graph/extendable_contextuable_graph_tests.rs
+  s_73bfa279652898::t_cb148182530f77 33,40,54,61,73,77,85,209
+  s_73bfa279652898::t_488f2fb2c8c416 94-96,112-114,139-141,170-172,188-190,221-223,235-237,260-262,293-295,317-319,346-348,363-365,390-392
+deep_causality_context/tests/types/context_types/context_graph/extendable_context_tests.rs
+  s_73bfa279652898::t_488f2fb2c8c416 52-54
+  s_73bfa279652898::t_cb148182530f77 26,39,124,143,149,158,184,222,248,284,301,336,359,394,417,442,472,501
+deep_causality_context_store/src/utils_test/memory_substrate/substrate.rs
+  s_73bfa279652898::t_c8e5e45f8d6e3f 18-23,30-35
+  s_73bfa279652898::t_4c8fbcca2992ee 1-17,24-29,36-37
+deep_causality_context_store/src/utils_test/memory_events/context_events.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 1-8,10-14,17,30-31
+  s_73bfa279652898::t_355f8fab6ab255 9,15-16,18-19,21-22,28
+  s_73bfa279652898::t_c8e5e45f8d6e3f 20,23-27,29
+deep_causality_context/tests/types/context_types/context_graph/extendable_context_edge_tests.rs
+  s_73bfa279652898::t_cb148182530f77 17,65,126,177,306,387,500,545,559,595
+  s_73bfa279652898::t_488f2fb2c8c416 254-256,266-268
+deep_causality_context_store/tests/utils_test/memory_storage/mod.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-12
+deep_causality_context_store/src/errors/memory_substrate_error.rs
+  s_73bfa279652898::t_4c8fbcca2992ee 1-57
+deep_causality_context_store/BUILD.bazel
+  s_73bfa279652898::t_5c97bf2ef93c65 250
+  s_73bfa279652898::t_4d24642998bf0e 254
+deep_causality_context_store/tests/utils_test/memory_storage/context_storage_stream_tests.rs
+  s_73bfa279652898::t_c8e5e45f8d6e3f 359-368
+  s_73bfa279652898::t_5c97bf2ef93c65 1-358,369-408
+deep_causality_context_store/src/utils_test/memory_storage/mod.rs
+  s_73bfa279652898::t_c8e5e45f8d6e3f 29,37-42
+  s_73bfa279652898::t_4c8fbcca2992ee 1-28,30-36,43-58
+openspec/changes/add-context-store-crate/tasks.md
+  s_73bfa279652898::t_54bea23e106695 86-90,93,97,99
+  s_73bfa279652898::t_d12ded31845c42 106,108,112,114
+deep_causality_context_store/tests/utils_test/memory_substrate/mod.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-8
+deep_causality_context/tests/types/context_types/context_graph/mod.rs
+  s_73bfa279652898::t_488f2fb2c8c416 16-17
+deep_causality_context_store/tests/utils_test/memory_events/context_events_tests.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-92
+deep_causality_context_store/tests/utils_test/memory_storage/memory_storage_tests.rs
+  s_73bfa279652898::t_5c97bf2ef93c65 1-38
+deep_causality_context_store/tests/errors/memory_substrate_error_tests.rs
+  s_73bfa279652898::t_cd458a2409f004 1-47
+deep_causality_context_store/tests/errors/mod.rs
+  s_73bfa279652898::t_6ec4e4ab088ad8 6-9
+deep_causality_context_store/tests/utils_test/mod.rs
+  s_73bfa279652898::t_0de2be14737331 7-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ba7290d4b8e811c42434eece2b417f44ca07d6d1",
+  "prompts": {},
+  "sessions": {
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
