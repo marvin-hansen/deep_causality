@@ -1,0 +1,119 @@
+examples/avionics_examples/control/flight_envelope_monitor/README.md
+  s_17aa9b94996585::t_338db80ec05a11 277-280
+deep_causality_data_structures/README_ArrayGrid.md
+  s_17aa9b94996585::t_3d85c94736e451 182-186
+  s_17aa9b94996585::t_c9229df8a94072 415
+  s_17aa9b94996585::t_d711d849453350 24,170,374-375,406-407,414,438,441-444
+examples/causal_uncertain_examples/clinical_trial/README.md
+  s_17aa9b94996585::t_2498cd4939bacd 3-5,10-16,19,29-35,42-44,46-47,50-52
+deep_causality_physics/README.md
+  s_17aa9b94996585::t_93e52ac2d9f756 22
+  s_17aa9b94996585::t_f2c51607280275 29,68
+deep_causality_physics/README_GAUGE_THEORIES.md
+  s_17aa9b94996585::t_f2c51607280275 100,109,116
+deep_causality_unified_math/deep_causality_algebra/src/algebra/operator.rs
+  s_17aa9b94996585::t_92027a599254d7 37-42
+deep_causality_utils/deep_causality_file/README.md
+  s_17aa9b94996585::t_58d33298963ad9 34-35
+deep_causality_unified_math/deep_causality_haft/README.md
+  s_17aa9b94996585::t_8f3138fc62a05a 60,366
+  s_17aa9b94996585::t_4f638f08cb7723 214-222,230,239,248,257,269,280
+deep_causality_unified_math/deep_causality_algebra/README_ALGEBRA_TRAITS.md
+  s_17aa9b94996585::t_54f08fc8fc1793 162,166-168
+examples/classical_causality_examples/classical_via_causal_monad/rcm/README.md
+  s_17aa9b94996585::t_93514df45f2514 3,23-24,34
+deep_causality_cfd/verification/dec_lid_cavity_re1000_verification/README.md
+  s_17aa9b94996585::t_f87eafc1ef2118 70-74
+deep_causality_unified_math/deep_causality_algebra/src/algebra/annihilating.rs
+  s_17aa9b94996585::t_92027a599254d7 47,50-53
+deep_causality_unified_math/deep_causality_stats/src/algorithms/correlation.rs
+  s_17aa9b94996585::t_bc241756a448ab 25
+deep_causality_cfd/studies/srp_momentum_jet/README.md
+  s_17aa9b94996585::t_48516fba219451 17-21
+examples/classical_causality_examples/classical_via_causal_monad/scm/README.md
+  s_17aa9b94996585::t_2034467747042e 3,21,31
+deep_causality_cfd/verification/README.md
+  s_17aa9b94996585::t_f87eafc1ef2118 350-351
+deep_causality_unified_math/deep_causality_stats/src/types/mean_accumulator/mod.rs
+  s_17aa9b94996585::t_bc241756a448ab 35
+examples/csm_examples/csm_effect_ethos/README.md
+  s_17aa9b94996585::t_79678c31f80cc9 55-57,59-70,72-73,76-77
+deep_causality_unified_math/deep_causality_stats/README.md
+  s_17aa9b94996585::t_c094e1610134b3 54-73
+deep_causality_core/README.md
+  s_17aa9b94996585::t_79ab47c83d302e 120-121,126-129
+  s_17aa9b94996585::t_601d30d741745b 94
+  s_17aa9b94996585::t_d6414cd6d3496f 66-67,85-86,100-101,134,141
+README_NO_STD.md
+  s_17aa9b94996585::t_68bcecac3784b6 65-67,122-123,276-277
+deep_causality_cfd/verification/qtt_cylinder_verification/README.md
+  s_17aa9b94996585::t_f87eafc1ef2118 56-57
+examples/avionics_examples/README.md
+  s_17aa9b94996585::t_e3ba5eec0da208 76
+examples/avionics_examples/cfd/viv_resonance_margin/README.md
+  s_17aa9b94996585::t_9fe605fdf69465 17-18
+deep_causality_unified_math/deep_causality_stats/src/algorithms/moments.rs
+  s_17aa9b94996585::t_bc241756a448ab 25
+examples/material_examples/hyperlens/README.md
+  s_17aa9b94996585::t_988b49d3b1f208 8-11
+deep_causality_unified_math/deep_causality_algebra/src/algebra/associative.rs
+  s_17aa9b94996585::t_92027a599254d7 18-24,28-29,36-37
+README.md
+  s_17aa9b94996585::t_6dba8b42f3c6fb 245
+  s_17aa9b94996585::t_157ab425fb8afc 85,90-92,95,97-100,103-104,111,166
+examples/mathematics_examples/1_foundation/algebra/README.md
+  s_17aa9b94996585::t_8259e957c40031 38-40
+deep_causality_data_structures/README_SlidingWindow.md
+  s_17aa9b94996585::t_5d7406b2173c0c 58-63,75
+deep_causality_unified_math/deep_causality_uncertain/README.md
+  s_17aa9b94996585::t_41642d6bd8d4cd 321-322,324,326-328,333,335,337
+examples/classical_causality_examples/classical_via_causal_monad/dbn/README.md
+  s_17aa9b94996585::t_1a8d6392612432 17
+  s_17aa9b94996585::t_acc5c244ae15a2 3,15,34,40,44
+deep_causality_unified_math/deep_causality_algebra/src/algebra/distributive.rs
+  s_17aa9b94996585::t_92027a599254d7 14,16-18,25-26,33-34
+examples/classical_causality_examples/classical_via_causaloid/dbn/README.md
+  s_17aa9b94996585::t_c1a1b7dae2acc0 3,27-29,38
+deep_causality_unified_math/deep_causality_algebra/src/algebra/commutative.rs
+  s_17aa9b94996585::t_92027a599254d7 18-19,28-30,37-38
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/accumulation.rs
+  s_17aa9b94996585::t_bc241756a448ab 8
+deep_causality_unified_math/deep_causality_stats/src/lib.rs
+  s_17aa9b94996585::t_ec14e34e26a7bf 74-89
+deep_causality_unified_math/deep_causality_algebra/README_ISOMORPHISM.md
+  s_17aa9b94996585::t_a321dc9d03ad61 193
+examples/classical_causality_examples/classical_via_causal_monad/cate/README.md
+  s_17aa9b94996585::t_0f9bcc2359df40 46
+  s_17aa9b94996585::t_01e4c9603b7a5c 3,21,25-26,31-36,45,48
+deep_causality_algorithms/README.md
+  s_17aa9b94996585::t_01e4c9603b7a5c 237,244,247-248
+  s_17aa9b94996585::t_0f9bcc2359df40 238-239
+deep_causality_physics/README_KERNELS.md
+  s_17aa9b94996585::t_f2c51607280275 57,175,179
+deep_causality_cfd/tests/solvers/dec/cavity_tests.rs
+  s_17aa9b94996585::t_c79bae5fe6d80b 150
+deep_causality_cfd/README.md
+  s_17aa9b94996585::t_f87eafc1ef2118 349
+examples/classical_causality_examples/classical_via_causal_monad/cate/main.rs
+  s_17aa9b94996585::t_97ee36a6890683 9
+examples/classical_causality_examples/classical_via_causal_monad/dbn/main.rs
+  s_17aa9b94996585::t_35599073220a9c 15-16
+examples/classical_causality_examples/classical_via_causaloid/dbn/main.rs
+  s_17aa9b94996585::t_a82e31d402a07d 76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4c584f22579cdc7a978d9a215401d4abeed7c656",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
