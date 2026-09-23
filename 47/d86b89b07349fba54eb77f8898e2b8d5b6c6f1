@@ -1,0 +1,37 @@
+deep_causality_context_store/README.md
+  s_73bfa279652898::t_1f53f84ffa7f0a 122-123
+  s_73bfa279652898::t_1ee73e7484a529 3-5,10-13,20-121,124-145,148-155
+deep_causality_context_store/src/lib.rs
+  s_73bfa279652898::t_3b8870362c67a0 8-16
+AGENTS.md
+  s_73bfa279652898::t_14f38743c7dc48 185,189,208-209,222-227,274,298,334-335,338-341,397,624
+deep_causality_context/README.md
+  s_73bfa279652898::t_3651baf34d5b0c 45-48,67-155
+  s_73bfa279652898::t_d472502b3d80bb 156
+deep_causality_context/deep_causality_context_sbom.spdx.json
+  s_73bfa279652898::t_51bb1276a1f972 4,10,17,30-31,36-37,40-41,46,52-53,72-73,75,78-79,82-91,94-95,98-99,104-105,108-109,114-115,118-125,138-139,144-145,148-149,154,160-161,164-165,170-171,174-175,180-181,184-185,190,194-204,207-208,219-248,253,255,258-260,263,265,268,273,275,278,283,285,288,290,293,298,303,305,308,310,313,315,328,333,335,338-343,348,353,355,358,363,365,368,370,373,375,383,385,390,393,395,400,403,405-415
+deep_causality_context/deep_causality_context_sbom.spdx.json.sha
+  s_73bfa279652898::t_51bb1276a1f972 1
+openspec/changes/add-context-store-crate/tasks.md
+  s_73bfa279652898::t_63d1c7de5db5ac 185,188,192,196,201,203-204,206,208,210,212-213,217
+deep_causality_context_store/deep_causality_context_store_sbom.spdx.json.sha
+  s_73bfa279652898::t_51bb1276a1f972 1
+deep_causality_context_store/deep_causality_context_store_sbom.spdx.json
+  s_73bfa279652898::t_51bb1276a1f972 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "47d86b89b07349fba54eb77f8898e2b8d5b6c6f1",
+  "prompts": {},
+  "sessions": {
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
