@@ -1,0 +1,35 @@
+openspec/changes/replace-rayon-with-par/tasks.md
+  s_c752104e8c07df::t_26e5164b45a88f 17
+  s_c752104e8c07df::t_12914c89f99054 1-16,18-83
+openspec/changes/replace-rayon-with-par/specs/par-fork-join/spec.md
+  s_c752104e8c07df::t_26e5164b45a88f 49
+  s_c752104e8c07df::t_30cf4d8f3a3f8b 1-48,50-80
+openspec/changes/replace-rayon-with-par/specs/rayon-free-workspace/spec.md
+  s_c752104e8c07df::t_30cf4d8f3a3f8b 1-41
+openspec/changes/replace-rayon-with-par/.openspec.yaml
+  s_c752104e8c07df::t_4841e7d3f6cf0b 1-2
+openspec/changes/replace-rayon-with-par/proposal.md
+  s_c752104e8c07df::t_d0b110d409d967 1-82
+openspec/changes/replace-rayon-with-par/design.md
+  s_c752104e8c07df::t_c9b07c4097d716 143,186-188
+  s_c752104e8c07df::t_f1f13fe108cfc9 1-140,144-185,189-233
+  s_c752104e8c07df::t_f141386ea372e1 141-142
+openspec/changes/replace-rayon-with-par/specs/fluiddynamics-dsl/spec.md
+  s_c752104e8c07df::t_30cf4d8f3a3f8b 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7bf77dd1a9b84cc20e78fbade2e390a996f2a7d8",
+  "prompts": {},
+  "sessions": {
+    "s_c752104e8c07df": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "86b06745-1559-42f3-ac02-4003e458bbcf",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
