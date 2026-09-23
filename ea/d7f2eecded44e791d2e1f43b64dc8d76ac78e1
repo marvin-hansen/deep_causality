@@ -1,0 +1,28 @@
+examples/physics_examples/gauge_lattice_u1_2d/README.md
+  s_17aa9b94996585::t_b26b8733270358 12-13,35-40,56
+  s_17aa9b94996585::t_2dfa35d87565e3 41
+  s_17aa9b94996585::t_7b2c3d1f1a9bf4 42-46
+examples/physics_examples/gauge_lattice_u1_2d/main.rs
+  s_17aa9b94996585::t_87d41f38aba217 19-21,35,50,62-64,67-73,78-79,96,149-157,162-163,174,176
+  s_17aa9b94996585::t_7740b67d838a73 158-161
+  s_17aa9b94996585::t_7b2c3d1f1a9bf4 164-167
+  s_17aa9b94996585::t_b26b8733270358 90,121-122,143-146,206-207,292-293,297,303,319,321-324,334
+Cargo.toml
+  s_17aa9b94996585::t_424dffa4220347 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ead7f2eecded44e791d2e1f43b64dc8d76ac78e1",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
