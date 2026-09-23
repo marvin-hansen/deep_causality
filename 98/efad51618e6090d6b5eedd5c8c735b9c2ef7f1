@@ -1,0 +1,134 @@
+deep_causality_discovery/tests/types/cdl/brcd_loaded_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 25,32
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_table_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 11
+  s_be4cc1051574d5::t_b9ab5f606cf97e 14-15,23,36
+deep_causality_discovery/tests/types/cdl/surd_cleaned_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 13
+  s_be4cc1051574d5::t_ab7a370ec77f51 9
+deep_causality_discovery/Cargo.toml
+  s_be4cc1051574d5::t_b9ab5f606cf97e 66
+deep_causality_discovery/tests/types/cdl/brcd_pipeline_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 10
+  s_be4cc1051574d5::t_b9ab5f606cf97e 28,34
+deep_causality_discovery/tests/types/cdl/surd_results_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 14
+  s_be4cc1051574d5::t_ab7a370ec77f51 10
+deep_causality_utils/deep_causality_file/tests/types/snapshot/snapshot_io_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 14
+  s_be4cc1051574d5::t_b9ab5f606cf97e 30-31,158,177,191,298,365,395
+openspec/specs/tempfile-crate/spec.md
+  s_be4cc1051574d5::t_c36d5f28904f7e 1-3,7-161
+  s_be4cc1051574d5::t_be71c2af3a53fd 4-6
+deep_causality_utils/deep_causality_file/tests/types/writers/write_table_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 16,50,65,85,97,107
+  s_be4cc1051574d5::t_ab7a370ec77f51 12
+deep_causality_discovery/tests/types/cdl/surd_regression_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 13
+  s_be4cc1051574d5::t_b9ab5f606cf97e 17
+deep_causality_cfd/tests/types/flow/march_state_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 94,111
+  s_be4cc1051574d5::t_ab7a370ec77f51 15
+deep_causality_discovery/tests/types/config/surd_loader_config_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+  s_be4cc1051574d5::t_b9ab5f606cf97e 11
+deep_causality_discovery/tests/types/data_loader/csv_exclude_bug_repro_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+deep_causality_discovery/tests/types/cdl/brcd_results_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+  s_be4cc1051574d5::t_b9ab5f606cf97e 25
+deep_causality_discovery/tests/types/config/brcd_loader_config_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+  s_be4cc1051574d5::t_b9ab5f606cf97e 11
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_rows_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 48,94,107
+  s_be4cc1051574d5::t_ab7a370ec77f51 12
+AGENTS.md
+  s_be4cc1051574d5::t_c0a93f8845adda 185,190,199,213-216,237-238,277,306,397-398,403,629
+deep_causality_discovery/tests/types/cdl/surd_features_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 9
+  s_be4cc1051574d5::t_b9ab5f606cf97e 13
+deep_causality_discovery/tests/types/data_loader/csv_data_loader_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 9
+deep_causality_utils/deep_causality_file/tests/types/writers/write_rows_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 11
+  s_be4cc1051574d5::t_b9ab5f606cf97e 44,82,115,153
+deep_causality_discovery/tests/types/cdl/cdl_with_analysis_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 13
+  s_be4cc1051574d5::t_b9ab5f606cf97e 17
+deep_causality_discovery/tests/types/cdl/surd_configured_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 11
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_trace_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 11
+  s_be4cc1051574d5::t_b9ab5f606cf97e 14-15,36
+deep_causality_cfd/Cargo.toml
+  s_be4cc1051574d5::t_b9ab5f606cf97e 115
+deep_causality_discovery/tests/types/data_loader/cpdag_csv_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+  s_be4cc1051574d5::t_b9ab5f606cf97e 17,32
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_gnss_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 8
+  s_be4cc1051574d5::t_b9ab5f606cf97e 12
+deep_causality_cfd/tests/types/flow/state_snapshot_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 18
+  s_be4cc1051574d5::t_b9ab5f606cf97e 59,103,130
+deep_causality_discovery/tests/types/data_loader/cpdag_cache_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 14
+  s_be4cc1051574d5::t_b9ab5f606cf97e 35,43,179
+deep_causality_utils/deep_causality_file/Cargo.toml
+  s_be4cc1051574d5::t_b9ab5f606cf97e 46
+deep_causality_cfd/tests/types/flow/study_grammar_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 17
+  s_be4cc1051574d5::t_b9ab5f606cf97e 80,102,122,194,210
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_clk_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 9
+  s_be4cc1051574d5::t_b9ab5f606cf97e 16,184
+deep_causality_utils/deep_causality_file/tests/types/trace_types_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 10
+  s_be4cc1051574d5::t_b9ab5f606cf97e 15
+deep_causality_discovery/tests/types/cdl/surd_data_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 29
+  s_be4cc1051574d5::t_ab7a370ec77f51 11
+deep_causality_discovery/tests/types/data_loader/parquet_data_loader_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 9
+Cargo.toml
+  s_be4cc1051574d5::t_0e255b77a2e706 33
+deep_causality_discovery/tests/types/cdl/cdl_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+  s_be4cc1051574d5::t_b9ab5f606cf97e 11
+deep_causality_discovery/tests/types/cdl/brcd_configured_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 7
+  s_be4cc1051574d5::t_b9ab5f606cf97e 25,32
+deep_causality_discovery/tests/types/config/cdl_config_builder_tests.rs
+  s_be4cc1051574d5::t_ab7a370ec77f51 12
+  s_be4cc1051574d5::t_b9ab5f606cf97e 16
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_sp3_tests.rs
+  s_be4cc1051574d5::t_b9ab5f606cf97e 16,276
+  s_be4cc1051574d5::t_ab7a370ec77f51 9
+openspec/changes/archive/2026-09-23-replace-tempfile-with-internal-temp/design.md
+  s_be4cc1051574d5::t_719c44648c41ce 127
+openspec/changes/archive/2026-09-23-replace-tempfile-with-internal-temp/proposal.md
+  s_be4cc1051574d5::t_fb0b392473f2d2 25
+openspec/changes/archive/2026-09-23-replace-tempfile-with-internal-temp/tasks.md
+  s_be4cc1051574d5::t_4a569b0fa9de42 87-90,95,98,104,106-109,111
+Cargo.lock
+  s_be4cc1051574d5::t_18a65a8006144c 588,639,674
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "98efad51618e6090d6b5eedd5c8c735b9c2ef7f1",
+  "prompts": {},
+  "sessions": {
+    "s_be4cc1051574d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc2e1f23-4334-44a2-9f87-001bc40e575b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
