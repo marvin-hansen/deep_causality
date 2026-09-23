@@ -1,0 +1,19 @@
+deep_causality_unified_math/deep_causality_calculus/tests/extensions/differentiate_ext_tests.rs
+  s_be4cc1051574d5::t_676a499d66b209 217-220,419-421,438-439
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d4e739212030e8a3c5773d585006939e490906bc",
+  "prompts": {},
+  "sessions": {
+    "s_be4cc1051574d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc2e1f23-4334-44a2-9f87-001bc40e575b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
