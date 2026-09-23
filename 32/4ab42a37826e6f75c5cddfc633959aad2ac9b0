@@ -1,0 +1,57 @@
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gradient_flow.rs
+  s_17aa9b94996585::t_f8998288f35255 148
+  s_17aa9b94996585::t_a0e2987bde4115 175,184,189,278-279,287-288
+  s_17aa9b94996585::t_3b19844be62b72 151,179,204
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gauge.rs
+  s_17aa9b94996585::t_e830134b45a88e 71
+  s_17aa9b94996585::t_178235831e4052 7-8,28
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gauge_transform.rs
+  s_17aa9b94996585::t_178235831e4052 53,58-59
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_metropolis.rs
+  s_17aa9b94996585::t_f8998288f35255 86
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_plague.rs
+  s_17aa9b94996585::t_f8998288f35255 159,164,169,175,180,185
+  s_17aa9b94996585::t_3b19844be62b72 96,99-100
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_smearing.rs
+  s_17aa9b94996585::t_f8998288f35255 126-128
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/link_variable/link_variable_coverage_tests.rs
+  s_17aa9b94996585::t_515e17d22d1620 6-7,52,55-160,162-166,168-203,205-222
+  s_17aa9b94996585::t_678bbaeb5a6358 10,204
+  s_17aa9b94996585::t_f8998288f35255 11
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/link_variable/link_variable_tests.rs
+  s_17aa9b94996585::t_8f241c22311234 159,187-201,564
+  s_17aa9b94996585::t_20e47dc6257656 587-593
+  s_17aa9b94996585::t_8b2a74d7bde2bd 594
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_wilson.rs
+  s_17aa9b94996585::t_f8998288f35255 219,226
+  s_17aa9b94996585::t_3b19844be62b72 203,211,303
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/mod.rs
+  s_17aa9b94996585::t_efffb7225e1047 135-137,139-143,205
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/ops.rs
+  s_17aa9b94996585::t_f8998288f35255 342-344,346-347
+  s_17aa9b94996585::t_b17a402e71cf91 181,233,256,280,282-286,291,294-295,304,326-341,345,348-362,366,370,389
+  s_17aa9b94996585::t_3dcd6c27306967 229-230,243,247
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_continuum.rs
+  s_17aa9b94996585::t_05a8169fdc3170 98,106,180,186,192
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_monte_carlo.rs
+  s_17aa9b94996585::t_3b19844be62b72 82-83,101-102,105-106
+  s_17aa9b94996585::t_f8998288f35255 155-156
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/lattice_gauge_field_tests.rs
+  s_17aa9b94996585::t_20e47dc6257656 988-1025
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "324ab42a37826e6f75c5cddfc633959aad2ac9b0",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
