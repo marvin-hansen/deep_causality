@@ -1,0 +1,34 @@
+deep_causality_unified_math/deep_causality_topology/src/types/simplicial_complex/lazy_hodge_star.rs
+  s_17aa9b94996585::t_7b286744550aff 279-283
+  s_17aa9b94996585::t_d8565e547acefa 308-309
+examples/physics_examples/gauge_lattice_u1_2d/main.rs
+  s_17aa9b94996585::t_c5f1bece3d2c8d 41,45,47,152,156,159,167
+  s_17aa9b94996585::t_e0d47b2f9bc3f1 59-63,65-77,80-83,99-100,115,117-118,141-142,151,183-184
+  s_17aa9b94996585::t_1e79ef31e3b6cd 46
+  s_17aa9b94996585::t_1310153c2c837e 78-79,270-271,275,280,299
+deep_causality_physics/tests/kernels/mhd/grmhd_tests.rs
+  s_17aa9b94996585::t_705a33b30a809c 496-498
+  s_17aa9b94996585::t_ef0dc91bd97b9a 382,495,499-500
+deep_causality_unified_math/deep_causality_topology/tests/types/simplicial_complex/lazy_hodge_star_tests.rs
+  s_17aa9b94996585::t_cc821950f1be3b 237,247-249,251,267,270,272-278
+examples/physics_examples/gauge_lattice_u1_2d/README.md
+  s_17aa9b94996585::t_1310153c2c837e 34-37,46-47
+deep_causality_physics/tests/kernels/mhd/wrappers_tests.rs
+  s_17aa9b94996585::t_1e79ef31e3b6cd 218,258,285,312
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d4025d67d45d900f1aef5da57141fea7d3ba828e",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
