@@ -1,0 +1,209 @@
+deep_causality_context/tests/extensions/storable/scalars_tests.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-102
+deep_causality_context/src/types/context_node_types/time/euclidean_time/recordable.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-12,17-19,30-31
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,13-16,20-29
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-17,19-25,29-43
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-10,18,26-28,44-45
+deep_causality_context/tests/types/context_node_types/data/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 20-23,29-32,43-46
+  s_73bfa279652898::t_7cb67df3f46506 13-14
+  s_73bfa279652898::t_8dd6070b964044 1-12,15-19,24-28,33-42,47-66
+deep_causality_context/tests/extensions/storable/mod.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-14
+deep_causality_context/tests/types/context_node_types/space_time/euclidean/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-12,15-35,62-75,80-85,90-96,99,104-110
+  s_73bfa279652898::t_a2f9cec2f4cf10 36-61,76-79,86-89,97-98,100-103
+  s_73bfa279652898::t_7cb67df3f46506 13-14
+deep_causality_context/tests/types/context_node_types/space_time/space_time_kind/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 11-13,19-37,63-70
+  s_73bfa279652898::t_7cb67df3f46506 14
+  s_73bfa279652898::t_8dd6070b964044 1-10,15-18,38-62,71-72
+deep_causality_context/src/extensions/storable/software_scalars.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 13-45
+  s_73bfa279652898::t_692eb1373b6ae0 1-12,46-47
+deep_causality_context/tests/types/context_node_types/space/space_kind/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-10,15-45
+  s_73bfa279652898::t_7cb67df3f46506 14
+  s_73bfa279652898::t_a2f9cec2f4cf10 11-13
+deep_causality_context/src/extensions/storable/scalars.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 11-95
+  s_73bfa279652898::t_5759ce5d946b7a 1-10,96-97
+deep_causality_context/src/types/context_types/context_graph/restore.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6-9,11-12,28,32-83,85-91,98-102,106-107
+  s_73bfa279652898::t_d8d9b27f17076a 14,29-30,84,92-97,103-105
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,10,13,15-27,31,108-109
+deep_causality_context/tests/types/context_types/context_graph/snapshot_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 39-43,54-56,62-65,77-82,114-117,124-125,127-128,131-132,147-150,169-174,189-193,201-202,204-208,214-218
+  s_73bfa279652898::t_059b3d3bbcbd00 14-16,223-242
+  s_73bfa279652898::t_b639b26b3371ab 1-13,17-38,44-53,57-61,66-76,83-113,118-123,126,129-130,133-146,151-168,175-188,194-200,203,209-213,219-222,243
+deep_causality_context/src/types/context_node_types/space/ecef_space/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-30,32
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_8645486852dd01 1-5,7,9-10,31
+deep_causality_context/src/extensions/storable/reference.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 11-22
+  s_73bfa279652898::t_75f6d6d3598a14 1-10,23-24
+deep_causality_context/tests/types/context_types/contextoid/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 15-16,18-20,30-34,78-83
+  s_73bfa279652898::t_8dd6070b964044 1-14,17,21-29,35-77,84-102
+deep_causality_context/tests/extensions/storable/reference_tests.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-42
+deep_causality_context/src/types/context_node_types/space/ned_space/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-33,35
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_959da7c8afda54 1-5,7,9-10,34
+deep_causality_context/tests/types/context_types/context_graph/restore_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 13-14,22-23,43-47,60-65,73-74,77-80,142-147,158-159,176-179,194-197,214-217,230-233,243-248,252-255,263-266,273-292
+  s_73bfa279652898::t_b639b26b3371ab 1-12,15-21,24-42,48-59,66-72,75-76,81-141,148-157,160-175,180-193,198-213,218-229,234-242,249-251,256-262,267-272,293-294
+deep_causality_context/tests/types/context_node_types/space/ecef_space/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-14,17-22,31-35,63-72,81-95,102,118-122
+  s_73bfa279652898::t_7cb67df3f46506 15-16
+  s_73bfa279652898::t_a2f9cec2f4cf10 23-30,36-62,73-80,96-101,103-117
+deep_causality_context/src/types/context_node_types/time/entropic_time/recordable.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,8-10,14-16,25-26
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-13,17-24
+  s_73bfa279652898::t_7cb67df3f46506 7
+deep_causality_context/src/types/context_node_types/space_time/euclidean_spacetime/recordable.rs
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-10,18,26-28,44-45
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-17,19-25,29-43
+deep_causality_context/tests/extensions/storable/software_scalars_tests.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-73,78-108
+  s_73bfa279652898::t_a2f9cec2f4cf10 74-77
+deep_causality_context/tests/types/context_node_types/time/time_kind/recordable_tests.rs
+  s_73bfa279652898::t_7cb67df3f46506 14
+  s_73bfa279652898::t_a2f9cec2f4cf10 11-13
+  s_73bfa279652898::t_8dd6070b964044 1-10,15-37
+deep_causality_context/tests/types/context_node_types/space_time/lorentzian/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 36-61,76-79,86-89,97-98,100-103
+  s_73bfa279652898::t_8dd6070b964044 1-12,15-35,62-75,80-85,90-96,99,104-110
+  s_73bfa279652898::t_7cb67df3f46506 13-14
+deep_causality_context/src/types/context_node_types/time/lorentzian_time/recordable.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-12,17-19,30-31
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,13-16,20-29
+  s_73bfa279652898::t_7cb67df3f46506 8
+deep_causality_context/src/types/context_types/context_graph/snapshot.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,8-9,11-12,27-70
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,10,13-26,71-72
+deep_causality_context/src/types/context_node_types/no_space_time/recordable.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,12-16,18-20,26-30,32-34,40-41
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,8-11,17,21-25,31,35-39
+deep_causality_context/tests/types/context_node_types/space_time/tangent_spacetime/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-14,17-66,89-102,107-112,117-122,134-135,154-156,168-172
+  s_73bfa279652898::t_a2f9cec2f4cf10 67-88,103-106,113-116,123-133,137-145,153,157-167
+  s_73bfa279652898::t_d8d9b27f17076a 136,146-152
+  s_73bfa279652898::t_7cb67df3f46506 16
+  s_73bfa279652898::t_f3bc2b8b29af30 15
+deep_causality_context/src/types/context_node_types/time/time_kind/recordable.rs
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-10,12-13,20-22,37-38
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11,14-19,23-36
+deep_causality_context/tests/extensions/storable/collections_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 32-35,37-40,50-53,88-91
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-31,36,41-49,54-87,92-97
+deep_causality_context/tests/types/context_node_types/time/entropic_time/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-12,15-25,49-59,64-65
+  s_73bfa279652898::t_a2f9cec2f4cf10 26-48,60-63
+  s_73bfa279652898::t_7cb67df3f46506 13-14
+deep_causality_context/tests/extensions/storable/text_tests.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-40
+deep_causality_context/src/types/context_node_types/time/discrete_time/recordable.rs
+  s_73bfa279652898::t_7cb67df3f46506 7
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-14,18-25
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,8-10,15-17,26-27
+deep_causality_context/tests/types/context_node_types/space/geo_space/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-14,17-22,32-36,63-72,81-95,103,121-125
+  s_73bfa279652898::t_a2f9cec2f4cf10 23-31,37-62,73-80,96-102,104-120
+  s_73bfa279652898::t_7cb67df3f46506 15-16
+deep_causality_context/src/types/context_types/contextoid/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6-11,23-32,36-45
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,12-22,33-35,46-47
+deep_causality_context/src/types/context_node_types/data/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 13,17
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,8-12,14-16,18-19
+  s_73bfa279652898::t_7cb67df3f46506 6-7
+deep_causality_context/tests/extensions/mod.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-5
+deep_causality_context/src/types/context_node_types/space/space_kind/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-30
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_d098c18d150ae4 1-5,7,9-10,31-32
+deep_causality_context/src/extensions/storable/collections.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 12-40
+  s_73bfa279652898::t_22f0a639ad2cfa 1-11,41-42
+deep_causality_context/src/types/context_node_types/space/geo_space/recordable.rs
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-40,42
+  s_73bfa279652898::t_8ae01328467383 1-5,7,9-10,41
+deep_causality_context/tests/traits/storable/storable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 88-93,120-123
+  s_73bfa279652898::t_f3bc2b8b29af30 45
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-44,46-87,94-119,124-141
+deep_causality_context/tests/types/context_node_types/time/euclidean_time/recordable_tests.rs
+  s_73bfa279652898::t_8dd6070b964044 1-13,16-21,29-33,51-64,69-84,89-94
+  s_73bfa279652898::t_7cb67df3f46506 14-15
+  s_73bfa279652898::t_a2f9cec2f4cf10 22-28,34-50,65-68,85-88
+deep_causality_context/src/extensions/storable/text.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 11-18
+  s_73bfa279652898::t_2d67987f4852f4 1-10,19-20
+deep_causality_context/tests/types/context_node_types/no_space_time/recordable_tests.rs
+  s_73bfa279652898::t_7cb67df3f46506 12-13
+  s_73bfa279652898::t_a2f9cec2f4cf10 31-51,61-85
+  s_73bfa279652898::t_8dd6070b964044 1-11,14-30,52-60,86-94
+deep_causality_context/tests/types/context_node_types/time/discrete_time/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 20-26,32-48,59-66
+  s_73bfa279652898::t_7cb67df3f46506 13-14
+  s_73bfa279652898::t_8dd6070b964044 1-12,15-19,27-31,49-58,67-68
+deep_causality_context/src/types/context_node_types/space_time/space_time_kind/recordable.rs
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-10,12-13,19-21,33-34
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11,14-18,22-32
+deep_causality_context/src/types/context_node_types/space_time/tangent_spacetime/recordable.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-14,17-29,33-70
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_1ef8e5a8f5774a 1-5,7,9-10,15-16,30-32,71-72
+deep_causality_context/tests/traits/storable/mod.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 1-6
+deep_causality_context/src/types/context_node_types/space/euclidean_space/recordable.rs
+  s_73bfa279652898::t_7cb67df3f46506 8
+  s_73bfa279652898::t_a2f9cec2f4cf10 6,11-37,39
+  s_73bfa279652898::t_156fa2577a9a9c 1-5,7,9-10,38
+deep_causality_context/tests/types/context_node_types/space/ned_space/recordable_tests.rs
+  s_73bfa279652898::t_7cb67df3f46506 15-16
+  s_73bfa279652898::t_a2f9cec2f4cf10 23-30,36-62,73-80,96-101,103-117
+  s_73bfa279652898::t_8dd6070b964044 1-14,17-22,31-35,63-72,81-95,102,118-122
+deep_causality_context/tests/types/context_node_types/space/euclidean_space/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 23-30,36-62,73-80,96-101,103-117
+  s_73bfa279652898::t_8dd6070b964044 1-14,17-22,31-35,63-72,81-95,102,118-122
+  s_73bfa279652898::t_7cb67df3f46506 15-16
+deep_causality_context/tests/types/context_node_types/time/lorentzian_time/recordable_tests.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 22-28,34-50,65-68,85-88
+  s_73bfa279652898::t_8dd6070b964044 1-13,16-21,29-33,51-64,69-84,89-94
+  s_73bfa279652898::t_7cb67df3f46506 14-15
+deep_causality_context/src/extensions/mod.rs
+  s_73bfa279652898::t_712a93def2646c 1-6
+deep_causality_context/src/extensions/storable/mod.rs
+  s_73bfa279652898::t_4f9115b06d40de 1-13
+deep_causality_context/src/traits/storable/mod.rs
+  s_73bfa279652898::t_6519dccbec1b6b 1-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f9e23adfe15dce9e81c7d4f5d7317765130349fc",
+  "prompts": {},
+  "sessions": {
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
