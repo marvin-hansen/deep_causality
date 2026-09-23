@@ -1,0 +1,76 @@
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/gauge_field_lattice/lattice_gauge_field_tests.rs
+  s_17aa9b94996585::t_aeaa8043ba8715 15
+  s_17aa9b94996585::t_b8aa6febf6db84 174-235,237-285
+  s_17aa9b94996585::t_9ad1976d8a6809 13,236
+  s_17aa9b94996585::t_2b4a673a32d232 286
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/mod.rs
+  s_17aa9b94996585::t_e08c3de86df925 81-85
+  s_17aa9b94996585::t_f8702470dd3047 275-276
+  s_17aa9b94996585::t_59fad330c6a0ed 167-169,185-190
+  s_17aa9b94996585::t_4705f4e112f8db 126,192,240,294
+  s_17aa9b94996585::t_e4cf64fdeb3c30 191
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_smearing.rs
+  s_17aa9b94996585::t_4705f4e112f8db 139
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gradient_flow.rs
+  s_17aa9b94996585::t_4705f4e112f8db 158,184,209,309
+deep_causality_unified_math/deep_causality_topology/src/types/regge_geometry/has_hodge_star.rs
+  s_17aa9b94996585::t_1f7811c87fe237 40-45
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/getters.rs
+  s_17aa9b94996585::t_9b788347623aa6 16
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/mod.rs
+  s_17aa9b94996585::t_9b788347623aa6 27,42-43,62,92,105,113-114,150,199-200,271-272,355
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/random.rs
+  s_17aa9b94996585::t_9b788347623aa6 15-17
+deep_causality_unified_math/deep_causality_topology/tests/types/simplicial_complex/lazy_hodge_star_tests.rs
+  s_17aa9b94996585::t_26ed4707a0147e 235-273
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/link_variable/ops.rs
+  s_17aa9b94996585::t_b5f9cc35ebba81 282
+  s_17aa9b94996585::t_9225dd61dec8f7 29,35,77,82,117,122,150,155,227-228,236-238
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/link_variable/link_variable_tests.rs
+  s_17aa9b94996585::t_b951fb6b7f35fc 187-218,227-228
+  s_17aa9b94996585::t_204be89d18bd32 219-226
+  s_17aa9b94996585::t_c65761bc68a3eb 186
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/getters.rs
+  s_17aa9b94996585::t_056efb67886967 59-60,116-120,130,133,144-146
+  s_17aa9b94996585::t_4705f4e112f8db 97,112,153
+deep_causality_physics/tests/kernels/mhd/grmhd_tests.rs
+  s_17aa9b94996585::t_af22853496efbb 222-223,225-226,411-420,422-451,453,457-482,487
+  s_17aa9b94996585::t_a292a872a38680 11
+deep_causality_physics/src/kernels/mhd/grmhd.rs
+  s_17aa9b94996585::t_50d3d85ec1e318 86,95-96,105-107,109-110
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_metropolis.rs
+  s_17aa9b94996585::t_056efb67886967 157-158
+deep_causality_unified_math/deep_causality_topology/src/types/manifold/constructors/constructors_impl.rs
+  s_17aa9b94996585::t_f0c8c08fb5d734 102-109
+deep_causality_unified_math/deep_causality_topology/src/types/simplicial_complex/lazy_hodge_star.rs
+  s_17aa9b94996585::t_1d516e09a54c14 293,347
+  s_17aa9b94996585::t_3827e44a7f77ff 263-269,315-316
+  s_17aa9b94996585::t_1ca86ad09e9b25 273
+  s_17aa9b94996585::t_9ad1976d8a6809 279-292,294,331-337,348-358,362
+deep_causality_unified_math/deep_causality_topology/src/types/cochain/mod.rs
+  s_17aa9b94996585::t_95d5984df780e1 13-16
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/utils.rs
+  s_17aa9b94996585::t_2620ad5d852ebe 5,32-37,41-43,45-46,50-51,54,59,63,101-102,105,108,110
+deep_causality_unified_math/deep_causality_topology/src/types/gauge/gauge_field_lattice/ops_gauge.rs
+  s_17aa9b94996585::t_4705f4e112f8db 79
+deep_causality_unified_math/deep_causality_topology/tests/types/manifold/constructors_tests.rs
+  s_17aa9b94996585::t_90c8eb20bab63f 405-424
+deep_causality_unified_math/deep_causality_topology/tests/types/regge_geometry/has_hodge_star_tests.rs
+  s_17aa9b94996585::t_f0d71907e749d7 92-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "151770def83c586cb956e403a1041d86c88d5083",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
