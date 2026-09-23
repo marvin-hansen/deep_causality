@@ -1,0 +1,105 @@
+deep_causality_context/src/types/context_node_types/space/space_kind/mod.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 12-13
+deep_causality_context/tests/types/context_node_types/space/euclidean_space/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 10-11
+deep_causality_context/tests/mod.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 7
+openspec/changes/add-context-store-crate/tdd-notes.md
+  s_73bfa279652898::t_130b383df2534f 271-338
+  s_73bfa279652898::t_ffbacbeaa11042 339-365
+deep_causality_context/src/types/context_node_types/no_space_time/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 13
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 13
+deep_causality_context/src/types/context_node_types/time/entropic_time/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 10
+deep_causality_context/src/types/context_node_types/time/euclidean_time/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 10
+deep_causality_context/tests/types/context_node_types/space_time/tangent_spacetime/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 8-9
+deep_causality_context/tests/types/context_node_types/time/time_kind/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 5-6
+deep_causality_context/src/types/context_types/contextoid/mod.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 17
+deep_causality_context/src/types/context_node_types/space_time/tangent_spacetime/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 16
+deep_causality_context/src/types/context_node_types/space_time/euclidean_spacetime/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 14
+deep_causality_context/src/types/context_node_types/data/mod.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 11
+deep_causality_context/tests/types/context_node_types/space/ecef_space/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 10-11
+deep_causality_context/tests/types/context_node_types/space_time/lorentzian/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 8-9
+deep_causality_context/tests/types/context_node_types/data/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 11-12
+deep_causality_context/src/types/context_node_types/time/lorentzian_time/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 10
+deep_causality_context/tests/types/context_node_types/space/geo_space/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 12-13
+deep_causality_context/src/types/context_node_types/space_time/space_time_kind/mod.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 16-17
+deep_causality_context/src/types/context_node_types/time/discrete_time/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 10
+deep_causality_context/tests/types/context_node_types/time/entropic_time/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 7-8
+deep_causality_context/tests/types/context_types/contextoid/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 8-9
+deep_causality_context/BUILD.bazel
+  s_73bfa279652898::t_b639b26b3371ab 266-303
+deep_causality_context/tests/traits/mod.rs
+  s_73bfa279652898::t_5369d5ebcf9ca0 7
+deep_causality_context/tests/types/context_node_types/time/discrete_time/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 7-8
+deep_causality_context/tests/types/context_node_types/space/space_kind/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 6-7
+deep_causality_context/tests/types/context_node_types/time/euclidean_time/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 7-8
+deep_causality_context/tests/types/context_node_types/time/lorentzian_time/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 7-8
+deep_causality_context/tests/types/context_node_types/space_time/euclidean/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 9-10
+deep_causality_context/src/types/context_types/context_graph/mod.rs
+  s_73bfa279652898::t_1ef8e5a8f5774a 20-21
+deep_causality_context/tests/types/context_node_types/space/ned_space/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 10-11
+deep_causality_context/src/types/context_node_types/time/time_kind/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 8
+deep_causality_context/tests/types/context_types/context_graph/mod.rs
+  s_73bfa279652898::t_a2f9cec2f4cf10 31
+  s_73bfa279652898::t_b639b26b3371ab 30,33-34
+deep_causality_context/tests/types/context_node_types/no_space_time/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 9-10
+deep_causality_context/tests/types/context_node_types/space_time/space_time_kind/mod.rs
+  s_73bfa279652898::t_8dd6070b964044 5-6
+openspec/changes/add-context-store-crate/tasks.md
+  s_73bfa279652898::t_130b383df2534f 118-119,123,126,129,131,134,136,138,144,146,149
+deep_causality_context/src/lib.rs
+  s_73bfa279652898::t_c8a36fdcd24c9b 33,73-74
+deep_causality_context/src/traits/mod.rs
+  s_73bfa279652898::t_eaf6c0503e6795 11
+deep_causality_context/src/types/context_node_types/space/ecef_space/mod.rs
+  s_73bfa279652898::t_f1732f33958c8c 14
+deep_causality_context/src/types/context_node_types/space/euclidean_space/mod.rs
+  s_73bfa279652898::t_99f025dcd1321a 16
+deep_causality_context/src/types/context_node_types/space/geo_space/mod.rs
+  s_73bfa279652898::t_2f27f786d8fc89 14
+deep_causality_context/src/types/context_node_types/space/ned_space/mod.rs
+  s_73bfa279652898::t_a0bad5329e9760 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cea211848674962aa8b6d2e3a93d57df79318503",
+  "prompts": {},
+  "sessions": {
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
