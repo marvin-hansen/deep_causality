@@ -1,0 +1,22 @@
+examples/physics_examples/gauge_lattice_u1_2d/main.rs
+  s_17aa9b94996585::t_c803b64ee42101 71-73
+  s_17aa9b94996585::t_51943bea422ffe 104-107
+  s_17aa9b94996585::t_228e63a8858aaf 70
+  s_17aa9b94996585::t_6fe0cfde9acffa 193-199
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "88658e2c60b6932f004c3870dd6539f471ac4ff9",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
