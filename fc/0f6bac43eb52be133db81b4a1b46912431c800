@@ -1,0 +1,52 @@
+deep_causality_unified_math/deep_causality_calculus/README.md
+  s_589ef49b6ccffc::t_519fb92d147855 85
+  s_589ef49b6ccffc::t_14d8776d45caa4 68-71
+deep_causality_unified_math/deep_causality_calculus/src/extensions/differentiate_ext.rs
+  s_589ef49b6ccffc::t_7f67d4017b142b 64-66,71-72,91
+  s_589ef49b6ccffc::t_be70540931db59 73,77-80,82-88,90
+  s_589ef49b6ccffc::t_6e06c26bf0eb19 81
+  s_589ef49b6ccffc::t_957ba966522186 67-70
+  s_589ef49b6ccffc::t_0a2d0b454a2529 74-76,89
+openspec/specs/calculus-field-hessian/spec.md
+  s_589ef49b6ccffc::t_db2249591b40c6 1-3,7-47
+  s_589ef49b6ccffc::t_dce98dfbefe1f8 4-6
+deep_causality_unified_math/deep_causality_calculus/src/lib.rs
+  s_73bfa279652898::t_5f8a487621e1d0 20
+deep_causality_unified_math/deep_causality_calculus/tests/extensions/differentiate_ext_tests.rs
+  s_589ef49b6ccffc::t_f972e494e8ae75 210-377,381-471
+  s_589ef49b6ccffc::t_c9b75696856035 378-380
+openspec/changes/archive/2026-09-23-add-field-hessian/proposal.md
+  s_589ef49b6ccffc::t_5e2d2c3b20d97f 1-29
+openspec/changes/archive/2026-09-23-add-field-hessian/specs/calculus-field-hessian/spec.md
+  s_589ef49b6ccffc::t_601abe26511b94 1-41
+openspec/changes/archive/2026-09-23-add-field-hessian/tasks.md
+  s_589ef49b6ccffc::t_d23e9e7a773fc0 1-12
+openspec/changes/archive/2026-09-23-add-field-hessian/design.md
+  s_589ef49b6ccffc::t_fe2bef181a00a3 1-37
+openspec/changes/archive/2026-09-23-add-field-hessian/tdd-notes.md
+  s_589ef49b6ccffc::t_32642b90de1ad3 1-111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fc0f6bac43eb52be133db81b4a1b46912431c800",
+  "prompts": {},
+  "sessions": {
+    "s_589ef49b6ccffc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a31aff80-2515-4da1-9509-3888ba99354d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
