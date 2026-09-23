@@ -1,0 +1,57 @@
+deep_causality_context/src/types/context_types/context_graph/restore.rs
+  s_17aa9b94996585::t_b2b63adef53f2b 49
+  s_17aa9b94996585::t_528881a90d4c8c 6
+deep_causality_context/tests/types/context_types/context_graph/apply_tests.rs
+  s_17aa9b94996585::t_ddb5e3848b7322 411,479-506
+  s_17aa9b94996585::t_5cf447e99416d6 507
+deep_causality_unified_math/deep_causality_algebra/src/algebra/annihilating.rs
+  s_17aa9b94996585::t_ddb5e3848b7322 47-52
+deep_causality_unified_math/deep_causality_algebra/README_ISOMORPHISM.md
+  s_17aa9b94996585::t_795b86fa71bb95 193
+deep_causality_data_structures/README_ArrayGrid.md
+  s_17aa9b94996585::t_a4b9b5f191c61b 399,402
+examples/physics_examples/gauge_lattice_u1_2d/calibration.rs
+  s_17aa9b94996585::t_37dcde425b65e2 152-178
+  s_17aa9b94996585::t_14274f4b4c0a05 1-151,179-212
+examples/physics_examples/gauge_lattice_u1_2d/main.rs
+  s_17aa9b94996585::t_bbb2ada446abb0 49-50,56-58,70,112-119,129-135,167-181,193,207,210-215,223-225,231-235,255-257,261-271
+  s_17aa9b94996585::t_3165bf8ef5bea9 34-37,272-274
+deep_causality_context/src/types/context_types/context_graph/extra_context.rs
+  s_17aa9b94996585::t_b2b63adef53f2b 14,35,43-48
+  s_17aa9b94996585::t_11dbb7e2728ab0 49-50
+openspec/specs/context-named-extra-contexts/spec.md
+  s_17aa9b94996585::t_ddb5e3848b7322 74,80-86,100-106
+deep_causality_unified_math/deep_causality_algebra/src/algebra/associative.rs
+  s_17aa9b94996585::t_8dcf1aa58e1006 18-20
+deep_causality_context/src/types/context_types/context_graph/extendable_contextuable_graph.rs
+  s_17aa9b94996585::t_b2b63adef53f2b 46,341-368
+  s_17aa9b94996585::t_8e9904ddd039c6 369-370
+deep_causality_context/src/types/context_types/context_graph/apply.rs
+  s_17aa9b94996585::t_b2b63adef53f2b 45-49,105
+deep_causality_context/README.md
+  s_17aa9b94996585::t_a02bc6d42a038d 150
+deep_causality_unified_math/deep_causality_algebra/src/algebra/distributive.rs
+  s_17aa9b94996585::t_8dcf1aa58e1006 14-16
+deep_causality_unified_math/deep_causality_algebra/src/algebra/commutative.rs
+  s_17aa9b94996585::t_8dcf1aa58e1006 18-20
+deep_causality_unified_math/deep_causality_topology/tests/types/gauge/link_variable/link_variable_coverage_tests.rs
+  s_17aa9b94996585::t_ae5d5d3e4f7f77 120-129,175-176,256-257
+examples/physics_examples/gauge_lattice_u1_2d/README.md
+  s_17aa9b94996585::t_3eb756d266640e 35-36,43,48-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "44b959d6dfa0daf99c1cdf9d2873abbbe9e6ce08",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
