@@ -1,0 +1,47 @@
+openspec/specs/context-store-memory-backend/spec.md
+  s_17aa9b94996585::t_9a44ca621cecd1 18-19,42-43
+openspec/specs/context-named-extra-contexts/spec.md
+  s_73bfa279652898::t_028e9d8448966e 31-34,46-50
+  s_73bfa279652898::t_aee60536f0de1f 51
+openspec/specs/context-id-parameter/spec.md
+  s_73bfa279652898::t_028e9d8448966e 17-19,45
+openspec/specs/context-storage-contract/spec.md
+  s_17aa9b94996585::t_9a44ca621cecd1 4,6,9,23,110-144,155-159,166-170
+  s_17aa9b94996585::t_6a4a453bb0ad9b 171
+openspec/specs/context-store-streaming/spec.md
+  s_73bfa279652898::t_028e9d8448966e 140-143
+openspec/specs/context-store-facade/spec.md
+  s_17aa9b94996585::t_9a44ca621cecd1 46-49,73-89,114-117,130-141
+  s_17aa9b94996585::t_a4b8212fb07d1c 71
+  s_17aa9b94996585::t_547f442e67eec2 32-35,72,142
+openspec/changes/archive/2026-09-23-add-context-store-crate/specs/context-id-parameter/spec.md
+  s_17aa9b94996585::t_4f774665daaafa 14,41
+openspec/changes/archive/2026-09-23-add-context-store-crate/specs/context-store-facade/spec.md
+  s_17aa9b94996585::t_05de6bb4bb2e75 29-32
+openspec/changes/archive/2026-09-23-add-context-store-crate/specs/context-store-streaming/spec.md
+  s_17aa9b94996585::t_944d13ba5a0ea7 137-140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8d47fc78da4ff0f2b8af5e36ba30baf39f5f016b",
+  "prompts": {},
+  "sessions": {
+    "s_17aa9b94996585": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2a644537-6cb6-4752-9d7a-bd5373b6cc4e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_73bfa279652898": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89c18118-5a5a-477c-a0c1-e7707dd1726e",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
