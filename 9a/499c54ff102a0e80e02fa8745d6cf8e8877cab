@@ -1,0 +1,63 @@
+openspec/changes/replace-tempfile-with-internal-temp/design.md
+  s_be4cc1051574d5::t_37f7b617241b17 80
+deep_causality_utils/deep_causality_tempfile/src/utils/temp_name.rs
+  s_be4cc1051574d5::t_13390e413c6c79 20-59,64-85
+  s_be4cc1051574d5::t_f8a02ca676dba2 60-63
+deep_causality_utils/deep_causality_tempfile/tests/types/temp_dir/temp_dir_drop_tests.rs
+  s_be4cc1051574d5::t_06449183d45fc2 1-32
+deep_causality_utils/deep_causality_tempfile/src/types/named_temp_file/mod.rs
+  s_be4cc1051574d5::t_37f7b617241b17 53
+  s_be4cc1051574d5::t_d6ef2f14ae20a7 81-93
+  s_be4cc1051574d5::t_c4a3015349948c 99-101,107-108,110,118-119,121
+  s_be4cc1051574d5::t_13390e413c6c79 65-80,94-98,102-106,109,111-117,120,122
+openspec/changes/replace-tempfile-with-internal-temp/tasks.md
+  s_be4cc1051574d5::t_37f7b617241b17 34-35,57
+  s_be4cc1051574d5::t_f8a02ca676dba2 33,38,40,45,48
+deep_causality_utils/deep_causality_tempfile/tests/types/temp_dir/mod.rs
+  s_be4cc1051574d5::t_b08710dc82c92c 1-8
+deep_causality_utils/deep_causality_tempfile/tests/types/named_temp_file/named_temp_file_tests.rs
+  s_be4cc1051574d5::t_486fa6ef19c3e0 1-91,93-108
+  s_be4cc1051574d5::t_f8a02ca676dba2 92
+deep_causality_utils/deep_causality_tempfile/tests/types/named_temp_file/mod.rs
+  s_be4cc1051574d5::t_69d3666f435c18 1-10
+deep_causality_utils/deep_causality_tempfile/BUILD.bazel
+  s_be4cc1051574d5::t_00b5c9c53306cc 3,34-84
+openspec/changes/replace-tempfile-with-internal-temp/notes.md
+  s_be4cc1051574d5::t_f8a02ca676dba2 22-99
+deep_causality_utils/deep_causality_tempfile/src/types/temp_dir/mod.rs
+  s_be4cc1051574d5::t_13390e413c6c79 47-62,76-80,84-88,92,94-98,101,103
+  s_be4cc1051574d5::t_c4a3015349948c 81-83,89-91,93,99-100,102
+  s_be4cc1051574d5::t_d6ef2f14ae20a7 63-75
+deep_causality_utils/deep_causality_tempfile/tests/types/temp_dir/temp_dir_tests.rs
+  s_be4cc1051574d5::t_44da1f729209bd 1-33
+deep_causality_utils/deep_causality_tempfile/tests/types/named_temp_file/named_temp_file_write_tests.rs
+  s_be4cc1051574d5::t_b45255a2d3654a 1-31
+openspec/changes/replace-tempfile-with-internal-temp/specs/tempfile-crate/spec.md
+  s_be4cc1051574d5::t_ae06a1c15e4c84 13-17,46-54
+  s_be4cc1051574d5::t_37f7b617241b17 65,85-91
+  s_be4cc1051574d5::t_84fc4d27fbb651 55
+deep_causality_utils/deep_causality_tempfile/tests/types/named_temp_file/named_temp_file_drop_tests.rs
+  s_be4cc1051574d5::t_072062925cfc42 1-23
+deep_causality_utils/deep_causality_tempfile/README.md
+  s_be4cc1051574d5::t_37f7b617241b17 48-49
+deep_causality_utils/deep_causality_tempfile/tests/mod.rs
+  s_be4cc1051574d5::t_ce0b5d12ae19fc 1-5
+deep_causality_utils/deep_causality_tempfile/tests/types/mod.rs
+  s_be4cc1051574d5::t_a954570aeeb9f1 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9a499c54ff102a0e80e02fa8745d6cf8e8877cab",
+  "prompts": {},
+  "sessions": {
+    "s_be4cc1051574d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc2e1f23-4334-44a2-9f87-001bc40e575b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
