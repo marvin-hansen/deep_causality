@@ -1,0 +1,24 @@
+.github/workflows/rust_publish_check.yml
+  s_67957840e7292e::t_b1935ce8d702e6 47,55-58
+  s_67957840e7292e::t_45f40d07378826 53
+  s_67957840e7292e::t_0745b19b682c68 54
+scripts/check_dev_deps.sh
+  s_67957840e7292e::t_669c18b7fe3884 159
+  s_67957840e7292e::t_938b1f22bf1ef9 18-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3c56230ecb29e73a2fdd836b278de321c235da98",
+  "prompts": {},
+  "sessions": {
+    "s_67957840e7292e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c71059ef-eff7-41b8-b278-c99e51a6a97c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
