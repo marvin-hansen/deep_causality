@@ -1,0 +1,21 @@
+docs/Conference/2026_CausalDataScienceMeeting/proposal.md
+  s_eceb447c26ec80::t_ffa5d9f1387dee 3,6-7,9,11,13,15,17-21,23,25-28,30,32-36,38-41,44-53
+  s_eceb447c26ec80::t_bfab6a17b20390 54-56
+  s_eceb447c26ec80::t_3796523247cb28 57-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "78d324ed88eaaf7be780163f2ff147bbe4fa292b",
+  "prompts": {},
+  "sessions": {
+    "s_eceb447c26ec80": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "db8a6444-da26-41c8-8d55-1566fdba6ab1",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
