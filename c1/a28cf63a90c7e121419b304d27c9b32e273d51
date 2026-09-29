@@ -1,0 +1,281 @@
+deep_causality_ethos/Cargo.toml
+  s_3262346a15d091::t_f483e79562526b 45
+deep_causality_context/src/types/context_node_types/time/euclidean_time/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 45
+deep_causality_context_store/src/types/time_scale/mod.rs
+  s_3262346a15d091::t_f713e7d148498a 6,29
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_maybe/mod.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 11
+deep_causality_context/src/types/context_node_types/data/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 6,12
+deep_causality_context/src/types/context_node_types/time/time_kind/display.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_context_store/src/errors/projection_error.rs
+  s_3262346a15d091::t_f713e7d148498a 7-8,120
+deep_causality_context/tests/types/context_types/context_graph/mod.rs
+  s_3262346a15d091::t_6965dc68735fb5 5-6
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/sequential_sampler.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 9-10
+  s_3262346a15d091::t_6fb24b181fa92f 23,42,76,109
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_statistics.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 7
+Cargo.toml
+  s_3262346a15d091::t_2f64ce0a29a366 64
+  s_3262346a15d091::t_f483e79562526b 39,41,46
+deep_causality_unified_math/deep_causality_uncertain/src/errors/uncertain_error.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 10
+  s_3262346a15d091::t_b0ed539ea446d6 9,57
+deep_causality_context_store/tests/errors/mod.rs
+  s_3262346a15d091::t_c900e332fb3602 5
+deep_causality_context/src/types/context_node_types/space/ned_space/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_maybe/uncertain_maybe_ops.rs
+  s_3262346a15d091::t_b0ed539ea446d6 16
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_3262346a15d091::t_6fb24b181fa92f 26-50
+deep_causality_context/src/types/context_node_types/space/ecef_space/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7
+deep_causality_context/src/types/context_node_types/time/lorentzian_time/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,11
+deep_causality_context/src/types/context_types/context_store/substrate.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_context/src/types/context_node_types/space_time/space_time_kind/mod.rs
+  s_3262346a15d091::t_9e92379d362d03 12
+  s_3262346a15d091::t_ab19faff12d45f 151-152
+deep_causality_context/src/types/context_types/contextoid/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 11
+deep_causality_context/src/types/context_node_types/time/lorentzian_time/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 37
+deep_causality/Cargo.toml
+  s_3262346a15d091::t_2f64ce0a29a366 49
+  s_3262346a15d091::t_f483e79562526b 64,72
+deep_causality_context/src/types/context_types/context_graph/debug.rs
+  s_3262346a15d091::t_ab19faff12d45f 5,21,40,52
+deep_causality_context/Cargo.toml
+  s_3262346a15d091::t_f483e79562526b 37-67
+deep_causality_context_store/src/types/vertical_datum/mod.rs
+  s_3262346a15d091::t_f713e7d148498a 6,55
+deep_causality_context/src/types/context_node_types/symbol_spacetime/conformal_spacetime/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,9,50,81
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context_store/src/traits/context_storage.rs
+  s_3262346a15d091::t_8109926df88853 10
+deep_causality_context_store/src/lib.rs
+  s_3262346a15d091::t_cade77a4e96cac 20-23,29-31
+deep_causality_context/src/types/context_node_types/space/ecef_space/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_unified_math/deep_causality_uncertain/src/types/computation/operator/comparison_operator.rs
+  s_3262346a15d091::t_b0ed539ea446d6 48
+deep_causality_context/src/types/context_node_types/space_time/tangent_spacetime/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 9-10
+deep_causality_unified_math/deep_causality_uncertain/src/types/computation/operator/arithmetic_operator.rs
+  s_3262346a15d091::t_b0ed539ea446d6 55
+deep_causality_context/src/types/context_node_types/time/symbolic_time/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 8
+deep_causality_context/src/types/context_types/context_graph/mod.rs
+  s_3262346a15d091::t_9e92379d362d03 6,27,40,46-49,89,93-96
+  s_3262346a15d091::t_ab19faff12d45f 7
+README_NO_STD.md
+  s_3262346a15d091::t_2d121b090dda0f 8-13,29,52,65-67,69-70,76,81,141-142,184-186,210,274-276,306-307,334-335,339,341-344,355-365
+deep_causality_context_store/tests/traits/mod.rs
+  s_3262346a15d091::t_c900e332fb3602 6,8,10,14
+deep_causality_context_store/src/types/id_reserve/mod.rs
+  s_3262346a15d091::t_8109926df88853 7
+deep_causality_cfd/Cargo.toml
+  s_3262346a15d091::t_2f64ce0a29a366 54
+deep_causality_context/src/errors/adjustment_error.rs
+  s_3262346a15d091::t_ab19faff12d45f 6-8
+deep_causality_context/src/types/context_types/contextoid/contextoid_type.rs
+  s_3262346a15d091::t_ab19faff12d45f 6-8,111
+deep_causality_context/src/types/context_node_types/space_time/tangent_spacetime/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context/src/types/context_types/context_graph/apply.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_op_arithmetic.rs
+  s_3262346a15d091::t_b0ed539ea446d6 7
+deep_causality_context/src/types/context_types/context_graph/contextuable_graph.rs
+  s_3262346a15d091::t_ab19faff12d45f 6
+deep_causality_context/src/extensions/storable/software_scalars.rs
+  s_3262346a15d091::t_ab19faff12d45f 7-8
+deep_causality_unified_math/deep_causality_uncertain/src/types/sampler/qmc_sampler.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 21-22
+  s_3262346a15d091::t_6fb24b181fa92f 35,72,153,223,232,270,272,287
+deep_causality_unified_math/deep_causality_uncertain/src/types/distribution_parameters/uniform_distribution_params.rs
+  s_3262346a15d091::t_b0ed539ea446d6 32-33
+deep_causality_context/src/types/context_node_types/data_uncertain/uncertain_bool_data/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 6,10
+deep_causality_context/src/types/context_node_types/space/space_kind/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 66-67
+deep_causality_context/src/types/context_types/context_graph/restore.rs
+  s_3262346a15d091::t_9e92379d362d03 7,67,86
+deep_causality_context_store/src/types/records/data_record/mod.rs
+  s_3262346a15d091::t_8109926df88853 7
+deep_causality_unified_math/deep_causality_uncertain/src/lib.rs
+  s_3262346a15d091::t_6fb24b181fa92f 110-113
+deep_causality_context/src/types/context_node_types/root/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,29
+deep_causality_context/src/types/context_node_types/data/adjustable.rs
+  s_3262346a15d091::t_ab19faff12d45f 6-7
+deep_causality_context/src/types/context_node_types/space/euclidean_space/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context/src/types/context_node_types/no_space_time/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context/src/extensions/storable/text.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_quantum/src/types/qpu/sim.rs
+  s_3262346a15d091::t_9576f96f4c5460 133-136
+deep_causality_unified_math/deep_causality_uncertain/README.md
+  s_3262346a15d091::t_bb8d8d601296d0 75-90
+deep_causality_context/src/utils/id_map.rs
+  s_3262346a15d091::t_9e92379d362d03 1-46
+deep_causality_context/src/types/context_types/context_store/store_branch.rs
+  s_3262346a15d091::t_9e92379d362d03 6,8,16,100,115,127,150
+  s_3262346a15d091::t_ab19faff12d45f 54
+deep_causality_unified_math/deep_causality_uncertain/src/types/computation/sample/mod.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 9
+deep_causality_context/src/types/context_node_types/no_space_time/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,11
+deep_causality_context/src/errors/index_error.rs
+  s_3262346a15d091::t_ab19faff12d45f 5-7
+deep_causality_context/src/errors/update_error.rs
+  s_3262346a15d091::t_ab19faff12d45f 6-8
+deep_causality_context/src/types/context_types/context_graph/extra_context.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_context/src/types/context_node_types/time/euclidean_time/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,11
+deep_causality_context_store/src/types/context_write/mod.rs
+  s_3262346a15d091::t_8109926df88853 7
+deep_causality_context_store/src/types/relation_kind/mod.rs
+  s_3262346a15d091::t_f713e7d148498a 5,24
+deep_causality_context/src/types/context_node_types/time/discrete_time/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,10
+deep_causality_context/src/types/context_types/contextoid/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 6,20
+deep_causality_context/src/lib.rs
+  s_3262346a15d091::t_9e92379d362d03 40
+  s_3262346a15d091::t_d32155f20caa9f 31-34
+deep_causality_context/src/types/context_node_types/data_uncertain/uncertain_data/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 6,10
+deep_causality_context/src/types/context_types/context_graph/snapshot.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_unified_math/deep_causality_uncertain/src/types/distribution_parameters/bernoulli_params.rs
+  s_3262346a15d091::t_b0ed539ea446d6 46-47
+deep_causality_context_store/src/types/records/extra_context_snapshot/mod.rs
+  s_3262346a15d091::t_8109926df88853 7
+deep_causality_quantum/Cargo.toml
+  s_3262346a15d091::t_2f64ce0a29a366 32-34
+  s_3262346a15d091::t_262bbc9a8d9f7a 31
+  s_3262346a15d091::t_7fdb08e7a51cd8 35-37
+  s_3262346a15d091::t_e5674957a0d20b 38-70
+deep_causality_context/src/types/context_node_types/space_time/euclidean_spacetime/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_unified_math/deep_causality_uncertain/src/types/distribution/mod.rs
+  s_3262346a15d091::t_b0ed539ea446d6 84
+  s_3262346a15d091::t_a80bd3b63bcc94 8,16
+deep_causality_context_store/BUILD.bazel
+  s_3262346a15d091::t_8109926df88853 5-11,18,32,40
+deep_causality_context/src/types/context_node_types/space/geo_space/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7-8
+deep_causality_context_store/tests/types/context_write/mod.rs
+  s_3262346a15d091::t_c900e332fb3602 5
+deep_causality_unified_math/deep_causality_uncertain/src/utils/ratio.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 9
+deep_causality_unified_math/deep_causality_uncertain/src/types/computation/node/mod.rs
+  s_3262346a15d091::t_b0ed539ea446d6 8-9,68
+deep_causality_context/src/errors/context_index_error.rs
+  s_3262346a15d091::t_ab19faff12d45f 6-8
+deep_causality_context/src/types/context_node_types/space/ned_space/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_unified_math/deep_causality_uncertain/BUILD.bazel
+  s_3262346a15d091::t_a80bd3b63bcc94 6-12,19,32,40,306
+deep_causality_quantum/src/types/qpu/bridge.rs
+  s_3262346a15d091::t_9576f96f4c5460 118-121
+deep_causality_context/src/types/context_node_types/time/symbolic_time/mod.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain/uncertain_sampling.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 9
+deep_causality_context/tests/types/context_types/context_store/mod.rs
+  s_3262346a15d091::t_6965dc68735fb5 5-6,8,10,12,14
+deep_causality_context/src/types/context_node_types/space_time/lorentzian_spacetime/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7
+examples/causal_uncertain_examples/Cargo.toml
+  s_3262346a15d091::t_2f64ce0a29a366 15
+deep_causality_context_store/src/errors/memory_substrate_error.rs
+  s_3262346a15d091::t_f713e7d148498a 7-8,46
+deep_causality_context/tests/alias/mod.rs
+  s_3262346a15d091::t_6965dc68735fb5 5-6
+deep_causality_unified_math/deep_causality_uncertain/src/types/computation/operator/logical_operator.rs
+  s_3262346a15d091::t_b0ed539ea446d6 6
+scripts/bare_metal.sh
+  s_3262346a15d091::t_d1b3e4b5bd6651 31,34
+deep_causality_context_store/Cargo.toml
+  s_3262346a15d091::t_cefaa994eebaff 34-39
+examples/causal_correction_examples/Cargo.toml
+  s_3262346a15d091::t_f483e79562526b 16
+deep_causality_context/src/utils/mod.rs
+  s_3262346a15d091::t_9e92379d362d03 1-6
+deep_causality_context/src/types/context_node_types/space/euclidean_space/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 7
+deep_causality_context/src/extensions/storable/collections.rs
+  s_3262346a15d091::t_9e92379d362d03 7
+deep_causality_context/BUILD.bazel
+  s_3262346a15d091::t_59755cc8e57560 5-11,18,32,40
+deep_causality_context_store/src/types/substrate_ref/mod.rs
+  s_3262346a15d091::t_f713e7d148498a 6-7,46
+deep_causality_context_store/src/types/records/context_snapshot/mod.rs
+  s_3262346a15d091::t_8109926df88853 9
+deep_causality_context/src/types/context_types/context_graph/extendable_contextuable_graph.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context/README.md
+  s_3262346a15d091::t_bb8d8d601296d0 50-65
+deep_causality_unified_math/deep_causality_uncertain/src/types/leaf_ordinals/mod.rs
+  s_3262346a15d091::t_6fb24b181fa92f 53,72-73,112-113
+  s_3262346a15d091::t_a80bd3b63bcc94 9-10
+deep_causality_context/src/types/context_node_types/symbol_spacetime/causal_set_spacetime/mod.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,9,53,84
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context_store/tests/mod.rs
+  s_3262346a15d091::t_c900e332fb3602 11-12
+deep_causality_unified_math/deep_causality_uncertain/src/types/distribution_parameters/normal_distribution_params.rs
+  s_3262346a15d091::t_b0ed539ea446d6 32-33
+deep_causality_context/src/types/context_node_types/space/euclidean_space/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,11
+deep_causality_context/src/types/context_node_types/space/geo_space/coordinate.rs
+  s_3262346a15d091::t_9e92379d362d03 8
+deep_causality_context_store/README.md
+  s_3262346a15d091::t_bb8d8d601296d0 154-167
+deep_causality_context_store/src/types/records/context_record/mod.rs
+  s_3262346a15d091::t_8109926df88853 7
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_op_logic.rs
+  s_3262346a15d091::t_b0ed539ea446d6 6-7
+deep_causality_context_store/src/errors/memory_storage_error.rs
+  s_3262346a15d091::t_f713e7d148498a 7-8,116
+deep_causality_unified_math/deep_causality_uncertain/src/types/uncertain_bool/uncertain_bool_sampling.rs
+  s_3262346a15d091::t_a80bd3b63bcc94 10
+deep_causality_context/src/errors/store_error.rs
+  s_3262346a15d091::t_ab19faff12d45f 7-8,64
+deep_causality_context_store/src/types/context_event/mod.rs
+  s_3262346a15d091::t_8109926df88853 7
+deep_causality_context/src/types/context_node_types/space_time/euclidean_spacetime/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7
+deep_causality_context/src/types/context_node_types/time/entropic_time/display.rs
+  s_3262346a15d091::t_ab19faff12d45f 7,10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c1a28cf63a90c7e121419b304d27c9b32e273d51",
+  "prompts": {},
+  "sessions": {
+    "s_3262346a15d091": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3af145d5-b4cc-460c-8307-e60e0059aa0d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
