@@ -1,0 +1,38 @@
+deep_causality_unified_math/deep_causality_haft/tests/algebra/mod.rs
+  s_3262346a15d091::t_236a4be209e8b3 26,28,41,45
+deep_causality_unified_math/deep_causality_haft/tests/utils_tests.rs
+  s_3262346a15d091::t_236a4be209e8b3 6-8
+scripts/bare_metal.sh
+  s_3262346a15d091::t_842c6b084be569 62-73
+scripts/check_core.sh
+  s_3262346a15d091::t_c11153ca68269f 1-89
+deep_causality_unified_math/deep_causality_haft/Cargo.toml
+  s_3262346a15d091::t_04be0dc8aaf5e1 32
+deep_causality_unified_math/deep_causality_haft/tests/extensions/mod.rs
+  s_3262346a15d091::t_236a4be209e8b3 7,12,14,16,22
+  s_3262346a15d091::t_1e8353cc2afa6d 9-10
+deep_causality_unified_math/deep_causality_haft/tests/effect_system/mod.rs
+  s_3262346a15d091::t_236a4be209e8b3 6
+deep_causality_unified_math/deep_causality_haft/tests/alias/mod.rs
+  s_3262346a15d091::t_236a4be209e8b3 10,12,14
+deep_causality_unified_math/deep_causality_haft/tests/formalization_lean/mod.rs
+  s_3262346a15d091::t_236a4be209e8b3 33,41,73
+deep_causality_unified_math/deep_causality_haft/README.md
+  s_3262346a15d091::t_a0b7677a9d0275 426-429,433,436,439,442,445,448,451-454,457
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "290d88d8e0ed56e25fd1ea9812d2443a0aa8129c",
+  "prompts": {},
+  "sessions": {
+    "s_3262346a15d091": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3af145d5-b4cc-460c-8307-e60e0059aa0d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
