@@ -1,0 +1,34 @@
+website/cfd/scripts/sitecheck.py
+  s_e836072bf5aeb9::t_6103f4d54b825a 334-335
+  s_e836072bf5aeb9::t_43a2971ce66530 72-73,374-377,381
+  s_e836072bf5aeb9::t_7335db53e3d4e3 1-16,25-33,35-71,74-105,107-110,112-119,123-129,133-135,138-153,156-164,169,172-183,188,190-227,229-254,268-286,289-291,294,296,299-316,319-333,336-338,340,342-348,350-355,362-373,378-380,382-389
+  s_e836072bf5aeb9::t_bd36b3ea9ece2d 17-24,34,106,111,120-122,130-132,136-137,154-155,165-168,170-171,184-187,189,228,255-267,287-288,292-293,295,297-298,317-318,339,341,349,356-361
+website/cfd/scripts/test_sitecheck.py
+  s_e836072bf5aeb9::t_6103f4d54b825a 199-200
+  s_e836072bf5aeb9::t_273d99e3533393 1-57,82,84-119,125-157,159,165,172-198,201,208,226-285,287-288,290-291,330-338,340-342,344-346,360-362
+  s_e836072bf5aeb9::t_43a2971ce66530 58-81,83,120-124,158,160-164,166-171,202-207,209-225,286,289,292-329,339,343,347-359
+website/cfd/package.json
+  s_e836072bf5aeb9::t_475e07f23e8ca3 13-15
+website/cfd/dist2.html
+  s_e836072bf5aeb9::t_dff710b9e6704e 1
+website/cfd/README.md
+  s_e836072bf5aeb9::t_475e07f23e8ca3 14-15,156
+  s_e836072bf5aeb9::t_df549ca7085a58 157-165
+  s_e836072bf5aeb9::t_b368b8f96a787f 166
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7bf5ebffbb30e0123bdc7ac3b3df3a0ff6a43dc4",
+  "prompts": {},
+  "sessions": {
+    "s_e836072bf5aeb9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a3e85cd7-d930-4da8-b07d-a525041cb611",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
