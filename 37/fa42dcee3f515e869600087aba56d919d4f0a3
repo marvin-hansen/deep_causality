@@ -1,0 +1,82 @@
+deep_causality_quantum/README.md
+  s_3262346a15d091::t_5c65a253402848 191-203
+README_NO_STD.md
+  s_3262346a15d091::t_5d69ecc36fc52f 16-18,30,35-39,50-55,79,84,107-118,130-131,156-157,173-178,180,218,231-234,246-247,255,407,410,415-416,423-428
+deep_causality_unified_math/deep_causality_metric/README.md
+  s_3262346a15d091::t_5c65a253402848 163-175
+deep_causality_unified_math/deep_causality_linear/README.md
+  s_3262346a15d091::t_5c65a253402848 400-412
+deep_causality_context/README.md
+  s_3262346a15d091::t_5c65a253402848 50-62
+deep_causality_utils/deep_causality_par/README.md
+  s_3262346a15d091::t_5c65a253402848 54-66
+scripts/check_no_std.sh
+  s_3262346a15d091::t_03cdd051859989 12-14,48-53
+  s_3262346a15d091::t_f428f8a31ea514 54
+deep_causality_physics/README.md
+  s_3262346a15d091::t_5c65a253402848 71-83
+deep_causality_unified_math/deep_causality_fft/README.md
+  s_3262346a15d091::t_5c65a253402848 71-83
+deep_causality_utils/deep_causality_ast/README.md
+  s_3262346a15d091::t_5c65a253402848 83-95
+deep_causality_unified_math/deep_causality_haft/README.md
+  s_3262346a15d091::t_5c65a253402848 424-436
+deep_causality_unified_math/deep_causality_stats/README.md
+  s_3262346a15d091::t_5c65a253402848 137-149
+deep_causality_unified_math/deep_causality_num/README.md
+  s_3262346a15d091::t_0e2fa866acda28 194-196
+  s_3262346a15d091::t_5c65a253402848 178-190
+deep_causality_core/README.md
+  s_3262346a15d091::t_5c65a253402848 47-59
+  s_3262346a15d091::t_c84dee1634931e 68
+deep_causality_unified_math/deep_causality_multivector/README.md
+  s_3262346a15d091::t_5c65a253402848 234-246
+deep_causality_unified_math/deep_causality_uncertain/README.md
+  s_3262346a15d091::t_5c65a253402848 75-87
+deep_causality_unified_math/deep_causality_algebra/README.md
+  s_3262346a15d091::t_5c65a253402848 58-70
+deep_causality_unified_math/deep_causality_num_complex/README.md
+  s_3262346a15d091::t_5c65a253402848 49-61
+deep_causality_context_store/README.md
+  s_3262346a15d091::t_5c65a253402848 157-169
+makefile
+  s_3262346a15d091::t_ad225bbf6e935c 12,54-56
+  s_3262346a15d091::t_94c33239e636d1 57-58
+.github/workflows/rust_no_std.yml
+  s_3262346a15d091::t_ad225bbf6e935c 7-8,47-56
+  s_3262346a15d091::t_2e229707d2015c 57-59
+deep_causality_unified_math/deep_causality_num_rational/README.md
+  s_3262346a15d091::t_5c65a253402848 118-130
+deep_causality_unified_math/deep_causality_calculus/README.md
+  s_3262346a15d091::t_5c65a253402848 137-149
+deep_causality_unified_math/deep_causality_num_dual/README.md
+  s_3262346a15d091::t_5c65a253402848 50-62
+ultragraph/README.md
+  s_3262346a15d091::t_5c65a253402848 265-277
+deep_causality_data_structures/README.md
+  s_3262346a15d091::t_5c65a253402848 97-109
+deep_causality_unified_math/deep_causality_homology/README.md
+  s_3262346a15d091::t_5c65a253402848 240-252
+deep_causality_unified_math/deep_causality_rand/README.md
+  s_3262346a15d091::t_5c65a253402848 62-74
+deep_causality_unified_math/deep_causality_tensor/README.md
+  s_3262346a15d091::t_5c65a253402848 468-480
+deep_causality_algorithms/README.md
+  s_3262346a15d091::t_5c65a253402848 61-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "37fa42dcee3f515e869600087aba56d919d4f0a3",
+  "prompts": {},
+  "sessions": {
+    "s_3262346a15d091": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3af145d5-b4cc-460c-8307-e60e0059aa0d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
