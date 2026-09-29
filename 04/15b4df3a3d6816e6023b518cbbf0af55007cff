@@ -1,0 +1,16 @@
+Cargo.lock
+  h_080fb89ca1f0c4 162,231,233,968,970,1285,1287,1997,1999,2119,2121,2123,2139,2141,2194,2317,2319,2330,2332,2340,2342,2353,2355,2362,2364,2500,2502,2509,2511
+MODULE.bazel.lock
+  h_080fb89ca1f0c4 703,763,837,981,999,1001,1055,1057,1059,1063,1070,1108,1110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0415b4df3a3d6816e6023b518cbbf0af55007cff",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
