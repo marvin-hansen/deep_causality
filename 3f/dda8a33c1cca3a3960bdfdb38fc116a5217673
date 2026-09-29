@@ -1,0 +1,19 @@
+.github/workflows/rust_no_std.yml
+  s_3262346a15d091::t_880d2f8837b648 31,33-35,45,47-49,60,62-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3fdda8a33c1cca3a3960bdfdb38fc116a5217673",
+  "prompts": {},
+  "sessions": {
+    "s_3262346a15d091": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3af145d5-b4cc-460c-8307-e60e0059aa0d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
