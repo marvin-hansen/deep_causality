@@ -1,0 +1,88 @@
+deep_causality_algorithms/tests/feature_selection/mrmr/mrmr_algo_tests.rs
+  s_3262346a15d091::t_125f62e0d64716 38-55
+  s_3262346a15d091::t_539076fc0ad848 37
+deep_causality_algorithms/src/causal_discovery/surd/surd_utils/surd_utils_cdl.rs
+  s_3262346a15d091::t_03d1b213d8a213 5
+deep_causality_algorithms/src/causal_discovery/surd/surd_max_order.rs
+  s_3262346a15d091::t_b379cfc339bfad 5
+  s_3262346a15d091::t_03d1b213d8a213 6,60
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_algo.rs
+  s_3262346a15d091::t_03d1b213d8a213 46-50,134
+  s_3262346a15d091::t_e421a5878251ec 9-10
+deep_causality_discovery/tests/types/analysis/surd_result_analyzer_tests.rs
+  s_3262346a15d091::t_c7e7103ac9293d 9,14-16,23-28,63-65,88-90,107,110,115,149,153,157
+deep_causality_quantum/Cargo.toml
+  s_3262346a15d091::t_81d4c2bc1e890f 33
+deep_causality_discovery/tests/types/cdl_report/cdl_report_tests.rs
+  s_3262346a15d091::t_c7e7103ac9293d 10,16-18,20
+deep_causality_algorithms/BUILD.bazel
+  s_3262346a15d091::t_b48be45ac689cc 7-8,15-19,32-36,44-48,272-274
+makefile
+  s_3262346a15d091::t_d003eee5d18c40 13
+  s_3262346a15d091::t_b0f8cd6d932296 11,48-50
+  s_3262346a15d091::t_a338270f5002fa 51-52
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_error.rs
+  s_3262346a15d091::t_03d1b213d8a213 6-8
+scripts/check_no_std.sh
+  s_3262346a15d091::t_df506298881041 9-10,20,23-24,26-28,31-48,54,59-65
+deep_causality_algorithms/Cargo.toml
+  s_3262346a15d091::t_4013647da203ce 45,58-89
+deep_causality_algorithms/src/causal_discovery/mod.rs
+  s_3262346a15d091::t_4ce7bebd4c9b09 5
+.github/workflows/rust_no_std.yml
+  s_3262346a15d091::t_081952ea63cc33 4,7-8,35-46
+deep_causality_physics/Cargo.toml
+  s_3262346a15d091::t_81d4c2bc1e890f 44
+deep_causality_unified_math/deep_causality_multivector/Cargo.toml
+  s_3262346a15d091::t_81d4c2bc1e890f 31
+deep_causality_algorithms/src/causal_discovery/surd/surd_algo.rs
+  s_3262346a15d091::t_03d1b213d8a213 146,205,254-261,332-339,347,374-381
+  s_3262346a15d091::t_e421a5878251ec 7-8
+deep_causality_algorithms/src/causal_discovery/surd/surd_result.rs
+  s_3262346a15d091::t_03d1b213d8a213 5-7,18-20,24-26,29-31,37-39,41-46,65,69,73,87,91,95,102,106,110,115,119
+AGENTS.md
+  s_3262346a15d091::t_6a345454460b94 363
+README_NO_STD.md
+  s_3262346a15d091::t_74e1c30ff0f551 10,14-16,21,25,28,33,46-48,52-56,69-72,77-79,82-84,87-95,110,112,124-125,128,130,132-133,159,172-174,185-187,189-191,223,228-248,253-255,263,268-269,281-286,288-290,292-294,296-300,308-314,340-343,346-357
+  s_3262346a15d091::t_8283cd183b43b6 11-12,43-45,50-51
+  s_3262346a15d091::t_f770a19243f5e6 8-9
+deep_causality_algorithms/src/lib.rs
+  s_3262346a15d091::t_4ce7bebd4c9b09 6-9,11,15
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_utils.rs
+  s_3262346a15d091::t_03d1b213d8a213 8
+  s_3262346a15d091::t_b379cfc339bfad 7,119
+scripts/check_alloc.sh
+  s_3262346a15d091::t_075496d1fffc9f 1-66,68-84
+  s_3262346a15d091::t_ebffe2f0e45aae 67
+scripts/bare_metal.sh
+  s_3262346a15d091::t_6f150f73ed4af6 1-90
+deep_causality_algorithms/README.md
+  s_3262346a15d091::t_6a345454460b94 61-74
+deep_causality_unified_math/deep_causality_num/src/lib.rs
+  s_3262346a15d091::t_b8eedab83cda92 7-19
+deep_causality_algorithms/src/feature_selection/mrmr/mrmr_result.rs
+  s_3262346a15d091::t_03d1b213d8a213 6-8,43,58,67
+deep_causality_algorithms/src/causal_discovery/surd/surd_algo_cdl.rs
+  s_3262346a15d091::t_e421a5878251ec 8-9
+  s_3262346a15d091::t_03d1b213d8a213 144,192,233-240,311-318,326,353-360,379
+deep_causality_algorithms/tests/causal_discovery/surd/surd_result_tests.rs
+  s_3262346a15d091::t_c7e7103ac9293d 8,12,15,18,23,29,35,41,47,53,79,84,89
+deep_causality_algorithms/src/causal_discovery/surd/surd_utils/mod.rs
+  s_3262346a15d091::t_e421a5878251ec 5-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cf021973d24930288bfd828158f594b208d6f0bd",
+  "prompts": {},
+  "sessions": {
+    "s_3262346a15d091": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3af145d5-b4cc-460c-8307-e60e0059aa0d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
