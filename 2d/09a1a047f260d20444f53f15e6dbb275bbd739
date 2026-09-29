@@ -1,0 +1,156 @@
+deep_causality_algorithms/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 53
+deep_causality_physics/src/kernels/hypersonic/finite_rate.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 37
+.github/workflows/rust_no_std.yml
+  s_3262346a15d091::t_40d39a5f8a8e41 1-33
+deep_causality_physics/src/quantities/mod.rs
+  s_3262346a15d091::t_3e8618fe807b8a 33,56-61
+deep_causality_physics/README.md
+  s_3262346a15d091::t_80e27d32197ecf 75,77-85
+deep_causality_physics/src/kernels/photonics/ray.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+ultragraph/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 38
+deep_causality_physics/src/kernels/condensed/qgt.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 10
+deep_causality_discovery/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 66
+deep_causality_unified_math/deep_causality_stats/src/utils_tests/mod.rs
+  s_3262346a15d091::t_0e8cd375a4431d 22-23
+deep_causality_physics/src/kernels/thermodynamics/wrappers.rs
+  s_3262346a15d091::t_27a1c36af734e1 16,20
+Cargo.toml
+  s_3262346a15d091::t_3141662fdeced2 60
+deep_causality_physics/src/kernels/mhd/ideal.rs
+  s_3262346a15d091::t_9e91505bc60730 7,12
+  s_3262346a15d091::t_27a1c36af734e1 14,130
+deep_causality_physics/src/kernels/em/solver.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+deep_causality_physics/src/quantities/em/mod.rs
+  s_3262346a15d091::t_f0411363781775 6
+examples/mathematics_examples/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 23
+deep_causality_cfd/Cargo.toml
+  s_3262346a15d091::t_05bc327d8155d2 47
+deep_causality_physics/src/kernels/thermodynamics/stats.rs
+  s_3262346a15d091::t_27a1c36af734e1 15,29
+  s_3262346a15d091::t_9e91505bc60730 8
+deep_causality_physics/src/quantities/condensed/mod.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+examples/physics_examples/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 30
+deep_causality_physics/src/kernels/fluids/compressible.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 20
+deep_causality_physics/src/kernels/relativity/spacetime.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+deep_causality_physics/src/kernels/em/wrappers.rs
+  s_3262346a15d091::t_27a1c36af734e1 17,35,49,94
+  s_3262346a15d091::t_9e91505bc60730 12,15
+deep_causality_physics/src/kernels/materials/mechanics.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+deep_causality_physics/src/kernels/fluids/turbulence.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 23
+deep_causality_physics/src/kernels/mod.rs
+  s_3262346a15d091::t_3e8618fe807b8a 17
+deep_causality_physics/src/kernels/condensed/phase.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 10-11
+deep_causality_physics/src/kernels/nuclear/qcd.rs
+  s_3262346a15d091::t_4f8548f30cd526 66,100,138
+  s_3262346a15d091::t_62d1b64f07aeb3 21
+  s_3262346a15d091::t_f0411363781775 415
+deep_causality_physics/tests/kernels/condensed/moire_tests.rs
+  s_3262346a15d091::t_dbdcbbd444c8e0 29-37,39,41-50
+  s_3262346a15d091::t_1df7473a2b7888 38,40
+  s_3262346a15d091::t_f66790498c75af 28
+deep_causality_physics/src/kernels/mhd/resistive.rs
+  s_3262346a15d091::t_9e91505bc60730 6-8,10,13,16
+  s_3262346a15d091::t_27a1c36af734e1 18,23
+makefile
+  s_3262346a15d091::t_741cdb07db2ced 12,52-54
+  s_3262346a15d091::t_d7177c67bb2b05 55-56
+deep_causality_quantum/src/utils_tests/fixtures.rs
+  s_3262346a15d091::t_91966a9edac8e3 67-68,71-72,79-80
+deep_causality_physics/src/lib.rs
+  s_3262346a15d091::t_3e8618fe807b8a 15,39,50
+deep_causality_physics/src/kernels/mhd/grmhd.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 9
+  s_3262346a15d091::t_4f8548f30cd526 6
+  s_3262346a15d091::t_27a1c36af734e1 17,63
+  s_3262346a15d091::t_9e91505bc60730 7-8,14
+deep_causality_physics/src/kernels/dynamics/wrappers.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 11
+deep_causality_physics/src/kernels/dynamics/kinematics.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+scripts/check_no_std.sh
+  s_3262346a15d091::t_136c44c1bd541b 1-62
+deep_causality_physics/src/kernels/relativity/wrappers.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 10
+deep_causality_physics/BUILD.bazel
+  s_3262346a15d091::t_2672762b73813b 10-11,23,42,56,617
+deep_causality_physics/src/kernels/relativity/gravity.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+deep_causality_physics/src/error/physics_error.rs
+  s_3262346a15d091::t_3e8618fe807b8a 175
+deep_causality_physics/src/kernels/dynamics/estimation.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 8
+deep_causality_physics/src/quantities/relativity/mod.rs
+  s_3262346a15d091::t_f0411363781775 6
+deep_causality_physics/src/kernels/condensed/wrappers.rs
+  s_3262346a15d091::t_27a1c36af734e1 24,151
+  s_3262346a15d091::t_62d1b64f07aeb3 15
+  s_3262346a15d091::t_9e91505bc60730 21
+deep_causality_physics/Cargo.toml
+  s_3262346a15d091::t_e59c7be3d5c099 73-74
+  s_3262346a15d091::t_2c9cdcd56715c1 27,30,32-34,37,40-42,45-65,76,122
+deep_causality_physics/src/kernels/photonics/polarization.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+deep_causality_physics/src/kernels/em/fields.rs
+  s_3262346a15d091::t_9e91505bc60730 12,17
+  s_3262346a15d091::t_27a1c36af734e1 19,32,57,150
+  s_3262346a15d091::t_f0411363781775 6
+deep_causality_physics/src/kernels/condensed/moire.rs
+  s_3262346a15d091::t_27a1c36af734e1 19,281
+  s_3262346a15d091::t_62d1b64f07aeb3 6,18
+  s_3262346a15d091::t_9e91505bc60730 7,13
+  s_3262346a15d091::t_4f8548f30cd526 105
+deep_causality_physics/src/kernels/em/forces.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 7
+AGENTS.md
+  s_3262346a15d091::t_e1eeeb229b796f 371
+deep_causality_data_structures/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 55
+deep_causality_physics/src/kernels/chronometric/solve_gm.rs
+  s_3262346a15d091::t_4f8548f30cd526 5
+deep_causality_physics/src/utils_tests/mod.rs
+  s_3262346a15d091::t_9e91505bc60730 14-16,19
+  s_3262346a15d091::t_3e8618fe807b8a 194
+  s_3262346a15d091::t_27a1c36af734e1 21,25,60
+examples/classical_causality_examples/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 17
+examples/medicine_examples/Cargo.toml
+  s_3262346a15d091::t_f82b6b55aba5cf 21
+deep_causality_physics/src/kernels/fluids/dimensionless.rs
+  s_3262346a15d091::t_62d1b64f07aeb3 21
+deep_causality_physics/src/kernels/mhd/wrappers.rs
+  s_3262346a15d091::t_27a1c36af734e1 19,50,68,102
+  s_3262346a15d091::t_9e91505bc60730 6-7,10,96
+deep_causality_unified_math/deep_causality_uncertain/Cargo.toml
+  s_3262346a15d091::t_c085a8dcbe1e4f 37,44,48,52,56,60-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2d09a1a047f260d20444f53f15e6dbb275bbd739",
+  "prompts": {},
+  "sessions": {
+    "s_3262346a15d091": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3af145d5-b4cc-460c-8307-e60e0059aa0d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
