@@ -1,0 +1,73 @@
+README.md
+  s_8dec0d870836b0::t_6d1718cad857f3 257-258
+  s_8dec0d870836b0::t_468e3c86aad1da 504
+  s_8dec0d870836b0::t_67c3c137cfd0b6 67-76
+  s_8dec0d870836b0::t_72480d2ad1572d 282
+  s_8dec0d870836b0::t_2b593831f8f14e 203-204
+  s_8dec0d870836b0::t_23c5e4bb0bda91 248-249,252-256,261-263,274-276,278-279,292-293,300,325-337,340-346,348-354,356-367
+  s_8dec0d870836b0::t_fe4865e95a98b0 460
+  s_0b11bf8c31934c::t_ef6a79ef3301c6 60,148,151,161,163-165,168-171,173,175,177-179,181-182,184-185,187-188,190-192,194-202,205-247,250,347,355,369-373,385,391,452-459,461,463,465-467,469-471,474-478,481-482,492
+  s_8dec0d870836b0::t_288903ef848857 338-339
+  s_8dec0d870836b0::t_894fc77670dfe4 294-298,303,312,319
+  s_8dec0d870836b0::t_a9954d34689e8f 84-87,89-90,92-93,95,97-98,100-101,103-118,120-130,132-140,142-145,149-150,152-153,155-159
+  s_8dec0d870836b0::t_964aaee22015ca 251
+  s_8dec0d870836b0::t_872fde9f6f824f 281,283-290,299,302
+  s_8dec0d870836b0::t_559b972d925a40 306-311,313-318,320-324
+  s_8dec0d870836b0::t_cae73f83e81271 166-167
+  s_8dec0d870836b0::t_8f2cc87c7ea7dd 375-377
+  s_8dec0d870836b0::t_1da818dbcb321c 378-383,387-389,393-397
+  s_8dec0d870836b0::t_957c94bbd93036 265-266
+  s_8dec0d870836b0::t_86283492b7eeb3 418-420
+  s_8dec0d870836b0::t_80a066895bf78a 401-410,412-414,417,421-450
+  s_8dec0d870836b0::t_d43cdfba94bef0 264,268-270
+  s_8dec0d870836b0::t_9092c956ada0ab 259
+  s_8dec0d870836b0::t_b69ddfbee5f3c2 271-272
+  s_8dec0d870836b0::t_8c3976a9f629b7 260
+  s_8dec0d870836b0::t_34af8f4d6394f7 267
+  s_8dec0d870836b0::t_362b84d92e6ffd 398-400
+  s_8dec0d870836b0::t_06b7a8a1a44fe9 62,64-65,78,368,374,384,386,390,392,451,506-507
+openspec/notes/quantum-site/01_raw_information.md
+  s_0b11bf8c31934c::t_1be415b3c63070 7,99
+  s_0b11bf8c31934c::t_1e9f107b3cfcbf 1-6,8-98
+openspec/notes/quantum-site/02_home_page_draft.md
+  s_0b11bf8c31934c::t_47a803385fe5fb 132,136,207-208
+  s_0b11bf8c31934c::t_7bafab7caf8d19 1-131,133-135,137-205,209-221
+  s_0b11bf8c31934c::t_3511c3f305063b 206
+openspec/notes/distilled/dc-summary.md
+  s_8dec0d870836b0::t_5348c1d71f2dda 90,97
+openspec/notes/quantum-site/quantum-essence.md
+  s_a5441bbf1b9c7a::t_4fde00d5e1354d 7
+  s_a5441bbf1b9c7a::t_c57c53e1d4bc72 1-6,8-367
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "98ea3a3991f944601cb239627743d3dad2565632",
+  "prompts": {},
+  "sessions": {
+    "s_0b11bf8c31934c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1eda0e63-bf26-444e-99d6-9b6bd6d424fe",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_a5441bbf1b9c7a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "eebcd0c8-6bb8-42db-9a0d-fa7a3761a4d6",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
