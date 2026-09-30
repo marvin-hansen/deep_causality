@@ -1,0 +1,148 @@
+website/quantum/src/components/home/Hero.astro
+  s_a5441bbf1b9c7a::t_5541875a74889d 17-18
+  s_a5441bbf1b9c7a::t_568646f7b36013 56
+  s_a5441bbf1b9c7a::t_c7926b08d7eec6 79
+  s_a5441bbf1b9c7a::t_a83bc9649a3a4f 3,5-9,11,15,44
+  s_a5441bbf1b9c7a::t_126cbf6219635a 24-27
+  s_a5441bbf1b9c7a::t_164d551684d651 30-32
+website/quantum/README.md
+  s_a5441bbf1b9c7a::t_fa05d7bbe78402 114-116
+  s_a5441bbf1b9c7a::t_915dfe73d7efa1 205
+  s_a5441bbf1b9c7a::t_e6826baa770fb0 68-90
+website/quantum/src/content/examples/en/ikkt-matrix-model.mdx
+  s_0b11bf8c31934c::t_b1443834075968 4,22-24,26-29,49-50,57-61,65-78
+  s_0b11bf8c31934c::t_30fc079f8a6732 51-52
+website/quantum/src/components/home/Evidence.astro
+  s_0b11bf8c31934c::t_38da9c3995027b 38
+  s_0b11bf8c31934c::t_35fb8e7ce7fc41 30-31
+  s_0b11bf8c31934c::t_79563ffa4cdba9 17,24,37
+website/quantum/src/data/papers.ts
+  s_0b11bf8c31934c::t_a1bbcdf38182bb 36,47,96,106
+website/quantum/src/components/home/VerdictAnatomy.astro
+  s_a5441bbf1b9c7a::t_80a39630dade55 22-23,28-29,34-35,40,58-60,64-65
+  s_a5441bbf1b9c7a::t_a659f754fdae86 1-21,24-27,30-33,36-39,42-57,61-63,66-96
+  s_a5441bbf1b9c7a::t_8e0ea8c836a1fa 41
+website/quantum/public/img/social-share.source.svg
+  s_a5441bbf1b9c7a::t_b994c0039aef8f 84-85,87-88,90,94
+  s_a5441bbf1b9c7a::t_19fea4ba33937b 7-8,81-83,97-98,102
+  s_a5441bbf1b9c7a::t_5f7c71cef7aeea 86,89,92
+  s_a5441bbf1b9c7a::t_aac8dc1f841468 74-75,77-78,91
+  s_a5441bbf1b9c7a::t_640265a0450bcb 93
+website/quantum/src/pages/examples/index.astro
+  s_0b11bf8c31934c::t_410b89c6073315 15-19,32-35
+website/quantum/src/content/examples/en/hopf-fibration-multivector.mdx
+  s_0b11bf8c31934c::t_72fb8b72ac8726 4,19-22,24-26,43-47,51-55,57-59,61-66
+website/quantum/src/components/home/PlanTable.astro
+  s_a5441bbf1b9c7a::t_8bd3b74fa27e40 51-57
+website/quantum/src/data/crosstalk.ts
+  s_0b11bf8c31934c::t_7a546de55dc7f9 67,85
+  s_a5441bbf1b9c7a::t_c1ab19ae7a9c2b 32-35,37-47
+  s_a5441bbf1b9c7a::t_5965d839e05538 16-19
+website/quantum/src/content/examples/en/gauge-electroweak.mdx
+  s_0b11bf8c31934c::t_5798a0f2eeff1a 4,16-18,20-23,38-41,43,45-48,50-54,56-64,67
+  s_0b11bf8c31934c::t_1405ca103cbb3d 55
+website/quantum/src/components/home/Subjects.astro
+  s_0b11bf8c31934c::t_79563ffa4cdba9 18,28,40
+website/quantum/src/pages/proof/index.astro
+  s_0b11bf8c31934c::t_bfd38d45d6249e 37-40,117-118
+  s_0b11bf8c31934c::t_481d42f767a36f 10,24,26-30,41-45,70-80,83-88,91-92,101-107,115-116,119-121,123-125,139-141,148-151
+website/quantum/src/data/boundaries.ts
+  s_0b11bf8c31934c::t_a1bbcdf38182bb 29,37,45,53,69,77,85
+  s_a5441bbf1b9c7a::t_2a4933bdc51e2f 61
+website/quantum/src/components/home/DecisionFigure.astro
+  s_a5441bbf1b9c7a::t_9faed0d9f961e4 67-71
+website/quantum/src/pages/404.astro
+  s_0b11bf8c31934c::t_410b89c6073315 7,17
+website/quantum/src/content/examples/en/quantum-counterfactual.mdx
+  s_0b11bf8c31934c::t_92b46617ab72d1 4,17-20,23-24,63,66,73-79,81-84
+  s_0b11bf8c31934c::t_2ea575727d3b30 56-62
+website/quantum/src/content/examples/en/qcl-crosstalk.mdx
+  s_a5441bbf1b9c7a::t_d76c00d0eb5fab 87-94,98-105
+  s_a5441bbf1b9c7a::t_ba84576e6b660b 106
+website/quantum/src/pages/start/index.astro
+  s_0b11bf8c31934c::t_acc42f24d76b48 37-38,41,45,47,55-56,63,70,76,78,81,85,87-88,94-97,122-123,166-169
+  s_a5441bbf1b9c7a::t_4eeea54771efcf 64-65
+  s_0b11bf8c31934c::t_afbe8760710f91 66
+website/quantum/src/pages/checks/index.astro
+  s_0b11bf8c31934c::t_499591ef14dfc5 8,18-21,40-41,55-59,62-65
+website/quantum/src/pages/boundaries/index.astro
+  s_a5441bbf1b9c7a::t_e2fb4a8a217ebe 51-52
+  s_0b11bf8c31934c::t_94c7017f3fea4a 13,15-16,42-44,58-59,66,72-75,84-86,96,108
+website/quantum/src/components/home/Limits.astro
+  s_0b11bf8c31934c::t_79563ffa4cdba9 22
+website/quantum/src/components/home/Stack.astro
+  s_a5441bbf1b9c7a::t_7aa0986fae707c 43,45
+  s_a5441bbf1b9c7a::t_51be1dfa7106ba 1-42,44,46-124
+website/quantum/src/content/examples/en/qcm-freeze-check.mdx
+  s_0b11bf8c31934c::t_2cf57bdb0318b5 25-28,50-54,56,58-60,65-71,73-74
+website/quantum/src/components/home/TryIt.astro
+  s_0b11bf8c31934c::t_79563ffa4cdba9 41-43,49,55,58-59
+website/quantum/src/components/home/SameReadout.astro
+  s_a5441bbf1b9c7a::t_9faed0d9f961e4 54-55
+  s_a5441bbf1b9c7a::t_c5608a8bd7b8f9 53
+website/quantum/src/content/examples/en/quantum-geometric-tensor.mdx
+  s_0b11bf8c31934c::t_28e6381583c8bc 4,18-21,23-25,47-53,58-61,63,65-73
+website/quantum/src/data/checks.ts
+  s_0b11bf8c31934c::t_06ff6029c02f92 49,55,57-58,60,67-70,72,79-81,83,91,96-97,99-100,102,108-111,113,121,126-129,131,137-141,143,150-153,155,161-162,164-165,167,183-184,186,193-195,197,204-207,209,216-219,221,235-237,239
+  s_0b11bf8c31934c::t_11192f5b954854 175,229
+  s_a5441bbf1b9c7a::t_8155f661fe41fe 181
+website/quantum/src/pages/index.astro
+  s_a5441bbf1b9c7a::t_6bb1fe7758c95a 18,20,37,40-41,47,50-57,60,63,66-69,73-75,82-83,92-93,96,99,102-105,111,115-118,124,128
+  s_a5441bbf1b9c7a::t_ddafd94f166c6d 6,9-12,44,70-72,79-81,84-86,89,108,113-114,119,121,130-133,140-145
+  s_a5441bbf1b9c7a::t_7c773191a1f399 122-123
+website/quantum/src/layouts/BaseLayout.astro
+  s_a5441bbf1b9c7a::t_aac8dc1f841468 59
+  s_a5441bbf1b9c7a::t_9faed0d9f961e4 95
+website/quantum/src/components/home/FourSteps.astro
+  s_0b11bf8c31934c::t_79563ffa4cdba9 28,33
+  s_a5441bbf1b9c7a::t_c58586197dd2d6 18
+  s_a5441bbf1b9c7a::t_e2d32c55be7343 23
+website/quantum/src/components/home/CodeChecks.astro
+  s_a5441bbf1b9c7a::t_f174d47f1fd922 43
+  s_a5441bbf1b9c7a::t_9faed0d9f961e4 74
+  s_a5441bbf1b9c7a::t_80a39630dade55 18
+  s_a5441bbf1b9c7a::t_a51a452d8cafbe 1-17,19-32,34-42,44-73,75-110
+  s_a5441bbf1b9c7a::t_2965f2ae6cb702 33
+website/quantum/src/data/formalization.ts
+  s_0b11bf8c31934c::t_a1bbcdf38182bb 121,126,131,136,141,145-146,151
+website/quantum/src/components/home/HeroVerdicts.astro
+  s_a5441bbf1b9c7a::t_df96b595fcdd2f 140,145,195
+  s_a5441bbf1b9c7a::t_7a2ccc88e259e3 1-2,5,14,34,44,120,131-132,211
+  s_a5441bbf1b9c7a::t_9936992669c4ec 125-127,129-130
+  s_a5441bbf1b9c7a::t_5769ea5c2f1e94 9,45-48,51,53,60-61,63-68,71-72,82,87-92,95,97-98,101,103-104,109,112-114,122-124,128,133-137,139,141-144,146-147,153-154,160,162,178,190,193,199,202-208
+  s_a5441bbf1b9c7a::t_fc26c1ed543eb2 117,119,156-159,210
+  s_a5441bbf1b9c7a::t_849dbac54dc93e 3-4,6-8,10-13,15-33,35-43,49-50,52,54-59,69-70,73-81,83,86,94,96,99-100,102,105-108,110-111,115-116,118,121,138,148-152,155,161,163-176,179-187,191-192,194,196-198,200-201,209
+  s_a5441bbf1b9c7a::t_c7926b08d7eec6 62,84-85,93,177,188-189
+website/quantum/src/pages/how-it-works/index.astro
+  s_0b11bf8c31934c::t_f90ed0b4f4ed35 36-39,45,49-51,54-61
+  s_0b11bf8c31934c::t_e5df12345ffb11 67-71,77-78,86-88,96-97,106-108
+  s_0b11bf8c31934c::t_e00ba65324887f 120-123,126-128,132-133,135,138-146
+  s_0b11bf8c31934c::t_357a8a07de5fff 156-162,165-171,174,183-192,205-214,221-225,228-233,236-238,244,247-251
+website/quantum/src/content/examples/en/qcl-crosstalk-circuits.mdx
+  s_a5441bbf1b9c7a::t_4afba235b64f62 28-31
+  s_a5441bbf1b9c7a::t_12be929e25c963 70-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "23424ac77829dde9482d31fba6480e6f90888d51",
+  "prompts": {},
+  "sessions": {
+    "s_0b11bf8c31934c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1eda0e63-bf26-444e-99d6-9b6bd6d424fe",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_a5441bbf1b9c7a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "eebcd0c8-6bb8-42db-9a0d-fa7a3761a4d6",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
