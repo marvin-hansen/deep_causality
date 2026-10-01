@@ -1,0 +1,260 @@
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_guide.rs
+  s_8dec0d870836b0::t_04125921a974e2 7,11-14,34
+  s_8dec0d870836b0::t_8a45533c430d4c 22-23,26-27
+  s_8dec0d870836b0::t_11cf966e5e717e 24-25
+end_to_end_tutorials/dynamic_drone_failsafe/src/lib.rs
+  s_8dec0d870836b0::t_6d2de5e3379c66 12,16
+  s_8dec0d870836b0::t_2d160c99e6c8fc 15,19,21
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_step.rs
+  s_8dec0d870836b0::t_04125921a974e2 7,11-13,41,44-46,48-54
+  s_8dec0d870836b0::t_8a45533c430d4c 19-20,27
+  s_8dec0d870836b0::t_2d160c99e6c8fc 28-30,34-36,42-43,55-57,60-61,70-72
+  s_8dec0d870836b0::t_11cf966e5e717e 21-26
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_scan.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 15,48
+  s_8dec0d870836b0::t_31b9ea8bc647c9 68-70,81
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/mission/mod.rs
+  s_8dec0d870836b0::t_af3524346d8911 1-11,13-17,19-23,26-29,31-37,39-45,49-53,55-58,60-64
+  s_8dec0d870836b0::t_43294e5b3128ea 12,18,24-25,30,38,46-48,54
+  s_8dec0d870836b0::t_04125921a974e2 59
+openspec/notes/distilled/dc-ethos.md
+  s_8dec0d870836b0::t_c880da3f138fb6 3-4,18-22,24,28,100-105,109,133-136,139,141,144,147,152,156
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/guidance.rs
+  s_8dec0d870836b0::t_8a45533c430d4c 14-19
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/model.rs
+  s_8dec0d870836b0::t_53cff8d2c38151 408-410,418-430
+  s_8dec0d870836b0::t_e2a33d77d77f0d 536-555,655,838-842,907-908,949-953,979
+  s_8dec0d870836b0::t_21fd515690e4c1 15
+  s_8dec0d870836b0::t_be16e104f5eeaa 8-11,18,33,1256-1258,1275,1277,1282
+  s_8dec0d870836b0::t_89a37218894e28 522,533
+  s_8dec0d870836b0::t_fc3c46323ef7fe 572,654,663-664,728,954
+  s_8dec0d870836b0::t_09168bf9fe7391 665,667-669,745,809-813,815,818-821,823-835,843,855,877,879,881,893,903,973
+  s_8dec0d870836b0::t_1a7919f3c636c2 32
+  s_8dec0d870836b0::t_c9b3c1882d3aae 275-279,382,385-392
+  s_8dec0d870836b0::t_97552cca69217d 236-238,250-257,259,293-298,312,556,558,656-662,678-686,748,817,837,847-849,873-875,986,992,1002-1003,1114-1117,1124-1128,1130-1139,1145,1147
+  s_8dec0d870836b0::t_43147858656661 235,239-241,246,258,260,262-266,269-274,280-292,299-310,315-321,323,330,332,337,343-344,348,350-351,358,378-381,383-384,393-400,411,414,417,437-439,445,449-452,470-473,477,482-508,511-521,532,557,559-571,573-611,634-653,666,672-673,688-693,703,711,718-721,729-730,732,736-741,743-744,747,749-760,762-763,765-770,802-805,816,836,850,876,878,882-892,897-902,904,906,912-913,916-923,925,931,933-936,963,987-991,993-994,997-1001,1004-1023,1025-1029,1051,1058,1079-1083,1085,1087-1088,1105-1109,1111
+  s_8dec0d870836b0::t_3dc4f4fd428ad5 621-631,701-702,772-800,1065-1078
+  s_8dec0d870836b0::t_9c409cfbd0fd1d 722-726
+  s_8dec0d870836b0::t_f9edbc71a1c926 731,746
+  s_8dec0d870836b0::t_5ade1dd615089a 851,869,872,880
+  s_8dec0d870836b0::t_c4b9c93e56d278 971-972,1061
+  s_8dec0d870836b0::t_669ddbe7b62a10 698-700,712-717,727,742
+  s_8dec0d870836b0::t_a793f8c533c4f4 13-14,1205
+  s_8dec0d870836b0::t_c444cbeda89f8d 401,844,905,1110,1112
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/model_config.rs
+  s_8dec0d870836b0::t_09168bf9fe7391 20-23,68
+  s_8dec0d870836b0::t_b72aff5bde1916 1-15,18-19,24-32,42-45,51-53,65-67,73-74,76-89,98-116
+  s_8dec0d870836b0::t_6fff2055e628d5 16-17,33,46-50,54-59,64,75,90-97
+  s_8dec0d870836b0::t_94b017a2597f67 34-41,60-63,69-72
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/mission/mission_getters.rs
+  s_8dec0d870836b0::t_af3524346d8911 1-23,27-32,34-37
+  s_8dec0d870836b0::t_2d160c99e6c8fc 24-26,33
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/model.rs
+  s_8dec0d870836b0::t_51bddf5f58575a 197,217-225
+  s_8dec0d870836b0::t_31867460cbe25c 1-10,12-20,22-35,41-50,52-95,98-108,110-128,130-136,138-168,175-181,183-196,198-209,211-215,230-234,236-238,240-241,253,263
+  s_8dec0d870836b0::t_09168bf9fe7391 36-40,96-97
+  s_8dec0d870836b0::t_f3e4014a37e148 109
+  s_8dec0d870836b0::t_ae1527dafb460c 182,210,216,226-229,235,239,242-252,254-262
+  s_8dec0d870836b0::t_069c33a0ec68ee 11,21,51
+  s_8dec0d870836b0::t_1a7919f3c636c2 129,169-174
+  s_8dec0d870836b0::t_022e1be6898c6c 137
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/terrain_geometry.rs
+  s_8dec0d870836b0::t_6464247425563e 17
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/constants.rs
+  s_8dec0d870836b0::t_82f428e0b69f37 1-50,59-75,94-109,112-115
+  s_8dec0d870836b0::t_6fff2055e628d5 51-58,76-93
+  s_8dec0d870836b0::t_ae1527dafb460c 110-111
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/fault_timeline/fault_timeline_getters.rs
+  s_8dec0d870836b0::t_04125921a974e2 17-20,23-26,29,31-35,37-56
+  s_8dec0d870836b0::t_af3524346d8911 1-16,21-22,27-28,30,36,57
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/model.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 9-11
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/mod.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 8,10
+end_to_end_tutorials/dynamic_drone_failsafe/Cargo.toml
+  s_8dec0d870836b0::t_104fa2e83da822 36-39
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/model_config.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 8
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/part_4.rs
+  s_8dec0d870836b0::t_82f428e0b69f37 1-14
+  s_8dec0d870836b0::t_21fd515690e4c1 15-16
+end_to_end_tutorials/dynamic_drone_failsafe/src/constants.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 186,188
+  s_8dec0d870836b0::t_8a45533c430d4c 158-159
+  s_8dec0d870836b0::t_04125921a974e2 206-207
+  s_8dec0d870836b0::t_6464247425563e 24-25,27-30,36-37,75
+  s_8dec0d870836b0::t_31b9ea8bc647c9 64-74,105-106
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_getters.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 6,24,28-33,39-41
+  s_8dec0d870836b0::t_04125921a974e2 34-38,42
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/model_config.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 9-10
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/utils_print.rs
+  s_8dec0d870836b0::t_1a7919f3c636c2 50,124,136
+  s_8dec0d870836b0::t_a793f8c533c4f4 6,51
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/main.rs
+  s_8dec0d870836b0::t_1a7919f3c636c2 70
+  s_8dec0d870836b0::t_6f3cd71869ea7a 73
+  s_8dec0d870836b0::t_f719a7114d6185 22
+end_to_end_tutorials/dynamic_drone_failsafe/part_2_dynamic_context/main.rs
+  s_8dec0d870836b0::t_1a7919f3c636c2 73
+  s_8dec0d870836b0::t_6f3cd71869ea7a 76
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_telemetry.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 8,23,30-31,40,58-67
+  s_8dec0d870836b0::t_04125921a974e2 13,18-22,24-29,32-34,41,43,48,56
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/part_1.rs
+  s_8dec0d870836b0::t_82f428e0b69f37 1-16
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/model.rs
+  s_8dec0d870836b0::t_1a7919f3c636c2 28,435,437-440
+  s_8dec0d870836b0::t_6f3cd71869ea7a 433-434,436
+  s_8dec0d870836b0::t_a793f8c533c4f4 11-13,451
+  s_8dec0d870836b0::t_ba9afe735b027a 441-443
+end_to_end_tutorials/dynamic_drone_failsafe/src/paths.rs
+  s_8dec0d870836b0::t_6d2de5e3379c66 1-34
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/part_3.rs
+  s_8dec0d870836b0::t_82f428e0b69f37 1-14
+  s_8dec0d870836b0::t_022e1be6898c6c 15-16
+end_to_end_tutorials/dynamic_drone_failsafe/README.md
+  s_8dec0d870836b0::t_48f8997ef13594 337-341,343,346-347,413-415
+  s_8dec0d870836b0::t_b0f55860b5b9cb 32,41,47-50,265-312,315-327,331-335,349-351,353-359,361-369,372-412,416-436,438-445,449-452,461,463-465
+  s_8dec0d870836b0::t_01973d020d9cc0 336
+  s_8dec0d870836b0::t_2ce1175c94c11a 348
+  s_8dec0d870836b0::t_dc56752ccdc1cf 472-473,479-486
+end_to_end_tutorials/dynamic_drone_failsafe/BUILD.bazel
+  s_8dec0d870836b0::t_104fa2e83da822 68-86
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/outcome.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 19-20
+  s_8dec0d870836b0::t_31b9ea8bc647c9 21-22
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/mod.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 13,15,20,26,31,33-37,39,41,45
+  s_8dec0d870836b0::t_04125921a974e2 16-17,27,46
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/mod.rs
+  s_8dec0d870836b0::t_31b9ea8bc647c9 14-16,22-23,28-30,34-35,40-42,45-46,51-54
+  s_8dec0d870836b0::t_6464247425563e 10-12,17-21,24-25,32-33,36-39,43-44,47-50,55-62
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/touchdown/mod.rs
+  s_8dec0d870836b0::t_31b9ea8bc647c9 27-29,35-37,48
+  s_8dec0d870836b0::t_04125921a974e2 62-63
+  s_8dec0d870836b0::t_2d160c99e6c8fc 9,23-26,30-34,38-47,49-52
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/main.rs
+  s_8dec0d870836b0::t_1a7919f3c636c2 28,57,60
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/campaign_1000.csv
+  s_8dec0d870836b0::t_51bddf5f58575a 8,16,19,69,101,180,247,258,272,275,281,302,315,363,385,412,418,485-486,509-510,546,553,560,583,589,667-668,706,709,712,762,777,820,825-826,859,889,917,945,959,982,988-989
+  s_8dec0d870836b0::t_53cff8d2c38151 2,6,15,23,28,34-35,42,53,60,63,84,96-98,107,109-110,116,128,130,145,149,160,190,204,206,210,212,234,236,244,248,250,254,264,280,301,307-309,340,342,351,357,362,377,380,382,419,430,434,440-442,445,448,457,464,490,498,500,503,519,521,524,555,559,585,600,610,617,619,621,656,659,672-673,682,696,703,705,711,720,734,746,749,754,776,788,799,806,819,835,839,847,849,861,877,883,902-903,910,914,919,938,941,954,960,964,967,973,976,985,987,992,994
+  s_8dec0d870836b0::t_65c75dcc48d6ed 30,33,45,106,111,123,127,137,174,176,189,201,218,265,271,304,327,339,344,354,358,381,386,400,403,421,435,453,455,502,535,586,611,613,633,638,662-663,684,694,716,722,738,763,765,778,794,796,822,841,862,872,874,884,886,900,921,932,942,953,966,978,997
+  s_8dec0d870836b0::t_3b54a628cadff7 3-4,7,9-14,17-18,20-22,24-27,29,31-32,37-41,43-44,46-52,54-59,61-62,64-68,70-73,75-83,85-95,99-100,102-105,108,112-115,117-122,124-126,129,131-136,138-144,146-148,150-156,158-159,161-173,175,177-179,181-188,191-200,202-203,205,207-209,211,213-217,219-233,235,237-243,245-246,249,251-253,255-257,259-263,266-269,274,276-279,282-300,303,305-306,310-314,316-326,328-338,341,343,345-350,352-353,355-356,359-361,364,366-368,370-376,378-379,383-384,387-399,401-402,404-411,413-417,420,422-429,431-433,436-439,443-444,446-447,449-452,454,456,458-463,465-484,487-489,491-497,499,501,504-508,511-518,520,523,525-530,532-534,536-545,547-552,554,556-558,561-582,584,587-588,590-599,601-609,612,614-616,618,620,622-624,626-632,634-637,639-652,654-655,657,660-661,664-666,669-671,674-681,683,685-693,695,697-702,704,707-708,710,713-715,717-718,721,723-733,735-737,739-745,747-748,750-753,755-760,764,766-775,779-782,785-787,789-793,795,797-798,800-805,807-818,821,823-824,827-834,836,838,840,842-846,848,850-858,860,863-871,873,875-876,878-882,885,887-888,891-899,901,904-906,908-909,911-913,915-916,918,920,922-931,933-937,939-940,943,946-952,955-958,961-963,965,968-972,974-975,977,979-981,983-984,986,990,993,995-996,998-1001
+  s_8dec0d870836b0::t_96e8cb20ca4598 1,5,36,74,365,522,625,658,719,783-784
+  s_8dec0d870836b0::t_65911336f99407 157,270,273,369,531,653,761,837,890,907,944,991
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/model_config.rs
+  s_8dec0d870836b0::t_53cff8d2c38151 141,152,509
+  s_8dec0d870836b0::t_09168bf9fe7391 303,463-464,466
+  s_8dec0d870836b0::t_c9b3c1882d3aae 361-362,364-365,372,375,385-386,393,409-410,420-430
+  s_8dec0d870836b0::t_5ade1dd615089a 305
+  s_8dec0d870836b0::t_de21d36a0e2345 151,156-157,296
+  s_8dec0d870836b0::t_97552cca69217d 56,73
+  s_8dec0d870836b0::t_21fd515690e4c1 12
+  s_8dec0d870836b0::t_e91ab65edfe3a1 146,154,224-228,304,503-506
+  s_8dec0d870836b0::t_276ab7dec03434 7-8,14,26,85-86,136-137,139-140,142-145,147-150,155,158-159,161,306-308,374,419,453,467,471,474-475,478-479,485-490,507-508,510-528,530
+  s_8dec0d870836b0::t_a793f8c533c4f4 10-11
+  s_8dec0d870836b0::t_392bf9dc97ebac 465
+  s_8dec0d870836b0::t_be16e104f5eeaa 472-473,529
+  s_8dec0d870836b0::t_c4b9c93e56d278 178,188,193-202,208,218-223,238-247,251-291,293-295,297-302
+  s_8dec0d870836b0::t_eb569cddb200f4 468,531
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/utils_print.rs
+  s_8dec0d870836b0::t_c9b3c1882d3aae 244
+  s_8dec0d870836b0::t_1a7919f3c636c2 63,266,278
+  s_8dec0d870836b0::t_21fd515690e4c1 7
+  s_8dec0d870836b0::t_a23fbbd7cf277d 8,154-156,159,162,165-169
+  s_8dec0d870836b0::t_fc3c46323ef7fe 124,130-133,173
+  s_8dec0d870836b0::t_b607c346b05549 12,17-20,27-28,36,41,48,109-110,114,139,150,172,174,221,232,240,245,249-254
+  s_8dec0d870836b0::t_c4b9c93e56d278 105,121-123,160-161
+  s_8dec0d870836b0::t_a793f8c533c4f4 6,64
+end_to_end_tutorials/dynamic_drone_failsafe/part_2_dynamic_context/model_config.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 9-10
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/utils_print.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 6-7,59
+  s_8dec0d870836b0::t_1a7919f3c636c2 58,203,215
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/surface.rs
+  s_8dec0d870836b0::t_31b9ea8bc647c9 15
+end_to_end_tutorials/dynamic_drone_failsafe/part_2_dynamic_context/utils_print.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 6-7,72
+  s_8dec0d870836b0::t_1a7919f3c636c2 71,222,234
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/model_types.rs
+  s_8dec0d870836b0::t_069c33a0ec68ee 46-48
+  s_8dec0d870836b0::t_a00b297e291198 59-61,64,66,68,70,72,76,78-80,83-87,89-90,96-104,106-107
+  s_8dec0d870836b0::t_6fff2055e628d5 29-30,39-45,53,62-63,74-75,81-82,88,91-95,105
+  s_8dec0d870836b0::t_0f9c4c3450ab64 1-28,31-38,49-52,54-58,65,67,69,71,73,77,108
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/constants.rs
+  s_8dec0d870836b0::t_c9b3c1882d3aae 70-72
+  s_8dec0d870836b0::t_97552cca69217d 78,89,98-101,103-104,106,109-112,114
+  s_8dec0d870836b0::t_689aa152a0f2df 62-69,116-122,127,132-134,144,153-158,163-166
+  s_8dec0d870836b0::t_de21d36a0e2345 128-131
+  s_8dec0d870836b0::t_e91ab65edfe3a1 76-77,159
+  s_8dec0d870836b0::t_09168bf9fe7391 152,161-162
+  s_8dec0d870836b0::t_669ddbe7b62a10 73-75
+  s_8dec0d870836b0::t_65c75dcc48d6ed 123,126
+  s_8dec0d870836b0::t_5ade1dd615089a 145
+  s_8dec0d870836b0::t_53cff8d2c38151 124-125,141-142
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/utils_print.rs
+  s_8dec0d870836b0::t_4e61cccd5b58bd 171-172,176
+  s_8dec0d870836b0::t_09168bf9fe7391 24,26-27,29,62-68,174-175,224-227,242-246
+  s_8dec0d870836b0::t_069c33a0ec68ee 8,44,84,118,173
+  s_8dec0d870836b0::t_104fa2e83da822 138,142,158,162,295-300,302-303
+  s_8dec0d870836b0::t_492194b7bdb927 25,28,30-38,41-43,46,81,85-115,120,124,128,141,154,161,180,186,192,201,203-204,211,236,247-273,279,285,301,307,317-319
+  s_8dec0d870836b0::t_11dce83c2ae28f 1-7,9-23,39-40,45,47-61,69-80,82-83,116-117,119,121-123,125-127,129-137,139-140,143-153,155-157,159-160,163-170,177-179,181-185,187-191,193-200,202,205-210,212-223,228-235,237-241,274-278,280-284,286-294,304-306,308-316,320-321
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/main.rs
+  s_8dec0d870836b0::t_c4b9c93e56d278 23
+  s_8dec0d870836b0::t_f719a7114d6185 26
+  s_8dec0d870836b0::t_b607c346b05549 8-14,61,71,73,76,98-104,112
+  s_8dec0d870836b0::t_21fd515690e4c1 19,22
+  s_8dec0d870836b0::t_6f3cd71869ea7a 79
+  s_8dec0d870836b0::t_e5ad5905c21e12 47,77-78,80-81,83,86,94-97,105-111,113-115,117
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/main.rs
+  s_8dec0d870836b0::t_59cddf3dd602f5 1-57
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/telemetry/mod.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 14,25,34
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/model_context.rs
+  s_8dec0d870836b0::t_3dc4f4fd428ad5 102-104
+  s_8dec0d870836b0::t_f9edbc71a1c926 142-144
+  s_8dec0d870836b0::t_fc3c46323ef7fe 150-152
+  s_8dec0d870836b0::t_09168bf9fe7391 1-15,18-49,52-62,83-84,87-101,105-114,117-121,125-134,137-141,145-147,153-166,168-173,176,181-208,210-223,229-233,236-239,243-245,247-248
+  s_8dec0d870836b0::t_c8db14298cd093 16,50-51,63-82,85-86,122,135-136,148-149,167,179-180,209,224-225,234-235,246
+  s_8dec0d870836b0::t_c9b3c1882d3aae 174-175,177-178
+  s_8dec0d870836b0::t_e91ab65edfe3a1 115-116,124
+  s_8dec0d870836b0::t_97552cca69217d 17,123,226-228,240-242
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/telemetry/telemetry_getters.rs
+  s_8dec0d870836b0::t_2d160c99e6c8fc 14-18
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/terrain_features.rs
+  s_8dec0d870836b0::t_6f3cd71869ea7a 44-46
+  s_8dec0d870836b0::t_31b9ea8bc647c9 19-20,63-75
+  s_8dec0d870836b0::t_6464247425563e 32,40-43,47,52-53,58
+  s_8dec0d870836b0::t_ca423c76dc812c 76
+end_to_end_tutorials/dynamic_drone_failsafe/part_2_dynamic_context/model.rs
+  s_8dec0d870836b0::t_a793f8c533c4f4 10-12,26,292
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/terrain_thermal.rs
+  s_8dec0d870836b0::t_31b9ea8bc647c9 23-24
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/fault_timeline/mod.rs
+  s_8dec0d870836b0::t_af3524346d8911 1-7,11-14,16,19-21,23-26,28-31,33,35,45-47
+  s_8dec0d870836b0::t_04125921a974e2 8-10,15,17-18,22,27,32,34,36-44
+Cargo.lock
+  s_8dec0d870836b0::t_d477b03a8d9acd 927
+openspec/notes/archive/cfd-plasma-retropulsion/plasma-retropulsion-roadmap.md
+  s_8dec0d870836b0::t_a0ae1ec31fda05 365
+openspec/notes/archive/drone-failsafe-tutorial/outline.md
+  s_8dec0d870836b0::t_a53911ab8acc05 3,63-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "78193492a2d6ff215b19c8c7d939f0ac9b1b3f79",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
