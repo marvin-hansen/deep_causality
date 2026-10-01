@@ -1,0 +1,92 @@
+website/web/src/pages/overview/effect-ethos.astro
+  s_8dec0d870836b0::t_00db6023839193 106
+website/web/src/pages/tutorials/index.astro
+  s_8dec0d870836b0::t_0675f26ee72b38 1-27
+website/web/src/layouts/BaseLayout.astro
+  s_8dec0d870836b0::t_aa43ddbc2472a1 123
+website/web/DESIGN.md
+  s_8dec0d870836b0::t_c0ca67a7ae07e9 264,282-284
+  s_8dec0d870836b0::t_f7a76e2ffb3033 360-368,595,605-608,837
+  s_8dec0d870836b0::t_92633acbe9f25f 838
+website/README.md
+  s_8dec0d870836b0::t_65484234016135 12,27-28
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-action.astro
+  s_8dec0d870836b0::t_0996ea74c1c25f 1-58,108-154,156-175,177-190
+  s_8dec0d870836b0::t_1c64862528a8e3 176
+  s_8dec0d870836b0::t_77775dc1665651 155
+  s_8dec0d870836b0::t_800e3e44828dba 59-107
+website/web/src/pages/tutorials/dynamic-drone-failsafe/effect-ethos.astro
+  s_8dec0d870836b0::t_2fb018fe710eae 1-94,183-209,211-227,229-230,232-242,245-273,276-292,295-310,313-320,322-326,328-340,342-349
+  s_8dec0d870836b0::t_800e3e44828dba 95-182
+  s_8dec0d870836b0::t_260446dd6576b3 274-275,311-312,327
+  s_8dec0d870836b0::t_3f273f39070260 341
+  s_8dec0d870836b0::t_1c64862528a8e3 243-244,293
+  s_8dec0d870836b0::t_b9e085b6aadeaa 210
+  s_8dec0d870836b0::t_77775dc1665651 228,231,294,321
+website/web/src/components/nav/SiteHeader.astro
+  s_8dec0d870836b0::t_76ecd9e5439562 237-242
+  s_8dec0d870836b0::t_7fc0df8bd2c319 5,50-64,137-143
+  s_8dec0d870836b0::t_968eb9136a4e30 215,217,220-222,243
+  s_8dec0d870836b0::t_c0eb9129789958 144
+website/web/src/pages/tutorials/dynamic-drone-failsafe/index.astro
+  s_8dec0d870836b0::t_ff594c39d93682 40
+  s_8dec0d870836b0::t_77775dc1665651 89,119
+  s_8dec0d870836b0::t_24bbdab569d8e5 21-23,164-179,182-185,189-190,194-195
+  s_8dec0d870836b0::t_b3bf1542def3ec 58-60,64-70,73-76
+  s_8dec0d870836b0::t_d1dfc0e22f6adf 1-20,24-39,41,51-54,56-57,61-63,71-72,77-78,83-84,86,93-107,109-110,114-118,120-136,146-152,156-163,196-204,206-209
+  s_8dec0d870836b0::t_1cafd17b86f498 85
+  s_8dec0d870836b0::t_a0506fe9d98aeb 108,111-113
+  s_8dec0d870836b0::t_47b567b0769f0d 180-181,186-188,191
+  s_8dec0d870836b0::t_7336a74305089a 43-50,192-193
+  s_8dec0d870836b0::t_97ea8776a4dd80 205
+  s_8dec0d870836b0::t_798a606f869175 144-145,153-155
+  s_8dec0d870836b0::t_b86155c35dbc6c 138
+  s_8dec0d870836b0::t_d373e9d0372ce3 137,139-143
+  s_8dec0d870836b0::t_c496545989026d 55
+  s_8dec0d870836b0::t_b9e085b6aadeaa 42,90
+  s_8dec0d870836b0::t_0bc11f2c328628 79-82
+  s_8dec0d870836b0::t_799f51070b78a6 87-88,91-92
+website/web/src/components/overview/TopicList.astro
+  s_8dec0d870836b0::t_9172295395963a 3-5,8,11,15-18,21
+  s_8dec0d870836b0::t_664cd3ce897aac 30,41
+website/web/src/components/tutorials/tutorials.ts
+  s_8dec0d870836b0::t_798a606f869175 53
+  s_8dec0d870836b0::t_d9e660c83eadd4 1-19,21-52,54-55
+  s_8dec0d870836b0::t_b9e085b6aadeaa 20
+website/web/src/pages/tutorials/dynamic-drone-failsafe/verification.astro
+  s_8dec0d870836b0::t_b9e085b6aadeaa 90
+  s_8dec0d870836b0::t_d73deec6ee053f 171-172
+  s_8dec0d870836b0::t_77775dc1665651 91,93,97
+  s_8dec0d870836b0::t_430da8f1c9c570 1-29,55-57,59-67,71-89,92,94-96,98-110,114-119,128-148,152-170,173-178
+  s_8dec0d870836b0::t_800e3e44828dba 30-54
+  s_8dec0d870836b0::t_1c64862528a8e3 149-151
+  s_8dec0d870836b0::t_798a606f869175 58,68-70,111-113
+  s_8dec0d870836b0::t_7336a74305089a 120-127
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-context.astro
+  s_8dec0d870836b0::t_77775dc1665651 238
+  s_8dec0d870836b0::t_e9e9fb2fe25581 1-93,144-228,231-237,239-245
+  s_8dec0d870836b0::t_800e3e44828dba 94-143
+  s_8dec0d870836b0::t_4e1b4cdbb3e10c 229-230
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-causality.astro
+  s_8dec0d870836b0::t_b9e085b6aadeaa 123-124
+  s_8dec0d870836b0::t_800e3e44828dba 62-85
+  s_8dec0d870836b0::t_77775dc1665651 138,144-145
+  s_8dec0d870836b0::t_30875995cf88d3 1-61,86-121,125-137,139-143,146-168
+  s_8dec0d870836b0::t_1c64862528a8e3 122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "63a766d6e6f82030d778d3378e15e1ebd93721c5",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
