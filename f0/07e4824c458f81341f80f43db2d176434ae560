@@ -1,0 +1,65 @@
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/mod.rs
+  s_8dec0d870836b0::t_fc4951b1d25005 7
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_guide.rs
+  s_8dec0d870836b0::t_2bf0930c7cb323 19-21
+  s_8dec0d870836b0::t_fc4951b1d25005 1-18,22-45
+end_to_end_tutorials/dynamic_drone_failsafe/Cargo.toml
+  s_8dec0d870836b0::t_fe9e063a1f6430 27-30
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/guidance.rs
+  s_8dec0d870836b0::t_fc4951b1d25005 1-16
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/model_config.rs
+  s_8dec0d870836b0::t_fe9e063a1f6430 84-87,110-113
+  s_8dec0d870836b0::t_2bf0930c7cb323 1-5,8-9,17-19,21-59,189
+  s_8dec0d870836b0::t_9e9e0be9d07757 6-7,10-16,20,60-83,88-109,114-188
+end_to_end_tutorials/dynamic_drone_failsafe/src/lib.rs
+  s_8dec0d870836b0::t_fc4951b1d25005 17
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_step.rs
+  s_8dec0d870836b0::t_fc4951b1d25005 27,32-44
+  s_8dec0d870836b0::t_d19c54adae88a0 45-46
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/main.rs
+  s_8dec0d870836b0::t_2bf0930c7cb323 1-5,7,13-19,21,23-26,28-30,36-46,48-54,57-59,61,66,68-69,75-79,86-88
+  s_8dec0d870836b0::t_fe9e063a1f6430 6,8-12,20,22,27,31,47,55-56,60,62-65,67,70-74,80-85
+  s_8dec0d870836b0::t_5bf8a105174ce2 32-35
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/mod.rs
+  s_8dec0d870836b0::t_fc4951b1d25005 8
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/utils_print.rs
+  s_8dec0d870836b0::t_fe9e063a1f6430 13,15,22-23,31-32,36-37,40,43-44,59-62,77-78,85,99,102-103,122-124,127,171-180
+  s_8dec0d870836b0::t_5bf8a105174ce2 105-113,115-116,119
+  s_8dec0d870836b0::t_7a71c70b35ec6d 10
+  s_8dec0d870836b0::t_2bf0930c7cb323 1-6,8-9,11-12,14,16-21,24-30,33-35,38-39,41-42,45-58,63-76,79-84,86-98,100-101,104,114,117-118,120-121,125-126,128-170,181-213
+  s_8dec0d870836b0::t_a4f2fc40886373 7
+end_to_end_tutorials/dynamic_drone_failsafe/BUILD.bazel
+  s_8dec0d870836b0::t_fe9e063a1f6430 42-54
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/model.rs
+  s_8dec0d870836b0::t_5c4ab5b889b4f8 6,8-9,12,14-15,51,65,263-278,285-295,299-300,305-326,335-352,357,360-403,413-429,449
+  s_8dec0d870836b0::t_2bf0930c7cb323 1-5,7,10-11,13,16-17,20-50,52-64,66-262,358-359,430-448,450-622
+  s_8dec0d870836b0::t_fe9e063a1f6430 18-19,279-284,296-298,301-304,327-334,353-356,404-412
+end_to_end_tutorials/dynamic_drone_failsafe/README.md
+  s_8dec0d870836b0::t_76822859d9add3 172-249,253,257-259,266-267,273
+  s_8dec0d870836b0::t_99bcaead0d6f34 250-252
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/constants.rs
+  s_8dec0d870836b0::t_2bf0930c7cb323 1-5,8-57,67
+  s_8dec0d870836b0::t_9e9e0be9d07757 6-7,58-66
+end_to_end_tutorials/dynamic_drone_failsafe/src/constants.rs
+  s_8dec0d870836b0::t_fc4951b1d25005 153-154
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/model_types.rs
+  s_8dec0d870836b0::t_fe9e063a1f6430 9-11
+  s_8dec0d870836b0::t_2bf0930c7cb323 1-5,8,12-38,45-48,66-67,94-112,114-116,118-123,126-134,139
+  s_8dec0d870836b0::t_b5018db5dfcd95 6-7,39-44,49-65,68-93,113,117,124-125,135-138
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f007e4824c458f81341f80f43db2d176434ae560",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
