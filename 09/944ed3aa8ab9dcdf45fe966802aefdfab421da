@@ -1,0 +1,94 @@
+end_to_end_tutorials/dynamic_drone_failsafe/src/lib.rs
+  s_8dec0d870836b0::t_7f09b23ce42bcd 1-7,22-24
+  s_8dec0d870836b0::t_9f3cdc552573ce 8-21
+end_to_end_tutorials/dynamic_drone_failsafe/Cargo.toml
+  s_8dec0d870836b0::t_97bb92cb8d3ca8 1-22
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/telemetry/telemetry_getters.rs
+  s_8dec0d870836b0::t_9f3cdc552573ce 1-38
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_getters.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-27
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/mod.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-35
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/model.rs
+  s_8dec0d870836b0::t_591c7827279dde 10,13-14,16
+  s_8dec0d870836b0::t_636115ca24792a 25-28,71
+  s_8dec0d870836b0::t_39c47d1657069d 19-23,93-96,98-101
+  s_8dec0d870836b0::t_3a0a016872d5db 1-9,11-12,15,17-18,24,29-70,72-92,97,102-127
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/terrain_features.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-46
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/utils_print.rs
+  s_8dec0d870836b0::t_591c7827279dde 9,27,30-34,44-48,50
+  s_8dec0d870836b0::t_3a0a016872d5db 1-8,10-26,28-29,35-43,49,51-121
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_telemetry.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-43
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/touchdown/mod.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-67
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/telemetry/mod.rs
+  s_8dec0d870836b0::t_9f3cdc552573ce 1-39
+openspec/notes/drone-failsafe-tutorial/outline.md
+  s_8dec0d870836b0::t_cd5392e71a7b6c 1-92
+end_to_end_tutorials/dynamic_drone_failsafe/BUILD.bazel
+  s_8dec0d870836b0::t_97bb92cb8d3ca8 1-28
+scripts/crates.sh
+  s_8dec0d870836b0::t_9ed1e92b7a1882 68-70,79
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/touchdown/touchdown_getters.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-36
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/terrain_geometry.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-26,29-62
+  s_8dec0d870836b0::t_636115ca24792a 27-28
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/outcome.rs
+  s_8dec0d870836b0::t_9f3cdc552573ce 1-24
+Cargo.toml
+  s_8dec0d870836b0::t_9ed1e92b7a1882 22
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/drone/drone_step.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-52
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/mod.rs
+  s_8dec0d870836b0::t_9f3cdc552573ce 1-12
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/mod.rs
+  s_8dec0d870836b0::t_8a1455d65cc3b0 1-20
+scripts/check_examples.sh
+  s_8dec0d870836b0::t_97bb92cb8d3ca8 6-9
+  s_8dec0d870836b0::t_9ed1e92b7a1882 33,35
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/model_types.rs
+  s_8dec0d870836b0::t_3a0a016872d5db 1-8,10-32
+  s_8dec0d870836b0::t_591c7827279dde 9
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/model_config.rs
+  s_8dec0d870836b0::t_636115ca24792a 1-38
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/main.rs
+  s_8dec0d870836b0::t_591c7827279dde 17,23,27,60
+  s_8dec0d870836b0::t_39c47d1657069d 48-50
+  s_8dec0d870836b0::t_3a0a016872d5db 1-16,18-22,24-26,28-47,51-59,61-63
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/surface.rs
+  s_8dec0d870836b0::t_9f3cdc552573ce 1-15
+end_to_end_tutorials/dynamic_drone_failsafe/src/constants.rs
+  s_8dec0d870836b0::t_7f09b23ce42bcd 1-26,39-45,62-84,87-125
+  s_8dec0d870836b0::t_39c47d1657069d 27-38,46-61
+  s_8dec0d870836b0::t_b9926576570c72 85-86
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/constants.rs
+  s_8dec0d870836b0::t_39c47d1657069d 9
+  s_8dec0d870836b0::t_3a0a016872d5db 1-8,10-23
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/command.rs
+  s_8dec0d870836b0::t_9f3cdc552573ce 1-18
+end_to_end_tutorials/dynamic_drone_failsafe/README.md
+  s_8dec0d870836b0::t_12a3d16e5fa499 1-70,72-81,85-91
+  s_8dec0d870836b0::t_6dd74ddde67250 82-84
+  s_8dec0d870836b0::t_2e3222edf2d3cd 71
+Cargo.lock
+  s_8dec0d870836b0::t_e186ae532724c9 920-928
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "09944ed3aa8ab9dcdf45fe966802aefdfab421da",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
