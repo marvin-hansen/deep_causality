@@ -1,0 +1,45 @@
+end_to_end_tutorials/dynamic_drone_failsafe/README.md
+  s_8dec0d870836b0::t_9c76b79413330c 67-79,513-514
+  s_8dec0d870836b0::t_036c1ecb0ea167 268-269,507-508
+  s_8dec0d870836b0::t_bda994f390c41f 501
+  s_8dec0d870836b0::t_24e52994ed1276 430-437,441-447
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-causality.astro
+  s_8dec0d870836b0::t_196dadad7d284d 18-24,159-180
+website/web/src/pages/tutorials/dynamic-drone-failsafe/index.astro
+  s_8dec0d870836b0::t_24e52994ed1276 205
+website/web/src/pages/tutorials/dynamic-drone-failsafe/verification.astro
+  s_8dec0d870836b0::t_24e52994ed1276 54-62,125,128-133
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/model.rs
+  s_8dec0d870836b0::t_e3e83f1d028f0b 11,15-16
+  s_8dec0d870836b0::t_7d65a6d76ea8be 107-164
+  s_8dec0d870836b0::t_fbd309a5c6d033 165
+end_to_end_tutorials/dynamic_drone_failsafe/Cargo.toml
+  s_8dec0d870836b0::t_e3e83f1d028f0b 18
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/utils_print.rs
+  s_8dec0d870836b0::t_683ec1e7e1d729 152-164,166-181,186-199,208
+  s_8dec0d870836b0::t_d4b37b03f1fedb 165
+  s_8dec0d870836b0::t_6a952ad4b43e9f 7,200-207
+  s_8dec0d870836b0::t_2ceca152674ed0 118-119
+  s_8dec0d870836b0::t_72e3616af34a22 182-185
+  s_8dec0d870836b0::t_a0a179735324d1 209
+end_to_end_tutorials/dynamic_drone_failsafe/part_5_verification/model_types.rs
+  s_8dec0d870836b0::t_57e6729f61a306 49-57
+Cargo.lock
+  s_8dec0d870836b0::t_4f522c24bfee76 929
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7be5f5127c5aec1f1fd472b5567da01baf6c38b5",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
