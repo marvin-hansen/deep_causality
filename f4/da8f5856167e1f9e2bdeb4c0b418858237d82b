@@ -1,0 +1,30 @@
+website/web/src/pages/sponsors.astro
+  s_8dec0d870836b0::t_853c96cba0eba6 3,5
+website/web/src/components/nav/SiteHeader.astro
+  s_8dec0d870836b0::t_22d8b8be12d5d6 221,225
+  s_8dec0d870836b0::t_cf120b99372e0a 68,137
+website/web/DESIGN.md
+  s_8dec0d870836b0::t_c045ebbeffa002 595
+website/web/src/pages/about.astro
+  s_8dec0d870836b0::t_50d102b557ffe7 37-47,49-61
+  s_8dec0d870836b0::t_060ef06b34c371 36,63,104
+  s_8dec0d870836b0::t_e9cb61ad98232d 5,7,32,34,48,62,94-103,105-116
+  s_8dec0d870836b0::t_d48c1212a66451 67,72
+  s_8dec0d870836b0::t_7851c210667028 87-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f4da8f5856167e1f9e2bdeb4c0b418858237d82b",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
