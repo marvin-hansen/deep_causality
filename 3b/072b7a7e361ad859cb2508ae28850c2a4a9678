@@ -1,0 +1,103 @@
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-2.log
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 7-8
+  s_b9ed4ca69e7d06::t_cc793d6295d759 6
+  s_b9ed4ca69e7d06::t_63770ba4f74ecb 4-5
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-00-standard_day.draw-0.log
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 5-7
+  s_b9ed4ca69e7d06::t_cc793d6295d759 3-4
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-0.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 6
+  s_b9ed4ca69e7d06::t_cb14fad33d6a9f 4-5
+  s_b9ed4ca69e7d06::t_c05004bafe8aac 7-8
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-3.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 6
+  s_b9ed4ca69e7d06::t_8394c2fdcdd3bb 4-5
+  s_b9ed4ca69e7d06::t_f22802f90f03ee 7-8
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-04-thin_day.draw-4.log
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 8-9
+  s_b9ed4ca69e7d06::t_7dcf6aaeef45d8 7
+  s_b9ed4ca69e7d06::t_cbb3204a187c77 5-6
+examples/avionics_examples/cfd/plasma_blackout/weather/constants.rs
+  s_b9ed4ca69e7d06::t_cc793d6295d759 67
+examples/avionics_examples/cfd/plasma_blackout/weather/main.rs
+  s_b9ed4ca69e7d06::t_cc793d6295d759 63
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-02-cold_day.draw-2.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 4-5
+  s_b9ed4ca69e7d06::t_2b09f13bd9f833 6-8
+examples/avionics_examples/cfd/plasma_blackout/weather/README.md
+  s_b9ed4ca69e7d06::t_eaaa8d65579c81 109-110
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-02-cold_day.draw-5.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 4-5
+  s_b9ed4ca69e7d06::t_a8beee45d310b7 6-8
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-04-thin_day.draw-7.log
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 8-9
+  s_b9ed4ca69e7d06::t_7dcf6aaeef45d8 7
+  s_b9ed4ca69e7d06::t_8ee5f30ad44656 5-6
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-00-standard_day.draw-3.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 3-4
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 5-7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-6.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 6
+  s_b9ed4ca69e7d06::t_8de577d8dd73ec 4-5
+  s_b9ed4ca69e7d06::t_a894d32f77e33a 7-8
+examples/avionics_examples/cfd/plasma_blackout/weather/model.rs
+  s_b9ed4ca69e7d06::t_a71c582fdd919b 19-20,173-176,188-191,201-204,222-225
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-00-standard_day.draw-6.log
+  s_b9ed4ca69e7d06::t_cc793d6295d759 3-4
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 5-7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-04-thin_day.draw-1.log
+  s_b9ed4ca69e7d06::t_7dcf6aaeef45d8 7
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 8-9
+  s_b9ed4ca69e7d06::t_2d2ee18adeb62e 5-6
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-01-hot_day.draw-1.log
+  s_b9ed4ca69e7d06::t_2afb0080ce5bbb 7-8
+  s_b9ed4ca69e7d06::t_027dbad8e4a506 4-6
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-01-hot_day.draw-4.log
+  s_b9ed4ca69e7d06::t_73beb376e4276e 4-8
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-01-hot_day.draw-7.log
+  s_b9ed4ca69e7d06::t_206d331eded44f 4-8
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-1.log
+  s_b9ed4ca69e7d06::t_f06d0be9a881e4 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-2.log
+  s_b9ed4ca69e7d06::t_c6347e14eb4321 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-4.log
+  s_b9ed4ca69e7d06::t_8b2ade1bcd28b6 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-5.log
+  s_b9ed4ca69e7d06::t_bae46ba727583e 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-03-polar_winter.draw-7.log
+  s_b9ed4ca69e7d06::t_563c8714702a49 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-0.log
+  s_b9ed4ca69e7d06::t_b8de347fd997f4 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-1.log
+  s_b9ed4ca69e7d06::t_1406d6ad29f6c0 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-3.log
+  s_b9ed4ca69e7d06::t_98304bec583142 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-5.log
+  s_b9ed4ca69e7d06::t_33e6b2cbc31c3f 4-8
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-6.log
+  s_b9ed4ca69e7d06::t_f535fa0ffc336c 7
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-7.log
+  s_b9ed4ca69e7d06::t_7aee19f1f1b18e 7
+examples/avionics_examples/cfd/plasma_blackout/weather/weather_table.csv
+  s_b9ed4ca69e7d06::t_b5bc1b29e221f9 3-8
+examples/avionics_examples/cfd/plasma_blackout/weather/weather_trace.csv
+  s_b9ed4ca69e7d06::t_fa03de95444a06 1-5102
+examples/avionics_examples/cfd/plasma_blackout/weather/audit/weather.audit.sweep-1.case-05-dense_day.draw-4.log
+  s_b9ed4ca69e7d06::t_62e5144266481d 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3b072b7a7e361ad859cb2508ae28850c2a4a9678",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
