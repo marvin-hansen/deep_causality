@@ -1,0 +1,63 @@
+end_to_end_tutorials/dynamic_drone_failsafe/src/lib.rs
+  s_bd51122fc8ef01::t_9d24dc13d139bc 18-21
+  s_bd51122fc8ef01::t_245ac1c6d4f1e9 13
+end_to_end_tutorials/dynamic_drone_failsafe/README.md
+  s_bd51122fc8ef01::t_b50a2ddf999822 496
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/main.rs
+  s_bd51122fc8ef01::t_5b28b9f45f55d4 27-31,50-62,66,74-75,97-142,153-154,186,189-200,203-215,218-225,227-229,234-284
+  s_bd51122fc8ef01::t_f48b8ba1e9f02b 25,187-188,226,230-233
+end_to_end_tutorials/dynamic_drone_failsafe/part_4_effect_ethos/model.rs
+  s_bd51122fc8ef01::t_ea9adacb471d23 850,909
+end_to_end_tutorials/dynamic_drone_failsafe/part_2_dynamic_context/main.rs
+  s_bd51122fc8ef01::t_63a22fa0997678 41-49,59
+  s_bd51122fc8ef01::t_9c51bd509dd32a 118-119
+  s_bd51122fc8ef01::t_eacb197f5b3932 129-140
+  s_bd51122fc8ef01::t_6f293c9686f8d6 23-27
+  s_bd51122fc8ef01::t_c6e2847193ea6f 79-106
+end_to_end_tutorials/dynamic_drone_failsafe/part_1_dynamic_causality/main.rs
+  s_bd51122fc8ef01::t_d2387d3fcca76f 23-26,39-43,65-76,80-81,83-92
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/model.rs
+  s_b9ed4ca69e7d06::t_d73efa442e997c 14-16,475-476,488-490,505-507,520-522,548-550
+end_to_end_tutorials/dynamic_drone_failsafe/src/types/terrain/terrain_features.rs
+  s_bd51122fc8ef01::t_001b7f4dbf330f 30-34
+examples/avionics_examples/src/shared/trace.rs
+  s_b9ed4ca69e7d06::t_d73efa442e997c 31-32,36
+end_to_end_tutorials/dynamic_drone_failsafe/src/trace.rs
+  s_bd51122fc8ef01::t_21fc0e56eca6a2 1-8,11-12,77-86,97-130
+  s_bd51122fc8ef01::t_b66c980ec1cb78 87-90,95-96
+  s_bd51122fc8ef01::t_f48b8ba1e9f02b 91-94
+  s_bd51122fc8ef01::t_8aabfa56907438 9,13,18-38,42-76
+  s_bd51122fc8ef01::t_d33f066bfbaf1c 10,14-17,39-41
+end_to_end_tutorials/dynamic_drone_failsafe/part_3_dynamic_action/main.rs
+  s_bd51122fc8ef01::t_fbf41290d43c71 22-26,44-52,62,84-116,120-121,129-137
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/retropulsion_branches.csv
+  s_b9ed4ca69e7d06::t_9cca84cbe5b6a1 3-7
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/retropulsion_trace.csv
+  s_b9ed4ca69e7d06::t_eb47f5a5294003 1-5493
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/retropulsion_uninformed_trace.csv
+  s_b9ed4ca69e7d06::t_08e4b0124832d6 1-2511
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f820266a04fa66d93307d636010fc9f0d2547948",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_bd51122fc8ef01": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "908e1a01-7727-417b-a575-3a30c13ddeb9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
