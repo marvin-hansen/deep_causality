@@ -1,0 +1,38 @@
+examples/avionics_examples/cfd/plasma_blackout/weather/main.rs
+  s_b9ed4ca69e7d06::t_b210c8124706e6 84-89,92-95
+  s_b9ed4ca69e7d06::t_ca703b6d2a796e 100-120
+  s_b9ed4ca69e7d06::t_580bcef082bff9 40-43,45
+  s_b9ed4ca69e7d06::t_599d8376fd36ad 76-77
+examples/avionics_examples/src/shared/trace.rs
+  s_b9ed4ca69e7d06::t_359b91fedc5572 28-33
+examples/avionics_examples/cfd/plasma_blackout/weather/weather_trace.csv
+  s_b9ed4ca69e7d06::t_4043ca98dedb93 1-5102
+examples/avionics_examples/cfd/plasma_blackout/weather/weather_draws.csv
+  s_b9ed4ca69e7d06::t_4043ca98dedb93 1-50
+examples/avionics_examples/cfd/plasma_blackout/weather/model.rs
+  s_b9ed4ca69e7d06::t_b8130c425b882e 200-209
+  s_b9ed4ca69e7d06::t_3f09e83fb5d6cc 296-298
+  s_b9ed4ca69e7d06::t_5fa48f97dfd082 18-20
+  s_b9ed4ca69e7d06::t_94f542db9dd06c 26
+  s_b9ed4ca69e7d06::t_e0158595359ea7 331-348
+  s_b9ed4ca69e7d06::t_19c13fde8ad82e 120-199,210-216
+  s_b9ed4ca69e7d06::t_b9b8a93f46f134 543-549
+examples/avionics_examples/cfd/plasma_blackout/weather/README.md
+  s_b9ed4ca69e7d06::t_0582fdae6e64f6 107-109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1ef67d6251ebf045555b00620039f3fd9d6355a8",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
