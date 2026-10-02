@@ -1,0 +1,48 @@
+website/cfd/src/components/tutorial/CorridorRun.astro
+  s_b9ed4ca69e7d06::t_47bdd27daf8a4c 461
+  s_b9ed4ca69e7d06::t_d5772e5b699f35 262
+  s_b9ed4ca69e7d06::t_80365f8faca807 398
+  s_b9ed4ca69e7d06::t_836b0ee4990f74 72
+  s_b9ed4ca69e7d06::t_db7e2516790b7d 481
+  s_b9ed4ca69e7d06::t_85e4dc887b8ad1 76-77,80-81,83,191-192,219-220,224,231,252-253,400,460,465
+  s_b9ed4ca69e7d06::t_7e758a0695bd8c 34
+  s_b9ed4ca69e7d06::t_7dd65efb936ec5 272-273
+  s_b9ed4ca69e7d06::t_4753a2b264d583 415
+  s_b9ed4ca69e7d06::t_e4a78126db90ab 473-478
+  s_b9ed4ca69e7d06::t_c089ee87fec760 246-248,251
+  s_b9ed4ca69e7d06::t_af2c56caebc11a 190,193,199-200,202,205,208-209
+  s_b9ed4ca69e7d06::t_567e893b0a73d9 1-33,39-53,56-71,73-75,78-79,82,84-126,164-169,171,173-189,194-198,201,203-204,206-207,210-218,221-223,225-226,228-230,232-245,249-250,254-261,263-271,274-384,397,399,401-414,416-421,423-425,428-434,436-459,462-464,466-472,479-480,482-486,488-514
+  s_b9ed4ca69e7d06::t_386e9ecdc6b10a 35-38
+  s_b9ed4ca69e7d06::t_4f62be88b4c60b 435
+  s_b9ed4ca69e7d06::t_cf3b7a55e5927d 54-55,127-163,227,385-396,487
+  s_b9ed4ca69e7d06::t_e95300a8320e8e 422,426-427
+  s_b9ed4ca69e7d06::t_1947fafe26b14b 170,172
+website/cfd/src/data/corridorTrace.ts
+  s_b9ed4ca69e7d06::t_c79374b342388e 63-65,68-69
+  s_b9ed4ca69e7d06::t_68183a5070c87b 1-62,66-67,70-142
+website/cfd/README.md
+  s_b9ed4ca69e7d06::t_195d010c9586d4 231-235
+website/cfd/src/styles/tokens-cfd.css
+  s_b9ed4ca69e7d06::t_1e1ced79513d64 61
+  s_b9ed4ca69e7d06::t_73fb9d89f8846a 42-45
+website/cfd/src/content/tutorial/en/stage-1-corridor.mdx
+  s_b9ed4ca69e7d06::t_25c9aa794853de 213-216
+  s_b9ed4ca69e7d06::t_ba7230a73b12b1 24,30
+  s_b9ed4ca69e7d06::t_82454d99545e2a 31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7aee1ecf084a98a52b46e47f557e5b6c4a6a440",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
