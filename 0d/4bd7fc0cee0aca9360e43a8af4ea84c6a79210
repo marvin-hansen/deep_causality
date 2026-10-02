@@ -1,0 +1,34 @@
+website/cfd/src/components/tutorial/RetroRun.astro
+  s_b9ed4ca69e7d06::t_35ff4a32f83391 134
+  s_b9ed4ca69e7d06::t_9653bd9b0e38da 110-111,118
+  s_b9ed4ca69e7d06::t_58b3cb768a50f1 109
+  s_b9ed4ca69e7d06::t_fdab9d410c8fb0 1-19,21-78,91-106,108,112-117,119-133,135-145,148-193,195-226,228-232,234-249,251-264,267-290,292-293,295-296,299-351,353,357-358
+  s_b9ed4ca69e7d06::t_f0c76d954cfda6 265,352,354-356
+  s_b9ed4ca69e7d06::t_68f60c61d57d14 20,79-90,107,146-147,194,227,233,250,266,291,294,297-298
+website/cfd/src/data/retroTrace.ts
+  s_b9ed4ca69e7d06::t_e77eedd722f22c 195-196
+  s_b9ed4ca69e7d06::t_2bfd5c00bb32e2 105-107,113-115,121-125
+  s_b9ed4ca69e7d06::t_f3f606b35cae82 1-104,108-112,116-120,126-194,197-215
+website/cfd/README.md
+  s_b9ed4ca69e7d06::t_248de7192809d9 234-237
+website/cfd/src/content/tutorial/en/stage-3-retropulsion.mdx
+  s_b9ed4ca69e7d06::t_d4f3004cbfbc06 38
+  s_b9ed4ca69e7d06::t_d89dbfd57477e8 23
+  s_b9ed4ca69e7d06::t_ca92a7fba9ac89 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0d4bd7fc0cee0aca9360e43a8af4ea84c6a79210",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
