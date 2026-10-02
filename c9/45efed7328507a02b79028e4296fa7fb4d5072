@@ -1,0 +1,48 @@
+deep_causality_physics/tests/quantities/chronometric_quantities/space_time_coordinate_tests.rs
+  s_d250bf4cfe934f::t_93cff9c28fc7a0 37,41-46
+  s_d250bf4cfe934f::t_6c35d1b6b17403 47-48
+deep_causality_unified_math/deep_causality_tensor/tests/types/causal_tensor_network/op_tensor_svd_truncated_tests.rs
+  s_d250bf4cfe934f::t_0f5ce9783fd9de 115
+deep_causality_cfd/verification/dec_wall_heat_flux_verification/main.rs
+  s_d250bf4cfe934f::t_9661ddb38538d7 164-166
+deep_causality_utils/deep_causality_file/tests/types/satelite_types_tests.rs
+  s_d250bf4cfe934f::t_ec0a282f460ae6 87,94-99
+  s_d250bf4cfe934f::t_a76b98249e96ae 100-101
+deep_causality_utils/deep_causality_file/tests/types/loaders/read_gnss_tests.rs
+  s_d250bf4cfe934f::t_89f6d5f52197f6 99,104-110
+  s_d250bf4cfe934f::t_22f73e269d4821 111
+deep_causality_physics/tests/quantities/chronometric_quantities/central_body_tests.rs
+  s_d250bf4cfe934f::t_c84caac022a5fe 77,81-86
+  s_d250bf4cfe934f::t_fca63286d8bc7b 87-88
+deep_causality_unified_math/deep_causality_algebra/tests/iso/witness/standard_tests.rs
+  s_d250bf4cfe934f::t_d9e978ed4e4dc6 39,43-48
+  s_d250bf4cfe934f::t_68b84bf1d0a3c7 49-50
+Cargo.lock
+  s_8dec0d870836b0::t_67a78685eb6311 452
+deep_causality_unified_math/deep_causality_uncertain/tests/algos/hypothesis/sprt_eval_tests.rs
+  s_8dec0d870836b0::t_7712eb0c497f18 149-150,158-159,170-171,179-180
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c945efed7328507a02b79028e4296fa7fb4d5072",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_d250bf4cfe934f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "745362da-7548-49dc-b6f8-72de501f3c52",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
