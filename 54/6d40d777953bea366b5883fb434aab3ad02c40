@@ -1,0 +1,34 @@
+website/cfd/README.md
+  s_b9ed4ca69e7d06::t_4d2dd788df56be 233-237
+website/cfd/src/components/tutorial/WeatherRun.astro
+  s_b9ed4ca69e7d06::t_b02b4c20f16e1c 1-39,41-56,60-68,81,83-158,160-174,176-187,189-242,244-247,249-253
+  s_b9ed4ca69e7d06::t_d54900e14c6a56 57-58,82
+  s_b9ed4ca69e7d06::t_e55aa111a96f12 40,59,69-80,159,175,188,243,248
+website/cfd/src/content/tutorial/en/stage-2-weather.mdx
+  s_b9ed4ca69e7d06::t_2ed841084357bb 24,31
+  s_b9ed4ca69e7d06::t_b7b7b6034b1e31 32
+website/cfd/src/components/tutorial/Stepper.astro
+  s_b9ed4ca69e7d06::t_d54900e14c6a56 166-167
+  s_b9ed4ca69e7d06::t_b10a167b5d4216 1-165,168-190,196,199-200,207,209,211-215,218,220,243-244,246-252,263-264,266-269,271,275,280
+  s_b9ed4ca69e7d06::t_4332daed0dacac 191-195,197-198,201-206,208,210,216-217,219,221-242,245,253-262,265,270,272-274,276-279
+website/cfd/src/components/tutorial/CorridorRun.astro
+  s_b9ed4ca69e7d06::t_2363aae2012580 10,15,115-116,151,154,203,247,255,260-261,266,279-281
+website/cfd/src/data/weatherTrace.ts
+  s_b9ed4ca69e7d06::t_8d8da3eb1b514a 1-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "546d40d777953bea366b5883fb434aab3ad02c40",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
