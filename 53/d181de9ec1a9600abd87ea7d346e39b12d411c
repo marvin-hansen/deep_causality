@@ -1,0 +1,90 @@
+examples/csm_examples/csm_battery/constants.rs
+  s_8dec0d870836b0::t_d62cc8eaedd453 1-53
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-action.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 146
+  s_8dec0d870836b0::t_e1c2f7c3b8db8f 19-28,62-63,65-66
+website/web/src/pages/overview/dynamic-action.astro
+  s_8dec0d870836b0::t_c2a990b079c4f8 10-12,15-33,39-40,43-62,97,99-102,105-110,112-113,115-118
+openspec/notes/dd-cas-tutorial/02_outline.md
+  s_8dec0d870836b0::t_5db8ea2af51be8 1-101
+website/web/src/pages/overview/dynamic-causality.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 88,114,118-119,142,169
+  s_8dec0d870836b0::t_87f8869847d6d2 125,133
+website/web/src/components/tutorials/tutorials.ts
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 53
+website/web/src/pages/tutorials/dynamic-drone-failsafe/effect-ethos.astro
+  s_8dec0d870836b0::t_87282e8bf25136 198,211-215
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 229
+  s_8dec0d870836b0::t_640961284137cd 56-57,234
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-context.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 185
+  s_8dec0d870836b0::t_e8b61ff942f0c7 33-35,56-58,63-67,161
+website/web/src/pages/tutorials/dynamic-drone-failsafe/dynamic-causality.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 181
+  s_8dec0d870836b0::t_b5d23442537b16 32-35,40-42,55-56,61-62,109
+examples/csm_examples/csm_battery/utils_print.rs
+  s_8dec0d870836b0::t_7f3b93445fa1f2 1-72
+website/web/src/pages/overview/dynamic-context.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 116
+  s_8dec0d870836b0::t_5b2a85accc711a 54-56,60-62
+  s_8dec0d870836b0::t_eabb1b8fe5e494 141
+website/web/src/pages/tutorials/dynamic-drone-failsafe/verification.astro
+  s_8dec0d870836b0::t_565a9ba0cbc3a0 87-89,91-108
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 33,43,156,163
+  s_8dec0d870836b0::t_0f56427d8ed5cd 165-166
+examples/csm_examples/csm_battery/model.rs
+  s_8dec0d870836b0::t_04f8ff1fa571f6 1-115
+examples/csm_examples/BUILD.bazel
+  s_8dec0d870836b0::t_e164e62341be7d 39-50
+examples/csm_examples/README.md
+  s_8dec0d870836b0::t_5d312c31a4e825 21,48
+examples/csm_examples/Cargo.toml
+  s_8dec0d870836b0::t_e164e62341be7d 16,26-28
+  s_8dec0d870836b0::t_6c9c1d7e72322a 29
+openspec/notes/dd-cas-tutorial/01_raw_information.md
+  s_8dec0d870836b0::t_ae71484b9911bb 1-164
+website/web/src/pages/tutorials/dynamic-drone-failsafe/index.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 36,59,62,65,70,82,92,94,117,120-122,126-127,223,245-246,256
+examples/csm_examples/csm_battery/model_types.rs
+  s_8dec0d870836b0::t_96452cf55be692 1-27
+website/web/src/pages/overview/index.astro
+  s_8dec0d870836b0::t_0c0e50bf1e5e3f 29,98
+  s_8dec0d870836b0::t_4c74cbf90e8917 99
+examples/csm_examples/csm_battery/model_config.rs
+  s_8dec0d870836b0::t_76643e71e940d6 67-80,87-107,120-126
+  s_8dec0d870836b0::t_84cb503ebcbbbe 1-66,81-86,108-119,127-193
+examples/csm_examples/csm_battery/main.rs
+  s_8dec0d870836b0::t_ebfe21b516254f 1-74
+examples/csm_examples/csm_battery/README.md
+  s_8dec0d870836b0::t_394d533a54a4b3 1-67
+website/cfd/package.json
+  s_8dec0d870836b0::t_5fd58e80c711fe 26
+website/cfd/pnpm-lock.yaml
+  s_8dec0d870836b0::t_06eac9ba999a32 35-36,255-256,261-262,267-268,273-274,279-280,980-981,992-993,998-999,1004-1005,1010-1011,1016-1017,1022-1023,1028-1029,1035-1036,1042-1043,1049-1050,1056-1057,1063-1064,1070-1071,1076-1077,1082-1083,1614-1615,1760-1761,1811-1812,2146-2147,2151-2152,2156,2426,2430,2432,2435,2438,2441,2444,2893,2907,2910,2913,2916,2919,2922,2925,2928,2931,2934,2937,2940,2943,2946,2949,3264,3269,3546,3581,3586,3665,3705,3707,3710-3724,3836,3980,4098,4100-4104,4106,4109,4112,4115
+website/docs/pnpm-lock.yaml
+  s_8dec0d870836b0::t_cf3a52aad90db4 630-631,671-672,677-678,683-684,689-690,695-696,701-702,707-708,714-715,721-722,728-729,735-736,742-743,749-750,755-756,761-762,1624-1625,1666-1667,2561,2586,2589,2592,2595,2598,2601,2604,2607,2610,2613,2616,2619,2622,2625,2628,2965,2970,3340,3660,3713,3715,3718-3732,3811,3956
+website/quantum/package.json
+  s_8dec0d870836b0::t_b6b91ddcd1a165 26
+website/quantum/pnpm-lock.yaml
+  s_8dec0d870836b0::t_bad84d3af136e8 35-36,255-256,261-262,267-268,273-274,279-280,980-981,992-993,998-999,1004-1005,1010-1011,1016-1017,1022-1023,1028-1029,1035-1036,1042-1043,1049-1050,1056-1057,1063-1064,1070-1071,1076-1077,1082-1083,1614-1615,1760-1761,1811-1812,2146-2147,2151-2152,2156,2426,2430,2432,2435,2438,2441,2444,2893,2907,2910,2913,2916,2919,2922,2925,2928,2931,2934,2937,2940,2943,2946,2949,3264,3269,3546,3581,3586,3665,3705,3707,3710-3724,3836,3980,4098,4100-4104,4106,4109,4112,4115
+website/web/package.json
+  s_8dec0d870836b0::t_f5b985c993a8bc 25
+website/web/pnpm-lock.yaml
+  s_8dec0d870836b0::t_8ee288b66c77e8 40-41,281-282,287-288,293-294,299-300,305-306,1016-1017,1063-1064,1069-1070,1075-1076,1081-1082,1087-1088,1093-1094,1099-1100,1106-1107,1113-1114,1120-1121,1127-1128,1134-1135,1141-1142,1147-1148,1153-1154,2033-2034,2195-2196,2255-2256,2601-2602,2606-2607,2611,2905,2909,2911,2914,2917,2920,2923,3384,3419,3422,3425,3428,3431,3434,3437,3440,3443,3446,3449,3452,3455,3458,3461,3932,3937,4438,4505,4510,4608,4650,4652,4655-4669,4792,4942,5060,5062-5066,5068,5071,5074,5077
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "53d181de9ec1a9600abd87ea7d346e39b12d411c",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
