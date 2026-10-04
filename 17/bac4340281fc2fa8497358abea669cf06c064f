@@ -1,0 +1,92 @@
+video/cfd/pnpm-lock.yaml
+  s_b9ed4ca69e7d06::t_b935284168b82c 57
+video/cfd/retropropulsion/scripts/sync-traces.mjs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-41
+video/cfd/retropropulsion/src/scenes/Beliefs.tsx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-99
+video/cfd/retropropulsion/src/scenes/Entry.tsx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-60
+video/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 15,55,62,70
+video/cfd/plasma_blackout/PLAN.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 19,50-51
+video/cfd/retropropulsion/PLAN.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-81
+video/cfd/retropropulsion/src/Root.tsx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-55
+video/cfd/retropropulsion/SCRIPT.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-186
+video/cfd/weather/PLAN.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4-5
+video/cfd/shared/src/three/Capsule.tsx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 7
+video/cfd/pnpm-workspace.yaml
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 6
+video/cfd/retropropulsion/package.json
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-36
+video/cfd/retropropulsion/src/scenes/Close.tsx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-157
+video/cfd/retropropulsion/src/scenes/Fork.tsx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-173
+video/cfd/retropropulsion/src/data/retro.ts
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-314
+video/YOUTUBE.md
+  s_b9ed4ca69e7d06::t_37e5bc69bd3395 1-22,24-146
+  s_b9ed4ca69e7d06::t_ae6380ff5922a3 23
+video/cfd/retropropulsion/remotion.config.ts
+  s_b9ed4ca69e7d06::t_cdecf1099e5135 1-10
+video/cfd/retropropulsion/src/Main.tsx
+  s_b9ed4ca69e7d06::t_2de9392e25fc0b 1-61
+video/cfd/retropropulsion/src/data/captions.ts
+  s_b9ed4ca69e7d06::t_3aae534b778b60 1-52
+video/cfd/retropropulsion/src/index.ts
+  s_b9ed4ca69e7d06::t_85f8a3eaad07ef 1-4
+video/cfd/retropropulsion/src/scenes/Coast.tsx
+  s_b9ed4ca69e7d06::t_374970eb77ac5d 1-100
+video/cfd/retropropulsion/src/scenes/Landing.tsx
+  s_b9ed4ca69e7d06::t_9dc85ab2e9fa76 1-140
+video/cfd/retropropulsion/src/scenes/Pause.tsx
+  s_8dec0d870836b0::t_bfdcc43058584a 1-142
+video/cfd/retropropulsion/src/scenes/Plan.tsx
+  s_8dec0d870836b0::t_8023e081aeea9b 1-107
+video/cfd/retropropulsion/src/timeline.ts
+  s_b9ed4ca69e7d06::t_83621b963c58a5 1-33
+video/cfd/retropropulsion/src/views/Hud.tsx
+  s_b9ed4ca69e7d06::t_52416298b91b9d 1-33
+video/cfd/retropropulsion/tsconfig.json
+  s_b9ed4ca69e7d06::t_b4795557afdc8d 1-7
+video/cfd/retropropulsion/src/script.ts
+  s_4509b9997d96e1::t_d76d4543fa99d1 1-150
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "17bac4340281fc2fa8497358abea669cf06c064f",
+  "prompts": {},
+  "sessions": {
+    "s_4509b9997d96e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-ab37625684db36607",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
