@@ -1,0 +1,75 @@
+video/cfd/weather/PLAN.md
+  s_b9ed4ca69e7d06::t_56df14d0289738 16,67-68,75
+video/cfd/music/theme.scd
+  s_b9ed4ca69e7d06::t_c0dbbd91530c99 1-224
+video/cfd/weather/package.json
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 8,13
+video/cfd/weather/src/Main.tsx
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 16,34
+video/cfd/weather/src/Root.tsx
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 13,34-37
+video/cfd/weather/src/scenes/Close.tsx
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 10,111-117
+video/cfd/shared/src/views/EndCard.tsx
+  s_b9ed4ca69e7d06::t_d4a286e1061ca8 1,5-25,29-32
+  s_b9ed4ca69e7d06::t_d8b8067017ae34 2-4,26-28
+video/cfd/retropulsion/scripts/sync-traces.mjs
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 26-34
+video/cfd/shared/scripts/music.ts
+  s_b9ed4ca69e7d06::t_14e2625eb6a141 1-45
+video/cfd/shared/src/music.tsx
+  s_b9ed4ca69e7d06::t_c382dc1dc7437f 1-46
+video/cfd/retropulsion/remotion.config.ts
+  s_b9ed4ca69e7d06::t_ad011e3512987b 8-10
+video/cfd/retropulsion/package.json
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 8,13
+video/cfd/shared/src/index.ts
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 13
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 16
+video/cfd/plasma_blackout/SCRIPT.md
+  s_b9ed4ca69e7d06::t_0b49090bf630f2 108-112
+video/cfd/retropulsion/src/scenes/Close.tsx
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 10,146-152
+video/cfd/weather/SCRIPT.md
+  s_b9ed4ca69e7d06::t_0b49090bf630f2 111-119
+video/cfd/plasma_blackout/src/scenes/Close.tsx
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 11,163-169
+video/cfd/plasma_blackout/PLAN.md
+  s_b9ed4ca69e7d06::t_56df14d0289738 16,103,118-119
+video/cfd/weather/scripts/sync-traces.mjs
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 23-31
+video/cfd/plasma_blackout/src/Root.tsx
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 13,34-37
+video/cfd/retropulsion/SCRIPT.md
+  s_b9ed4ca69e7d06::t_0b49090bf630f2 125-134
+video/cfd/plasma_blackout/src/Main.tsx
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 15,32
+video/cfd/plasma_blackout/package.json
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 8,13
+video/cfd/plasma_blackout/scripts/sync-traces.mjs
+  s_b9ed4ca69e7d06::t_4506b1cf4dbb42 17-25
+video/cfd/retropulsion/src/Main.tsx
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 17,36
+video/cfd/retropulsion/src/Root.tsx
+  s_b9ed4ca69e7d06::t_9fcb20a808e4ba 13,34-37
+video/cfd/retropulsion/PLAN.md
+  s_b9ed4ca69e7d06::t_56df14d0289738 16,68-69,77
+.gitignore
+  s_b9ed4ca69e7d06::t_00b1d48aaf0bbb 109-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "07ac4012cd82348dc5c4f01a33b35e89e630a5ab",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
