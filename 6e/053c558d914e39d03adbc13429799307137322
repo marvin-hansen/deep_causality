@@ -1,0 +1,82 @@
+website/cfd/src/data/weatherTrace.ts
+  s_8dec0d870836b0::t_70ddf0cf441c34 106
+  s_8dec0d870836b0::t_82085b5ba64353 64-68,70-76,80-86
+  s_8dec0d870836b0::t_c1129eb6152178 15
+  s_8dec0d870836b0::t_58f9f36d837fed 17-19
+  s_8dec0d870836b0::t_f8b5539dee05df 33-36
+  s_8dec0d870836b0::t_1ab68a31835694 63
+website/cfd/src/data/retroTrace.ts
+  s_8dec0d870836b0::t_71338936b4df25 20
+  s_8dec0d870836b0::t_df3fe588a59685 197
+  s_8dec0d870836b0::t_58f9f36d837fed 32,64,86,154-155
+website/cfd/src/data/corridorTrace.ts
+  s_8dec0d870836b0::t_58f9f36d837fed 17-18
+  s_8dec0d870836b0::t_69470eb907b8ae 133
+  s_8dec0d870836b0::t_e472c9efa11b76 124
+  s_8dec0d870836b0::t_b846c2510fe1da 98-106
+  s_8dec0d870836b0::t_e1b6e0d78644ca 73
+  s_8dec0d870836b0::t_eac61dbda31f6e 15
+website/cfd/src/components/tutorial/format.ts
+  s_8dec0d870836b0::t_5059968e032639 1-5
+website/cfd/README.md
+  s_8dec0d870836b0::t_dba91daf2c8510 231-232
+examples/avionics_examples/cfd/plasma_blackout/corridor/README.md
+  s_8dec0d870836b0::t_ded0c67ed0596d 64-66
+  s_8dec0d870836b0::t_1d30530b3799e9 151-155,158-160
+website/cfd/src/components/tutorial/WeatherRun.astro
+  s_8dec0d870836b0::t_019b337b02c927 14
+website/cfd/src/components/tutorial/CorridorRun.astro
+  s_8dec0d870836b0::t_594e47297c4fad 91
+  s_8dec0d870836b0::t_4d62c840194890 15
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/main.rs
+  s_8dec0d870836b0::t_05068f35be4393 113,131,207,244,256,285,308-309
+  s_8dec0d870836b0::t_08b44211ed138c 98-107
+  s_8dec0d870836b0::t_a9296a76dfd103 277,279,292,298-302
+  s_8dec0d870836b0::t_be71a3444cf935 108
+examples/avionics_examples/cfd/plasma_blackout/weather/model.rs
+  s_8dec0d870836b0::t_c86c9805efc782 306,350-351,354-356
+  s_8dec0d870836b0::t_2c9e3f24bf0efe 352-353
+examples/avionics_examples/cfd/plasma_blackout/corridor/model.rs
+  s_8dec0d870836b0::t_a5117b16ca6b5a 219-220,234,236,240-244
+  s_8dec0d870836b0::t_89e506dceb7e88 284-286
+  s_8dec0d870836b0::t_345be8ef987c7b 261
+  s_8dec0d870836b0::t_dd8c87f4adb029 282-283,287-288,290
+  s_8dec0d870836b0::t_00836ce0780443 23-25,304-309
+examples/avionics_examples/cfd/plasma_blackout/retropulsion/model.rs
+  s_8dec0d870836b0::t_d4bb087148623a 14-16,464,468,527-530,533,535-543,545-552,554-555,564,580,629-630,633-638,647-660
+  s_8dec0d870836b0::t_a9296a76dfd103 531-532,534,544,556-557,559,565,631-632,639-646
+examples/avionics_examples/src/shared/trace.rs
+  s_8dec0d870836b0::t_1e3801ffe96150 50-51,55-56,60-62,65,67,74-75,78,88-90,93-98,102,165,167-170,175
+  s_8dec0d870836b0::t_e8138cb34384a3 40,52-54,57-58,63-64,66,68-73,76-77,83,91-92,99-101,103-109
+  s_8dec0d870836b0::t_dae7a64544c2c5 154-155,177-180,182
+  s_8dec0d870836b0::t_e5de000c1590a7 176
+  s_8dec0d870836b0::t_a6f78cc2c39851 110-111,212-253,256-257
+  s_8dec0d870836b0::t_4d6159a13ac114 267-268
+  s_8dec0d870836b0::t_7f5d0f56da2e57 112
+website/cfd/src/data/traceCsv.ts
+  s_8dec0d870836b0::t_32f704918708d4 2-4,12,14,23,28,37-40,45,47
+  s_8dec0d870836b0::t_22cd807293b209 1,5-11,13,15-22,24-27,29-36,41-44,46,48-53
+website/cfd/src/components/tutorial/Stepper.astro
+  s_8dec0d870836b0::t_c4e36f37b53e40 26-28
+  s_8dec0d870836b0::t_20fe9889b89f67 14
+website/cfd/src/components/tutorial/RetroRun.astro
+  s_8dec0d870836b0::t_619919be9aafa2 14
+examples/avionics_examples/cfd/plasma_blackout/corridor/corridor_branches.csv
+  s_8dec0d870836b0::t_08387c6b918f6b 3-6,9-10,13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6e053c558d914e39d03adbc13429799307137322",
+  "prompts": {},
+  "sessions": {
+    "s_8dec0d870836b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "530dbfd3-7f5d-446d-8018-688065c27e4f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
