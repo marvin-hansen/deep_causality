@@ -1,0 +1,203 @@
+openspec/specs/retropropulsion-gate-integrity/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-101
+openspec/specs/retropropulsion-state-fork-study/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-170
+openspec/specs/plume-obstruction-stage/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+deep_causality_cfd/studies/qtt_rank_plume/main.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 9,100
+deep_causality_cfd/Cargo.toml
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 230
+examples/avionics_examples/cfd/plasma_blackout/retropropulsion/utils_print.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-154
+openspec/audits/cfd_audit/AUDIT-REPORT.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 176-177,179,191,476
+examples/avionics_examples/cfd/plasma_blackout/retropropulsion/model.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-1321
+deep_causality_cfd/studies/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 54,56
+openspec/audits/cfd_audit/modules/deep-causality-cfd-documentation-vs-code-parity-crate-readme.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 5,426,433,453,458,468,471,477,518
+examples/avionics_examples/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 26,34,76
+website/cfd/src/content/blueprints/en/fork-a-running-simulation.mdx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 14-15,98,130
+openspec/specs/retropropulsion-descent-gates/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-132
+deep_causality_cfd/src/types/flow/corridor/regime.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 48
+openspec/specs/retropropulsion-branch-scoring/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-79
+deep_causality_cfd/src/types/flow/retropropulsion.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-749
+openspec/specs/compressible-drag-contraction/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+website/cfd/src/pages/why/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 92,118,300
+website/cfd/public/brief.source.html
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 142
+website/cfd/src/pages/roadmap/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 7,43
+deep_causality_cfd/tests/types/flow/compressible_march_run/imprint_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 17
+openspec/specs/retropropulsion-example-wiring/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-167
+examples/avionics_examples/cfd/plasma_blackout/retropropulsion/constants.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-194
+openspec/specs/ignition-corridor-commit/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+deep_causality_cfd/src/types/flow/mod.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 35,77
+deep_causality_cfd/src/types/flow/throttle_guidance.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 7
+openspec/specs/plume-rank-fork-study/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+examples/avionics_examples/Cargo.toml
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 45-46
+openspec/specs/full-descent-atmosphere/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+docs/Conference/2026_CausalDataScienceMeeting/proposal.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 44
+openspec/specs/terminal-descent-leg/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+website/cfd/src/components/home/Limits.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 57
+deep_causality_cfd/src/solvers/qtt/compressible/forcing.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8
+deep_causality_cfd/tests/types/flow/throttle_guidance_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 438
+website/cfd/src/content/tutorial/en/stage-1-corridor.mdx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 223
+deep_causality_cfd/tests/types/flow/retropropulsion_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-753
+deep_causality_cfd/tests/types/flow/compressible_march_run/forcing_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 16,203
+deep_causality_cfd/studies/qtt_rank_plume/output.txt
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1
+website/cfd/src/components/tutorial/RetroRun.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 3,5,17,128,312-314
+website/cfd/src/pages/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 13,53,122,132,139,141
+deep_causality_physics/src/kernels/propulsion/descent.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8
+examples/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 198
+openspec/specs/srp-derisk-verdict/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+openspec/specs/flight-regime-classifier/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+deep_causality_cfd/studies/qtt_rank_plume/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 6,13
+deep_causality_cfd/tests/types/flow/mod.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 66
+examples/avionics_examples/src/shared/constants.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 57,89,226
+deep_causality_cfd/tests/types/flow/coupled_march_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 126
+openspec/specs/throttle-guidance-stage/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+examples/avionics_examples/cfd/plasma_blackout/retropropulsion/main.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-389
+deep_causality_cfd/reverted/srp_drag_decrement/main.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8
+openspec/specs/retropropulsion-belief-counterfactual/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-152
+openspec/specs/powered-descent-envelope/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+.bazelignore
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 32-34
+website/cfd/src/pages/boundaries/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 58
+deep_causality_physics/src/quantities/propulsion/mod.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 6
+website/cfd/src/content/blueprints/en/couple-multiphysics.mdx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 133,162
+openspec/specs/retropropulsion-typed-witnesses/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-82
+website/cfd/src/content/tutorial/en/stage-2-weather.mdx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 197
+openspec/specs/srp-drag-decrement-verification/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+openspec/specs/retro-thrust-stage/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+examples/avionics_examples/BUILD.bazel
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 136-138
+openspec/audits/cfd_audit/ACTION-LIST.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 98,204,279-281
+examples/avionics_examples/cfd/plasma_blackout/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 17,22,25,53,55,89
+examples/avionics_examples/cfd/plasma_blackout/retropropulsion/output.txt
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-89
+deep_causality_cfd/tests/types/flow/terminal_descent_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 6
+deep_causality_cfd/src/types/flow/flight_sensors.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 7
+deep_causality_cfd/src/types/flow/corridor/envelope.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 13
+website/cfd/src/data/boundaries.ts
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 124,130,145,191,231
+openspec/specs/powered-descent-kernels/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 7,14
+openspec/specs/corridor-inheritance-guard/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4,13,15,32
+openspec/audits/cfd_audit/modules/examples-avionics-examples-cfd-engineer-facing-cfd-demonstra.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1,5,31-32,219,223,235,246,409,416,423,425,427,475,482,484,486,490,494,497,502,505,511,515,517
+deep_causality_cfd/src/types/flow_config/compressible_march_config.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 302
+deep_causality_cfd/tests/types/flow/compressible_march_run/fork_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 242
+website/cfd/src/pages/fork-or-sweep/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 6,10,21,45,193,223,241,263
+deep_causality_physics/src/kernels/propulsion/mod.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 6-7
+openspec/specs/retropropulsion-scoring-robustness/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-58
+website/cfd/src/pages/provenance/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8,31,58,86,132,188,211
+examples/avionics_examples/cfd/plasma_blackout/retropropulsion/README.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-225
+website/cfd/src/data/results.ts
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 80,83
+openspec/specs/flight-sensor-scalars/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+openspec/specs/propulsion-performance-kernels/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8
+openspec/specs/weather-table-consumption/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4,47,53
+openspec/specs/srp-aero-kernels/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 83
+website/cfd/src/content/tutorial/en/stage-3-retropropulsion.mdx
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 1-315
+website/cfd/src/data/retroTrace.ts
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 2,4-7,14-18,23,64,86,107,154-155,179
+deep_causality_cfd/tests/types/flow/corridor/regime_tests.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 266
+openspec/audits/cfd_audit/RUN-LEDGER.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 87
+website/cfd/src/pages/how-it-works/index.astro
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8-9,173
+deep_causality_physics/src/kernels/propulsion/performance.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 58
+openspec/specs/compressible-forcing-region/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 4
+openspec/specs/blackout-example-layout/spec.md
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 7,15
+deep_causality_cfd/src/types/keyed_table.rs
+  s_b9ed4ca69e7d06::t_85124ffed9dc47 8-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7a8bec589d98f7efb15113f4cdf6c6ce5b52cc45",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
