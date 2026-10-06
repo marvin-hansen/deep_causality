@@ -1,0 +1,55 @@
+examples/mathematics_examples/1_foundation/haft/adjunction.rs
+  s_b9ed4ca69e7d06::t_b0d5d0c6bc011e 19,21-32,34-37,40-43,46-47,50,52-53,55,59-79,102-103,106,111,115-116,118,120
+examples/mathematics_examples/2_composition/alignment/ensemble_x_lattice_ising/main.rs
+  s_b9ed4ca69e7d06::t_29245d603d51a0 9,11,54-57,108-121,123-125,127-130,132-133,135-159,241,245-250,252,258,303-304,359,369
+examples/mathematics_examples/1_foundation/multivector/clifford_mhd_multivector.rs
+  s_b9ed4ca69e7d06::t_5880028b419b11 6-9,11,23-26,35-45,47-65,70-71,75-76,83-84,87-124,134-135,137-153,156,168,176,179,192
+  s_b9ed4ca69e7d06::t_6882abc99286c1 10,46,136,154-155,177,180,185-187,196-200,207
+  s_b9ed4ca69e7d06::t_df97f702c4f715 157-167
+  s_b9ed4ca69e7d06::t_901de1732f6440 202-206
+examples/mathematics_examples/2_composition/alignment/ensemble_x_lattice_ising/README.md
+  s_b9ed4ca69e7d06::t_7f4965e2f9798d 4,14
+examples/mathematics_examples/3_applications/README.md
+  s_b9ed4ca69e7d06::t_cf271fecca8f30 51,54
+examples/mathematics_examples/README.md
+  s_b9ed4ca69e7d06::t_49bf56d7c04d66 69
+examples/mathematics_examples/3_applications/relativistic_mhd/main.rs
+  s_b9ed4ca69e7d06::t_29245d603d51a0 166-169
+  s_b9ed4ca69e7d06::t_0f52b60ef43356 38
+  s_b9ed4ca69e7d06::t_4f073301244f7c 26-34,37,39,43-55,58-59,61-62,77,81-82,92,101-102,113-147,150-154,156-157,159
+examples/mathematics_examples/Cargo.toml
+  s_b9ed4ca69e7d06::t_995f45734bf2ec 14
+examples/mathematics_examples/1_foundation/topology/chain_cochain_pairing.rs
+  s_b9ed4ca69e7d06::t_8d033c264ad820 28,33-37,46-47,87,89,98,100,171-172,174-178,181-184,186,192,195,252
+  s_b9ed4ca69e7d06::t_7cb78f2dad85ed 29-32,53-63,86,88,90-92,99,163-170,173,179-180,185
+  s_b9ed4ca69e7d06::t_29245d603d51a0 258-261
+  s_b9ed4ca69e7d06::t_00f60b2749eee8 187
+examples/mathematics_examples/3_applications/electromagnetic_field/main.rs
+  s_b9ed4ca69e7d06::t_2e0327ddd13b28 26-29,37-40,42-49,51-55,76,78,83-84,87-89,122-145,173-178,182
+examples/mathematics_examples/1_foundation/topology/fields_on_complexes.rs
+  s_b9ed4ca69e7d06::t_f1c00b5c804b47 28-31,34-37,40,60,63,66-79,81,91,99,106,112,129,183-184,194-224,226-228,231,233,237-239,241,245-249,252,361,366
+  s_b9ed4ca69e7d06::t_7cb78f2dad85ed 44,168-169,279-283,300
+examples/mathematics_examples/2_composition/chaining/einstein_field_causal_tensor/main.rs
+  s_b9ed4ca69e7d06::t_6882abc99286c1 25,63,74,177,179
+  s_b9ed4ca69e7d06::t_8b4922377a0daa 12-15,18-21,37-47,50-52,130,142-173
+examples/mathematics_examples/1_foundation/haft/README.md
+  s_b9ed4ca69e7d06::t_a6c83e4130beb7 62
+examples/mathematics_examples/1_foundation/linear/dense_matrix_stencil.rs
+  s_b9ed4ca69e7d06::t_93ae76b5725bc5 22-23,32-35,40,43-47,70-74,140-167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1324a2cba882cdfcae846d691d558e37b8daefae",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
