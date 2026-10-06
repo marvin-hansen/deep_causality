@@ -1,0 +1,31 @@
+examples/material_examples/Cargo.toml
+  s_b9ed4ca69e7d06::t_f2b4c5eba8adbf 14
+examples/material_examples/README.md
+  s_b9ed4ca69e7d06::t_08190c419b09cb 53
+examples/material_examples/hyperlens/README.md
+  s_b9ed4ca69e7d06::t_b44049064a1e61 61-64,89,110-111,128
+  s_b9ed4ca69e7d06::t_a8e76e03b0c7e9 90-92,112-113
+examples/material_examples/hyperlens/model.rs
+  s_b9ed4ca69e7d06::t_66be18c4ece02a 6-7,14-17,37-99,104-145,165,170,172-173,183-184,205-214
+  s_b9ed4ca69e7d06::t_965c2d9d29694c 100-103
+examples/material_examples/hyperlens/main.rs
+  s_b9ed4ca69e7d06::t_22e8fbe0e39001 43-45,52,54-55,57,68-75,78-79,84,87
+examples/material_examples/hyperlens/utils_print.rs
+  s_b9ed4ca69e7d06::t_0f5fa2d37c8ed0 12,17-18,21,24,29,38-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5f71a6719c98df2a0021312dc3f88226d09e2b1b",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
