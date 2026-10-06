@@ -1,0 +1,21 @@
+deep_causality_ethos/src/alias/mod.rs
+  s_b9ed4ca69e7d06::t_e12e662806505f 32-39
+  s_b9ed4ca69e7d06::t_b8779c070cfeaf 20-21,44
+  s_b9ed4ca69e7d06::t_7e4a770cc10ab5 45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c6d30ced40e3289070f6ed6c0be51337cc3afd40",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
