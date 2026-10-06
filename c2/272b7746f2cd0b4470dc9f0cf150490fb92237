@@ -1,0 +1,48 @@
+examples/csm_examples/csm_context/main.rs
+  s_b9ed4ca69e7d06::t_ae73d5b2765760 19-23
+  s_b9ed4ca69e7d06::t_6617467e9e0933 9,27,34,48,52,59-60
+examples/csm_examples/csm_basic/main.rs
+  s_b9ed4ca69e7d06::t_d72d18581b8327 77-78
+  s_b9ed4ca69e7d06::t_4654aece99d181 13,26,31,51
+  s_b9ed4ca69e7d06::t_32699db5cd53ef 7,14,30,32-33,37,41
+examples/csm_examples/csm_effect_ethos/model.rs
+  s_b9ed4ca69e7d06::t_6216ef7400b71e 16-18,49,55,57-61,69-72,81-87,91-102,113-114,118,120
+  s_b9ed4ca69e7d06::t_3b510e3d51e309 10,12,32-44,115,121,123
+  s_b9ed4ca69e7d06::t_07cab55fdc8742 88-90
+examples/csm_examples/csm_basic/model.rs
+  s_b9ed4ca69e7d06::t_32699db5cd53ef 88
+  s_b9ed4ca69e7d06::t_b64a9027b0f416 8-9,11,13-19,39-40,42-43,45,51,53,55-64,67,70,72-80,83,86,89-96,98-115,117-119,121,123-142
+  s_b9ed4ca69e7d06::t_4654aece99d181 12,44,47-50,52
+  s_b9ed4ca69e7d06::t_827844f4bd350e 41
+  s_b9ed4ca69e7d06::t_7ebcb2513c1c86 46
+examples/csm_examples/csm_context/model.rs
+  s_b9ed4ca69e7d06::t_8daab3e62d50fc 89-109
+  s_b9ed4ca69e7d06::t_ae73d5b2765760 5-8,15,17,41-43,59-64,66,68-73,143,145-146,151,167-180,182,188,194
+  s_b9ed4ca69e7d06::t_e9e1ae560a76c3 65,67
+  s_b9ed4ca69e7d06::t_3ce04b8ece4d0e 74-75,84-88,112,136-142
+examples/csm_examples/csm_effect_ethos/README.md
+  s_b9ed4ca69e7d06::t_6216ef7400b71e 15-16
+examples/csm_examples/csm_effect_ethos/main.rs
+  s_b9ed4ca69e7d06::t_3b510e3d51e309 9,14,19,30,51,103-104
+examples/csm_examples/csm_context/README.md
+  s_b9ed4ca69e7d06::t_b7ef66ae0652a2 26,29-30
+examples/csm_examples/csm_basic/README.md
+  s_b9ed4ca69e7d06::t_9e0945cd74012c 36
+  s_b9ed4ca69e7d06::t_d79b880073bcdf 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c2272b7746f2cd0b4470dc9f0cf150490fb92237",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
