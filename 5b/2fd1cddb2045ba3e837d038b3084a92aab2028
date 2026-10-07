@@ -1,0 +1,75 @@
+papers/counterfactual_fluid_dynamics/sections/A1_reproducibility.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-13
+papers/counterfactual_fluid_dynamics/sections/03_method.tex
+  s_1024a035d90edc::t_6acedec9488a1f 9,40
+  s_1024a035d90edc::t_6958c5082e16d9 1-8,10-39,41-45
+papers/counterfactual_fluid_dynamics/tables/tab_fork_cost.tex
+  s_1024a035d90edc::t_2d0e0f0cd71a33 1-17
+papers/counterfactual_fluid_dynamics/listings/corridor_fork.rs
+  s_1024a035d90edc::t_9a6b7165d78a59 1-22
+papers/counterfactual_fluid_dynamics/sections/08_limitations.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-11
+papers/counterfactual_fluid_dynamics/tables/tab_evidence_map.tex
+  s_1024a035d90edc::t_a1e7a377ab96d2 1-16
+papers/counterfactual_fluid_dynamics/notes/cfd_relatedwork.md
+  s_1024a035d90edc::t_d78d204d88a21e 644-645
+  s_1024a035d90edc::t_d9d8f29822e571 1-643,646-697
+papers/counterfactual_fluid_dynamics/tables/tab_weather.tex
+  s_1024a035d90edc::t_0cd2e6129bf7d4 1-21
+papers/counterfactual_fluid_dynamics/sections/04_solvers_verification.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-16
+papers/counterfactual_fluid_dynamics/tables/tab_retro_fork.tex
+  s_1024a035d90edc::t_846fbaa89e1754 1-20
+papers/counterfactual_fluid_dynamics/sections/00_abstract.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-3
+papers/counterfactual_fluid_dynamics/sections/05_application.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-28
+papers/counterfactual_fluid_dynamics/main.tex
+  s_1024a035d90edc::t_a9b56ff828f767 78
+  s_1024a035d90edc::t_624cfa461b8ee1 1-77,79-82,84-127
+  s_1024a035d90edc::t_133890fe48869e 83
+papers/counterfactual_fluid_dynamics/listings/coupling_stack.rs
+  s_1024a035d90edc::t_9a6b7165d78a59 1-8
+papers/counterfactual_fluid_dynamics/refs.bib
+  s_1024a035d90edc::t_163be324c5cf11 1-1310
+papers/counterfactual_fluid_dynamics/notes/cfd_draft.md
+  s_1024a035d90edc::t_a0cebf06a654bd 578
+  s_1024a035d90edc::t_28ded88cd50e98 993-994
+  s_1024a035d90edc::t_56bd5349761090 1-46,71-72,78-469,471-476,479-577,579-992,995-1047
+  s_1024a035d90edc::t_982f7e6c1e4525 47-70,73-77
+  s_1024a035d90edc::t_98724dbbd77121 470
+  s_1024a035d90edc::t_d1721fd77f6551 477-478
+papers/counterfactual_fluid_dynamics/sections/02_related_work.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-36
+papers/counterfactual_fluid_dynamics/tables/tab_verification.tex
+  s_1024a035d90edc::t_28fa6c16ce4f44 1-24
+papers/counterfactual_fluid_dynamics/tables/tab_corridor.tex
+  s_1024a035d90edc::t_cad1be516385fd 1-33
+papers/counterfactual_fluid_dynamics/sections/06_results.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-55
+papers/counterfactual_fluid_dynamics/listings/weather_sweep.rs
+  s_1024a035d90edc::t_9a6b7165d78a59 1-10
+papers/counterfactual_fluid_dynamics/sections/07_discussion.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-22
+papers/counterfactual_fluid_dynamics/sections/09_conclusion.tex
+  s_1024a035d90edc::t_6958c5082e16d9 1-8
+papers/counterfactual_fluid_dynamics/sections/01_introduction.tex
+  s_1024a035d90edc::t_6acedec9488a1f 13
+  s_1024a035d90edc::t_6958c5082e16d9 1-12,14-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5b2fd1cddb2045ba3e837d038b3084a92aab2028",
+  "prompts": {},
+  "sessions": {
+    "s_1024a035d90edc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "616819ab-dfd8-4e67-aece-60f14eeb1710",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
