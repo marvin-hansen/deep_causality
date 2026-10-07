@@ -1,0 +1,18 @@
+deep_causality_cfd/verification/qtt_ramc_stagline/main.rs
+  h_080fb89ca1f0c4 46-51,136-145,260-261,265-273,276-280
+deep_causality_cfd/verification/qtt_ramc_stagline/print_utils.rs
+  h_080fb89ca1f0c4 114-119
+examples/avionics_examples/cfd/plasma_blackout/corridor/model.rs
+  h_080fb89ca1f0c4 17-19,669-672
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "11ce0530c529e62d894bc14a3525dd72cc39de96",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
