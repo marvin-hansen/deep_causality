@@ -1,0 +1,164 @@
+examples/quantum_examples/qcm_freeze_check/model.rs
+  s_b9ed4ca69e7d06::t_7f61d35175cbb3 140
+  s_b9ed4ca69e7d06::t_e69a25fba2ce74 179
+  s_b9ed4ca69e7d06::t_41582043112329 175,180,191-193
+examples/avionics_examples/control/geometric_tcas/README.md
+  s_b9ed4ca69e7d06::t_9affb1b1c457a2 13,61
+examples/classical_causality_examples/classical_via_causal_monad/dbn/main.rs
+  s_b9ed4ca69e7d06::t_c5d0aa5fc079cb 43,182
+examples/csm_examples/csm_context/model.rs
+  s_b9ed4ca69e7d06::t_3a88e6db6f5bcd 168
+examples/avionics_examples/control/hypersonic_2t/README.md
+  s_b9ed4ca69e7d06::t_f1316b7010f8fb 55
+examples/causal_uncertain_examples/gps_navigation/model.rs
+  s_b9ed4ca69e7d06::t_894e8f0a7dfb82 8-12
+  s_b9ed4ca69e7d06::t_a2c75e2d52b8a9 19,24-25,27,33-34,77-94,107,123-124,132,134-135,138,148,151-152,160,163,173,186,196,199,201,203,209,236,239,241,261,270,276-277
+  s_b9ed4ca69e7d06::t_3fad2013887925 26
+examples/quantum_examples/qcl_examples/qcl_distillation_round/README.md
+  s_b9ed4ca69e7d06::t_7c8c90dd88f2f6 20-24
+examples/classical_causality_examples/classical_via_causal_monad/scm/main.rs
+  s_b9ed4ca69e7d06::t_c5d0aa5fc079cb 35,86,188
+examples/causal_uncertain_examples/sensor_processing/model_config.rs
+  s_b9ed4ca69e7d06::t_cd0970f1876956 21,27-56,75,77,84,86,102,104,111,113,120,122
+examples/mathematics_examples/3_applications/relativistic_mhd/main.rs
+  s_1024a035d90edc::t_59f73a9d3283e7 197-198,204,206-209
+  s_b9ed4ca69e7d06::t_c7de81394bddf5 65-74,189-191,194
+examples/classical_causality_examples/classical_via_causaloid/dbn/main.rs
+  s_b9ed4ca69e7d06::t_8fd8c8857b64c6 84-86
+  s_b9ed4ca69e7d06::t_4bfb2225c9df84 12,23,35,39,62,81,87,95
+examples/causal_uncertain_examples/sensor_processing/model.rs
+  s_b9ed4ca69e7d06::t_e1743f334c8f3e 12,25,113,134,167,176,243,245,271,291-293,301,311,444-445,447
+  s_b9ed4ca69e7d06::t_ccdeb6a1d28347 128-129
+  s_b9ed4ca69e7d06::t_42bcb5edc8cbab 17-18
+examples/classical_causality_examples/classical_via_causaloid/scm/rung3_counterfactual.rs
+  s_b9ed4ca69e7d06::t_5a130ac51c4a4a 12,18-23
+examples/mathematics_examples/2_composition/alignment/ensemble_x_lattice_ising/README.md
+  s_b9ed4ca69e7d06::t_4489ffb7e2dc42 97
+  s_b9ed4ca69e7d06::t_c955e0f9ca8e46 83,85,101-105
+examples/causal_uncertain_examples/gps_navigation/README.md
+  s_b9ed4ca69e7d06::t_07c0368e263685 27-28
+  s_b9ed4ca69e7d06::t_b5f07d2b515941 22-26
+  s_b9ed4ca69e7d06::t_a01b0bdbcafa4d 32,42
+examples/csm_examples/csm_context/main.rs
+  s_b9ed4ca69e7d06::t_3a88e6db6f5bcd 15,42
+examples/classical_causality_examples/classical_via_causaloid/dbn/model.rs
+  s_b9ed4ca69e7d06::t_8fd8c8857b64c6 7,9-10,12,20,22-28,30-32,35,37,39-40,42,48,50-52,55-65
+examples/causal_uncertain_examples/gps_navigation/main.rs
+  s_b9ed4ca69e7d06::t_a01b0bdbcafa4d 12-13,24,32,42-43
+examples/classical_causality_examples/classical_via_causaloid/scm/main.rs
+  s_b9ed4ca69e7d06::t_5a130ac51c4a4a 14,16
+examples/avionics_examples/control/geometric_tcas/model.rs
+  s_b9ed4ca69e7d06::t_0b81e63e61879a 83-85
+  s_b9ed4ca69e7d06::t_9affb1b1c457a2 302
+examples/mathematics_examples/2_composition/alignment/ensemble_x_lattice_ising/main.rs
+  s_b9ed4ca69e7d06::t_7f02e3c2cf1fa3 416
+  s_1024a035d90edc::t_59f73a9d3283e7 138-145,415,417,460-461,526,542
+  s_b9ed4ca69e7d06::t_a2c75e2d52b8a9 472-495
+  s_b9ed4ca69e7d06::t_c955e0f9ca8e46 447-451
+  s_b9ed4ca69e7d06::t_4489ffb7e2dc42 438-440,471,497-498,500-501,527-528,543
+examples/quantum_examples/qcl_examples/qcl_qcm_freeze/model.rs
+  s_b9ed4ca69e7d06::t_e69a25fba2ce74 211
+  s_b9ed4ca69e7d06::t_7f61d35175cbb3 165
+  s_b9ed4ca69e7d06::t_07961c10c70bfd 207,212,223-225
+examples/classical_causality_examples/classical_via_causaloid/granger/README.md
+  s_b9ed4ca69e7d06::t_7b59d6e61f4d3b 30
+examples/classical_causality_examples/classical_via_causaloid/scm/rung2_intervention.rs
+  s_b9ed4ca69e7d06::t_5a130ac51c4a4a 35-37
+examples/mathematics_examples/1_foundation/haft/bifunctor.rs
+  s_b9ed4ca69e7d06::t_0c16de579ea866 100-102,107-112
+  s_b9ed4ca69e7d06::t_ae54b4e4963df1 103-106
+examples/avionics_examples/navigation/ins_gnss_blackout/model.rs
+  s_b9ed4ca69e7d06::t_5e34fd05a268a2 130,140
+examples/quantum_examples/qcl_examples/qcl_distillation_round/main.rs
+  s_b9ed4ca69e7d06::t_d2ed246ea4ef4d 31-34,69,77-80
+examples/causal_uncertain_examples/sensor_processing/README.md
+  s_b9ed4ca69e7d06::t_e1743f334c8f3e 11,25,49
+  s_b9ed4ca69e7d06::t_f869c6af3d4158 29-32
+examples/quantum_examples/qcl_examples/qcl_distillation_round/utils_print.rs
+  s_b9ed4ca69e7d06::t_d2ed246ea4ef4d 14,27,30
+examples/classical_causality_examples/classical_via_causal_monad/granger/main.rs
+  s_b9ed4ca69e7d06::t_c5d0aa5fc079cb 32,190
+examples/classical_causality_examples/classical_via_causaloid/cate/model.rs
+  s_b9ed4ca69e7d06::t_4465c1414ff16e 7,13,16-19,21-22,30-31,34-41,48,51,72,77,88,114-118,129-130,136-140,148,158-161
+examples/classical_causality_examples/classical_via_causaloid/granger/main.rs
+  s_b9ed4ca69e7d06::t_8cc881948d8e86 15-20
+examples/quantum_examples/qcl_examples/qcl_distillation_round/model_config.rs
+  s_b9ed4ca69e7d06::t_ac70cd4575a0bf 32-35
+  s_b9ed4ca69e7d06::t_ad0beae642392b 15,17,21-22,24-25,27-28,30-31,39,43-45,56-62,65,70-71
+examples/physics_examples/gauge_gr/main.rs
+  s_b9ed4ca69e7d06::t_99c6379e78c1cf 450
+  s_b9ed4ca69e7d06::t_212b5b8b290b14 367
+  s_b9ed4ca69e7d06::t_0f71bcf3f91499 16-18
+  s_b9ed4ca69e7d06::t_65efd0bc033504 289,292
+  s_b9ed4ca69e7d06::t_f554a3b7f1ee8c 56-59
+examples/causal_uncertain_examples/sensor_processing/model_types.rs
+  s_b9ed4ca69e7d06::t_cd0970f1876956 24-25,27,32,34,40-41,139,153-154,178,180
+  s_b9ed4ca69e7d06::t_3fad2013887925 26
+examples/causal_uncertain_examples/README.md
+  s_b9ed4ca69e7d06::t_f289969e8081e8 4-5,25,27-28,33
+examples/mathematics_examples/1_foundation/multivector/clifford_mhd_multivector.rs
+  s_1024a035d90edc::t_59f73a9d3283e7 90,193,248,254,256,258,265-279
+examples/classical_causality_examples/classical_via_causaloid/granger/model.rs
+  s_b9ed4ca69e7d06::t_8cc881948d8e86 36,39-40,43,46,48,51,54,57
+examples/classical_causality_examples/classical_via_causaloid/scm/rung1_association.rs
+  s_b9ed4ca69e7d06::t_5a130ac51c4a4a 11
+examples/classical_causality_examples/classical_via_causaloid/cate/main.rs
+  s_b9ed4ca69e7d06::t_4465c1414ff16e 7-8,34,43,70,88
+examples/causal_uncertain_examples/Cargo.toml
+  s_b9ed4ca69e7d06::t_44e2305b4ff649 16
+examples/causal_correction_examples/corrective_decompression_stops/model_types.rs
+  s_b9ed4ca69e7d06::t_29498994cd67cb 23
+  s_b9ed4ca69e7d06::t_a4cf884d5b6465 20-22
+examples/mathematics_examples/1_foundation/haft/adjunction.rs
+  s_b9ed4ca69e7d06::t_ae54b4e4963df1 50-52,54,61,63-69,108-114,118-120,122-123,125,128-129,131-132,134
+examples/classical_causality_examples/classical_via_causaloid/cate/README.md
+  s_b9ed4ca69e7d06::t_aaa2e71d2a693a 23,31
+examples/classical_causality_examples/Cargo.toml
+  s_b9ed4ca69e7d06::t_b91aa281e87bb6 17
+examples/classical_causality_examples/classical_via_causaloid/scm/model.rs
+  s_b9ed4ca69e7d06::t_5a130ac51c4a4a 18-23,114,164-165,189-199,202
+examples/classical_causality_examples/classical_via_causaloid/scm/README.md
+  s_b9ed4ca69e7d06::t_63b7744816a529 55
+examples/avionics_examples/control/hypersonic_2t/main.rs
+  s_b9ed4ca69e7d06::t_9affb1b1c457a2 11-12,27,43
+examples/causal_uncertain_examples/sensor_processing/main.rs
+  s_b9ed4ca69e7d06::t_e1743f334c8f3e 11,23
+examples/causal_correction_examples/corrective_decompression_stops/model_utils.rs
+  s_b9ed4ca69e7d06::t_8b69178dc3ff0a 9,13-22,25,48
+examples/mathematics_examples/3_applications/electromagnetic_field/main.rs
+  s_b9ed4ca69e7d06::t_bdf86511f8e0eb 145-146,152,154-157
+examples/physics_examples/chronometric_gm_recovery/proces_utils/lagrange.rs
+  s_b9ed4ca69e7d06::t_8c234e7115839e 27,171
+examples/physics_examples/chronometric_gm_recovery/proces_utils/mad_filter.rs
+  s_b9ed4ca69e7d06::t_c93bcf30dd48e1 12
+examples/physics_examples/chronometric_gm_recovery/types/gravity_types.rs
+  s_b9ed4ca69e7d06::t_e5605af56244c0 4
+examples/physics_examples/gauge_gr/README.md
+  s_b9ed4ca69e7d06::t_39082424564c5b 101,103,109
+examples/physics_examples/multi_physics_pipeline/main.rs
+  s_b9ed4ca69e7d06::t_cc7a43c84f91ff 253
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e975439a90bdbcfc63de820d6c8f338470f9dd32",
+  "prompts": {},
+  "sessions": {
+    "s_1024a035d90edc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "616819ab-dfd8-4e67-aece-60f14eeb1710",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
