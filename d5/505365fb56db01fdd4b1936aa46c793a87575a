@@ -1,0 +1,21 @@
+"deep_causality_quantum/papers/Integration of a high-fidelity model of quantum sensors with a map-matching filter for quantum-enhanced navigation-2504.11119.pdf"
+  s_b9ed4ca69e7d06::t_a595dad130bf4c 1-19745
+"deep_causality_quantum/papers/Wavefront curvature and transverse atomic motion in time-resolved atom interferometry-2510.26739.pdf"
+  s_b9ed4ca69e7d06::t_38a803186412a8 1-9223
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d5505365fb56db01fdd4b1936aa46c793a87575a",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
