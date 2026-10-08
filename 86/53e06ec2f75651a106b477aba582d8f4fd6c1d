@@ -1,0 +1,35 @@
+openspec/notes/quantum/qcl-gen3.md
+  s_eecacf52469637::t_d818edebae9d16 187
+  s_eecacf52469637::t_5af81efddd707f 1-16,18-27,31-110,113-117,120-186,188-222
+  s_eecacf52469637::t_24d0a68a6ae19b 28-30
+  s_eecacf52469637::t_fe2809a262140d 17
+  s_eecacf52469637::t_757bfd18cf067d 111-112
+  s_eecacf52469637::t_dd77df4f3f65ee 119
+  s_eecacf52469637::t_341e22dece13ee 118
+openspec/notes/quantum/quantum-backlog.md
+  s_b9ed4ca69e7d06::t_7d759d45e05203 84
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8653e06ec2f75651a106b477aba582d8f4fd6c1d",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_eecacf52469637": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f3a5eb50-7d57-4f7b-89c8-b8cdbfabcfe2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
