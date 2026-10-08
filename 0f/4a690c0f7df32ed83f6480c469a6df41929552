@@ -1,0 +1,37 @@
+openspec/notes/quantum/example-quantum-control-loop.md
+  s_eecacf52469637::t_c327c8f553da39 9,399
+openspec/notes/quantum/qcl-next.md
+  s_eecacf52469637::t_505b3f0bba20f0 454-464
+  s_eecacf52469637::t_bd8b4415337cf7 482-483
+  s_eecacf52469637::t_c327c8f553da39 55,60,93,215,611
+  s_eecacf52469637::t_02d9a4513ad0b4 472-473
+  s_eecacf52469637::t_db040e5d53fbf0 567-569
+openspec/notes/quantum/quantum-backlog.md
+  s_eecacf52469637::t_1f96ea512ad8a8 1-36,38-60,62-95
+  s_eecacf52469637::t_ef7c5167ca16f9 61
+  s_eecacf52469637::t_002ab44b784504 37
+openspec/notes/quantum/Lorenz-Gap.md
+  s_eecacf52469637::t_cd40f7bcbf16b7 138
+  s_eecacf52469637::t_f8d829b4047f49 149-150
+  s_eecacf52469637::t_c2909724cb8460 212-213
+  s_eecacf52469637::t_eeccb8e878d3d5 134
+  s_eecacf52469637::t_e137e42f7ff523 136
+  s_eecacf52469637::t_180e35268f3b74 1-84,86-133,135,137,139-148,151-211,214-236
+  s_eecacf52469637::t_212d31d294270c 85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0f4a690c0f7df32ed83f6480c469a6df41929552",
+  "prompts": {},
+  "sessions": {
+    "s_eecacf52469637": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f3a5eb50-7d57-4f7b-89c8-b8cdbfabcfe2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
