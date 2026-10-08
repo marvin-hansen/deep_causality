@@ -1,0 +1,39 @@
+openspec/notes/archive/quantum/positioning.md
+  s_eecacf52469637::t_c327c8f553da39 1-841
+openspec/notes/archive/quantum/qcl-design-note.md
+  s_eecacf52469637::t_c327c8f553da39 1-1217
+openspec/notes/archive/causal-algebra/causaloid-formalization-roadmap.md
+  s_eecacf52469637::t_c327c8f553da39 9,22,24-25,305,412-413
+openspec/specs/linear-f2-algebra/spec.md
+  s_eecacf52469637::t_c9093443525942 9,101
+openspec/notes/archive/causal-algebra/Causaloid-structure.md
+  s_eecacf52469637::t_c327c8f553da39 82
+openspec/notes/archive/quantum/example-crosstalk-attribution.md
+  s_eecacf52469637::t_c327c8f553da39 1-402
+openspec/notes/archive/quantum/example-geometric-qec.md
+  s_eecacf52469637::t_c327c8f553da39 1-568
+openspec/notes/archive/cfd-plasma-blackout/plasma-blackout-corridor.md
+  s_eecacf52469637::t_c327c8f553da39 292
+openspec/notes/archive/quantum/qcl-dsl-liftback.md
+  s_eecacf52469637::t_c327c8f553da39 1-562
+openspec/notes/archive/quantum/quantum-epp.md
+  s_eecacf52469637::t_c327c8f553da39 1-251
+openspec/notes/archive/quantum/full-stack.md
+  s_eecacf52469637::t_c327c8f553da39 1-304
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0ec0d2a5e49a91b36e80bf3f1dead4ec443ff617",
+  "prompts": {},
+  "sessions": {
+    "s_eecacf52469637": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f3a5eb50-7d57-4f7b-89c8-b8cdbfabcfe2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
