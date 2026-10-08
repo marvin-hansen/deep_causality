@@ -1,0 +1,164 @@
+website/quantum/src/content/examples/en/quantum-counterfactual.mdx
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 5
+openspec/notes/quantum-site/03_sensing_raw_information.md
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 9-10,80
+  s_b9ed4ca69e7d06::t_1838f325bce0ab 1-8,11-79,81-88
+website/quantum/src/components/home/TryIt.astro
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 31
+deep_causality_quantum/verification/sensing/README.md
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 1,3,5,8,30,68
+website/quantum/src/content/examples/en/topological-insulator.mdx
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 5
+website/quantum/public/img/social-share.source.svg
+  s_b9ed4ca69e7d06::t_4cbe77f159967e 74-75
+website/quantum/src/data/boundaries.ts
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 93,102
+  s_b9ed4ca69e7d06::t_38f5f57d2b6da2 89-92,94-101,103-153
+website/quantum/src/content/examples/en/qcl-gravimeter-systematics.mdx
+  s_b9ed4ca69e7d06::t_3f5dbdb15fd2c9 1-38,40-98,104-107
+  s_b9ed4ca69e7d06::t_29a96662353e72 39
+  s_b9ed4ca69e7d06::t_3f550470eaf9ea 99-103
+website/quantum/src/components/sensing/SystematicsMatrix.astro
+  s_b9ed4ca69e7d06::t_71fb293ef3ba1f 80-81
+  s_b9ed4ca69e7d06::t_5d31fce8992414 6,68
+  s_b9ed4ca69e7d06::t_75aca336631ea8 148-149,158-165
+  s_b9ed4ca69e7d06::t_698fad58e18b97 1-5,7,10-49,51-66,70-79,82-147,150,167-180
+  s_b9ed4ca69e7d06::t_f181d4820e0025 8-9,50,67,69,151-157,166
+website/quantum/src/components/home/Evidence.astro
+  s_b9ed4ca69e7d06::t_4e9a5659ca62f5 24
+website/quantum/src/content/examples/en/hopf-fibration-multivector.mdx
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 5
+deep_causality_quantum/verification/sensing/verification_v6_time_model.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 16
+website/quantum/src/content/examples/en/gauge-electroweak.mdx
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 5
+openspec/notes/quantum-site/04_sensing_page_draft.md
+  s_b9ed4ca69e7d06::t_598d61ca68247e 36-39,284-285
+  s_b9ed4ca69e7d06::t_57633c622f3b52 59,90,121,149,173-174,198-199,231,245,291-298
+  s_b9ed4ca69e7d06::t_2bf852a03ac6ff 362-382
+  s_b9ed4ca69e7d06::t_2d502d5dd1c5e0 324,326,329
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 28,202,204,220,233,279
+  s_b9ed4ca69e7d06::t_14e77229a9bc7e 331
+  s_b9ed4ca69e7d06::t_2d4270e509a00d 123-124,162-163
+  s_b9ed4ca69e7d06::t_953faeaf02a044 336-361
+  s_b9ed4ca69e7d06::t_5d31fce8992414 299-323,325,327-328,330,332-335
+  s_b9ed4ca69e7d06::t_9c6d2a8f133d5a 1-27,29-35,40-58,60-89,91-120,122,125-148,150-161,164-172,175-197,200-201,203,205-219,221-230,232,234-244,246-278,280-283,286-290
+website/quantum/README.md
+  s_b9ed4ca69e7d06::t_09d3473911f7b4 68-72,74-77,79-85,87,113,130-131,133,139,150-151,222,226,228
+  s_b9ed4ca69e7d06::t_598d61ca68247e 224
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 78,86,88,132,134,137
+website/quantum/src/components/sensing/EdgeCards.astro
+  s_b9ed4ca69e7d06::t_bf39991ff45d7f 11,30
+  s_b9ed4ca69e7d06::t_1bd71322a7b22c 3-5,13-17,20-21,27,33,39-40,42-43,62
+  s_b9ed4ca69e7d06::t_2bf852a03ac6ff 36
+  s_b9ed4ca69e7d06::t_5d31fce8992414 23-24,29,35
+  s_b9ed4ca69e7d06::t_4ca4144afd4841 1-2,6-10,12,18-19,22,25-26,31-32,37-38,41,44-61,63-76
+  s_b9ed4ca69e7d06::t_57633c622f3b52 28,34
+deep_causality_quantum/verification/sensing/verification_v10_zeeman_field_map.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 16
+website/quantum/src/components/nav/SiteHeader.astro
+  s_b9ed4ca69e7d06::t_9bf57b405d3e3f 15-18,20
+website/quantum/src/data/evidence.ts
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 17
+  s_b9ed4ca69e7d06::t_4e9a5659ca62f5 27
+website/quantum/src/components/sensing/TrackFigure.astro
+  s_b9ed4ca69e7d06::t_16a3a1fc4af4f0 1-21,23,25-29,31,33-52,54-112
+  s_b9ed4ca69e7d06::t_cac3bc10c748d8 22,24,30,32,53
+deep_causality_quantum/verification/sensing/verification_v1_wavefront.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 17
+deep_causality_quantum/verification/sensing/verification_v3_transverse_motion.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 16
+website/quantum/src/content/examples/en/qcl-gradiometer-crosstalk.mdx
+  s_b9ed4ca69e7d06::t_b1c8ddcbab8d3f 1-93,95-96
+  s_b9ed4ca69e7d06::t_e71605c97159bb 94
+website/quantum/src/layouts/BaseLayout.astro
+  s_b9ed4ca69e7d06::t_4cbe77f159967e 59,95
+  s_b9ed4ca69e7d06::t_92603809124cd7 105
+deep_causality_quantum/verification/sensing/verification_v4_crosstalk.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 17,28
+website/quantum/src/styles/global.css
+  s_b9ed4ca69e7d06::t_4cbe77f159967e 394,412
+website/quantum/src/content/examples/en/ikkt-matrix-model.mdx
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 5
+deep_causality_quantum/BUILD.bazel
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 34
+deep_causality_quantum/verification/sensing/common/report.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 6
+website/quantum/src/components/sensing/CampaignBars.astro
+  s_b9ed4ca69e7d06::t_e196a53c863117 1-3,5-16,18-34,36-88
+  s_b9ed4ca69e7d06::t_5d31fce8992414 4,17,35
+website/quantum/src/components/home/HeroVerdicts.astro
+  s_b9ed4ca69e7d06::t_9b0cff0b782e4b 3-4,6-9,18,70-71,73-78,102
+  s_b9ed4ca69e7d06::t_3e6faa77171575 17,72
+website/quantum/src/components/home/Hero.astro
+  s_b9ed4ca69e7d06::t_9b0cff0b782e4b 3,6,22-24
+  s_b9ed4ca69e7d06::t_4ecc2949e437f2 16
+website/quantum/src/pages/boundaries/index.astro
+  s_b9ed4ca69e7d06::t_44f3bf253bb9a8 3,8,16-17,85-87,90-132
+  s_b9ed4ca69e7d06::t_9c6d3363aec132 89
+  s_b9ed4ca69e7d06::t_26e6c6a9647244 88
+  s_b9ed4ca69e7d06::t_7a1809c0e43831 133-135
+website/quantum/src/content/examples/en/quantum-geometric-tensor.mdx
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 5
+website/quantum/src/content.config.ts
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 28-29,31,35
+website/quantum/src/pages/examples/index.astro
+  s_b9ed4ca69e7d06::t_0db775e272a7a6 9,19
+website/quantum/src/components/home/HomeSection.astro
+  s_b9ed4ca69e7d06::t_a400f58f8164ec 41
+website/quantum/src/data/papers.ts
+  s_b9ed4ca69e7d06::t_4e9a5659ca62f5 6,8-14,29,116-237
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 7,28
+website/quantum/src/pages/proof/index.astro
+  s_b9ed4ca69e7d06::t_66680b2f9dfeab 19-22,153-154,156,169-181,187,190-191
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 110,155
+  s_b9ed4ca69e7d06::t_29a96662353e72 189
+  s_b9ed4ca69e7d06::t_6b91968768bca7 188
+deep_causality_quantum/verification/sensing/verification_v2_clipping.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 18
+website/quantum/src/pages/index.astro
+  s_b9ed4ca69e7d06::t_abd6bf71c9bda0 15,17,22-23,40,50,67,95,107-115,117-127,139,152,156,173
+  s_b9ed4ca69e7d06::t_4cbe77f159967e 20,105,116
+  s_b9ed4ca69e7d06::t_0776169eb3d232 106
+deep_causality_quantum/verification/sensing/verification_v5_light_shift.rs
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 19
+website/quantum/src/data/sensing.ts
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 2,14,186-187,192,278
+  s_b9ed4ca69e7d06::t_3e6faa77171575 25-28
+  s_b9ed4ca69e7d06::t_f181d4820e0025 169
+  s_b9ed4ca69e7d06::t_f7045eedc32868 1,3-13,15-24,29-168,170-175,182-185,188-189,194-198,202-208,212-218,222-228,232-238,242-248,252-258,262-268,272-277,279-281
+  s_b9ed4ca69e7d06::t_f1586ddaa2071b 176-181,190-191,193,199-201,209-211,219-221,229-231,239-241,249-251,259-261,269-271
+website/quantum/src/pages/sensing/index.astro
+  s_b9ed4ca69e7d06::t_9c6d3363aec132 277
+  s_b9ed4ca69e7d06::t_e2a341376f3a51 41
+  s_b9ed4ca69e7d06::t_69d1a6607121c0 1-2,7,9-11,16,19-25,28-30,33-36,38-39,43,45,47,86,88-89,238-239,244-246,248,253-257,260,262,269,280,283-284,294,321,323,336
+  s_b9ed4ca69e7d06::t_4a4bfcdd67a798 3-6,8,12-15,17-18,31,40,42,44,48-60,62-85,87,91-127,129-146,148-152,154-155,161-171,175-176,178-179,183-184,188-189,191-206,208-226,228-230,232,234-237,240,242,247,249,251,258,261,264,266-268,270-272,274-276,278-279,281-282,285-292,295-297,299-320,322,324-328,332-335
+  s_b9ed4ca69e7d06::t_a2cb5eebb27441 26,46,231,233,259,265
+  s_b9ed4ca69e7d06::t_ec2056ac309d23 90,153,227
+  s_b9ed4ca69e7d06::t_fe569b2fe7f818 172-173,177,180-182,185-187,330-331
+  s_b9ed4ca69e7d06::t_36bdc6d6ecd6fc 32
+  s_b9ed4ca69e7d06::t_f4e2d7f2364996 293
+  s_b9ed4ca69e7d06::t_634a3b932710c6 273
+  s_b9ed4ca69e7d06::t_75aca336631ea8 298
+  s_b9ed4ca69e7d06::t_e475040113f049 158-160
+  s_b9ed4ca69e7d06::t_3e6faa77171575 27
+  s_b9ed4ca69e7d06::t_57633c622f3b52 207,241,243,250,252
+  s_b9ed4ca69e7d06::t_5d31fce8992414 37,61,128,147,190,263
+  s_b9ed4ca69e7d06::t_5c4f9ed3c1f604 156-157,174,329
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "18c63264479f4449e99810740fbe890a74acf19d",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
