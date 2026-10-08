@@ -1,0 +1,85 @@
+website/quantum/src/data/evidence.ts
+  s_b9ed4ca69e7d06::t_58fb9815d83478 15-16,19-20
+deep_causality_quantum/tests/formalization_lean/orthomodular_tests.rs
+  s_b9ed4ca69e7d06::t_d08b446bb47ae4 1-97
+website/docs/src/content/docs/formalization/quantum.md
+  s_b9ed4ca69e7d06::t_dbdb3600c9618d 8,17,23,28-34,36
+MODULE.bazel
+  s_b9ed4ca69e7d06::t_fbb3c1438531ac 156
+website/quantum/src/pages/proof/index.astro
+  s_b9ed4ca69e7d06::t_fc50eb0d6a1bf2 10,29
+  s_b9ed4ca69e7d06::t_58fb9815d83478 13,37,97,99
+  s_b9ed4ca69e7d06::t_5d5173f3dfc28c 38-42
+  s_b9ed4ca69e7d06::t_41e98b4a77c720 100
+  s_b9ed4ca69e7d06::t_cca71f88c351d2 6
+lean/DeepCausalityFormal/Quantum/NoInfluence.lean
+  s_b9ed4ca69e7d06::t_c858138d331fab 1-139
+lean/DeepCausalityFormal/Quantum/Markov.lean
+  s_b9ed4ca69e7d06::t_e41e3bb5eb7cb2 1-56
+deep_causality_quantum/tests/formalization_lean/qcm_theorem_tests.rs
+  s_b9ed4ca69e7d06::t_184fbb2e38c26e 1-21,23-104,110-114,119-139,144-189,206-227
+  s_b9ed4ca69e7d06::t_666ed00115d4d9 22,105-109,115-118,140-143,190-205
+lean/DeepCausalityFormal.lean
+  s_b9ed4ca69e7d06::t_05765f70baf81c 158-161
+website/quantum/src/pages/checks/index.astro
+  s_b9ed4ca69e7d06::t_58fb9815d83478 18,64-65,68
+website/quantum/src/data/formalization.ts
+  s_b9ed4ca69e7d06::t_58fb9815d83478 95-124,143-144,150-151
+deep_causality_quantum/tests/formalization_lean/choi_tests.rs
+  s_b9ed4ca69e7d06::t_b2a76631a95a6a 8-13,97-159
+deep_causality_quantum/LEAN_QUANTUM.md
+  s_b9ed4ca69e7d06::t_81d91ae0cc4885 24,39-43,66-77
+website/quantum/README.md
+  s_b9ed4ca69e7d06::t_58fb9815d83478 105,121,146
+website/quantum/src/data/checks.ts
+  s_b9ed4ca69e7d06::t_58fb9815d83478 59-60
+openspec/changes/close-quantum-deferred-proofs/design.md
+  s_b9ed4ca69e7d06::t_12f1c01c6c338c 34-37,56-60
+lean/THEOREM_MAP.md
+  s_b9ed4ca69e7d06::t_81d91ae0cc4885 260
+  s_b9ed4ca69e7d06::t_967481967cb8b3 74,251,277-280,284-290
+  s_b9ed4ca69e7d06::t_31dee219d4797d 276
+openspec/changes/close-quantum-deferred-proofs/tasks.md
+  s_b9ed4ca69e7d06::t_31dee219d4797d 3,8-10
+  s_b9ed4ca69e7d06::t_5ebb490eee2230 4,14-17,22-25,29-33,37-38,44-46,48
+  s_b9ed4ca69e7d06::t_12f1c01c6c338c 21,47
+  s_b9ed4ca69e7d06::t_60cfff7b8df9bb 39-40,52-56
+scripts/lean_closure.py
+  s_b9ed4ca69e7d06::t_ad2a8a383054fe 58
+lean/DeepCausalityFormal/Quantum/Choi.lean
+  s_b9ed4ca69e7d06::t_8343421e94f52f 68-74,81
+  s_b9ed4ca69e7d06::t_27393e8c6c84df 75-80,82
+deep_causality_quantum/tests/formalization_lean/mod.rs
+  s_b9ed4ca69e7d06::t_666ed00115d4d9 18-19,21-22
+lean/DeepCausalityFormal/Quantum/Orthomodular.lean
+  s_b9ed4ca69e7d06::t_c0583784df48c9 12-14,20-23,56,58-60,63-95,98
+  s_b9ed4ca69e7d06::t_924239ec7ea8ca 1-11,15-19,24-55,57,61-62,96-97,99-102
+lean/DeepCausalityFormal/Quantum/PartialTrace.lean
+  s_b9ed4ca69e7d06::t_967481967cb8b3 7
+lean/DeepCausalityFormal/Quantum/ClassicalEmbedding.lean
+  s_b9ed4ca69e7d06::t_bd52a212b0ffea 1-58,60-61
+  s_b9ed4ca69e7d06::t_3d0eee2b7864eb 59
+website/quantum/src/components/home/Evidence.astro
+  s_b9ed4ca69e7d06::t_fc50eb0d6a1bf2 56
+  s_b9ed4ca69e7d06::t_58fb9815d83478 16,29-30
+MODULE.bazel.lock
+  s_b9ed4ca69e7d06::t_9fac6b68095a98 354,420
+lean/lake-lock.json
+  s_b9ed4ca69e7d06::t_0aa7ff1911e2f0 72,74,89,96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a104b2655349680184ee0dfd430d330ec402c991",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
