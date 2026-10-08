@@ -1,0 +1,31 @@
+website/quantum/src/data/evidence.ts
+  s_b9ed4ca69e7d06::t_5b61964f6af629 24
+website/quantum/README.md
+  s_b9ed4ca69e7d06::t_5b61964f6af629 110
+deep_causality_unified_math/deep_causality_topology/tests/traits/chain_complex_conformance_tests.rs
+  s_eecacf52469637::t_d3073c9eaf5eb4 236
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e95650e4decbe9c1165f4e59271a94f24210db41",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_eecacf52469637": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f3a5eb50-7d57-4f7b-89c8-b8cdbfabcfe2",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
