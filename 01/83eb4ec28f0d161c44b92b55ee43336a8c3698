@@ -1,0 +1,139 @@
+deep_causality_quantum/verification/sensing/verification_v5_light_shift.rs
+  s_b9ed4ca69e7d06::t_ec3ddabc51bc10 109-113,130-134,142-145,154-157,161-163,193-195,208-211,234-238,267-269,277-285
+  s_b9ed4ca69e7d06::t_ee8cfa8f3f7859 1-108,114-118,120-125,127-128,135-137,139-141,146-153,158-160,164-177,200-207,212-233,239-266,270-276,286-287
+  s_b9ed4ca69e7d06::t_f171d13c089d2b 119,126,129,138,178-192,196-199
+deep_causality_quantum/papers/digitised/louchet2011_fig9_fits.csv
+  s_b9ed4ca69e7d06::t_c3efa24e05da40 1-476
+deep_causality_quantum/verification/sensing/verification_v2_clipping.rs
+  s_b9ed4ca69e7d06::t_3a48e3aa7ebb86 1-41,45-102,109-135,140-183
+  s_b9ed4ca69e7d06::t_d4c49f40003c9f 42-44,103-108,136-139
+deep_causality_quantum/papers/regenerated/sarovar2020_free_bags.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-23
+deep_causality_quantum/papers/regenerated/sarovar2020_bath.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-252
+deep_causality_quantum/papers/regenerated/sarovar2020_bath_bags.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-43
+deep_causality_quantum/papers/digitised/digitise_hu2017_fig6.py
+  s_b9ed4ca69e7d06::t_f3d9cff2bafe9f 1-70
+deep_causality_quantum/verification/sensing/common/attribution.rs
+  s_b9ed4ca69e7d06::t_c8c49bb2543f85 1-65,72-100,106-114,122,128-153,159-162,166-169,177-179
+  s_b9ed4ca69e7d06::t_ec3ddabc51bc10 66-71,101-105,115-121,123-127,154-158,163-165,170-176
+deep_causality_quantum/papers/regenerated/sarovar2020_zz_bags.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-23
+deep_causality_quantum/verification/sensing/verification_v4_crosstalk.rs
+  s_b9ed4ca69e7d06::t_eea76374b792e6 1-18,27-72,76-87,95-120,126-131,136-149,153,158-163,168-172,177-208,213-227,231-255,259-273,277-293,297-298,305-317,334-349,353-354,356-357,360,371-375,377,382,403-406,412,438-440,444-446,452-461,468-482,489-491,496-505,516,537-569,575-576,578-584,589-617,620-671,676-680,687-692,694-698,704-711,718-720
+  s_b9ed4ca69e7d06::t_b6b8f0cd74a654 73-75,574,577,693
+  s_b9ed4ca69e7d06::t_b5e8d4b46d344c 19-26,318-322,330-333,350-352,355,358-359,361-363,366-370,376,381,383,389-402,413-421,428-437
+  s_b9ed4ca69e7d06::t_6c175ee0f6938a 88-94,121-125,132-135,150-152,154-157,164-167,173-176,209-212,228-230,256-258,274-276,294-296,299-304,323-329,364-365,378-380,384-388,407-411,422-427,441-443,447-451,462-467,483-488,492-495,506-515,517-536,570-573,585-588,618-619,672-675,681-686,699-703,712-717
+deep_causality_quantum/papers/regenerated/sarovar2020_free.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-71
+deep_causality_quantum/verification/sensing/verification_v3_transverse_motion.rs
+  s_b9ed4ca69e7d06::t_19815a480dc840 146-150,163-164
+  s_b9ed4ca69e7d06::t_a7a415ca105fda 25-26,124-126,129-137
+  s_b9ed4ca69e7d06::t_341b69fe3cd1e6 30-31,39,44-45,54,84,87-97,100-101,108-109,112-115,121-123,127,139-145,151,157,160,162,165-166,236-242,247-284,286-287,289,303-307,309-310,312-313,316,333-335,339,345-346
+  s_b9ed4ca69e7d06::t_d4c49f40003c9f 116-119,154-156,208-212,214-219,243-246,340-344,347-349
+  s_b9ed4ca69e7d06::t_decc23c9f36548 1-24,27-29,32-38,40-43,46-53,55-83,85-86,98-99,102-107,110-111,120,128,138,152-153,158-159,161,167-207,213,220-235,292-302,308,311,314-315,317-332,336-338,350-351
+  s_b9ed4ca69e7d06::t_198e0240ee5041 285,288,290-291
+deep_causality_quantum/papers/regenerated/sarovar2020_detection.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-270
+deep_causality_quantum/papers/digitised/extract_gauguet2008_fig7.py
+  s_b9ed4ca69e7d06::t_46934a52472165 1-61
+deep_causality_quantum/papers/digitised/extract_karcher2018_figs.py
+  s_b9ed4ca69e7d06::t_4b45507e08925b 1-23,26-67,69-76,79-92
+  s_b9ed4ca69e7d06::t_09f3e4da4da2d9 24-25,68,77-78
+deep_causality_quantum/papers/regenerated/sarovar2020_detection_bags.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-43
+deep_causality_quantum/verification/sensing/verification_v10_zeeman_field_map.rs
+  s_b9ed4ca69e7d06::t_84141f83d0546e 25-28,31-32,34,66-67,73
+  s_b9ed4ca69e7d06::t_d4c49f40003c9f 39-41,132-141,218-219
+  s_b9ed4ca69e7d06::t_c49636d6a3024c 99-100,104,107,114,119,157-159,210
+  s_b9ed4ca69e7d06::t_33fcc8e8cfe5a4 1-24,33,35-38,42-65,68-72,74-98,101-103,105-106,108-113,115-118,120-131,142-156,160-209,211-217,220-272
+  s_b9ed4ca69e7d06::t_198e0240ee5041 29-30
+deep_causality_quantum/Cargo.toml
+  s_b9ed4ca69e7d06::t_0e36cadef46720 159-163
+  s_b9ed4ca69e7d06::t_c49636d6a3024c 144-148
+  s_b9ed4ca69e7d06::t_7cedb126bdd295 169-173
+  s_b9ed4ca69e7d06::t_19815a480dc840 154-158
+  s_b9ed4ca69e7d06::t_4dd3891d5dd4e2 164-168
+  s_b9ed4ca69e7d06::t_5600aa9ca1328c 179-183
+  s_b9ed4ca69e7d06::t_ae906e44a0d349 149-153
+  s_b9ed4ca69e7d06::t_8f6bc6e909ec9c 174-178
+deep_causality_quantum/verification/sensing/verification_v1_wavefront.rs
+  s_b9ed4ca69e7d06::t_db8e5c84c2af02 51,90-91,93,142,144-145,147-155,185,190,192-193,195-198,200
+  s_b9ed4ca69e7d06::t_2c185910e08b09 1-22,24-25,29-50,52-89,92,94-117,125,130-134,139-141,143,146,156-184,191,194,199,201-220,223-229,234-249,254-284,290-311,316-335,337-338,343-373,382-406,412-416,422-424,433-435,441-447,453-457,466-471,475-505
+  s_b9ed4ca69e7d06::t_deeb44c292ed74 23,26-28,118-124,126-129,135-138,186-189,221-222,230-233,250-253,285-289,312-315,336,339-342,374-381,407-411,417-421,425-432,436-440,448-452,458-465,472-474
+deep_causality_quantum/papers/regenerated/sarovar2020_ladder.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-301
+deep_causality_quantum/verification/sensing/verification_v7_gradiometer_sweep.rs
+  s_b9ed4ca69e7d06::t_d4c49f40003c9f 59-60,129-132,156-161
+  s_b9ed4ca69e7d06::t_a680c905ba2aa9 128
+  s_b9ed4ca69e7d06::t_14530da7850206 142
+  s_b9ed4ca69e7d06::t_2569db593d1a82 1-58,61-127,133-141,143-155,162-189
+deep_causality_quantum/BUILD.bazel
+  s_b9ed4ca69e7d06::t_64674c958118fb 2,32-164
+  s_b9ed4ca69e7d06::t_3b19e423b4b0eb 165
+deep_causality_quantum/verification/sensing/common/fringe_qubit.rs
+  s_b9ed4ca69e7d06::t_7e82a28914d5df 1-53,58-66,71
+  s_b9ed4ca69e7d06::t_ec3ddabc51bc10 54-57,67-70
+deep_causality_quantum/papers/digitised/gauguet2008_fig7.csv
+  s_b9ed4ca69e7d06::t_1be7b69b59f684 1-11
+deep_causality_quantum/papers/regenerated/sarovar2020_edges.csv
+  s_b9ed4ca69e7d06::t_08bea2f11e4f0b 1-7
+deep_causality_quantum/papers/regenerated/sarovar2020_ladder_bags.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-67
+deep_causality_quantum/papers/regenerated/sarovar2020_zz.csv
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 1-63
+deep_causality_quantum/verification/sensing/README.md
+  s_b9ed4ca69e7d06::t_14b49f25c9e929 1-40,46-63,65-74,78-83,86-113,116-118,121-123
+  s_b9ed4ca69e7d06::t_a4793c7a09c4dd 41-45,64,75-77,84-85,114-115,119-120
+deep_causality_quantum/verification/sensing/common/inverse.rs
+  s_b9ed4ca69e7d06::t_198e0240ee5041 1-11
+deep_causality_quantum/papers/digitised/karcher2018_fig4.csv
+  s_b9ed4ca69e7d06::t_09f3e4da4da2d9 55-81
+  s_b9ed4ca69e7d06::t_162f3d31db836e 1-54,82-135
+deep_causality_quantum/verification/sensing/verification_v6_time_model.rs
+  s_b9ed4ca69e7d06::t_d4c49f40003c9f 116-121,155-156
+  s_b9ed4ca69e7d06::t_ae906e44a0d349 97
+  s_b9ed4ca69e7d06::t_198e0240ee5041 23-24,33-34
+  s_b9ed4ca69e7d06::t_f000a1b3a715f9 1-22,25-32,35-96,98-115,122-154,157-191
+deep_causality_quantum/papers/regenerated/sarovar2020_one_way_bags.csv
+  s_b9ed4ca69e7d06::t_d9eef1975dc1b0 1-23
+deep_causality_quantum/papers/digitised/louchet2011_fig9_points.csv
+  s_b9ed4ca69e7d06::t_c3efa24e05da40 1-7
+deep_causality_quantum/verification/sensing/common/data.rs
+  s_b9ed4ca69e7d06::t_a1f7d1a8b31402 1-12,17-44
+  s_b9ed4ca69e7d06::t_f1f9111618b3cf 13-16
+deep_causality_quantum/verification/sensing/common/report.rs
+  s_b9ed4ca69e7d06::t_ec3ddabc51bc10 18-21
+  s_b9ed4ca69e7d06::t_32562a8c43effe 1-17,22-44
+deep_causality_quantum/papers/regenerated/sarovar2020_one_way.csv
+  s_b9ed4ca69e7d06::t_d9eef1975dc1b0 1-69
+deep_causality_quantum/papers/regenerated/regenerate_sarovar2020.py
+  s_b9ed4ca69e7d06::t_08bea2f11e4f0b 38-40,72-74,204-211,216,227,229-234,237-238
+  s_b9ed4ca69e7d06::t_3178f9f0f226a4 52,148-168,184-185,187-189,192-195
+  s_b9ed4ca69e7d06::t_a5219ff9a88091 8,10-11,45,48,50,169-183
+  s_b9ed4ca69e7d06::t_f1f9111618b3cf 7
+  s_b9ed4ca69e7d06::t_9021609e5541a5 1-6,9,12-37,41-44,46-47,49,51,53-71,75-147,186,190-191,196-203,212-215,217-226,228,235-236,239-242
+deep_causality_quantum/papers/digitised/karcher2018_fig2.csv
+  s_b9ed4ca69e7d06::t_09f3e4da4da2d9 12
+  s_b9ed4ca69e7d06::t_162f3d31db836e 1-11,13-19
+deep_causality_quantum/papers/digitised/extract_louchet2011_fig9.py
+  s_b9ed4ca69e7d06::t_c3efa24e05da40 61,66
+  s_b9ed4ca69e7d06::t_e359142f047b7a 1-60,62-65,67-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0183eb4ec28f0d161c44b92b55ee43336a8c3698",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
