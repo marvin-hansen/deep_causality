@@ -1,0 +1,154 @@
+deep_causality_quantum/src/types/pipeline/campaign.rs
+  s_b9ed4ca69e7d06::t_58ff9648deef34 17,111-112,372-374,376-382,387-399,402,405
+deep_causality_quantum/src/types/qcm/hypothesis.rs
+  s_b9ed4ca69e7d06::t_9c9367176afb40 765-766
+  s_b9ed4ca69e7d06::t_a330bdfcef1e87 53,362-366,368-371,390,400-401,403,407-416,475,737-764,767-768
+  s_b9ed4ca69e7d06::t_07041e86980a3d 769
+deep_causality_quantum/verification/sensing/verification_v2_clipping.rs
+  s_b9ed4ca69e7d06::t_41776f6bf4be12 145-152
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/model_config.rs
+  s_b9ed4ca69e7d06::t_238e6b59ff5daa 165-166
+website/quantum/src/content/examples/en/quantum-geometric-tensor.mdx
+  s_b9ed4ca69e7d06::t_83311188d4f05c 18
+deep_causality_quantum/tests/types/pipeline/control/control_experiments_tests.rs
+  s_b9ed4ca69e7d06::t_6204cd71965fd7 401-436
+  s_b9ed4ca69e7d06::t_16e0c89b1ffe8f 437-460
+examples/quantum_examples/qcl_examples/qcl_gradiometer_crosstalk/utils_print.rs
+  s_b9ed4ca69e7d06::t_573ddad80d8899 13,177,180-186
+deep_causality_quantum/BUILD.bazel
+  s_b9ed4ca69e7d06::t_d5742bdadb0db0 34-36
+deep_causality_quantum/papers/digitised/digitise_hu2017_fig6.py
+  s_b9ed4ca69e7d06::t_9cf4dd11fc64c8 9-11
+  s_b9ed4ca69e7d06::t_9240e7b5605f9c 8,13,66
+deep_causality_quantum/papers/digitised/extract_karcher2018_figs.py
+  s_b9ed4ca69e7d06::t_8f10c5d53994d8 26,39-51,66-77,79-80,82,84-113,115,118,122-123,129-130,132
+  s_b9ed4ca69e7d06::t_179f567f8c5d42 27-30
+deep_causality_quantum/src/types/design/experiment_design.rs
+  s_b9ed4ca69e7d06::t_79880e18d6b560 195-196,217-219,281-286,383-389,426-427,430,435-436,441,449,643-646,648,650,652,654-655,658-659,662-663
+  s_b9ed4ca69e7d06::t_9c9367176afb40 381-382
+deep_causality_quantum/papers/regenerated/regenerate_sarovar2020.py
+  s_b9ed4ca69e7d06::t_c189de5bc21e3b 219,224,236
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/main.rs
+  s_b9ed4ca69e7d06::t_63873b6ac38cc1 183-192,194-196
+  s_b9ed4ca69e7d06::t_f11fa98bae5f83 148
+examples/quantum_examples/qcl_examples/qcl_gradiometer_crosstalk/model_types.rs
+  s_b9ed4ca69e7d06::t_573ddad80d8899 155-156
+deep_causality_quantum/papers/digitised/louchet2011_fig9_fits.csv
+  s_b9ed4ca69e7d06::t_f8917a744f8571 9,33,58,83,108-109,132,267,292,317-318,339
+deep_causality_quantum/verification/sensing/verification_v7_gradiometer_sweep.rs
+  s_b9ed4ca69e7d06::t_56040722d460c6 57,63-68,70-82,87-88,91
+  s_b9ed4ca69e7d06::t_cce76c3a139d36 58,62,69
+  s_b9ed4ca69e7d06::t_6bbdd7c79ee05c 151-162,164-169,172,177,180-182,188-189
+  s_b9ed4ca69e7d06::t_b5b26900a44254 83-86
+  s_b9ed4ca69e7d06::t_d9eafc2fea65ea 197-217
+deep_causality_quantum/verification/sensing/common/data.rs
+  s_b9ed4ca69e7d06::t_b60525ba2b8b71 31-33,36-41,43-48,55,59-62,65-69
+deep_causality_quantum/verification/sensing/verification_v4_crosstalk.rs
+  s_b9ed4ca69e7d06::t_c19874871a692c 253-271,281-341,344,348,350,352-355
+  s_b9ed4ca69e7d06::t_3ea353959fb5be 54
+  s_b9ed4ca69e7d06::t_ce3e43f3f473df 691-710,712-717,720-724,726-743,745-746,748-749,751,754,756-762,764-766,768,774-778,781-785,788-795,799-802,804-807,809-812
+  s_b9ed4ca69e7d06::t_dc523197eeb92b 750,752-753,755,763
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/model_types.rs
+  s_b9ed4ca69e7d06::t_db5f5b95e71ac9 199-200
+  s_b9ed4ca69e7d06::t_f11fa98bae5f83 191-192
+examples/quantum_examples/qcl_examples/qcl_gradiometer_crosstalk/main.rs
+  s_b9ed4ca69e7d06::t_573ddad80d8899 100-104
+website/quantum/src/data/formalization.ts
+  s_b9ed4ca69e7d06::t_b82388ed9908f5 104,110,116
+  s_b9ed4ca69e7d06::t_92408cc74e1f51 16
+deep_causality_quantum/src/types/pipeline/ledger.rs
+  s_b9ed4ca69e7d06::t_bba3ef874ef626 28-30
+  s_b9ed4ca69e7d06::t_2e437d5630c276 24-27,164-165
+deep_causality_quantum/src/types/pipeline/validate.rs
+  s_b9ed4ca69e7d06::t_81f44f3876823a 496-501,509-519,526-527,529,540
+website/quantum/src/pages/boundaries/index.astro
+  s_b9ed4ca69e7d06::t_b301edbd038112 21-22
+website/quantum/src/components/home/FourSteps.astro
+  s_b9ed4ca69e7d06::t_e9ddfdeb4172a0 7,24,40
+  s_b9ed4ca69e7d06::t_02ee86da387e95 6
+website/quantum/src/data/boundaries.ts
+  s_b9ed4ca69e7d06::t_b301edbd038112 102
+website/quantum/src/data/papers.ts
+  s_b9ed4ca69e7d06::t_b82388ed9908f5 76,96
+  s_b9ed4ca69e7d06::t_22f8f2c2b5bf09 29,43,55,107,118,218,227,237,247
+"openspec/notes/archive/quantum/QCL for Quantum Sensing Example Design.md"
+  s_b9ed4ca69e7d06::t_2fc0e452e9728e 301,308
+openspec/notes/quantum-site/03_sensing_raw_information.md
+  s_b9ed4ca69e7d06::t_2fc0e452e9728e 48
+website/quantum/src/pages/proof/index.astro
+  s_b9ed4ca69e7d06::t_b82388ed9908f5 19,131
+deep_causality_quantum/tests/types/qcm/hypothesis_tests.rs
+  s_b9ed4ca69e7d06::t_d7914e5b7b0087 839-849,861-865,874
+  s_b9ed4ca69e7d06::t_2e08e2c8344f32 788-838,850-860,866-873,875-901
+deep_causality_quantum/tests/types/pipeline/control/control_tests.rs
+  s_b9ed4ca69e7d06::t_9c9367176afb40 359-362
+  s_b9ed4ca69e7d06::t_7db1ebc7e79c0b 333-358,363-365
+deep_causality_quantum/src/types/qpu/shot_estimate.rs
+  s_b9ed4ca69e7d06::t_76ed39d34a7037 80,86,102,118,186-200
+  s_b9ed4ca69e7d06::t_3d8989835c7e39 201
+deep_causality_quantum/tests/types/pipeline/campaign_tests.rs
+  s_b9ed4ca69e7d06::t_9c9367176afb40 12,509-511
+  s_b9ed4ca69e7d06::t_62dd527b7c751f 21-25,446-508,512-545
+deep_causality_quantum/verification/sensing/verification_v1_wavefront.rs
+  s_b9ed4ca69e7d06::t_a5e0f99b87f3ee 179-186,189-192,200
+  s_b9ed4ca69e7d06::t_25cbc29a535e43 383,385
+  s_b9ed4ca69e7d06::t_12ed3bae2af2ee 384
+deep_causality_quantum/verification/sensing/verification_v3_transverse_motion.rs
+  s_b9ed4ca69e7d06::t_8ea126137d1ea4 264-267
+  s_b9ed4ca69e7d06::t_b5f614c3c606e7 351-353
+  s_b9ed4ca69e7d06::t_28a2bf7b410616 403-428,441-451
+  s_b9ed4ca69e7d06::t_5c5868aeb7579a 326-334,336-345,347-348,350,354-359,361-366,373
+deep_causality_quantum/papers/digitised/extract_louchet2011_fig9.py
+  s_b9ed4ca69e7d06::t_5e155e3ffd869c 90-91
+  s_b9ed4ca69e7d06::t_9240e7b5605f9c 152,158
+  s_b9ed4ca69e7d06::t_1aef716405563c 15-19,54-56,68-89,92-106,140-149,162-164
+deep_causality_quantum/papers/digitised/extract_gauguet2008_fig7.py
+  s_b9ed4ca69e7d06::t_c837ff3d8b15d9 49-50
+  s_b9ed4ca69e7d06::t_78dd0eff5b0439 19-20,27,30-34,37-42,46-48,51-59,62-66,91
+deep_causality_quantum/src/types/pipeline/control/control_experiments.rs
+  s_b9ed4ca69e7d06::t_2e437d5630c276 24,28,32-39,53-54,90-94,97-108,138,210-252,274,276-281,298
+  s_b9ed4ca69e7d06::t_9c9367176afb40 203
+  s_b9ed4ca69e7d06::t_bba3ef874ef626 55-57
+deep_causality_quantum/verification/sensing/common/attribution.rs
+  s_b9ed4ca69e7d06::t_24ab85aeeb5e20 119,129-134
+  s_b9ed4ca69e7d06::t_232a3872118284 46-47
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/utils_print.rs
+  s_b9ed4ca69e7d06::t_718e74f42aedd3 97
+  s_b9ed4ca69e7d06::t_f11fa98bae5f83 93-96,98-101
+website/quantum/README.md
+  s_b9ed4ca69e7d06::t_83311188d4f05c 129
+website/quantum/src/data/sensing.ts
+  s_b9ed4ca69e7d06::t_dcdfd3ad159140 96-97,106-107,205
+deep_causality_quantum/src/types/instrument/effective_draws.rs
+  s_b9ed4ca69e7d06::t_76ed39d34a7037 7,113-121,131,144,146,148
+openspec/changes/close-quantum-deferred-proofs/design.md
+  s_b9ed4ca69e7d06::t_2fc0e452e9728e 70
+openspec/notes/quantum-site/04_sensing_page_draft.md
+  s_b9ed4ca69e7d06::t_2fc0e452e9728e 239
+  s_b9ed4ca69e7d06::t_b301edbd038112 237
+deep_causality_quantum/src/types/pipeline/control/mod.rs
+  s_b9ed4ca69e7d06::t_9318dea214da05 721-723
+  s_b9ed4ca69e7d06::t_d1399e0da74a9d 785-788
+website/quantum/src/pages/how-it-works/index.astro
+  s_b9ed4ca69e7d06::t_e9ddfdeb4172a0 172
+website/quantum/src/pages/sensing/index.astro
+  s_b9ed4ca69e7d06::t_dcdfd3ad159140 171
+  s_b9ed4ca69e7d06::t_b301edbd038112 269
+  s_b9ed4ca69e7d06::t_2fc0e452e9728e 271
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c16f2607320fb2d735b9622d5c4fe491d4c2ab1d",
+  "prompts": {},
+  "sessions": {
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
