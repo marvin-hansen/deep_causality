@@ -1,0 +1,210 @@
+website/quantum/src/components/shared/BoundaryRow.astro
+  s_b9ed4ca69e7d06::t_229d923478f579 1-39
+deep_causality_quantum/verification/sensing/common/data.rs
+  s_b9ed4ca69e7d06::t_7e778b9622c254 27,31-32,35-47,50-58,60
+deep_causality_quantum/papers/digitised/extract_gauguet2008_fig7.py
+  s_b9ed4ca69e7d06::t_f0a4617cf5b937 18-19,46-47,50-55,57-64
+website/quantum/src/pages/boundaries/index.astro
+  s_b9ed4ca69e7d06::t_0bab545479fee1 6,30,37,98
+deep_causality_quantum/tests/types/pipeline/configured_experiment_tests.rs
+  s_b9ed4ca69e7d06::t_72f1fdf4d1fb06 264-304,308-325
+  s_b9ed4ca69e7d06::t_d150aa85118351 305-307
+deep_causality_quantum/src/types/instrument/effective_draws.rs
+  s_b9ed4ca69e7d06::t_ba354334dfd8de 1-155
+deep_causality_quantum/src/types/pipeline/control/mod.rs
+  s_b9ed4ca69e7d06::t_ec9bd3c2b228e3 28-29
+  s_b9ed4ca69e7d06::t_8c821bd4bdc7a5 179
+  s_b9ed4ca69e7d06::t_1b7384d0d8e842 13
+  s_b9ed4ca69e7d06::t_9e8e9c5b92bef9 674-675,679-688,694-696,706
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 689-693,697-699
+website/quantum/src/data/formalization.ts
+  s_b9ed4ca69e7d06::t_6379ad0c535344 6,139,147-152
+website/quantum/src/data/evidence.ts
+  s_b9ed4ca69e7d06::t_6379ad0c535344 16
+deep_causality_quantum/tests/types/pipeline/control/control_experiments_tests.rs
+  s_b9ed4ca69e7d06::t_efaf447b3a99a2 1-18,20,24-65,110-778,780-781,786-793,855-886
+  s_b9ed4ca69e7d06::t_72f1fdf4d1fb06 779,782-785,794-854
+  s_b9ed4ca69e7d06::t_e76e3575b77612 66-109
+  s_b9ed4ca69e7d06::t_c8f827ab32b1df 19,21-23
+deep_causality_quantum/tests/types/design/experiment_design_tests.rs
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 329-332,472
+  s_b9ed4ca69e7d06::t_15664562ffc1f7 14,314,322-325,327-328,333-338,340-348,456-471,473-479
+deep_causality_quantum/src/types/design/mod.rs
+  s_b9ed4ca69e7d06::t_25ab647d3b2cca 22,27
+deep_causality_quantum/verification/sensing/verification_v3_transverse_motion.rs
+  s_b9ed4ca69e7d06::t_4e1fefc86e3c1c 80-82,144-146,300-302
+  s_b9ed4ca69e7d06::t_1f37eb916ef7c2 49,78-79,83-89,122-128,284-299,303-304,314,316-317,354
+deep_causality_quantum/tests/types/pipeline/control/mod.rs
+  s_b9ed4ca69e7d06::t_efaf447b3a99a2 1-9
+website/quantum/src/data/boundaries.ts
+  s_b9ed4ca69e7d06::t_6379ad0c535344 102
+openspec/notes/quantum-site/03_sensing_raw_information.md
+  s_b9ed4ca69e7d06::t_5c759cdff612bf 22
+deep_causality_quantum/BUILD.bazel
+  s_b9ed4ca69e7d06::t_448f45726b371a 403-412
+  s_b9ed4ca69e7d06::t_0d0f693961fa7c 386-402
+deep_causality_quantum/tests/types/instrument/effective_draws_tests.rs
+  s_b9ed4ca69e7d06::t_23097e3f1220f0 130
+  s_b9ed4ca69e7d06::t_a69cdb9ed29094 1-127,131,133-136
+  s_b9ed4ca69e7d06::t_52e31fabcaaecb 128-129,132
+deep_causality_quantum/tests/types/qcm/process_factors_tests.rs
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 177-180
+  s_b9ed4ca69e7d06::t_c1f9e28d16a38b 152-176,181-197
+website/quantum/src/components/sensing/EdgeCards.astro
+  s_b9ed4ca69e7d06::t_0bab545479fee1 7,9,40
+deep_causality_quantum/tests/types/qcm/hypothesis_tests.rs
+  s_b9ed4ca69e7d06::t_c1f9e28d16a38b 787-855,860-872,877-906
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 856-859,873-876
+deep_causality_quantum/tests/types/pipeline/mod.rs
+  s_b9ed4ca69e7d06::t_efaf447b3a99a2 17
+deep_causality_quantum/src/types/pipeline/configured_experiment.rs
+  s_b9ed4ca69e7d06::t_d1c6fb4ab4ef4c 99-101,107-110,121,162-168,170
+deep_causality_quantum/tests/types/pipeline/campaign_tests.rs
+  s_b9ed4ca69e7d06::t_422d6aaba0ca0c 66-74,80,308-325,359-442
+  s_b9ed4ca69e7d06::t_beeedc7d1cd439 21-22,326-358
+openspec/notes/quantum-site/04_sensing_page_draft.md
+  s_b9ed4ca69e7d06::t_5c759cdff612bf 9,12
+  s_b9ed4ca69e7d06::t_b9f8ed1a5bd696 10-11
+website/quantum/src/data/sensing.ts
+  s_b9ed4ca69e7d06::t_6379ad0c535344 120-121,127-128,137-140,284-301
+openspec/notes/quantum/Lorenz-Gap.md
+  s_b9ed4ca69e7d06::t_5c759cdff612bf 79
+deep_causality_quantum/tests/types/instrument/mod.rs
+  s_b9ed4ca69e7d06::t_2ab122ddc0cdee 7
+  s_b9ed4ca69e7d06::t_7a8c9ab24df482 6
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/model_types.rs
+  s_b9ed4ca69e7d06::t_4e1fefc86e3c1c 11
+  s_b9ed4ca69e7d06::t_a1b5a66cceddd2 67-68,73-139,189-190
+deep_causality_quantum/tests/types/instrument/interferometer_model_tests.rs
+  s_b9ed4ca69e7d06::t_a69cdb9ed29094 168-183,185-186
+  s_b9ed4ca69e7d06::t_23097e3f1220f0 184
+examples/quantum_examples/qcl_examples/qcl_gradiometer_crosstalk/main.rs
+  s_b9ed4ca69e7d06::t_5de55c29e80130 210,212,214
+deep_causality_quantum/papers/digitised/extract_louchet2011_fig9.py
+  s_b9ed4ca69e7d06::t_8bf090847a99de 37-39,41-43
+  s_b9ed4ca69e7d06::t_92b0bf9ff88aba 49,91-95,105
+  s_b9ed4ca69e7d06::t_2b9a8a208d9e87 33-34,44-46,48,50-54,58,68,70-71,73,75-76,79-90,99-100
+website/quantum/src/pages/how-it-works/index.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 39-41,157-161
+openspec/notes/quantum/qcl-gen3.md
+  s_b9ed4ca69e7d06::t_5c759cdff612bf 124
+website/quantum/src/pages/index.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 17,24,106,116
+deep_causality_quantum/tests/types/pipeline/control/control_tests.rs
+  s_b9ed4ca69e7d06::t_4cf98a0b0746f3 18-20
+  s_b9ed4ca69e7d06::t_efaf447b3a99a2 1-17,21-910
+deep_causality_quantum/src/types/design/adjudicate.rs
+  s_b9ed4ca69e7d06::t_ad26a2ee22cad3 278,282
+  s_b9ed4ca69e7d06::t_d150aa85118351 345
+  s_b9ed4ca69e7d06::t_2d598278f2c8c7 7,214,280,315,358-371
+  s_b9ed4ca69e7d06::t_ca742fceb2af3e 372
+openspec/notes/quantum-site/quantum-essence.md
+  s_b9ed4ca69e7d06::t_5c759cdff612bf 277
+deep_causality_quantum/verification/sensing/common/fringe_qubit.rs
+  s_b9ed4ca69e7d06::t_d724f4d726bfe3 24-25,27-31
+deep_causality_quantum/src/types/design/cover_mode.rs
+  s_b9ed4ca69e7d06::t_323c31ac6ba4bb 1-19
+website/quantum/src/content/examples/en/hopf-fibration-multivector.mdx
+  s_b9ed4ca69e7d06::t_6379ad0c535344 19-20
+deep_causality_quantum/src/types/instrument/mod.rs
+  s_b9ed4ca69e7d06::t_ba354334dfd8de 16-18
+  s_b9ed4ca69e7d06::t_2ab122ddc0cdee 21,30
+deep_causality_quantum/src/types/pipeline/evidence_source.rs
+  s_b9ed4ca69e7d06::t_2ab122ddc0cdee 7
+examples/quantum_examples/qcl_examples/qcl_crosstalk/model.rs
+  s_b9ed4ca69e7d06::t_3d2b14473f88d3 62-63,72-78,307,313-318,334-341
+deep_causality_quantum/verification/sensing/verification_v10_zeeman_field_map.rs
+  s_b9ed4ca69e7d06::t_94a6e8dc15eb23 17-19,65-66,69-71,117-118,124
+  s_b9ed4ca69e7d06::t_c8a4643e01fe6e 20-21
+website/quantum/src/components/home/FourSteps.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 57-58
+website/quantum/src/components/shared/OutputCard.astro
+  s_b9ed4ca69e7d06::t_229d923478f579 1-42
+website/quantum/src/pages/examples/index.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 24
+website/quantum/src/components/home/VerdictAnatomy.astro
+  s_b9ed4ca69e7d06::t_0bab545479fee1 14,44
+website/quantum/src/components/sensing/SystematicsMatrix.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 12,81
+deep_causality_quantum/src/types/design/experiment_design.rs
+  s_b9ed4ca69e7d06::t_83c971943bb335 8,129-132,140-141,145,150,154-156,158,162-164,166
+  s_b9ed4ca69e7d06::t_beeedc7d1cd439 338,378
+  s_b9ed4ca69e7d06::t_212a7f218afca7 291-293,299-303,312-314,320-328,335-337,339-343,388-397,409,418-419,437,447-451,484-509,515,553-555,561-563,568-569,580-584,589,591,596,618,626-629,633,642
+  s_b9ed4ca69e7d06::t_1996ccb37686de 329-334,510-514
+  s_b9ed4ca69e7d06::t_b2b4d5a40574cd 344
+deep_causality_quantum/verification/sensing/common/attribution.rs
+  s_b9ed4ca69e7d06::t_776d5211c01f22 152-154
+  s_b9ed4ca69e7d06::t_4e1fefc86e3c1c 155
+  s_b9ed4ca69e7d06::t_148752ad55c219 57-58,65-83
+deep_causality_quantum/verification/sensing/verification_v1_wavefront.rs
+  s_b9ed4ca69e7d06::t_f25cb04ec52105 131,135-144,148,151
+  s_b9ed4ca69e7d06::t_4e1fefc86e3c1c 177
+  s_b9ed4ca69e7d06::t_6b123b9c6346dc 474-484
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/model.rs
+  s_b9ed4ca69e7d06::t_a1b5a66cceddd2 71,112,114
+deep_causality_quantum/src/types/qpu/shot_estimate.rs
+  s_b9ed4ca69e7d06::t_a9a396cbf247c9 220-223,225,237-240
+  s_b9ed4ca69e7d06::t_d5f554f1c22e46 22,224
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/utils_print.rs
+  s_b9ed4ca69e7d06::t_a1b5a66cceddd2 52,84,86-89,145
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/model_config.rs
+  s_b9ed4ca69e7d06::t_a1b5a66cceddd2 21,30-38,43-51,60-61,95-99,101,106,110,114-119,149-151
+deep_causality_quantum/tests/types/evidence/shot_estimate_tests.rs
+  s_b9ed4ca69e7d06::t_ac76adc1635569 273-285,290-302
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 286-289
+deep_causality_quantum/src/types/pipeline/control/control_experiments.rs
+  s_b9ed4ca69e7d06::t_9e8e9c5b92bef9 1-118,120-304
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 119
+deep_causality_quantum/src/types/qcm/hypothesis.rs
+  s_b9ed4ca69e7d06::t_a5fe72bc8c5276 43,370-371,376-381,406-407,411
+  s_b9ed4ca69e7d06::t_466e756cd3dd85 657-658,669,686-699,702-704
+deep_causality_quantum/src/types/qcm/process_factors.rs
+  s_b9ed4ca69e7d06::t_50123abc23e0b0 250
+  s_b9ed4ca69e7d06::t_466e756cd3dd85 207-209,247-249,251-256
+  s_b9ed4ca69e7d06::t_5b3465ace8d797 257
+website/quantum/src/pages/proof/index.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 3,98
+examples/quantum_examples/qcl_examples/qcl_gravimeter_systematics/main.rs
+  s_b9ed4ca69e7d06::t_a1b5a66cceddd2 45,59,130,134-137,142,188,223-233
+website/quantum/src/pages/sensing/index.astro
+  s_b9ed4ca69e7d06::t_6379ad0c535344 26-28,46,132,149,204-206,212,215-216
+deep_causality_quantum/tests/types/design/adjudicate_tests.rs
+  s_b9ed4ca69e7d06::t_d150aa85118351 396-400,410-412
+  s_b9ed4ca69e7d06::t_2d3b9cb338e854 388-395,401-409,413-419
+examples/quantum_examples/qcl_examples/qcl_gradiometer_crosstalk/model_types.rs
+  s_b9ed4ca69e7d06::t_5de55c29e80130 85-86,176-178,182-183
+deep_causality_quantum/src/types/pipeline/campaign.rs
+  s_b9ed4ca69e7d06::t_a090c2266b189e 10-12,38-39,85,93-94,100-110,266-267,281-285,318,355,357-385,393,402-413
+  s_b9ed4ca69e7d06::t_f0e21cd3bc9e46 450-453
+  s_b9ed4ca69e7d06::t_9f01e1350ddc39 113-116
+deep_causality_quantum/src/types/instrument/interferometer_model.rs
+  s_b9ed4ca69e7d06::t_2ab122ddc0cdee 8
+  s_b9ed4ca69e7d06::t_033cc9195b4c95 46-48,101-107,172,177,182-185
+  s_b9ed4ca69e7d06::t_ea167f34b8b798 186-187
+"openspec/notes/archive/quantum/QCL for Quantum Sensing Example Design.md"
+  s_b429d5b297d794::t_16ff8773d2ec8c 1-518
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f02bf4d5453ae76f2bf34cd577c28751bc8af698",
+  "prompts": {},
+  "sessions": {
+    "s_b429d5b297d794": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a392b0fdd882698f3",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_b9ed4ca69e7d06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7828fa6f-54f4-44f9-be5f-109eea2982fd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
