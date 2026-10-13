@@ -1,0 +1,19 @@
+Cargo.toml
+  s_f9d983aa53b3e2::t_de700fa9c77c53 87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8b0b51521414e2bd417976f6fa68243725885ae7",
+  "prompts": {},
+  "sessions": {
+    "s_f9d983aa53b3e2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "159156f1-83e8-4ff4-942c-d7b34bbecac3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
