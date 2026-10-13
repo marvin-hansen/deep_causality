@@ -1,0 +1,38 @@
+examples/medicine_examples/Cargo.toml
+  s_18d172cfd6109d::t_76d35fe877590f 50-53
+examples/medicine_examples/gentamicin_dosing/model.rs
+  s_18d172cfd6109d::t_ec8a6be173c962 8-14,21-23,25,152
+  s_18d172cfd6109d::t_1961220b6ae518 87-93,115,119,125,129,133,139,144,149,157-176
+  s_18d172cfd6109d::t_6c728f13023612 1-7,15-20,24,26-86,94-114,116-118,120-124,126-128,130-132,134-138,140-143,145-148,150-151,153-156,177
+examples/medicine_examples/BUILD.bazel
+  s_18d172cfd6109d::t_76d35fe877590f 75-86
+examples/medicine_examples/gentamicin_dosing/utils_print.rs
+  s_18d172cfd6109d::t_ec8a6be173c962 60
+  s_18d172cfd6109d::t_ac34be4ecf2063 1-9,11,13-17,19-30,33,35-59,61-78,82-87
+  s_18d172cfd6109d::t_1961220b6ae518 10,31-32,34,79-81
+  s_18d172cfd6109d::t_46af04f64eb121 12,18
+examples/medicine_examples/README.md
+  s_18d172cfd6109d::t_042cb41fe134e9 17
+examples/medicine_examples/gentamicin_dosing/main.rs
+  s_18d172cfd6109d::t_d91cb6fdccbbbe 1-7,15-20,23-26,34-40,43-64,71-72,74-75
+  s_18d172cfd6109d::t_ec8a6be173c962 8-14,27-33
+  s_18d172cfd6109d::t_1961220b6ae518 21-22,41-42,65-70,73
+examples/medicine_examples/gentamicin_dosing/README.md
+  s_18d172cfd6109d::t_5f5b8d501a1767 1-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "92147a7aeb8697cd01cf943bd23ac914591cb408",
+  "prompts": {},
+  "sessions": {
+    "s_18d172cfd6109d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "711dafae-9863-4f98-a83b-1130d2b4a4bd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
