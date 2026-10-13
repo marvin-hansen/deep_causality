@@ -1,0 +1,41 @@
+examples/medicine_examples/README.md
+  s_bcaf84301c33cc::t_806c54fce939c0 3,29
+examples/medicine_examples/gentamicin_dosing/main.rs
+  s_bcaf84301c33cc::t_4d1109b82ae369 16,21-23,42-43,61,72
+examples/medicine_examples/gentamicin_dosing/utils_print.rs
+  s_bcaf84301c33cc::t_e07e0695bd3f1a 39-40,69,76
+  s_bcaf84301c33cc::t_4d1109b82ae369 10,32-33,70,77,82-93
+  s_bcaf84301c33cc::t_320f297b16bdee 94
+website/web/src/content/examples/en/orbit-round-trip.mdx
+  s_bcaf84301c33cc::t_e9c5d1fcdb5d75 4
+website/web/src/content/blog/en/counterfactuals-via-the-causal-monad.md
+  s_bcaf84301c33cc::t_41a287ede87764 20,296,301
+examples/causal_counterfactual_examples/README.md
+  s_bcaf84301c33cc::t_806c54fce939c0 25
+examples/causal_counterfactual_examples/counterfactual_fast_charge/model.rs
+  s_bcaf84301c33cc::t_88df561033db80 15-16
+examples/medicine_examples/gentamicin_dosing/model.rs
+  s_bcaf84301c33cc::t_e43094e8abd5f9 19
+  s_bcaf84301c33cc::t_12826816b0f68e 27-28,52,84,90,92,94-102,154-155,160,172-198,200-201,209
+website/web/src/pages/overview/dynamic-causality.astro
+  s_bcaf84301c33cc::t_261bee61cd70ab 120-122
+  s_bcaf84301c33cc::t_af68b8c0f97502 16,26,32-33
+examples/medicine_examples/gentamicin_dosing/README.md
+  s_bcaf84301c33cc::t_af68b8c0f97502 14,20-21,27-30,40,55-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8fe7ae8d988cc53f19878d19d40b9179b6882cd7",
+  "prompts": {},
+  "sessions": {
+    "s_bcaf84301c33cc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1dc488bc-e46a-4b96-96b0-159eb4a5eea3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
