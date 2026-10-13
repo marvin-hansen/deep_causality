@@ -1,0 +1,40 @@
+examples/causal_counterfactual_examples/counterfactual_fast_charge/model_types.rs
+  s_18d172cfd6109d::t_7e956f447f0959 1-37
+examples/causal_counterfactual_examples/counterfactual_fast_charge/main.rs
+  s_18d172cfd6109d::t_8556541c638bb5 1-33,35-39,46,55,67-77
+  s_18d172cfd6109d::t_8360a758621139 40-45,47-54,56-57,66
+  s_18d172cfd6109d::t_77d2870dc0fce2 34,58-65
+examples/causal_counterfactual_examples/counterfactual_fast_charge/model_utils.rs
+  s_18d172cfd6109d::t_8bc56bdcd35544 1-8,11-14,16-19,23,28,30-31
+  s_18d172cfd6109d::t_80b8db0cd58f67 9-10,15,20-22
+  s_18d172cfd6109d::t_905a9d07c98858 24-27,29
+examples/causal_counterfactual_examples/counterfactual_fast_charge/model.rs
+  s_18d172cfd6109d::t_f9059ca4daa4f0 1-52
+examples/causal_counterfactual_examples/README.md
+  s_18d172cfd6109d::t_048f355c7126b6 3-5,45
+examples/causal_counterfactual_examples/Cargo.toml
+  s_18d172cfd6109d::t_aa21424e012db5 40-43
+examples/causal_counterfactual_examples/BUILD.bazel
+  s_18d172cfd6109d::t_aa21424e012db5 89-103
+examples/README.md
+  s_18d172cfd6109d::t_042cb41fe134e9 320
+  s_18d172cfd6109d::t_1a7c02f0b1b007 103-105,114
+examples/causal_counterfactual_examples/counterfactual_fast_charge/model_config.rs
+  s_18d172cfd6109d::t_eae5009da745c2 1-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8790b187a7c6cb77c634290a0454a65b452803e9",
+  "prompts": {},
+  "sessions": {
+    "s_18d172cfd6109d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "711dafae-9863-4f98-a83b-1130d2b4a4bd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
