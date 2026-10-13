@@ -1,0 +1,44 @@
+website/web/src/content/blog/en/counterfactuals-via-the-causal-monad.md
+  s_18d172cfd6109d::t_fae14f80dd1f9c 135,137,139-140,143,146-172,175
+  s_18d172cfd6109d::t_76866798c3a179 50
+  s_18d172cfd6109d::t_547ce907cd31fb 3,5,17,19-21,23,43,52,58,63-65,78-79,86,90,92,94,96,98,108-111,115,129,141,179,181,185,190,197,202,204,206-236,240,242,246-250,252,255-258,262,265-285,289,291,294-298,301,305,307,313,318,320,322,328-329,332,334
+website/web/src/pages/overview/dynamic-causality.astro
+  s_18d172cfd6109d::t_6be2d5facdcef5 240-241
+  s_18d172cfd6109d::t_d09342262f3a3c 127-130
+  s_18d172cfd6109d::t_ff4bfadfbf3f27 163,165-181,185-190,195-216,218-236,238-239
+  s_18d172cfd6109d::t_66eb8d49b54f40 39-44,46-52,54-55
+  s_18d172cfd6109d::t_ddd449b7da469d 10-17,19-22,25-31,33,35-37,59,69,92-94,98-104,107-109,111-112,114-120,123-126,133-134
+  s_18d172cfd6109d::t_cb623bf6412b9a 182-184,191-192
+  s_18d172cfd6109d::t_16bfd2aea9f903 70
+  s_18d172cfd6109d::t_81f8b2711aa0e5 217
+website/web/src/components/overview/topics.ts
+  s_18d172cfd6109d::t_5c95654b63685b 23
+website/web/src/pages/overview/index.astro
+  s_18d172cfd6109d::t_cb623bf6412b9a 51,85
+  s_18d172cfd6109d::t_a71d43e3654ded 21-22
+  s_18d172cfd6109d::t_5888cbd7d18205 56
+  s_18d172cfd6109d::t_94f4198d247fda 47-50,52-55,57-63
+  s_18d172cfd6109d::t_e3d81fa9cb6448 37-39
+website/web/src/content/examples/en/orbit-round-trip.mdx
+  s_18d172cfd6109d::t_841f05d39cdb22 1-99
+website/web/src/pages/overview/effect-ethos.astro
+  s_18d172cfd6109d::t_cb623bf6412b9a 102,110
+website/web/src/pages/overview/dynamic-context.astro
+  s_18d172cfd6109d::t_cb623bf6412b9a 139-140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "531a120999c0707af939371bdff8c3cde6314935",
+  "prompts": {},
+  "sessions": {
+    "s_18d172cfd6109d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "711dafae-9863-4f98-a83b-1130d2b4a4bd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
