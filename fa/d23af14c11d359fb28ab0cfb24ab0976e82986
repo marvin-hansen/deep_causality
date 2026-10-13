@@ -1,0 +1,29 @@
+deep_causality_core/tests/types/causal_flow/flow_tests.rs
+  s_18d172cfd6109d::t_affe46ced58072 214-239,241-243,245-248,280
+  s_18d172cfd6109d::t_05d20689726a85 240,244
+  s_18d172cfd6109d::t_95f90a718e0833 7-8
+  s_18d172cfd6109d::t_5b3950baf37f0e 249-271
+  s_18d172cfd6109d::t_905a9d07c98858 272-279
+  s_18d172cfd6109d::t_600f3315b42cbd 281
+deep_causality_core/src/types/causal_flow/intervene.rs
+  s_18d172cfd6109d::t_f8d143df6ec30f 7,10
+  s_18d172cfd6109d::t_1c3cdfd964e2d2 68-77
+  s_18d172cfd6109d::t_610d4644472e41 16
+  s_18d172cfd6109d::t_90b3f1ca9d6a30 78-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fad23af14c11d359fb28ab0cfb24ab0976e82986",
+  "prompts": {},
+  "sessions": {
+    "s_18d172cfd6109d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "711dafae-9863-4f98-a83b-1130d2b4a4bd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
