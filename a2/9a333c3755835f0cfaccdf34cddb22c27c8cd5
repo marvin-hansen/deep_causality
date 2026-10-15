@@ -1,0 +1,55 @@
+ultragraph_traits/tests/mod.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-6
+ultragraph_traits/BUILD.bazel
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-79
+ultragraph_traits/Cargo.toml
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-39
+ultragraph_traits/src/traits/edge_key.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-21
+ultragraph_traits/src/traits/mod.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-5
+ultragraph_traits/src/extensions/edge_key_primitives.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-8,10-13,15-19,21-25,27-31,33-37,39-43,45-49,51-55,57-61,63-67,69-73,75-79,81-85,87-91,93-97,99-103,105
+  s_761f70cf42d74a::t_b86694675b8a83 14,20,26,32,38,44,50,56,62,68,74,80,86,92,98,104
+  s_761f70cf42d74a::t_8f66d023c05d6e 9
+ultragraph_traits/tests/extensions/mod.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-6
+ultragraph_traits/tests/extensions/edge_key_primitives_tests.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 1-6,9-15,17-22,25-30,33-38,41-46,49-54,57-62,65-70,73-79,83-89,93-99,103-109,113-119,123-129,133-137,140-142,149-153,156-158,165
+  s_761f70cf42d74a::t_76a1c7daf2228c 7-8,16,23-24,31-32,39-40,47-48,55-56,63-64,71-72,80-82,90-92,100-102,110-112,120-122,130-132,143-148,159-164
+  s_761f70cf42d74a::t_3b19b710d5dd40 138-139,154-155
+Cargo.toml
+  s_761f70cf42d74a::t_a7897fb6169a2c 19,49
+ultragraph_traits/src/lib.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-17
+ultragraph_traits/README.md
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-54
+ultragraph_traits/src/extensions/mod.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-5
+ultragraph_traits/tests/traits/edge_key_tests.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 1-72
+ultragraph_traits/tests/traits/mod.rs
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-6
+ultragraph_traits/LICENSE
+  s_761f70cf42d74a::t_a7897fb6169a2c 1-23
+AGENTS.md
+  s_761f70cf42d74a::t_5bfd036de3db62 185,189,208-209,228-229,241-242,309,312-314,409,635
+Cargo.lock
+  s_761f70cf42d74a::t_db6fcc0faf2a4b 618-620,2286,2289-2292
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a29a333c3755835f0cfaccdf34cddb22c27c8cd5",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
