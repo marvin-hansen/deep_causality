@@ -32,6 +32,9 @@ default = ["std"]
 std = ["alloc"]
 alloc = []
 no-std = ["alloc"]
+# Temporary: selects the snapshot-log edge arrays of ultragraph-live-state-maintained-views for
+# the storage measurement; off, the per-node Vec lists are used. Leaves with the decision.
+edge-log = []
 
 [dependencies.ultragraph_traits]
 workspace = true

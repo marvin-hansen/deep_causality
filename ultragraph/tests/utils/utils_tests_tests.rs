@@ -9,9 +9,33 @@
 //! 64-bit target: a `Vec` header is 24 bytes, `usize` is 8 bytes, and `with_capacity(nodes,
 //! Some(k))` reserves the outer forward and backward vectors for `nodes` entries and each
 //! node's forward and backward list for `k` entries. The node table is not counted.
+//!
+//! The literals depend on the edge-storage candidate the build selects, so each sits in a
+//! constant with its derivation for both: the per-node `Vec` list, whose header is one `Vec`
+//! and whose entries are `(other, value)`; and the snapshot-log array (`--features edge-log`),
+//! whose header is two `Vec`s and a count, and whose reserved buffer is the log, an entry being
+//! `other` beside a put of the value, the removal of a key or the removal of every key.
 
 use ultragraph::utils::utils_tests::{edge_storage_bytes, memory_per_edge};
 use ultragraph::*;
+
+const LOG: bool = cfg!(feature = "edge-log");
+
+/// The list header: a `Vec` (24) for the `Vec` list; two `Vec`s and a `usize` (56) for the
+/// snapshot-log array.
+const HEADER: usize = if LOG { 56 } else { 24 };
+/// One reserved entry of a list of `()` values, forward or backward: `(usize, ())` is 8; a log
+/// entry of a `()` put or removal is a `usize` and a one-byte tag, padded to 16.
+const UNIT: usize = if LOG { 16 } else { 8 };
+/// One reserved forward entry of a `u64` weight: `(usize, u64)` is 16; a log entry carrying a
+/// `u64` put is a `usize`, a tag and the `u64`, 24.
+const WEIGHT: usize = if LOG { 24 } else { 16 };
+/// One reserved entry of a one-byte key or identity-keyed payload (`Rel`), forward or backward:
+/// `(usize, Rel)` is 16 by padding; a log entry of a one-byte put or removal is also 16.
+const BYTE: usize = 16;
+/// One reserved forward entry of the 8-byte `Tagged` payload: `(usize, Tagged)` is 16; a log
+/// entry of a `Tagged` put is a `usize` beside a 4-aligned tag and the payload, 24.
+const TAGGED: usize = if LOG { 24 } else { 16 };
 
 /// A payload whose key is itself, one byte wide.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, PartialOrd, Ord)]
@@ -70,8 +94,8 @@ fn test_an_empty_graph_holds_no_edge_storage() {
 fn test_reserved_nodes_without_edges_count_their_outer_vectors_only() {
     let g: UltraGraph<i32> = UltraGraph::with_capacity(5, Some(3));
     // No node was added, so no per-node list exists; the two outer vectors hold room for five
-    // 24-byte list headers each: 2 × 5 × 24 = 240. No edge, so no per-edge figure.
-    assert_eq!(edge_storage_bytes(&g), 240);
+    // list headers each: 2 × 5 × HEADER, 240 or 560. No edge, so no per-edge figure.
+    assert_eq!(edge_storage_bytes(&g), 2 * 5 * HEADER);
     assert_eq!(memory_per_edge(&g), None);
 }
 
@@ -80,12 +104,13 @@ fn test_reserved_nodes_without_edges_count_their_outer_vectors_only() {
 #[test]
 fn test_three_nodes_two_edges_count_every_reserved_list() {
     let g = three_nodes_two_edges(2, ());
-    // Outer vectors: 3 headers × 24 bytes, forward and backward: 2 × 72 = 144.
-    // Per-node lists: 3 nodes × 2 directions × 2 reserved entries × 8 bytes `(usize, ())`,
-    // node 2's forward list and node 0's backward list reserved though empty: 96.
-    // Total 240 bytes over 2 edges: 120 bytes per edge.
-    assert_eq!(edge_storage_bytes(&g), 240);
-    assert_eq!(memory_per_edge(&g), Some(120.0));
+    // Outer vectors: 3 headers, forward and backward: 2 × 3 × HEADER, 144 or 336.
+    // Per-node lists: 3 nodes × 2 directions × 2 reserved `()` entries, node 2's forward list
+    // and node 0's backward list reserved though empty: 12 × UNIT, 96 or 192.
+    // Total 240 or 528 bytes over 2 edges: 120 or 264 bytes per edge.
+    let bytes = 2 * 3 * HEADER + 12 * UNIT;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64 / 2.0));
 }
 
 // --- Rows B and H: one edge filling a list of capacity one exactly -------------------------
@@ -96,10 +121,11 @@ fn test_one_edge_fills_its_list_exactly() {
     g.add_node(0).unwrap();
     g.add_node(1).unwrap();
     g.add_edge(0, 1, ()).unwrap();
-    // Outer: 2 × 2 × 24 = 96. Lists: 2 nodes × 2 directions × 1 entry × 8 bytes = 32.
-    // 128 bytes over 1 edge.
-    assert_eq!(edge_storage_bytes(&g), 128);
-    assert_eq!(memory_per_edge(&g), Some(128.0));
+    // Outer: 2 × 2 × HEADER, 96 or 224. Lists: 2 nodes × 2 directions × 1 `()` entry, 4 × UNIT,
+    // 32 or 64. 128 or 288 bytes over 1 edge.
+    let bytes = 2 * 2 * HEADER + 4 * UNIT;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64));
 }
 
 // --- Capacity, not length ----------------------------------------------------------------
@@ -111,10 +137,12 @@ fn test_reserved_capacity_counts_where_the_length_does_not() {
         g.add_node(i).unwrap();
     }
     g.add_edge(0, 1, ()).unwrap();
-    // The same 240 bytes as with two edges: every list is reserved for 2 entries whether it
-    // holds 0, 1 or 2. (Counting lengths would give 144 + 2 × 8 = 160.) One edge: 240 per edge.
-    assert_eq!(edge_storage_bytes(&g), 240);
-    assert_eq!(memory_per_edge(&g), Some(240.0));
+    // The same bytes as with two edges, 240 or 528: every list is reserved for 2 entries
+    // whether it holds 0, 1 or 2. (Counting lengths would give 144 + 2 × 8 = 160 for the `Vec`
+    // list.) One edge, so the whole count per edge.
+    let bytes = 2 * 3 * HEADER + 12 * UNIT;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64));
 }
 
 #[test]
@@ -123,19 +151,23 @@ fn test_the_outer_vectors_count_their_capacity() {
     g.add_node(0).unwrap();
     g.add_node(1).unwrap();
     g.add_edge(0, 1, ()).unwrap();
-    // Outer: room for 8 headers each way, 2 × 8 × 24 = 384, though only 2 nodes exist
-    // (counting their lengths would give 96). Lists: 2 × 2 × 1 × 8 = 32. 416 over 1 edge.
-    assert_eq!(edge_storage_bytes(&g), 416);
-    assert_eq!(memory_per_edge(&g), Some(416.0));
+    // Outer: room for 8 headers each way, 2 × 8 × HEADER, 384 or 896, though only 2 nodes exist
+    // (counting their lengths would give 96 or 224). Lists: 2 × 2 × 1 `()` entry, 4 × UNIT, 32
+    // or 64. 416 or 960 over 1 edge.
+    let bytes = 2 * 8 * HEADER + 4 * UNIT;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64));
 }
 
 #[test]
 fn test_a_removed_edge_leaves_its_capacity_counted() {
     let mut g = three_nodes_two_edges(2, ());
     g.remove_edge(1, 2).unwrap();
-    // Removal shrinks lengths, never capacities: still 240 bytes, now over 1 edge.
-    assert_eq!(edge_storage_bytes(&g), 240);
-    assert_eq!(memory_per_edge(&g), Some(240.0));
+    // Removal shrinks lengths, never capacities: still 240 or 528 bytes, now over 1 edge. In
+    // the log, the removal is a second entry in a log reserved for 2.
+    let bytes = 2 * 3 * HEADER + 12 * UNIT;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64));
 }
 
 // --- Row K: every payload kind -----------------------------------------------------------
@@ -143,36 +175,43 @@ fn test_a_removed_edge_leaves_its_capacity_counted() {
 #[test]
 fn test_a_weight_counts_its_size_forward_and_its_unit_key_backward() {
     let g = three_nodes_two_edges(2, 7_u64);
-    // Forward lists hold `(usize, u64)`, 16 bytes: 3 × 2 × 16 = 96, plus the outer 72: 168.
-    // Backward lists hold `(usize, ())`, 8 bytes, since `u64` has the unit key: 3 × 2 × 8 = 48,
-    // plus 72: 120. Total 288 over 2 edges: 144 per edge.
-    assert_eq!(edge_storage_bytes(&g), 288);
-    assert_eq!(memory_per_edge(&g), Some(144.0));
+    // Forward lists hold `u64` entries, 3 × 2 × WEIGHT, 96 or 144, plus the outer 3 × HEADER.
+    // Backward lists hold `()` entries, since `u64` has the unit key: 3 × 2 × UNIT, 48 or 96,
+    // plus 3 × HEADER. Total 288 or 576 over 2 edges: 144 or 288 per edge.
+    let bytes = 2 * 3 * HEADER + 6 * WEIGHT + 6 * UNIT;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64 / 2.0));
 }
 
 #[test]
 fn test_a_zero_weight_counts_as_any_weight() {
     let g = three_nodes_two_edges(2, 0_u64);
-    // A weight of 0 occupies its 8 bytes like any other: the 288 of the weighted fixture.
-    assert_eq!(edge_storage_bytes(&g), 288);
+    // A weight of 0 occupies its 8 bytes like any other: the bytes of the weighted fixture.
+    assert_eq!(
+        edge_storage_bytes(&g),
+        2 * 3 * HEADER + 6 * WEIGHT + 6 * UNIT
+    );
 }
 
 #[test]
 fn test_an_identity_key_counts_its_size_in_both_directions() {
     let g = three_nodes_two_edges(2, Rel::Child);
-    // `(usize, Rel)` is 16 bytes (one byte padded to the 8-byte alignment) in both directions,
-    // since the key is the payload: 2 × (72 + 3 × 2 × 16) = 2 × 168 = 336 over 2 edges.
-    assert_eq!(edge_storage_bytes(&g), 336);
-    assert_eq!(memory_per_edge(&g), Some(168.0));
+    // A one-byte entry is 16 bytes in both directions, since the key is the payload:
+    // 2 × (3 × HEADER + 3 × 2 × BYTE), 336 or 528, over 2 edges.
+    let bytes = 2 * 3 * HEADER + 12 * BYTE;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64 / 2.0));
 }
 
 #[test]
 fn test_a_field_key_counts_the_payload_forward_and_the_key_backward() {
     let g = three_nodes_two_edges(2, Tagged { kind: 3, w: 1.5 });
-    // `Tagged` is 8 bytes (u8 padded beside an f32), so `(usize, Tagged)` is 16; the key `u8`
-    // gives `(usize, u8)`, also 16 by padding. 2 × (72 + 96) = 336 over 2 edges.
-    assert_eq!(edge_storage_bytes(&g), 336);
-    assert_eq!(memory_per_edge(&g), Some(168.0));
+    // `Tagged` is 8 bytes (u8 padded beside an f32): forward entries 3 × 2 × TAGGED, 96 or 144;
+    // the key `u8` gives one-byte backward entries, 3 × 2 × BYTE = 96. With the outer vectors:
+    // 336 or 576 over 2 edges.
+    let bytes = 2 * 3 * HEADER + 6 * TAGGED + 6 * BYTE;
+    assert_eq!(edge_storage_bytes(&g), bytes);
+    assert_eq!(memory_per_edge(&g), Some(bytes as f64 / 2.0));
 }
 
 // --- The frozen state --------------------------------------------------------------------
@@ -204,4 +243,144 @@ fn test_an_empty_frozen_graph_holds_its_offset_sentinels_only() {
     // An empty CSR holds one offset per direction, `[0]`, in a vector of capacity 1: 2 × 8.
     assert_eq!(edge_storage_bytes(&g), 16);
     assert_eq!(memory_per_edge(&g), None);
+}
+
+// --- The reserved buffers follow the candidate's growth (row E of the storage candidates) ----
+
+/// Node 0 of eighteen nodes receives one `()` edge to each of nodes 1 to `k`, for `k` one below,
+/// at and one above the snapshot-log trigger of 16, the graph built without an edge hint so
+/// every list grows by pushes. The byte count pins where each candidate's buffers grow.
+fn bytes_after_k_edges(k: usize) -> usize {
+    let mut g: UltraGraph<i32> = UltraGraph::with_capacity(18, None);
+    for i in 0..18 {
+        g.add_node(i).unwrap();
+    }
+    for t in 1..=k {
+        g.add_edge(0, t, ()).unwrap();
+    }
+    assert_eq!(g.number_edges(), k);
+    edge_storage_bytes(&g)
+}
+
+#[test]
+fn test_the_buffers_grow_where_the_candidate_grows_them() {
+    // A `Vec` pushed into grows 4, 8, 16, 32 entries. Outer vectors: 2 × 18 × HEADER.
+    // `Vec` list: node 0's forward list holds 15, 16 or 17 entries at capacity 16, 16 or 32,
+    // times 8; each target's backward list holds one entry at capacity 4 × 8 = 32.
+    //   864 + 128 + 15 × 32 = 1,472; 864 + 128 + 16 × 32 = 1,504; 864 + 256 + 17 × 32 = 1,664.
+    // Snapshot-log array: node 0's log holds 15 puts at capacity 16 × 16 = 256; the 16th put
+    // reaches the trigger and compacts: a snapshot of exactly 16 entries × 8 = 128 beside the
+    // cleared log, which keeps its capacity, 384; the 17th put lands in that log, still 384.
+    // Each target's backward log holds one put at capacity 4 × 16 = 64.
+    //   2,016 + 256 + 15 × 64 = 3,232; 2,016 + 384 + 16 × 64 = 3,424; 2,016 + 384 + 17 × 64 = 3,488.
+    let expected = if LOG {
+        [3_232, 3_424, 3_488]
+    } else {
+        [1_472, 1_504, 1_664]
+    };
+    assert_eq!(
+        bytes_after_k_edges(15),
+        expected[0],
+        "one below the trigger"
+    );
+    assert_eq!(bytes_after_k_edges(16), expected[1], "at the trigger");
+    assert_eq!(
+        bytes_after_k_edges(17),
+        expected[2],
+        "one above the trigger"
+    );
+}
+
+/// Node 0 receives 15 edges and then a put that replaces the payload of its first edge: the
+/// replacement is the 16th write, so the snapshot-log array compacts, and the snapshot it builds
+/// holds the 15 current edges, not 16. The `Vec` list replaces in place and grows nothing.
+#[test]
+fn test_a_replacement_does_not_grow_the_snapshot() {
+    let mut g: UltraGraph<i32> = UltraGraph::with_capacity(18, None);
+    for i in 0..18 {
+        g.add_node(i).unwrap();
+    }
+    for t in 1..=15 {
+        g.add_edge(0, t, ()).unwrap();
+    }
+    g.add_edge(0, 1, ()).unwrap();
+    assert_eq!(g.number_edges(), 15);
+    // `Vec` list: as after 15 edges, 1,472. Snapshot-log array: the forward log of node 0 holds
+    // 16 entries at capacity 16 × 16 = 256 and compacts into a snapshot of exactly 15 × 8 = 120,
+    // 376 with the cleared log; the replacement touches no backward list, 15 × 64 = 960;
+    // 2,016 + 376 + 960 = 3,352. A snapshot sized for 16 would read 3,360.
+    let expected = if LOG { 3_352 } else { 1_472 };
+    assert_eq!(edge_storage_bytes(&g), expected);
+}
+
+/// Node 0 receives 15 edges and then a removal of a pair that has no edge: nothing is written,
+/// so the buffers read as after the 15 edges. A storage that logged the failed removal would
+/// have reached the trigger and compacted.
+#[test]
+fn test_a_failed_pair_removal_writes_nothing() {
+    let mut g: UltraGraph<i32> = UltraGraph::with_capacity(18, None);
+    for i in 0..18 {
+        g.add_node(i).unwrap();
+    }
+    for t in 1..=15 {
+        g.add_edge(0, t, ()).unwrap();
+    }
+    assert!(g.remove_edge(0, 16).is_err());
+    // As after 15 edges: 1,472 for the `Vec` list; 3,232 for the snapshot-log array, whose
+    // forward log of node 0 still holds 15 puts short of the trigger.
+    let expected = if LOG { 3_232 } else { 1_472 };
+    assert_eq!(edge_storage_bytes(&g), expected);
+}
+
+/// Node 0 receives 15 edges and then a keyed removal of its first as the 16th write: the
+/// snapshot-log array compacts into a snapshot of the 14 current edges; the `Vec` list shifts
+/// its entries and keeps its capacity.
+#[test]
+fn test_a_keyed_removal_shrinks_the_snapshot_by_one() {
+    let mut g: UltraGraph<i32> = UltraGraph::with_capacity(18, None);
+    for i in 0..18 {
+        g.add_node(i).unwrap();
+    }
+    for t in 1..=15 {
+        g.add_edge(0, t, ()).unwrap();
+    }
+    g.remove_edge_keyed(0, 1, ()).unwrap();
+    assert_eq!(g.number_edges(), 14);
+    // `Vec` list: 1,472, as after 15 edges. Snapshot-log array: node 0's forward log holds 15
+    // puts and the removal, 16 entries at capacity 16 × 16 = 256, and compacts into a snapshot
+    // of exactly 14 × 8 = 112: 368; node 1's backward log holds its put and the removal at
+    // capacity 4 × 16 = 64, as every other target's: 15 × 64 = 960; 2,016 + 368 + 960 = 3,344.
+    // A count left at 15 would read 3,352, one raised to 16 would read 3,360.
+    let expected = if LOG { 3_344 } else { 1_472 };
+    assert_eq!(edge_storage_bytes(&g), expected);
+}
+
+/// Node 0 carries two keys to node 1 and one to each of nodes 2 to 14, 15 edges of an
+/// identity-keyed payload; the removal of the pair `(0, 1)` is the 16th write and takes two
+/// edges, so the snapshot-log array compacts into a snapshot of the 13 current edges.
+#[test]
+fn test_a_pair_removal_shrinks_the_snapshot_by_every_key() {
+    let mut g: UltraGraphWeighted<i32, Rel> = UltraGraphWeighted::with_capacity(15, None);
+    for i in 0..15 {
+        g.add_node(i).unwrap();
+    }
+    g.add_edge(0, 1, Rel::Parent).unwrap();
+    g.add_edge(0, 1, Rel::Child).unwrap();
+    for t in 2..=14 {
+        g.add_edge(0, t, Rel::Parent).unwrap();
+    }
+    g.remove_edge(0, 1).unwrap();
+    assert_eq!(g.number_edges(), 13);
+    // Entries are 16 bytes in both directions for either candidate (BYTE). Outer vectors:
+    // 2 × 15 × HEADER, 720 or 1,680.
+    // `Vec` list: node 0's forward list grew to capacity 16 × 16 = 256 and keeps it after the
+    // removal; node 1's backward list held two entries at capacity 4 × 16 = 64, as each of the
+    // thirteen other targets' lists: 14 × 64 = 896. 720 + 256 + 896 = 1,872.
+    // Snapshot-log array: node 0's forward log holds 15 puts and the removal of every key, 16
+    // entries at capacity 16 × 16 = 256, and compacts into a snapshot of exactly 13 × 16 = 208:
+    // 464; node 1's backward log holds two puts and the removal at capacity 4 × 16 = 64, as the
+    // thirteen others': 896. 1,680 + 464 + 896 = 3,040. A count lowered by one key only would
+    // read 3,056; one raised by the two keys 3,104; one divided by them 2,944.
+    let expected = if LOG { 3_040 } else { 1_872 };
+    assert_eq!(edge_storage_bytes(&g), expected);
 }

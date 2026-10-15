@@ -3,6 +3,7 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 use crate::EdgeKey;
+use crate::types::storage::edge_list::{Backward, EdgeList, Forward};
 
 use alloc::vec::Vec;
 
@@ -38,12 +39,12 @@ where
     // Adjacency list: A vector where each index corresponds to a source node,
     // and the value is a list of its outgoing edges. The order of a list is not specified:
     // insertion order until a freeze or a compaction reorders it.
-    edges: Vec<Vec<(usize, W)>>,
+    edges: Vec<Forward<W>>,
 
     // The edges into each node as `(source, key)`, so traversal and removal work in both
     // directions without a freeze. Only the source and the key are read, so the payload is not
     // mirrored; the keys are kept in step with `edges` by every mutation.
-    backward: Vec<Vec<(usize, W::Key)>>,
+    backward: Vec<Backward<W>>,
 
     // The number of edges, every one joining two live nodes.
     live_edges: usize,
@@ -133,7 +134,7 @@ where
         let mut graph = Self {
             num_edges_per_node: None,
             nodes,
-            edges,
+            edges: edges.into_iter().map(Forward::from_entries).collect(),
             backward: Vec::new(),
             live_edges: 0,
             root_index,
@@ -144,13 +145,18 @@ where
 
     /// Rebuilds the backward lists and the edge count from the forward lists.
     pub(crate) fn rebuild_backward(&mut self) {
-        self.backward = (0..self.edges.len()).map(|_| Vec::new()).collect();
+        let mut incoming: Vec<Vec<(usize, W::Key)>> =
+            (0..self.edges.len()).map(|_| Vec::new()).collect();
         self.live_edges = 0;
         for (source, edge_list) in self.edges.iter().enumerate() {
-            for (target, weight) in edge_list {
-                self.backward[*target].push((source, weight.edge_key()));
+            for (target, weight) in edge_list.entries() {
+                incoming[target].push((source, weight.edge_key()));
                 self.live_edges += 1;
             }
         }
+        self.backward = incoming
+            .into_iter()
+            .map(Backward::<W>::from_entries)
+            .collect();
     }
 }

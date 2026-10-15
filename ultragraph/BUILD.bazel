@@ -135,3 +135,22 @@ rust_test_suite(
         normal_dev = True,
     ),
 )
+
+rust_test_suite(
+    name = "storage_tests",
+    srcs = glob([
+        "tests/types/storage/edge_list/*_tests.rs",
+    ]),
+    tags = [
+        "ultragraph",
+        "unit-test",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        # Crate to test
+        ":ultragraph",
+    ] + all_crate_deps(
+        normal = True,
+        normal_dev = True,
+    ),
+)

@@ -6,6 +6,7 @@
 use alloc::vec;
 use alloc::vec::Vec;
 
+use crate::types::storage::edge_list::EdgeList;
 use crate::types::storage::graph_csm::CsrAdjacency;
 use crate::{CsmGraph, DynamicGraph, EdgeKey, Freezable};
 
@@ -72,9 +73,9 @@ where
         let mut total_edges = 0;
 
         for (source, edge_list) in old_edges.iter().enumerate() {
-            for (target, _) in edge_list {
+            for (target, _) in edge_list.entries() {
                 out_degrees[source] += 1;
-                in_degrees[*target] += 1;
+                in_degrees[target] += 1;
                 total_edges += 1;
             }
         }
@@ -95,7 +96,7 @@ where
 
         // Place each edge into its correct position in the CSR arrays.
         for (source, edge_list) in old_edges.into_iter().enumerate() {
-            for (target, weight) in edge_list {
+            for (target, weight) in edge_list.into_entries() {
                 // Forward placement
                 let fwd_write_head = fwd_offsets_copy[source];
                 fwd_targets[fwd_write_head] = target;

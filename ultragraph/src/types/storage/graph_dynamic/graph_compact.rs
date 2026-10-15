@@ -2,6 +2,7 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
+use crate::types::storage::edge_list::{EdgeList, Forward};
 use crate::{DynamicGraph, EdgeKey};
 use alloc::vec::Vec;
 
@@ -34,12 +35,13 @@ where
             }
             compacted_nodes.push(node);
             // Every stored edge joins two live nodes, so every target has a new position.
-            compacted_edges.push(
+            compacted_edges.push(Forward::from_entries(
                 edge_list
+                    .into_entries()
                     .into_iter()
                     .filter_map(|(target, weight)| table[target].map(|new| (new, weight)))
                     .collect(),
-            );
+            ));
         }
         self.nodes = compacted_nodes;
         self.edges = compacted_edges;

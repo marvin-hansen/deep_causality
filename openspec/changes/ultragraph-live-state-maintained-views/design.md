@@ -72,21 +72,28 @@ state it rebuilds every maintained view from its projection at the new positions
 identifier.
 
 ### D5. The snapshot-log candidate
-Per node and direction, `EdgeArray { snapshot: Vec<(usize, W)>, log: Vec<LogEntry<W>> }` with
-`LogEntry { target, op: Put(W) | Remove(W::Key) | RemoveAll }`. Inserts, updates and removals append
-after a lookup of `(target, key)`, which the exact `number_edges` and the `EdgeNotFoundError` of
-change 1 require: a binary search of the snapshot, sorted by target then key, and a newest-first scan
-of the log. The append is amortised O(1) by RadixGraph's Theorem 2, which covers blind writes; the
-lookup is O(log d + L) for a log of length L, and L reaches the snapshot's length before a
-compaction. When `log.len()` reaches `max(snapshot.len(), MIN_LOG)` the node compacts its own array by a
-newest-first scan that decides each `(target, key)` once, through a bitset the graph owns and reuses.
+Per node and direction, `EdgeArray { snapshot: Vec<(usize, V)>, log: Vec<LogEntry>, count }` with
+`LogEntry { other, op: Put(V) | Remove(Key) | RemoveAll }`, `V` the payload in the forward list and
+the key in the backward list, and `count` the exact number of current entries. Inserts, updates and
+removals append after a lookup of `(other, key)`, which the exact `number_edges` and the
+`EdgeNotFoundError` of change 1 require: a newest-first scan of the log, then a binary search of
+the snapshot, sorted by other end then key. The append is amortised O(1) by RadixGraph's Theorem 2,
+which covers blind writes; the lookup is O(log d + L) for a log of length L, and L reaches the
+snapshot's length before a compaction. When `log.len()` reaches `max(snapshot.len(), MIN_LOG)` the
+node compacts its own array by a newest-first scan that decides each `(other, key)` once, through
+a set of decided pairs and a set of other ends whose every key was removed, both built by the
+compaction; the new snapshot has exactly `count` entries and the log keeps its capacity. A read
+with a non-empty log resolves the same way into a list; with an empty log it reads the snapshot.
 Unlike RadixGraph's code, a duplicate insert is resolved as an update in every compaction, including
 an all-insert log, so invariant 4 of change 1 holds; RadixGraph's insert-only shortcut keeps
 duplicates (`src/radixgraph.cpp:206-212` at commit `9feba53`). A removal is an enum variant, not a
-zero weight, so a weight of 0 stays a weight. Every candidate sits behind one crate-internal storage
-trait until the decision; a temporary Cargo feature, `edge-log`, off by default, selects the
-snapshot-log arrays and leaves with the candidate if it loses. The repository's tests reach only the public
-API, so the candidate's tests drive a node through the graph across each compaction trigger.
+zero weight, so a weight of 0 stays a weight. Every candidate sits behind one crate-internal
+`EdgeList` trait until the decision, keyed by an `EntryKey` strategy (the payload's `edge_key`
+forward, the value itself backward); a temporary Cargo feature, `edge-log`, off by default, selects
+the snapshot-log arrays and leaves with the candidate if it loses. The repository's tests reach
+only the public API, so the candidate's tests drive a node through the graph across each
+compaction trigger, and the edge-storage accounting, which counts the log and the snapshot, is
+what makes the trigger and the count observable.
 
 ### D5b. The indexed-lists candidate
 The `Vec` lists of change 1, plus, per node and direction, an index `BTreeMap<usize, BTreeMap<W::Key,

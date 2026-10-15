@@ -22,23 +22,23 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 ## 2. The two challengers: the snapshot-log arrays and the indexed lists
 
-- [ ] 2.1 Phase 1: a crate-internal storage trait over the Dynamic state's edge lists, implemented by
+- [x] 2.1 Phase 1: a crate-internal storage trait over the Dynamic state's edge lists, implemented by
       the incumbent, and the snapshot-log `EdgeArray` (design D5) with `unimplemented!()` bodies,
       selected by the temporary Cargo feature `edge-log`
-- [ ] 2.2 Fill the A–K table for the candidate (rows E: the log at, below and above its trigger; F: a
+- [x] 2.2 Fill the A–K table for the candidate (rows E: the log at, below and above its trigger; F: a
       weight of 0; K: the four payload kinds)
-- [ ] 2.3 Phase 2: tests through the graph's public API, which is all the repository's tests reach,
+- [x] 2.3 Phase 2: tests through the graph's public API, which is all the repository's tests reach,
       against the model of edges as `(target, key)` to payload, driving a node through every operation
       and across every compaction trigger; the complete change-1 suite runs with `--features edge-log`;
       observe failing; record
-- [ ] 2.4 Phase 3: inject the design D7 defects of this group (a duplicate insert kept by an all-insert
+- [x] 2.4 Phase 3: inject the design D7 defects of this group (a duplicate insert kept by an all-insert
       compaction; a zero weight read as a removal; compaction one entry early or late; a `Remove`
       suppressing a newer `Put`; snapshot entries to a tombstone kept) and the nine generic classes;
       record; discard the throwaway
-- [ ] 2.5 Phase 4: implement the candidate; `cargo test -p ultragraph` passes without and with
+- [x] 2.5 Phase 4: implement the candidate; `cargo test -p ultragraph` passes without and with
       `--features edge-log` with the same executed count; full coverage under each
-- [ ] 2.6 Phase 5: `scripts/mutants.sh` over the candidate's files; resolve every survivor
-- [ ] 2.7 Commit message for the snapshot-log candidate
+- [x] 2.6 Phase 5: `scripts/mutants.sh` over the candidate's files; resolve every survivor
+- [x] 2.7 Commit message for the snapshot-log candidate
 - [ ] 2.8 Phase 1: the indexed-lists candidate (design D5b) behind the storage trait with
       `unimplemented!()` bodies, selected by the temporary Cargo feature `edge-index`; `edge-log` and
       `edge-index` together are a `compile_error!`

@@ -79,3 +79,47 @@ of design D6 widens to the row's spread, so these rows constrain a challenger lo
 walks at 1,000 nodes, 0.62 ns per step, come in under their frozen counterparts of change 1
 (1.75 ns and 1.03 ns per step) and under the 100-node rows per step; the three runs agree to 3 %,
 so it is the fixture, not noise, and it is recorded here without an explanation.
+
+### Group 2: the incumbent behind the storage trait
+
+The `Vec` lists re-measured after group 2 moved them behind the crate-internal `EdgeList` trait
+(the build every candidate shares), on 2026-10-16; the logs are `Group2-IncumbentRun-1.txt` to
+`Group2-IncumbentRun-3.txt`, the same groups and fixtures as group 1. These rows are the incumbent
+every candidate of this change is compared with: the same build, so the trait's cost falls on
+both sides.
+
+| Benchmark | n | Run 1 | Run 2 | Run 3 | Mean | Spread | Per element |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `keyed_update_low` | 10 | 2.56 ns | 2.61 ns | 2.65 ns | 2.60 ns | 3.3 % |  |
+| `keyed_update_low` | 100 | 2.54 ns | 2.63 ns | 2.60 ns | 2.59 ns | 3.8 % |  |
+| `keyed_update_low` | 1,000 | 2.69 ns | 2.80 ns | 2.70 ns | 2.73 ns | 4.0 % |  |
+| `keyed_update_hub` | 100,000 | 16.23 µs | 16.38 µs | 16.45 µs | 16.36 µs | 1.4 % |  |
+| `keyed_remove_low` | 10 | 7.30 ns | 7.46 ns | 7.33 ns | 7.36 ns | 2.1 % |  |
+| `keyed_remove_low` | 100 | 7.10 ns | 7.32 ns | 7.48 ns | 7.30 ns | 5.2 % |  |
+| `keyed_remove_low` | 1,000 | 11.02 ns | 15.00 ns | 13.89 ns | 13.89 ns (median) | 30.0 % |  |
+| `keyed_remove_hub` | 100,000 | 29.29 µs | 30.37 µs | 29.96 µs | 29.87 µs | 3.6 % |  |
+| `outbound_walk_dynamic` | 10 | 14.53 ns | 14.90 ns | 14.91 ns | 14.78 ns | 2.6 % | 1.48 ns |
+| `outbound_walk_dynamic` | 100 | 298.20 ns | 297.24 ns | 298.87 ns | 298.10 ns | 0.5 % | 2.98 ns |
+| `outbound_walk_dynamic` | 1,000 | 613.06 ns | 622.46 ns | 635.01 ns | 623.51 ns | 3.5 % | 0.62 ns |
+| `inbound_walk_dynamic` | 10 | 14.54 ns | 14.73 ns | 14.76 ns | 14.67 ns | 1.5 % | 1.47 ns |
+| `inbound_walk_dynamic` | 100 | 239.29 ns | 283.26 ns | 238.10 ns | 239.29 ns (median) | 17.8 % | 2.39 ns |
+| `inbound_walk_dynamic` | 1,000 | 634.15 ns | 619.45 ns | 633.95 ns | 629.18 ns | 2.3 % | 0.63 ns |
+| `outbound_walk_shuffled_dynamic` | 10 | 14.94 ns | 14.76 ns | 14.86 ns | 14.85 ns | 1.2 % | 1.48 ns |
+| `outbound_walk_shuffled_dynamic` | 100 | 300.95 ns | 315.27 ns | 299.15 ns | 305.12 ns | 5.3 % | 3.05 ns |
+| `outbound_walk_shuffled_dynamic` | 1,000 | 1.69 µs | 1.76 µs | 1.83 µs | 1.76 µs | 8.5 % | 1.76 ns |
+| `inbound_walk_shuffled_dynamic` | 10 | 14.42 ns | 14.91 ns | 14.98 ns | 14.77 ns | 3.8 % | 1.48 ns |
+| `inbound_walk_shuffled_dynamic` | 100 | 272.31 ns | 278.52 ns | 260.46 ns | 270.43 ns | 6.7 % | 2.70 ns |
+| `inbound_walk_shuffled_dynamic` | 1,000 | 2.88 µs | 2.22 µs | 1.82 µs | 2.22 µs (median) | 46.0 % | 2.22 ns |
+
+Memory per edge is unchanged: 48.972 bytes on the hub, 176.048 on the chain of 1,000, built and
+after the updates (the `Vec` list behind the trait is the same `Vec`).
+
+**Against group 1.** Sixteen of the twenty rows are within the group-1 row's tolerance (the
+larger of 5 % and its spread). `keyed_remove_low` moved up at every size, +11.9 %, +17.0 % and
++8.7 %, from 6.6 to 7.4 ns, 6.2 to 7.3 ns and 12.8 to 13.9 ns: `remove_edge_keyed` now removes
+the backward entry by a position scan and a `remove` through the trait where it ran a `retain`,
+and the forward removal pays the trait's key extraction on its one-entry list. The hub removal,
+the row the decision rule reads, is within 1 %. `outbound_walk_dynamic` at 100 moved +5.1 %,
+at the edge of its tolerance, with the 1,000-node rows unchanged; the shuffled walks at 1,000
+nodes read 1.8 and 2.2 µs where group 1 read 3.4 µs medians, inside their 50 % spreads, which
+is the instability group 1 recorded.
