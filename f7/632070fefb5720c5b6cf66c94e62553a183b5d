@@ -1,0 +1,100 @@
+ultragraph/src/types/ultra_graph/graph_compact.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 21
+  s_761f70cf42d74a::t_160ae20d9ca126 1-20,22-25
+deep_causality_context/README.md
+  s_761f70cf42d74a::t_0f0d875a792cd1 71-74
+deep_causality_context/src/types/context_types/context_graph/apply.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 228
+ultragraph/src/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_f87dfb5e3a0f38 10
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_biconnected_components.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 26,57
+ultragraph/src/types/storage/graph_csm/mod.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 43-47,71,98,113,115,119,123,129-133
+  s_761f70cf42d74a::t_d543b5b85e8181 134
+ultragraph/tests/types/ultra_graph/graph_algo_tests.rs
+  s_761f70cf42d74a::t_83693e5357771c 79-80,115-119,216-219
+  s_761f70cf42d74a::t_a2bdf97b23baff 127-161
+  s_761f70cf42d74a::t_fb61a01fd48194 1-78,81-114,120-126,201-215,220
+  s_761f70cf42d74a::t_63eb2dd20d33ab 162-200
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_pathfinder.rs
+  s_761f70cf42d74a::t_9c8dc11003a47e 40,76-77,132
+.cargo/mutants.toml
+  s_761f70cf42d74a::t_1d593da9b9936f 122-145
+ultragraph/tests/types/ultra_graph/graph_view_tests.rs
+  s_761f70cf42d74a::t_0b5d31fed47c84 117-206
+deep_causality_context/src/types/context_types/context_graph/contextuable_graph.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 6,59,175
+deep_causality_context/tests/types/context_types/context_graph/contextuable_graph_tests.rs
+  s_761f70cf42d74a::t_d5b58bdac9aab5 389-393,416-417
+  s_761f70cf42d74a::t_2534a854148da6 301-330,363-364,367-368,377-383,387-388,398,400-401,404-405,407-414,419-421,424-426,428-462,464-498
+deep_causality_context/tests/types/context_types/context_graph/snapshot_tests.rs
+  s_761f70cf42d74a::t_2534a854148da6 244-246
+ultragraph/tests/types/ultra_graph/graph_mut_tests.rs
+  s_761f70cf42d74a::t_0b5d31fed47c84 188-222
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_articulation_points.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 25,43
+ultragraph/src/types/storage/graph_csm/graph_csm_unfreeze.rs
+  s_761f70cf42d74a::t_9c8dc11003a47e 59
+  s_761f70cf42d74a::t_5bb74cf452007f 50,62-63,66
+ultragraph/src/types/ultra_graph/mod.rs
+  s_761f70cf42d74a::t_f87dfb5e3a0f38 12
+ultragraph/src/types/storage/graph_dynamic/graph_compact.rs
+  s_761f70cf42d74a::t_160ae20d9ca126 1-17,49-50
+  s_761f70cf42d74a::t_0f0d875a792cd1 18-48
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_topological.rs
+  s_761f70cf42d74a::t_9c8dc11003a47e 51,60,138-141,158-160,180
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_centrality.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 22-25,28,30,33-34,37-40,44,67,69,79,89,92,155,164-172,182
+ultragraph/tests/types/ultra_graph/graph_compact_tests.rs
+  s_761f70cf42d74a::t_83693e5357771c 227-230,273,337-339,344-345
+  s_761f70cf42d74a::t_8e841948edc0bf 1-226,231-272,274-336,340-343,346-362
+deep_causality_context/src/traits/contextuable_graph/mod.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 49-50,84-87,90-91
+ultragraph/tests/types/ultra_graph/graph_traversal_tests.rs
+  s_761f70cf42d74a::t_0b5d31fed47c84 60-63,103-149
+deep_causality_context/tests/types/context_types/context_graph/context_tests.rs
+  s_761f70cf42d74a::t_2534a854148da6 398-401,403,405-406,409
+deep_causality_context/tests/types/context_types/context_graph/apply_tests.rs
+  s_761f70cf42d74a::t_2534a854148da6 18-19,174-246
+  s_761f70cf42d74a::t_ad265fb3874c3f 247
+ultragraph/src/types/storage/graph_csm/graph_traversal.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 19,40
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_structural.rs
+  s_761f70cf42d74a::t_9c8dc11003a47e 22,39
+deep_causality_context/src/types/context_types/context_graph/mod.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 125-134
+ultragraph/src/types/storage/graph_dynamic/graph_freeze.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 10,28-29,45-46,57,59-71,74-76,78-82,102-108,110-121,126-128,162
+ultragraph/src/types/storage/graph_csm/graph_csm_biconnectivity_common.rs
+  s_761f70cf42d74a::t_9c8dc11003a47e 49
+  s_761f70cf42d74a::t_0f0d875a792cd1 24,31-32
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_bridges.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 21,39
+ultragraph/tests/types/ultra_graph/graph_evolve_tests.rs
+  s_761f70cf42d74a::t_83693e5357771c 8,884-888,911-912
+  s_761f70cf42d74a::t_a4d21dcd3f09e9 6-7,9,20-21,99,101-102,109-112,119-123,126,129-130,132-135,137-140,144-148,156-157,159,166-167,170,173-177,193-194,196-199,262-263,271-272,367-368,370,381,383-384,387,390-391,393-396,398-401,405-408,523-883,889-910,913-956
+ultragraph/src/types/storage/graph_csm/graph_csm_view.rs
+  s_761f70cf42d74a::t_5bb74cf452007f 24,26,29-30,32,38,41,43,49-50,81,109,111,116,128
+ultragraph/src/types/ultra_graph/graph_traversal.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 19,27-34,45,53-60
+  s_761f70cf42d74a::t_2f0cc67f4ed77c 5
+ultragraph/tests/types/ultra_graph/mod.rs
+  s_761f70cf42d74a::t_0b5d31fed47c84 25-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f7632070fefb5720c5b6cf66c94e62553a183b5d",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
