@@ -1,0 +1,95 @@
+ultragraph/src/types/ultra_graph/graph_traversal.rs
+  s_761f70cf42d74a::t_b86694675b8a83 5,10
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_articulation_points.rs
+  s_761f70cf42d74a::t_b86694675b8a83 14,23
+openspec/changes/ultragraph-stable-ids-keyed-edges/proposal.md
+  s_761f70cf42d74a::t_9756a7dfb34c32 50-51
+ultragraph/src/types/ultra_graph/graph_algo.rs
+  s_761f70cf42d74a::t_688a4714061d26 9-11
+  s_761f70cf42d74a::t_b86694675b8a83 17,24,117,206,272
+openspec/notes/ultragraph/tdd/group-3.md
+  s_761f70cf42d74a::t_bf9eb162926ac4 1-37
+openspec/notes/ultragraph/tdd/group-2.md
+  s_761f70cf42d74a::t_bf9eb162926ac4 1-37
+openspec/notes/ultragraph/tdd/group-4.md
+  s_761f70cf42d74a::t_bf9eb162926ac4 1-37
+ultragraph/src/types/storage/graph_state/mod.rs
+  s_761f70cf42d74a::t_b86694675b8a83 8,14
+openspec/notes/ultragraph/tdd/group-1.md
+  s_761f70cf42d74a::t_bf9eb162926ac4 1-8,10-16,28-30,48-49,67,84-86,113
+  s_761f70cf42d74a::t_7c4e6e71ced11a 9,17-27,31-47,50-66,68-83,87-112,114-125
+ultragraph/src/types/storage/graph_dynamic/graph_mut.rs
+  s_761f70cf42d74a::t_b86694675b8a83 8,10-13
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_biconnected_components.rs
+  s_761f70cf42d74a::t_b86694675b8a83 13,24
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_topological.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,27
+ultragraph/src/types/ultra_graph/default.rs
+  s_761f70cf42d74a::t_b86694675b8a83 7,14,24
+ultragraph/src/traits/graph_unfreeze.rs
+  s_761f70cf42d74a::t_8f66d023c05d6e 6,8-11
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_pathfinder.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,15
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_structural.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,14
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_bridges.rs
+  s_761f70cf42d74a::t_b86694675b8a83 10,19
+ultragraph/src/types/storage/graph_csm/default.rs
+  s_761f70cf42d74a::t_b86694675b8a83 5,12
+ultragraph/src/types/ultra_graph/graph_view.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,12
+ultragraph/src/types/storage/graph_csm/graph_csm_algo.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,11
+ultragraph/src/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_b86694675b8a83 5,21-24,42-45,51-54,105-108
+ultragraph/src/types/storage/graph_dynamic/default.rs
+  s_761f70cf42d74a::t_b86694675b8a83 5,9-12
+ultragraph/src/types/storage/graph_dynamic/graph_freeze.rs
+  s_761f70cf42d74a::t_b86694675b8a83 10,22,215
+ultragraph/src/types/ultra_graph/graph_mut.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,11
+ultragraph/src/types/storage/graph_csm/graph_traversal.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,11
+ultragraph/src/types/ultra_graph/mod.rs
+  s_761f70cf42d74a::t_b86694675b8a83 8,24,34
+ultragraph/src/types/storage/graph_dynamic/graph_view.rs
+  s_761f70cf42d74a::t_b86694675b8a83 8,10-13
+ultragraph/src/types/ultra_graph/graph_evolve.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,8,11
+ultragraph/src/types/storage/graph_csm/graph_csm_view.rs
+  s_761f70cf42d74a::t_b86694675b8a83 8,16
+ultragraph/src/types/storage/graph_csm/graph_csm_biconnectivity_common.rs
+  s_761f70cf42d74a::t_b86694675b8a83 24,47
+ultragraph/src/traits/graph_freeze.rs
+  s_761f70cf42d74a::t_8f66d023c05d6e 5
+  s_761f70cf42d74a::t_b86694675b8a83 10
+ultragraph/src/types/storage/graph_dynamic/parts.rs
+  s_761f70cf42d74a::t_b86694675b8a83 5,10-13
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_centrality.rs
+  s_761f70cf42d74a::t_b86694675b8a83 6,14,156
+openspec/changes/ultragraph-stable-ids-keyed-edges/tasks.md
+  s_761f70cf42d74a::t_ef55201ffbe206 35
+  s_761f70cf42d74a::t_9756a7dfb34c32 18,23,28,33,36,38,41,43-44,49
+ultragraph/src/types/storage/graph_csm/mod.rs
+  s_761f70cf42d74a::t_b86694675b8a83 5,30,41,60
+ultragraph/src/types/storage/graph_csm/graph_csm_unfreeze.rs
+  s_761f70cf42d74a::t_b86694675b8a83 8,43
+openspec/changes/ultragraph-stable-ids-keyed-edges/specs/context-store-crate-identity/spec.md
+  s_761f70cf42d74a::t_9756a7dfb34c32 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0cec1c9dc18448e11c8021b4bd12d7bd663d9608",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
