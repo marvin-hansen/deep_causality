@@ -1,0 +1,57 @@
+deep_causality_quantum/tests/types/qcm/dem_model_tests.rs
+  s_761f70cf42d74a::t_d2eada41d9a65f 11-12,237-291
+  s_761f70cf42d74a::t_f49d15d88c0501 292
+deep_causality_quantum/tests/types/qcm/hypothesis_tests.rs
+  s_761f70cf42d74a::t_1b011867198d10 73-101,173,177-189,191-192,198-215,220-235
+  s_761f70cf42d74a::t_15b3276ac39bcc 236
+deep_causality_quantum/tests/types/qcm/faithfulness_tests.rs
+  s_761f70cf42d74a::t_d2eada41d9a65f 22,227,266-319
+deep_causality_quantum/src/types/qcm/process_factors.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 166-167,179-180,184-185,188-190,192
+deep_causality_quantum/src/types/qcm/faithfulness.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 94-95,110-111,115-117,120-124,126,135
+deep_causality_quantum/tests/types/qcm/process_factors_tests.rs
+  s_761f70cf42d74a::t_eab5cbfad2a12a 118-121
+  s_761f70cf42d74a::t_d2eada41d9a65f 102,105,115-117,122-177
+  s_761f70cf42d74a::t_9e2437b88d10c8 178
+deep_causality_quantum/tests/types/qcm/markov_freeze_tests.rs
+  s_761f70cf42d74a::t_d2eada41d9a65f 55-83,419,430,444-491,494-495
+  s_761f70cf42d74a::t_2fae36ce0ca112 492-493
+  s_761f70cf42d74a::t_a2a4b7f9b344d9 496
+deep_causality_quantum/src/types/pipeline/config.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 534-535,539-543,545,549-554,556,604-605
+deep_causality_quantum/src/types/qcm/hypothesis.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 124-125,213-214
+openspec/changes/ultragraph-stable-ids-keyed-edges/tasks.md
+  s_761f70cf42d74a::t_3befea3c71a511 103
+  s_761f70cf42d74a::t_f5348a8f66de6c 101
+  s_761f70cf42d74a::t_20aa229e3d724d 54,56-57,62,67,77,80,87,91,93,96,99
+deep_causality_quantum/src/types/qcm/dem_model.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 148-149,153-154,157,159
+deep_causality_quantum/tests/types/pipeline/config_tests.rs
+  s_761f70cf42d74a::t_2fae36ce0ca112 227,234,251-252,259
+  s_761f70cf42d74a::t_9a833f7f015d9f 13-17,65-90,101-102,106-108,115,123,129-161,170,182-226,228-229,235-250,253-254,260-269
+  s_761f70cf42d74a::t_555780d9e477be 230-233,255-258
+  s_761f70cf42d74a::t_6a3b64d62cb0ff 270
+openspec/notes/ultragraph/tdd/group-2.md
+  s_761f70cf42d74a::t_3725e1418b16a4 9,31-44,47-72,75-102,105-124,133-135,137
+  s_761f70cf42d74a::t_b106c4592a34e9 17-27
+  s_761f70cf42d74a::t_42e42f6e1cb2b4 125-132
+  s_761f70cf42d74a::t_f5348a8f66de6c 138-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "004d1eebe95c7b6f6bae70b31be1ca5247166410",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
