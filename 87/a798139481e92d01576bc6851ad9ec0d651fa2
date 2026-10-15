@@ -1,0 +1,192 @@
+ultragraph/src/traits/mod.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 11
+deep_causality_context/src/types/context_types/context_graph/extendable_contextuable_graph.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 233,235
+ultragraph/src/types/storage/graph_csm/mod.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 10,13-19,135-162
+  s_761f70cf42d74a::t_f74bfa172e268e 88,90-91,94
+deep_causality/src/traits/causable_graph/mod.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 34-36
+  s_761f70cf42d74a::t_34b22d7abc3ec6 149-152,158-159,162
+ultragraph/src/traits/graph_algo_centrality.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,9-12
+deep_causality_context/tests/types/context_types/context_graph/extendable_contextuable_graph_tests.rs
+  s_761f70cf42d74a::t_a1fe8e5f16e00d 465-539
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_biconnected_components.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 12-13,20-23,54
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_structural.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 6-7,22-23,25-27,29-31,33-36,38-74,76-82,91-93,95-105,108-110,112-119,121-130,137
+  s_761f70cf42d74a::t_dca18e575149a6 83-84
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_centrality.rs
+  s_761f70cf42d74a::t_cdb59db5af1982 90,96-97,151,154,194
+  s_761f70cf42d74a::t_b32ce31095ef50 6-7,23-52,54,56-63,65,67-73,75-76,79,81-84,86,88-89,91-95,99,101-111,113,115-122,125-128,130-131,133-137,139,141-148,152-153,156,158-162,165,167-170,172-184,186-193,195-207,211-215,217-218,220-250,253-262,264-274,278
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_pathfinder.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 6-7,20,29,38,49-51,53-59,61-79,81-84,86-109,111-125,127-143,145-157,159-161,163-178,180,182-190,193-201,203-204
+ultragraph/src/types/ultra_graph/traversal_iter.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 18-19
+  s_761f70cf42d74a::t_b32ce31095ef50 1-17,20-26
+deep_causality_context/src/traits/contextuable_graph/mod.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 69-71,80-81,96-97,100,106,109
+ultragraph/tests/types/ultra_graph/graph_csm_algo_topological_tests.rs
+  s_761f70cf42d74a::t_cdb59db5af1982 93-140
+ultragraph/tests/types/ultra_graph/graph_traversal_tests.rs
+  s_761f70cf42d74a::t_cafe17f5a3612a 239-248,254-263,444-448,451-460,516-520
+  s_761f70cf42d74a::t_cdb59db5af1982 593-635
+  s_761f70cf42d74a::t_c9fe2e1a18abad 6-7,27,32-35,37-43,74,80,82,84-90,165-238,249-253,264-443,449-450,461-515,521-592
+deep_causality/tests/types/causal_types/causaloid_graph/causality_graph_edges_tests.rs
+  s_761f70cf42d74a::t_34b22d7abc3ec6 150-176
+ultragraph/src/types/projection_view/mod.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-5,7-46
+  s_761f70cf42d74a::t_b32ce31095ef50 6
+ultragraph/tests/types/ultra_graph/graph_project_tests.rs
+  s_761f70cf42d74a::t_17f4303b47aaa4 1-97,101,103-143,149-205,210-221,226-333,336-337,341-343,347-393,402-455,461-528,533-551,553-554,559-642,644-696,700-915,921-926,940,1030-1202,1209-1307,1314-1329,1334-1340,1345-1348,1353-1356,1361-1362
+  s_761f70cf42d74a::t_862251b8551fb2 643
+  s_761f70cf42d74a::t_cafe17f5a3612a 98-100,102,144-148,206-209,222-225,394-401,456-460,529-532,552,555-558,697-699,916-920,927-939,941-1029,1203-1208,1308-1313,1330-1333,1341-1344,1349-1352,1357-1360
+  s_761f70cf42d74a::t_a04f7979371b78 334-335,338-340,344-346
+openspec/changes/ultragraph-stable-ids-keyed-edges/tasks.md
+  s_761f70cf42d74a::t_d642549decedee 152-153
+  s_761f70cf42d74a::t_bc1f068dccdb65 107,111,113,118,124,129,131,137,145,150
+ultragraph/src/traits/graph_view.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,9-12,24,26-27
+ultragraph/src/traits/graph_traversal.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,8-11
+deep_causality/tests/formalization_lean/graph_algebra_tests.rs
+  s_761f70cf42d74a::t_34b22d7abc3ec6 262-294
+ultragraph/src/traits/graph_algo_structural.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,9-12
+ultragraph/src/types/projection_view/graph_traversal.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-5,7-8,10-15,24-25,33-34
+  s_761f70cf42d74a::t_b32ce31095ef50 6,9,16-23,26-32
+openspec/notes/ultragraph/tdd/group-3.md
+  s_761f70cf42d74a::t_bc1f068dccdb65 31-39,42-58,61-87,90-105,115-117,119
+  s_761f70cf42d74a::t_d642549decedee 107-109,111-112,120-160
+  s_761f70cf42d74a::t_fe3226e82abec1 110,113-114
+  s_761f70cf42d74a::t_7db0a9c0b361c2 9,17-27
+  s_761f70cf42d74a::t_d635f21b8db1b8 106
+ultragraph/src/types/mod.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 8-9
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_bridges.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 9-10,17-18,36
+ultragraph/src/types/ultra_graph/graph_view.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 65-71
+deep_causality_context/README.md
+  s_761f70cf42d74a::t_6c0eb41941fd69 65-67
+ultragraph/src/types/storage/graph_csm/graph_csm_biconnectivity_common.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 9-12,14-20,22-23,28,43-44,46,49,63-65,68-71
+ultragraph/src/types/storage/graph_csm/adjacency.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 23-25,28-30,55-58,62-65
+  s_761f70cf42d74a::t_b32ce31095ef50 1-22,26-27,31-54,59-61,66-72
+deep_causality_context/src/types/context_types/context_graph/contextuable_graph.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 129-130
+  s_761f70cf42d74a::t_b32ce31095ef50 132-133,137,139
+ultragraph/src/types/ultra_graph/mod.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 15
+  s_761f70cf42d74a::t_b32ce31095ef50 18
+ultragraph/tests/types/ultra_graph/mod.rs
+  s_761f70cf42d74a::t_c1fc656877ab0a 35-36
+ultragraph/src/traits/graph_algo_pathfinder.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,9-12
+ultragraph/src/traits/projection.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-31
+ultragraph/src/types/ultra_graph/graph_mut.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 78-81
+  s_761f70cf42d74a::t_f9d743a5fb4cff 75-77
+ultragraph/src/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 37,40-46,82-83,111-112,122-123,129,133-134,136-149
+  s_761f70cf42d74a::t_88b2489d4bf851 13
+ultragraph/src/types/storage/graph_dynamic/graph_view.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 48-49,51-57,61,65,67,74,81-86
+ultragraph/tests/types/ultra_graph/graph_mut_tests.rs
+  s_761f70cf42d74a::t_cdb59db5af1982 583-600
+  s_761f70cf42d74a::t_b7a9985ab9b70e 288-289,292-293,295-299
+  s_761f70cf42d74a::t_c606e932bc8d67 223-270,273,304-503,505-507,512-525,530-537,539-552,566-569,574-576,581-582
+  s_761f70cf42d74a::t_a9e91f714b35f1 504,538
+  s_761f70cf42d74a::t_a04f7979371b78 271-272,274-287,290-291,294,300-303,553-565
+  s_761f70cf42d74a::t_cafe17f5a3612a 508-511,526-529,570-573,577-580
+ultragraph/tests/types/ultra_graph/graph_view_tests.rs
+  s_761f70cf42d74a::t_c9fe2e1a18abad 207-374
+ultragraph/src/types/storage/graph_dynamic/parts.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 14,16-18,21,32,35-36
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_articulation_points.rs
+  s_761f70cf42d74a::t_dca18e575149a6 21-23
+  s_761f70cf42d74a::t_b32ce31095ef50 13-14,24,42
+ultragraph/tests/types/ultra_graph/graph_evolve_tests.rs
+  s_761f70cf42d74a::t_531d93a9e1ecec 61,66,73,75,298,307,314-315,318-322,458,467,469,471-472,769-771,812-814,880,885-887,898-919,949
+ultragraph/tests/types/ultra_graph/graph_algo_pathfinder_tests.rs
+  s_761f70cf42d74a::t_cdb59db5af1982 137-155
+ultragraph/src/types/ultra_graph/graph_project.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-5,9-34
+  s_761f70cf42d74a::t_dca18e575149a6 6-8
+ultragraph/src/traits/graph_algo.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 5,22-23
+ultragraph/src/types/storage/graph_dynamic/graph_traversal.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-5,7-11,21-22,32-33
+  s_761f70cf42d74a::t_b32ce31095ef50 6,12-20,23-31
+ultragraph/tests/types/ultra_graph/graph_algo_centrality_tests.rs
+  s_761f70cf42d74a::t_a8c0c40f8c1bbe 301-326
+  s_761f70cf42d74a::t_489e34911ad138 327-350
+.cargo/mutants.toml
+  s_761f70cf42d74a::t_01261883fdf7a2 144-166
+ultragraph/src/types/storage/graph_dynamic/graph_compact.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 36,46
+ultragraph/src/types/projection_view/graph_algo.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-5,17-21,25-40,42-44,46-48,50-58,61-64,67,69-72,75,77-80,83-86,88-97,99-101,103-105,107-109,111-121,124,126-129,133,135-136
+  s_761f70cf42d74a::t_b32ce31095ef50 6-11,13-16,22-24,41,45,49,59-60,65-66,68,73-74,76,81-82,87,98,102,106,110,122-123,125,130-132,134
+  s_761f70cf42d74a::t_dca18e575149a6 12
+ultragraph/src/types/parallel_edges.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 1-15
+ultragraph/src/types/storage/graph_csm/graph_csm_view.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 73-87
+  s_761f70cf42d74a::t_88b2489d4bf851 88-89
+deep_causality_context/tests/types/context_types/context_graph/snapshot_tests.rs
+  s_761f70cf42d74a::t_a1fe8e5f16e00d 250-282,284-285,289,294,296-303,305-310
+ultragraph/src/types/storage/graph_csm/graph_csm_algo_topological.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 6-7,51,60,73-75,77-83,85-103,108,111-126,130-137,139-175,178-184
+  s_761f70cf42d74a::t_b86af25ccc6d00 104-107,109-110
+ultragraph/src/types/ultra_graph/graph_traversal.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 5-6,13-15,19,22-23,26-28,32,35-36
+ultragraph/src/traits/graph_mut.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,8-11,19,21-22
+ultragraph/src/traits/graph_algo_topological.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 6,9-12
+deep_causality_context/tests/types/context_types/context_graph/contextuable_graph_tests.rs
+  s_761f70cf42d74a::t_17bec2e4dab7b0 293-306,608-617,619-628,630-639
+  s_761f70cf42d74a::t_a1fe8e5f16e00d 271-276,278-285,287-292,307-321,323,325-342,584-607,618,629,640
+  s_761f70cf42d74a::t_3fe9dd56cb41ba 362-364,373-388
+ultragraph/src/types/storage/graph_dynamic/graph_mut.rs
+  s_761f70cf42d74a::t_cdb59db5af1982 110-112
+  s_761f70cf42d74a::t_b32ce31095ef50 17,23-32,55,57-58,64-80,83-88,91-92,95,104-109,113-119,123,126-127,133-137,140,142-169,173-175,186-187,191-192
+ultragraph/tests/types/ultra_graph/graph_algo_bridges_tests.rs
+  s_761f70cf42d74a::t_cafe17f5a3612a 56-58,60
+  s_761f70cf42d74a::t_531d93a9e1ecec 6-8,22-55,59,61-63,116-128,133-145
+ultragraph/src/lib.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 25
+  s_761f70cf42d74a::t_2d0d6e61a58273 26-27
+ultragraph/src/types/projection_view/adjacency.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 31-34,41-44
+  s_761f70cf42d74a::t_b32ce31095ef50 1-30,35-40,45-50
+ultragraph/src/types/storage/graph_dynamic/graph_freeze.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 31-32,63-64,75-77,113-115,169-171,183-185,192-201
+ultragraph/src/types/projection_view/graph_view.rs
+  s_761f70cf42d74a::t_b32ce31095ef50 6,10,18,22,25-26,29-32,36,39-40,43-45,49,53,56-60,64,68,72,75
+  s_761f70cf42d74a::t_dca18e575149a6 77-79
+  s_761f70cf42d74a::t_88b2489d4bf851 1-5,7-9,11-17,19-21,23-24,27-28,33-35,37-38,41-42,46-48,50-52,54-55,61-63,65-67,69-71,73-74,76,80-81
+openspec/notes/ultragraph/BenchAfter/BenchAfter.md
+  s_761f70cf42d74a::t_c1af7f16c47e93 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "87a798139481e92d01576bc6851ad9ec0d651fa2",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
