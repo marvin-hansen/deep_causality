@@ -1,0 +1,26 @@
+openspec/changes/ultragraph-stable-ids-keyed-edges/tasks.md
+  s_761f70cf42d74a::t_774be6a09b581f 166
+  s_761f70cf42d74a::t_09fb34b1b45329 157,159,164
+  s_761f70cf42d74a::t_78626f2456c771 162
+openspec/notes/ultragraph/BenchAfter/BenchAfter.md
+  s_761f70cf42d74a::t_b9b31d3b5b3b7e 15-226,231,236-240
+  s_761f70cf42d74a::t_09fb34b1b45329 227-230,232-235
+openspec/notes/ultragraph/tdd/group-4.md
+  s_761f70cf42d74a::t_09fb34b1b45329 11-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fc63d99e097e698e84c7843a156dd747a3dc9eee",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
