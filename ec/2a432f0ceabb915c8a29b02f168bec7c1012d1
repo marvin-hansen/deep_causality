@@ -1,0 +1,136 @@
+ultragraph/tests/types/ultra_graph/graph_view_tests.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 375-394
+deep_causality_ethos/tests/types/teloid_graph/teloidable_tests.rs
+  s_761f70cf42d74a::t_d6cd4addb6ed4c 6-9,33-36,74-109,112-113,116,122-123,126,140,153,164,174,183,185-186,204-236
+deep_causality_quantum/src/types/pipeline/config.rs
+  s_761f70cf42d74a::t_e59c2996e0bb36 22,603-604,606
+openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterReviewRun-1.txt
+  s_761f70cf42d74a::t_0fcd871d475af7 1-93
+ultragraph/tests/types/ultra_graph/graph_algo_bridges_tests.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 10-15,19-20,26-31,39,43,47-48,52
+ultragraph/src/types/storage/graph_dynamic/debug.rs
+  s_761f70cf42d74a::t_130c8c169632db 1-25
+ultragraph/src/types/storage/graph_dynamic/graph_compact.rs
+  s_761f70cf42d74a::t_130c8c169632db 47-50
+ultragraph/benches/benchmarks/bench_crud.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 39-40,46-51,94-118,127,141,157,172
+ultragraph/src/types/storage/graph_dynamic/graph_view.rs
+  s_761f70cf42d74a::t_130c8c169632db 74-75
+openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterChange1StableId.md
+  s_761f70cf42d74a::t_676020f75df1ed 22-26,30,40-42,91-96,160-162,181-186,197-199,207,209,249-250
+openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterReviewRun-2.txt
+  s_761f70cf42d74a::t_0fcd871d475af7 1-95
+openspec/changes/ultragraph-live-state-maintained-views/design.md
+  s_761f70cf42d74a::t_676020f75df1ed 98
+  s_761f70cf42d74a::t_60ef506cd6feda 11,41-42,114-118
+ultragraph/tests/types/ultra_graph/graph_algo_pathfinder_tests.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 156-191
+ultragraph/src/types/ultra_graph/traversal_iter.rs
+  s_761f70cf42d74a::t_130c8c169632db 26-32
+openspec/notes/ultragraph/RadixGraphUpdate.md
+  s_761f70cf42d74a::t_676020f75df1ed 310
+  s_761f70cf42d74a::t_f80ea623c1a950 325-326
+AGENTS.md
+  s_761f70cf42d74a::t_17ba807d5e3224 376
+  s_761f70cf42d74a::t_5faa6c8928ed07 273
+ultragraph/src/types/ultra_graph/graph_view.rs
+  s_761f70cf42d74a::t_130c8c169632db 64,72
+deep_causality_quantum/tests/types/qcm/process_factors_tests.rs
+  s_761f70cf42d74a::t_4e1ea79250ac43 115-117
+deep_causality_context/tests/types/context_types/context_graph/contextuable_graph_tests.rs
+  s_761f70cf42d74a::t_5385d1c0f57c8a 164-188,254,293,514,533,555
+examples/mathematics_examples/Cargo.toml
+  s_761f70cf42d74a::t_3508c95f403bca 9-11
+deep_causality_ethos/src/types/teloid_graph/graph.rs
+  s_761f70cf42d74a::t_bc56879c1ba341 45-53,56,63-71
+ultragraph/src/types/storage/graph_dynamic/graph_mut.rs
+  s_761f70cf42d74a::t_130c8c169632db 70-72,75-92,121,125-126,177
+deep_causality_quantum/tests/types/pipeline/config_tests.rs
+  s_761f70cf42d74a::t_4e1ea79250ac43 49-54,66-71,84
+deep_causality_quantum/Cargo.toml
+  s_761f70cf42d74a::t_e59c2996e0bb36 83,145
+  s_761f70cf42d74a::t_3684bcdfcc0275 73-75
+  s_761f70cf42d74a::t_8eca5e49f9fd0d 146-148
+ultragraph/src/types/storage/graph_dynamic/parts.rs
+  s_761f70cf42d74a::t_130c8c169632db 21-22
+ultragraph/src/types/ultra_graph/graph_evolve.rs
+  s_761f70cf42d74a::t_130c8c169632db 16-17
+deep_causality_quantum/src/types/qcm/faithfulness.rs
+  s_761f70cf42d74a::t_3684bcdfcc0275 142-147
+  s_761f70cf42d74a::t_e59c2996e0bb36 40,133-134,148-149
+  s_761f70cf42d74a::t_b4a9d4f5101704 92
+deep_causality_ethos/src/types/teloid_relation/edge_key.rs
+  s_761f70cf42d74a::t_28bb9ff6e3de4b 8-10
+ultragraph/src/types/storage/graph_dynamic/graph_traversal.rs
+  s_761f70cf42d74a::t_130c8c169632db 12-13,24-25
+deep_causality_context_store/src/lib.rs
+  s_761f70cf42d74a::t_2e31c290727efc 15-17
+openspec/notes/ultragraph/tdd/group-3.md
+  s_761f70cf42d74a::t_a795afdd3e8bf5 142-152
+  s_761f70cf42d74a::t_0d827874fe448b 130
+openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterReviewRun-3.txt
+  s_761f70cf42d74a::t_0fcd871d475af7 1-96
+deep_causality_context_store/README.md
+  s_761f70cf42d74a::t_2e31c290727efc 11-12
+ultragraph/src/types/storage/graph_dynamic/graph_freeze.rs
+  s_761f70cf42d74a::t_130c8c169632db 26-28
+ultragraph/src/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_130c8c169632db 9,23,38-39,42-45,150
+ultragraph/tests/types/ultra_graph/graph_compact_tests.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 363-378
+ultragraph/tests/types/ultra_graph/graph_mut_tests.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 601-668
+ultragraph/tests/types/ultra_graph/graph_traversal_tests.rs
+  s_761f70cf42d74a::t_ae5cb1d70bb31b 636-661
+openspec/changes/ultragraph-live-state-maintained-views/proposal.md
+  s_761f70cf42d74a::t_676020f75df1ed 37
+  s_761f70cf42d74a::t_1680165391d3a4 36,41
+openspec/changes/ultragraph-live-state-maintained-views/specs/ultragraph-edge-storage-benchmark/spec.md
+  s_761f70cf42d74a::t_dfb06ad36b8a16 17,30
+openspec/changes/ultragraph-live-state-maintained-views/specs/ultragraph-three-states/spec.md
+  s_761f70cf42d74a::t_75d71d11fe0b63 11
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_41726fdd8f6265 10,95-96
+openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterRun-1.txt
+  s_761f70cf42d74a::t_91f7bfc063b9cb 6-7
+openspec/notes/ultragraph/RadixGraphUpdateMigration.md
+  s_761f70cf42d74a::t_b091fb3e0469dc 139
+openspec/notes/ultragraph/tdd/group-1.md
+  s_761f70cf42d74a::t_4db6cd3f8a1fd7 62,65
+openspec/notes/ultragraph/tdd/group-2.md
+  s_761f70cf42d74a::t_e099cb498dcba1 21,27
+openspec/notes/ultragraph/tdd/group-4.md
+  s_761f70cf42d74a::t_0273849308da9d 25-26
+openspec/specs/causaloid-graph-index-bound/spec.md
+  s_761f70cf42d74a::t_6ee434c3c8cdfe 28
+openspec/specs/ultragraph-projection-view/spec.md
+  s_761f70cf42d74a::t_239c9cd4779d1e 75
+openspec/specs/ultragraph-stable-node-ids/spec.md
+  s_761f70cf42d74a::t_0f06094fdb3568 37-38
+Cargo.lock
+  s_d1a637d93cf699::t_b952ffae24a974 810
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ec2a432f0ceabb915c8a29b02f168bec7c1012d1",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    },
+    "s_d1a637d93cf699": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-abfb64cc26d0ec79c",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
