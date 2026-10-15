@@ -151,3 +151,103 @@ belong to task 3.1, which decides whether any value passes the gate.
 
 `bazel test //...`: 1,530 pass (the `storage_tests` suite among them); clippy clean under both
 features; `openspec validate --all`: 235 pass.
+
+## Part B: the indexed lists
+
+Run on 2026-10-16, design D5b, tasks 2.8 to 2.14.
+
+### Corner cases A–K (task 2.9)
+
+| # | Class | Instance | Test |
+|---|---|---|---|
+| A | Empty | A node with no edge, no index; the parts of an empty hub | row A of part A |
+| B | Single element | One edge through every operation, far below the threshold | `test_one_edge_through_every_operation` |
+| C | Coinciding quantities | Entries equal to targets (one key each, the accounting test) beside targets carrying two and three keys (the threshold test, the hub model), where the index's outer and inner maps differ in size | `test_the_index_is_counted_from_the_threshold_until_below_half_of_it`; `test_a_hub_across_the_threshold_in_both_directions` |
+| D | Degenerate index | The entry a swap-remove moves into the removed position, re-recorded; a target node removed from an indexed hub and the positions compacted | `test_model_based_hub_across_the_index_threshold`; `test_an_indexed_hub_survives_a_removal_and_a_compaction` |
+| E | Thresholds, both sides | 63, 64 and 65 entries growing; 33, 32 and 31 shrinking; the index counted from 64 until below 32; a second crossing upward | `test_a_hub_across_the_threshold_in_both_directions`; `test_the_index_is_counted_from_the_threshold_until_below_half_of_it` |
+| F | Zero | A weight of 0 (part A); a hub shrunk to three entries after its index left | `test_a_zero_weight_is_an_edge`; the threshold test |
+| G | Negative | n/a: positions, keys and degrees are unsigned or ordered only | — |
+| H | Exact boundary | A list of exactly `HUB_DEGREE` entries handed to `from_parts` and to `unfreeze`, the index built from entries; a pair removal taking two keys of one target on an indexed hub | `test_parts_and_unfreeze_rebuild_a_hub_above_the_threshold`; the threshold test |
+| I | Non-finite | n/a: as part A | — |
+| J | Overflow reach | n/a: positions follow the list | — |
+| K | Every payload kind | The four kinds of part A through the model; the hub tests on the field-keyed `Tagged` and the accounting on `()` | part A's model tests; the hub tests |
+
+The hub model: node 0 against 40 targets and three kinds, 2,500 steps in three phases (growing,
+shrinking, growing), with `freeze`/`unfreeze` round trips and `compact_ids` with no tombstone,
+both of which rebuild the hub's list from entries; the run asserts that the degree crossed
+`HUB_DEGREE` upward in each growing phase and fell below half of it in between.
+
+### Phase 1 (task 2.8)
+
+`IndexedList<V, S> { entries, index: Option<BTreeMap<usize, BTreeMap<Key, usize>>> }`,
+`HUB_DEGREE = 64`, `BTREE_NODE_HEADER = 16`, `BTREE_NODE_ENTRIES = 11` in
+`edge_list/indexed_list/mod.rs`; `Clone`, `Default`, `Debug` in their files; the `EdgeList` impl
+with every body `unimplemented!()`. The feature `edge-index`; `edge-log` and `edge-index`
+together hit the `compile_error!` of `edge_list/mod.rs`. Every configuration builds.
+
+### Phase 2 (task 2.10)
+
+Five hub tests in `edge_list_tests.rs` and the accounting test of row E; the accounting
+constants made three-way, the indexed list's header being a `Vec` and an `Option<BTreeMap>`,
+56 bytes (the option carries its own tag beside the map's 24). Two test defects found by the
+incumbent before the candidate ran: the shrink helper destructured the model key in the wrong
+order, and the first random drive settled near 70 edges and never fell below half, hence the
+three phases.
+
+Exit run under `--features edge-index`: **216 failed, 46 passed** of 262, every failure the
+unimplemented panic in `indexed_list/edge_list.rs`, but one: the accounting test with no node,
+which read a 56-byte header where the test said 48, corrected before the audit.
+
+### Phase 3 (task 2.11)
+
+A throwaway implementation, 15 defects by `audit_index.py` (scratchpad), the whole suite under
+`--features edge-index` against each:
+
+| Defect | Class | Tests failing |
+|---|---|---:|
+| I1 the moved entry not re-recorded after a swap-remove | named | 3 |
+| I2 the index built one entry below the threshold | named | 1, the accounting test |
+| I3 the index built one entry above the threshold | named | 1, the accounting test |
+| I4 the index never dropped | named | 1, the accounting test |
+| I4b the index dropped at half rather than below it | named | 1, the accounting test |
+| I5 an empty index after `from_entries` | named (stale index after `compact_ids`, `unfreeze`) | 3 |
+| I6 a new entry not recorded in the index | named (index and list disagree) | 5 |
+| G1 positions removed lowest first | flipped comparison | 1, the hub model |
+| G2 node headers doubled in the accounting | constant factor | 1 |
+| G3 an unindexed pair removal reports the length | early return | 11 |
+| G4 an emptied inner map kept | guard removed | 3 |
+| G5 the accounting ignores the index | plausible neighbour | 1 |
+| G6 the indexed lookup ignores the key | plausible neighbour | 6 |
+| G7 the inner index records the position after the entry | off-by-one | 4 |
+| G8 the indexed pair test reads the list's first entry | plausible neighbour | 2 |
+
+No survivor. Tolerance: none. Input variety: row C. The throwaway was discarded (216 failures
+observed again on the stub) before phase 4.
+
+### Phase 4 (task 2.12)
+
+The audited throwaway re-applied. `cargo test -p ultragraph`: 262 passed without a feature, 262
+with `--features edge-log` and 262 with `--features edge-index`; clippy clean under all three
+(three test lints fixed, no `allow`); `cargo bench -p ultragraph --features edge-index -- --test`
+passes every storage group; `bazel test //...`: 1,530 pass. Coverage: every line of
+`indexed_list/` is reached by a named test above; no coverage tool was run.
+
+### Phase 5 (task 2.13)
+
+`cargo mutants -p ultragraph --features edge-index` over `indexed_list/*.rs`: 68 mutants, 59
+caught, 9 unviable, no survivor.
+
+### Observations for group 3
+
+The bench self-test prints the candidates' memory at their default parameters, against the
+incumbent's 48.972 bytes per edge on the hub and 176.048 on the chain of 1,000:
+
+| Candidate | Hub | Chain of 1,000 |
+|---|---:|---:|
+| snapshot-log arrays, `MIN_LOG = 16` | 64.973 | 240.112 |
+| indexed lists, `HUB_DEGREE = 64` | 96.336 | 240.112 |
+
+Both headers are 56 bytes against the `Vec` list's 24, which alone adds 32 bytes per node and
+direction: on the chain, 64,064 bytes over 1,000 edges, the whole of the chain's rise. The 1.25×
+gate is 61.2 on the hub and 220.1 on the chain; neither candidate passes it at its default, and
+the chain figure is the header, which no parameter changes. The sweep of task 3.1 decides.

@@ -5,28 +5,38 @@
 
 //! The edge lists of the Dynamic state, one per node and direction, behind one trait, so the
 //! storage candidates of `ultragraph-live-state-maintained-views` are measured against the same
-//! graph code. The temporary Cargo feature `edge-log` selects the snapshot-log arrays; without
-//! it the per-node `Vec` lists are used.
+//! graph code. The temporary Cargo feature `edge-log` selects the snapshot-log arrays and
+//! `edge-index` the `Vec` lists indexed on high-degree nodes; without either the per-node `Vec`
+//! lists are used. The two features together do not build.
 
 use alloc::vec::Vec;
 
 use crate::EdgeKey;
 
+#[cfg(all(feature = "edge-log", feature = "edge-index"))]
+compile_error!("`edge-log` and `edge-index` each select one edge storage; enable at most one");
+
 #[cfg(feature = "edge-log")]
 pub(crate) mod edge_array;
-#[cfg(not(feature = "edge-log"))]
+#[cfg(feature = "edge-index")]
+pub(crate) mod indexed_list;
+#[cfg(not(any(feature = "edge-log", feature = "edge-index")))]
 pub(crate) mod vec_list;
 
 #[cfg(feature = "edge-log")]
 pub(crate) use edge_array::EdgeArray;
-#[cfg(not(feature = "edge-log"))]
+#[cfg(feature = "edge-index")]
+pub(crate) use indexed_list::IndexedList;
+#[cfg(not(any(feature = "edge-log", feature = "edge-index")))]
 pub(crate) use vec_list::VecList;
 
 /// The list type behind every node's forward and backward edges.
-#[cfg(not(feature = "edge-log"))]
+#[cfg(not(any(feature = "edge-log", feature = "edge-index")))]
 pub(crate) type Lists<V, S> = VecList<V, S>;
 #[cfg(feature = "edge-log")]
 pub(crate) type Lists<V, S> = EdgeArray<V, S>;
+#[cfg(feature = "edge-index")]
+pub(crate) type Lists<V, S> = IndexedList<V, S>;
 
 /// A node's outgoing edges as `(target, payload)`, keyed by the payload's `edge_key`.
 pub(crate) type Forward<W> = Lists<W, ByPayload>;

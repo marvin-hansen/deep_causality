@@ -121,8 +121,9 @@ than each of the incumbent's and its mean lies below the incumbent's by more tha
 spread times the incumbent's mean. Memory per edge is deterministic: it is computed once per
 configuration from the capacity of every buffer the storage holds, through a `#[doc(hidden)]`
 function in `src/utils/utils_tests.rs`; a `BTreeMap` exposes no capacity, so the index counts its
-entries times the size of a key, a value and a child pointer, plus one node header per eleven entries,
-the node's key count at B = 6. A
+entries times the size of a key, a value and a child pointer, plus one 16-byte node header (the
+parent pointer, the index in the parent and the length) per eleven entries, the node's key count
+at B = 6. A
 counting allocator would need `unsafe impl GlobalAlloc`, which `unsafe_code = "forbid"` refuses in
 the bench target as everywhere else. `MIN_LOG` and `HUB_DEGREE` are each the swept value with the fastest hub update among
 those whose memory per edge stays at most 1.25 times the `Vec` lists'; a challenger with no such

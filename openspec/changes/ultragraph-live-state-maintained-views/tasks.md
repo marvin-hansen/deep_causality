@@ -39,24 +39,24 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
       `--features edge-log` with the same executed count; full coverage under each
 - [x] 2.6 Phase 5: `scripts/mutants.sh` over the candidate's files; resolve every survivor
 - [x] 2.7 Commit message for the snapshot-log candidate
-- [ ] 2.8 Phase 1: the indexed-lists candidate (design D5b) behind the storage trait with
+- [x] 2.8 Phase 1: the indexed-lists candidate (design D5b) behind the storage trait with
       `unimplemented!()` bodies, selected by the temporary Cargo feature `edge-index`; `edge-log` and
       `edge-index` together are a `compile_error!`
-- [ ] 2.9 Fill the A–K table for the candidate (rows E: a list at `HUB_DEGREE`, one below and one
+- [x] 2.9 Fill the A–K table for the candidate (rows E: a list at `HUB_DEGREE`, one below and one
       above, and falling back through half of it; K: the four payload kinds)
-- [ ] 2.10 Phase 2: tests through the public API against the same model, driving a node across the
+- [x] 2.10 Phase 2: tests through the public API against the same model, driving a node across the
       threshold in both directions with keyed inserts, removals, `remove_edge`, `compact_ids`,
       `from_parts`, `freeze` and `unfreeze`, the memory accounting showing the index present and
       absent; the complete change-1 suite runs with `--features edge-index`; observe failing; record
-- [ ] 2.11 Phase 3: inject the design D7 index defects (an entry not re-recorded after a swap-remove;
+- [x] 2.11 Phase 3: inject the design D7 index defects (an entry not re-recorded after a swap-remove;
       the index built one below or above the threshold or not dropped below half of it; a stale index
       after `compact_ids` or `unfreeze`; a lookup answered by the index where the list disagrees) and
       the nine generic classes; record; discard
-- [ ] 2.12 Phase 4: implement the candidate; `cargo test -p ultragraph` passes without a feature, with
+- [x] 2.12 Phase 4: implement the candidate; `cargo test -p ultragraph` passes without a feature, with
       `--features edge-log` and with `--features edge-index`, all with the same executed count; full
       coverage under each
-- [ ] 2.13 Phase 5: `scripts/mutants.sh` over the candidate's files; resolve every survivor
-- [ ] 2.14 Commit message for the indexed-lists candidate
+- [x] 2.13 Phase 5: `scripts/mutants.sh` over the candidate's files; resolve every survivor
+- [x] 2.14 Commit message for the indexed-lists candidate
 
 ## 3. The edge-storage decision
 

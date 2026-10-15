@@ -11,19 +11,23 @@
 //! node's forward and backward list for `k` entries. The node table is not counted.
 //!
 //! The literals depend on the edge-storage candidate the build selects, so each sits in a
-//! constant with its derivation for both: the per-node `Vec` list, whose header is one `Vec`
-//! and whose entries are `(other, value)`; and the snapshot-log array (`--features edge-log`),
+//! constant with its derivation for all three: the per-node `Vec` list, whose header is one
+//! `Vec` and whose entries are `(other, value)`; the snapshot-log array (`--features edge-log`),
 //! whose header is two `Vec`s and a count, and whose reserved buffer is the log, an entry being
-//! `other` beside a put of the value, the removal of a key or the removal of every key.
+//! `other` beside a put of the value, the removal of a key or the removal of every key; and the
+//! indexed list (`--features edge-index`), the `Vec` list beside an optional index, which is
+//! absent below 64 entries and counted by the accounting's `BTreeMap` rule above.
 
 use ultragraph::utils::utils_tests::{edge_storage_bytes, memory_per_edge};
 use ultragraph::*;
 
 const LOG: bool = cfg!(feature = "edge-log");
+const INDEX: bool = cfg!(feature = "edge-index");
 
 /// The list header: a `Vec` (24) for the `Vec` list; two `Vec`s and a `usize` (56) for the
-/// snapshot-log array.
-const HEADER: usize = if LOG { 56 } else { 24 };
+/// snapshot-log array; a `Vec` and an `Option<BTreeMap>` (24 + 32, the option carrying its own
+/// tag) for the indexed list, also 56.
+const HEADER: usize = if LOG || INDEX { 56 } else { 24 };
 /// One reserved entry of a list of `()` values, forward or backward: `(usize, ())` is 8; a log
 /// entry of a `()` put or removal is a `usize` and a one-byte tag, padded to 16.
 const UNIT: usize = if LOG { 16 } else { 8 };
@@ -273,10 +277,13 @@ fn test_the_buffers_grow_where_the_candidate_grows_them() {
     // cleared log, which keeps its capacity, 384; the 17th put lands in that log, still 384.
     // Each target's backward log holds one put at capacity 4 × 16 = 64.
     //   2,016 + 256 + 15 × 64 = 3,232; 2,016 + 384 + 16 × 64 = 3,424; 2,016 + 384 + 17 × 64 = 3,488.
+    // Indexed list: the `Vec` list's buffers, no index below 64 entries, behind 56-byte headers:
+    //   2,016 + 608; 2,016 + 640; 2,016 + 800.
+    let outer = 2 * 18 * HEADER;
     let expected = if LOG {
-        [3_232, 3_424, 3_488]
+        [outer + 1_216, outer + 1_408, outer + 1_472]
     } else {
-        [1_472, 1_504, 1_664]
+        [outer + 608, outer + 640, outer + 800]
     };
     assert_eq!(
         bytes_after_k_edges(15),
@@ -305,11 +312,12 @@ fn test_a_replacement_does_not_grow_the_snapshot() {
     }
     g.add_edge(0, 1, ()).unwrap();
     assert_eq!(g.number_edges(), 15);
-    // `Vec` list: as after 15 edges, 1,472. Snapshot-log array: the forward log of node 0 holds
-    // 16 entries at capacity 16 × 16 = 256 and compacts into a snapshot of exactly 15 × 8 = 120,
-    // 376 with the cleared log; the replacement touches no backward list, 15 × 64 = 960;
-    // 2,016 + 376 + 960 = 3,352. A snapshot sized for 16 would read 3,360.
-    let expected = if LOG { 3_352 } else { 1_472 };
+    // `Vec` list: as after 15 edges, 1,472, and the indexed list likewise behind its headers.
+    // Snapshot-log array: the forward log of node 0 holds 16 entries at capacity 16 × 16 = 256
+    // and compacts into a snapshot of exactly 15 × 8 = 120, 376 with the cleared log; the
+    // replacement touches no backward list, 15 × 64 = 960; 2,016 + 376 + 960 = 3,352. A
+    // snapshot sized for 16 would read 3,360.
+    let expected = 2 * 18 * HEADER + if LOG { 1_336 } else { 608 };
     assert_eq!(edge_storage_bytes(&g), expected);
 }
 
@@ -326,9 +334,9 @@ fn test_a_failed_pair_removal_writes_nothing() {
         g.add_edge(0, t, ()).unwrap();
     }
     assert!(g.remove_edge(0, 16).is_err());
-    // As after 15 edges: 1,472 for the `Vec` list; 3,232 for the snapshot-log array, whose
-    // forward log of node 0 still holds 15 puts short of the trigger.
-    let expected = if LOG { 3_232 } else { 1_472 };
+    // As after 15 edges: 1,472 for the `Vec` list, 2,016 + 608 indexed; 3,232 for the
+    // snapshot-log array, whose forward log of node 0 still holds 15 puts short of the trigger.
+    let expected = 2 * 18 * HEADER + if LOG { 1_216 } else { 608 };
     assert_eq!(edge_storage_bytes(&g), expected);
 }
 
@@ -346,12 +354,13 @@ fn test_a_keyed_removal_shrinks_the_snapshot_by_one() {
     }
     g.remove_edge_keyed(0, 1, ()).unwrap();
     assert_eq!(g.number_edges(), 14);
-    // `Vec` list: 1,472, as after 15 edges. Snapshot-log array: node 0's forward log holds 15
-    // puts and the removal, 16 entries at capacity 16 × 16 = 256, and compacts into a snapshot
-    // of exactly 14 × 8 = 112: 368; node 1's backward log holds its put and the removal at
-    // capacity 4 × 16 = 64, as every other target's: 15 × 64 = 960; 2,016 + 368 + 960 = 3,344.
-    // A count left at 15 would read 3,352, one raised to 16 would read 3,360.
-    let expected = if LOG { 3_344 } else { 1_472 };
+    // `Vec` list: 1,472, as after 15 edges, and the indexed list likewise behind its headers.
+    // Snapshot-log array: node 0's forward log holds 15 puts and the removal, 16 entries at
+    // capacity 16 × 16 = 256, and compacts into a snapshot of exactly 14 × 8 = 112: 368; node
+    // 1's backward log holds its put and the removal at capacity 4 × 16 = 64, as every other
+    // target's: 15 × 64 = 960; 2,016 + 368 + 960 = 3,344. A count left at 15 would read 3,352,
+    // one raised to 16 would read 3,360.
+    let expected = 2 * 18 * HEADER + if LOG { 1_328 } else { 608 };
     assert_eq!(edge_storage_bytes(&g), expected);
 }
 
@@ -381,6 +390,63 @@ fn test_a_pair_removal_shrinks_the_snapshot_by_every_key() {
     // 464; node 1's backward log holds two puts and the removal at capacity 4 × 16 = 64, as the
     // thirteen others': 896. 1,680 + 464 + 896 = 3,040. A count lowered by one key only would
     // read 3,056; one raised by the two keys 3,104; one divided by them 2,944.
-    let expected = if LOG { 3_040 } else { 1_872 };
+    // Indexed list: the `Vec` list's buffers behind 56-byte headers, 1,680 + 1,152.
+    let expected = 2 * 15 * HEADER + if LOG { 1_360 } else { 1_152 };
     assert_eq!(edge_storage_bytes(&g), expected);
+}
+
+// --- The index follows the degree threshold (the indexed-lists candidate, row E) -------------
+
+/// Node 0 of 65 nodes, built without an edge hint, receives one `()` edge to each of nodes 1 to
+/// 64; the byte count is read at 63 and 64 edges, then after keyed removals down to 32 and 31.
+/// The indexed list's index appears at 64 and leaves below 32; the other candidates' buffers
+/// only grow.
+#[test]
+fn test_the_index_is_counted_from_the_threshold_until_below_half_of_it() {
+    let mut g: UltraGraph<i32> = UltraGraph::with_capacity(65, None);
+    for i in 0..65 {
+        g.add_node(i).unwrap();
+    }
+    for t in 1..=63 {
+        g.add_edge(0, t, ()).unwrap();
+    }
+    let at_63 = edge_storage_bytes(&g);
+    g.add_edge(0, 64, ()).unwrap();
+    let at_64 = edge_storage_bytes(&g);
+    for t in 1..=32 {
+        g.remove_edge_keyed(0, t, ()).unwrap();
+    }
+    assert_eq!(g.number_edges(), 32);
+    let at_32 = edge_storage_bytes(&g);
+    g.remove_edge_keyed(0, 33, ()).unwrap();
+    let at_31 = edge_storage_bytes(&g);
+
+    // Outer vectors: 2 × 65 × HEADER: 3,120 for the `Vec` list, 7,280 for the other two.
+    // `Vec` list: node 0's forward list, pushed 63 and 64 times, sits at capacity 64 × 8 = 512
+    // and keeps it through the removals; each target's backward list holds its one entry at
+    // capacity 4 × 8 = 32 and keeps that capacity once emptied: 63 × 32, then 64 × 32 = 2,048.
+    //   3,120 + 512 + 2,016 = 5,648; then 5,680 at 64, 32 and 31 edges.
+    // Snapshot-log array: node 0's log compacts at the 16th, 32nd and 64th put (the trigger
+    // is the snapshot's length once that exceeds 16): at 63 puts a snapshot of 32 × 8 = 256
+    // beside a log of 31 at capacity 32 × 16 = 512, 768; at 64 a snapshot of 64 × 8 = 512 beside
+    // the cleared log at capacity 32, 1,024; 32 removals fill that log exactly, 1,024; the 33rd
+    // grows it to 64 × 16, 1,536. Each target's backward log holds a put, then the removal, at
+    // capacity 4 × 16 = 64: 63 × 64, then 64 × 64 = 4,096.
+    //   7,280 + 768 + 4,032 = 12,080; 7,280 + 1,024 + 4,096 = 12,400; 12,400; 7,280 + 1,536 + 4,096 = 12,912.
+    // Indexed list: the `Vec` list's buffers, plus from 64 entries the index: an outer map of
+    // one entry per target, each a `usize` key, a 24-byte inner map and an 8-byte child pointer,
+    // 40 bytes, with a 16-byte node header per 11 entries; and one inner map per target holding
+    // one entry of a `()` key, a `usize` position and a child pointer, 16 bytes, plus one header.
+    //   64 targets: 64 × 40 + 6 × 16 = 2,656 and 64 × 32 = 2,048: 4,704.
+    //   32 targets: 32 × 40 + 3 × 16 = 1,328 and 32 × 32 = 1,024: 2,352. Below 32: none.
+    //   7,280 + 512 + 2,016 = 9,808; 7,280 + 512 + 4,704 + 2,048 = 14,544;
+    //   7,280 + 512 + 2,352 + 2,048 = 12,192; 7,280 + 512 + 2,048 = 9,840.
+    let expected = if LOG {
+        [12_080, 12_400, 12_400, 12_912]
+    } else if INDEX {
+        [9_808, 14_544, 12_192, 9_840]
+    } else {
+        [5_648, 5_680, 5_680, 5_680]
+    };
+    assert_eq!([at_63, at_64, at_32, at_31], expected);
 }

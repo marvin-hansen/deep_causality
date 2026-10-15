@@ -634,3 +634,266 @@ fn test_parts_given_out_of_order_are_looked_up_correctly() {
     inbound.sort_unstable();
     assert_eq!(inbound, vec![1]);
 }
+
+// --- A hub across the index threshold (the indexed-lists candidate, rows C, E, H) -----------
+
+/// The indexed-lists candidate's `HUB_DEGREE`: a list builds its index at this many entries
+/// and drops it below half of it.
+const HUB_DEGREE: usize = 64;
+
+/// Random operations on one hub, node 0, against `targets` targets and the kinds 0, 1 and 2,
+/// checked against the model after each, in three phases: a growing phase (puts 60 %, keyed
+/// removals 20 %, pair removals 6 %), a shrinking phase (20 %, 55 %, 10 %) and a growing phase
+/// again, each with a `freeze`/`unfreeze` round trip and `compact_ids` with no tombstone at
+/// 5 % apiece, both of which rebuild the hub's list from entries; the rest repeated reads. The
+/// hub's degree crosses `HUB_DEGREE` upward in each growing phase and falls below half of it in
+/// the shrinking one; the model is the `BTreeMap` of `drive`.
+fn drive_hub(seed: u64, targets: usize, steps: usize) {
+    let mut rng = Xoshiro256::from_seed(seed);
+    let n = targets + 1;
+    let mut g: UltraGraphWeighted<u8, Tagged> = nodes(n);
+    let mut m: Model<Tagged> = Model::new(n);
+    let keys = [0u8, 1, 2];
+    let mut peak = 0;
+    let mut trough = usize::MAX;
+    let mut crossed_up = 0;
+    let mut below_half = 0;
+
+    for step in 0..steps {
+        let roll = rng.random_range(0..100usize);
+        let t = 1 + rng.random_range(0..targets);
+        let k = keys[rng.random_range(0..3usize)];
+        let before = m.edges_of(0).len();
+        let shrinking = (2 * steps / 5..7 * steps / 10).contains(&step);
+        let (puts, keyed, pairs) = if shrinking {
+            (20, 75, 85)
+        } else {
+            (60, 80, 86)
+        };
+        let op = if roll < puts {
+            0
+        } else if roll < keyed {
+            1
+        } else if roll < pairs {
+            2
+        } else if roll < pairs + 5 {
+            3
+        } else if roll < pairs + 10 {
+            4
+        } else {
+            5
+        };
+        match op {
+            0 => {
+                let w = tagged(k, rng.random_range(0..1_000u32));
+                m.add_edge(0, t, w);
+                assert_eq!(g.add_edge(0, t, w), Ok(()), "step {step}: add_edge(0, {t})");
+            }
+            1 => {
+                let expected = if m.remove_edge_keyed(0, t, k) {
+                    Ok(())
+                } else {
+                    Err(GraphError::EdgeNotFoundError {
+                        source: 0,
+                        target: t,
+                    })
+                };
+                assert_eq!(g.remove_edge_keyed(0, t, k), expected, "step {step}");
+            }
+            2 => {
+                let expected = if m.remove_edge(0, t) > 0 {
+                    Ok(())
+                } else {
+                    Err(GraphError::EdgeNotFoundError {
+                        source: 0,
+                        target: t,
+                    })
+                };
+                assert_eq!(g.remove_edge(0, t), expected, "step {step}");
+            }
+            3 => {
+                g.freeze();
+                g.unfreeze();
+            }
+            4 => {
+                let table = g.compact_ids().unwrap();
+                assert!(table.iter().enumerate().all(|(p, new)| *new == Some(p)));
+            }
+            _ => {}
+        }
+        let after = m.edges_of(0).len();
+        if before < HUB_DEGREE && after >= HUB_DEGREE {
+            crossed_up += 1;
+        }
+        if before >= HUB_DEGREE / 2 && after < HUB_DEGREE / 2 {
+            below_half += 1;
+        }
+        peak = peak.max(after);
+        trough = trough.min(after);
+        check(&g, &m, &keys, step);
+    }
+    assert!(
+        peak > HUB_DEGREE + 8,
+        "the hub never rose clearly above the threshold: {peak}"
+    );
+    assert!(
+        trough < HUB_DEGREE / 2 - 8,
+        "the hub never fell clearly below half: {trough}"
+    );
+    assert!(
+        crossed_up >= 2 && below_half >= 1,
+        "crossings: {crossed_up} up, {below_half} below half"
+    );
+}
+
+#[test]
+fn test_model_based_hub_across_the_index_threshold() {
+    drive_hub(0x5EED_2005, 40, 2_500);
+}
+
+/// The hub grows one keyed edge at a time to one below, at and one above `HUB_DEGREE`, with
+/// every keyed read and the pair test answered at each size; then it shrinks by keyed removals
+/// to half, one below half and further, the same reads answered; then it grows across the
+/// threshold again. Targets carry one to three keys, so entries and targets differ.
+#[test]
+fn test_a_hub_across_the_threshold_in_both_directions() {
+    let targets = HUB_DEGREE + 8;
+    let mut g: UltraGraphWeighted<u8, Tagged> = nodes(targets + 1);
+    let mut m: Model<Tagged> = Model::new(targets + 1);
+    let keys = [0u8, 1, 2];
+    // Edge i goes to target 1 + i / 2 with kind i % 2, so every second target carries two keys.
+    let edge = |i: usize| (1 + i / 2, (i % 2) as u8);
+    let mut count = 0;
+    let grow_to = |g: &mut UltraGraphWeighted<u8, Tagged>,
+                   m: &mut Model<Tagged>,
+                   count: &mut usize,
+                   size: usize| {
+        while *count < size {
+            let (t, k) = edge(*count);
+            let w = tagged(k, *count as u32);
+            m.add_edge(0, t, w);
+            g.add_edge(0, t, w).unwrap();
+            *count += 1;
+        }
+        check(g, m, &keys, size);
+    };
+    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE - 1);
+    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE);
+    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE + 1);
+    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE + 16);
+
+    // A pair removal on the indexed hub takes both keys of its target.
+    assert_eq!(g.remove_edge(0, 1), Ok(()));
+    assert_eq!(m.remove_edge(0, 1), 2);
+    check(&g, &m, &keys, 1_000);
+
+    // Keyed removals, newest first, down to half, one below half and to a handful.
+    let shrink_to = |g: &mut UltraGraphWeighted<u8, Tagged>, m: &mut Model<Tagged>, size: usize| {
+        while m.edges_of(0).len() > size {
+            let (_, t, k) = *m.edges.keys().next_back().unwrap();
+            assert!(m.remove_edge_keyed(0, t, k));
+            g.remove_edge_keyed(0, t, k).unwrap();
+        }
+        check(g, m, &keys, size);
+    };
+    shrink_to(&mut g, &mut m, HUB_DEGREE / 2 + 1);
+    shrink_to(&mut g, &mut m, HUB_DEGREE / 2);
+    shrink_to(&mut g, &mut m, HUB_DEGREE / 2 - 1);
+    shrink_to(&mut g, &mut m, 3);
+
+    // Back across the threshold, with the removed pair re-added along the way.
+    let mut count = m.edges_of(0).len();
+    for i in 0..HUB_DEGREE + 5 {
+        let (t, k) = (1 + (i % targets), (i % 3) as u8);
+        let w = tagged(k, 5_000 + i as u32);
+        m.add_edge(0, t, w);
+        g.add_edge(0, t, w).unwrap();
+        count += 1;
+        if count == HUB_DEGREE - 1 || count == HUB_DEGREE || count == HUB_DEGREE + 1 {
+            check(&g, &m, &keys, 2_000 + count);
+        }
+    }
+    check(&g, &m, &keys, 3_000);
+}
+
+/// A hub above the threshold loses a target node and is compacted: every keyed lookup on the
+/// hub answers at the remapped positions, and keyed removal and insertion still work.
+#[test]
+fn test_an_indexed_hub_survives_a_removal_and_a_compaction() {
+    let targets = HUB_DEGREE + 6;
+    let mut g: UltraGraphWeighted<u8, Tagged> = nodes(targets + 1);
+    for t in 1..=targets {
+        g.add_edge(0, t, tagged(1, t as u32)).unwrap();
+    }
+    g.add_edge(0, 5, tagged(2, 500)).unwrap();
+    assert_eq!(g.number_edges(), targets + 1);
+    // Removing target 3 leaves a tombstone below every other target.
+    g.remove_node(3).unwrap();
+    let table = g.compact_ids().unwrap();
+    assert_eq!(table[3], None);
+    for (t, new) in table.iter().enumerate().skip(1) {
+        if t == 3 {
+            assert_eq!(*new, None);
+            continue;
+        }
+        let new = new.unwrap();
+        assert!(g.contains_edge_keyed(0, new, 1), "target {t} at {new}");
+        assert_eq!(g.get_node(new), Some(&(t as u8)));
+    }
+    assert!(g.contains_edge_keyed(0, table[5].unwrap(), 2));
+    assert_eq!(g.number_edges(), targets);
+    assert_eq!(g.remove_edge_keyed(0, table[5].unwrap(), 2), Ok(()));
+    assert!(!g.contains_edge_keyed(0, table[5].unwrap(), 2));
+    assert!(g.contains_edge_keyed(0, table[5].unwrap(), 1));
+    assert_eq!(g.add_edge(0, table[7].unwrap(), tagged(0, 7)), Ok(()));
+    assert!(g.contains_edge_keyed(0, table[7].unwrap(), 0));
+    assert_eq!(g.number_edges(), targets);
+    // The frozen graph agrees.
+    g.freeze();
+    assert_eq!(g.number_edges(), targets);
+    assert_eq!(g.outbound_edges(0).unwrap().count(), targets);
+}
+
+/// `from_parts` given a hub above the threshold in no particular order: keyed lookups, a keyed
+/// removal and a pair removal answer from the entries, and `unfreeze` of such a hub likewise.
+#[test]
+fn test_parts_and_unfreeze_rebuild_a_hub_above_the_threshold() {
+    let targets = HUB_DEGREE + 10;
+    let nodes: Vec<Option<u8>> = (0..=targets).map(|p| Some(p as u8)).collect();
+    let mut hub: Vec<(usize, Tagged)> = (1..=targets).map(|t| (t, tagged(0, t as u32))).collect();
+    hub.extend(
+        (1..=targets)
+            .step_by(3)
+            .map(|t| (t, tagged(1, 100 + t as u32))),
+    );
+    hub.reverse();
+    let total = hub.len();
+    let mut edges = vec![hub];
+    edges.extend((1..=targets).map(|_| Vec::new()));
+    let mut d: DynamicGraph<u8, Tagged> = DynamicGraph::from_parts((nodes, edges, None));
+    assert_eq!(d.number_edges(), total);
+    for t in 1..=targets {
+        assert!(d.contains_edge_keyed(0, t, 0), "target {t}");
+        assert_eq!(
+            d.contains_edge_keyed(0, t, 1),
+            (t - 1) % 3 == 0,
+            "target {t} key 1"
+        );
+    }
+    assert_eq!(d.remove_edge_keyed(0, 4, 1), Ok(()));
+    assert!(!d.contains_edge_keyed(0, 4, 1));
+    assert!(d.contains_edge_keyed(0, 4, 0));
+    assert_eq!(d.remove_edge(0, 7), Ok(()));
+    assert!(!d.contains_edge(0, 7));
+    assert_eq!(d.number_edges(), total - 3);
+
+    let frozen = d.freeze();
+    let mut back = frozen.unfreeze();
+    assert_eq!(back.number_edges(), total - 3);
+    assert!(back.contains_edge_keyed(0, 10, 1));
+    assert_eq!(back.remove_edge_keyed(0, 10, 1), Ok(()));
+    assert!(!back.contains_edge_keyed(0, 10, 1));
+    assert_eq!(back.add_edge(0, 7, tagged(2, 7)), Ok(()));
+    assert!(back.contains_edge_keyed(0, 7, 2));
+    assert_eq!(back.number_edges(), total - 3);
+}
