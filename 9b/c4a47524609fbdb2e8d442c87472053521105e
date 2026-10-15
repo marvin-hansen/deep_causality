@@ -1,0 +1,56 @@
+openspec/specs/context-store-crate-identity/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 4,100-123
+openspec/changes/ultragraph-live-state-maintained-views/design.md
+  s_761f70cf42d74a::t_3b8aaeb687bfd4 86,88,91-106,117-122,149,155,165-168,187-190,195-196
+openspec/specs/ultragraph-keyed-edges/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-101
+openspec/specs/context-graph-stable-indices/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-71
+openspec/changes/ultragraph-live-state-maintained-views/proposal.md
+  s_761f70cf42d74a::t_3b8aaeb687bfd4 30-39,71
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_3b8aaeb687bfd4 23,41-59,63-65,68
+openspec/specs/qcl-hypothesis/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 109,122,126-136
+openspec/specs/ultragraph-dynamic-traversal/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-46
+openspec/specs/qcl-pipeline/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 104,114-118
+  s_761f70cf42d74a::t_44bba5681172e7 119
+openspec/specs/ultragraph-projection-view/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-99
+openspec/changes/ultragraph-live-state-maintained-views/specs/ultragraph-edge-storage-benchmark/spec.md
+  s_761f70cf42d74a::t_3b8aaeb687bfd4 3-4,7-12,15,24,37,41
+openspec/notes/ultragraph/RadixGraphUpdate.md
+  s_761f70cf42d74a::t_3b8aaeb687bfd4 158,286,288,305-315,608,619-624
+openspec/specs/teloid-graph-relations/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-35
+openspec/specs/ultragraph-stable-node-ids/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-112
+openspec/specs/causaloid-graph-index-bound/spec.md
+  s_761f70cf42d74a::t_b53ed93fafb560 1-65
+openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterChange1StableId.md
+  s_761f70cf42d74a::t_f5b499db8609be 237-244
+openspec/changes/archive/2026-10-15-ultragraph-stable-ids-keyed-edges/design.md
+  s_761f70cf42d74a::t_1e4ad2f3f6065b 160
+openspec/changes/archive/2026-10-15-ultragraph-stable-ids-keyed-edges/tasks.md
+  s_761f70cf42d74a::t_32deef740a2442 158
+openspec/notes/ultragraph/tdd/group-4.md
+  s_761f70cf42d74a::t_0d06d2af96d088 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9bc4a47524609fbdb2e8d442c87472053521105e",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
