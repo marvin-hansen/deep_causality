@@ -1,0 +1,34 @@
+deep_causality_ethos/src/errors/deontic_error.rs
+  s_761f70cf42d74a::t_88b2489d4bf851 32-35,89-92
+  s_761f70cf42d74a::t_ede9406c21dc69 93-94
+deep_causality_ethos/src/types/teloid_graph/teloidable.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 67,86
+deep_causality_ethos/tests/types/teloid_graph/teloidable_tests.rs
+  s_761f70cf42d74a::t_d3d447e1d24bdf 69-84
+  s_761f70cf42d74a::t_7f5a15d4363a53 1-68,85-160
+deep_causality_ethos/tests/types/teloid_graph/mod.rs
+  s_761f70cf42d74a::t_7f5a15d4363a53 7-8
+deep_causality_ethos/src/types/teloid_graph/graph.rs
+  s_761f70cf42d74a::t_6c0eb41941fd69 5,43-64
+  s_761f70cf42d74a::t_80c07dbae77a88 65-66
+deep_causality_ethos/tests/errors/deontic_error_tests.rs
+  s_761f70cf42d74a::t_eb0460ad2f8ab0 83-94
+deep_causality_ethos/tests/types/effect_ethos/effect_ethos_linking_tests.rs
+  s_761f70cf42d74a::t_dcce92ddb2da60 61-130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "eb660b8ea9a7ad997639cde7f09275c1dbbd63e3",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
