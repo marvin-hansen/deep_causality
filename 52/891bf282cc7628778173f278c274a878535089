@@ -1,0 +1,27 @@
+deep_causality_ethos/tests/types/teloid_relation/mod.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 6-7
+deep_causality_ethos/tests/types/teloid_relation/edge_key_tests.rs
+  s_761f70cf42d74a::t_76a1c7daf2228c 17-18
+  s_761f70cf42d74a::t_7a56f4d8eebd06 1-16,19
+deep_causality_ethos/src/types/teloid_relation/mod.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 6
+deep_causality_ethos/src/types/teloid_relation/edge_key.rs
+  s_761f70cf42d74a::t_b86694675b8a83 13
+  s_761f70cf42d74a::t_7a56f4d8eebd06 1-12,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "52891bf282cc7628778173f278c274a878535089",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
