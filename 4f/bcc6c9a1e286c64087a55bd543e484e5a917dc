@@ -1,0 +1,75 @@
+ultragraph/src/types/ultra_graph/memory.rs
+  s_761f70cf42d74a::t_1ecd225f578b6e 1-4,6-13,18-19
+  s_761f70cf42d74a::t_6dc2a4f55a4dfc 5,14-17
+ultragraph/benches/benchmarks/data.rs
+  s_761f70cf42d74a::t_6173d98caa164c 22-33
+openspec/notes/ultragraph/tdd/live-group-1.md
+  s_761f70cf42d74a::t_c07c488d37e205 1-119
+ultragraph/tests/utils/utils_tests_tests.rs
+  s_761f70cf42d74a::t_ba98c1eefc2972 1-207
+ultragraph/tests/mod.rs
+  s_761f70cf42d74a::t_ba98c1eefc2972 9
+ultragraph/tests/utils/mod.rs
+  s_761f70cf42d74a::t_ba98c1eefc2972 1-7
+ultragraph/benches/benchmarks/mod.rs
+  s_761f70cf42d74a::t_6173d98caa164c 9
+ultragraph/benches/benchmarks/utils.rs
+  s_761f70cf42d74a::t_6173d98caa164c 8,11,95-112,115-122,124-127,130-162
+  s_761f70cf42d74a::t_d292a3127f7b1a 113-114,123,128-129
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group1-IncumbentRun-1.txt
+  s_761f70cf42d74a::t_e4c2306da99349 1-236
+ultragraph/src/utils/utils_tests.rs
+  s_761f70cf42d74a::t_6dc2a4f55a4dfc 5,58-59
+  s_761f70cf42d74a::t_1ecd225f578b6e 40-57,60
+ultragraph/src/types/ultra_graph/mod.rs
+  s_761f70cf42d74a::t_1ecd225f578b6e 18
+openspec/changes/ultragraph-live-state-maintained-views/proposal.md
+  s_761f70cf42d74a::t_f5c3558933242e 69
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group1-IncumbentRun-3.txt
+  s_761f70cf42d74a::t_1899200d7d9c8f 1-298
+ultragraph/benches/bench_main.rs
+  s_761f70cf42d74a::t_6173d98caa164c 16
+ultragraph/src/types/storage/graph_csm/mod.rs
+  s_761f70cf42d74a::t_1ecd225f578b6e 24
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_f5c3558933242e 7,65,96
+  s_761f70cf42d74a::t_a57f819d378028 10,15,19,21
+ultragraph/benches/benchmarks/bench_crud.rs
+  s_761f70cf42d74a::t_6173d98caa164c 32
+openspec/changes/ultragraph-live-state-maintained-views/specs/ultragraph-edge-storage-benchmark/spec.md
+  s_761f70cf42d74a::t_f5c3558933242e 28
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group1-IncumbentRun-2.txt
+  s_761f70cf42d74a::t_a7fae2f5e2b04d 1-305
+openspec/notes/ultragraph/BenchAfterChange2LiveView/BenchAfterChange2LiveView.md
+  s_761f70cf42d74a::t_a57f819d378028 1-81
+ultragraph/src/types/storage/graph_dynamic/memory.rs
+  s_761f70cf42d74a::t_1ecd225f578b6e 1-5,8-16,30-31
+  s_761f70cf42d74a::t_6dc2a4f55a4dfc 6-7,17-29
+ultragraph/benches/benchmarks/bench_storage.rs
+  s_761f70cf42d74a::t_6dc2a4f55a4dfc 59,213,223
+  s_761f70cf42d74a::t_6173d98caa164c 1-58,60-72,84-110,128-195,199-212,214-222,224-249
+  s_761f70cf42d74a::t_d292a3127f7b1a 73-83,111-127,196-198
+ultragraph/src/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_1ecd225f578b6e 16
+ultragraph/src/types/storage/graph_csm/memory.rs
+  s_761f70cf42d74a::t_1ecd225f578b6e 1-4,6,8,16-24,26-27
+  s_761f70cf42d74a::t_6dc2a4f55a4dfc 5,7,9-15,25
+ultragraph/BUILD.bazel
+  s_761f70cf42d74a::t_ba98c1eefc2972 119-137
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4fbcc6c9a1e286c64087a55bd543e484e5a917dc",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
