@@ -1,0 +1,30 @@
+ultragraph/tests/traits/mod.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 1-6
+ultragraph/tests/mod.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 7
+ultragraph/Cargo.toml
+  s_761f70cf42d74a::t_a7897fb6169a2c 36-38
+ultragraph/tests/traits/edge_key_tests.rs
+  s_761f70cf42d74a::t_7a56f4d8eebd06 1-30
+ultragraph/src/lib.rs
+  s_761f70cf42d74a::t_688a4714061d26 28
+ultragraph/BUILD.bazel
+  s_761f70cf42d74a::t_7a56f4d8eebd06 83-100
+  s_761f70cf42d74a::t_57ccc23e7cc9c1 82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "905c7c866d56e75ed7c4dea2677ac60e6c5cd670",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
