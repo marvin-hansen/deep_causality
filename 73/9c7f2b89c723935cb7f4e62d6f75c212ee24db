@@ -1,0 +1,18 @@
+openspec/notes/ultragraph/BenchAfter/BenchAfterRun-1.txt
+  h_080fb89ca1f0c4 1-432
+openspec/notes/ultragraph/BenchAfter/BenchAfterRun-2.txt
+  h_080fb89ca1f0c4 1-468
+openspec/notes/ultragraph/BenchAfter/BenchAfterRun-3.txt
+  h_080fb89ca1f0c4 1-451
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "739c7f2b89c723935cb7f4e62d6f75c212ee24db",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
