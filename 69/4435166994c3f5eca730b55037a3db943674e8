@@ -1,0 +1,48 @@
+ultragraph/tests/types/storage/edge_list/edge_list_tests.rs
+  s_761f70cf42d74a::t_9f4313c922e615 645-650,667-687,692,703,714,718
+  s_761f70cf42d74a::t_d48c359ec73ad7 767-770,791-798,834,836,839
+  s_761f70cf42d74a::t_faf06c46d31780 637-644,651-666,688-691,693-702,704-713,715-717,719-766,771-790,799-833,835,837-838,840-899
+ultragraph/src/types/storage/edge_list/mod.rs
+  s_761f70cf42d74a::t_4166ce498d4f98 8-10,16-18,21-23,28-30,34,38-39
+ultragraph/Cargo.toml
+  s_761f70cf42d74a::t_4166ce498d4f98 35-37,39
+ultragraph/src/types/storage/edge_list/indexed_list/clone.rs
+  s_761f70cf42d74a::t_4166ce498d4f98 1-18
+ultragraph/src/types/storage/edge_list/indexed_list/debug.rs
+  s_761f70cf42d74a::t_4166ce498d4f98 1-16
+ultragraph/src/types/storage/edge_list/indexed_list/mod.rs
+  s_761f70cf42d74a::t_4166ce498d4f98 1-37
+ultragraph/src/types/storage/edge_list/indexed_list/default.rs
+  s_761f70cf42d74a::t_4166ce498d4f98 1-20
+ultragraph/src/types/storage/edge_list/indexed_list/edge_list.rs
+  s_761f70cf42d74a::t_8b10d6b0074251 5-8,11-13,15-70,74-78,82-88,92,99,103-106,110,114-129,133-154,158-172,176-186
+  s_761f70cf42d74a::t_4166ce498d4f98 1-4,9-10,14,71-73,79-81,89-91,93-98,100-102,107-109,111-113,130-132,155-157,173-175,187-188
+ultragraph/tests/utils/utils_tests_tests.rs
+  s_761f70cf42d74a::t_8b10d6b0074251 28-30,280-281,337,393,424,442-443,447
+  s_761f70cf42d74a::t_faf06c46d31780 14-15,17-19,25,282,284,286,315-320,338-339,357-363,394,397-423,425-441,444-446,448-451
+  s_761f70cf42d74a::t_07366a8cc91eb6 452
+openspec/changes/ultragraph-live-state-maintained-views/design.md
+  s_761f70cf42d74a::t_6514e2d2fa6876 124-126
+openspec/changes/ultragraph-live-state-maintained-views/specs/ultragraph-edge-storage-benchmark/spec.md
+  s_761f70cf42d74a::t_6514e2d2fa6876 17
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_64e3f4f5aeb766 42,45,47,51,55,58-59
+openspec/notes/ultragraph/tdd/live-group-2.md
+  s_761f70cf42d74a::t_64e3f4f5aeb766 154-253
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "694435166994c3f5eca730b55037a3db943674e8",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
