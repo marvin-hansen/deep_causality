@@ -19,3 +19,15 @@ impl Default for Data {
         }
     }
 }
+
+/// An edge payload whose key is its kind, so a source can carry several edges to one target.
+/// `Default` is kind 0.
+#[derive(Debug, Copy, Clone, Default, Hash, Eq, PartialEq, PartialOrd, Ord)]
+pub struct Kind(pub u8);
+
+impl ultragraph::EdgeKey for Kind {
+    type Key = u8;
+    fn edge_key(&self) -> u8 {
+        self.0
+    }
+}

@@ -25,7 +25,7 @@ Memory per edge SHALL be the sum, in bytes, of the capacity of every buffer the 
 - **THEN** it returns the byte count derived by hand from each buffer's capacity, written beside the literal
 
 ### Requirement: Measurements follow the baseline's three-run protocol
-Every timing that feeds a decision SHALL be three runs of `cargo bench -p ultragraph` on the baseline machine, aggregated as in `openspec/notes/ultragraph/BenchBefore/BenchBefore.md` (mean, spread as largest minus smallest over the mean, the median where the spread exceeds 15 %), and recorded under `openspec/notes/ultragraph/BenchStorage/` with the machine, `rustc` version and date.
+Every timing that feeds a decision SHALL be three runs of `cargo bench -p ultragraph` on the baseline machine, aggregated as in `openspec/notes/ultragraph/BenchBefore/BenchBefore.md` (mean, spread as largest minus smallest over the mean, the median where the spread exceeds 15 %), and recorded under `openspec/notes/ultragraph/BenchAfterChange2LiveView/` with the machine, `rustc` version and date.
 
 A candidate *matches* the incumbent on a row when its mean is at most the incumbent's mean times one plus the larger of 5 % and the incumbent row's spread, so a faster candidate matches. It is *clearly faster* when each of its three runs is faster than each of the incumbent's and its mean lies below the incumbent's by more than the incumbent row's spread times the incumbent's mean.
 

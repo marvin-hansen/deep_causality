@@ -116,3 +116,22 @@ rust_test_suite(
         normal_dev = True,
     ),
 )
+
+rust_test_suite(
+    name = "utils_tests",
+    srcs = glob([
+        "tests/utils/*_tests.rs",
+    ]),
+    tags = [
+        "ultragraph",
+        "unit-test",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        # Crate to test
+        ":ultragraph",
+    ] + all_crate_deps(
+        normal = True,
+        normal_dev = True,
+    ),
+)

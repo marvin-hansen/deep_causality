@@ -21,6 +21,7 @@ mod graph_csm_biconnectivity_common;
 mod graph_csm_unfreeze;
 mod graph_csm_view;
 mod graph_traversal;
+mod memory;
 
 // The "Struct of Arrays" (SoA) representation for adjacencies.
 // This is now a first-class, albeit private, component of the CsmGraph.

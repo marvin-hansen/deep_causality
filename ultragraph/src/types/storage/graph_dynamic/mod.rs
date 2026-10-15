@@ -13,6 +13,7 @@ mod graph_freeze;
 mod graph_mut;
 mod graph_traversal;
 mod graph_view;
+mod memory;
 mod parts;
 
 /// A tuple representing the raw components of a `DynamicGraph`.

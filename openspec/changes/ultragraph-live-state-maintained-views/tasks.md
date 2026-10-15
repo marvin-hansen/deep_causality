@@ -4,21 +4,21 @@ Each implementation group runs the five phases of `openspec/specs/unified-math-t
 in order (design D7) and records them in `openspec/notes/ultragraph/tdd/live-group-<n>.md`: the A–K
 table with a test named per row, the phase-2 failing run with its count, the phase-3 defect audit and
 the phase-5 mutation report. Measurements follow the three-run protocol (design D6) and are recorded
-under `openspec/notes/ultragraph/BenchStorage/`. Each group ends with `bazel test //...` green, clippy
+under `openspec/notes/ultragraph/BenchAfterChange2LiveView/`. Each group ends with `bazel test //...` green, clippy
 clean with no `allow`, and a commit message shown to the user; the user commits.
 
-- [ ] 0.1 Confirm `ultragraph-stable-ids-keyed-edges` is implemented and its after-benchmark `openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterChange1StableId.md` exists;
+- [x] 0.1 Confirm `ultragraph-stable-ids-keyed-edges` is implemented and its after-benchmark `openspec/notes/ultragraph/BenchAfterChange1StableId/BenchAfterChange1StableId.md` exists;
       it is the incumbent every decision here measures against
 
 ## 1. Benchmark workloads for the decisions
 
-- [ ] 1.1 Add the workloads of `ultragraph-edge-storage-benchmark` that the incumbent can run: keyed
+- [x] 1.1 Add the workloads of `ultragraph-edge-storage-benchmark` that the incumbent can run: keyed
       update and removal on low-degree nodes and on a hub of 10⁵ edges, and dynamic traversal over the
       ordered and shuffled chains; add the `#[doc(hidden)]` memory accounting in
       `src/utils/utils_tests.rs` with its tests, and record the incumbent's memory per edge
-- [ ] 1.2 `cargo bench -p ultragraph -- --test` passes for every new group; record the incumbent's
+- [x] 1.2 `cargo bench -p ultragraph -- --test` passes for every new group; record the incumbent's
       three runs and aggregate them
-- [ ] 1.3 Commit message for group 1
+- [x] 1.3 Commit message for group 1
 
 ## 2. The two challengers: the snapshot-log arrays and the indexed lists
 
@@ -62,7 +62,7 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 - [ ] 3.1 Sweep `MIN_LOG` and `HUB_DEGREE` for memory per edge and hub update time; fix each by the
       1.25× memory gate of `ultragraph-edge-storage-benchmark`; three runs per candidate at its value;
-      aggregate into `BenchStorage/`
+      aggregate into `BenchAfterChange2LiveView/`
 - [ ] 3.2 Apply the rule of `ultragraph-edge-storage-benchmark`; record the outcome and its rows in
       `openspec/notes/ultragraph/RadixGraphUpdate.md` §Benchmark
 - [ ] 3.3 Ask the user to approve removing the losing candidates; remove them and their features, and
@@ -93,7 +93,7 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 - [ ] 5.1 Add the Live workloads (algorithms in Live, Live updates in place and with rebuilds, the
       transitions, and k = 1, 16 and 256 keyed writes followed by `strongly_connected_components` in
       Live and through Dynamic → `freeze` → algorithm → `unfreeze`, at 1,000 nodes and on the hub)
-      and run three times; aggregate into `BenchStorage/`
+      and run three times; aggregate into `BenchAfterChange2LiveView/`
 - [ ] 5.2 Apply the Live rule of `ultragraph-edge-storage-benchmark` and record it with its rows
 - [ ] 5.3 If Live fails its rule, stop and ask the user before removing it and before group 6
 - [ ] 5.4 Commit message for group 5

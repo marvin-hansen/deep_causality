@@ -29,7 +29,7 @@ use ultragraph::*;
 use crate::benchmarks::data::Data;
 use crate::benchmarks::fields::{INDEX_COUNT, SIZES};
 use crate::benchmarks::utils::{
-    build_linear_graph, build_shuffled_chain, build_star_graph, random_indices, seeded_rng,
+    build_linear_graph, build_shuffled_chain, build_star_graph, random_indices, seeded_rng, walk,
 };
 
 const HUB: usize = 0;
@@ -89,31 +89,6 @@ fn bench_get_edges(c: &mut Criterion) {
         });
     }
     group.finish();
-}
-
-/// Walks a chain from `start` to its end, one step per node, through `inbound_edges` when
-/// `inbound` is set and `outbound_edges` otherwise. Returns the number of steps.
-fn walk(g: &UltraGraph<Data>, start: usize, inbound: bool) -> usize {
-    let mut node = black_box(start);
-    let mut steps = 0_usize;
-    loop {
-        let next = if inbound {
-            g.inbound_edges(node)
-                .expect("Failed to list inbound edges")
-                .next()
-        } else {
-            g.outbound_edges(node)
-                .expect("Failed to list outbound edges")
-                .next()
-        };
-        match next {
-            Some(next) => {
-                node = next;
-                steps += 1;
-            }
-            None => return steps,
-        }
-    }
 }
 
 /// Walks a frozen chain of `n + 1` nodes from the root to its end through `outbound_edges`.

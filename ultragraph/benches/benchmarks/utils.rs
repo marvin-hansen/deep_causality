@@ -5,9 +5,10 @@
 
 use core::ops::Range;
 use deep_causality_rand::{Rng, Xoshiro256};
+use std::hint::black_box;
 use ultragraph::*;
 
-use crate::benchmarks::data::Data;
+use crate::benchmarks::data::{Data, Kind};
 use crate::benchmarks::fields::{INDEX_COUNT, SEED};
 
 /// A root and `k` nodes linked in a line: `k + 1` nodes, `k` edges, every node of degree at most 1.
@@ -90,4 +91,72 @@ pub fn random_indices(range: Range<usize>) -> Vec<usize> {
     (0..INDEX_COUNT)
         .map(|_| rng.random_range(range.clone()))
         .collect()
+}
+
+/// The number of kinds the keyed fixtures cycle through: edge `i` of a chain and the edges of
+/// one hub target carry the kinds `0..KINDS`.
+pub const KINDS: u8 = 4;
+
+/// The kind of edge `i` of a keyed chain.
+pub fn kind_of(i: usize) -> Kind {
+    Kind((i % KINDS as usize) as u8)
+}
+
+/// A chain of `k + 1` nodes whose edge `i → i + 1` carries `kind_of(i)`, every node of degree
+/// at most 1: the low-degree fixture of the keyed workloads.
+pub fn build_keyed_chain(k: usize) -> UltraGraphWeighted<Data, Kind> {
+    let mut g: UltraGraphWeighted<Data, Kind> = UltraGraphWeighted::with_capacity(k + 1, None);
+    for _ in 0..=k {
+        g.add_node(Data::default()).expect("Failed to add node");
+    }
+    for i in 0..k {
+        g.add_edge(i, i + 1, kind_of(i))
+            .expect("Failed to add edge");
+    }
+    g
+}
+
+/// A hub at index 0 with `KINDS` edges to each of `leaves` leaves at `1..=leaves`, one per kind,
+/// so the hub's degree is `KINDS × leaves`. Built by pushes, so each edge list carries the
+/// capacity growth of real use; the hub's keyed inserts scan its list, O(degree) each.
+pub fn build_keyed_hub(leaves: usize) -> UltraGraphWeighted<Data, Kind> {
+    let mut g: UltraGraphWeighted<Data, Kind> = UltraGraphWeighted::with_capacity(leaves + 1, None);
+    let hub = g.add_node(Data::default()).expect("Failed to add node");
+    for _ in 0..leaves {
+        let leaf = g.add_node(Data::default()).expect("Failed to add node");
+        for kind in 0..KINDS {
+            g.add_edge(hub, leaf, Kind(kind))
+                .expect("Failed to add edge");
+        }
+    }
+    g
+}
+
+/// Walks a chain from `start` to its end, one step per node, through `inbound_edges` when
+/// `inbound` is set and `outbound_edges` otherwise. Returns the number of steps.
+pub fn walk<W: Clone + Default + EdgeKey>(
+    g: &UltraGraphWeighted<Data, W>,
+    start: usize,
+    inbound: bool,
+) -> usize {
+    let mut node = black_box(start);
+    let mut steps = 0_usize;
+    loop {
+        let next = if inbound {
+            g.inbound_edges(node)
+                .expect("Failed to list inbound edges")
+                .next()
+        } else {
+            g.outbound_edges(node)
+                .expect("Failed to list outbound edges")
+                .next()
+        };
+        match next {
+            Some(next) => {
+                node = next;
+                steps += 1;
+            }
+            None => return steps,
+        }
+    }
 }

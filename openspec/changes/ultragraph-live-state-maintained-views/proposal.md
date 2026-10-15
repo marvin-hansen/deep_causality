@@ -66,6 +66,6 @@ This change depends on `ultragraph-stable-ids-keyed-edges` and is applied after 
   `GraphState` and `GraphError` are public and not `#[non_exhaustive]`, so their new variants break
   an exhaustive `match` outside the crate; none exists in the workspace.
 - **Benchmarks:** new workloads in `ultragraph/benches`; results in
-  `openspec/notes/ultragraph/BenchStorage/` and the decisions in the design notes.
+  `openspec/notes/ultragraph/BenchAfterChange2LiveView/` and the decisions in the design notes.
 - **Tests:** new suites per capability under the TDD protocol; the change-1 suites run against both
   edge-storage candidates, each selected by its temporary Cargo feature.

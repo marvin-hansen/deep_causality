@@ -13,4 +13,5 @@ criterion_main! {
     benchmarks::bench_linear::linear_graph_bench_collection,
     benchmarks::bench_biconnectivity::biconnectivity_bench_collection,
     benchmarks::bench_crud::crud_bench_collection,
+    benchmarks::bench_storage::storage_bench_collection,
 }
