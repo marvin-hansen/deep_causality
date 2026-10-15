@@ -1,0 +1,41 @@
+deep_causality/tests/formalization_lean/graph_algebra_tests.rs
+  s_761f70cf42d74a::t_a5477ef65e3f20 175-183,185-261
+  s_761f70cf42d74a::t_a0c67813f88cd4 184
+deep_causality/tests/traits/causable_graph/graph_reasoning/monadic_reasoning_index_bound_tests.rs
+  s_761f70cf42d74a::t_5abab002b19275 1-150
+deep_causality/tests/types/causal_types/causaloid_graph/causality_graph_nodes_tests.rs
+  s_761f70cf42d74a::t_ceffbe3afd3fdc 210-275
+deep_causality/src/traits/causable_graph/graph_reasoning/mod.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 160-162
+deep_causality/tests/traits/causable_graph/graph_reasoning/stateful_tests.rs
+  s_761f70cf42d74a::t_a0c67813f88cd4 466-471,496-501,569-570
+  s_761f70cf42d74a::t_a5477ef65e3f20 456-465,472-495,502-568,571-664
+deep_causality/src/traits/causable_graph/graph/mod.rs
+  s_761f70cf42d74a::t_a2bdf97b23baff 145
+  s_761f70cf42d74a::t_0f0d875a792cd1 77-78,137-139,141-144,147-148,241,243-244,248-249,252-260,294
+deep_causality/tests/traits/causable_graph/graph_reasoning/mod.rs
+  s_761f70cf42d74a::t_5abab002b19275 9-10
+deep_causality/src/types/causal_types/causaloid_graph/lambda_edges.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 18-19
+deep_causality/src/traits/causable_graph/graph_reasoning/stateful.rs
+  s_761f70cf42d74a::t_0f0d875a792cd1 107-109
+deep_causality/src/traits/causable_graph/mod.rs
+  s_761f70cf42d74a::t_e6e7d363924ad9 90,164-203
+  s_761f70cf42d74a::t_0f0d875a792cd1 22-24,39-42,52,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4cbb8a5f9feb2098cb705433241bbc13f80c99b1",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
