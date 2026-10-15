@@ -1,0 +1,14 @@
+docs/LF_TSC/README.md
+  h_080fb89ca1f0c4 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7b41fe0a78cbfcbcbc27c33a43ab11d06fb5244",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
