@@ -1,0 +1,67 @@
+ultragraph/src/types/storage/graph_dynamic/graph_view.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 53,58-62,82-87
+openspec/notes/ultragraph/tdd/live-group-3.md
+  s_761f70cf42d74a::t_d000d3925b6adc 1-45
+ultragraph/tests/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_04c975b815e196 1-7
+openspec/notes/ultragraph/BenchAfterChange2LiveView/BenchAfterChange2LiveView.md
+  s_761f70cf42d74a::t_1fa93bccb87a03 126-154
+  s_761f70cf42d74a::t_d000d3925b6adc 155-230
+ultragraph/tests/types/storage/graph_dynamic/graph_mut_tests.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 463
+  s_761f70cf42d74a::t_9cb274025fb873 1-462,464-658,660-773
+  s_761f70cf42d74a::t_7e11d9602e2e9a 659
+ultragraph/src/types/storage/graph_dynamic/parts.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 39
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_d000d3925b6adc 63,66,68
+  s_761f70cf42d74a::t_b3de0aa9b48db5 70
+ultragraph/src/types/storage/graph_dynamic/mod.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 41,46,136,147,150-151
+ultragraph/BUILD.bazel
+  s_761f70cf42d74a::t_04c975b815e196 142
+ultragraph/src/types/storage/graph_dynamic/graph_compact.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 37,42
+ultragraph/src/types/storage/graph_dynamic/graph_traversal.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 21,33
+openspec/notes/ultragraph/RadixGraphUpdate.md
+  s_761f70cf42d74a::t_d000d3925b6adc 317-324,638-650
+  s_761f70cf42d74a::t_abcea8fbab7176 651
+ultragraph/tests/types/storage/mod.rs
+  s_761f70cf42d74a::t_04c975b815e196 5
+ultragraph/src/types/storage/graph_dynamic/memory.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 6,17,21,23,27
+ultragraph/src/types/storage/graph_dynamic/graph_freeze.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 75,77,98
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group3-SnapshotLogRun-1.txt
+  s_761f70cf42d74a::t_04c975b815e196 23,25-26,33,40,53,55,63,70,80,97,100,110,113,115,123,126,129,137,140,148,151,154,163,166,170,179,182-183,186,194,197,201,209,212,215,224,227,231,234-303
+  s_761f70cf42d74a::t_3d0187e412166b 1-22,24,27-32,34-39,41-52,54,56-62,64-69,71-79,81-96,98-99,101-109,111-112,114,116-122,124-125,127-128,130-136,138-139,141-147,149-150,152-153,155-162,164-165,167-169,171-178,180-181,184-185,187-193,195-196,198-200,202-208,210-211,213-214,216-223,225-226,228-230,232-233
+ultragraph/src/types/storage/graph_dynamic/graph_mut.rs
+  s_761f70cf42d74a::t_e46bc23df9549a 25-26,29-30,73-74,85,92,116-128,143-145,152,167-170,175-177
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group3-IndexedRun-1.txt
+  s_761f70cf42d74a::t_3c315dac12e196 1-302
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group3-SnapshotLogRun-2.txt
+  s_761f70cf42d74a::t_0f182b850e810c 1-302
+ultragraph/tests/types/ultra_graph/graph_mut_tests.rs
+  s_761f70cf42d74a::t_0522ce5a5d5b3a 654-656,662,667
+ultragraph/tests/utils/utils_tests_tests.rs
+  s_761f70cf42d74a::t_39523501e71138 13-14,19-26,28-29,88,98,100-101,115-116,131-133,145-146,156,167-169,189,198-200,237,239-240,253-255,257-260,262-264,268,270,280-281,285,296,299-300,302,312-313,317-318,320,332-336,339-341,343,361-364,366
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group3-SnapshotLogRun-3.txt
+  s_761f70cf42d74a::t_ee090b7451ba12 1-305
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c397d4d319c07c607ccd7e13d8c7de593115c622",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
