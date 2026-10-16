@@ -30,6 +30,8 @@ mod graph_csm_algo_topological_tests;
 #[cfg(test)]
 mod graph_evolve_tests;
 #[cfg(test)]
+mod graph_maintain_tests;
+#[cfg(test)]
 mod graph_mut_tests;
 #[cfg(test)]
 mod graph_project_tests;

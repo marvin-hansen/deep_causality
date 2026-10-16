@@ -389,6 +389,6 @@ fn test_dynamic_graph_debug_output() {
     g.add_node(7_u8).unwrap();
     assert_eq!(
         format!("{g:?}"),
-        "UltraGraphContainer { state: Dynamic(DynamicGraph { nodes: [Some(7)], edges: [[]], root_index: None, live_edges: 0 }) }"
+        "UltraGraphContainer { state: Dynamic(DynamicGraph { nodes: [Some(7)], edges: [[]], root_index: None, live_edges: 0 }), views: [], mode: Merge }"
     );
 }

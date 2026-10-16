@@ -59,6 +59,11 @@ where
     pub fn root_index(&self) -> Option<usize> {
         self.root_index
     }
+
+    /// The number of positions in the node table, tombstones included.
+    pub(crate) fn table_len(&self) -> usize {
+        self.nodes.len()
+    }
 }
 
 impl<N, W> DynamicGraph<N, W>

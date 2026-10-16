@@ -288,8 +288,14 @@ placement `make_live/from_dynamic` also pays); Live pays the algorithm alone, 44
 for the algorithm), and at k = 256 the Dynamic writes themselves add 5.6 ms, the scan of the
 hub's list per write, where Live's binary searches add 44 µs. The three algorithms read a
 little faster on the Live rows than on the frozen CSR (SCC 44.2 against 46.1 µs, the sort 7.9
-against 9.3, the path 3.2 against 4.0), the row records replacing the two offset loads and the
-tombstone test of the CSR's range lookup. An in-place insert into a row with a spare slot is
+against 9.3, the path 3.2 against 4.0); the Live read does more work per edge, a mask test per
+entry, so the difference has no verified explanation and is recorded as measured.
+
+**What the rows do not say.** The `dynamic` rows carry a `freeze` and an `unfreeze` per
+analysis because the workflow they measure interleaves writes with analyses, and a frozen graph
+takes no write; a workflow that writes once and analyses many times pays the freeze once, and for
+it the `live_algorithms` rows are the comparison: Live and Frozen within a few percent. The
+`live` rows exclude `make_live`, paid once; its cost is in `live_transitions`. An in-place insert into a row with a spare slot is
 25 ns; an insert that rebuilds a row of capacity one at the arena's end is 0.79 µs on a 1,000-node
 chain, the clone of the arenas per batch excluded. `make_live` from Frozen is 1.2 µs for 1,000
 positions (the row records), `freeze` from Live 7 µs (a pack with no sort), `unfreeze` from Live

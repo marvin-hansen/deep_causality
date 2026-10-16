@@ -100,24 +100,24 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 ## 6. materialize and maintained views
 
-- [ ] 6.1 Phase 1: `materialize` on the projection view and the container's `ParallelEdges` mode
+- [x] 6.1 Phase 1: `materialize` on the projection view and the container's `ParallelEdges` mode
       (design D8); the container's `P: Projection<N, W>`
       parameter with its default; `maintain`, `view` and `ViewId`, with `unimplemented!()` bodies;
       confirm `UltraGraph<T>` and `UltraGraphWeighted<T, W>` still compile unchanged in every calling
       crate
-- [ ] 6.2 Fill the A–K table for views (rows A–C, F, H, K of design D7)
-- [ ] 6.3 Phase 2: a test for every scenario of `ultragraph-materialized-projection`,
+- [x] 6.2 Fill the A–K table for views (rows A–C, F, H, K of design D7)
+- [x] 6.3 Phase 2: a test for every scenario of `ultragraph-materialized-projection`,
       `ultragraph-maintained-views` and the `ultragraph-projection-view` delta; extend the model-based test with four maintained views of
       different tests and modes, checked after every step against a projection rebuilt from the model;
       observe failing; record
-- [ ] 6.4 Phase 3: inject the design D7 view defects (a view not updated on an edge mutation, on a node
+- [x] 6.4 Phase 3: inject the design D7 view defects (a view not updated on an edge mutation, on a node
       payload change, or on `clear`; a view updated outside its scope; `freeze_clone` copying views;
       `materialize` sharing storage; a materialised `Distinct` copy answering under `Merge`; a
       transition dropping a view; `compact_ids` leaving a view on the old positions) and the nine generic classes; record; discard
-- [ ] 6.5 Phase 4: implement `materialize`, view registration, eager maintenance on every mutation in
+- [x] 6.5 Phase 4: implement `materialize`, view registration, eager maintenance on every mutation in
       the Dynamic and Live states, the view rebuild in `compact_ids`, and reads in every state; full coverage; matching counts
-- [ ] 6.6 Phase 5: `scripts/mutants.sh` over the group's files; resolve every survivor
-- [ ] 6.7 Commit message for group 6
+- [x] 6.6 Phase 5: `scripts/mutants.sh` over the group's files; resolve every survivor
+- [x] 6.7 Commit message for group 6
 
 ## 7. Measurement and close-out
 

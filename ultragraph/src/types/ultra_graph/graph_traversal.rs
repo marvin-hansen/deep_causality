@@ -2,13 +2,15 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
+use crate::Projection;
 use crate::types::ultra_graph::traversal_iter::TraversalIter;
 use crate::{EdgeKey, GraphError, GraphState, GraphTraversal, UltraGraphContainer};
 
-impl<N, W> GraphTraversal<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> GraphTraversal<N, W> for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Returns an iterator over the targets of the edges out of node `a`, one entry per edge, in
     /// every state. The frozen state reads its CSR slice, the dynamic state the node's forward

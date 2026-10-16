@@ -3,12 +3,14 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
+use crate::Projection;
 use crate::{DynamicGraph, EdgeKey, GraphError, GraphMut, GraphState, UltraGraphContainer};
 
-impl<N, W> GraphMut<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> GraphMut<N, W> for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Adds a new node with the given payload to the graph.
     ///
@@ -16,12 +18,18 @@ where
     ///
     /// Returns `GraphError::GraphIsFrozen` if the graph is in a `Static` (frozen) state.
     fn add_node(&mut self, node: N) -> Result<usize, GraphError> {
-        match &mut self.state {
-            // Corrected: Directly return the result from the inner call.
+        let index = match &mut self.state {
             GraphState::Dynamic(g) => g.add_node(node),
             GraphState::Live(g) => g.add_node(node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        let (state, views) = (&self.state, &mut self.views);
+        if let Some(payload) = state.get_node(index) {
+            for view in views {
+                view.on_add_node(payload);
+            }
         }
+        Ok(index)
     }
 
     /// Updates the payload of an existing node at a given index.
@@ -35,7 +43,12 @@ where
             GraphState::Dynamic(g) => g.update_node(index, node),
             GraphState::Live(g) => g.update_node(index, node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        let (state, views) = (&self.state, &mut self.views);
+        for view in views {
+            view.on_update_node(index, state);
         }
+        Ok(())
     }
 
     /// Removes a node at the given index, also removing all edges connected to it.
@@ -49,7 +62,11 @@ where
             GraphState::Dynamic(g) => g.remove_node(index),
             GraphState::Live(g) => g.remove_node(index),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        for view in &mut self.views {
+            view.on_remove_node(index);
         }
+        Ok(())
     }
 
     /// Adds a weighted edge between two nodes.
@@ -59,11 +76,19 @@ where
     /// - Returns `GraphError::GraphIsFrozen` if the graph is in a `Static` state.
     /// - Returns an error if either node index is invalid or the edge already exists.
     fn add_edge(&mut self, a: usize, b: usize, weight: W) -> Result<(), GraphError> {
+        // The payload is cloned for the views only when there are any.
+        let for_views = (!self.views.is_empty()).then(|| weight.clone());
         match &mut self.state {
             GraphState::Dynamic(g) => g.add_edge(a, b, weight),
             GraphState::Live(g) => g.add_edge(a, b, weight),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        if let Some(weight) = for_views {
+            for view in &mut self.views {
+                view.on_add_edge(a, b, &weight);
+            }
         }
+        Ok(())
     }
 
     /// Removes an edge between two nodes.
@@ -77,7 +102,11 @@ where
             GraphState::Dynamic(g) => g.remove_edge(a, b),
             GraphState::Live(g) => g.remove_edge(a, b),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        for view in &mut self.views {
+            view.on_remove_edge(a, b);
         }
+        Ok(())
     }
 
     fn remove_edge_keyed(&mut self, a: usize, b: usize, key: W::Key) -> Result<(), GraphError> {
@@ -85,7 +114,11 @@ where
             GraphState::Dynamic(g) => g.remove_edge_keyed(a, b, key),
             GraphState::Live(g) => g.remove_edge_keyed(a, b, key),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        for view in &mut self.views {
+            view.on_remove_edge_keyed(a, b, key);
         }
+        Ok(())
     }
 
     /// Adds a new node and designates it as the root of the graph.
@@ -94,12 +127,18 @@ where
     ///
     /// Returns `GraphError::GraphIsFrozen` if the graph is in a `Static` (frozen) state.
     fn add_root_node(&mut self, node: N) -> Result<usize, GraphError> {
-        match &mut self.state {
-            // Corrected: Directly return the result from the inner call.
+        let index = match &mut self.state {
             GraphState::Dynamic(g) => g.add_root_node(node),
             GraphState::Live(g) => g.add_root_node(node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+        }?;
+        let (state, views) = (&self.state, &mut self.views);
+        if let Some(payload) = state.get_node(index) {
+            for view in views {
+                view.on_add_node(payload);
+            }
         }
+        Ok(index)
     }
 
     /// Clears all nodes and edges from the graph, resetting it to an empty, dynamic state from
@@ -107,9 +146,12 @@ where
     ///
     /// This operation is always successful and will unfreeze the graph if it was frozen or live.
     fn clear(&mut self) -> Result<(), GraphError> {
-        // Clearing the graph resets it to a new, empty, dynamic state,
-        // regardless of its previous state. This is a total reset.
+        // Clearing the graph resets it to a new, empty, dynamic state, regardless of its
+        // previous state; every maintained view stays registered and holds nothing.
         self.state = GraphState::Dynamic(DynamicGraph::new());
+        for view in &mut self.views {
+            view.on_clear();
+        }
         Ok(())
     }
 }

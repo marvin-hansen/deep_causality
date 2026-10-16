@@ -6,22 +6,46 @@
 use alloc::vec::Vec;
 
 use crate::{
-    CentralityGraphAlgorithms, EdgeKey, GraphAlgorithms, GraphError, GraphState,
-    PathfindingGraphAlgorithms, StructuralGraphAlgorithms, TopologicalGraphAlgorithms,
-    UltraGraphContainer,
+    CentralityGraphAlgorithms, EdgeKey, GraphAlgorithms, GraphError, GraphState, NoProjection,
+    ParallelEdges, PathfindingGraphAlgorithms, Projection, ProjectionView,
+    StructuralGraphAlgorithms, TopologicalGraphAlgorithms, UltraGraphContainer,
 };
 
-impl<N, W> GraphAlgorithms<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
+{
+    /// The simple projection under the graph's mode when that mode is not `Merge`: a direct
+    /// algorithm call then runs on it, so a copy `materialize` returned under `Distinct`
+    /// answers as its view did. Under `Merge` the states' own implementations are that
+    /// projection, and `None` lets them run.
+    fn distinct_view(&self) -> Option<ProjectionView<'_, N, W, NoProjection>> {
+        if self.mode == ParallelEdges::Merge {
+            return None;
+        }
+        match &self.state {
+            GraphState::Static(g) => Some(ProjectionView::frozen(g, NoProjection, self.mode)),
+            GraphState::Live(g) => Some(ProjectionView::live(g, NoProjection, self.mode)),
+            GraphState::Dynamic(_) => None,
+        }
+    }
+}
+
+impl<N, W, P> GraphAlgorithms<N, W> for UltraGraphContainer<N, W, P>
+where
+    N: Clone,
+    W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
 }
 
-impl<N, W> CentralityGraphAlgorithms<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> CentralityGraphAlgorithms<N, W> for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Calculates the betweenness centrality of each node in the graph.
     ///
@@ -59,6 +83,9 @@ where
         directed: bool,
         normalized: bool,
     ) -> Result<Vec<(usize, f64)>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.betweenness_centrality(directed, normalized);
+        }
         match &self.state {
             GraphState::Static(g) => g.betweenness_centrality(directed, normalized),
             GraphState::Live(g) => g.betweenness_centrality(directed, normalized),
@@ -103,6 +130,9 @@ where
         directed: bool,
         normalized: bool,
     ) -> Result<Vec<(usize, f64)>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.pathway_betweenness_centrality(pathways, directed, normalized);
+        }
         match &self.state {
             GraphState::Static(g) => {
                 g.pathway_betweenness_centrality(pathways, directed, normalized)
@@ -113,10 +143,11 @@ where
     }
 }
 
-impl<N, W> PathfindingGraphAlgorithms<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> PathfindingGraphAlgorithms<N, W> for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Checks if a node `stop_index` is reachable from `start_index`.
     ///
@@ -128,6 +159,9 @@ where
     /// - Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     /// - Returns an error if either node index is invalid.
     fn is_reachable(&self, start_index: usize, stop_index: usize) -> Result<bool, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.is_reachable(start_index, stop_index);
+        }
         match &self.state {
             GraphState::Static(g) => g.is_reachable(start_index, stop_index),
             GraphState::Live(g) => g.is_reachable(start_index, stop_index),
@@ -149,6 +183,9 @@ where
         start_index: usize,
         stop_index: usize,
     ) -> Result<Option<usize>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.shortest_path_len(start_index, stop_index);
+        }
         match &self.state {
             GraphState::Static(g) => g.shortest_path_len(start_index, stop_index),
             GraphState::Live(g) => g.shortest_path_len(start_index, stop_index),
@@ -170,6 +207,9 @@ where
         start_index: usize,
         stop_index: usize,
     ) -> Result<Option<Vec<usize>>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.shortest_path(start_index, stop_index);
+        }
         match &self.state {
             GraphState::Static(g) => g.shortest_path(start_index, stop_index),
             GraphState::Live(g) => g.shortest_path(start_index, stop_index),
@@ -198,6 +238,9 @@ where
     where
         W: Copy + Ord + Default + core::ops::Add<Output = W>,
     {
+        if let Some(view) = self.distinct_view() {
+            return view.shortest_weighted_path(start_index, stop_index);
+        }
         match &self.state {
             GraphState::Static(g) => g.shortest_weighted_path(start_index, stop_index),
             GraphState::Live(g) => g.shortest_weighted_path(start_index, stop_index),
@@ -206,10 +249,11 @@ where
     }
 }
 
-impl<N, W> StructuralGraphAlgorithms<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> StructuralGraphAlgorithms<N, W> for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Finds the strongly connected components (SCCs) of the graph.
     ///
@@ -223,6 +267,9 @@ where
     /// # Errors
     /// Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     fn strongly_connected_components(&self) -> Result<Vec<Vec<usize>>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.strongly_connected_components();
+        }
         match &self.state {
             GraphState::Static(g) => g.strongly_connected_components(),
             GraphState::Live(g) => g.strongly_connected_components(),
@@ -238,6 +285,9 @@ where
     /// # Errors
     /// Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     fn articulation_points(&self) -> Result<Vec<usize>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.articulation_points();
+        }
         match &self.state {
             GraphState::Static(g) => g.articulation_points(),
             GraphState::Live(g) => g.articulation_points(),
@@ -253,6 +303,9 @@ where
     /// # Errors
     /// Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     fn bridges(&self) -> Result<Vec<(usize, usize)>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.bridges();
+        }
         match &self.state {
             GraphState::Static(g) => g.bridges(),
             GraphState::Live(g) => g.bridges(),
@@ -268,6 +321,9 @@ where
     /// # Errors
     /// Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     fn biconnected_components(&self) -> Result<Vec<Vec<usize>>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.biconnected_components();
+        }
         match &self.state {
             GraphState::Static(g) => g.biconnected_components(),
             GraphState::Live(g) => g.biconnected_components(),
@@ -276,10 +332,11 @@ where
     }
 }
 
-impl<N, W> TopologicalGraphAlgorithms<N, W> for UltraGraphContainer<N, W>
+impl<N, W, P> TopologicalGraphAlgorithms<N, W> for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Finds a cycle in the graph.
     ///
@@ -290,6 +347,9 @@ where
     ///
     /// Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     fn find_cycle(&self) -> Result<Option<Vec<usize>>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.find_cycle();
+        }
         match &self.state {
             GraphState::Static(g) => g.find_cycle(),
             GraphState::Live(g) => g.find_cycle(),
@@ -306,6 +366,9 @@ where
     ///
     /// Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     fn has_cycle(&self) -> Result<bool, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.has_cycle();
+        }
         match &self.state {
             GraphState::Static(g) => g.has_cycle(),
             GraphState::Live(g) => g.has_cycle(),
@@ -323,6 +386,9 @@ where
     /// - Returns `GraphError::GraphNotFrozen` if the graph is in a `Dynamic` state.
     /// - Returns an error from the underlying implementation if the graph contains a cycle.
     fn topological_sort(&self) -> Result<Option<Vec<usize>>, GraphError> {
+        if let Some(view) = self.distinct_view() {
+            return view.topological_sort();
+        }
         match &self.state {
             GraphState::Static(g) => g.topological_sort(),
             GraphState::Live(g) => g.topological_sort(),

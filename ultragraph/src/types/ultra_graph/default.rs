@@ -3,6 +3,7 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
+use crate::Projection;
 use crate::types::storage::graph_state::GraphState;
 use crate::{DynamicGraph, EdgeKey, UltraGraphContainer};
 
@@ -18,10 +19,11 @@ where
     }
 }
 
-impl<N, W> Default for UltraGraphContainer<N, W>
+impl<N, W, P> Default for UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     fn default() -> Self {
         Self::new()

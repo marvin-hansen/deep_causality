@@ -7,10 +7,11 @@ use crate::{
     EdgeKey, GraphError, GraphState, ParallelEdges, Projection, ProjectionView, UltraGraphContainer,
 };
 
-impl<N, W> UltraGraphContainer<N, W>
+impl<N, W, P> UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// A view of the frozen or live graph restricted to what `projection` passes, counting
     /// parallel edges under `mode`. Every algorithm, read and traversal runs on the view;
@@ -18,13 +19,13 @@ where
     ///
     /// # Errors
     /// Returns `GraphError::GraphNotFrozen` in the dynamic state.
-    pub fn project<P>(
+    pub fn project<Q>(
         &self,
-        projection: P,
+        projection: Q,
         mode: ParallelEdges,
-    ) -> Result<ProjectionView<'_, N, W, P>, GraphError>
+    ) -> Result<ProjectionView<'_, N, W, Q>, GraphError>
     where
-        P: Projection<N, W>,
+        Q: Projection<N, W>,
     {
         match &self.state {
             GraphState::Static(g) => Ok(ProjectionView::frozen(g, projection, mode)),

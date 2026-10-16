@@ -9,8 +9,14 @@ mod graph_algo;
 mod graph_traversal;
 mod graph_view;
 
+use alloc::vec::Vec;
+
 use crate::types::projection_view::backing::Backing;
-use crate::{CsmGraph, EdgeKey, LiveGraph, ParallelEdges, Projection};
+use crate::types::storage::graph_csm::adjacency::Adjacency;
+use crate::{
+    CsmGraph, DynamicGraph, EdgeKey, Freezable, GraphState, GraphView, LiveGraph, ParallelEdges,
+    Projection, UltraGraphContainer,
+};
 
 /// A view of a frozen or live graph restricted to the nodes and edges a [`Projection`] passes,
 /// with the parallel-edge mode its algorithms count under. Positions are those of the graph; a
@@ -53,5 +59,22 @@ where
     /// The parallel-edge mode the view's algorithms count under.
     pub fn mode(&self) -> ParallelEdges {
         self.mode
+    }
+
+    /// An owned graph in the `Static` state holding the nodes and edges the view passes, at the
+    /// source's positions, every failing node a tombstone, counting parallel edges under the
+    /// view's mode; independent of the source from then on.
+    pub fn materialize(&self) -> UltraGraphContainer<N, W> {
+        let slots = self.backing.slots();
+        let nodes: Vec<Option<N>> = (0..slots).map(|v| self.get_node(v).cloned()).collect();
+        let edges: Vec<Vec<(usize, W)>> = (0..slots)
+            .map(|v| {
+                self.out_edges(v)
+                    .map(|(target, weight)| (target, weight.clone()))
+                    .collect()
+            })
+            .collect();
+        let frozen = DynamicGraph::from_parts((nodes, edges, self.get_root_index())).freeze();
+        UltraGraphContainer::with_state(GraphState::Static(frozen), self.mode)
     }
 }

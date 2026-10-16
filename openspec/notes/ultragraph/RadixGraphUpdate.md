@@ -653,8 +653,10 @@ storage trait and their features were removed from `ultragraph` with Marvin's ap
 by `strongly_connected_components`, Live reads 44.7, 44.9 and 47.8 µs on the chain of 1,000
 against 145 µs for writes in the Dynamic state with a `freeze` before the algorithm and an
 `unfreeze` after, and 1.04, 1.05 and 1.08 ms on the hub of 100,000 edges against 7.5, 7.9 and
-13.2 ms; each of Live's three runs below each of the other path's on every row. The algorithm
-itself reads a little faster on the Live rows than on the frozen CSR. Tables and logs:
+13.2 ms; each of Live's three runs below each of the other path's on every row. The rows measure
+the interleaved workflow, a freeze per analysis; for writes once and analyses many times the
+algorithm alone is the comparison, and there Live and Frozen are within a few percent (Live
+reads 4 % faster, unexplained). Tables and logs:
 `BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`, group 5.
 
 **API impact, under either outcome:**

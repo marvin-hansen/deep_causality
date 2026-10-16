@@ -1476,3 +1476,201 @@ fn test_a_payload_replaced_in_live_is_read_from_both_rows_of_a_view() {
     assert_eq!(view.outbound_edges(0).unwrap().count(), 0);
     assert_eq!(view.inbound_edges(1).unwrap().count(), 0);
 }
+
+// --- materialize (spec: ultragraph-materialized-projection) and the graph's mode ---------------
+
+/// "Positions survive materialisation": a view passing 1, 2 and 3 of the chain 0 → 1 → 2 → 3.
+#[test]
+fn test_positions_survive_materialisation() {
+    let g = frozen(
+        4,
+        &[(0, 1, Kind::A, 1), (1, 2, Kind::A, 1), (2, 3, Kind::A, 1)],
+    );
+    let view = g
+        .project(
+            (|n: &usize| *n >= 1, |_: &Weighted| true),
+            ParallelEdges::Merge,
+        )
+        .unwrap();
+    let copy = view.materialize();
+    assert!(copy.is_frozen());
+    assert_eq!(copy.topological_sort(), Ok(Some(vec![1, 2, 3])));
+    assert!(!copy.contains_node(0));
+    assert_eq!(copy.get_node(2), Some(&2));
+    assert_eq!(copy.number_nodes(), 3);
+    assert_eq!(copy.number_edges(), 2);
+    assert_eq!(copy.get_last_index(), Some(3));
+    assert_eq!(copy.mode(), ParallelEdges::Merge);
+}
+
+/// "A Distinct copy keeps its parallel edges": bridges on the copy are the view's.
+#[test]
+fn test_a_distinct_copy_keeps_its_parallel_edges() {
+    let g = frozen(
+        3,
+        &[(0, 1, Kind::A, 1), (0, 1, Kind::B, 1), (1, 2, Kind::A, 1)],
+    );
+    let view = g.project(pass_all(), ParallelEdges::Distinct).unwrap();
+    let copy = view.materialize();
+    assert_eq!(copy.mode(), ParallelEdges::Distinct);
+    assert_eq!(copy.number_edges(), 3);
+    assert_eq!(copy.bridges(), Ok(vec![(1, 2)]));
+    assert_eq!(view.bridges(), Ok(vec![(1, 2)]));
+    let merged = g
+        .project(pass_all(), ParallelEdges::Merge)
+        .unwrap()
+        .materialize();
+    assert_eq!(merged.bridges(), Ok(vec![(0, 1), (1, 2)]));
+}
+
+/// "The source changes after materialisation": the copy is independent.
+#[test]
+fn test_a_materialised_copy_does_not_follow_the_source() {
+    let mut g = frozen(4, &[(0, 1, Kind::A, 1), (1, 2, Kind::A, 1)]);
+    let copy = g
+        .project(pass_all(), ParallelEdges::Merge)
+        .unwrap()
+        .materialize();
+    g.unfreeze();
+    g.add_edge(1, 3, weighted(Kind::A, 1)).unwrap();
+    g.remove_node(0).unwrap();
+    assert!(!copy.contains_edge(1, 3));
+    assert!(copy.contains_node(0));
+    assert_eq!(copy.number_edges(), 2);
+    drop(g);
+    assert_eq!(copy.shortest_path(0, 2), Ok(Some(vec![0, 1, 2])));
+}
+
+/// "A materialised copy answers under its view's mode", unfrozen and frozen again: its direct
+/// algorithm calls run under `Distinct`, as the copy's own simple projection under `Distinct`.
+#[test]
+fn test_a_distinct_copy_answers_under_distinct_after_a_round_trip() {
+    let g = frozen(
+        3,
+        &[(0, 1, Kind::A, 1), (0, 1, Kind::B, 1), (1, 2, Kind::A, 1)],
+    );
+    let mut copy = g
+        .project(pass_all(), ParallelEdges::Distinct)
+        .unwrap()
+        .materialize();
+    copy.unfreeze();
+    assert_eq!(copy.mode(), ParallelEdges::Distinct);
+    copy.freeze();
+    assert_eq!(copy.bridges(), Ok(vec![(1, 2)]));
+    let simple = copy.project(pass_all(), ParallelEdges::Distinct).unwrap();
+    assert_eq!(copy.bridges(), simple.bridges());
+    assert_eq!(
+        copy.betweenness_centrality(false, false),
+        simple.betweenness_centrality(false, false)
+    );
+    copy.make_live();
+    assert_eq!(
+        copy.bridges(),
+        Ok(vec![(1, 2)]),
+        "the mode survives the Live state"
+    );
+    assert_eq!(copy.freeze_clone().mode(), ParallelEdges::Distinct);
+}
+
+/// Row A of materialisation: a view passing nothing gives an empty frozen graph at the source's
+/// width.
+#[test]
+fn test_materialising_a_view_that_passes_nothing() {
+    let g = frozen(3, &[(0, 1, Kind::A, 1)]);
+    let copy = g
+        .project(
+            (|_: &usize| false, |_: &Weighted| true),
+            ParallelEdges::Merge,
+        )
+        .unwrap()
+        .materialize();
+    assert!(copy.is_frozen());
+    assert!(copy.is_empty());
+    assert_eq!(copy.number_edges(), 0);
+    assert_eq!(copy.get_last_index(), None);
+    assert!(!copy.contains_node(0));
+}
+
+/// "The copy answers as the view does": random frozen graphs, random node and edge tests, both
+/// modes; every read, traversal and algorithm equal on the view and on its materialised copy.
+#[test]
+fn test_a_materialised_copy_answers_as_its_view() {
+    let mut rng = Xoshiro256::from_seed(0x5EED_0006);
+    for round in 0..40 {
+        let n: usize = rng.random_range(2..8usize);
+        let mut edges = Vec::new();
+        for _ in 0..rng.random_range(n..3 * n) {
+            let a = rng.random_range(0..n);
+            let b = rng.random_range(0..n);
+            let kind = if rng.random_range(0..2u8) == 0 {
+                Kind::A
+            } else {
+                Kind::B
+            };
+            edges.push((a, b, kind, rng.random_range(1..6u32)));
+        }
+        let g = frozen(n, &edges);
+        let node_tests: [fn(&usize) -> bool; 3] = [|_| true, |p| p % 2 == 0, |p| *p != 1];
+        let edge_tests: [fn(&Weighted) -> bool; 3] =
+            [|_| true, |w| w.weight >= 3, |w| w.kind == Kind::A];
+        let tests = (
+            node_tests[rng.random_range(0..3usize)],
+            edge_tests[rng.random_range(0..3usize)],
+        );
+        for mode in [ParallelEdges::Merge, ParallelEdges::Distinct] {
+            let view = g.project(tests, mode).unwrap();
+            let copy = view.materialize();
+            assert_eq!(copy.mode(), mode);
+            assert_eq!(copy.number_nodes(), view.number_nodes(), "round {round}");
+            assert_eq!(copy.number_edges(), view.number_edges(), "round {round}");
+            assert_eq!(copy.get_last_index(), view.get_last_index());
+            for p in 0..n + 1 {
+                assert_eq!(
+                    copy.contains_node(p),
+                    view.contains_node(p),
+                    "round {round} node {p}"
+                );
+                assert_eq!(copy.get_node(p), view.get_node(p));
+                assert_eq!(
+                    copy.get_edges(p),
+                    view.get_edges(p),
+                    "round {round} edges {p}"
+                );
+                assert_eq!(
+                    copy.outbound_edges(p).map(|i| i.collect::<Vec<_>>()).ok(),
+                    view.outbound_edges(p).map(|i| i.collect::<Vec<_>>()).ok()
+                );
+                assert_eq!(
+                    copy.inbound_edges(p).map(|i| i.collect::<Vec<_>>()).ok(),
+                    view.inbound_edges(p).map(|i| i.collect::<Vec<_>>()).ok()
+                );
+                for q in 0..n + 1 {
+                    assert_eq!(copy.is_reachable(p, q), view.is_reachable(p, q));
+                    assert_eq!(
+                        copy.shortest_weighted_path(p, q),
+                        view.shortest_weighted_path(p, q)
+                    );
+                }
+            }
+            assert_eq!(
+                copy.strongly_connected_components(),
+                view.strongly_connected_components()
+            );
+            assert_eq!(copy.bridges(), view.bridges(), "round {round} {mode:?}");
+            assert_eq!(copy.articulation_points(), view.articulation_points());
+            assert_eq!(copy.biconnected_components(), view.biconnected_components());
+            assert_eq!(copy.find_cycle(), view.find_cycle());
+            assert_eq!(copy.topological_sort(), view.topological_sort());
+            assert_eq!(
+                copy.betweenness_centrality(true, true),
+                view.betweenness_centrality(true, true),
+                "round {round} {mode:?}"
+            );
+            assert_eq!(
+                copy.betweenness_centrality(false, false),
+                view.betweenness_centrality(false, false),
+                "round {round} {mode:?} undirected"
+            );
+        }
+    }
+}

@@ -3,12 +3,14 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
+use crate::Projection;
 use crate::{EdgeKey, Freezable, GraphState, LiveGraph, UltraGraphContainer, Unfreezable};
 
-impl<N, W> UltraGraphContainer<N, W>
+impl<N, W, P> UltraGraphContainer<N, W, P>
 where
     N: Clone,
     W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
 {
     /// Ensures the graph is in the immutable, performance-optimized `Static` state.
     ///
@@ -57,15 +59,16 @@ where
         matches!(self.state, GraphState::Live(_))
     }
 
-    /// A frozen copy of the graph: the same positions, payloads, tombstones, edges and root in
-    /// the `Static` state. The source keeps its state and is not changed. The cost is a clone of
-    /// the current state plus, from the `Dynamic` or the `Live` state, its `freeze`.
-    pub fn freeze_clone(&self) -> Self {
+    /// A frozen copy of the graph: the same positions, payloads, tombstones, edges, root and
+    /// mode in the `Static` state, with no maintained view. The source keeps its state and its
+    /// views and is not changed. The cost is a clone of the current state plus, from the
+    /// `Dynamic` or the `Live` state, its `freeze`.
+    pub fn freeze_clone(&self) -> UltraGraphContainer<N, W> {
         let state = match &self.state {
             GraphState::Dynamic(g) => GraphState::Static(g.clone().freeze()),
             GraphState::Live(g) => GraphState::Static(g.clone().freeze()),
             GraphState::Static(g) => GraphState::Static(g.clone()),
         };
-        Self { state }
+        UltraGraphContainer::with_state(state, self.mode)
     }
 }

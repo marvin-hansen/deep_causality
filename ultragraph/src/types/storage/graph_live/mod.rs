@@ -42,7 +42,7 @@ pub(crate) struct Arena<W> {
 
 impl<W: Clone + Default + EdgeKey> Arena<W> {
     /// Adopts a CSR: one row per position over its arrays, each at its exact length.
-    fn adopt(csr: CsrAdjacency<W>) -> Self {
+    pub(crate) fn adopt(csr: CsrAdjacency<W>) -> Self {
         let rows = csr
             .offsets
             .windows(2)
@@ -59,7 +59,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
         }
     }
 
-    fn empty() -> Self {
+    pub(crate) fn empty() -> Self {
         Self {
             targets: Vec::new(),
             weights: Vec::new(),
@@ -68,7 +68,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
     }
 
     /// A row for a new position, with no entry and no capacity.
-    fn push_row(&mut self) {
+    pub(crate) fn push_row(&mut self) {
         self.rows.push(Row {
             start: self.targets.len(),
             len: 0,
@@ -77,7 +77,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
     }
 
     /// The live part of row `v`: its other ends and its payloads.
-    fn row(&self, v: usize) -> (&[usize], &[W]) {
+    pub(crate) fn row(&self, v: usize) -> (&[usize], &[W]) {
         let row = self.rows[v];
         (
             &self.targets[row.start..row.start + row.len],
@@ -86,7 +86,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
     }
 
     /// The run of row `v`'s entries with `other` as their other end, as offsets within the row.
-    fn run(&self, v: usize, other: usize) -> (usize, usize) {
+    pub(crate) fn run(&self, v: usize, other: usize) -> (usize, usize) {
         let (targets, _) = self.row(v);
         let lo = targets.partition_point(|t| *t < other);
         let hi = lo + targets[lo..].partition_point(|t| *t <= other);
@@ -94,7 +94,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
     }
 
     /// The offset of `(other, key)` within row `v`, or the offset it would be inserted at.
-    fn search(&self, v: usize, other: usize, key: W::Key) -> Result<usize, usize> {
+    pub(crate) fn search(&self, v: usize, other: usize, key: W::Key) -> Result<usize, usize> {
         let (lo, hi) = self.run(v, other);
         let (_, weights) = self.row(v);
         let keys = &weights[lo..hi];
@@ -106,7 +106,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
 
     /// Inserts `(other, weight)` at offset `at` of row `v`, shifting the entries after it; a
     /// full row is rebuilt at the arena's end with twice its capacity, at least one.
-    fn insert_at(&mut self, v: usize, at: usize, other: usize, weight: W) {
+    pub(crate) fn insert_at(&mut self, v: usize, at: usize, other: usize, weight: W) {
         let row = self.rows[v];
         if row.len < row.cap {
             let from = row.start + at;
@@ -152,7 +152,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
 
     /// Removes the entries at offsets `from..to` of row `v`, shifting the rest left; the
     /// capacity stays.
-    fn remove_run(&mut self, v: usize, from: usize, to: usize) {
+    pub(crate) fn remove_run(&mut self, v: usize, from: usize, to: usize) {
         let row = self.rows[v];
         let (a, b, end) = (row.start + from, row.start + to, row.start + row.len);
         self.targets.copy_within(b..end, a);
@@ -163,7 +163,7 @@ impl<W: Clone + Default + EdgeKey> Arena<W> {
     }
 
     /// Empties row `v`; its capacity stays as a hole.
-    fn clear_row(&mut self, v: usize) {
+    pub(crate) fn clear_row(&mut self, v: usize) {
         self.rows[v].len = 0;
     }
 }
