@@ -19,6 +19,7 @@ where
         match &mut self.state {
             // Corrected: Directly return the result from the inner call.
             GraphState::Dynamic(g) => g.add_node(node),
+            GraphState::Live(g) => g.add_node(node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
@@ -32,6 +33,7 @@ where
     fn update_node(&mut self, index: usize, node: N) -> Result<(), GraphError> {
         match &mut self.state {
             GraphState::Dynamic(g) => g.update_node(index, node),
+            GraphState::Live(g) => g.update_node(index, node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
@@ -45,6 +47,7 @@ where
     fn remove_node(&mut self, index: usize) -> Result<(), GraphError> {
         match &mut self.state {
             GraphState::Dynamic(g) => g.remove_node(index),
+            GraphState::Live(g) => g.remove_node(index),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
@@ -58,6 +61,7 @@ where
     fn add_edge(&mut self, a: usize, b: usize, weight: W) -> Result<(), GraphError> {
         match &mut self.state {
             GraphState::Dynamic(g) => g.add_edge(a, b, weight),
+            GraphState::Live(g) => g.add_edge(a, b, weight),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
@@ -71,6 +75,7 @@ where
     fn remove_edge(&mut self, a: usize, b: usize) -> Result<(), GraphError> {
         match &mut self.state {
             GraphState::Dynamic(g) => g.remove_edge(a, b),
+            GraphState::Live(g) => g.remove_edge(a, b),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
@@ -78,6 +83,7 @@ where
     fn remove_edge_keyed(&mut self, a: usize, b: usize, key: W::Key) -> Result<(), GraphError> {
         match &mut self.state {
             GraphState::Dynamic(g) => g.remove_edge_keyed(a, b, key),
+            GraphState::Live(g) => g.remove_edge_keyed(a, b, key),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
@@ -91,13 +97,15 @@ where
         match &mut self.state {
             // Corrected: Directly return the result from the inner call.
             GraphState::Dynamic(g) => g.add_root_node(node),
+            GraphState::Live(g) => g.add_root_node(node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }
 
-    /// Clears all nodes and edges from the graph, resetting it to an empty, dynamic state.
+    /// Clears all nodes and edges from the graph, resetting it to an empty, dynamic state from
+    /// any state; the next position issued is 0.
     ///
-    /// This operation is always successful and will unfreeze the graph if it was frozen.
+    /// This operation is always successful and will unfreeze the graph if it was frozen or live.
     fn clear(&mut self) -> Result<(), GraphError> {
         // Clearing the graph resets it to a new, empty, dynamic state,
         // regardless of its previous state. This is a total reset.

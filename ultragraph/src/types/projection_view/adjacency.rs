@@ -4,7 +4,7 @@
  */
 
 use crate::types::storage::graph_csm::adjacency::Adjacency;
-use crate::{EdgeKey, GraphView, ParallelEdges, Projection, ProjectionView};
+use crate::{EdgeKey, ParallelEdges, Projection, ProjectionView};
 
 impl<N, W, P> Adjacency<W> for ProjectionView<'_, N, W, P>
 where
@@ -13,12 +13,12 @@ where
     P: Projection<N, W>,
 {
     fn slots(&self) -> usize {
-        self.graph.node_slots()
+        self.backing.slots()
     }
 
     /// Live and passing the node test.
     fn passes(&self, v: usize) -> bool {
-        self.graph
+        self.backing
             .get_node(v)
             .is_some_and(|node| self.projection.node(node))
     }
@@ -33,7 +33,7 @@ where
         W: 'a,
     {
         let source_passes = self.passes(v);
-        self.graph.forward_of(v).filter(move |(target, weight)| {
+        self.backing.forward_of(v).filter(move |(target, weight)| {
             source_passes && self.passes(*target) && self.projection.edge(weight)
         })
     }
@@ -43,7 +43,7 @@ where
         W: 'a,
     {
         let target_passes = self.passes(v);
-        self.graph.backward_of(v).filter(move |(source, weight)| {
+        self.backing.backward_of(v).filter(move |(source, weight)| {
             target_passes && self.passes(*source) && self.projection.edge(weight)
         })
     }

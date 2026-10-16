@@ -27,7 +27,7 @@ where
     }
 
     fn get_node(&self, index: usize) -> Option<&N> {
-        self.graph
+        self.backing
             .get_node(index)
             .filter(|node| self.projection.node(node))
     }
@@ -74,8 +74,8 @@ where
 
     /// The graph's root, when it passes.
     fn get_root_index(&self) -> Option<usize> {
-        self.graph
-            .get_root_index()
+        self.backing
+            .root_index()
             .filter(|&index| self.passes(index))
     }
 }

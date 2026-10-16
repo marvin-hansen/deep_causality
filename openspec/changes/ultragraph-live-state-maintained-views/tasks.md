@@ -71,22 +71,22 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 ## 4. The Live state, its transitions and freeze_clone
 
-- [ ] 4.1 Phase 1: `GraphState::Live`, `is_live`, the transition into Live, Live's handling in every
+- [x] 4.1 Phase 1: `GraphState::Live`, `is_live`, the transition into Live, Live's handling in every
       `GraphView`, `GraphMut` and `GraphTraversal` method and in the adjacency trait,
       `GraphError::GraphIsLive` for `compact_ids` in Live, and `freeze_clone`, all with
       `unimplemented!()` bodies where new
-- [ ] 4.2 Fill the A–K table for Live (rows A–F, H, K of design D7)
-- [ ] 4.3 Phase 2: a test for every scenario of `ultragraph-three-states`; extend the model-based test
+- [x] 4.2 Fill the A–K table for Live (rows A–F, H, K of design D7)
+- [x] 4.3 Phase 2: a test for every scenario of `ultragraph-three-states`; extend the model-based test
       with every transition, `freeze_clone` and mutations in Live; add the Live-versus-freshly-frozen
       agreement test; observe failing; record
-- [ ] 4.4 Phase 3: inject the design D7 Live defects (a rebuilt row without spare capacity; a relocated
+- [x] 4.4 Phase 3: inject the design D7 Live defects (a rebuilt row without spare capacity; a relocated
       row's record not updated; the mask bit not cleared; stale entries read through a cleared mask;
       `freeze_clone` changing the source; `compact_ids` accepted in Live) and the nine generic classes; record; discard
-- [ ] 4.5 Phase 4: implement the arena, records and mask, every transition, `freeze_clone`, and the
+- [x] 4.5 Phase 4: implement the arena, records and mask, every transition, `freeze_clone`, and the
       algorithms through the adjacency trait in Live; full coverage; matching `cargo test` and
       `bazel test //...` counts
-- [ ] 4.6 Phase 5: `scripts/mutants.sh` over the group's files; resolve every survivor
-- [ ] 4.7 Commit message for group 4
+- [x] 4.6 Phase 5: `scripts/mutants.sh` over the group's files; resolve every survivor
+- [x] 4.7 Commit message for group 4
 
 ## 5. The Live decision
 

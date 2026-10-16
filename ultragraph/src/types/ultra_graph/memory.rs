@@ -13,6 +13,7 @@ where
     pub(crate) fn edge_storage_bytes(&self) -> usize {
         match &self.state {
             GraphState::Dynamic(g) => g.edge_storage_bytes(),
+            GraphState::Live(g) => g.edge_storage_bytes(),
             GraphState::Static(g) => g.edge_storage_bytes(),
         }
     }

@@ -1360,3 +1360,119 @@ fn test_results_that_do_not_depend_on_the_mode() {
         );
     }
 }
+
+/// Spec `ultragraph-three-states`: `project` works in the Live state. A view on a Live graph
+/// answers every read, traversal and algorithm as the same view on the graph frozen, under both
+/// modes, after mutations in Live that moved rows and left a tombstone behind.
+#[test]
+fn test_a_view_on_a_live_graph_answers_as_on_the_frozen_graph() {
+    let mut g: UltraGraphWeighted<Zone, Weighted> = UltraGraphWeighted::new();
+    for (p, zone) in [Zone::A, Zone::A, Zone::B, Zone::A, Zone::B, Zone::A]
+        .into_iter()
+        .enumerate()
+    {
+        assert_eq!(g.add_node(zone).unwrap(), p);
+    }
+    g.add_edge(0, 1, weighted(Kind::A, 1)).unwrap();
+    g.add_edge(1, 2, weighted(Kind::A, 1)).unwrap();
+    g.make_live();
+    g.add_edge(0, 1, weighted(Kind::B, 2)).unwrap();
+    g.add_edge(1, 3, weighted(Kind::A, 3)).unwrap();
+    g.add_edge(3, 5, weighted(Kind::A, 1)).unwrap();
+    g.add_edge(5, 0, weighted(Kind::B, 1)).unwrap();
+    g.add_edge(2, 4, weighted(Kind::A, 1)).unwrap();
+    g.remove_node(4).unwrap();
+    assert!(g.is_live());
+    let mut frozen = g.clone();
+    frozen.freeze();
+
+    for mode in [ParallelEdges::Merge, ParallelEdges::Distinct] {
+        let live_view = g.project(Scope::ZoneA, mode).unwrap();
+        let frozen_view = frozen.project(Scope::ZoneA, mode).unwrap();
+        assert_eq!(live_view.number_nodes(), frozen_view.number_nodes());
+        assert_eq!(
+            live_view.number_nodes(),
+            4,
+            "{mode:?}: zone A holds 0, 1, 3 and 5"
+        );
+        assert_eq!(live_view.number_edges(), frozen_view.number_edges());
+        for p in 0..7 {
+            assert_eq!(
+                live_view.contains_node(p),
+                frozen_view.contains_node(p),
+                "{mode:?} node {p}"
+            );
+            assert_eq!(
+                live_view.get_edges(p),
+                frozen_view.get_edges(p),
+                "{mode:?} edges {p}"
+            );
+            assert_eq!(
+                live_view
+                    .outbound_edges(p)
+                    .map(|i| i.collect::<Vec<_>>())
+                    .ok(),
+                frozen_view
+                    .outbound_edges(p)
+                    .map(|i| i.collect::<Vec<_>>())
+                    .ok()
+            );
+            assert_eq!(
+                live_view
+                    .inbound_edges(p)
+                    .map(|i| i.collect::<Vec<_>>())
+                    .ok(),
+                frozen_view
+                    .inbound_edges(p)
+                    .map(|i| i.collect::<Vec<_>>())
+                    .ok()
+            );
+        }
+        assert_eq!(
+            live_view.bridges(),
+            frozen_view.bridges(),
+            "{mode:?} bridges"
+        );
+        assert_eq!(
+            live_view.strongly_connected_components(),
+            frozen_view.strongly_connected_components()
+        );
+        assert_eq!(live_view.is_reachable(0, 5), frozen_view.is_reachable(0, 5));
+        assert_eq!(
+            live_view.is_reachable(0, 5),
+            Ok(true),
+            "{mode:?}: 0 → 1 → 3 → 5 in zone A"
+        );
+        assert_eq!(
+            live_view.is_reachable(0, 2),
+            Ok(false),
+            "{mode:?}: 2 is out of scope"
+        );
+        assert_eq!(
+            live_view.betweenness_centrality(true, false),
+            frozen_view.betweenness_centrality(true, false)
+        );
+    }
+}
+
+/// A payload replaced in the Live state is the payload a view's edge test reads from both
+/// ends: the backward row carries the replacement too, so the view's inbound traversal and its
+/// outbound traversal agree.
+#[test]
+fn test_a_payload_replaced_in_live_is_read_from_both_rows_of_a_view() {
+    let mut g: UltraGraphWeighted<Zone, Weighted> = UltraGraphWeighted::new();
+    g.add_node(Zone::A).unwrap();
+    g.add_node(Zone::A).unwrap();
+    g.add_edge(0, 1, weighted(Kind::A, 1)).unwrap();
+    g.make_live();
+    g.add_edge(0, 1, weighted(Kind::A, 9)).unwrap();
+    let heavy: TestPair<Zone, Weighted> = (|_| true, |w| w.weight >= 5);
+    let view = g.project(heavy, ParallelEdges::Merge).unwrap();
+    assert_eq!(view.outbound_edges(0).unwrap().collect::<Vec<_>>(), vec![1]);
+    assert_eq!(view.inbound_edges(1).unwrap().collect::<Vec<_>>(), vec![0]);
+    assert_eq!(view.number_edges(), 1);
+    let light: TestPair<Zone, Weighted> = (|_| true, |w| w.weight < 5);
+    let view = g.project(light, ParallelEdges::Merge).unwrap();
+    assert_eq!(view.outbound_edges(0).unwrap().count(), 0);
+    assert_eq!(view.inbound_edges(1).unwrap().count(), 0);
+}

@@ -12,9 +12,9 @@ where
     N: Clone,
     W: Clone + Default + EdgeKey,
 {
-    /// A view of the frozen graph restricted to what `projection` passes, counting parallel edges
-    /// under `mode`. Every algorithm, read and traversal runs on the view; positions are the
-    /// graph's. The view borrows the graph.
+    /// A view of the frozen or live graph restricted to what `projection` passes, counting
+    /// parallel edges under `mode`. Every algorithm, read and traversal runs on the view;
+    /// positions are the graph's. The view borrows the graph.
     ///
     /// # Errors
     /// Returns `GraphError::GraphNotFrozen` in the dynamic state.
@@ -27,7 +27,8 @@ where
         P: Projection<N, W>,
     {
         match &self.state {
-            GraphState::Static(g) => Ok(ProjectionView::new(g, projection, mode)),
+            GraphState::Static(g) => Ok(ProjectionView::frozen(g, projection, mode)),
+            GraphState::Live(g) => Ok(ProjectionView::live(g, projection, mode)),
             GraphState::Dynamic(_) => Err(GraphError::GraphNotFrozen),
         }
     }

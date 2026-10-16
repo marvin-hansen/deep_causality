@@ -26,6 +26,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.is_empty(),
             GraphState::Static(g) => g.is_empty(),
+            GraphState::Live(g) => g.is_empty(),
         }
     }
 
@@ -34,6 +35,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.contains_node(index),
             GraphState::Static(g) => g.contains_node(index),
+            GraphState::Live(g) => g.contains_node(index),
         }
     }
 
@@ -42,6 +44,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.get_node(index),
             GraphState::Static(g) => g.get_node(index),
+            GraphState::Live(g) => g.get_node(index),
         }
     }
 
@@ -50,6 +53,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.number_nodes(),
             GraphState::Static(g) => g.number_nodes(),
+            GraphState::Live(g) => g.number_nodes(),
         }
     }
 
@@ -58,6 +62,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.contains_edge(a, b),
             GraphState::Static(g) => g.contains_edge(a, b),
+            GraphState::Live(g) => g.contains_edge(a, b),
         }
     }
 
@@ -66,6 +71,7 @@ where
         match &self.state {
             GraphState::Static(g) => g.contains_edge_keyed(a, b, key),
             GraphState::Dynamic(g) => g.contains_edge_keyed(a, b, key),
+            GraphState::Live(g) => g.contains_edge_keyed(a, b, key),
         }
     }
 
@@ -74,6 +80,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.number_edges(),
             GraphState::Static(g) => g.number_edges(),
+            GraphState::Live(g) => g.number_edges(),
         }
     }
 
@@ -83,6 +90,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.get_all_nodes(),
             GraphState::Static(g) => g.get_all_nodes(),
+            GraphState::Live(g) => g.get_all_nodes(),
         }
     }
 
@@ -93,6 +101,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.get_edges(source),
             GraphState::Static(g) => g.get_edges(source),
+            GraphState::Live(g) => g.get_edges(source),
         }
     }
 
@@ -100,6 +109,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.get_last_index(),
             GraphState::Static(g) => g.get_last_index(),
+            GraphState::Live(g) => g.get_last_index(),
         }
     }
 
@@ -108,6 +118,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.contains_root_node(),
             GraphState::Static(g) => g.contains_root_node(),
+            GraphState::Live(g) => g.contains_root_node(),
         }
     }
 
@@ -116,6 +127,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.get_root_node(),
             GraphState::Static(g) => g.get_root_node(),
+            GraphState::Live(g) => g.get_root_node(),
         }
     }
 
@@ -124,6 +136,7 @@ where
         match &self.state {
             GraphState::Dynamic(g) => g.get_root_index(),
             GraphState::Static(g) => g.get_root_index(),
+            GraphState::Live(g) => g.get_root_index(),
         }
     }
 }

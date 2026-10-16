@@ -15,10 +15,12 @@ where
     /// [`DynamicGraph::compact_ids`](crate::DynamicGraph::compact_ids).
     ///
     /// # Errors
-    /// Returns `GraphError::GraphIsFrozen` in the frozen state; the graph is unchanged.
+    /// Returns `GraphError::GraphIsFrozen` in the frozen state and `GraphError::GraphIsLive` in
+    /// the live state; the graph is unchanged.
     pub fn compact_ids(&mut self) -> Result<Vec<Option<usize>>, GraphError> {
         match &mut self.state {
             GraphState::Dynamic(g) => Ok(g.compact_ids()),
+            GraphState::Live(_) => Err(GraphError::GraphIsLive),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }
     }

@@ -648,13 +648,21 @@ fn test_a_graph_with_no_live_node_keeps_its_table() {
 
 // --- Model-based test: seeded operation sequences against a reference model ---
 
+/// The three states of the model.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum State {
+    Dynamic,
+    Live,
+    Frozen,
+}
+
 /// The reference model: positions to payloads, the edges between live positions with their
 /// weights, the root, and the state. Positions are permanent until `compact` or `clear`.
 struct Model<W> {
     slots: Vec<Option<u64>>,
     edges: BTreeMap<(usize, usize), W>,
     root: Option<usize>,
-    frozen: bool,
+    state: State,
     next_payload: u64,
 }
 
@@ -664,7 +672,7 @@ impl<W: Copy> Model<W> {
             slots: Vec::new(),
             edges: BTreeMap::new(),
             root: None,
-            frozen: false,
+            state: State::Dynamic,
             next_payload: 0,
         }
     }
@@ -728,7 +736,18 @@ impl<W: Copy> Model<W> {
         self.slots.clear();
         self.edges.clear();
         self.root = None;
-        self.frozen = false;
+        self.state = State::Dynamic;
+    }
+
+    /// A copy of the model, for checking a frozen clone of the graph.
+    fn clone_state(&self) -> Self {
+        Self {
+            slots: self.slots.clone(),
+            edges: self.edges.clone(),
+            root: self.root,
+            state: self.state,
+            next_payload: self.next_payload,
+        }
     }
 }
 
@@ -737,7 +756,12 @@ fn check_against_model<W>(g: &UltraGraphContainer<u64, W>, m: &Model<W>, step: u
 where
     W: Clone + Default + EdgeKey + Copy + PartialEq + Debug,
 {
-    assert_eq!(g.is_frozen(), m.frozen, "step {step}: is_frozen");
+    assert_eq!(
+        g.is_frozen(),
+        m.state == State::Frozen,
+        "step {step}: is_frozen"
+    );
+    assert_eq!(g.is_live(), m.state == State::Live, "step {step}: is_live");
 
     let live = m.live();
     assert_eq!(g.number_nodes(), live.len(), "step {step}: number_nodes");
@@ -809,9 +833,12 @@ where
 }
 
 /// Drives one seeded sequence of `add_node`, `add_root_node`, `remove_node`, `add_edge`,
-/// `remove_edge`, `freeze`, `unfreeze`, `compact_ids` and `clear` against the model, checking
-/// every read after every step. Draws one past the table so every mutation also meets an absent
-/// position. `W` has `Key = ()`, so a repeated pair replaces the model's weight.
+/// `remove_edge`, `freeze`, `unfreeze`, `make_live`, `freeze_clone`, `compact_ids` and `clear`
+/// against the model, checking every read after every step; mutations run in the Dynamic and
+/// the Live state alike, `compact_ids` is refused in Live, and every `freeze_clone` is checked
+/// as a frozen copy of the model with the source left as it was. Draws one past the table so
+/// every mutation also meets an absent position. `W` has `Key = ()`, so a repeated pair
+/// replaces the model's weight.
 fn drive_model<W, F>(seed: u64, steps: usize, mut weight: F)
 where
     W: Clone + Default + EdgeKey + Copy + PartialEq + Debug,
@@ -825,21 +852,33 @@ where
         let roll = rng.random_range(0..100usize);
         let bound = m.slots.len() + 1;
 
-        if m.frozen {
+        if m.state == State::Frozen {
             match roll {
-                0..=69 => {
+                0..=54 => {
                     g.unfreeze();
-                    m.frozen = false;
+                    m.state = State::Dynamic;
                 }
-                70..=84 => assert_eq!(
+                55..=69 => {
+                    g.make_live();
+                    m.state = State::Live;
+                }
+                70..=79 => assert_eq!(
                     g.compact_ids(),
                     Err(GraphError::GraphIsFrozen),
                     "step {step}: compact_ids while frozen"
                 ),
-                85..=94 => {
+                80..=89 => {
                     let p = rng.random_range(0..bound);
                     assert_eq!(g.remove_node(p), Err(GraphError::GraphIsFrozen));
                     assert_eq!(g.add_node(u64::MAX), Err(GraphError::GraphIsFrozen));
+                }
+                90..=94 => {
+                    let copy = g.freeze_clone();
+                    let frozen_model = Model {
+                        state: State::Frozen,
+                        ..m.clone_state()
+                    };
+                    check_against_model(&copy, &frozen_model, step);
                 }
                 _ => {
                     g.clear().unwrap();
@@ -917,13 +956,38 @@ where
                         );
                     }
                 }
-                85..=92 => {
+                85..=88 => {
                     g.freeze();
-                    m.frozen = true;
+                    m.state = State::Frozen;
                 }
-                93..=97 => {
-                    let table = m.compact();
-                    assert_eq!(g.compact_ids(), Ok(table), "step {step}: compact_ids");
+                89..=91 => {
+                    g.make_live();
+                    m.state = State::Live;
+                }
+                92 => {
+                    g.unfreeze();
+                    m.state = State::Dynamic;
+                }
+                93..=95 => {
+                    if m.state == State::Live {
+                        assert_eq!(
+                            g.compact_ids(),
+                            Err(GraphError::GraphIsLive),
+                            "step {step}: compact_ids while live"
+                        );
+                    } else {
+                        let table = m.compact();
+                        assert_eq!(g.compact_ids(), Ok(table), "step {step}: compact_ids");
+                    }
+                }
+                96..=97 => {
+                    // The copy is frozen and reads as the model; the source keeps its state.
+                    let copy = g.freeze_clone();
+                    let frozen_model = Model {
+                        state: State::Frozen,
+                        ..m.clone_state()
+                    };
+                    check_against_model(&copy, &frozen_model, step);
                 }
                 _ => {
                     g.clear().unwrap();
@@ -947,5 +1011,81 @@ fn test_model_based_positions_with_unit_weights() {
 fn test_model_based_positions_with_u64_weights() {
     for seed in [11, 12, 13] {
         drive_model::<u64, _>(seed, 400, |rng| rng.random_range(0..1000u64)); // weight 0 included
+    }
+}
+
+// --- The Live state and freeze_clone (spec: ultragraph-three-states) ---
+
+/// Scenario "State queries in each state".
+#[test]
+fn test_state_queries_in_each_state() {
+    let mut g = four_nodes();
+    assert!(!g.is_frozen() && !g.is_live(), "dynamic");
+    g.make_live();
+    assert!(!g.is_frozen() && g.is_live(), "live");
+    g.freeze();
+    assert!(g.is_frozen() && !g.is_live(), "frozen");
+    g.make_live();
+    assert!(!g.is_frozen() && g.is_live(), "live from frozen");
+    g.unfreeze();
+    assert!(!g.is_frozen() && !g.is_live(), "dynamic from live");
+}
+
+/// Scenario "The source stays mutable": `freeze_clone` of a Dynamic graph returns a frozen copy
+/// and the source accepts the next write, which the copy does not see.
+#[test]
+fn test_freeze_clone_of_a_dynamic_graph_leaves_the_source_mutable() {
+    let mut g = four_nodes();
+    g.add_edge(0, 1, ()).unwrap();
+    let copy = g.freeze_clone();
+    assert!(copy.is_frozen());
+    assert!(!g.is_frozen() && !g.is_live());
+    assert_eq!(g.add_node("E"), Ok(4));
+    assert_eq!(g.add_edge(4, 0, ()), Ok(()));
+    assert_eq!(copy.number_nodes(), 4);
+    assert_eq!(copy.number_edges(), 1);
+    assert!(!copy.contains_node(4));
+    assert_eq!(copy.get_node(1), Some(&"B"));
+    assert_eq!(copy.is_reachable(0, 1), Ok(true));
+    assert_eq!(copy.outbound_edges(0).unwrap().collect::<Vec<_>>(), vec![1]);
+}
+
+/// `freeze_clone` of a Live graph: the copy is frozen and equal; the source stays live and
+/// keeps accepting writes.
+#[test]
+fn test_freeze_clone_of_a_live_graph() {
+    let mut g = four_nodes();
+    g.add_edge(0, 1, ()).unwrap();
+    g.remove_node(3).unwrap();
+    g.make_live();
+    g.add_edge(1, 2, ()).unwrap();
+    let copy = g.freeze_clone();
+    assert!(copy.is_frozen());
+    assert!(g.is_live());
+    assert_eq!(copy.number_edges(), 2);
+    assert!(!copy.contains_node(3));
+    assert_eq!(copy.shortest_path(0, 2), Ok(Some(vec![0, 1, 2])));
+    assert_eq!(g.add_edge(2, 0, ()), Ok(()));
+    assert_eq!(g.number_edges(), 3);
+    assert_eq!(copy.number_edges(), 2);
+}
+
+/// `freeze_clone` of a Frozen graph is a copy of it.
+#[test]
+fn test_freeze_clone_of_a_frozen_graph_is_a_copy() {
+    let mut g = four_nodes();
+    g.add_edge(2, 3, ()).unwrap();
+    g.freeze();
+    let copy = g.freeze_clone();
+    assert!(copy.is_frozen() && g.is_frozen());
+    assert_eq!(copy.get_edges(2), g.get_edges(2));
+    assert_eq!(copy.number_nodes(), 4);
+    assert_eq!(copy.get_root_index(), g.get_root_index());
+}
+
+#[test]
+fn test_model_based_positions_through_three_states_with_unit_weights() {
+    for seed in [21, 22, 23] {
+        drive_model::<(), _>(seed, 500, |_| ());
     }
 }

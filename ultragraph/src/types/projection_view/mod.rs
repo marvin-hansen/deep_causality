@@ -4,15 +4,18 @@
  */
 
 mod adjacency;
+mod backing;
 mod graph_algo;
 mod graph_traversal;
 mod graph_view;
 
-use crate::{CsmGraph, EdgeKey, ParallelEdges, Projection};
+use crate::types::projection_view::backing::Backing;
+use crate::{CsmGraph, EdgeKey, LiveGraph, ParallelEdges, Projection};
 
-/// A view of a frozen graph restricted to the nodes and edges a [`Projection`] passes, with the
-/// parallel-edge mode its algorithms count under. Positions are those of the graph; a failing
-/// node reads as absent. The view borrows the graph, so the graph cannot change while it lives.
+/// A view of a frozen or live graph restricted to the nodes and edges a [`Projection`] passes,
+/// with the parallel-edge mode its algorithms count under. Positions are those of the graph; a
+/// failing node reads as absent. The view borrows the graph, so the graph cannot change while it
+/// lives.
 #[derive(Clone, Debug)]
 pub struct ProjectionView<'a, N, W, P>
 where
@@ -20,7 +23,7 @@ where
     W: Clone + Default + EdgeKey,
     P: Projection<N, W>,
 {
-    graph: &'a CsmGraph<N, W>,
+    backing: Backing<'a, N, W>,
     projection: P,
     mode: ParallelEdges,
 }
@@ -31,9 +34,17 @@ where
     W: Clone + Default + EdgeKey,
     P: Projection<N, W>,
 {
-    pub(crate) fn new(graph: &'a CsmGraph<N, W>, projection: P, mode: ParallelEdges) -> Self {
+    pub(crate) fn frozen(graph: &'a CsmGraph<N, W>, projection: P, mode: ParallelEdges) -> Self {
         Self {
-            graph,
+            backing: Backing::Frozen(graph),
+            projection,
+            mode,
+        }
+    }
+
+    pub(crate) fn live(graph: &'a LiveGraph<N, W>, projection: P, mode: ParallelEdges) -> Self {
+        Self {
+            backing: Backing::Live(graph),
             projection,
             mode,
         }

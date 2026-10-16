@@ -27,6 +27,10 @@ pub enum GraphError {
     /// Operation not possible because the graph is frozen and cannot be mutated.
     GraphIsFrozen,
 
+    /// Operation not possible in the Live state: `compact_ids` renumbers positions, which the
+    /// Live state keeps; unfreeze first.
+    GraphIsLive,
+
     /// Root node already exists
     RootNodeAlreadyExists,
 
@@ -65,6 +69,12 @@ impl fmt::Display for GraphError {
                 write!(
                     f,
                     "Operation not possible because the graph is frozen and cannot be mutated. Call graph.unfreeze() first."
+                )
+            }
+            Self::GraphIsLive => {
+                write!(
+                    f,
+                    "Operation not possible because the graph is live. Call graph.unfreeze() first."
                 )
             }
             Self::RootNodeAlreadyExists => {

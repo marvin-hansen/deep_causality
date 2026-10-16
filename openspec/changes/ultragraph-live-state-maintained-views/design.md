@@ -215,5 +215,5 @@ Each group ends with `bazel test //...` green, clippy clean, and a commit messag
 
 ## Open Questions
 
-- The transition into Live is named `live` provisionally; the phase-1 API review settles it.
+- The transition into Live is `make_live`, settled at group 4's phase-1 review.
 - Unregistering a maintained view is not specified; add it if a caller needs it.

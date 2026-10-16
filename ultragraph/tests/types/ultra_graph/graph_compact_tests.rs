@@ -376,3 +376,28 @@ fn test_compact_ids_clears_a_root_past_the_table() {
     assert_eq!(g.root_index(), None);
     assert_eq!(g.get_node(0), Some(&"A"));
 }
+
+/// Spec `ultragraph-three-states`, "Compacting a Live graph is refused": `compact_ids` returns
+/// `GraphIsLive` and changes nothing, positions and edges included.
+#[test]
+fn test_compacting_a_live_graph_is_refused() {
+    let mut g: UltraGraph<&str> = UltraGraph::new();
+    for payload in ["A", "B", "C"] {
+        g.add_node(payload).unwrap();
+    }
+    g.add_edge(0, 2, ()).unwrap();
+    g.remove_node(1).unwrap();
+    g.make_live();
+
+    assert_eq!(g.compact_ids(), Err(GraphError::GraphIsLive));
+
+    assert!(g.is_live());
+    assert_eq!(g.get_node(2), Some(&"C"));
+    assert!(!g.contains_node(1));
+    assert!(g.contains_edge(0, 2));
+    assert_eq!(g.number_edges(), 1);
+    // After unfreezing, compaction proceeds as in the dynamic state.
+    g.unfreeze();
+    assert_eq!(g.compact_ids(), Ok(vec![Some(0), None, Some(1)]));
+    assert_eq!(g.get_node(1), Some(&"C"));
+}

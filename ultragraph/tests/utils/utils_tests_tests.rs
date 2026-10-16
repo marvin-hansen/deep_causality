@@ -365,3 +365,65 @@ fn test_capacity_stays_through_growth_and_removals() {
     //   3,120 + 512 + 2,016 = 5,648; then 5,680 at 64, 32 and 31 edges.
     assert_eq!([at_63, at_64, at_32, at_31], [5_648, 5_680, 5_680, 5_680]);
 }
+
+// --- The Live state --------------------------------------------------------------------------
+
+/// The Live state adopts the frozen CSR: per direction, targets and weights of exactly `edges`
+/// entries and one 24-byte row record per position, reserved for exactly the positions.
+#[test]
+fn test_a_live_graph_counts_its_arenas() {
+    let mut g = three_nodes_two_edges(2, ());
+    g.make_live();
+    // Per direction: 2 targets × 8 + 2 weights × 0 + 3 rows × 24 = 88. Both: 176 over 2 edges.
+    assert_eq!(edge_storage_bytes(&g), 176);
+    assert_eq!(memory_per_edge(&g), Some(88.0));
+}
+
+/// An edge added in Live to a full row rebuilds the row at the arena's end with twice its
+/// capacity: node 0's forward row of capacity 1 becomes a row of capacity 2 at the end, and
+/// node 2's backward row likewise, each arena's vectors growing by `Vec`'s doubling.
+#[test]
+fn test_a_rebuilt_row_grows_the_arena() {
+    let mut g = three_nodes_two_edges(2, ());
+    g.make_live();
+    g.add_edge(0, 2, ()).unwrap();
+    // Forward: targets and weights held 2 entries at capacity 2; the rebuilt row appends 2
+    // more (one live, one spare), so `Vec` doubles both to capacity 4: 4 × 8 + 0 + 72 = 104.
+    // Backward: node 2's row grows the same way: 104. In all 208 over 3 edges.
+    assert_eq!(edge_storage_bytes(&g), 208);
+    assert_eq!(memory_per_edge(&g), Some(208.0 / 3.0));
+}
+
+/// Freezing a Live graph closes the holes: the CSR holds exactly the live entries again.
+#[test]
+fn test_freezing_a_live_graph_closes_its_holes() {
+    let mut g = three_nodes_two_edges(2, ());
+    g.make_live();
+    g.add_edge(0, 2, ()).unwrap();
+    g.freeze();
+    // Offsets reserved for 4, targets and weights of exactly 3: 32 + 24 + 0 = 56 per direction.
+    assert_eq!(edge_storage_bytes(&g), 112);
+}
+
+/// A full row of capacity two rebuilt by a third edge gets capacity four: node 0's forward row
+/// holds 0 → 1 and 0 → 2 and receives 0 → 3; node 3's backward row, empty with no capacity,
+/// gets capacity one.
+#[test]
+fn test_a_full_row_doubles_its_capacity() {
+    let mut g: UltraGraph<i32> = UltraGraph::with_capacity(4, Some(1));
+    for i in 0..4 {
+        g.add_node(i).unwrap();
+    }
+    g.add_edge(0, 1, ()).unwrap();
+    g.add_edge(0, 2, ()).unwrap();
+    g.add_edge(1, 2, ()).unwrap();
+    g.make_live();
+    g.add_edge(0, 3, ()).unwrap();
+    // Forward: the adopted targets held 3 entries at capacity 3; the rebuilt row of capacity
+    // 4 (twice 2) appends 3 live entries and 1 spare, so `Vec` grows 3 → 6 → 12: 12 × 8 = 96,
+    // weights 0, rows 4 × 24 = 96: 192. A row rebuilt at its length plus one would append 3
+    // and read 6 × 8 = 48, 144 in all.
+    // Backward: node 3's row of capacity 0 becomes a row of capacity 1 (one entry), the
+    // targets growing 3 → 6: 48 + 0 + 96 = 144.
+    assert_eq!(edge_storage_bytes(&g), 336);
+}

@@ -36,6 +36,15 @@ where
     pub(crate) weights: Vec<W>,
 }
 
+/// The node table, the forward and the backward CSR, the root and the live-node count.
+pub(crate) type CsmParts<N, W> = (
+    Vec<Option<N>>,
+    CsrAdjacency<W>,
+    CsrAdjacency<W>,
+    Option<usize>,
+    usize,
+);
+
 #[derive(Clone, Debug)]
 pub struct CsmGraph<N, W>
 where
@@ -126,6 +135,18 @@ where
             backward_edges,
             root_index,
         }
+    }
+
+    /// The node table, the two CSRs, the root and the live-node count, for the Live state to
+    /// adopt.
+    pub(crate) fn into_parts(self) -> CsmParts<N, W> {
+        (
+            self.nodes,
+            self.forward_edges,
+            self.backward_edges,
+            self.root_index,
+            self.live_nodes,
+        )
     }
 
     /// The number of positions in the node table, tombstones included. Every per-node array an

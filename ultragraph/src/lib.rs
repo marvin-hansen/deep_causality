@@ -27,6 +27,7 @@ pub use crate::types::parallel_edges::ParallelEdges;
 pub use crate::types::projection_view::ProjectionView;
 pub use crate::types::storage::graph_csm::CsmGraph;
 pub use crate::types::storage::graph_dynamic::DynamicGraph;
+pub use crate::types::storage::graph_live::LiveGraph;
 pub use crate::types::storage::graph_state::GraphState;
 pub use ultragraph_traits::EdgeKey;
 // Types

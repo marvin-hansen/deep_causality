@@ -60,6 +60,16 @@ fn test_graph_not_frozen_error() {
 }
 
 #[test]
+fn test_graph_is_live_error() {
+    let error = GraphError::GraphIsLive;
+    assert_eq!(
+        format!("{error}"),
+        "Operation not possible because the graph is live. Call graph.unfreeze() first."
+    );
+    assert!(error.source().is_none());
+}
+
+#[test]
 fn test_graph_is_frozen_error() {
     let error = GraphError::GraphIsFrozen;
     assert_eq!(
