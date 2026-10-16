@@ -1,0 +1,140 @@
+ultragraph/BUILD.bazel
+  s_761f70cf42d74a::t_3289b65c72a24c 157-175
+ultragraph/tests/types/storage/graph_live/graph_unfreeze_tests.rs
+  s_761f70cf42d74a::t_e90a2102c433cc 62-65,71-74
+  s_761f70cf42d74a::t_3289b65c72a24c 1-61,66-70,75-78
+ultragraph/src/errors/graph_error.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 30-33,74-77
+  s_761f70cf42d74a::t_a2dc4eabfc299c 78-79
+ultragraph/src/types/storage/graph_live/graph_algo_pathfinder.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 1-48
+ultragraph/src/types/storage/graph_live/graph_algo.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 1-13
+ultragraph/src/types/storage/graph_live/graph_view.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 17,21,25,29,33,39-43,47,52,56,62-63,67,71,75,79
+  s_761f70cf42d74a::t_d7eb754b04d955 1-16,18-20,22-24,26-28,30-32,34-38,44-46,48-51,53-55,57-61,64-66,68-70,72-74,76-78,80-81
+openspec/changes/ultragraph-live-state-maintained-views/design.md
+  s_761f70cf42d74a::t_94810289bbcbee 218
+ultragraph/src/types/storage/graph_live/graph_unfreeze.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 6-7,18-25
+  s_761f70cf42d74a::t_d7eb754b04d955 1-5,8-17,26-27
+ultragraph/src/types/ultra_graph/graph_project.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 15-17,30-31
+ultragraph/src/types/storage/graph_live/graph_algo_topological.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 1-31
+ultragraph/src/types/projection_view/mod.rs
+  s_761f70cf42d74a::t_4362bdef98e3e7 7,12-13,15-18,26,37,39-47
+ultragraph/src/types/storage/graph_live/graph_traversal.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 18-21,29-32
+  s_761f70cf42d74a::t_d7eb754b04d955 1-17,22-28,33-34
+ultragraph/src/types/storage/graph_live/graph_algo_centrality.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 1-34
+ultragraph/src/lib.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 30
+ultragraph/src/types/ultra_graph/graph_view.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 29,38,47,56,65,74,83,93,104,112,121,130,139
+ultragraph/src/types/ultra_graph/memory.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 16
+ultragraph/src/types/ultra_graph/traversal_iter.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 6,8,11,14,18,26,34
+ultragraph/tests/types/storage/graph_live/graph_traversal_tests.rs
+  s_761f70cf42d74a::t_3289b65c72a24c 1-29,32-36,41-50,59-67,76-83,88-90
+  s_761f70cf42d74a::t_e90a2102c433cc 37-40,51-58,68-75,84-87
+  s_761f70cf42d74a::t_14bb136d83ba6f 30-31
+ultragraph/tests/types/storage/graph_live/graph_view_tests.rs
+  s_761f70cf42d74a::t_3289b65c72a24c 1-96
+ultragraph/tests/types/storage/mod.rs
+  s_761f70cf42d74a::t_3289b65c72a24c 6
+ultragraph/tests/errors/error_tests.rs
+  s_761f70cf42d74a::t_f7ee24b3a475bb 63-69
+  s_761f70cf42d74a::t_25bd6bc341774d 60-62
+ultragraph/src/types/ultra_graph/graph_algo.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 64,110,124,133,141,154,162,175,183,203,217,228,236,243,251,258,266,273,287,295,303,311,319,328
+ultragraph/src/types/storage/graph_live/memory.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 27
+  s_761f70cf42d74a::t_d7eb754b04d955 1-26,28-29
+ultragraph/tests/types/storage/graph_live/mod.rs
+  s_761f70cf42d74a::t_3289b65c72a24c 1-17
+ultragraph/tests/utils/utils_tests_tests.rs
+  s_761f70cf42d74a::t_f7ee24b3a475bb 368-406
+  s_761f70cf42d74a::t_14bb136d83ba6f 407-429
+ultragraph/src/types/storage/graph_live/graph_mut.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 6-8,19-24,30-36,46-64,74-100,109-127,136-155,161-166,171-177
+  s_761f70cf42d74a::t_d7eb754b04d955 1-5,9-18,25-29,37-45,65-73,101-108,128-135,156-160,167-170,178-179
+ultragraph/tests/types/storage/graph_live/graph_mut_tests.rs
+  s_761f70cf42d74a::t_3289b65c72a24c 1-149,158-336,341-366
+  s_761f70cf42d74a::t_e90a2102c433cc 150-157,337-340
+ultragraph/tests/types/ultra_graph/graph_project_tests.rs
+  s_761f70cf42d74a::t_f7ee24b3a475bb 1363-1368,1371-1373,1375-1389,1392,1398-1399,1410,1419-1420,1429-1431,1437-1440,1451-1456
+  s_761f70cf42d74a::t_e90a2102c433cc 1369-1370,1374,1390-1391,1393-1397,1400-1409,1411-1418,1421-1428,1432-1436,1441-1450
+  s_761f70cf42d74a::t_14bb136d83ba6f 1457-1478
+ultragraph/tests/types/ultra_graph/graph_evolve_tests.rs
+  s_761f70cf42d74a::t_674956bc8509e1 651-658,665,675,739-750,764,836-841,855,857,859-863,865,870,875-876,881-882,959,961-965,967-985,990,1016-1042,1044-1047,1049-1091
+  s_761f70cf42d74a::t_e90a2102c433cc 759-763,877-880,986-989,1043,1048
+ultragraph/src/types/storage/graph_csm/mod.rs
+  s_761f70cf42d74a::t_14bb136d83ba6f 39-47,142
+  s_761f70cf42d74a::t_1f46ac82dc5b66 140-141,143-151
+ultragraph/src/types/storage/graph_live/graph_freeze.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 6-9,21-57
+  s_761f70cf42d74a::t_d7eb754b04d955 1-5,10-20,58-59
+ultragraph/tests/types/ultra_graph/graph_compact_tests.rs
+  s_761f70cf42d74a::t_f7ee24b3a475bb 379-403
+ultragraph/src/types/projection_view/backing.rs
+  s_761f70cf42d74a::t_4362bdef98e3e7 1-84
+ultragraph/src/types/ultra_graph/graph_compact.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 18-19,23
+ultragraph/src/types/ultra_graph/graph_traversal.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 14-15,19,24,29,33,38
+openspec/notes/ultragraph/tdd/live-group-4.md
+  s_761f70cf42d74a::t_94810289bbcbee 1-115,118-127
+  s_761f70cf42d74a::t_40e55391963b5b 116-117
+  s_761f70cf42d74a::t_ec75cf23f5363b 128-133
+ultragraph/src/types/storage/graph_live/mod.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 1-7,9-42,171-198,209-217,223-227,229-233,254-255
+  s_761f70cf42d74a::t_1f46ac82dc5b66 8,43-170,199-208,218-222,228,234-253
+ultragraph/src/types/ultra_graph/graph_evolve.rs
+  s_761f70cf42d74a::t_d90403a92de278 6
+  s_761f70cf42d74a::t_d7eb754b04d955 15-17,19-25,30-31,33-58,60-69
+ultragraph/src/types/storage/mod.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 10
+ultragraph/src/types/storage/graph_live/adjacency.rs
+  s_761f70cf42d74a::t_1f46ac82dc5b66 17,21,25,43
+  s_761f70cf42d74a::t_d7eb754b04d955 1-16,18-20,22-24,26-42,44-45
+ultragraph/src/types/ultra_graph/graph_mut.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 22,36,50,64,78,86,100,105-106,108
+ultragraph/src/types/projection_view/graph_view.rs
+  s_761f70cf42d74a::t_4362bdef98e3e7 30,77-78
+ultragraph/tests/types/storage/graph_live/graph_freeze_tests.rs
+  s_761f70cf42d74a::t_3289b65c72a24c 1-27,30-39,49-52,58-111,118-162
+  s_761f70cf42d74a::t_e90a2102c433cc 114-117
+  s_761f70cf42d74a::t_14bb136d83ba6f 28-29,40-48,53-57,112-113
+ultragraph/src/types/storage/graph_live/graph_algo_structural.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 1-36
+ultragraph/tests/types/storage/graph_live/adjacency_tests.rs
+  s_761f70cf42d74a::t_96ef280e6ff722 57-105,175,247,315
+  s_761f70cf42d74a::t_e90a2102c433cc 152-155,170-174,179-198,201-210,212-216,227-236,241-245,254-258,261-265,271-280,284-288,295-299,337-341,352-356,360-364,369-373,376-380,384-388
+  s_761f70cf42d74a::t_f7ee24b3a475bb 1-56,106-151,156-169,176-178,199-200,211,217-226,237-240,246,248-253,259-260,266-270,281-283,289-294,300-314,316-336,342-351,357-359,365-368,374-375,381-383,389-429
+ultragraph/src/types/projection_view/adjacency.rs
+  s_761f70cf42d74a::t_4362bdef98e3e7 7,16,21,36,46
+ultragraph/src/types/storage/graph_state/mod.rs
+  s_761f70cf42d74a::t_d7eb754b04d955 8,17
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_2be8d83e653851 74,78-79,82,85
+  s_761f70cf42d74a::t_ec75cf23f5363b 88-89
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e612ddac40a124d3c74e544714b4927189b70c46",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
