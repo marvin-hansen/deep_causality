@@ -90,13 +90,13 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 ## 5. The Live decision
 
-- [ ] 5.1 Add the Live workloads (algorithms in Live, Live updates in place and with rebuilds, the
+- [x] 5.1 Add the Live workloads (algorithms in Live, Live updates in place and with rebuilds, the
       transitions, and k = 1, 16 and 256 keyed writes followed by `strongly_connected_components` in
       Live and through Dynamic → `freeze` → algorithm → `unfreeze`, at 1,000 nodes and on the hub)
       and run three times; aggregate into `BenchAfterChange2LiveView/`
-- [ ] 5.2 Apply the Live rule of `ultragraph-edge-storage-benchmark` and record it with its rows
-- [ ] 5.3 If Live fails its rule, stop and ask the user before removing it and before group 6
-- [ ] 5.4 Commit message for group 5
+- [x] 5.2 Apply the Live rule of `ultragraph-edge-storage-benchmark` and record it with its rows
+- [x] 5.3 If Live fails its rule, stop and ask the user before removing it and before group 6
+- [x] 5.4 Commit message for group 5
 
 ## 6. materialize and maintained views
 

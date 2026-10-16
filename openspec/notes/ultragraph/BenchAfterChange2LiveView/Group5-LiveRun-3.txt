@@ -1,0 +1,297 @@
+rustc -V
+rustc 1.99.0 (b940084d7 2026-09-28)
+
+date
+Fri Oct 16 16:08:44 WITA 2026
+
+cargo bench -p ultragraph -- '^live_'
+    Finished `bench` profile [optimized] target(s) in 0.07s
+     Running unittests src/lib.rs (target/release/deps/ultragraph-5e2d25838a12ab48)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches/bench_main.rs (target/release/deps/bench_main-1db54c742f46f65c)
+memory_per_edge/hub_built: 4897200 bytes over 100000 edges = 48.972 bytes per edge
+memory_per_edge/hub_updated: 4897200 bytes over 100000 edges = 48.972 bytes per edge
+memory_per_edge/chain_1000_built: 176048 bytes over 1000 edges = 176.048 bytes per edge
+memory_per_edge/chain_1000_updated: 176048 bytes over 1000 edges = 176.048 bytes per edge
+Benchmarking live_writes_then_scc/live/chain_1000/1
+Benchmarking live_writes_then_scc/live/chain_1000/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/chain_1000/1: Collecting 100 samples in estimated 5.0012 s (111k iterations)
+Benchmarking live_writes_then_scc/live/chain_1000/1: Analyzing
+live_writes_then_scc/live/chain_1000/1
+                        time:   [44.747 µs 44.861 µs 44.992 µs]
+                        change: [+0.3217% +0.5580% +0.7887%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1: Collecting 100 samples in estimated 5.1226 s (35k iterations)
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1: Analyzing
+live_writes_then_scc/dynamic/chain_1000/1
+                        time:   [144.08 µs 144.23 µs 144.40 µs]
+                        change: [+0.1616% +0.3702% +0.5762%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Benchmarking live_writes_then_scc/live/chain_1000/16
+Benchmarking live_writes_then_scc/live/chain_1000/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/chain_1000/16: Collecting 100 samples in estimated 5.2046 s (116k iterations)
+Benchmarking live_writes_then_scc/live/chain_1000/16: Analyzing
+live_writes_then_scc/live/chain_1000/16
+                        time:   [45.028 µs 45.168 µs 45.352 µs]
+                        change: [+1.2272% +1.4082% +1.6366%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16: Collecting 100 samples in estimated 5.2174 s (35k iterations)
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16: Analyzing
+live_writes_then_scc/dynamic/chain_1000/16
+                        time:   [145.60 µs 145.92 µs 146.28 µs]
+                        change: [+1.5684% +1.7717% +1.9840%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking live_writes_then_scc/live/chain_1000/256
+Benchmarking live_writes_then_scc/live/chain_1000/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/chain_1000/256: Collecting 100 samples in estimated 5.0537 s (106k iterations)
+Benchmarking live_writes_then_scc/live/chain_1000/256: Analyzing
+live_writes_then_scc/live/chain_1000/256
+                        time:   [47.862 µs 47.981 µs 48.131 µs]
+                        change: [+0.2156% +0.5282% +0.8569%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 10 outliers among 100 measurements (10.00%)
+  10 (10.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256: Collecting 100 samples in estimated 5.1342 s (35k iterations)
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256: Analyzing
+live_writes_then_scc/dynamic/chain_1000/256
+                        time:   [145.21 µs 145.83 µs 146.65 µs]
+                        change: [+0.0983% +0.3583% +0.6804%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high severe
+Benchmarking live_writes_then_scc/live/hub/1
+Benchmarking live_writes_then_scc/live/hub/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/hub/1: Collecting 20 samples in estimated 5.0104 s (4830 iterations)
+Benchmarking live_writes_then_scc/live/hub/1: Analyzing
+live_writes_then_scc/live/hub/1
+                        time:   [1.0380 ms 1.0394 ms 1.0406 ms]
+                        change: [−0.1645% −0.0487% +0.0780%] (p = 0.45 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 20 measurements (10.00%)
+  2 (10.00%) high mild
+Benchmarking live_writes_then_scc/dynamic/hub/1
+Benchmarking live_writes_then_scc/dynamic/hub/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/hub/1: Collecting 20 samples in estimated 6.1626 s (840 iterations)
+Benchmarking live_writes_then_scc/dynamic/hub/1: Analyzing
+live_writes_then_scc/dynamic/hub/1
+                        time:   [7.3011 ms 7.4415 ms 7.5954 ms]
+                        change: [−7.1438% −3.9081% −0.6186%] (p = 0.03 < 0.05)
+                        Change within noise threshold.
+Found 2 outliers among 20 measurements (10.00%)
+  1 (5.00%) low mild
+  1 (5.00%) high mild
+Benchmarking live_writes_then_scc/live/hub/16
+Benchmarking live_writes_then_scc/live/hub/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/hub/16: Collecting 20 samples in estimated 5.0217 s (4830 iterations)
+Benchmarking live_writes_then_scc/live/hub/16: Analyzing
+live_writes_then_scc/live/hub/16
+                        time:   [1.0430 ms 1.0502 ms 1.0554 ms]
+                        change: [−1.0134% −0.4966% +0.0250%] (p = 0.08 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 20 measurements (20.00%)
+  1 (5.00%) high mild
+  3 (15.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/hub/16
+Benchmarking live_writes_then_scc/dynamic/hub/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/hub/16: Collecting 20 samples in estimated 6.4818 s (840 iterations)
+Benchmarking live_writes_then_scc/dynamic/hub/16: Analyzing
+live_writes_then_scc/dynamic/hub/16
+                        time:   [7.7094 ms 7.7721 ms 7.8252 ms]
+                        change: [−3.5321% −2.3482% −1.1672%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_writes_then_scc/live/hub/256
+Benchmarking live_writes_then_scc/live/hub/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/hub/256: Collecting 20 samples in estimated 5.0534 s (4620 iterations)
+Benchmarking live_writes_then_scc/live/hub/256: Analyzing
+live_writes_then_scc/live/hub/256
+                        time:   [1.0770 ms 1.0801 ms 1.0855 ms]
+                        change: [−0.0425% +0.3978% +0.8545%] (p = 0.11 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 20 measurements (10.00%)
+  1 (5.00%) high mild
+  1 (5.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/hub/256
+Benchmarking live_writes_then_scc/dynamic/hub/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/hub/256: Collecting 20 samples in estimated 5.4914 s (420 iterations)
+Benchmarking live_writes_then_scc/dynamic/hub/256: Analyzing
+live_writes_then_scc/dynamic/hub/256
+                        time:   [12.993 ms 13.078 ms 13.141 ms]
+                        change: [−2.6278% −1.6496% −0.7500%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 20 measurements (5.00%)
+  1 (5.00%) low mild
+
+Benchmarking live_algorithms/scc/frozen
+Benchmarking live_algorithms/scc/frozen: Warming up for 3.0000 s
+Benchmarking live_algorithms/scc/frozen: Collecting 100 samples in estimated 5.1196 s (111k iterations)
+Benchmarking live_algorithms/scc/frozen: Analyzing
+live_algorithms/scc/frozen
+                        time:   [46.234 µs 46.342 µs 46.446 µs]
+                        change: [+0.4538% +0.6713% +0.8894%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  7 (7.00%) high mild
+Benchmarking live_algorithms/topological_sort/frozen
+Benchmarking live_algorithms/topological_sort/frozen: Warming up for 3.0000 s
+Benchmarking live_algorithms/topological_sort/frozen: Collecting 100 samples in estimated 5.0210 s (550k iterations)
+Benchmarking live_algorithms/topological_sort/frozen: Analyzing
+live_algorithms/topological_sort/frozen
+                        time:   [9.1225 µs 9.3170 µs 9.5430 µs]
+                        change: [+7.2237% +10.387% +13.429%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking live_algorithms/shortest_path_len/frozen
+Benchmarking live_algorithms/shortest_path_len/frozen: Warming up for 3.0000 s
+Benchmarking live_algorithms/shortest_path_len/frozen: Collecting 100 samples in estimated 5.0037 s (1.2M iterations)
+Benchmarking live_algorithms/shortest_path_len/frozen: Analyzing
+live_algorithms/shortest_path_len/frozen
+                        time:   [3.9722 µs 3.9808 µs 3.9909 µs]
+                        change: [−0.3642% −0.1097% +0.1417%] (p = 0.40 > 0.05)
+                        No change in performance detected.
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking live_algorithms/scc/live
+Benchmarking live_algorithms/scc/live: Warming up for 3.0000 s
+Benchmarking live_algorithms/scc/live: Collecting 100 samples in estimated 5.1587 s (116k iterations)
+Benchmarking live_algorithms/scc/live: Analyzing
+live_algorithms/scc/live
+                        time:   [44.236 µs 44.288 µs 44.340 µs]
+                        change: [+0.1263% +0.2602% +0.3996%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking live_algorithms/topological_sort/live
+Benchmarking live_algorithms/topological_sort/live: Warming up for 3.0000 s
+Benchmarking live_algorithms/topological_sort/live: Collecting 100 samples in estimated 5.0197 s (626k iterations)
+Benchmarking live_algorithms/topological_sort/live: Analyzing
+live_algorithms/topological_sort/live
+                        time:   [8.0132 µs 8.0190 µs 8.0250 µs]
+                        change: [+2.1587% +2.3546% +2.5038%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) low severe
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+Benchmarking live_algorithms/shortest_path_len/live
+Benchmarking live_algorithms/shortest_path_len/live: Warming up for 3.0000 s
+Benchmarking live_algorithms/shortest_path_len/live: Collecting 100 samples in estimated 5.0134 s (1.6M iterations)
+Benchmarking live_algorithms/shortest_path_len/live: Analyzing
+live_algorithms/shortest_path_len/live
+                        time:   [3.1515 µs 3.1527 µs 3.1539 µs]
+                        change: [−1.0053% −0.8258% −0.6687%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking live_update/in_place
+Benchmarking live_update/in_place: Warming up for 3.0000 s
+Benchmarking live_update/in_place: Collecting 100 samples in estimated 5.0042 s (2.2M iterations)
+Benchmarking live_update/in_place: Analyzing
+live_update/in_place    time:   [23.517 ns 23.694 ns 23.865 ns]
+                        change: [−9.3599% −6.8382% −4.4461%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) low mild
+  2 (2.00%) high severe
+Benchmarking live_update/rebuild
+Benchmarking live_update/rebuild: Warming up for 3.0000 s
+Benchmarking live_update/rebuild: Collecting 100 samples in estimated 5.0086 s (1.5M iterations)
+Benchmarking live_update/rebuild: Analyzing
+live_update/rebuild     time:   [789.71 ns 791.77 ns 793.83 ns]
+                        change: [−0.3225% +0.5738% +1.4239%] (p = 0.21 > 0.05)
+                        No change in performance detected.
+Found 7 outliers among 100 measurements (7.00%)
+  6 (6.00%) low severe
+  1 (1.00%) low mild
+
+Benchmarking live_transitions/make_live/from_dynamic
+Benchmarking live_transitions/make_live/from_dynamic: Warming up for 3.0000 s
+Benchmarking live_transitions/make_live/from_dynamic: Collecting 100 samples in estimated 5.4502 s (56k iterations)
+Benchmarking live_transitions/make_live/from_dynamic: Analyzing
+live_transitions/make_live/from_dynamic
+                        time:   [68.167 µs 68.518 µs 68.861 µs]
+                        change: [+0.9612% +1.3093% +1.7032%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  7 (7.00%) high mild
+Benchmarking live_transitions/make_live/from_frozen
+Benchmarking live_transitions/make_live/from_frozen: Warming up for 3.0000 s
+Benchmarking live_transitions/make_live/from_frozen: Collecting 100 samples in estimated 5.0086 s (1.6M iterations)
+Benchmarking live_transitions/make_live/from_frozen: Analyzing
+live_transitions/make_live/from_frozen
+                        time:   [1.2579 µs 1.2635 µs 1.2688 µs]
+                        change: [+17.416% +19.536% +21.621%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  1 (1.00%) low severe
+  6 (6.00%) low mild
+  1 (1.00%) high mild
+Benchmarking live_transitions/freeze/from_live
+Benchmarking live_transitions/freeze/from_live: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze/from_live: Collecting 100 samples in estimated 5.0377 s (571k iterations)
+Benchmarking live_transitions/freeze/from_live: Analyzing
+live_transitions/freeze/from_live
+                        time:   [7.0026 µs 7.0798 µs 7.1590 µs]
+                        change: [−2.1660% −0.6751% +0.8257%] (p = 0.39 > 0.05)
+                        No change in performance detected.
+Benchmarking live_transitions/unfreeze/from_live
+Benchmarking live_transitions/unfreeze/from_live: Warming up for 3.0000 s
+Benchmarking live_transitions/unfreeze/from_live: Collecting 100 samples in estimated 5.0945 s (96k iterations)
+Benchmarking live_transitions/unfreeze/from_live: Analyzing
+live_transitions/unfreeze/from_live
+                        time:   [29.930 µs 29.977 µs 30.035 µs]
+                        change: [−3.5301% −2.4537% −1.7447%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking live_transitions/freeze_clone/dynamic
+Benchmarking live_transitions/freeze_clone/dynamic: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze_clone/dynamic: Collecting 100 samples in estimated 5.1659 s (50k iterations)
+Benchmarking live_transitions/freeze_clone/dynamic: Analyzing
+live_transitions/freeze_clone/dynamic
+                        time:   [100.46 µs 100.63 µs 100.83 µs]
+                        change: [+2.1468% +2.5414% +2.9403%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking live_transitions/freeze_clone/frozen
+Benchmarking live_transitions/freeze_clone/frozen: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze_clone/frozen: Collecting 100 samples in estimated 5.0179 s (1.1M iterations)
+Benchmarking live_transitions/freeze_clone/frozen: Analyzing
+live_transitions/freeze_clone/frozen
+                        time:   [2.6715 µs 2.8194 µs 2.9388 µs]
+                        change: [−10.109% +5.1245% +24.417%] (p = 0.58 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+Benchmarking live_transitions/freeze_clone/live
+Benchmarking live_transitions/freeze_clone/live: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze_clone/live: Collecting 100 samples in estimated 5.0328 s (460k iterations)
+Benchmarking live_transitions/freeze_clone/live: Analyzing
+live_transitions/freeze_clone/live
+                        time:   [9.5513 µs 9.5997 µs 9.6485 µs]
+                        change: [−2.0808% +0.3129% +2.8207%] (p = 0.84 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) low mild
+  1 (1.00%) high severe
+

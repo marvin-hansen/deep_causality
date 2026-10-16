@@ -228,3 +228,70 @@ the features `edge-log` and `edge-index` were removed from `ultragraph` with Mar
 log's trigger left with it. The contract tests written for the candidates stay as the keyed-edge
 contract of the dynamic state (`tests/types/storage/graph_dynamic/graph_mut_tests.rs`), and the
 accounting tests keep the `Vec` list's literals.
+
+### Group 5: the Live decision
+
+Three runs of the `live_*` groups of `benches/benchmarks/bench_live.rs` on 2026-10-16, the logs
+`Group5-LiveRun-1.txt` to `Group5-LiveRun-3.txt`, aggregated as above. Fixtures: the keyed
+chain of 1,000 and the keyed hub of 100,000 edges. A keyed write is `add_edge` on an edge that
+exists, cycling through random edges, so the structure stays; the `dynamic` rows are the
+workflow Live replaces, writes in the Dynamic state and `freeze` before each
+`strongly_connected_components`, `unfreeze` after.
+
+| Row | Run 1 | Run 2 | Run 3 | Mean | Spread |
+|---|---:|---:|---:|---:|---:|
+| `live_writes_then_scc/live/chain_1000/1` | 44.53 µs | 44.66 µs | 44.86 µs | 44.69 µs | 0.7 % |
+| `live_writes_then_scc/dynamic/chain_1000/1` | 147.33 µs | 144.22 µs | 144.23 µs | 145.26 µs | 2.1 % |
+| `live_writes_then_scc/live/chain_1000/16` | 45.00 µs | 44.56 µs | 45.17 µs | 44.91 µs | 1.4 % |
+| `live_writes_then_scc/dynamic/chain_1000/16` | 145.67 µs | 143.46 µs | 145.92 µs | 145.02 µs | 1.7 % |
+| `live_writes_then_scc/live/chain_1000/256` | 47.54 µs | 47.73 µs | 47.98 µs | 47.75 µs | 0.9 % |
+| `live_writes_then_scc/dynamic/chain_1000/256` | 144.92 µs | 145.04 µs | 145.83 µs | 145.26 µs | 0.6 % |
+| `live_writes_then_scc/live/hub/1` | 1.040 ms | 1.039 ms | 1.039 ms | 1.039 ms | 0.1 % |
+| `live_writes_then_scc/dynamic/hub/1` | 7.670 ms | 7.488 ms | 7.441 ms | 7.533 ms | 3.0 % |
+| `live_writes_then_scc/live/hub/16` | 1.051 ms | 1.043 ms | 1.050 ms | 1.048 ms | 0.8 % |
+| `live_writes_then_scc/dynamic/hub/16` | 7.987 ms | 7.941 ms | 7.772 ms | 7.900 ms | 2.7 % |
+| `live_writes_then_scc/live/hub/256` | 1.087 ms | 1.081 ms | 1.080 ms | 1.083 ms | 0.6 % |
+| `live_writes_then_scc/dynamic/hub/256` | 13.112 ms | 13.325 ms | 13.078 ms | 13.172 ms | 1.9 % |
+| `live_algorithms/scc/frozen` | 46.15 µs | 45.83 µs | 46.34 µs | 46.10 µs | 1.1 % |
+| `live_algorithms/topological_sort/frozen` | 9.41 µs | 9.10 µs | 9.32 µs | 9.28 µs | 3.4 % |
+| `live_algorithms/shortest_path_len/frozen` | 3.96 µs | 3.99 µs | 3.98 µs | 3.98 µs | 0.8 % |
+| `live_algorithms/scc/live` | 44.12 µs | 44.03 µs | 44.29 µs | 44.15 µs | 0.6 % |
+| `live_algorithms/topological_sort/live` | 7.93 µs | 7.82 µs | 8.02 µs | 7.92 µs | 2.5 % |
+| `live_algorithms/shortest_path_len/live` | 3.15 µs | 3.17 µs | 3.15 µs | 3.16 µs | 0.9 % |
+| `live_update/in_place` | 24.41 ns | 26.20 ns | 23.69 ns | 24.77 ns | 10.1 % |
+| `live_update/rebuild` | 802.30 ns | 787.00 ns | 791.77 ns | 793.69 ns | 1.9 % |
+| `live_transitions/make_live/from_dynamic` | 68.14 µs | 67.07 µs | 68.52 µs | 67.91 µs | 2.1 % |
+| `live_transitions/make_live/from_frozen` | 1.24 µs | 1.06 µs | 1.26 µs | 1.24 µs (median) | 16.7 % |
+| `live_transitions/freeze/from_live` | 6.81 µs | 7.09 µs | 7.08 µs | 6.99 µs | 4.1 % |
+| `live_transitions/unfreeze/from_live` | 29.90 µs | 30.71 µs | 29.98 µs | 30.19 µs | 2.7 % |
+| `live_transitions/freeze_clone/dynamic` | 96.39 µs | 97.63 µs | 100.63 µs | 98.22 µs | 4.3 % |
+| `live_transitions/freeze_clone/frozen` | 2.92 µs | 2.36 µs | 2.82 µs | 2.82 µs (median) | 20.7 % |
+| `live_transitions/freeze_clone/live` | 9.70 µs | 9.68 µs | 9.60 µs | 9.66 µs | 1.1 % |
+
+| Fixture | k | Live mean | Dynamic path mean | Live / Dynamic | Every run faster | Margin beyond spread | Clearly faster |
+|---|---:|---:|---:|---:|---|---|---|
+| chain_1000 | 1 | 44.69 µs | 145.26 µs | 0.31 | yes | yes | **yes** |
+| chain_1000 | 16 | 44.91 µs | 145.02 µs | 0.31 | yes | yes | **yes** |
+| chain_1000 | 256 | 47.75 µs | 145.26 µs | 0.33 | yes | yes | **yes** |
+| hub | 1 | 1.039 ms | 7.533 ms | 0.14 | yes | yes | **yes** |
+| hub | 16 | 1.048 ms | 7.900 ms | 0.13 | yes | yes | **yes** |
+| hub | 256 | 1.083 ms | 13.172 ms | 0.08 | yes | yes | **yes** |
+
+**Decision (task 5.2).** Every one of the six rows the rule reads holds, each of Live's three
+runs below each of the other path's and the mean below by far more than the spread: **the Live
+state stays**, and group 6 builds the maintained views on its layout.
+
+**What the rows say.** On the chain the freeze-per-analysis path is the algorithm (46 µs
+frozen) plus a freeze and an unfreeze of 1,000 nodes (about 100 µs, 68 µs of it the sort and
+placement `make_live/from_dynamic` also pays); Live pays the algorithm alone, 44 to 48 µs, the
+256 writes adding 3 µs. On the hub the freeze of 100,000 edges dominates (7.5 ms against 1.04 ms
+for the algorithm), and at k = 256 the Dynamic writes themselves add 5.6 ms, the scan of the
+hub's list per write, where Live's binary searches add 44 µs. The three algorithms read a
+little faster on the Live rows than on the frozen CSR (SCC 44.2 against 46.1 µs, the sort 7.9
+against 9.3, the path 3.2 against 4.0), the row records replacing the two offset loads and the
+tombstone test of the CSR's range lookup. An in-place insert into a row with a spare slot is
+25 ns; an insert that rebuilds a row of capacity one at the arena's end is 0.79 µs on a 1,000-node
+chain, the clone of the arenas per batch excluded. `make_live` from Frozen is 1.2 µs for 1,000
+positions (the row records), `freeze` from Live 7 µs (a pack with no sort), `unfreeze` from Live
+30 µs; `freeze_clone` costs the state's freeze plus the copy, 98 µs from Dynamic, 9.7 µs from Live,
+2.8 µs from Frozen.

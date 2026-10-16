@@ -14,4 +14,5 @@ criterion_main! {
     benchmarks::bench_biconnectivity::biconnectivity_bench_collection,
     benchmarks::bench_crud::crud_bench_collection,
     benchmarks::bench_storage::storage_bench_collection,
+    benchmarks::bench_live::live_bench_collection,
 }

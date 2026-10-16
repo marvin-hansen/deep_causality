@@ -649,6 +649,14 @@ resolving it on every call, which would have failed the traversal match on its o
 logs: `BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`, group 3. The candidates, the
 storage trait and their features were removed from `ultragraph` with Marvin's approval.
 
+**Live outcome (2026-10-16).** The Live state stays. For k = 1, 16 and 256 keyed writes followed
+by `strongly_connected_components`, Live reads 44.7, 44.9 and 47.8 µs on the chain of 1,000
+against 145 µs for writes in the Dynamic state with a `freeze` before the algorithm and an
+`unfreeze` after, and 1.04, 1.05 and 1.08 ms on the hub of 100,000 edges against 7.5, 7.9 and
+13.2 ms; each of Live's three runs below each of the other path's on every row. The algorithm
+itself reads a little faster on the Live rows than on the frozen CSR. Tables and logs:
+`BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`, group 5.
+
 **API impact, under either outcome:**
 - Signatures: `W` gains the bound `EdgeKey`, from `ultragraph_traits`; `remove_edge_keyed`,
   `contains_edge_keyed`, `compact_ids`, `ParallelEdges`, `project`, `materialize`, `maintain`, `view`,

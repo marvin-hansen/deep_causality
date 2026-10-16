@@ -6,6 +6,7 @@
 pub mod bench_biconnectivity;
 pub mod bench_crud;
 pub mod bench_linear;
+pub mod bench_live;
 pub mod bench_storage;
 mod data;
 mod fields;
