@@ -22,6 +22,11 @@ Every requirement below carries an identifier, for example `S1-LOG-4`, and two l
   requirement, not a borrowed idea, so §2 does not list it.
 - **Verified by** states what the tests must show.
 
+A requirement that costs performance and may be switched off carries an **Opt-in** line, giving its
+default and its cost; S1-MEAS-6 measures that cost. Every other requirement always applies. A
+measurement requirement (S1-MEAS) has no "Verified by" line: its recorded result, with the machine
+named, is what verifies it.
+
 Each layer links to the one before it:
 
 1. **The specification** gives every requirement an identifier and a source.
@@ -40,7 +45,7 @@ requirement to its source.
 - A script lists both cases (proposed).
 
 The tests come before the implementation, in the five phases of DeepCausality's TDD protocol
-(`openspec/specs/unified-math-tdd-protocol/spec.md`; §20).
+(`openspec/specs/unified-math-tdd-protocol/spec.md`; §21).
 
 ### 1.2 Clean-room rules
 
@@ -71,11 +76,15 @@ Attribution here is minimal and true:
 
 | Source | Material read (2026-10-16) | Licence | Ideas taken | Requirements |
 |---|---|---|---|---|
-| Apache Iggy | Source at commit `fe3b4269` (2026-10-15): `core/journal`, `core/partitions`, `core/metadata`, `core/simulator` | Apache-2.0 | Data owned by one shard and reached by messages, with consensus on single-threaded shards; the shape of the storage interface, with production code written against it and simulated behind it; the two-copy superblock and its replacement procedure; refusing a superblock copy that fails verification; the rule for repairing a damaged log end; group-commit bounds; log segment file names; time in apply only from the record; the simulated filesystem model; the seeded deterministic executor; fault sweeps over every storage operation, asserting that acknowledged history survives; removing obsolete files after restart; a shadow model with an oracle | S1-ARCH-2, S1-ARCH-4, S1-STOR-1, S1-SB-1–3, S1-REC-3, S1-LOG-2–5, S1-APP-2, S1-RECOV-2, S1-RECOV-3, S1-SIM-1–4, S1-SIM-6–9 |
-| TigerBeetle | Documentation: `docs/internals/vsr.md`, `docs/internals/data_file.md`, and the pages Performance, Safety and Upgrading on docs.tigerbeetle.com | Apache-2.0 | One thread applying batches; making a batch durable before executing it; checksummed, hash-chained records; fixed-size records; batching; checkpointing by switching a root record; deterministic compaction; timestamps assigned at sequencing; the storage failure modes latent sector error, silent corruption and misdirected I/O | S1-ARCH-1, S1-APP-1, S1-APP-2, S1-REC-1, S1-REC-2, S1-LOG-4, S1-CKPT-1, S1-CKPT-6, S1-SIM-5 |
-| LMAX | Martin Fowler, *The LMAX Architecture* (martinfowler.com) | Article | A ring buffer whose consumers run in parallel and gate each other by watching counters | S1-ARCH-5 |
+| Apache Iggy | Source at commit `fe3b4269` (2026-10-15): `core/journal`, `core/partitions`, `core/metadata`, `core/simulator`; the post on zero-copy deserialization (iggy.apache.org, 2025-05-08): read as a summary with quotations | Apache-2.0 | Data owned by one shard and reached by messages, with consensus on single-threaded shards; the shape of the storage interface, with production code written against it and simulated behind it; the two-copy superblock and its replacement procedure; refusing a superblock copy that fails verification; the rule for repairing a damaged log end; group-commit bounds; log segment file names; time in apply only from the record; message bodies kept in segment files and referenced from the WAL, each synced before its reference; a message passed to the journal as one frozen aligned buffer; 4,096-byte WAL blocks, padded records and aligned writes; batches read in place as views over a buffer of positions; the simulated filesystem model; the seeded deterministic executor; fault sweeps over every storage operation, asserting that acknowledged history survives; removing obsolete files after restart; a shadow model with an oracle | S1-ARCH-2, S1-ARCH-4, S1-STOR-1, S1-SB-1–3, S1-REC-3, S1-REC-6, S1-FMT-1–3, S1-LOG-2–5, S1-APP-2, S1-RECOV-2, S1-RECOV-3, S1-INT-4, S1-SIM-1–4, S1-SIM-6–9 |
+| TigerBeetle | Documentation: `docs/internals/vsr.md`, `docs/internals/data_file.md`, and the pages Performance, Safety and Upgrading on docs.tigerbeetle.com | Apache-2.0 | One thread applying batches; making a batch durable before executing it; checksummed, hash-chained records; fixed-size records; batching; checkpointing by switching a root record; deterministic compaction; timestamps assigned at sequencing; the storage failure modes latent sector error, silent corruption and misdirected I/O, repaired without operator involvement; a simulator fuzzing continuously | S1-ARCH-1, S1-APP-1, S1-APP-2, S1-REC-1, S1-REC-2, S1-LOG-4, S1-CKPT-1, S1-CKPT-6, S1-INT-1, S1-INT-3, S1-SIM-5, S1-SIM-11 |
+| ZFS | OpenZFS documentation, *Checksums* (openzfs.github.io); the Wikipedia article *ZFS*, section on data integrity | Documentation, article | A block's checksum saved in the pointer to that block, up to the root; corruption detected on read; faulty copies repaired from redundant ones; the `copies` property; periodic scrubs | S1-INT-1–5, S1-INT-7 |
+| NetApp | Bairavasundaram et al., *An Analysis of Data Corruption in the Storage Stack*, FAST 2008: abstract read | Paper | The finding that checksum mismatches cluster within one disk and correlate across the disks of one system | S1-INT-4 |
+| AWS | Data Center Knowledge's accounts of the 2008 S3 incidents, quoting AWS's post-mortem (a secondary source) | Article | The finding that corruption arises in transit and in internal messages, and spreads when those carry no checksum | S1-INT-9, S1-SIM-5 |
+| Meta and Google | Dixit et al., *Silent Data Corruptions at Scale* (Meta, 2021), and Hochschild et al., *Cores that don't count* (Google, 2021): abstracts read through search summaries; Zhang et al., *End-to-end Data Integrity for File Systems: A ZFS Case Study*, FAST 2010: summary read | Papers | The finding that CPUs compute wrong results without reporting an error, and that data corrupted in memory before it is checksummed passes every later check | S1-INT-8, S1-SIM-5 |
+| LMAX | Martin Fowler, *The LMAX Architecture* (martinfowler.com) | Article | A processor on its own thread, fed through a ring buffer; a ring buffer whose consumers run in parallel and gate each other by watching counters | S1-ARCH-4, S1-ARCH-5 |
 | GraphOne (Kumar and Huang, ACM TOS 15(4), 2019) | Paper read in full | Paper | A read view made of a snapshot plus the log after it | S1-READ-2 |
-| TAO (Bronson et al., USENIX ATC 2013) | Paper, §4.1 read | Paper | A placement identifier embedded in each object identifier | S1-ID-1, S1-ID-2 |
+| TAO (Bronson et al., USENIX ATC 2013) | Paper, §4.1 read | Paper | A placement identifier embedded in each object identifier; many more shards than servers, with the shard-to-server mapping tuned to balance load | S1-ID-1, S1-ID-2, S1-ID-6 |
 | ULID | Specification at github.com/ulid/spec | Specification | A 48-bit millisecond timestamp as the identifier's leading field | S1-ID-2 |
 | LSMGraph (PACMMOD 2024), BACH (PVLDB 2025) | Summaries in `PersistentStore.md` §3.4; the papers were not read in full | Papers | An in-memory adjacency level over immutable CSR runs, merged by compaction | S1-CKPT-3 |
 
@@ -83,16 +92,24 @@ Attribution here is minimal and true:
 
 > **Prior art.** This store takes ideas, not code, from these sources:
 > - **Apache Iggy:** data owned by one shard and reached by messages, the shape of the storage
->   interface, the two-copy superblock procedure, the rule
->   for repairing a damaged log end, group-commit bounds, segment file names, and the design of its
->   simulator: the filesystem model, the seeded executor, fault sweeps, and the shadow model with an
->   oracle.
+>   interface, the two-copy superblock procedure, the rule for repairing a damaged log end,
+>   group-commit bounds, segment file names, message bodies in segment files synced before the WAL
+>   references them, aligned buffers passed to the journal whole, batches read in place through
+>   views, and the design of its simulator: the filesystem model, the seeded executor, fault sweeps,
+>   and the shadow model with an oracle.
 > - **TigerBeetle:** one thread applying batches, making a batch durable before executing it,
 >   checksummed and hash-chained records, fixed-size records, batching, checkpointing by switching a
->   root record, deterministic compaction, and its list of storage failure modes.
-> - **LMAX:** a ring buffer whose consumers gate each other by watching counters.
+>   root record, deterministic compaction, its list of storage failure modes, and continuous
+>   simulation.
+> - **ZFS:** checksums kept in the parent up to the root, verification on every read, repair from
+>   redundant copies, second copies of data nothing else can rebuild, and scrubbing.
+> - **Field studies:** NetApp's FAST 2008 study of data corruption, the 2008 S3 incidents at AWS, and
+>   Meta's and Google's 2021 reports on silent data corruption in CPUs informed where second copies go,
+>   end-to-end checksums, and rebuild checks.
+> - **LMAX:** a processor on its own thread fed through a ring buffer, and consumers that gate each
+>   other by watching counters.
 > - **GraphOne:** a read view made of a snapshot plus the log after it.
-> - **TAO:** placement embedded in identifiers.
+> - **TAO:** placement embedded in identifiers, and many more shards than servers.
 > - **ULID:** a millisecond timestamp leading the identifier.
 > - **LSMGraph and BACH:** an in-memory adjacency level over immutable CSR runs.
 >
@@ -109,7 +126,8 @@ The README carries the last sentence only while it is true (§1.2).
 - the storage interface with two implementations, on std and on the simulator;
 - the requirements DeepBrain sets for transactions, indexes, queries, the change feed, declarations,
   namespaces, retraction and personal data (§13 to §17);
-- the simulator, DeepBrain's conformance kit, and the measurements of §19.
+- verification of every block and repair of damaged ones (§18);
+- the simulator, DeepBrain's conformance kit, and the measurements of §20.
 
 **Later stages:**
 - the network server (stage 2);
@@ -138,49 +156,70 @@ through a facade that hands requests to the engine thread and returns futures th
 - Source: this design.
 - Verified by: facade tests from several threads.
 
-**S1-ARCH-4 One shard, no imposed runtime, work overlapped with the barrier.**
-- **One shard.** The engine is one shard of the stage-2 architecture. It owns the graph and the log,
-  and it is reached only through messages: requests in, replies out. Stage 2 places this shard on a
-  core and adds connection shards; stage 5 runs one write group per shard.
-- **No imposed runtime.** Stage 1 is a library inside a host application. It creates at most two
-  threads, the engine thread and an optional background compaction thread, through a spawner the
-  host can supply. It sets no core affinity and requires no particular async runtime. Pinning cores
-  and choosing io_uring belong to the stage-2 server.
-- **Overlapping the barrier.** While the barrier for group k is in flight, the engine applies group
-  k − 1 and sequences and encodes group k + 1. The write and `sync_data` of each group run on one I/O
-  task.
+**S1-ARCH-4 Explicit roles, two placements, work overlapped with the barrier.**
+- **One shard.** The engine is one shard of the stage-2 architecture: one write group (S1-NS-1). It
+  owns the graph and the log, and it is reached only through messages: requests in, replies out.
+- **Roles.** The work divides into roles. Each role owns its data, and roles talk only through rings
+  (S1-ARCH-5), never through shared state or locks:
+  - apply, one per write group: the graph, the indexes and sequencing;
+  - I/O, one per write group: the group's log and value segment files, writes and barriers;
+  - prepare, one per inbound source partition or caller connection: decoding, checksums and payload
+    encoding;
+  - background: compaction, bulk builds, scrubbing and rebuilds. Each background role owns a fixed
+    share of the work (a range of write groups or of runs), never a shared queue.
+- **Two placements of the same roles.**
+  - Embedded, the default: each write group gets an apply thread and an I/O thread, and one
+    background thread serves all background roles. All threads come through a spawner the host can
+    supply. Nothing is pinned, no particular async runtime is required, and waiting uses wakers.
+  - Thread-per-core, opt-in: every role instance runs on its own thread, pinned to its own core
+    where the operating system offers core affinity (Linux), with rings between them and optional
+    busy-polling (S1-ARCH-5). Each role's data stays in its core's caches.
+  - The placements run the same code; only the mapping of roles onto threads differs. Under the
+    simulator, every role is a task on the seeded executor (S1-SIM-6).
+- **Load.** A hot partition loads one core. The deployer maps partitions to roles, and S1-MEAS-10
+  measures the imbalance.
+- **Overlapping the barrier.** While the barrier for group k is in flight, the apply role applies
+  group k − 1 and sequences group k + 1, whose records callers and prepare roles have already
+  encoded (S1-FMT-2). The writes and syncs of each group run on the I/O role.
   - A group is applied only after its own barrier succeeds (S1-APP-1).
   - Acknowledgements leave in log order.
-  - Under the simulator, the I/O task is one more task on the seeded executor (S1-SIM-6).
 - Source: Apache Iggy (each partition owned by one shard; consensus on single-threaded shards);
-  this design (a library that imposes no runtime; overlapping work with the barrier).
+  LMAX (a processor on its own thread, fed through a ring buffer); this design (roles with fixed
+  shares; two placements of the same roles; overlapping work with the barrier).
 - Verified by:
   - every engine operation reachable only through the message interface;
-  - a counting spawner observes at most two threads;
-  - with the file sync paused in the simulator, the engine sequences and encodes the next group but
-    neither applies nor acknowledges the group whose barrier is pending;
+  - role state crosses no thread boundary except through ring endpoints, which the types enforce;
+  - in the embedded placement, a counting spawner observes two threads per write group plus one; in
+    the thread-per-core placement, one thread per role instance;
+  - with the file sync paused in the simulator, the apply role sequences the next group but neither
+    applies nor acknowledges the group whose barrier is pending;
   - after the barrier resumes, acknowledgements arrive in log order;
-  - S1-MEAS-2 measures commit throughput and latency with the overlap on and off.
+  - S1-MEAS-2 measures commit throughput and latency with the overlap on and off, and S1-MEAS-10
+    compares the placements.
 
 **S1-ARCH-5 A bounded ring of batch slots coordinates the pipeline.**
 - **Slots and cursors.** Sequencing, the barrier and apply share one ring of preallocated batch
   slots. Three cursors advance over it in order:
-  - sequenced, advanced by the engine;
-  - durable, advanced by the I/O task after a barrier succeeds;
-  - applied, advanced by the engine.
+  - sequenced, advanced by the apply role;
+  - durable, advanced by the I/O role after a barrier succeeds;
+  - applied, advanced by the apply role.
 
   Acknowledgements follow the applied cursor, so they leave in log order by construction.
-- **Groups.** The I/O task takes every slot between the durable and the sequenced cursor as one group,
+- **Groups.** The I/O role takes every slot between the durable and the sequenced cursor as one group,
   so group commit (S1-LOG-4) falls out of the ring.
 - **Backpressure.** The ring's capacity bounds the memory of batches in flight. A full ring is where
   callers wait.
-- **Waiting.** Waiting uses wakers, never a spinning loop, so an embedded host loses no CPU, and the
-  ring runs as tasks on the simulator's seeded executor (S1-SIM-6).
+- **Every channel is a ring.** Every other channel between roles (prepare to apply, apply to
+  background, background to apply for installs) is also a bounded ring of preallocated slots.
+- **Waiting.** By default, waiting uses wakers, so an embedded host loses no CPU, and the rings run as
+  tasks on the simulator's seeded executor (S1-SIM-6). In the thread-per-core placement a ring may
+  busy-poll instead, trading a core's idle time for latency.
+  - Opt-in: busy-polling, off by default; it keeps a core busy while the ring is empty.
 - **Ownership.** No slot is shared between threads while it is in use: a slot's buffer moves between
-  the engine and the I/O task with ownership of it, for example as fixed buffers circulating through
-  two bounded channels. That needs no `unsafe` code.
+  roles with ownership of it, for example as fixed buffers circulating through two bounded channels.
+  That needs no `unsafe` code.
 - Source: LMAX (Fowler's article: a ring buffer whose consumers run in parallel and gate each other
-  by watching counters); this design (waking instead of spinning; buffers moved by ownership).
+  by watching counters); this design (waking by default; buffers moved by ownership).
 - Verified by:
   - the cursors never cross: applied ≤ durable ≤ sequenced, under random seeds;
   - a full ring blocks callers without loss, and they resume when slots free;
@@ -194,7 +233,7 @@ through a facade that hands requests to the engine thread and returns futures th
 64 − b bits.
 - In stage 1 the slot is 0.
 - The local index is the vertex's UltraGraph node position, never reissued.
-- b is proposed as 10 (§21).
+- b is proposed as 10 (§22).
 - Source: TAO (§4.1, placement embedded in the identifier); this project (permanent node positions).
 - Verified by: encode/decode round trips at the field boundaries; a removed vertex's position is
   never issued again, across restarts.
@@ -225,10 +264,19 @@ key to the local index. In stage 1, with one slot, that is one unique index.
 - Source: DeepBrain (identities created by upsert); this design.
 - Verified by: an upsert by natural key creates once and then finds the same node, across restarts.
 
-## 6. Log records are fixed-size, checksummed and hash-chained
+**S1-ID-6 The block-to-group table.** The manifest holds a versioned table that maps each block of
+slot pairs (S1-ID-1, S1-ID-2) to a write group. In stage 1 every block maps to group 0. Stage 5
+assigns blocks to groups, and rebalancing moves blocks without changing an identifier.
+- Source: TAO ("the number of shards far exceeds the number of servers; we tune the shard to server
+  mapping to balance load"); this design.
+- Verified by: the table survives checkpoints; in stage 1 every identifier routes to group 0; a table
+  with two groups routes each identifier by its slots.
+
+## 6. Records and formats are fixed-layout, checksummed, hash-chained and read in place
 
 **S1-REC-1 Batch records.** The log is a sequence of batch records. Each header holds:
 - the format version;
+- the write group and the epoch, both 0 in stage 1 (S1-ID-6);
 - the first operation number and the operation count;
 - the batch timestamp (S1-APP-2);
 - the body length;
@@ -243,7 +291,9 @@ key to the local index. In stage 1, with one slot, that is one unique index.
 
 **S1-REC-2 Body layout.** A body is an array of fixed-size mutation records (proposed 48 bytes: an
 operation code, flags, the source, the target, an edge identifier or key, and a value reference),
-followed by a value area that holds the encoded bytes of new payloads.
+followed by a value area that holds the encoded bytes of new payloads up to a size threshold. A
+positions table locates each value in the area, so a reader finds value i without scanning
+(S1-FMT-1). Larger payloads go to value segments (S1-REC-6), and their records hold a reference.
 - Source: TigerBeetle (fixed-size records, Performance); keeping values beside the records is a
   common technique.
 - Verified by: round trips; every mutation record has the same size.
@@ -265,6 +315,75 @@ trait, and a value always encodes to the same bytes.
 update edge, retract edge, reserve identifiers, and checkpoint (S1-CKPT-2).
 - Source: this project (UltraGraph's `GraphMut` and `ContextStorage` operations); this design.
 - Verified by: one encode/decode/apply test per operation.
+
+**S1-REC-6 Payloads are written once.**
+- A payload above the size threshold is appended to the write group's active value segment instead
+  of the log. Its mutation record holds a reference: the value segment's number, the offset, the
+  length and the value's checksum (S1-INT-1).
+- The group's barrier syncs two files in order: first the value segments it touched, then the log.
+  A durable record therefore never references a value that is not durable. A batch is acknowledged
+  after the log sync. A group with no payload above the threshold skips the first sync.
+- A crash between the two syncs leaves durable values that no durable record references. Recovery
+  truncates the value segment after the last referenced value.
+- A value that fails verification is damage, never a torn end: it is repaired (S1-INT-3) or reported
+  (S1-INT-6).
+- Value segments are append-only, numbered by the first value they hold, and sealed when full. A
+  sealed segment's hash goes into the manifest (S1-INT-1).
+- Values stay in their value segments for good: checkpoints and compaction never copy them.
+- Value segments hold the only copy of large payloads, so the opt-in second copy of S1-INT-4 covers
+  them.
+- Source: common technique (keeping large values apart from the records that index them); Apache
+  Iggy (message bodies kept in segment files and referenced from the WAL, each body synced before
+  its reference is submitted: `SegmentReference` in `core/journal/src/partition_journal.rs`); this
+  design (the size threshold; decided by Marvin on 2026-10-16).
+- Verified by:
+  - the trace shows each payload above the threshold written exactly once;
+  - in every trace, a value's sync completes before the sync of the log that references it;
+  - a crash between the two syncs acknowledges nothing, and recovery truncates the unreferenced
+    values;
+  - references resolve after recovery;
+  - the fault sweep (S1-SIM-7) covers value segments.
+
+**S1-FMT-1 Structures are read in place.**
+- Every structure on disk has a fixed little-endian layout with explicit field offsets: log records,
+  CSR runs, index runs, value segments, manifests and the superblock.
+- Readers use view types over byte slices. Reading a field neither allocates nor decodes the rest of
+  the structure. Variable-length parts are found through a positions table and borrowed from the
+  bytes.
+- View types are written in safe Rust, as field accessors over slices. A crate that checks layouts at
+  compile time is allowed only under the repository's dependency policy (§22). No serialization
+  framework is used.
+- Every structure begins with a magic number, its version, its length and its checksum. A reader
+  refuses a version it does not know.
+- Source: Apache Iggy (its post on zero-copy deserialization, 2025-05-08: a batch held as a buffer of
+  messages and a buffer of `u32` positions into it, iterated as views and deserialized just in time;
+  rkyv set aside because its bytes cannot be sliced to serve part of a batch and because it "spreads
+  through your entire application from network schema to disk schema"); this design.
+- Verified by:
+  - view types hold only borrowed slices, which the type system enforces;
+  - round trips for every structure;
+  - unknown versions refused;
+  - S1-MEAS-9 compares reading through views with an owned decode.
+
+**S1-FMT-2 One encoding from caller to disk.**
+- A record is encoded once, together with its checksum (S1-INT-9), by the caller or by a prepare role
+  (S1-ARCH-4). The same bytes travel through the rings, are appended to the log and are applied; no
+  stage re-encodes them.
+- In stage 2, the binary protocol's request frames carry records in this layout, so a received
+  record is appended as received. Replies, and replica messages in stage 3, use the same framing: a
+  header with magic, version, kind, length and checksum, then the body.
+- Source: Apache Iggy (a prepare message, header and body, passed from consensus to the journal as
+  one frozen 4 KiB-aligned buffer, `Frozen<4096>` in `core/journal/src/partition_journal.rs`); this
+  design.
+- Verified by: following a record's buffer from encoding to apply finds no copy besides the write to
+  the file; S1-MEAS-9 counts the bytes copied per record.
+
+**S1-FMT-3 Aligned buffers.** Record buffers and log writes are aligned to 4 KiB and padded to it, so
+that stage 2 can use direct I/O and io_uring on the same buffers without copying.
+- Source: Apache Iggy (4,096-byte WAL blocks, `PARTITION_WAL_BLOCK_SIZE` in
+  `core/journal/src/partition_journal.rs`; padded WAL records; `write_aligned` in its storage
+  interface, `core/journal/src/durable_storage.rs`).
+- Verified by: in the simulator's trace, every write's offset and length are multiples of 4 KiB.
 
 ## 7. The log is appended, and acknowledged only after a shared barrier
 
@@ -297,6 +416,9 @@ starting at 256 batches and 8 MiB.
 - A batch is acknowledged only after the barrier covering it succeeds.
 - When a barrier fails, no batch of its group is acknowledged, and the engine stops accepting writes
   until the store is reopened and recovered. A failed sync is not retried.
+- After a writeback error, the engine keeps the file handle that reported it and opens a fresh one
+  only during recovery. Linux reports a writeback error only to handles opened before it, so a
+  handle opened afterwards would never see it.
 - Source: Apache Iggy (the simulator's writeback-failure model and the test
   `failed_group_barrier_never_acknowledges_a_partial_batch`).
 - Verified by: a fault at the file sync, and a writeback failure reported by a later sync, each leave
@@ -379,8 +501,9 @@ segment files, and switches the store to them by updating the superblock.
 3. Write the manifest, sync it, and sync `manifests/`.
 4. Append a checkpoint record `{ N, manifest hash }` to the log through group commit.
 5. Update the superblock (S1-SB-2).
-6. Delete the log segments wholly before the checkpoint record, and every segment file that the
-   current manifest does not reference.
+6. Delete the log segments wholly before the previous checkpoint's record, and every segment file
+   that neither the current nor the previous manifest references. The previous checkpoint and the
+   log after it stay, as the rebuild source of S1-INT-3.
 
 - Source: this design. That the barriers complete before the log is reclaimed is also what Iggy's
   test `checkpoint_barriers_complete_before_wal_reclamation` checks for its own checkpoint.
@@ -390,12 +513,17 @@ segment files, and switches the store to them by updating the superblock.
 **S1-CKPT-3 Incremental checkpoints.** A checkpoint writes as a delta segment only the rows changed
 since the previous one. Compaction merges delta segments into a base segment, and the manifest lists
 the base and its deltas in order.
-- Source: LSMGraph and BACH (summaries; §2.2).
+- The compaction policy is a setting: leveled, size-tiered, or time-ordered runs merged rarely for
+  data that arrives in time order.
+- Compaction runs in background roles (S1-ARCH-4), never in the apply role.
+- Source: LSMGraph and BACH (summaries; §2.2); this design (the policies as a setting).
 - Verified by: a graph recovered from a base plus deltas equals the graph recovered from one full
-  segment (by digest, S1-APP-5).
+  segment (by digest, S1-APP-5), under every policy; S1-MEAS-8 measures what each policy costs.
 
-**S1-CKPT-4 Content-addressed names.** File names are content hashes: `segments/{hash}.seg`,
-`values/{hash}.val`, and `manifests/{op:020}-{hash}.manifest`. A file is never rewritten.
+**S1-CKPT-4 Names.** CSR runs and index runs are named by their content hash (`segments/{hash}.seg`),
+and so are manifests (`manifests/{op:020}-{hash}.manifest`). Value segments are appended to until
+sealed, so they are named by the first value they hold (`values/{first_value:020}.val`), and the
+manifest records a sealed segment's hash. A file is never rewritten.
 - Source: common technique.
 - Verified by: the name matches the hash of the content; no write to an existing file appears in the
   trace.
@@ -428,8 +556,8 @@ batches, and that prefix contains every acknowledged batch.
 - Verified by: the fault sweep (S1-SIM-7) against the shadow model (S1-SIM-8).
 
 **S1-RECOV-3 Removing leftovers.** After opening, the engine removes temporary superblock files, log
-segments wholly before the checkpoint record, and segment files the current manifest does not
-reference. A failed removal is retried at the next open.
+segments wholly before the previous checkpoint's record, and segment files that neither the current
+nor the previous manifest references. A failed removal is retried at the next open.
 - Source: Apache Iggy (its test
   `obsolete_wal_generations_are_reclaimed_after_restart_and_failed_unlink`).
 - Verified by: leftovers planted before open are gone afterwards; a removal failed by fault injection
@@ -497,8 +625,9 @@ transaction before it is submitted. They commit or fail together.
 - Source: DeepBrain (`Extensible`).
 - Verified by: S1-TX-1.
 
-**S1-TX-5 The commit result.** A committed transaction returns its operation number, which is also
-its position in the change feed (S1-FEED-1). A refused transaction returns the check or mutation that
+**S1-TX-5 The commit result.** A committed transaction returns its position: the epoch, the write
+group and the operation number, with the epoch and the group 0 in stage 1. The position is also its
+place in the change feed (S1-FEED-1). A refused transaction returns the check or mutation that
 refused it.
 - Source: DeepBrain (`Committed`; the feed cursor); this design.
 - Verified by: operation numbers rise in commit order; a refusal names the failing item.
@@ -517,13 +646,31 @@ it see the new. No pause, drain or repair is needed.
     closure consistent with the group tree at every position;
   - the cost of reorganising n members is measured (S1-MEAS-5).
 
+**S1-TX-7 The bulk path for blind inserts.**
+- Background roles build CSR runs, index runs (S1-IDX-7) and value segments in parallel, from a batch
+  of new entities whose identity keys are new by construction.
+- The builder starts from a snapshot at position N. At install, it checks the invariants that read
+  existing state, such as uniqueness, by merging the batch's keys against the current indexes. A
+  batch whose keys were written after N is refused and rebuilt from a newer snapshot.
+- One operation in the log installs the batch atomically. Transactions before it see none of the
+  batch, and transactions after it see all of it.
+- The feed publishes the installation as configured (S1-FEED-4).
+- Source: this design.
+- Verified by:
+  - a bulk-installed batch gives the same digest as the same entities applied one by one;
+  - a batch racing a conflicting write is refused;
+  - a crash at every step of an installation leaves all of the batch or none of it (S1-SIM-7).
+
 ## 14. Indexes are maintained in apply
 
 **S1-IDX-1 Index declarations.** Indexes are declared over values that a host-supplied extractor
 trait takes from node and edge payloads, statically dispatched as `EdgeKey` is. An extractor returns
 zero or more keys per entity, so a field holding a list yields one key per element.
-- Source: DeepBrain (the group closure is a list of codes; periods and cells are lists of
-  integers); this project (`EdgeKey`).
+- Extractors are cheap, pure functions over payload fields. A derivation that needs more (a group
+  closure, periods, cells) runs in the producer, and its result arrives as a payload field, so apply
+  never computes it.
+- Source: DeepBrain (the group closure is a list of codes; periods and cells are lists of integers;
+  membership is derived by the writer); this project (`EdgeKey`).
 - Verified by: extractors returning zero, one and many keys; an entity whose keys change moves
   between index entries.
 
@@ -564,11 +711,14 @@ position in the log; dropping one removes it at its position (S1-TX-6).
 - Verified by: an index added at N equals, at every later position, the index of a store that
   declared it from the start.
 
-**S1-IDX-7 Indexes survive recovery.** Indexes are written into checkpoint segments or rebuilt from
-the loaded graph at recovery (§21). Either way, a recovered index equals the index before the crash
-at the recovered position.
-- Source: this design.
-- Verified by: the fault sweep (S1-SIM-7) compares index answers with the shadow model as well.
+**S1-IDX-7 Indexes are persisted as runs.** Each index is written as sorted runs beside the CSR
+runs. A checkpoint writes the index entries changed since the previous one, and compaction merges
+index runs as it merges CSR runs (S1-CKPT-3). Recovery loads the runs and never rebuilds an index
+from the graph. A recovered index equals the index before the crash at the recovered position.
+- Source: this design (decided by Marvin on 2026-10-16, so that the bulk path, S1-TX-7, and
+  compaction treat indexes as they treat adjacency).
+- Verified by: the fault sweep (S1-SIM-7) compares index answers with the shadow model as well;
+  recovery time includes no index rebuild (S1-MEAS-3).
 
 ## 15. Queries are lookups, intersections, filters and walks
 
@@ -610,7 +760,7 @@ and a live node has no retraction time.
 ## 16. The log is the change feed
 
 **S1-FEED-1 One total order.** Subscribers receive committed transactions in log order, each once,
-with no gaps, from a cursor (the operation number).
+with no gaps, from a cursor: the position of S1-TX-5 (epoch, write group, operation number).
 - A node's creation precedes every transaction that names it.
 - A host's own write is delivered after every transaction that precedes it in the log.
 - Source: DeepBrain (one gapless total order per namespace, with no duplicates, respecting causality
@@ -630,6 +780,70 @@ declaration version it was checked against. Personal values travel by reference 
 - Source: DeepBrain (feed records carry personal values by reference, never as copies).
 - Verified by: S1-PII-1's byte scan covers the feed.
 
+**S1-FEED-4 The connector contract.** A connector forwards the feed to a message system such as Iggy or
+Kafka.
+- **Cursor and key.** The connector persists its cursor, and publishes each transaction with its
+  position (S1-FEED-1) as the message key. A target that deduplicates by key therefore never receives a
+  transaction twice, even across retries and restarts; with any other target, consumers drop the
+  numbers they have already seen.
+- **Order.** By default it publishes to one partition, which keeps the total order. A partitioned
+  mode, by namespace or by entity, is allowed; its messages carry their positions, so consumers can
+  restore the order.
+- **Retention.** A connector may hold back log retention, up to a configured bound. Beyond the bound,
+  retention proceeds, and the connector resynchronises from a snapshot followed by the tail
+  (S1-FEED-2) and reports that it did.
+- **Transactions.** Each transaction is one message. A transaction larger than the target's message
+  limit is split into numbered chunks between begin and end markers. An operation that changes many
+  entities at once, such as a bulk segment install or a reorganisation, is published either expanded
+  into one event per entity or as one snapshot-style event, as configured.
+- **Placement.** In stage 1 the connector runs in the host process as a feed subscriber; in stage 2
+  it reads the server's subscription API. It never reads log files directly.
+- **Personal values** stay references (S1-FEED-3), and the connector never resolves them.
+- Source: this design.
+- Verified by:
+  - in the simulator, a connector crashed at every step of publishing and restarted delivers every
+    transaction exactly once to a deduplicating sink, and at least once to a plain one, in order;
+  - a connector stalled past the retention bound resynchronises from a snapshot;
+  - chunked transactions reassemble;
+  - a byte scan of every published message finds no personal value.
+
+**S1-FEED-5 The public event format.** The feed is published in a stable, versioned event format,
+separate from the internal log record format.
+- **Translation.** A translation layer maps each internal record version to the current public
+  version, so the internal format can change without breaking consumers. Every event names its public
+  version, and a change to the public format follows the upgrade rules of the parent note
+  (`PersistentStore.md` §9).
+- **Contents.** Each event carries:
+  - the operation number and the transaction's timestamp;
+  - the declaration version;
+  - the mutations, with entity identifiers and payloads, personal values by reference;
+  - the end-to-end checksum (S1-INT-9).
+- **Schema.** The public format's schema is published with the store.
+- Source: this design.
+- Verified by:
+  - golden files: events made from every internal record version decode identically under the
+    current public version;
+  - completeness: replaying the public events into a fresh store gives, at every position, the same
+    digest as the original store (S1-APP-5).
+
+**S1-FEED-6 The inbound sink contract.** A sink consumes a message system such as Iggy or Kafka and
+writes into the store.
+- **Exactly once.** The sink stores each source partition's offset in the same transaction as the
+  data from that partition, and resumes from the stored offsets after a restart. A replayed message,
+  identified by stream, partition and offset, is dropped. The sink never commits an offset to the
+  source before the store commits the data.
+- **Order** holds within a source partition only. A stream that needs order per entity is
+  partitioned by entity at the source.
+- **Prepare roles.** Decoding, checksums and payload encoding run in prepare roles, one per source
+  partition (S1-ARCH-4). The apply role receives finished records (S1-FMT-2).
+- **Partitions to groups.** Source partitions map to write groups by entity key (S1-ID-6); in stage 1
+  every partition maps to group 0.
+- **Blind inserts** may take the bulk path (S1-TX-7).
+- **Backpressure.** The sink consumes at the store's commit rate. The source keeps the backlog, and its
+  retention must cover the sink's worst lag.
+- Source: this design.
+- Verified by: S1-SIM-14.
+
 ## 17. Declarations, namespaces, retraction and personal data
 
 **S1-DECL-1 Declarations are store state.** The vocabulary (kinds, relation kinds, extensions) and
@@ -640,8 +854,10 @@ force at its position, so a write never commits against a declaration that was r
 - Verified by: a declaration change and a write against the old declaration, in both orders: the
   write commits only when it comes first.
 
-**S1-NS-1 Namespaces.** One engine serves one namespace: one tenant, one graph. A process may open
-several engines, each with its own directory.
+**S1-NS-1 Namespaces and write groups.** One engine serves one write group of one namespace (one
+tenant, one graph). In stage 1 a namespace has one write group. A process may run several engines,
+of one namespace or of several, each with its own directory and sharing nothing. Transactions across
+write groups wait for stage 5's epoch path.
 - Source: DeepBrain (a namespace holds one graph and separates customers).
 - Verified by: two engines in one process share no state, and a crash recovers each from its own
   directory.
@@ -667,7 +883,124 @@ and every reference then resolves to "erased". Replay and recovery reproduce the
 - Verified by: erase, crash, recover: the values stay erased, and their bytes appear nowhere in the
   store directory.
 
-## 18. The storage interface has a std implementation and a simulated one
+## 18. Every block is verified, and a damaged block is repaired
+
+**S1-INT-1 Checksums live in the parent.** Each block's checksum is stored in the structure that
+references it, all the way up to the superblock:
+- the superblock holds the manifest's hash;
+- the manifest names segments by their content hash;
+- each segment's index block holds its blocks' checksums;
+- each log record holds the previous record's header checksum (S1-REC-1), and the superblock holds
+  the checkpoint record's.
+
+A block that is intact by itself but stale, never written, or written to the wrong place fails its
+parent's check.
+- Source: ZFS (a block's checksum is saved in the pointer to that block, up to the root, forming a
+  Merkle tree); TigerBeetle (Safety: data is "checksummed, and hash-chained"); this design
+  (content-addressed names as the parent's checksum).
+- Verified by: misdirected writes, lost writes and stale but self-consistent blocks (S1-SIM-5) are
+  each rejected at their parent.
+
+**S1-INT-2 Verified on every read.** Every read checks its block against the parent's checksum. A
+failed check starts a repair (S1-INT-3), and the damaged bytes are never returned.
+- Source: ZFS (corruption is detected on reading from media).
+- Verified by: S1-SIM-5's faults on every kind of block; no damaged byte reaches the graph, an index
+  or a reply.
+
+**S1-INT-3 Repair sources.** A damaged block is repaired from the first of these sources that holds
+a copy matching the parent's checksum:
+1. the second copy this store keeps (S1-INT-4);
+2. a rebuild: a damaged segment is rebuilt from the previous checkpoint and the log after it.
+   Checkpoints and compaction are deterministic (S1-CKPT-6), so the rebuilt segment must hash to its
+   expected name, which verifies the repair;
+3. in later stages, a replica (stage 3) or object storage (stage 4), fetched by content hash.
+
+The repair is written as a fresh file (temporary file, sync, rename, directory sync), never in place.
+- Source: ZFS (it updates faulty copies with known-good data when the pool holds redundancy);
+  TigerBeetle (Safety: a latent sector error "is detected and repaired without any operator
+  involvement"); this design (a deterministic rebuild verified by its hash).
+- Verified by: each kind of block, corrupted, is repaired from each source in turn, and the digest
+  stays equal to the shadow model's.
+
+**S1-INT-4 Second copies of what nothing can rebuild.** With one replica, four things have no other
+source: the log since the last checkpoint, the value segments (S1-REC-6), the manifests, and the
+superblock.
+- **Manifests and the superblock** are always written twice, at different locations. They are small
+  and written only at checkpoints.
+- **The log and the value segments** can be written twice, at different locations. Without the second
+  copy, damage to a log record not yet in a checkpoint, or to a value, has no repair source in stage 1
+  and is reported (S1-INT-6).
+- **A second device.** Where the store is configured with one, the second copies go there, because
+  damage clusters within one disk.
+- **Segments** are written once, because S1-INT-3's rebuild covers them.
+- Opt-in: the second copy of the log and of the value segments, off by default; it doubles the bytes
+  they write. The second device is opt-in by configuration.
+- Source: ZFS (the `copies` property); Apache Iggy (the two-copy superblock); NetApp (checksum
+  mismatches cluster within one disk and correlate across the disks of one system); this design.
+- Verified by: one corrupted copy of a log record (with the second copy on), a manifest or a
+  superblock is repaired, and two are reported (S1-INT-6). With the second copy off, a corrupted log
+  record not yet in a checkpoint is reported, never served.
+
+**S1-INT-5 Scrub.** A background task reads every retained file at a bounded rate, verifies every
+block, repairs what it can and reports the rest. It runs on the background thread (S1-ARCH-4), never
+on the engine thread.
+- Source: ZFS (periodic scrubs detect and repair latent media degradation).
+- Verified by: faults planted in cold files are found and repaired within one pass; the rate bound
+  holds.
+
+**S1-INT-6 Damage that cannot be repaired.** When no source holds a good copy, the store stops
+serving the affected data, reports its file and offset, and keeps serving the rest. Damage in the log
+tail with a valid record behind it, or to both superblock copies, refuses the open (S1-REC-3,
+S1-SB-3).
+- Source: this design.
+- Verified by: with both copies of a block corrupted, the damage is reported and reads of unaffected
+  data continue.
+
+**S1-INT-7 Give up only after the last copy.** The store gives up on a block only when every source
+of S1-INT-3 has failed its check.
+- While any source holds a copy matching the parent's checksum, the read succeeds and every damaged
+  copy is rewritten from it.
+- A repair is restartable. A crash or fault during a repair leaves the store able to repeat it at the
+  next read, scrub or open.
+- Source: ZFS (redundancy is restored from a known-good copy); this design.
+- Verified by: S1-SIM-10.
+
+**S1-INT-8 Rebuild and compare.** The scrub also rebuilds segments from the previous checkpoint and
+the log after it, and compares each rebuilt segment's hash with the segment's name. A segment that
+went bad in memory or in the CPU while it was first computed was checksummed in its corrupted form,
+so every checksum passes and only a rebuild exposes it.
+- **Coverage.** Rebuilds run at a bounded rate and rotate, so every segment is rebuilt within a
+  configured period.
+- Opt-in: off by default. Each rebuild replays a checkpoint interval and costs CPU and reads on the
+  background thread.
+- **A rebuild disagrees with the stored segment.** A second rebuild decides.
+  - If both rebuilds agree, the stored segment was computed wrongly, and so may be the state it was
+    written from. The engine reports the fault, recovers from the previous checkpoint and the log
+    (S1-RECOV-1), and writes a new checkpoint.
+  - If the two rebuilds disagree with each other, the machine itself is faulty now, and the engine
+    reports it.
+- Source: this design (rebuild and compare). Meta and Google (CPUs that compute wrong results without
+  reporting an error) and Zhang et al., FAST 2010 (memory corruption defeats a file system's
+  checksums) describe the fault it catches.
+- Verified by: a computation fault planted in a segment before its hash is computed (S1-SIM-5) is
+  found within one rotation and recovered from; a fault planted in one of two rebuilds is reported as
+  a machine fault.
+
+**S1-INT-9 End-to-end checksums.**
+- A caller computes a record's checksum when it encodes the record, on the caller's own thread
+  (S1-ARCH-5). The checksum travels with the record through the ring into the log, and apply checks
+  it first. A record that fails the check is refused, the caller's request fails, and nothing of it
+  is applied.
+- Every message that crosses a thread or process boundary carries a checksum, which its receiver
+  verifies. That covers requests and replies in stage 2, replica traffic in stage 3, and internal
+  state messages at every stage.
+- Source: AWS (the 2008 S3 incidents: a load balancer that corrupted single bytes under load, and a
+  single corrupted bit in internal state messages that carried no checksum and spread through the
+  system); this design.
+- Verified by: a record corrupted between encoding and apply, and a message corrupted in transit
+  (S1-SIM-5), are each refused, and nothing of either reaches the graph.
+
+## 19. The storage interface has a std implementation and a simulated one
 
 **S1-STOR-1 The interface.** The interface is asynchronous and offers:
 - files: open or create, read at an offset, write at an offset, length, truncate, sync;
@@ -684,7 +1017,7 @@ the benchmark machine (`PersistentStore.md`, Appendix A). A directory sync syncs
 directory.
 - Source: Rust standard library (`library/std/src/sys/fs/unix.rs`).
 - Verified by: contract tests on a temporary directory. Directory sync on macOS is an open question
-  (§21).
+  (§22).
 
 **S1-SIM-1 Two copies of every file and directory.** In the simulated filesystem, every file holds
 buffered and stable bytes, and every directory holds current and stable entries.
@@ -720,13 +1053,19 @@ forms:
 - Verified by: a recovery that trusts a prefix of its log fails under unordered writeback; the engine
   passes.
 
-**S1-SIM-5 Faults beyond the reference model.** The model adds three faults:
+**S1-SIM-5 Faults beyond the reference model.** The model adds six faults:
 - latent sector errors: stable bytes that read back unreadable or altered;
 - silent corruption of stable bytes;
-- misdirected writes: bytes land at a wrong offset or in a wrong file.
+- misdirected writes: bytes land at a wrong offset or in a wrong file;
+- lost writes: the device acknowledges a write and its sync but keeps the old bytes;
+- corruption in memory or in transit: a record altered between encoding and apply, or a message
+  altered between threads;
+- computation faults: a segment altered before its hash is computed.
 
 - Source: TigerBeetle (Safety names latent sector errors, silent corruption and "misdirect IO" among
-  the failures it handles). Iggy's simulator model at `fe3b4269` does not inject these three.
+  the failures it handles); AWS (corruption in transit and in internal messages); Meta and Google
+  (computation faults); this design (lost writes, the fault S1-INT-1's parent checksums catch).
+  Iggy's simulator model at `fe3b4269` injects none of these six.
 - Verified by: every checksum in S1-REC-1, S1-SB-1 and S1-CKPT-4 rejects each fault; no corrupted
   byte reaches the graph.
 
@@ -760,10 +1099,59 @@ reports its seed.
 - Source: Apache Iggy (the seeded executor).
 - Verified by: rerunning a reported seed reproduces the failure.
 
-## 19. The conformance kit and the measurements decide
+**S1-SIM-10 Every damage pattern against every source.** The simulator enumerates, exhaustively,
+every kind of block and every subset of its copies and repair sources. In each case, each copy or
+source is either good or damaged by one of the faults of S1-SIM-5.
+- With at least one good copy or source, the read returns the right bytes and every damaged copy is
+  repaired (S1-INT-7).
+- With none, the damage is reported and no wrong byte is returned (S1-INT-6).
 
-**S1-MEAS-1 Apply throughput.** Mutations applied per second on one core, per operation kind, at
-10^3 to 10^8 edges.
+The enumeration is then combined with:
+- a fault or crash at every storage operation of the repair itself (S1-SIM-7);
+- damage arriving while scrub, writes and checkpoints run;
+- correlated damage to copies at nearby locations, which the placement of S1-INT-4 must survive.
+- Source: this design.
+- Verified by: the sweep itself; a deliberately broken repair (§21) fails it.
+
+**S1-SIM-11 Continuous fuzzing.** Beyond the suite, the simulator runs random seeds continuously.
+- The fault mix, the fault rates and the workload are drawn per seed, so rare combinations occur.
+- Every failing seed is kept and replayed as a regression test.
+- The number of seeds run is recorded.
+- Source: TigerBeetle (Safety: its simulator "is running 24/7 on 1024 cores, fuzzing the latest
+  version of the database"); this design (the fault mix drawn per seed; failing seeds kept as
+  regression tests).
+- Verified by: a planted defect is found within a stated budget of seeds, which calibrates the
+  fuzzer as the defect audit calibrates the suite.
+
+**S1-SIM-12 Progress after faults.** Once injected faults stop, the store resumes acknowledging writes
+and serving reads within a bounded simulated time, or reports the unrepairable damage that prevents
+it.
+- Source: this design.
+- Verified by: every seed ends with this check, after its faults stop.
+
+**S1-SIM-13 Several engines in one simulation.** The simulator runs several engines, of one namespace
+and of several, on the seeded executor with their roles interleaved, and checks each against its own
+shadow model.
+- Source: this design.
+- Verified by: the sweeps of S1-SIM-7 and S1-SIM-10 pass with two and with four engines.
+
+**S1-SIM-14 A simulated source.** The simulator includes a message source with partitions and offsets,
+and crashes the sink at every step:
+- before and after writing the data;
+- before and after storing the offset;
+- before and after committing the offset to the source.
+
+The graph must hold every message exactly once, in order within each partition.
+- Source: this design.
+- Verified by: the sweep itself; a sink that commits the source offset before the store commits
+  fails it.
+
+## 20. The conformance kit and the measurements decide
+
+**S1-MEAS-1 Apply cost.** The cost per mutation and per index entry on one core, per operation kind,
+at 10^3 to 10^8 edges, and the messages per second one write group sustains for a stated mix of
+messages to mutations and index entries. This is the budget that says when to split into several
+write groups.
 - Source: this design.
 
 **S1-MEAS-2 Durable commit throughput and latency against group size,** on the benchmark machine and
@@ -793,15 +1181,40 @@ stores. Dgraph provides snapshot isolation.
 for reorganising a group of n members and for building an index over n entities.
 - Source: this design.
 
+**S1-MEAS-6 The cost of the integrity features.** For each opt-in feature, and for the scrub, measure
+commit throughput, commit latency (p50, p99, p999), CPU and bytes written with the feature on and off:
+- the second copy of the log, in the same file and in a second file (S1-INT-4);
+- rebuild and compare (S1-INT-8);
+- the scrub at its default and at its maximum rate (S1-INT-5).
+- Source: this design.
+
+**S1-MEAS-7 Inbound throughput.** Messages per second into one write group, from a simulated source
+and from a real Iggy source, for stated message sizes and mixes, with the bulk path on and off.
+- Source: this design.
+
+**S1-MEAS-8 Compaction cost.** Write amplification, compaction CPU and read amplification under each
+compaction policy (S1-CKPT-3), at a stated ingest rate.
+- Source: this design.
+
+**S1-MEAS-9 Copies and decoding.** The bytes copied per record from encoding to apply, and the time to
+read every field through view types against an owned decode (S1-FMT-1, S1-FMT-2).
+- Source: this design.
+
+**S1-MEAS-10 Placements.** Throughput, latency (p50, p99, p999) and, on Linux, last-level cache misses
+per operation, for the embedded and the thread-per-core placements (S1-ARCH-4), with busy-polling on
+and off, and the load on the busiest core against the mean.
+- Source: this design.
+
 **S1-CONF-1 Conformance first.** Through a DeepBrain adapter, the store passes DeepBrain's
 conformance kit: for every question, it gives the reference evaluator's answer. No measurement of
 S1-MEAS-4 counts until it does.
 - Source: DeepBrain (its reference evaluator and conformance kit, which every backend passes).
+- Verified by: the kit's run against the store, recorded with every set of S1-MEAS-4 results.
 
 Every timing names its machine; the benchmark machine is an Apple M3 Max with 16 cores and 128 GB.
 These results decide whether stages 4 and 5 are needed (`PersistentStore.md` §8.8).
 
-## 20. TDD order and the defects the suite must catch
+## 21. TDD order and the defects the suite must catch
 
 The five phases of `openspec/specs/unified-math-tdd-protocol/spec.md` apply:
 1. The API compiles with `unimplemented!()` bodies.
@@ -838,11 +1251,35 @@ Phase 3 injects at least the following defects, and the suite must reject each:
 | An index read that misses a commit below its position | S1-IDX-5 |
 | A walk that expands a node its filter removed | S1-QRY-3 |
 | A feed with a gap, a duplicate or a reordered entry | S1-FEED-1 |
+| A transaction published twice to a deduplicating sink after a restart | S1-FEED-4 |
+| A connector that resolves a personal value into a published message | S1-FEED-4 |
+| A public event that changes when only the internal record format changes | S1-FEED-5 |
+| Public events that cannot rebuild the store's state | S1-FEED-5 |
 | A write that commits against a replaced declaration | S1-DECL-1 |
 | A personal value written into the log, a segment or a feed entry | S1-PII-1 |
 | A logical retraction that removes the node | S1-RET-1 |
+| Accepting a stale block because its own checksum matches | S1-INT-1 |
+| Returning bytes whose checksum failed | S1-INT-2 |
+| Writing a repair in place | S1-INT-3 |
+| Deleting the previous checkpoint or its log while it is the rebuild source | S1-CKPT-2, S1-INT-3 |
+| Writing only one copy of a manifest or a superblock, or of a log record with the second copy on | S1-INT-4 |
+| Placing both copies where one fault hits both | S1-INT-4 |
+| Giving up on a block while a good copy remains | S1-INT-7 |
+| Not repeating a repair interrupted by a crash | S1-INT-7 |
+| Keeping a segment that two agreeing rebuilds contradict | S1-INT-8 |
+| Applying a record whose end-to-end checksum fails | S1-INT-9 |
+| Re-encoding a record between two stages | S1-FMT-2 |
+| Decoding a whole structure to read one field | S1-FMT-1 |
+| A record header or a feed cursor without its write group and epoch | S1-REC-1, S1-FEED-1 |
+| Writing a payload above the threshold to the log as well as to a value segment | S1-REC-6 |
+| Syncing the log before the value segments its records reference | S1-REC-6 |
+| A role reading or writing another role's data instead of passing it through a ring | S1-ARCH-4 |
+| Installing a bulk batch over keys written after its snapshot | S1-TX-7 |
+| A sink committing a source offset before the store commits the data | S1-FEED-6 |
+| Rebuilding an index at recovery instead of loading its runs | S1-IDX-7 |
+| Accepting a message without verifying its checksum | S1-INT-9 |
 
-## 21. Open questions
+## 22. Open questions
 
 1. The slot width b (proposed 10) and the mutation record size (proposed 48 bytes).
 2. The record checksum and the content hash, and with them the new repository's dependency policy.
@@ -853,7 +1290,7 @@ Phase 3 injects at least the following defects, and the suite must reject each:
 6. The facade's API, and whether stage 1 implements `ContextStorage` directly.
 7. Limits on payload size inside a batch's value area.
 8. The ring's capacity, and whether its channels come from a crate or from the standard library.
-9. Indexes written into checkpoint segments, or rebuilt from the loaded graph at recovery (S1-IDX-7).
+9. Settled by Marvin on 2026-10-16: indexes are persisted as runs (S1-IDX-7).
 10. The erasable value store: personal values in files erased in place, or encrypted under a key per
     person whose deletion erases them (S1-PII-2).
 11. Whether reorganising a large group applies as one operation, or in bounded steps under a
@@ -861,3 +1298,55 @@ Phase 3 injects at least the following defects, and the suite must reject each:
 12. Reads of validity at an instant. DeepBrain's own design asks whether the keys of such a read grow
     with the years since the earliest open window; if they do, the ordered index needs a form for
     open windows that keeps them bounded (S1-IDX-4).
+13. Whether the second copy of the log goes into the same file at another offset, or into a second
+    file, and what each costs under group commit (S1-INT-4, S1-MEAS-6).
+14. The scrub's default rate (S1-INT-5).
+15. Whether the second copy of the log and rebuild-and-compare stay off by default once S1-MEAS-6 has
+    measured their cost.
+16. The public event format's encoding: self-describing (JSON) or a schema-based binary format
+    (Protocol Buffers, Avro, Arrow), and the default bound on retention held for a connector
+    (S1-FEED-4, S1-FEED-5).
+17. The payload size threshold for value segments (S1-REC-6).
+18. The default compaction policy (S1-CKPT-3, S1-MEAS-8).
+19. Whether the thread-per-core placement busy-polls by default, and how it runs on an operating
+    system without hard core affinity, such as macOS (S1-ARCH-4, S1-MEAS-10).
+20. View types written by hand, or generated by a crate that checks layouts at compile time
+    (S1-FMT-1; tied to question 2).
+
+## Appendix A: evidence on data corruption
+
+Each source is marked by how it was read on 2026-10-16:
+- *read*: the source itself;
+- *abstract* or *summary*: through search results;
+- *secondary*: through an article about it;
+- *cited*: as another project cites it.
+
+| Source | Finding | How read |
+|---|---|---|
+| NetApp: Bairavasundaram et al., *An Analysis of Data Corruption in the Storage Stack*, FAST 2008 | 1.53 million drives in production over 41 months; more than 400,000 checksum mismatches; nearline disks show mismatches at a rate an order of magnitude above enterprise disks; mismatches cluster within one disk and correlate across the disks of one system | abstract |
+| Same study, per-year rates | Silent corruption in 1.4% of enterprise HDDs per year; misdirected I/O in 0.466% of nearline HDDs per year | cited by TigerBeetle's Safety page |
+| NetApp: Maneas et al., *A Study of SSD Reliability in Large Scale Enterprise Storage Deployments*, FAST 2020 | About 1.4 million SSDs over 2.5 years, from three manufacturers and 18 models; silent corruption in 0.031% and misdirected I/O in 0.023% of SSDs per year | summary; the rates cited by TigerBeetle's Safety page |
+| Google: Schroeder, Lagisetty and Merchant, *Flash Reliability in Production*, FAST 2016 | 20–63% of SSDs had at least one uncorrectable error in their first four years, about 2–6 per 1,000 drive-days; flash had lower replacement rates than HDDs but more uncorrectable errors | summary and secondary |
+| Google: *Detection and Prevention of Silent Data Corruption in an Exabyte-scale Database System* (Spanner), IEEE SiWiLS 2022 | Spanner detects or prevents silent corruption caused by hardware errors several times per week | summary |
+| CERN, 2007 (Panzer-Steindel; Kelemen's fsprobe) | A 2 GB file written and read back on more than 3,000 nodes every two hours for five weeks found 500 errors on 100 nodes; fsprobe found one to three silent corruptions per day across about 4,000 file systems | secondary |
+| Dropbox: *Pocket Watch* (Magic Pocket) | At its scale, disks regularly develop bad sectors and bit flips, many of which escape SMART monitoring until a scrubber checking data against its checksums finds them | summary |
+| AWS: the 2008 S3 incidents | A load balancer intermittently corrupted single bytes under load; a single corrupted bit in internal state messages that carried no checksum spread through the system and caused an outage, after which checksums were added | secondary |
+| Meta: Dixit et al., *Silent Data Corruptions at Scale*, 2021; Google: Hochschild et al., *Cores that don't count*, 2021 | CPUs with manufacturing defects compute wrong results without reporting an error; Meta's 2023 talk reports hundreds of affected CPUs among hundreds of thousands of machines | abstract and summary |
+| Zhang et al., *End-to-end Data Integrity for File Systems: A ZFS Case Study*, FAST 2010 | ZFS is robust to a wide range of disk corruptions, but often fails to keep data intact under memory corruption | summary |
+| Sun, Oracle, Backblaze, Microsoft Azure | No published fleet statistics on silent corruption found. Backblaze publishes drive-failure statistics; a reported Sun-era claim of corruption "every 15 minutes" at one customer could not be traced to its source | search |
+
+**Sources:**
+- [FAST 2008](https://www.usenix.org/conference/fast-08/analysis-data-corruption-storage-stack)
+- [FAST 2020](https://www.usenix.org/conference/fast20/presentation/maneas)
+- [FAST 2016](https://www.usenix.org/conference/fast16/technical-sessions/presentation/schroeder)
+- [Spanner](https://research.google/pubs/detection-and-prevention-of-silent-data-corruption-in-an-exabyte-scale-database-system/)
+- CERN: [StorageMojo](https://storagemojo.com/2007/09/19/cerns-data-corruption-research/),
+  [DSHR](https://blog.dshr.org/2007/09/)
+- [Dropbox](https://dropbox.tech/infrastructure/pocket-watch)
+- AWS 2008:
+  [the load balancer](https://www.datacenterknowledge.com/hyperscalers/amazon-s3-issues-load-balancers-and-md5),
+  [the outage](https://www.datacenterknowledge.com/outages/s3-downtime-more-missing-bites)
+- [Meta](https://arxiv.org/pdf/2102.11245), [Google](https://research.google/pubs/cores-that-dont-count/),
+  [Meta's 2023 talk](https://orion.polito.it/iolts/iolts2023/keynote/index.html)
+- [FAST 2010](https://static.usenix.org/events/fast10/tech/full_papers/zhang.pdf)
+- [TigerBeetle Safety](https://docs.tigerbeetle.com/concepts/safety/)

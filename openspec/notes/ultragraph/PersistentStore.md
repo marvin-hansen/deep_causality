@@ -506,6 +506,10 @@ writes would cross shards. The grid below keeps those writes on one shard.
 Each group in the grid is a write group as in §8.2, tiered the same way. Run thread-per-core, 100
 groups need about 30 machines with 10 group cores each (an estimate).
 
+The grid can start on one machine: one write group per core, with the partitions of an inbound
+message system mapped to groups by entity key. That is the first step once ingest exceeds what one
+core applies, before any second machine.
+
 ### 8.4 A 2D grid keeps each edge on one shard
 
 Arrange the S groups as a √S × √S grid and place edge (u, v) on shard (h(u) mod √S, h(v) mod √S),
@@ -662,7 +666,7 @@ manifests, backups, pinned readers and clones. It marks from those roots, with a
 | 2. Single-node server | The stage-1 engine behind a network protocol, with thread-per-core I/O and readers on snapshots |
 | 3. Replicated write group | VSR replication and the deterministic simulator. This completes one TigerBeetle-shaped write group and suffices for a graph that fits one machine's disks |
 | 4. Tiered storage | Lower levels in object storage, compute nodes on the shared segments, the bulk-load path, live upgrade and live backup. One write group then holds 100 TB |
-| 5. Write grid | The grid, liveness bits, epochs and the multi-shard path, built only when one core's write rate is exceeded |
+| 5. Write grid | The grid, liveness bits, epochs and the multi-shard path, built only when one core's write rate is exceeded; it starts as one write group per core on one machine |
 | Separate track | The analytics engine for graphs larger than one machine's memory |
 
 The stage-1 store is a directory. Its immutable files map one to one onto object-storage keys, as

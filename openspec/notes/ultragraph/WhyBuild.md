@@ -93,11 +93,11 @@ these to the stage-1 draft:
 
 | Requirement | Draft |
 |---|---|
-| Atomic transactions inside a group-commit batch; checks and host invariants evaluated in apply; upsert; composing writes; operation numbers as commit results; exclusive operations in the log | S1-TX-1 to S1-TX-6 |
-| Index declarations through extractor traits; unique, equality (with set sizes) and ordered indexes; indexes that match the applied prefix; index changes in the log; indexes that survive recovery | S1-IDX-1 to S1-IDX-7 |
+| Atomic transactions inside a group-commit batch; checks and host invariants evaluated in apply; upsert; composing writes; log positions as commit results; exclusive operations in the log | S1-TX-1 to S1-TX-6 |
+| Index declarations through extractor traits; unique, equality (with set sizes) and ordered indexes; indexes that match the applied prefix; index changes in the log; indexes persisted as runs | S1-IDX-1 to S1-IDX-7 |
 | Lookups, intersections and filters; root then filter; walks pruned at every level; absence filters | S1-QRY-1 to S1-QRY-4 |
 | The log as a gapless, ordered feed; snapshot plus tail; feed entries carrying personal values by reference | S1-FEED-1 to S1-FEED-3 |
-| Declarations as store state, one namespace per engine, retraction that keeps history, personal values outside the immutable files, erasure | S1-DECL-1, S1-NS-1, S1-RET-1, S1-PII-1, S1-PII-2 |
+| Declarations as store state, one write group of one namespace per engine, retraction that keeps history, personal values outside the immutable files, erasure | S1-DECL-1, S1-NS-1, S1-RET-1, S1-PII-1, S1-PII-2 |
 | Natural keys | S1-ID-5 |
 
 ## 6. The acceptance test
@@ -129,7 +129,7 @@ these to the stage-1 draft:
 - **The conformance kit** checks correctness against an independent reference from the first day.
 - **The deterministic simulator** sweeps faults over every storage operation (S1-SIM-7).
 - **The TDD protocol** audits the suite against named defects before implementation
-  (`PersistentStoreStage1.md` §20).
+  (`PersistentStoreStage1.md` §21).
 
 ## 8. What would reopen the decision
 
