@@ -1,0 +1,38 @@
+openspec/changes/ultragraph-live-state-maintained-views/tasks.md
+  s_761f70cf42d74a::t_cfc02a1e0704d3 93,97-99
+ultragraph/benches/benchmarks/mod.rs
+  s_761f70cf42d74a::t_29576c946c70ff 9
+openspec/notes/ultragraph/tdd/live-group-5.md
+  s_761f70cf42d74a::t_585b622dd3d0f4 1-37
+  s_761f70cf42d74a::t_cfc02a1e0704d3 38-47
+ultragraph/benches/benchmarks/bench_live.rs
+  s_761f70cf42d74a::t_29576c946c70ff 1-235
+openspec/notes/ultragraph/BenchAfterChange2LiveView/BenchAfterChange2LiveView.md
+  s_761f70cf42d74a::t_cfc02a1e0704d3 231-297
+openspec/notes/ultragraph/RadixGraphUpdate.md
+  s_761f70cf42d74a::t_cfc02a1e0704d3 652-659
+ultragraph/benches/bench_main.rs
+  s_761f70cf42d74a::t_29576c946c70ff 17
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group5-LiveRun-3.txt
+  s_761f70cf42d74a::t_0d0458198b1113 1-297
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group5-LiveRun-1.txt
+  s_761f70cf42d74a::t_b4a3c490d4d164 1-243
+openspec/notes/ultragraph/BenchAfterChange2LiveView/Group5-LiveRun-2.txt
+  s_761f70cf42d74a::t_d7bc994d47ab92 1-302
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6b43b242eee77eac1d446159856ba0f5c4b25a23",
+  "prompts": {},
+  "sessions": {
+    "s_761f70cf42d74a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcba79db-b3a4-4e03-aa57-96c1704370b5",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
