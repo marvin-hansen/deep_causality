@@ -504,6 +504,22 @@ depend on payloads and on parameters fixed when the view is registered. "Valid a
 passes without a write. Closing a relation is a write that sets `valid_until`, so a view of open
 relations follows it.
 
+**Outcome (2026-10-16, change `ultragraph-live-state-maintained-views`, group 6).** As built:
+`project(p, mode)` returns a `ProjectionView` over the Frozen or the Live state;
+`ProjectionView::materialize` returns `UltraGraphContainer<N, W>` in the Frozen state at the
+source's positions, carrying the view's mode; the container takes a third type parameter
+`P: Projection<N, W> = NoProjection`, and `maintain(p, mode) -> ViewId` registers a view read
+through `view(id) -> Option<MaintainedView>`, which implements every read, traversal and
+algorithm trait in every state. A maintained view stores a mask and its passing edges as a
+forward and a backward arena in the Live layout; a node that leaves it empties its own rows
+and stays behind the mask in its neighbours' rows, one that returns rebuilds its rows from the
+graph; `remove_edge` and `remove_edge_keyed` take entries out of both rows whether or not the ends
+pass. `compact_ids` rebuilds every view, every transition keeps them, `freeze_clone` returns a
+copy without them, `clear` leaves them registered and empty. The graph carries a `ParallelEdges`
+mode, `Merge` by default and the view's for a materialised copy, under which its direct
+algorithm calls run. The upkeep cost per mutation is in `BenchAfterChange2LiveView/
+BenchAfterChange2LiveView.md`, group 7.
+
 ### 7. Three states
 
 **The graph is in one of three states at a time, and every state keeps the same positions.**
@@ -551,6 +567,20 @@ before each analysis, so the benchmark measures that workflow: k = 1, 16 and 256
 followed by `strongly_connected_components`, in Live and as Dynamic → `freeze` → algorithm →
 `unfreeze`. A linear algorithm makes the avoided freeze a large share of the work. No algorithm runs
 over the Dynamic rows.
+
+**Outcome (2026-10-16, groups 4 and 5).** As built: `GraphState::Live(LiveGraph)`, with
+`make_live()` from the Dynamic state (through a freeze) and from the Frozen state (adopting the
+CSR arrays as the arenas, 1.2 µs for 1,000 positions), `freeze()` from Live (a pack with no sort,
+7 µs for 1,000 nodes) and `unfreeze()` from Live (30 µs); `is_live()`; `freeze_clone()` from any
+state; `GraphError::GraphIsLive` from `compact_ids` in Live. The arenas are struct-of-arrays,
+targets and weights beside a `(start, len, cap)` row per position, both directions holding the
+payload as the CSR does; a full row is rebuilt at the arena's end with `max(1, 2 · cap)`, an
+in-place insert is 25 ns and a rebuild 0.79 µs on the chain of 1,000. A removed node's entries
+stay in its neighbours' rows and every read skips them through the node table; the edge count
+subtracts the node's live degree. The Live decision (k = 1, 16, 256 writes then
+`strongly_connected_components`, Live against Dynamic → `freeze` → algorithm → `unfreeze`) held
+on all six rows, 3.1× on the chain of 1,000 and 7 to 12× on the hub of 100,000 edges; the
+rows are in §Benchmark.
 
 ### Invariants
 

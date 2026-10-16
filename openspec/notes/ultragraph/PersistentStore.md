@@ -50,6 +50,9 @@
    immutable object in object storage, and the log names each manifest. A live upgrade and a live
    backup each become one sequenced operation.
 11. **Stage 1 is a directory** whose immutable files map one to one onto object-storage keys.
+12. **Identifiers carry their location.** A vertex identifier holds its slot, an edge identifier holds
+   the slots of both endpoints, and one replicated table maps blocks of slot pairs to groups. Routing
+   needs no directory: a shift, one table read and an array offset reach the row (§13).
 
 ## 1. The store serves UltraGraph's states, the context contract and DeepBrain
 
@@ -505,7 +508,8 @@ groups need about 30 machines with 10 group cores each (an estimate).
 
 ### 8.4 A 2D grid keeps each edge on one shard
 
-Arrange the S groups as a √S × √S grid and place edge (u, v) on shard (h(u) mod √S, h(v) mod √S):
+Arrange the S groups as a √S × √S grid and place edge (u, v) on shard (h(u) mod √S, h(v) mod √S),
+where h(u) comes from the slot carried in u's identifier (§13):
 
 ```
             column h(v)
@@ -526,14 +530,15 @@ row h(u)  │   │ e │   │   ← every out-edge of u is in this row
   bound on vertex replication". At S = 100, a vertex's edges sit on at most 20 shards.
 - **Reads pay instead of writes.** A one-hop expansion gathers from √S shards (10 at S = 100). Whole
   analytics follow the 2D pattern of Graph500's partitioned BFS.
-- **Growth.** A virtual grid is fixed up front (64 × 64 blocks, for example) and its blocks are
-  assigned to groups, so rebalancing moves blocks by state sync without re-hashing.
+- **Growth.** The virtual grid is the 2^b × 2^b grid of slot pairs, fixed up front (§13). Its blocks
+  are assigned to groups, so rebalancing moves blocks by state sync and no identifier changes.
 
 ### 8.5 Vertices: dense identifiers, liveness bits, retraction without fan-out
 
-- **Dense internal identifiers.** A vertex's home shard allocates its internal identifier, never
-  reissued. This is change 1's rule at cluster scope. A sharded index maps ULIDs to internal
-  identifiers, and clients cache the mapping.
+- **Self-routing identifiers.** A vertex identifier is its slot plus a dense local index that its
+  slot's home group allocates and never reissues, change 1's rule at cluster scope. Clients and
+  foreign systems reserve identifiers in blocks and route with them directly; only natural keys need
+  a lookup, and that lookup stays inside one slot (§13).
 - **Liveness bits.** Each shard holds the liveness bits of the vertices in its row and column, 2/√S of
   all vertices: about 2.5 GB at 10^11 vertices and S = 100. Adding an edge checks both endpoints
   against these bits on the shard itself, with no message.
@@ -697,6 +702,10 @@ Iggy's per-partition directories do for its logs:
 The store lives in a dedicated repository, decided by Marvin on 2026-10-16. Segment names need a
 content hash, which `std` does not provide.
 
+Stage 1 also fixes the identifier format of §13. Its slot bits exist and are all zero, because one
+store is one slot, and its local index is UltraGraph's node position. Moving to the grid then needs
+no identifier migration.
+
 ## 11. What UltraGraph provides, and what the store needs from it
 
 **Provided:**
@@ -724,13 +733,114 @@ copy. It is group 6 of `openspec/changes/ultragraph-live-state-maintained-views/
 - **The epoch barrier.** A slow shard delays visibility across shards, though not single-shard writes.
 - **Declared write sets.** Write sets must be known before sequencing; a transaction whose write set
   depends on a read takes OLLP's reconnaissance step.
-- **The ULID index** adds a hop for clients that know only ULIDs.
-- **Re-gridding** beyond the virtual grid chosen at the start moves all data.
+- **Natural keys** (a git blob SHA, a DOI, a URL) still need a lookup, kept inside one slot by
+  hashing the key to the slot (§13).
+- **The slot width b** is fixed for the life of the store; changing it changes every identifier and
+  moves all data.
 - **Garbage collection** in shared storage must never delete an object a retained manifest references.
 - **The distributed analytics engine** is a project of its own.
 - **Unmeasured barriers.** Directory fsync with `F_FULLFSYNC` on macOS is unverified, and the barrier
   cost on Linux NVMe with power-loss protection is unmeasured.
 - **Iggy** is reassessed as a dependency after its 1.0 release.
+
+## 13. Identifiers carry their location
+
+Decided by Marvin on 2026-10-16: vertex and edge identifiers encode the slots that place them, so a
+key itself says where to look, an implicit index. Edge keys are identity keys wherever the data
+allows, so a new edge is new by construction and its insert needs no existence lookup. That is the
+blind-write case RadixGraph's amortised O(1) bound covers.
+
+**Precedents.**
+- **Facebook TAO** (Bronson et al., USENIX ATC 2013, §4.1): "Each object id contains an embedded
+  shard id that identifies its hosting shard. Objects are bound to a shard for their entire
+  lifetime." TAO keeps far more shards than servers: "the number of shards far exceeds the number of
+  servers; we tune the shard to server mapping to balance load across different hosts".
+- **Instagram** composes an identifier from 41 bits of milliseconds, 13 bits of logical shard and
+  10 bits of sequence, with thousands of logical shards mapped onto fewer database servers.
+
+**Layout.** b is the number of slot bits per side, fixed for the life of the store; b = 10 gives
+1,024 slots per side.
+
+```
+vertex identifier (u64)
+┌──── b bits ────┬──────────── 64 − b bits ────────────┐
+│ slot           │ local index within the slot (dense)  │
+└────────────────┴──────────────────────────────────────┘
+
+edge identifier (u128)
+┌── 48 bits ──┬── b bits ───┬── b bits ───┬──── 80 − 2b bits ────┐
+│ time (ms)   │ slot(source)│ slot(target)│ random suffix         │
+└─────────────┴─────────────┴─────────────┴───────────────────────┘
+```
+
+- **Vertex identifiers.** The local index is the vertex's position among the vertices of its slot,
+  never reissued.
+- **Edge identifiers.** The 48-bit time prefix matches a ULID's, so edge identifiers sort by minting
+  time and fit DeepBrain's `u128` edge identity.
+
+**Routing.**
+1. **Find the block.** Edge (u, v) lives in block (slot(u), slot(v)), and both slots come out of the
+   identifiers by a shift.
+   - The forward and the backward entry share that block, so adding an edge commits on one group.
+   - TAO stores the inverse edge on the target's shard and "does not provide atomicity between the
+     two updates".
+2. **Find the group.** One table maps each of the 2^(2b) blocks to a group: 1,048,576 entries at
+   b = 10, which is 4 MiB at four bytes per entry.
+   - Every node and client caches the table, and the metadata group versions it.
+   - Assigning blocks to groups in aligned rectangles keeps §8.4's bound of 2·√S groups per vertex.
+     Group (i, j) then holds the blocks whose source slot falls in row range i and whose target slot
+     falls in column range j.
+3. **Find the row.** Inside the block, the forward row sits at local(u) and the backward row at
+   local(v), as array offsets.
+
+No hash map, no directory and no identifier index lies on the path.
+
+**Placement.** A zone owns a range of slots, and a vertex's slot is a hash within its zone's range,
+which gives locality without a hot slot. A vertex with no zone hashes over all slots.
+
+**Growth.** An identifier names slots, and the table maps slots to groups. Adding or removing groups
+moves blocks by state sync and updates the table; no identifier changes. Identity fixes two things:
+- b, which caps parallelism at 2^(2b) blocks;
+- each vertex's slot.
+
+Marvin's ruling: acceptable, because graph stores grow.
+
+**Minting.**
+- **Vertices.** A slot's home group hands out local indices in reserved blocks. Clients and foreign
+  systems reserve blocks in advance and use the identifiers as their own references, so those
+  references route without a mapping index.
+  - Unused reservations leave holes, each costing a liveness bit and an empty row record, so
+    reservations stay modest or expire.
+  - `ContextStorage::reserve(n)`, which returns an `IdReserve`, already has this shape.
+- **Edges.** The suffix is random. Two identifiers collide only when they share the millisecond,
+  both slots and all 80 − 2b suffix bits (60 at b = 10). At 1,000 edges per millisecond into one
+  block, the chance is about 4×10⁻¹³ per block-millisecond.
+  - Each group also keeps the identifiers of a recent time window per block in memory and rejects a
+    duplicate deterministically.
+  - It refuses identifiers stamped more than a set bound behind the primary's clock, which keeps
+    that window small. A collision is then both improbable and detected, without a full existence
+    lookup.
+- **Natural keys.** A git blob SHA, a DOI, a URL or a unique identity is given, not chosen.
+  - The hash of the key picks the slot.
+  - A per-slot map leads from the key to the local index.
+  - An upsert by natural key is a single-shard operation.
+
+**Order.** Identifiers are names, and the log's op number is the only serial order:
+- reserved blocks are used out of order;
+- edge time prefixes come from client clocks.
+
+The time prefix serves temporal queries, not serialization.
+
+**Disclosure.** An identifier reveals its slots, never a group or a machine. No regulation was found
+that addresses disclosure of data placement as such; this is not legal advice.
+- **GDPR.** Article 4(1) names "an identification number, location data, an online identifier"
+  among the identifiers that make data personal. A slot therefore encodes a placement class (a zone
+  or tenant bucket), never a personal attribute.
+  - A slot range per jurisdiction, placed on that jurisdiction's groups, turns the encoding into a
+    tool for data residency.
+- **Enumeration.** Dense local indices are enumerable, OWASP's insecure direct object reference.
+  Authorisation on every access is the defence; an opaque external form of the identifier is
+  optional.
 
 ## Sources
 
@@ -796,6 +906,11 @@ Systems:
 - TuringDB: [snapshots](https://docs.turingdb.ai/concepts/snapshots),
   [github.com/turing-db/turingdb](https://github.com/turing-db/turingdb) at `fc9539336`.
 - Spark GraphX: [EdgePartition2D](https://spark.apache.org/docs/latest/api/scala/org/apache/spark/graphx/PartitionStrategy$$EdgePartition2D$.html).
+- Facebook TAO: Nathan Bronson et al., *TAO: Facebook's Distributed Data Store for the Social Graph*,
+  USENIX ATC 2013. [PDF](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf).
+- Instagram: [Sharding & IDs at Instagram](https://instagram-engineering.com/1cf5a71e5a5c).
+- GDPR: [Regulation (EU) 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj), Article 4(1).
+- OWASP: [Insecure Direct Object Reference Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html).
 - Memgraph: [configuration](https://memgraph.com/docs/database-management/configuration),
   [transactions](https://memgraph.com/docs/fundamentals/transactions),
   [replication](https://memgraph.com/docs/clustering/replication).
