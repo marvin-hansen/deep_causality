@@ -127,6 +127,8 @@ measured, and state it truthfully.
 | FalkorDB and FalkorDBLite | Out of process (FalkorDBLite starts `redis-server`); SSPL-1.0 |
 | OrientDB | No per-commit fsync; the WAL syncs about once a second |
 | JanusGraph on BerkeleyDB JE | Its storage engine has been frozen since 2018 |
+| LanceDB and the Lance format | A columnar and vector store, not a graph store. Graph queries come from lance-graph, which pins `lance` 1.0.0, translates Cypher into DataFusion joins and builds its CSR in memory. A transaction holds one operation on one table, and local commits are never fsynced (issue #9608). Its role is export and the cold tier (`PersistentStore.md` §3.1) |
+| TuringDB | No WAL, and a commit is visible in memory before it reaches disk. Snapshot isolation with first-committer-wins per node or edge, so write skew is possible. Its published benchmarks measure reads only. Business Source License 1.1 with an "Excluded Purpose" against competing works; its terms on publishing benchmarks are unchecked (`PersistentStore.md` §3.3) |
 | OverGraph, SparrowDB, uni-db, sqlitegraph | Too young. SparrowDB (WAL plus CSR, one writer, `sync_all` on every commit by default) is the one to re-check |
 
 **Servers** (Memgraph, Neo4j server, Dgraph, NebulaGraph, TigerGraph) belong to the stage-2
@@ -275,6 +277,11 @@ All read 2026-10-16. Commit identifiers give the revision read.
 - JDK: [JDK-8080589](https://bugs.openjdk.org/browse/JDK-8080589).
 - ArcadeDB: `GlobalConfiguration.java` at `e944f1bc`; [benchmarks](https://arcadedb.com/benchmarks.html).
 - HelixDB: [HelixDB/helix-db](https://github.com/HelixDB/helix-db) at `22ed0fef`.
+- Lance: [lance-format/lance](https://github.com/lance-format/lance) at `d1ba47e1`, issue
+  [#9608](https://github.com/lance-format/lance/issues/9608);
+  [lance-graph](https://github.com/lance-format/lance-graph).
+- TuringDB: [docs](https://docs.turingdb.ai/concepts/snapshots);
+  [turing-db/turingdb](https://github.com/turing-db/turingdb) at `fc9539336`.
 - macOS barriers of shared engines:
   - [rust-lang/rust](https://github.com/rust-lang/rust), `library/std/src/sys/fs/unix.rs`;
   - [LMDB](https://github.com/LMDB/lmdb/blob/mdb.master/libraries/liblmdb/mdb.c);

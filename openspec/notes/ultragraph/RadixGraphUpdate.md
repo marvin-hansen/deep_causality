@@ -689,6 +689,17 @@ algorithm alone is the comparison, and there Live and Frozen are within a few pe
 reads 4 % faster, unexplained). Tables and logs:
 `BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`, group 5.
 
+**Final measurement (2026-10-16, group 7).** Three runs of the whole crate against the
+incumbents: 36 rows within spread, 40 slower, 4 faster, 47 new. A back-to-back A/B against the
+commit before the Live state separates the code from the machine: the dynamic inbound walk
++258 to +396 % and `add_node`, `build_graph` and the low-degree keyed update +16 to +54 % are the
+code (the traversal iterator's Live variant sizing the enum for every state; the view hooks
+running on graphs without a view), both fixed after the logs; the moves on the frozen algorithms
+and the dynamic removal have no change behind them. A maintained view costs a keyed write about
+9.5 ns and a payload update about 0.9 ns, per view. Tables, logs and the open re-measurement:
+`BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`, group 7; the commands in
+`BenchCommands.md`.
+
 **API impact, under either outcome:**
 - Signatures: `W` gains the bound `EdgeKey`, from `ultragraph_traits`; `remove_edge_keyed`,
   `contains_edge_keyed`, `compact_ids`, `ParallelEdges`, `project`, `materialize`, `maintain`, `view`,

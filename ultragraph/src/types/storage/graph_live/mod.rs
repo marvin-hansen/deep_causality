@@ -6,6 +6,7 @@
 use alloc::vec::Vec;
 
 use crate::types::storage::graph_csm::CsrAdjacency;
+use crate::types::storage::graph_live::row_entries::RowEntries;
 use crate::{CsmGraph, EdgeKey};
 
 pub(crate) mod adjacency;
@@ -20,6 +21,7 @@ mod graph_traversal;
 mod graph_unfreeze;
 mod graph_view;
 mod memory;
+pub(crate) mod row_entries;
 
 /// One node's row in an arena: its entries occupy `start..start + len` of the arena, with room
 /// up to `start + cap`.
@@ -246,10 +248,6 @@ where
         } else {
             (&[], &[])
         };
-        targets
-            .iter()
-            .zip(weights)
-            .filter(|(other, _)| self.is_live(**other))
-            .map(|(other, weight)| (*other, weight))
+        RowEntries::new(targets, weights, |other| self.is_live(other))
     }
 }

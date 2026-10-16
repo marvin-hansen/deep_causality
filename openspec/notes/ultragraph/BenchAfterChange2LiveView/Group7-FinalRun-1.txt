@@ -1,0 +1,1389 @@
+rustc -V
+rustc 1.99.0 (b940084d7 2026-09-28)
+
+date
+Fri Oct 16 17:16:53 WITA 2026
+
+cargo bench -p ultragraph
+    Finished `bench` profile [optimized] target(s) in 0.41s
+     Running unittests src/lib.rs (target/release/deps/ultragraph-5e2d25838a12ab48)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches/bench_main.rs (target/release/deps/bench_main-1db54c742f46f65c)
+Benchmarking build_graph/10
+Benchmarking build_graph/10: Warming up for 3.0000 s
+Benchmarking build_graph/10: Collecting 100 samples in estimated 5.0027 s (9.3M iterations)
+Benchmarking build_graph/10: Analyzing
+build_graph/10          time:   [326.93 ns 327.97 ns 328.97 ns]
+                        thrpt:  [33.438 Melem/s 33.540 Melem/s 33.646 Melem/s]
+                 change:
+                        time:   [+55.453% +59.234% +62.650%] (p = 0.00 < 0.05)
+                        thrpt:  [−38.518% −37.199% −35.672%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking build_graph/100
+Benchmarking build_graph/100: Warming up for 3.0000 s
+Benchmarking build_graph/100: Collecting 100 samples in estimated 5.0154 s (1.1M iterations)
+Benchmarking build_graph/100: Analyzing
+build_graph/100         time:   [3.0371 µs 3.0457 µs 3.0547 µs]
+                        thrpt:  [33.064 Melem/s 33.161 Melem/s 33.256 Melem/s]
+                 change:
+                        time:   [+67.603% +74.176% +79.132%] (p = 0.00 < 0.05)
+                        thrpt:  [−44.175% −42.587% −40.335%]
+                        Performance has regressed.
+Found 9 outliers among 100 measurements (9.00%)
+  4 (4.00%) low mild
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking build_graph/1000
+Benchmarking build_graph/1000: Warming up for 3.0000 s
+Benchmarking build_graph/1000: Collecting 100 samples in estimated 5.0515 s (111k iterations)
+Benchmarking build_graph/1000: Analyzing
+build_graph/1000        time:   [30.033 µs 30.132 µs 30.238 µs]
+                        thrpt:  [33.104 Melem/s 33.221 Melem/s 33.330 Melem/s]
+                 change:
+                        time:   [+73.240% +80.007% +85.638%] (p = 0.00 < 0.05)
+                        thrpt:  [−46.132% −44.447% −42.276%]
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking add_node/10
+Benchmarking add_node/10: Warming up for 3.0000 s
+Benchmarking add_node/10: Collecting 100 samples in estimated 5.0017 s (9.5M iterations)
+Benchmarking add_node/10: Analyzing
+add_node/10             time:   [6.7680 ns 6.9140 ns 7.0313 ns]
+                        change: [+26.757% +32.148% +37.628%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking add_node/100
+Benchmarking add_node/100: Warming up for 3.0000 s
+Benchmarking add_node/100: Collecting 100 samples in estimated 5.0142 s (1.1M iterations)
+Benchmarking add_node/100: Analyzing
+add_node/100            time:   [7.6228 ns 7.7997 ns 7.9506 ns]
+                        change: [+20.383% +32.151% +45.601%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking add_node/1000
+Benchmarking add_node/1000: Warming up for 3.0000 s
+Benchmarking add_node/1000: Collecting 100 samples in estimated 5.2071 s (116k iterations)
+Benchmarking add_node/1000: Analyzing
+add_node/1000           time:   [12.267 ns 12.780 ns 13.385 ns]
+                        change: [+22.655% +34.893% +48.639%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+
+Benchmarking get_node/10
+Benchmarking get_node/10: Warming up for 3.0000 s
+Benchmarking get_node/10: Collecting 100 samples in estimated 5.0000 s (2.1B iterations)
+Benchmarking get_node/10: Analyzing
+get_node/10             time:   [2.3730 ns 2.3912 ns 2.4131 ns]
+                        change: [+1.2123% +1.9143% +2.6592%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 16 outliers among 100 measurements (16.00%)
+  11 (11.00%) high mild
+  5 (5.00%) high severe
+Benchmarking get_node/100
+Benchmarking get_node/100: Warming up for 3.0000 s
+Benchmarking get_node/100: Collecting 100 samples in estimated 5.0000 s (2.1B iterations)
+Benchmarking get_node/100: Analyzing
+get_node/100            time:   [2.3887 ns 2.4057 ns 2.4259 ns]
+                        change: [+2.8126% +3.4741% +4.2674%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 26 outliers among 100 measurements (26.00%)
+  8 (8.00%) low mild
+  2 (2.00%) high mild
+  16 (16.00%) high severe
+Benchmarking get_node/1000
+Benchmarking get_node/1000: Warming up for 3.0000 s
+Benchmarking get_node/1000: Collecting 100 samples in estimated 5.0000 s (2.1B iterations)
+Benchmarking get_node/1000: Analyzing
+get_node/1000           time:   [2.3804 ns 2.3989 ns 2.4209 ns]
+                        change: [+2.7422% +3.5183% +4.2249%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 17 outliers among 100 measurements (17.00%)
+  1 (1.00%) high mild
+  16 (16.00%) high severe
+
+Benchmarking articulation_points/10
+Benchmarking articulation_points/10: Warming up for 3.0000 s
+Benchmarking articulation_points/10: Collecting 20 samples in estimated 5.0002 s (2.9M iterations)
+Benchmarking articulation_points/10: Analyzing
+articulation_points/10  time:   [1.6681 µs 1.6723 µs 1.6769 µs]
+                        thrpt:  [17.890 Melem/s 17.939 Melem/s 17.984 Melem/s]
+                 change:
+                        time:   [+18.411% +18.943% +19.475%] (p = 0.00 < 0.05)
+                        thrpt:  [−16.300% −15.926% −15.549%]
+                        Performance has regressed.
+Benchmarking articulation_points/100
+Benchmarking articulation_points/100: Warming up for 3.0000 s
+Benchmarking articulation_points/100: Collecting 20 samples in estimated 5.0005 s (417k iterations)
+Benchmarking articulation_points/100: Analyzing
+articulation_points/100 time:   [11.923 µs 11.951 µs 11.987 µs]
+                        thrpt:  [25.027 Melem/s 25.103 Melem/s 25.161 Melem/s]
+                 change:
+                        time:   [+13.046% +13.469% +13.868%] (p = 0.00 < 0.05)
+                        thrpt:  [−12.179% −11.870% −11.540%]
+                        Performance has regressed.
+Benchmarking articulation_points/1000
+Benchmarking articulation_points/1000: Warming up for 3.0000 s
+Benchmarking articulation_points/1000: Collecting 20 samples in estimated 5.0235 s (34k iterations)
+Benchmarking articulation_points/1000: Analyzing
+articulation_points/1000
+                        time:   [141.50 µs 142.73 µs 143.88 µs]
+                        thrpt:  [20.850 Melem/s 21.018 Melem/s 21.201 Melem/s]
+                 change:
+                        time:   [−1.4300% +4.0968% +8.1401%] (p = 0.11 > 0.05)
+                        thrpt:  [−7.5274% −3.9356% +1.4507%]
+                        No change in performance detected.
+Benchmarking articulation_points/5000
+Benchmarking articulation_points/5000: Warming up for 3.0000 s
+Benchmarking articulation_points/5000: Collecting 20 samples in estimated 5.0181 s (5250 iterations)
+Benchmarking articulation_points/5000: Analyzing
+articulation_points/5000
+                        time:   [949.20 µs 955.69 µs 963.77 µs]
+                        thrpt:  [15.564 Melem/s 15.695 Melem/s 15.803 Melem/s]
+                 change:
+                        time:   [−3.0682% +3.0619% +7.1417%] (p = 0.34 > 0.05)
+                        thrpt:  [−6.6657% −2.9709% +3.1653%]
+                        No change in performance detected.
+
+Benchmarking bridges/10
+Benchmarking bridges/10: Warming up for 3.0000 s
+Benchmarking bridges/10: Collecting 20 samples in estimated 5.0001 s (3.2M iterations)
+Benchmarking bridges/10: Analyzing
+bridges/10              time:   [1.4722 µs 1.4805 µs 1.4905 µs]
+                        thrpt:  [20.127 Melem/s 20.263 Melem/s 20.378 Melem/s]
+                 change:
+                        time:   [+14.058% +15.866% +17.789%] (p = 0.00 < 0.05)
+                        thrpt:  [−15.102% −13.694% −12.325%]
+                        Performance has regressed.
+Benchmarking bridges/100
+Benchmarking bridges/100: Warming up for 3.0000 s
+Benchmarking bridges/100: Collecting 20 samples in estimated 5.0022 s (427k iterations)
+Benchmarking bridges/100: Analyzing
+bridges/100             time:   [11.664 µs 11.697 µs 11.732 µs]
+                        thrpt:  [25.571 Melem/s 25.648 Melem/s 25.720 Melem/s]
+                 change:
+                        time:   [+11.225% +11.911% +12.565%] (p = 0.00 < 0.05)
+                        thrpt:  [−11.162% −10.643% −10.092%]
+                        Performance has regressed.
+Found 1 outliers among 20 measurements (5.00%)
+  1 (5.00%) high severe
+Benchmarking bridges/1000
+Benchmarking bridges/1000: Warming up for 3.0000 s
+Benchmarking bridges/1000: Collecting 20 samples in estimated 5.0017 s (35k iterations)
+Benchmarking bridges/1000: Analyzing
+bridges/1000            time:   [139.68 µs 141.69 µs 144.34 µs]
+                        thrpt:  [20.785 Melem/s 21.173 Melem/s 21.477 Melem/s]
+                 change:
+                        time:   [+6.8433% +8.7093% +10.690%] (p = 0.00 < 0.05)
+                        thrpt:  [−9.6578% −8.0116% −6.4050%]
+                        Performance has regressed.
+Benchmarking bridges/5000
+Benchmarking bridges/5000: Warming up for 3.0000 s
+Benchmarking bridges/5000: Collecting 20 samples in estimated 5.0408 s (5250 iterations)
+Benchmarking bridges/5000: Analyzing
+bridges/5000            time:   [923.59 µs 927.38 µs 931.53 µs]
+                        thrpt:  [16.102 Melem/s 16.175 Melem/s 16.241 Melem/s]
+                 change:
+                        time:   [+3.0181% +4.0298% +5.0288%] (p = 0.00 < 0.05)
+                        thrpt:  [−4.7880% −3.8737% −2.9297%]
+                        Performance has regressed.
+
+Benchmarking biconnected_components/10
+Benchmarking biconnected_components/10: Warming up for 3.0000 s
+Benchmarking biconnected_components/10: Collecting 20 samples in estimated 5.0001 s (2.0M iterations)
+Benchmarking biconnected_components/10: Analyzing
+biconnected_components/10
+                        time:   [2.4553 µs 2.4775 µs 2.4918 µs]
+                        thrpt:  [12.039 Melem/s 12.109 Melem/s 12.219 Melem/s]
+                 change:
+                        time:   [+20.038% +21.301% +22.397%] (p = 0.00 < 0.05)
+                        thrpt:  [−18.298% −17.560% −16.693%]
+                        Performance has regressed.
+Benchmarking biconnected_components/100
+Benchmarking biconnected_components/100: Warming up for 3.0000 s
+Benchmarking biconnected_components/100: Collecting 20 samples in estimated 5.0041 s (256k iterations)
+Benchmarking biconnected_components/100: Analyzing
+biconnected_components/100
+                        time:   [19.501 µs 19.552 µs 19.604 µs]
+                        thrpt:  [15.303 Melem/s 15.344 Melem/s 15.384 Melem/s]
+                 change:
+                        time:   [+10.515% +11.462% +12.365%] (p = 0.00 < 0.05)
+                        thrpt:  [−11.004% −10.283% −9.5144%]
+                        Performance has regressed.
+Found 2 outliers among 20 measurements (10.00%)
+  1 (5.00%) low mild
+  1 (5.00%) high mild
+Benchmarking biconnected_components/1000
+Benchmarking biconnected_components/1000: Warming up for 3.0000 s
+Benchmarking biconnected_components/1000: Collecting 20 samples in estimated 5.0252 s (23k iterations)
+Benchmarking biconnected_components/1000: Analyzing
+biconnected_components/1000
+                        time:   [214.22 µs 216.36 µs 218.78 µs]
+                        thrpt:  [13.712 Melem/s 13.866 Melem/s 14.005 Melem/s]
+                 change:
+                        time:   [+10.879% +13.270% +15.558%] (p = 0.00 < 0.05)
+                        thrpt:  [−13.464% −11.716% −9.8114%]
+                        Performance has regressed.
+Found 3 outliers among 20 measurements (15.00%)
+  2 (10.00%) high mild
+  1 (5.00%) high severe
+Benchmarking biconnected_components/5000
+Benchmarking biconnected_components/5000: Warming up for 3.0000 s
+Benchmarking biconnected_components/5000: Collecting 20 samples in estimated 5.0743 s (3780 iterations)
+Benchmarking biconnected_components/5000: Analyzing
+biconnected_components/5000
+                        time:   [1.3122 ms 1.3303 ms 1.3452 ms]
+                        thrpt:  [11.150 Melem/s 11.276 Melem/s 11.431 Melem/s]
+                 change:
+                        time:   [+10.139% +11.233% +12.329%] (p = 0.00 < 0.05)
+                        thrpt:  [−10.976% −10.099% −9.2056%]
+                        Performance has regressed.
+Found 2 outliers among 20 measurements (10.00%)
+  2 (10.00%) high mild
+
+Benchmarking add_edge/10
+Benchmarking add_edge/10: Warming up for 3.0000 s
+Benchmarking add_edge/10: Collecting 100 samples in estimated 5.0028 s (8.3M iterations)
+Benchmarking add_edge/10: Analyzing
+add_edge/10             time:   [19.041 ns 19.170 ns 19.300 ns]
+                        change: [+4.3427% +5.6153% +6.8578%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking add_edge/100
+Benchmarking add_edge/100: Warming up for 3.0000 s
+Benchmarking add_edge/100: Collecting 100 samples in estimated 5.0102 s (980k iterations)
+Benchmarking add_edge/100: Analyzing
+add_edge/100            time:   [49.920 ns 50.326 ns 50.678 ns]
+                        change: [−3.4680% −1.4181% +0.8721%] (p = 0.18 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) high mild
+  4 (4.00%) high severe
+Benchmarking add_edge/1000
+Benchmarking add_edge/1000: Warming up for 3.0000 s
+Benchmarking add_edge/1000: Collecting 100 samples in estimated 5.4069 s (30k iterations)
+Benchmarking add_edge/1000: Analyzing
+add_edge/1000           time:   [342.87 ns 344.79 ns 346.82 ns]
+                        change: [−3.6189% −2.7374% −1.9547%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 17 outliers among 100 measurements (17.00%)
+  1 (1.00%) low mild
+  11 (11.00%) high mild
+  5 (5.00%) high severe
+
+Benchmarking contains_edge_dynamic/10
+Benchmarking contains_edge_dynamic/10: Warming up for 3.0000 s
+Benchmarking contains_edge_dynamic/10: Collecting 100 samples in estimated 5.0000 s (1.7B iterations)
+Benchmarking contains_edge_dynamic/10: Analyzing
+contains_edge_dynamic/10
+                        time:   [2.9573 ns 2.9684 ns 2.9788 ns]
+                        change: [+2.5948% +3.0004% +3.3970%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking contains_edge_dynamic/100
+Benchmarking contains_edge_dynamic/100: Warming up for 3.0000 s
+Benchmarking contains_edge_dynamic/100: Collecting 100 samples in estimated 5.0000 s (236M iterations)
+Benchmarking contains_edge_dynamic/100: Analyzing
+contains_edge_dynamic/100
+                        time:   [21.069 ns 21.183 ns 21.300 ns]
+                        change: [−0.6234% −0.2587% +0.1273%] (p = 0.19 > 0.05)
+                        No change in performance detected.
+Benchmarking contains_edge_dynamic/1000
+Benchmarking contains_edge_dynamic/1000: Warming up for 3.0000 s
+Benchmarking contains_edge_dynamic/1000: Collecting 100 samples in estimated 5.0006 s (33M iterations)
+Benchmarking contains_edge_dynamic/1000: Analyzing
+contains_edge_dynamic/1000
+                        time:   [150.64 ns 151.02 ns 151.42 ns]
+                        change: [+2.1957% +2.5476% +2.9141%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+
+Benchmarking contains_edge_frozen/10
+Benchmarking contains_edge_frozen/10: Warming up for 3.0000 s
+Benchmarking contains_edge_frozen/10: Collecting 100 samples in estimated 5.0000 s (978M iterations)
+Benchmarking contains_edge_frozen/10: Analyzing
+contains_edge_frozen/10 time:   [5.0972 ns 5.1081 ns 5.1188 ns]
+                        change: [−0.4567% −0.0638% +0.3209%] (p = 0.75 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+Benchmarking contains_edge_frozen/100
+Benchmarking contains_edge_frozen/100: Warming up for 3.0000 s
+Benchmarking contains_edge_frozen/100: Collecting 100 samples in estimated 5.0000 s (962M iterations)
+Benchmarking contains_edge_frozen/100: Analyzing
+contains_edge_frozen/100
+                        time:   [5.1381 ns 5.1491 ns 5.1597 ns]
+                        change: [+4.1165% +4.4561% +4.8005%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking contains_edge_frozen/1000
+Benchmarking contains_edge_frozen/1000: Warming up for 3.0000 s
+Benchmarking contains_edge_frozen/1000: Collecting 100 samples in estimated 5.0000 s (677M iterations)
+Benchmarking contains_edge_frozen/1000: Analyzing
+contains_edge_frozen/1000
+                        time:   [7.3190 ns 7.3382 ns 7.3590 ns]
+                        change: [+2.7771% +3.3226% +3.8354%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking get_edges/10
+Benchmarking get_edges/10: Warming up for 3.0000 s
+Benchmarking get_edges/10: Collecting 100 samples in estimated 5.0001 s (245M iterations)
+Benchmarking get_edges/10: Analyzing
+get_edges/10            time:   [20.219 ns 20.406 ns 20.563 ns]
+                        thrpt:  [486.32 Melem/s 490.05 Melem/s 494.59 Melem/s]
+                 change:
+                        time:   [+71.359% +72.405% +73.482%] (p = 0.00 < 0.05)
+                        thrpt:  [−42.357% −41.997% −41.643%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) low severe
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking get_edges/100
+Benchmarking get_edges/100: Warming up for 3.0000 s
+Benchmarking get_edges/100: Collecting 100 samples in estimated 5.0000 s (123M iterations)
+Benchmarking get_edges/100: Analyzing
+get_edges/100           time:   [40.414 ns 40.479 ns 40.563 ns]
+                        thrpt:  [2.4653 Gelem/s 2.4704 Gelem/s 2.4744 Gelem/s]
+                 change:
+                        time:   [+3.2491% +3.4823% +3.7276%] (p = 0.00 < 0.05)
+                        thrpt:  [−3.5936% −3.3652% −3.1469%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking get_edges/1000
+Benchmarking get_edges/1000: Warming up for 3.0000 s
+Benchmarking get_edges/1000: Collecting 100 samples in estimated 5.0014 s (18M iterations)
+Benchmarking get_edges/1000: Analyzing
+get_edges/1000          time:   [278.05 ns 280.17 ns 282.30 ns]
+                        thrpt:  [3.5423 Gelem/s 3.5693 Gelem/s 3.5964 Gelem/s]
+                 change:
+                        time:   [−4.8514% −2.8436% −0.9615%] (p = 0.00 < 0.05)
+                        thrpt:  [+0.9708% +2.9268% +5.0987%]
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+
+Benchmarking outbound_walk/10
+Benchmarking outbound_walk/10: Warming up for 3.0000 s
+Benchmarking outbound_walk/10: Collecting 100 samples in estimated 5.0000 s (384M iterations)
+Benchmarking outbound_walk/10: Analyzing
+outbound_walk/10        time:   [13.088 ns 13.127 ns 13.165 ns]
+                        thrpt:  [759.57 Melem/s 761.80 Melem/s 764.08 Melem/s]
+                 change:
+                        time:   [−0.1750% +0.5877% +1.3436%] (p = 0.13 > 0.05)
+                        thrpt:  [−1.3258% −0.5843% +0.1753%]
+                        No change in performance detected.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking outbound_walk/100
+Benchmarking outbound_walk/100: Warming up for 3.0000 s
+Benchmarking outbound_walk/100: Collecting 100 samples in estimated 5.0006 s (24M iterations)
+Benchmarking outbound_walk/100: Analyzing
+outbound_walk/100       time:   [205.09 ns 205.66 ns 206.25 ns]
+                        thrpt:  [484.85 Melem/s 486.25 Melem/s 487.60 Melem/s]
+                 change:
+                        time:   [−2.9918% −2.2970% −1.6254%] (p = 0.00 < 0.05)
+                        thrpt:  [+1.6522% +2.3510% +3.0840%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking outbound_walk/1000
+Benchmarking outbound_walk/1000: Warming up for 3.0000 s
+Benchmarking outbound_walk/1000: Collecting 100 samples in estimated 5.0071 s (2.8M iterations)
+Benchmarking outbound_walk/1000: Analyzing
+outbound_walk/1000      time:   [1.8363 µs 1.8448 µs 1.8535 µs]
+                        thrpt:  [539.52 Melem/s 542.07 Melem/s 544.58 Melem/s]
+                 change:
+                        time:   [+3.8675% +4.6583% +5.4770%] (p = 0.00 < 0.05)
+                        thrpt:  [−5.1926% −4.4510% −3.7235%]
+                        Performance has regressed.
+
+Benchmarking inbound_walk/10
+Benchmarking inbound_walk/10: Warming up for 3.0000 s
+Benchmarking inbound_walk/10: Collecting 100 samples in estimated 5.0001 s (369M iterations)
+Benchmarking inbound_walk/10: Analyzing
+inbound_walk/10         time:   [13.422 ns 13.464 ns 13.508 ns]
+                        thrpt:  [740.28 Melem/s 742.73 Melem/s 745.03 Melem/s]
+                 change:
+                        time:   [+5.4854% +5.7840% +6.0761%] (p = 0.00 < 0.05)
+                        thrpt:  [−5.7281% −5.4677% −5.2002%]
+                        Performance has regressed.
+Found 11 outliers among 100 measurements (11.00%)
+  2 (2.00%) low mild
+  7 (7.00%) high mild
+  2 (2.00%) high severe
+Benchmarking inbound_walk/100
+Benchmarking inbound_walk/100: Warming up for 3.0000 s
+Benchmarking inbound_walk/100: Collecting 100 samples in estimated 5.0005 s (38M iterations)
+Benchmarking inbound_walk/100: Analyzing
+inbound_walk/100        time:   [124.54 ns 131.74 ns 139.52 ns]
+                        thrpt:  [716.76 Melem/s 759.07 Melem/s 802.98 Melem/s]
+                 change:
+                        time:   [−33.207% −30.349% −27.248%] (p = 0.00 < 0.05)
+                        thrpt:  [+37.453% +43.573% +49.715%]
+                        Performance has improved.
+Benchmarking inbound_walk/1000
+Benchmarking inbound_walk/1000: Warming up for 3.0000 s
+Benchmarking inbound_walk/1000: Collecting 100 samples in estimated 5.0008 s (5.3M iterations)
+Benchmarking inbound_walk/1000: Analyzing
+inbound_walk/1000       time:   [949.82 ns 997.28 ns 1.0498 µs]
+                        thrpt:  [952.53 Melem/s 1.0027 Gelem/s 1.0528 Gelem/s]
+                 change:
+                        time:   [−11.029% −7.6284% −3.8912%] (p = 0.00 < 0.05)
+                        thrpt:  [+4.0487% +8.2584% +12.396%]
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  11 (11.00%) high mild
+
+Benchmarking outbound_walk_shuffled/10
+Benchmarking outbound_walk_shuffled/10: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled/10: Collecting 100 samples in estimated 5.0000 s (376M iterations)
+Benchmarking outbound_walk_shuffled/10: Analyzing
+outbound_walk_shuffled/10
+                        time:   [13.462 ns 13.507 ns 13.549 ns]
+                        thrpt:  [738.06 Melem/s 740.37 Melem/s 742.81 Melem/s]
+                 change:
+                        time:   [+9.7131% +10.023% +10.306%] (p = 0.00 < 0.05)
+                        thrpt:  [−9.3434% −9.1103% −8.8532%]
+                        Performance has regressed.
+Benchmarking outbound_walk_shuffled/100
+Benchmarking outbound_walk_shuffled/100: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled/100: Collecting 100 samples in estimated 5.0010 s (23M iterations)
+Benchmarking outbound_walk_shuffled/100: Analyzing
+outbound_walk_shuffled/100
+                        time:   [212.57 ns 213.68 ns 215.47 ns]
+                        thrpt:  [464.10 Melem/s 467.99 Melem/s 470.44 Melem/s]
+                 change:
+                        time:   [−1.6051% −0.8839% −0.1252%] (p = 0.02 < 0.05)
+                        thrpt:  [+0.1254% +0.8918% +1.6313%]
+                        Change within noise threshold.
+Found 8 outliers among 100 measurements (8.00%)
+  2 (2.00%) low mild
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking outbound_walk_shuffled/1000
+Benchmarking outbound_walk_shuffled/1000: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled/1000: Collecting 100 samples in estimated 5.0025 s (2.2M iterations)
+Benchmarking outbound_walk_shuffled/1000: Analyzing
+outbound_walk_shuffled/1000
+                        time:   [2.2586 µs 2.2639 µs 2.2689 µs]
+                        thrpt:  [440.74 Melem/s 441.71 Melem/s 442.75 Melem/s]
+                 change:
+                        time:   [+4.8696% +5.1496% +5.4071%] (p = 0.00 < 0.05)
+                        thrpt:  [−5.1298% −4.8974% −4.6435%]
+                        Performance has regressed.
+
+Benchmarking inbound_walk_shuffled/10
+Benchmarking inbound_walk_shuffled/10: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled/10: Collecting 100 samples in estimated 5.0001 s (361M iterations)
+Benchmarking inbound_walk_shuffled/10: Analyzing
+inbound_walk_shuffled/10
+                        time:   [13.851 ns 13.874 ns 13.895 ns]
+                        thrpt:  [719.71 Melem/s 720.79 Melem/s 721.96 Melem/s]
+                 change:
+                        time:   [+9.2662% +9.6182% +9.9168%] (p = 0.00 < 0.05)
+                        thrpt:  [−9.0221% −8.7742% −8.4804%]
+                        Performance has regressed.
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) low severe
+  6 (6.00%) low mild
+Benchmarking inbound_walk_shuffled/100
+Benchmarking inbound_walk_shuffled/100: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled/100: Collecting 100 samples in estimated 5.0008 s (22M iterations)
+Benchmarking inbound_walk_shuffled/100: Analyzing
+inbound_walk_shuffled/100
+                        time:   [216.42 ns 217.93 ns 219.51 ns]
+                        thrpt:  [455.57 Melem/s 458.87 Melem/s 462.06 Melem/s]
+                 change:
+                        time:   [+9.5285% +10.322% +11.129%] (p = 0.00 < 0.05)
+                        thrpt:  [−10.014% −9.3562% −8.6996%]
+                        Performance has regressed.
+Benchmarking inbound_walk_shuffled/1000
+Benchmarking inbound_walk_shuffled/1000: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled/1000: Collecting 100 samples in estimated 5.0063 s (2.3M iterations)
+Benchmarking inbound_walk_shuffled/1000: Analyzing
+inbound_walk_shuffled/1000
+                        time:   [2.2098 µs 2.2153 µs 2.2215 µs]
+                        thrpt:  [450.14 Melem/s 451.40 Melem/s 452.53 Melem/s]
+                 change:
+                        time:   [+2.5200% +2.7475% +3.0160%] (p = 0.00 < 0.05)
+                        thrpt:  [−2.9277% −2.6740% −2.4580%]
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking update_node/10
+Benchmarking update_node/10: Warming up for 3.0000 s
+Benchmarking update_node/10: Collecting 100 samples in estimated 5.0000 s (2.1B iterations)
+Benchmarking update_node/10: Analyzing
+update_node/10          time:   [2.4525 ns 2.4573 ns 2.4622 ns]
+                        change: [+8.8778% +9.1710% +9.4324%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) low mild
+  1 (1.00%) high severe
+Benchmarking update_node/100
+Benchmarking update_node/100: Warming up for 3.0000 s
+Benchmarking update_node/100: Collecting 100 samples in estimated 5.0000 s (2.0B iterations)
+Benchmarking update_node/100: Analyzing
+update_node/100         time:   [2.4457 ns 2.4519 ns 2.4575 ns]
+                        change: [+8.3789% +8.6649% +8.9196%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) low mild
+  1 (1.00%) high mild
+Benchmarking update_node/1000
+Benchmarking update_node/1000: Warming up for 3.0000 s
+Benchmarking update_node/1000: Collecting 100 samples in estimated 5.0000 s (2.0B iterations)
+Benchmarking update_node/1000: Analyzing
+update_node/1000        time:   [2.4340 ns 2.4390 ns 2.4435 ns]
+                        change: [+7.0497% +7.4854% +7.9055%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 12 outliers among 100 measurements (12.00%)
+  10 (10.00%) low mild
+  2 (2.00%) high mild
+
+Benchmarking remove_node/10
+Benchmarking remove_node/10: Warming up for 3.0000 s
+Benchmarking remove_node/10: Collecting 100 samples in estimated 5.0005 s (9.1M iterations)
+Benchmarking remove_node/10: Analyzing
+remove_node/10          time:   [23.321 ns 23.850 ns 24.336 ns]
+                        change: [−1.7878% +1.1710% +3.8843%] (p = 0.41 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking remove_node/100
+Benchmarking remove_node/100: Warming up for 3.0000 s
+Benchmarking remove_node/100: Collecting 100 samples in estimated 5.0220 s (1.1M iterations)
+Benchmarking remove_node/100: Analyzing
+remove_node/100         time:   [25.336 ns 25.702 ns 26.017 ns]
+                        change: [−1.0539% +1.7185% +4.7070%] (p = 0.23 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking remove_node/1000
+Benchmarking remove_node/1000: Warming up for 3.0000 s
+Benchmarking remove_node/1000: Collecting 100 samples in estimated 5.1986 s (116k iterations)
+Benchmarking remove_node/1000: Analyzing
+remove_node/1000        time:   [31.021 ns 31.457 ns 31.894 ns]
+                        change: [−3.5849% +1.2930% +5.6911%] (p = 0.62 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking remove_edge/10
+Benchmarking remove_edge/10: Warming up for 3.0000 s
+Benchmarking remove_edge/10: Collecting 100 samples in estimated 5.0000 s (11M iterations)
+Benchmarking remove_edge/10: Analyzing
+remove_edge/10          time:   [18.830 ns 19.037 ns 19.201 ns]
+                        change: [+2.2248% +4.7743% +7.4119%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking remove_edge/100
+Benchmarking remove_edge/100: Warming up for 3.0000 s
+Benchmarking remove_edge/100: Collecting 100 samples in estimated 5.0025 s (1.0M iterations)
+Benchmarking remove_edge/100: Analyzing
+remove_edge/100         time:   [50.053 ns 50.591 ns 51.080 ns]
+                        change: [+5.9098% +7.2563% +8.5990%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking remove_edge/1000
+Benchmarking remove_edge/1000: Warming up for 3.0000 s
+Benchmarking remove_edge/1000: Collecting 100 samples in estimated 5.5450 s (30k iterations)
+Benchmarking remove_edge/1000: Analyzing
+remove_edge/1000        time:   [325.12 ns 327.43 ns 330.13 ns]
+                        change: [+1.0065% +1.8595% +2.8016%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+
+Benchmarking freeze/10
+Benchmarking freeze/10: Warming up for 3.0000 s
+Benchmarking freeze/10: Collecting 100 samples in estimated 5.0037 s (4.8M iterations)
+Benchmarking freeze/10: Analyzing
+freeze/10               time:   [682.09 ns 683.85 ns 685.52 ns]
+                        thrpt:  [16.046 Melem/s 16.085 Melem/s 16.127 Melem/s]
+                 change:
+                        time:   [+39.153% +40.197% +41.343%] (p = 0.00 < 0.05)
+                        thrpt:  [−29.250% −28.672% −28.137%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking freeze/100
+Benchmarking freeze/100: Warming up for 3.0000 s
+Benchmarking freeze/100: Collecting 100 samples in estimated 5.0263 s (586k iterations)
+Benchmarking freeze/100: Analyzing
+freeze/100              time:   [5.3993 µs 5.4128 µs 5.4264 µs]
+                        thrpt:  [18.613 Melem/s 18.659 Melem/s 18.706 Melem/s]
+                 change:
+                        time:   [+33.962% +35.130% +36.329%] (p = 0.00 < 0.05)
+                        thrpt:  [−26.648% −25.997% −25.352%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+Benchmarking freeze/1000
+Benchmarking freeze/1000: Warming up for 3.0000 s
+Benchmarking freeze/1000: Collecting 100 samples in estimated 5.0640 s (61k iterations)
+Benchmarking freeze/1000: Analyzing
+freeze/1000             time:   [53.119 µs 53.267 µs 53.407 µs]
+                        thrpt:  [18.743 Melem/s 18.792 Melem/s 18.844 Melem/s]
+                 change:
+                        time:   [+31.533% +32.764% +33.971%] (p = 0.00 < 0.05)
+                        thrpt:  [−25.357% −24.679% −23.973%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+
+Benchmarking unfreeze/10
+Benchmarking unfreeze/10: Warming up for 3.0000 s
+Benchmarking unfreeze/10: Collecting 100 samples in estimated 5.0009 s (3.3M iterations)
+Benchmarking unfreeze/10: Analyzing
+unfreeze/10             time:   [301.58 ns 303.62 ns 305.47 ns]
+                        thrpt:  [36.011 Melem/s 36.230 Melem/s 36.475 Melem/s]
+                 change:
+                        time:   [+46.898% +48.102% +49.279%] (p = 0.00 < 0.05)
+                        thrpt:  [−33.011% −32.479% −31.925%]
+                        Performance has regressed.
+Benchmarking unfreeze/100
+Benchmarking unfreeze/100: Warming up for 3.0000 s
+Benchmarking unfreeze/100: Collecting 100 samples in estimated 5.0459 s (409k iterations)
+Benchmarking unfreeze/100: Analyzing
+unfreeze/100            time:   [2.3707 µs 2.3859 µs 2.3995 µs]
+                        thrpt:  [42.093 Melem/s 42.331 Melem/s 42.604 Melem/s]
+                 change:
+                        time:   [+59.201% +60.333% +61.521%] (p = 0.00 < 0.05)
+                        thrpt:  [−38.088% −37.630% −37.186%]
+                        Performance has regressed.
+Benchmarking unfreeze/1000
+Benchmarking unfreeze/1000: Warming up for 3.0000 s
+Benchmarking unfreeze/1000: Collecting 100 samples in estimated 5.3870 s (45k iterations)
+Benchmarking unfreeze/1000: Analyzing
+unfreeze/1000           time:   [21.369 µs 21.482 µs 21.599 µs]
+                        thrpt:  [46.346 Melem/s 46.596 Melem/s 46.844 Melem/s]
+                 change:
+                        time:   [+48.086% +49.545% +50.921%] (p = 0.00 < 0.05)
+                        thrpt:  [−33.740% −33.131% −32.471%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+
+Benchmarking keyed_update_low/10
+Benchmarking keyed_update_low/10: Warming up for 3.0000 s
+Benchmarking keyed_update_low/10: Collecting 100 samples in estimated 5.0000 s (1.2B iterations)
+Benchmarking keyed_update_low/10: Analyzing
+keyed_update_low/10     time:   [3.9692 ns 3.9760 ns 3.9841 ns]
+                        change: [−6.1845% −5.8381% −5.4854%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking keyed_update_low/100
+Benchmarking keyed_update_low/100: Warming up for 3.0000 s
+Benchmarking keyed_update_low/100: Collecting 100 samples in estimated 5.0000 s (1.3B iterations)
+Benchmarking keyed_update_low/100: Analyzing
+keyed_update_low/100    time:   [3.9833 ns 4.0043 ns 4.0296 ns]
+                        change: [−10.194% −6.6089% −4.5448%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking keyed_update_low/1000
+Benchmarking keyed_update_low/1000: Warming up for 3.0000 s
+Benchmarking keyed_update_low/1000: Collecting 100 samples in estimated 5.0000 s (1.2B iterations)
+Benchmarking keyed_update_low/1000: Analyzing
+keyed_update_low/1000   time:   [4.0911 ns 4.1010 ns 4.1125 ns]
+                        change: [−17.185% −13.114% −9.9247%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 8 outliers among 100 measurements (8.00%)
+  2 (2.00%) low mild
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking keyed_update_hub/100000
+Benchmarking keyed_update_hub/100000: Warming up for 3.0000 s
+Benchmarking keyed_update_hub/100000: Collecting 100 samples in estimated 5.0260 s (303k iterations)
+Benchmarking keyed_update_hub/100000: Analyzing
+keyed_update_hub/100000 time:   [16.545 µs 16.565 µs 16.584 µs]
+                        change: [+51641% +51825% +52018%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) low mild
+  2 (2.00%) high severe
+
+Benchmarking keyed_remove_low/10
+Benchmarking keyed_remove_low/10: Warming up for 3.0000 s
+Benchmarking keyed_remove_low/10: Collecting 100 samples in estimated 5.0007 s (8.9M iterations)
+Benchmarking keyed_remove_low/10: Analyzing
+keyed_remove_low/10     time:   [6.8985 ns 7.0599 ns 7.1854 ns]
+                        change: [−55.394% −53.012% −50.790%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking keyed_remove_low/100
+Benchmarking keyed_remove_low/100: Warming up for 3.0000 s
+Benchmarking keyed_remove_low/100: Collecting 100 samples in estimated 5.0241 s (1.0M iterations)
+Benchmarking keyed_remove_low/100: Analyzing
+keyed_remove_low/100    time:   [6.9304 ns 7.1156 ns 7.2788 ns]
+                        change: [−58.824% −55.305% −51.383%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+Benchmarking keyed_remove_low/1000
+Benchmarking keyed_remove_low/1000: Warming up for 3.0000 s
+Benchmarking keyed_remove_low/1000: Collecting 100 samples in estimated 5.2330 s (111k iterations)
+Benchmarking keyed_remove_low/1000: Analyzing
+keyed_remove_low/1000   time:   [13.352 ns 13.966 ns 14.768 ns]
+                        change: [−46.059% −42.985% −39.574%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+
+Benchmarking keyed_remove_hub/100000
+Benchmarking keyed_remove_hub/100000: Warming up for 3.0000 s
+Benchmarking keyed_remove_hub/100000: Collecting 20 samples in estimated 5.0070 s (9660 iterations)
+Benchmarking keyed_remove_hub/100000: Analyzing
+keyed_remove_hub/100000 time:   [29.915 µs 30.041 µs 30.165 µs]
+                        change: [+5141.5% +5701.4% +6203.5%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+Benchmarking outbound_walk_dynamic/10
+Benchmarking outbound_walk_dynamic/10: Warming up for 3.0000 s
+Benchmarking outbound_walk_dynamic/10: Collecting 100 samples in estimated 5.0000 s (337M iterations)
+Benchmarking outbound_walk_dynamic/10: Analyzing
+outbound_walk_dynamic/10
+                        time:   [14.663 ns 14.744 ns 14.829 ns]
+                        thrpt:  [674.37 Melem/s 678.22 Melem/s 681.97 Melem/s]
+                 change:
+                        time:   [−28.353% −28.102% −27.825%] (p = 0.00 < 0.05)
+                        thrpt:  [+38.553% +39.085% +39.573%]
+                        Performance has improved.
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking outbound_walk_dynamic/100
+Benchmarking outbound_walk_dynamic/100: Warming up for 3.0000 s
+Benchmarking outbound_walk_dynamic/100: Collecting 100 samples in estimated 5.0011 s (18M iterations)
+Benchmarking outbound_walk_dynamic/100: Analyzing
+outbound_walk_dynamic/100
+                        time:   [282.74 ns 285.85 ns 288.76 ns]
+                        thrpt:  [346.31 Melem/s 349.83 Melem/s 353.68 Melem/s]
+                 change:
+                        time:   [+0.1613% +1.6804% +3.1108%] (p = 0.03 < 0.05)
+                        thrpt:  [−3.0170% −1.6526% −0.1610%]
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low severe
+  3 (3.00%) low mild
+  1 (1.00%) high mild
+Benchmarking outbound_walk_dynamic/1000
+Benchmarking outbound_walk_dynamic/1000: Warming up for 3.0000 s
+Benchmarking outbound_walk_dynamic/1000: Collecting 100 samples in estimated 5.0035 s (4.3M iterations)
+Benchmarking outbound_walk_dynamic/1000: Analyzing
+outbound_walk_dynamic/1000
+                        time:   [1.1069 µs 1.1339 µs 1.1558 µs]
+                        thrpt:  [865.18 Melem/s 881.94 Melem/s 903.46 Melem/s]
+                 change:
+                        time:   [−74.198% −73.828% −73.504%] (p = 0.00 < 0.05)
+                        thrpt:  [+277.41% +282.09% +287.57%]
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low severe
+
+Benchmarking inbound_walk_dynamic/10
+Benchmarking inbound_walk_dynamic/10: Warming up for 3.0000 s
+Benchmarking inbound_walk_dynamic/10: Collecting 100 samples in estimated 5.0000 s (335M iterations)
+Benchmarking inbound_walk_dynamic/10: Analyzing
+inbound_walk_dynamic/10 time:   [14.547 ns 14.603 ns 14.669 ns]
+                        thrpt:  [681.70 Melem/s 684.80 Melem/s 687.41 Melem/s]
+                 change:
+                        time:   [−30.255% −29.924% −29.629%] (p = 0.00 < 0.05)
+                        thrpt:  [+42.104% +42.702% +43.380%]
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking inbound_walk_dynamic/100
+Benchmarking inbound_walk_dynamic/100: Warming up for 3.0000 s
+Benchmarking inbound_walk_dynamic/100: Collecting 100 samples in estimated 5.0001 s (15M iterations)
+Benchmarking inbound_walk_dynamic/100: Analyzing
+inbound_walk_dynamic/100
+                        time:   [346.01 ns 348.12 ns 350.04 ns]
+                        thrpt:  [285.68 Melem/s 287.26 Melem/s 289.01 Melem/s]
+                 change:
+                        time:   [+17.400% +18.017% +18.623%] (p = 0.00 < 0.05)
+                        thrpt:  [−15.700% −15.266% −14.821%]
+                        Performance has regressed.
+Found 20 outliers among 100 measurements (20.00%)
+  6 (6.00%) high mild
+  14 (14.00%) high severe
+Benchmarking inbound_walk_dynamic/1000
+Benchmarking inbound_walk_dynamic/1000: Warming up for 3.0000 s
+Benchmarking inbound_walk_dynamic/1000: Collecting 100 samples in estimated 5.0004 s (1.7M iterations)
+Benchmarking inbound_walk_dynamic/1000: Analyzing
+inbound_walk_dynamic/1000
+                        time:   [3.0265 µs 3.0393 µs 3.0515 µs]
+                        thrpt:  [327.70 Melem/s 329.02 Melem/s 330.41 Melem/s]
+                 change:
+                        time:   [−19.249% −18.402% −17.456%] (p = 0.00 < 0.05)
+                        thrpt:  [+21.148% +22.552% +23.837%]
+                        Performance has improved.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+
+Benchmarking outbound_walk_shuffled_dynamic/10
+Benchmarking outbound_walk_shuffled_dynamic/10: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled_dynamic/10: Collecting 100 samples in estimated 5.0000 s (336M iterations)
+Benchmarking outbound_walk_shuffled_dynamic/10: Analyzing
+outbound_walk_shuffled_dynamic/10
+                        time:   [14.579 ns 14.645 ns 14.717 ns]
+                        thrpt:  [679.47 Melem/s 682.82 Melem/s 685.93 Melem/s]
+                 change:
+                        time:   [−29.146% −28.886% −28.633%] (p = 0.00 < 0.05)
+                        thrpt:  [+40.121% +40.620% +41.135%]
+                        Performance has improved.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking outbound_walk_shuffled_dynamic/100
+Benchmarking outbound_walk_shuffled_dynamic/100: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled_dynamic/100: Collecting 100 samples in estimated 5.0007 s (16M iterations)
+Benchmarking outbound_walk_shuffled_dynamic/100: Analyzing
+outbound_walk_shuffled_dynamic/100
+                        time:   [322.92 ns 324.99 ns 327.34 ns]
+                        thrpt:  [305.49 Melem/s 307.70 Melem/s 309.67 Melem/s]
+                 change:
+                        time:   [−27.050% −26.654% −26.236%] (p = 0.00 < 0.05)
+                        thrpt:  [+35.567% +36.341% +37.081%]
+                        Performance has improved.
+Found 14 outliers among 100 measurements (14.00%)
+  10 (10.00%) high mild
+  4 (4.00%) high severe
+Benchmarking outbound_walk_shuffled_dynamic/1000
+Benchmarking outbound_walk_shuffled_dynamic/1000: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled_dynamic/1000: Collecting 100 samples in estimated 5.0024 s (1.5M iterations)
+Benchmarking outbound_walk_shuffled_dynamic/1000: Analyzing
+outbound_walk_shuffled_dynamic/1000
+                        time:   [3.4115 µs 3.4283 µs 3.4493 µs]
+                        thrpt:  [289.91 Melem/s 291.69 Melem/s 293.13 Melem/s]
+                 change:
+                        time:   [−42.933% −42.549% −42.173%] (p = 0.00 < 0.05)
+                        thrpt:  [+72.929% +74.060% +75.231%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) low mild
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking inbound_walk_shuffled_dynamic/10
+Benchmarking inbound_walk_shuffled_dynamic/10: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled_dynamic/10: Collecting 100 samples in estimated 5.0000 s (335M iterations)
+Benchmarking inbound_walk_shuffled_dynamic/10: Analyzing
+inbound_walk_shuffled_dynamic/10
+                        time:   [14.868 ns 14.916 ns 14.967 ns]
+                        thrpt:  [668.12 Melem/s 670.43 Melem/s 672.58 Melem/s]
+                 change:
+                        time:   [−28.088% −27.892% −27.700%] (p = 0.00 < 0.05)
+                        thrpt:  [+38.312% +38.681% +39.059%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) low mild
+  5 (5.00%) high mild
+Benchmarking inbound_walk_shuffled_dynamic/100
+Benchmarking inbound_walk_shuffled_dynamic/100: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled_dynamic/100: Collecting 100 samples in estimated 5.0015 s (14M iterations)
+Benchmarking inbound_walk_shuffled_dynamic/100: Analyzing
+inbound_walk_shuffled_dynamic/100
+                        time:   [353.53 ns 354.68 ns 355.91 ns]
+                        thrpt:  [280.97 Melem/s 281.95 Melem/s 282.86 Melem/s]
+                 change:
+                        time:   [−20.146% −19.888% −19.586%] (p = 0.00 < 0.05)
+                        thrpt:  [+24.357% +24.825% +25.229%]
+                        Performance has improved.
+Benchmarking inbound_walk_shuffled_dynamic/1000
+Benchmarking inbound_walk_shuffled_dynamic/1000: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled_dynamic/1000: Collecting 100 samples in estimated 5.0046 s (1.5M iterations)
+Benchmarking inbound_walk_shuffled_dynamic/1000: Analyzing
+inbound_walk_shuffled_dynamic/1000
+                        time:   [3.3910 µs 3.3980 µs 3.4053 µs]
+                        thrpt:  [293.66 Melem/s 294.29 Melem/s 294.90 Melem/s]
+                 change:
+                        time:   [−43.822% −43.652% −43.485%] (p = 0.00 < 0.05)
+                        thrpt:  [+76.945% +77.468% +78.006%]
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) low mild
+
+memory_per_edge/hub_built: 4897200 bytes over 100000 edges = 48.972 bytes per edge
+Benchmarking memory_per_edge/hub_built
+Benchmarking memory_per_edge/hub_built: Warming up for 3.0000 s
+Benchmarking memory_per_edge/hub_built: Collecting 10 samples in estimated 5.0005 s (477k iterations)
+Benchmarking memory_per_edge/hub_built: Analyzing
+memory_per_edge/hub_built
+                        time:   [10.524 µs 10.578 µs 10.620 µs]
+                        change: [−90.300% −90.200% −90.111%] (p = 0.00 < 0.05)
+                        Performance has improved.
+memory_per_edge/hub_updated: 4897200 bytes over 100000 edges = 48.972 bytes per edge
+Benchmarking memory_per_edge/hub_updated
+Benchmarking memory_per_edge/hub_updated: Warming up for 3.0000 s
+Benchmarking memory_per_edge/hub_updated: Collecting 10 samples in estimated 5.0004 s (473k iterations)
+Benchmarking memory_per_edge/hub_updated: Analyzing
+memory_per_edge/hub_updated
+                        time:   [10.601 µs 10.655 µs 10.725 µs]
+                        change: [−89.992% −89.901% −89.778%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+memory_per_edge/chain_1000_built: 176048 bytes over 1000 edges = 176.048 bytes per edge
+Benchmarking memory_per_edge/chain_1000_built
+Benchmarking memory_per_edge/chain_1000_built: Warming up for 3.0000 s
+Benchmarking memory_per_edge/chain_1000_built: Collecting 10 samples in estimated 5.0000 s (22M iterations)
+Benchmarking memory_per_edge/chain_1000_built: Analyzing
+memory_per_edge/chain_1000_built
+                        time:   [222.00 ns 223.08 ns 223.89 ns]
+                        change: [−90.450% −90.394% −90.337%] (p = 0.00 < 0.05)
+                        Performance has improved.
+memory_per_edge/chain_1000_updated: 176048 bytes over 1000 edges = 176.048 bytes per edge
+Benchmarking memory_per_edge/chain_1000_updated
+Benchmarking memory_per_edge/chain_1000_updated: Warming up for 3.0000 s
+Benchmarking memory_per_edge/chain_1000_updated: Collecting 10 samples in estimated 5.0000 s (23M iterations)
+Benchmarking memory_per_edge/chain_1000_updated: Analyzing
+memory_per_edge/chain_1000_updated
+                        time:   [219.45 ns 222.00 ns 223.79 ns]
+                        change: [−90.606% −90.530% −90.447%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+Benchmarking live_writes_then_scc/live/chain_1000/1
+Benchmarking live_writes_then_scc/live/chain_1000/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/chain_1000/1: Collecting 100 samples in estimated 5.1352 s (157k iterations)
+Benchmarking live_writes_then_scc/live/chain_1000/1: Analyzing
+live_writes_then_scc/live/chain_1000/1
+                        time:   [32.877 µs 33.009 µs 33.143 µs]
+                        change: [−26.659% −26.388% −26.105%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1: Collecting 100 samples in estimated 5.3481 s (50k iterations)
+Benchmarking live_writes_then_scc/dynamic/chain_1000/1: Analyzing
+live_writes_then_scc/dynamic/chain_1000/1
+                        time:   [105.41 µs 105.74 µs 106.10 µs]
+                        change: [−26.809% −26.574% −26.334%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking live_writes_then_scc/live/chain_1000/16
+Benchmarking live_writes_then_scc/live/chain_1000/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/chain_1000/16: Collecting 100 samples in estimated 5.0238 s (152k iterations)
+Benchmarking live_writes_then_scc/live/chain_1000/16: Analyzing
+live_writes_then_scc/live/chain_1000/16
+                        time:   [32.919 µs 32.995 µs 33.087 µs]
+                        change: [−27.088% −26.865% −26.641%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16: Collecting 100 samples in estimated 5.4715 s (50k iterations)
+Benchmarking live_writes_then_scc/dynamic/chain_1000/16: Analyzing
+live_writes_then_scc/dynamic/chain_1000/16
+                        time:   [106.71 µs 107.10 µs 107.57 µs]
+                        change: [−26.265% −25.991% −25.706%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_writes_then_scc/live/chain_1000/256
+Benchmarking live_writes_then_scc/live/chain_1000/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/chain_1000/256: Collecting 100 samples in estimated 5.0383 s (141k iterations)
+Benchmarking live_writes_then_scc/live/chain_1000/256: Analyzing
+live_writes_then_scc/live/chain_1000/256
+                        time:   [35.679 µs 35.799 µs 35.931 µs]
+                        change: [−25.792% −25.485% −25.213%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256: Collecting 100 samples in estimated 5.5272 s (50k iterations)
+Benchmarking live_writes_then_scc/dynamic/chain_1000/256: Analyzing
+live_writes_then_scc/dynamic/chain_1000/256
+                        time:   [109.55 µs 109.97 µs 110.37 µs]
+                        change: [−25.134% −24.792% −24.475%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking live_writes_then_scc/live/hub/1
+Benchmarking live_writes_then_scc/live/hub/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/hub/1: Collecting 20 samples in estimated 5.0637 s (6510 iterations)
+Benchmarking live_writes_then_scc/live/hub/1: Analyzing
+live_writes_then_scc/live/hub/1
+                        time:   [771.52 µs 774.00 µs 776.88 µs]
+                        change: [−25.656% −25.376% −25.083%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_writes_then_scc/dynamic/hub/1
+Benchmarking live_writes_then_scc/dynamic/hub/1: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/hub/1: Collecting 20 samples in estimated 5.6319 s (1050 iterations)
+Benchmarking live_writes_then_scc/dynamic/hub/1: Analyzing
+live_writes_then_scc/dynamic/hub/1
+                        time:   [5.3594 ms 5.3910 ms 5.4265 ms]
+                        change: [−28.604% −27.031% −25.337%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_writes_then_scc/live/hub/16
+Benchmarking live_writes_then_scc/live/hub/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/hub/16: Collecting 20 samples in estimated 5.1321 s (6510 iterations)
+Benchmarking live_writes_then_scc/live/hub/16: Analyzing
+live_writes_then_scc/live/hub/16
+                        time:   [778.93 µs 782.81 µs 788.33 µs]
+                        change: [−25.239% −24.763% −24.301%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_writes_then_scc/dynamic/hub/16
+Benchmarking live_writes_then_scc/dynamic/hub/16: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/hub/16: Collecting 20 samples in estimated 5.8952 s (1050 iterations)
+Benchmarking live_writes_then_scc/dynamic/hub/16: Analyzing
+live_writes_then_scc/dynamic/hub/16
+                        time:   [5.5882 ms 5.6327 ms 5.6704 ms]
+                        change: [−28.447% −27.645% −26.864%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_writes_then_scc/live/hub/256
+Benchmarking live_writes_then_scc/live/hub/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/live/hub/256: Collecting 20 samples in estimated 5.0689 s (6300 iterations)
+Benchmarking live_writes_then_scc/live/hub/256: Analyzing
+live_writes_then_scc/live/hub/256
+                        time:   [806.96 µs 812.30 µs 818.09 µs]
+                        change: [−25.926% −25.440% −24.925%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 20 measurements (5.00%)
+  1 (5.00%) high mild
+Benchmarking live_writes_then_scc/dynamic/hub/256
+Benchmarking live_writes_then_scc/dynamic/hub/256: Warming up for 3.0000 s
+Benchmarking live_writes_then_scc/dynamic/hub/256: Collecting 20 samples in estimated 6.1010 s (630 iterations)
+Benchmarking live_writes_then_scc/dynamic/hub/256: Analyzing
+live_writes_then_scc/dynamic/hub/256
+                        time:   [9.6178 ms 9.6833 ms 9.7400 ms]
+                        change: [−26.917% −26.239% −25.497%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+Benchmarking live_algorithms/scc/frozen
+Benchmarking live_algorithms/scc/frozen: Warming up for 3.0000 s
+Benchmarking live_algorithms/scc/frozen: Collecting 100 samples in estimated 5.1313 s (152k iterations)
+Benchmarking live_algorithms/scc/frozen: Analyzing
+live_algorithms/scc/frozen
+                        time:   [33.800 µs 33.877 µs 33.954 µs]
+                        change: [−26.964% −26.798% −26.619%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking live_algorithms/topological_sort/frozen
+Benchmarking live_algorithms/topological_sort/frozen: Warming up for 3.0000 s
+Benchmarking live_algorithms/topological_sort/frozen: Collecting 100 samples in estimated 5.0008 s (682k iterations)
+Benchmarking live_algorithms/topological_sort/frozen: Analyzing
+live_algorithms/topological_sort/frozen
+                        time:   [7.3052 µs 7.3230 µs 7.3452 µs]
+                        change: [−28.889% −26.986% −25.036%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high severe
+Benchmarking live_algorithms/shortest_path_len/frozen
+Benchmarking live_algorithms/shortest_path_len/frozen: Warming up for 3.0000 s
+Benchmarking live_algorithms/shortest_path_len/frozen: Collecting 100 samples in estimated 5.0104 s (1.6M iterations)
+Benchmarking live_algorithms/shortest_path_len/frozen: Analyzing
+live_algorithms/shortest_path_len/frozen
+                        time:   [3.9276 µs 4.1810 µs 4.4689 µs]
+                        change: [−2.4671% +2.7894% +8.7359%] (p = 0.34 > 0.05)
+                        No change in performance detected.
+Benchmarking live_algorithms/scc/live
+Benchmarking live_algorithms/scc/live: Warming up for 3.0000 s
+Benchmarking live_algorithms/scc/live: Collecting 100 samples in estimated 5.1290 s (157k iterations)
+Benchmarking live_algorithms/scc/live: Analyzing
+live_algorithms/scc/live
+                        time:   [31.881 µs 32.029 µs 32.181 µs]
+                        change: [−27.863% −27.670% −27.467%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_algorithms/topological_sort/live
+Benchmarking live_algorithms/topological_sort/live: Warming up for 3.0000 s
+Benchmarking live_algorithms/topological_sort/live: Collecting 100 samples in estimated 5.0004 s (954k iterations)
+Benchmarking live_algorithms/topological_sort/live: Analyzing
+live_algorithms/topological_sort/live
+                        time:   [5.3801 µs 5.3927 µs 5.4052 µs]
+                        change: [−33.260% −33.074% −32.900%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  10 (10.00%) low mild
+  1 (1.00%) high mild
+Benchmarking live_algorithms/shortest_path_len/live
+Benchmarking live_algorithms/shortest_path_len/live: Warming up for 3.0000 s
+Benchmarking live_algorithms/shortest_path_len/live: Collecting 100 samples in estimated 5.0058 s (1.7M iterations)
+Benchmarking live_algorithms/shortest_path_len/live: Analyzing
+live_algorithms/shortest_path_len/live
+                        time:   [2.9169 µs 2.9333 µs 2.9471 µs]
+                        change: [−8.8103% −8.3659% −7.9091%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+Benchmarking live_update/in_place
+Benchmarking live_update/in_place: Warming up for 3.0000 s
+Benchmarking live_update/in_place: Collecting 100 samples in estimated 5.0014 s (3.2M iterations)
+Benchmarking live_update/in_place: Analyzing
+live_update/in_place    time:   [18.519 ns 18.728 ns 18.929 ns]
+                        change: [−23.737% −22.555% −21.407%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking live_update/rebuild
+Benchmarking live_update/rebuild: Warming up for 3.0000 s
+Benchmarking live_update/rebuild: Collecting 100 samples in estimated 5.0111 s (1.7M iterations)
+Benchmarking live_update/rebuild: Analyzing
+live_update/rebuild     time:   [592.13 ns 598.73 ns 605.85 ns]
+                        change: [−27.156% −26.150% −25.151%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 17 outliers among 100 measurements (17.00%)
+  6 (6.00%) low severe
+  4 (4.00%) low mild
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking live_transitions/make_live/from_dynamic
+Benchmarking live_transitions/make_live/from_dynamic: Warming up for 3.0000 s
+Benchmarking live_transitions/make_live/from_dynamic: Collecting 100 samples in estimated 5.2485 s (76k iterations)
+Benchmarking live_transitions/make_live/from_dynamic: Analyzing
+live_transitions/make_live/from_dynamic
+                        time:   [48.570 µs 48.782 µs 49.023 µs]
+                        change: [−29.003% −28.646% −28.341%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking live_transitions/make_live/from_frozen
+Benchmarking live_transitions/make_live/from_frozen: Warming up for 3.0000 s
+Benchmarking live_transitions/make_live/from_frozen: Collecting 100 samples in estimated 5.0019 s (1.8M iterations)
+Benchmarking live_transitions/make_live/from_frozen: Analyzing
+live_transitions/make_live/from_frozen
+                        time:   [777.70 ns 780.96 ns 784.15 ns]
+                        change: [−40.598% −39.805% −39.007%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 10 outliers among 100 measurements (10.00%)
+  10 (10.00%) low mild
+Benchmarking live_transitions/freeze/from_live
+Benchmarking live_transitions/freeze/from_live: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze/from_live: Collecting 100 samples in estimated 5.0256 s (783k iterations)
+Benchmarking live_transitions/freeze/from_live: Analyzing
+live_transitions/freeze/from_live
+                        time:   [4.9984 µs 5.0318 µs 5.0850 µs]
+                        change: [−31.672% −30.913% −30.114%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 10 outliers among 100 measurements (10.00%)
+  1 (1.00%) low severe
+  5 (5.00%) low mild
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+Benchmarking live_transitions/unfreeze/from_live
+Benchmarking live_transitions/unfreeze/from_live: Warming up for 3.0000 s
+Benchmarking live_transitions/unfreeze/from_live: Collecting 100 samples in estimated 5.0202 s (131k iterations)
+Benchmarking live_transitions/unfreeze/from_live: Analyzing
+live_transitions/unfreeze/from_live
+                        time:   [21.557 µs 21.617 µs 21.680 µs]
+                        change: [−28.741% −28.476% −28.226%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking live_transitions/freeze_clone/dynamic
+Benchmarking live_transitions/freeze_clone/dynamic: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze_clone/dynamic: Collecting 100 samples in estimated 5.3220 s (76k iterations)
+Benchmarking live_transitions/freeze_clone/dynamic: Analyzing
+live_transitions/freeze_clone/dynamic
+                        time:   [70.685 µs 70.803 µs 70.920 µs]
+                        change: [−29.907% −29.742% −29.583%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  6 (6.00%) low mild
+  5 (5.00%) high mild
+Benchmarking live_transitions/freeze_clone/frozen
+Benchmarking live_transitions/freeze_clone/frozen: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze_clone/frozen: Collecting 100 samples in estimated 5.0032 s (2.3M iterations)
+Benchmarking live_transitions/freeze_clone/frozen: Analyzing
+live_transitions/freeze_clone/frozen
+                        time:   [1.6806 µs 1.6952 µs 1.7078 µs]
+                        change: [−41.417% −32.215% −22.646%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) low mild
+  1 (1.00%) high severe
+Benchmarking live_transitions/freeze_clone/live
+Benchmarking live_transitions/freeze_clone/live: Warming up for 3.0000 s
+Benchmarking live_transitions/freeze_clone/live: Collecting 100 samples in estimated 5.0026 s (712k iterations)
+Benchmarking live_transitions/freeze_clone/live: Analyzing
+live_transitions/freeze_clone/live
+                        time:   [6.5849 µs 6.6439 µs 6.7165 µs]
+                        change: [−33.829% −32.307% −31.194%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking view_upkeep/keyed_write/dynamic/0
+Benchmarking view_upkeep/keyed_write/dynamic/0: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/dynamic/0: Collecting 100 samples in estimated 5.0000 s (1.2B iterations)
+Benchmarking view_upkeep/keyed_write/dynamic/0: Analyzing
+view_upkeep/keyed_write/dynamic/0
+                        time:   [4.2554 ns 4.4547 ns 4.8826 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+Benchmarking view_upkeep/keyed_write/dynamic/1
+Benchmarking view_upkeep/keyed_write/dynamic/1: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/dynamic/1: Collecting 100 samples in estimated 5.0000 s (472M iterations)
+Benchmarking view_upkeep/keyed_write/dynamic/1: Analyzing
+view_upkeep/keyed_write/dynamic/1
+                        time:   [10.629 ns 10.689 ns 10.759 ns]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking view_upkeep/keyed_write/dynamic/4
+Benchmarking view_upkeep/keyed_write/dynamic/4: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/dynamic/4: Collecting 100 samples in estimated 5.0000 s (123M iterations)
+Benchmarking view_upkeep/keyed_write/dynamic/4: Analyzing
+view_upkeep/keyed_write/dynamic/4
+                        time:   [40.538 ns 40.708 ns 40.942 ns]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) low mild
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking view_upkeep/keyed_write/dynamic/16
+Benchmarking view_upkeep/keyed_write/dynamic/16: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/dynamic/16: Collecting 100 samples in estimated 5.0006 s (31M iterations)
+Benchmarking view_upkeep/keyed_write/dynamic/16: Analyzing
+view_upkeep/keyed_write/dynamic/16
+                        time:   [159.52 ns 159.84 ns 160.18 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  2 (2.00%) high severe
+Benchmarking view_upkeep/keyed_write/live/0
+Benchmarking view_upkeep/keyed_write/live/0: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/live/0: Collecting 100 samples in estimated 5.0000 s (611M iterations)
+Benchmarking view_upkeep/keyed_write/live/0: Analyzing
+view_upkeep/keyed_write/live/0
+                        time:   [7.9850 ns 8.0088 ns 8.0372 ns]
+Benchmarking view_upkeep/keyed_write/live/1
+Benchmarking view_upkeep/keyed_write/live/1: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/live/1: Collecting 100 samples in estimated 5.0001 s (338M iterations)
+Benchmarking view_upkeep/keyed_write/live/1: Analyzing
+view_upkeep/keyed_write/live/1
+                        time:   [14.583 ns 14.606 ns 14.631 ns]
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking view_upkeep/keyed_write/live/4
+Benchmarking view_upkeep/keyed_write/live/4: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/live/4: Collecting 100 samples in estimated 5.0001 s (111M iterations)
+Benchmarking view_upkeep/keyed_write/live/4: Analyzing
+view_upkeep/keyed_write/live/4
+                        time:   [45.801 ns 45.961 ns 46.095 ns]
+Benchmarking view_upkeep/keyed_write/live/16
+Benchmarking view_upkeep/keyed_write/live/16: Warming up for 3.0000 s
+Benchmarking view_upkeep/keyed_write/live/16: Collecting 100 samples in estimated 5.0007 s (29M iterations)
+Benchmarking view_upkeep/keyed_write/live/16: Analyzing
+view_upkeep/keyed_write/live/16
+                        time:   [168.88 ns 169.32 ns 169.80 ns]
+Found 11 outliers among 100 measurements (11.00%)
+  7 (7.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking view_upkeep/update_node/dynamic/0
+Benchmarking view_upkeep/update_node/dynamic/0: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/dynamic/0: Collecting 100 samples in estimated 5.0000 s (2.1B iterations)
+Benchmarking view_upkeep/update_node/dynamic/0: Analyzing
+view_upkeep/update_node/dynamic/0
+                        time:   [2.3347 ns 2.3428 ns 2.3512 ns]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking view_upkeep/update_node/dynamic/1
+Benchmarking view_upkeep/update_node/dynamic/1: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/dynamic/1: Collecting 100 samples in estimated 5.0000 s (1.1B iterations)
+Benchmarking view_upkeep/update_node/dynamic/1: Analyzing
+view_upkeep/update_node/dynamic/1
+                        time:   [4.7333 ns 4.7474 ns 4.7639 ns]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking view_upkeep/update_node/dynamic/4
+Benchmarking view_upkeep/update_node/dynamic/4: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/dynamic/4: Collecting 100 samples in estimated 5.0000 s (813M iterations)
+Benchmarking view_upkeep/update_node/dynamic/4: Analyzing
+view_upkeep/update_node/dynamic/4
+                        time:   [6.1467 ns 6.1638 ns 6.1831 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking view_upkeep/update_node/dynamic/16
+Benchmarking view_upkeep/update_node/dynamic/16: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/dynamic/16: Collecting 100 samples in estimated 5.0001 s (302M iterations)
+Benchmarking view_upkeep/update_node/dynamic/16: Analyzing
+view_upkeep/update_node/dynamic/16
+                        time:   [16.418 ns 16.449 ns 16.488 ns]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking view_upkeep/update_node/live/0
+Benchmarking view_upkeep/update_node/live/0: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/live/0: Collecting 100 samples in estimated 5.0000 s (2.0B iterations)
+Benchmarking view_upkeep/update_node/live/0: Analyzing
+view_upkeep/update_node/live/0
+                        time:   [2.4509 ns 2.4537 ns 2.4566 ns]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) low severe
+  3 (3.00%) low mild
+  3 (3.00%) high mild
+Benchmarking view_upkeep/update_node/live/1
+Benchmarking view_upkeep/update_node/live/1: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/live/1: Collecting 100 samples in estimated 5.0000 s (1.1B iterations)
+Benchmarking view_upkeep/update_node/live/1: Analyzing
+view_upkeep/update_node/live/1
+                        time:   [4.7629 ns 4.7723 ns 4.7813 ns]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+Benchmarking view_upkeep/update_node/live/4
+Benchmarking view_upkeep/update_node/live/4: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/live/4: Collecting 100 samples in estimated 5.0000 s (703M iterations)
+Benchmarking view_upkeep/update_node/live/4: Analyzing
+view_upkeep/update_node/live/4
+                        time:   [7.0389 ns 7.0504 ns 7.0617 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) low mild
+Benchmarking view_upkeep/update_node/live/16
+Benchmarking view_upkeep/update_node/live/16: Warming up for 3.0000 s
+Benchmarking view_upkeep/update_node/live/16: Collecting 100 samples in estimated 5.0001 s (281M iterations)
+Benchmarking view_upkeep/update_node/live/16: Analyzing
+view_upkeep/update_node/live/16
+                        time:   [17.745 ns 17.769 ns 17.792 ns]
+Found 8 outliers among 100 measurements (8.00%)
+  7 (7.00%) low mild
+  1 (1.00%) high mild
+

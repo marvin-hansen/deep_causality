@@ -23,12 +23,7 @@ where
             GraphState::Live(g) => g.add_node(node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }?;
-        let (state, views) = (&self.state, &mut self.views);
-        if let Some(payload) = state.get_node(index) {
-            for view in views {
-                view.on_add_node(payload);
-            }
-        }
+        self.views_add_node(index);
         Ok(index)
     }
 
@@ -76,17 +71,22 @@ where
     /// - Returns `GraphError::GraphIsFrozen` if the graph is in a `Static` state.
     /// - Returns an error if either node index is invalid or the edge already exists.
     fn add_edge(&mut self, a: usize, b: usize, weight: W) -> Result<(), GraphError> {
-        // The payload is cloned for the views only when there are any.
-        let for_views = (!self.views.is_empty()).then(|| weight.clone());
+        if self.views.is_empty() {
+            // The path every graph without a view takes: no clone of the payload.
+            return match &mut self.state {
+                GraphState::Dynamic(g) => g.add_edge(a, b, weight),
+                GraphState::Live(g) => g.add_edge(a, b, weight),
+                GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
+            };
+        }
+        let for_views = weight.clone();
         match &mut self.state {
             GraphState::Dynamic(g) => g.add_edge(a, b, weight),
             GraphState::Live(g) => g.add_edge(a, b, weight),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }?;
-        if let Some(weight) = for_views {
-            for view in &mut self.views {
-                view.on_add_edge(a, b, &weight);
-            }
+        for view in &mut self.views {
+            view.on_add_edge(a, b, &for_views);
         }
         Ok(())
     }
@@ -132,12 +132,7 @@ where
             GraphState::Live(g) => g.add_root_node(node),
             GraphState::Static(_) => Err(GraphError::GraphIsFrozen),
         }?;
-        let (state, views) = (&self.state, &mut self.views);
-        if let Some(payload) = state.get_node(index) {
-            for view in views {
-                view.on_add_node(payload);
-            }
-        }
+        self.views_add_node(index);
         Ok(index)
     }
 
@@ -153,5 +148,26 @@ where
             view.on_clear();
         }
         Ok(())
+    }
+}
+
+impl<N, W, P> UltraGraphContainer<N, W, P>
+where
+    N: Clone,
+    W: Clone + Default + EdgeKey,
+    P: Projection<N, W>,
+{
+    /// Tells every view about the node just added at `index`; nothing to do, and no read of the
+    /// node, when the graph maintains no view.
+    fn views_add_node(&mut self, index: usize) {
+        if self.views.is_empty() {
+            return;
+        }
+        let (state, views) = (&self.state, &mut self.views);
+        if let Some(payload) = state.get_node(index) {
+            for view in views {
+                view.on_add_node(payload);
+            }
+        }
     }
 }

@@ -121,11 +121,11 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 ## 7. Measurement and close-out
 
-- [ ] 7.1 Add the view-upkeep workload (0, 1, 4 and 16 maintained views) and run the full benchmark
+- [x] 7.1 Add the view-upkeep workload (0, 1, 4 and 16 maintained views) and run the full benchmark
       three times; aggregate and compare with the incumbent; explain every move beyond a row's spread
-- [ ] 7.2 Record the outcome of this change in `openspec/notes/ultragraph/RadixGraphUpdate.md`
+- [x] 7.2 Record the outcome of this change in `openspec/notes/ultragraph/RadixGraphUpdate.md`
       (§Design 4, 6, 7 and §Benchmark) as it was built
 - [ ] 7.3 Full workspace: `make format && make fix`, `make build`, `bazel test //...`,
       `make check_examples`
-- [ ] 7.4 Commit message for group 7, with the migration notes for external callers (`GraphState::Live`
+- [x] 7.4 Commit message for group 7, with the migration notes for external callers (`GraphState::Live`
       and the container's projection type parameter) in its body

@@ -7,6 +7,7 @@ use alloc::vec::Vec;
 
 use crate::types::storage::graph_csm::CsrAdjacency;
 use crate::types::storage::graph_live::Arena;
+use crate::types::storage::graph_live::row_entries::RowEntries;
 use crate::{EdgeKey, GraphState, ParallelEdges, Projection};
 
 /// What a graph stores for one maintained view: the projection and mode it was registered with,
@@ -85,11 +86,7 @@ where
         } else {
             (&[], &[])
         };
-        targets
-            .iter()
-            .zip(weights)
-            .filter(|(other, _)| self.passes(**other))
-            .map(|(other, weight)| (*other, weight))
+        RowEntries::new(targets, weights, |other| self.passes(other))
     }
 
     /// Inserts the passing edge `(a, b, weight)` into both rows, or replaces its payload. A row
