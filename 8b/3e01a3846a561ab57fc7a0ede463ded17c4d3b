@@ -1,0 +1,33 @@
+openspec/notes/ultragraph/PersistentStore.md
+  s_d338a9843489ef::t_ce2ee16bf189f2 422-429
+  s_d338a9843489ef::t_183ade9712f8c5 38-51
+  s_d338a9843489ef::t_2112c8c98dd8c7 587-590
+  s_d338a9843489ef::t_5bf06b60e4667f 759-760
+  s_d338a9843489ef::t_e9c6ce0632b7ba 412
+  s_d338a9843489ef::t_cced1a747bf7a3 1-37,53-411,413-421,430-457,459,461,465,475,484,487-493,507-531,533-542,544-561,563,571-572,574-575,582-586,591-608,612-657,662-720,722-758,761-778,782-874
+  s_d338a9843489ef::t_612296a233239b 458,460,462-464,466-474,476-483,485-486,494-506
+  s_d338a9843489ef::t_f51282585bf22c 532
+  s_d338a9843489ef::t_1eef1c5b216ed0 779-781
+  s_d338a9843489ef::t_24db52420f650d 562,564-570,573,576-581
+  s_d338a9843489ef::t_f7ce9e8df6b324 543
+  s_d338a9843489ef::t_7c6c706d30c059 609-611
+  s_d338a9843489ef::t_0927d2f573b872 52
+  s_d338a9843489ef::t_3a1feae725aa7a 658-661
+  s_d338a9843489ef::t_5ea52ec867cde5 721
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8b3e01a3846a561ab57fc7a0ede463ded17c4d3b",
+  "prompts": {},
+  "sessions": {
+    "s_d338a9843489ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac16543d-51d3-4eea-b3cf-3ac968f754c9",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
