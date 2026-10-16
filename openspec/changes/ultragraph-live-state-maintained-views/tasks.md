@@ -60,14 +60,14 @@ clean with no `allow`, and a commit message shown to the user; the user commits.
 
 ## 3. The edge-storage decision
 
-- [ ] 3.1 Sweep `MIN_LOG` and `HUB_DEGREE` for memory per edge and hub update time; fix each by the
+- [x] 3.1 Sweep `MIN_LOG` and `HUB_DEGREE` for memory per edge and hub update time; fix each by the
       1.25× memory gate of `ultragraph-edge-storage-benchmark`; three runs per candidate at its value;
       aggregate into `BenchAfterChange2LiveView/`
-- [ ] 3.2 Apply the rule of `ultragraph-edge-storage-benchmark`; record the outcome and its rows in
+- [x] 3.2 Apply the rule of `ultragraph-edge-storage-benchmark`; record the outcome and its rows in
       `openspec/notes/ultragraph/RadixGraphUpdate.md` §Benchmark
-- [ ] 3.3 Ask the user to approve removing the losing candidates; remove them and their features, and
+- [x] 3.3 Ask the user to approve removing the losing candidates; remove them and their features, and
       keep the trait only if it still serves the Live state
-- [ ] 3.4 Commit message for group 3
+- [x] 3.4 Commit message for group 3
 
 ## 4. The Live state, its transitions and freeze_clone
 

@@ -1,0 +1,303 @@
+rustc -V
+rustc 1.99.0 (b940084d7 2026-09-28)
+
+date
+Fri Oct 16 01:13:48 WITA 2026
+
+cargo bench -p ultragraph --features edge-log -- '^(keyed_|outbound_walk_dynamic|inbound_walk_dynamic|outbound_walk_shuffled_dynamic|inbound_walk_shuffled_dynamic|memory_per_edge)'
+   Compiling ultragraph v0.9.9 (<workspace>/ultragraph)
+    Finished `bench` profile [optimized] target(s) in 16.02s
+     Running unittests src/lib.rs (target/release/deps/ultragraph-a11f444b10b0fd20)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches/bench_main.rs (target/release/deps/bench_main-940bf4a53337c387)
+Benchmarking keyed_update_low/10
+Benchmarking keyed_update_low/10: Warming up for 3.0000 s
+Benchmarking keyed_update_low/10: Collecting 100 samples in estimated 5.0000 s (461M iterations)
+Benchmarking keyed_update_low/10: Analyzing
+keyed_update_low/10     time:   [10.772 ns 10.787 ns 10.802 ns]
+                        change: [+306.51% +308.20% +309.73%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking keyed_update_low/100
+Benchmarking keyed_update_low/100: Warming up for 3.0000 s
+Benchmarking keyed_update_low/100: Collecting 100 samples in estimated 5.0000 s (465M iterations)
+Benchmarking keyed_update_low/100: Analyzing
+keyed_update_low/100    time:   [10.418 ns 10.430 ns 10.445 ns]
+                        change: [+301.68% +303.62% +305.38%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking keyed_update_low/1000
+Benchmarking keyed_update_low/1000: Warming up for 3.0000 s
+Benchmarking keyed_update_low/1000: Collecting 100 samples in estimated 5.0000 s (473M iterations)
+Benchmarking keyed_update_low/1000: Analyzing
+keyed_update_low/1000   time:   [10.578 ns 10.587 ns 10.596 ns]
+                        change: [+290.68% +291.68% +292.65%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low severe
+  1 (1.00%) high mild
+
+Benchmarking keyed_update_hub/100000
+Benchmarking keyed_update_hub/100000: Warming up for 3.0000 s
+Benchmarking keyed_update_hub/100000: Collecting 100 samples in estimated 5.0002 s (15M iterations)
+Benchmarking keyed_update_hub/100000: Analyzing
+keyed_update_hub/100000 time:   [338.89 ns 340.93 ns 342.94 ns]
+                        change: [−97.971% −97.938% −97.900%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 15 outliers among 100 measurements (15.00%)
+  10 (10.00%) low mild
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking keyed_remove_low/10
+Benchmarking keyed_remove_low/10: Warming up for 3.0000 s
+Benchmarking keyed_remove_low/10: Collecting 100 samples in estimated 5.0014 s (8.4M iterations)
+Benchmarking keyed_remove_low/10: Analyzing
+keyed_remove_low/10     time:   [10.320 ns 10.472 ns 10.590 ns]
+                        change: [+39.180% +45.521% +52.225%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking keyed_remove_low/100
+Benchmarking keyed_remove_low/100: Warming up for 3.0000 s
+Benchmarking keyed_remove_low/100: Collecting 100 samples in estimated 5.0095 s (975k iterations)
+Benchmarking keyed_remove_low/100: Analyzing
+keyed_remove_low/100    time:   [11.185 ns 11.320 ns 11.443 ns]
+                        change: [+42.023% +57.432% +75.207%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) high mild
+  5 (5.00%) high severe
+Benchmarking keyed_remove_low/1000
+Benchmarking keyed_remove_low/1000: Warming up for 3.0000 s
+Benchmarking keyed_remove_low/1000: Collecting 100 samples in estimated 5.1095 s (106k iterations)
+Benchmarking keyed_remove_low/1000: Analyzing
+keyed_remove_low/1000   time:   [20.193 ns 20.951 ns 21.902 ns]
+                        change: [+51.967% +64.799% +77.557%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+Benchmarking keyed_remove_hub/100000
+Benchmarking keyed_remove_hub/100000: Warming up for 3.0000 s
+Benchmarking keyed_remove_hub/100000: Collecting 20 samples in estimated 5.0874 s (8820 iterations)
+Benchmarking keyed_remove_hub/100000: Analyzing
+keyed_remove_hub/100000 time:   [13.207 µs 15.078 µs 16.139 µs]
+                        change: [−64.179% −58.907% −52.622%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+Benchmarking outbound_walk_dynamic/10
+Benchmarking outbound_walk_dynamic/10: Warming up for 3.0000 s
+Benchmarking outbound_walk_dynamic/10: Collecting 100 samples in estimated 5.0008 s (11M iterations)
+Benchmarking outbound_walk_dynamic/10: Analyzing
+outbound_walk_dynamic/10
+                        time:   [437.71 ns 438.49 ns 439.30 ns]
+                        thrpt:  [22.763 Melem/s 22.805 Melem/s 22.846 Melem/s]
+                 change:
+                        time:   [+2828.1% +2838.6% +2848.1%] (p = 0.00 < 0.05)
+                        thrpt:  [−96.608% −96.597% −96.585%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking outbound_walk_dynamic/100
+Benchmarking outbound_walk_dynamic/100: Warming up for 3.0000 s
+Benchmarking outbound_walk_dynamic/100: Collecting 100 samples in estimated 5.0177 s (1.2M iterations)
+Benchmarking outbound_walk_dynamic/100: Analyzing
+outbound_walk_dynamic/100
+                        time:   [4.2842 µs 4.3032 µs 4.3225 µs]
+                        thrpt:  [23.135 Melem/s 23.238 Melem/s 23.341 Melem/s]
+                 change:
+                        time:   [+1327.6% +1335.6% +1343.5%] (p = 0.00 < 0.05)
+                        thrpt:  [−93.073% −93.034% −92.995%]
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking outbound_walk_dynamic/1000
+Benchmarking outbound_walk_dynamic/1000: Warming up for 3.0000 s
+Benchmarking outbound_walk_dynamic/1000: Collecting 100 samples in estimated 5.1467 s (121k iterations)
+Benchmarking outbound_walk_dynamic/1000: Analyzing
+outbound_walk_dynamic/1000
+                        time:   [42.473 µs 42.670 µs 42.913 µs]
+                        thrpt:  [23.303 Melem/s 23.436 Melem/s 23.544 Melem/s]
+                 change:
+                        time:   [+6609.7% +6635.4% +6662.4%] (p = 0.00 < 0.05)
+                        thrpt:  [−98.521% −98.515% −98.510%]
+                        Performance has regressed.
+Found 10 outliers among 100 measurements (10.00%)
+  9 (9.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking inbound_walk_dynamic/10
+Benchmarking inbound_walk_dynamic/10: Warming up for 3.0000 s
+Benchmarking inbound_walk_dynamic/10: Collecting 100 samples in estimated 5.0010 s (12M iterations)
+Benchmarking inbound_walk_dynamic/10: Analyzing
+inbound_walk_dynamic/10 time:   [403.75 ns 404.89 ns 406.27 ns]
+                        thrpt:  [24.614 Melem/s 24.698 Melem/s 24.768 Melem/s]
+                 change:
+                        time:   [+2639.4% +2651.6% +2662.3%] (p = 0.00 < 0.05)
+                        thrpt:  [−96.380% −96.366% −96.350%]
+                        Performance has regressed.
+Benchmarking inbound_walk_dynamic/100
+Benchmarking inbound_walk_dynamic/100: Warming up for 3.0000 s
+Benchmarking inbound_walk_dynamic/100: Collecting 100 samples in estimated 5.0091 s (1.2M iterations)
+Benchmarking inbound_walk_dynamic/100: Analyzing
+inbound_walk_dynamic/100
+                        time:   [4.0499 µs 4.0543 µs 4.0586 µs]
+                        thrpt:  [24.639 Melem/s 24.665 Melem/s 24.692 Melem/s]
+                 change:
+                        time:   [+1576.6% +1602.0% +1627.1%] (p = 0.00 < 0.05)
+                        thrpt:  [−94.210% −94.124% −94.036%]
+                        Performance has regressed.
+Found 10 outliers among 100 measurements (10.00%)
+  3 (3.00%) low mild
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+Benchmarking inbound_walk_dynamic/1000
+Benchmarking inbound_walk_dynamic/1000: Warming up for 3.0000 s
+Benchmarking inbound_walk_dynamic/1000: Collecting 100 samples in estimated 5.1241 s (126k iterations)
+Benchmarking inbound_walk_dynamic/1000: Analyzing
+inbound_walk_dynamic/1000
+                        time:   [40.359 µs 40.433 µs 40.502 µs]
+                        thrpt:  [24.690 Melem/s 24.733 Melem/s 24.778 Melem/s]
+                 change:
+                        time:   [+6256.9% +6272.7% +6288.6%] (p = 0.00 < 0.05)
+                        thrpt:  [−98.435% −98.431% −98.427%]
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+
+Benchmarking outbound_walk_shuffled_dynamic/10
+Benchmarking outbound_walk_shuffled_dynamic/10: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled_dynamic/10: Collecting 100 samples in estimated 5.0020 s (11M iterations)
+Benchmarking outbound_walk_shuffled_dynamic/10: Analyzing
+outbound_walk_shuffled_dynamic/10
+                        time:   [437.24 ns 437.87 ns 438.50 ns]
+                        thrpt:  [22.805 Melem/s 22.838 Melem/s 22.871 Melem/s]
+                 change:
+                        time:   [+2840.2% +2851.9% +2867.1%] (p = 0.00 < 0.05)
+                        thrpt:  [−96.630% −96.612% −96.599%]
+                        Performance has regressed.
+Found 11 outliers among 100 measurements (11.00%)
+  4 (4.00%) low mild
+  6 (6.00%) high mild
+  1 (1.00%) high severe
+Benchmarking outbound_walk_shuffled_dynamic/100
+Benchmarking outbound_walk_shuffled_dynamic/100: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled_dynamic/100: Collecting 100 samples in estimated 5.0181 s (1.2M iterations)
+Benchmarking outbound_walk_shuffled_dynamic/100: Analyzing
+outbound_walk_shuffled_dynamic/100
+                        time:   [4.2700 µs 4.2765 µs 4.2827 µs]
+                        thrpt:  [23.350 Melem/s 23.384 Melem/s 23.419 Melem/s]
+                 change:
+                        time:   [+1332.1% +1358.6% +1389.1%] (p = 0.00 < 0.05)
+                        thrpt:  [−93.285% −93.144% −93.017%]
+                        Performance has regressed.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking outbound_walk_shuffled_dynamic/1000
+Benchmarking outbound_walk_shuffled_dynamic/1000: Warming up for 3.0000 s
+Benchmarking outbound_walk_shuffled_dynamic/1000: Collecting 100 samples in estimated 5.1584 s (121k iterations)
+Benchmarking outbound_walk_shuffled_dynamic/1000: Analyzing
+outbound_walk_shuffled_dynamic/1000
+                        time:   [42.449 µs 42.514 µs 42.577 µs]
+                        thrpt:  [23.487 Melem/s 23.522 Melem/s 23.558 Melem/s]
+                 change:
+                        time:   [+2200.8% +2215.0% +2229.1%] (p = 0.00 < 0.05)
+                        thrpt:  [−95.707% −95.680% −95.654%]
+                        Performance has regressed.
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) low mild
+  4 (4.00%) high mild
+
+Benchmarking inbound_walk_shuffled_dynamic/10
+Benchmarking inbound_walk_shuffled_dynamic/10: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled_dynamic/10: Collecting 100 samples in estimated 5.0001 s (12M iterations)
+Benchmarking inbound_walk_shuffled_dynamic/10: Analyzing
+inbound_walk_shuffled_dynamic/10
+                        time:   [413.92 ns 414.50 ns 415.11 ns]
+                        thrpt:  [24.090 Melem/s 24.126 Melem/s 24.159 Melem/s]
+                 change:
+                        time:   [+2668.8% +2675.9% +2683.0%] (p = 0.00 < 0.05)
+                        thrpt:  [−96.407% −96.398% −96.388%]
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking inbound_walk_shuffled_dynamic/100
+Benchmarking inbound_walk_shuffled_dynamic/100: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled_dynamic/100: Collecting 100 samples in estimated 5.0130 s (1.2M iterations)
+Benchmarking inbound_walk_shuffled_dynamic/100: Analyzing
+inbound_walk_shuffled_dynamic/100
+                        time:   [4.0525 µs 4.0604 µs 4.0684 µs]
+                        thrpt:  [24.580 Melem/s 24.628 Melem/s 24.676 Melem/s]
+                 change:
+                        time:   [+1379.0% +1405.4% +1432.7%] (p = 0.00 < 0.05)
+                        thrpt:  [−93.475% −93.357% −93.239%]
+                        Performance has regressed.
+Found 11 outliers among 100 measurements (11.00%)
+  6 (6.00%) low mild
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking inbound_walk_shuffled_dynamic/1000
+Benchmarking inbound_walk_shuffled_dynamic/1000: Warming up for 3.0000 s
+Benchmarking inbound_walk_shuffled_dynamic/1000: Collecting 100 samples in estimated 5.1034 s (126k iterations)
+Benchmarking inbound_walk_shuffled_dynamic/1000: Analyzing
+inbound_walk_shuffled_dynamic/1000
+                        time:   [40.510 µs 40.635 µs 40.780 µs]
+                        thrpt:  [24.522 Melem/s 24.609 Melem/s 24.686 Melem/s]
+                 change:
+                        time:   [+2095.1% +2106.0% +2116.4%] (p = 0.00 < 0.05)
+                        thrpt:  [−95.488% −95.467% −95.444%]
+                        Performance has regressed.
+Found 18 outliers among 100 measurements (18.00%)
+  10 (10.00%) low mild
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+
+memory_per_edge/hub_built: 6497264 bytes over 100000 edges = 64.973 bytes per edge
+Benchmarking memory_per_edge/hub_built
+Benchmarking memory_per_edge/hub_built: Warming up for 3.0000 s
+Benchmarking memory_per_edge/hub_built: Collecting 10 samples in estimated 5.0010 s (204k iterations)
+Benchmarking memory_per_edge/hub_built: Analyzing
+memory_per_edge/hub_built
+                        time:   [24.436 µs 24.556 µs 24.716 µs]
+                        change: [+128.65% +130.69% +132.24%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+memory_per_edge/hub_updated: 6497264 bytes over 100000 edges = 64.973 bytes per edge
+Benchmarking memory_per_edge/hub_updated
+Benchmarking memory_per_edge/hub_updated: Warming up for 3.0000 s
+Benchmarking memory_per_edge/hub_updated: Collecting 10 samples in estimated 5.0004 s (203k iterations)
+Benchmarking memory_per_edge/hub_updated: Analyzing
+memory_per_edge/hub_updated
+                        time:   [24.443 µs 24.500 µs 24.552 µs]
+                        change: [+129.96% +130.62% +131.22%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+memory_per_edge/chain_1000_built: 240112 bytes over 1000 edges = 240.112 bytes per edge
+Benchmarking memory_per_edge/chain_1000_built
+Benchmarking memory_per_edge/chain_1000_built: Warming up for 3.0000 s
+Benchmarking memory_per_edge/chain_1000_built: Collecting 10 samples in estimated 5.0000 s (8.7M iterations)
+Benchmarking memory_per_edge/chain_1000_built: Analyzing
+memory_per_edge/chain_1000_built
+                        time:   [559.99 ns 562.30 ns 565.67 ns]
+                        change: [+152.50% +154.64% +156.54%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+memory_per_edge/chain_1000_updated: 241392 bytes over 1000 edges = 241.392 bytes per edge
+Benchmarking memory_per_edge/chain_1000_updated
+Benchmarking memory_per_edge/chain_1000_updated: Warming up for 3.0000 s
+Benchmarking memory_per_edge/chain_1000_updated: Collecting 10 samples in estimated 5.0000 s (7.9M iterations)
+Benchmarking memory_per_edge/chain_1000_updated: Analyzing
+memory_per_edge/chain_1000_updated
+                        time:   [787.51 ns 789.87 ns 792.54 ns]
+                        change: [+253.82% +256.07% +258.25%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+

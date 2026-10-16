@@ -5,7 +5,6 @@
 
 use alloc::vec::Vec;
 
-use crate::types::storage::edge_list::EdgeList;
 use crate::{DynamicGraph, EdgeKey, GraphView};
 
 impl<N, W> GraphView<N, W> for DynamicGraph<N, W>
@@ -51,14 +50,16 @@ where
     fn contains_edge(&self, a: usize, b: usize) -> bool {
         self.edges
             .get(a)
-            .is_some_and(|edge_list| edge_list.contains(b))
+            .is_some_and(|edge_list| edge_list.iter().any(|(target, _)| *target == b))
     }
 
     /// Checks if the edge from `a` to `b` with key `key` exists.
     fn contains_edge_keyed(&self, a: usize, b: usize, key: W::Key) -> bool {
-        self.edges
-            .get(a)
-            .is_some_and(|edge_list| edge_list.contains_keyed(b, key))
+        self.edges.get(a).is_some_and(|edge_list| {
+            edge_list
+                .iter()
+                .any(|(target, weight)| *target == b && weight.edge_key() == key)
+        })
     }
 
     /// Returns the number of edges between live nodes, kept as a count so this is O(1).
@@ -78,7 +79,12 @@ where
         if !self.contains_node(source) {
             return None;
         }
-        Some(self.edges[source].entries().collect())
+        Some(
+            self.edges[source]
+                .iter()
+                .map(|(target, weight)| (*target, weight))
+                .collect(),
+        )
     }
 
     fn get_last_index(&self) -> Option<usize> {

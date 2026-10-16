@@ -123,3 +123,108 @@ the row the decision rule reads, is within 1 %. `outbound_walk_dynamic` at 100 m
 at the edge of its tolerance, with the 1,000-node rows unchanged; the shuffled walks at 1,000
 nodes read 1.8 and 2.2 µs where group 1 read 3.4 µs medians, inside their 50 % spreads, which
 is the instability group 1 recorded.
+
+### Group 3: the edge-storage decision
+
+#### The memory gate
+
+Memory per edge of each challenger across its parameter, one run per value of the
+`memory_per_edge` group under the challenger's feature (the sweep edits the constant, builds and
+runs; deterministic, so one run), on 2026-10-16. The incumbent reads 48.972 bytes per edge on
+the hub and 176.048 on the chain of 1,000, built and after the updates, so the 1.25× gate is
+**61.2** on the hub and **220.1** on the chain.
+
+| Candidate | Parameter | Hub, built | Hub, updated | Chain of 1,000, built | Chain, updated |
+|---|---:|---:|---:|---:|---:|
+| snapshot-log arrays | `MIN_LOG` = 4 | 80.973 | 80.973 | 240.112 | 241.568 |
+| snapshot-log arrays | 8, 16, 32, 64, 128, 1,024 | 64.973 | 64.973 | 240.112 | 241.392 |
+| indexed lists | `HUB_DEGREE` = 8, 16, 32, 64, 128, 256, 1,024, 8,192 | 96.336 | 96.336 | 240.112 | 240.112 |
+
+The parameter moves nothing the gate reads. The hub's 100,000 entries sit in one list, so its
+log compacts at the snapshot's length once that exceeds `MIN_LOG`, and its index exists at every
+`HUB_DEGREE` below the degree; at `MIN_LOG` = 4 the leaves' four-entry backward logs compact into a
+snapshot beside a kept log, 16 bytes more per leaf. The chain's figure is the list header: both
+challengers carry 56 bytes per node and direction (two `Vec`s and a count; a `Vec` and an
+`Option<BTreeMap>`) against the `Vec` list's 24, which is 64,064 bytes over the chain's 1,000
+edges, the whole of its rise from 176.048 to 240.112. On the hub the snapshot-log array adds the
+same header cost, 1,600,064 bytes, to a snapshot of the incumbent's size; the index adds its two
+map levels, 3,136,368 bytes, on top.
+
+**Neither challenger has a value at or under the gate in every measured configuration, so by the
+rule of `ultragraph-edge-storage-benchmark` both are out and the `Vec` lists stay.**
+
+#### The challengers' timings
+
+Measured at the defaults, `MIN_LOG` = 16 and `HUB_DEGREE` = 64, for the record: the gate had
+already excluded both, so these rows decide nothing. The snapshot-log arrays ran three times
+(`Group3-SnapshotLogRun-1.txt` to `-3.txt`); the runs were hours apart on 2026-10-16 and the
+second and third read 1.4 to 1.6 times the first on every row, so every spread exceeds 15 % and
+the table gives medians. The indexed lists ran once (`Group3-IndexedRun-1.txt`), in the same
+later machine state; the two further runs were stopped once the decision stood.
+
+Snapshot-log arrays, three runs:
+
+| Benchmark | n | Run 1 | Run 2 | Run 3 | Mean | Spread | Per element |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `keyed_update_low` | 10 | 10.79 ns | 17.24 ns | 15.23 ns | 15.23 ns (median) | 44.8 % |  |
+| `keyed_update_low` | 100 | 10.43 ns | 15.72 ns | 15.19 ns | 15.19 ns (median) | 38.4 % |  |
+| `keyed_update_low` | 1,000 | 10.59 ns | 15.68 ns | 15.39 ns | 15.39 ns (median) | 36.6 % |  |
+| `keyed_update_hub` | 100,000 | 340.93 ns | 481.67 ns | 493.88 ns | 481.67 ns (median) | 34.9 % |  |
+| `keyed_remove_low` | 10 | 10.47 ns | 13.52 ns | 13.94 ns | 13.52 ns (median) | 27.4 % |  |
+| `keyed_remove_low` | 100 | 11.32 ns | 15.14 ns | 16.29 ns | 15.14 ns (median) | 34.9 % |  |
+| `keyed_remove_low` | 1,000 | 20.95 ns | 33.80 ns | 35.28 ns | 33.80 ns (median) | 47.7 % |  |
+| `keyed_remove_hub` | 100,000 | 15.08 µs | 22.49 µs | 12.59 µs | 15.08 µs (median) | 59.2 % |  |
+| `outbound_walk_dynamic` | 10 | 438.49 ns | 603.74 ns | 609.54 ns | 603.74 ns (median) | 31.1 % | 60.37 ns |
+| `outbound_walk_dynamic` | 100 | 4.30 µs | 6.01 µs | 5.77 µs | 5.77 µs (median) | 31.9 % | 57.75 ns |
+| `outbound_walk_dynamic` | 1,000 | 42.67 µs | 59.32 µs | 58.01 µs | 58.01 µs (median) | 31.2 % | 58.01 ns |
+| `inbound_walk_dynamic` | 10 | 404.89 ns | 571.41 ns | 577.22 ns | 571.41 ns (median) | 33.3 % | 57.14 ns |
+| `inbound_walk_dynamic` | 100 | 4.05 µs | 5.69 µs | 5.54 µs | 5.54 µs (median) | 32.1 % | 55.45 ns |
+| `inbound_walk_dynamic` | 1,000 | 40.43 µs | 56.00 µs | 57.56 µs | 56.00 µs (median) | 33.4 % | 56.00 ns |
+| `outbound_walk_shuffled_dynamic` | 10 | 437.87 ns | 607.72 ns | 609.94 ns | 607.72 ns (median) | 31.2 % | 60.77 ns |
+| `outbound_walk_shuffled_dynamic` | 100 | 4.28 µs | 5.93 µs | 5.84 µs | 5.84 µs (median) | 30.9 % | 58.40 ns |
+| `outbound_walk_shuffled_dynamic` | 1,000 | 42.51 µs | 57.68 µs | 58.80 µs | 57.68 µs (median) | 30.7 % | 57.68 ns |
+| `inbound_walk_shuffled_dynamic` | 10 | 414.50 ns | 599.30 ns | 585.48 ns | 585.48 ns (median) | 34.7 % | 58.55 ns |
+| `inbound_walk_shuffled_dynamic` | 100 | 4.06 µs | 5.85 µs | 5.75 µs | 5.75 µs (median) | 34.3 % | 57.54 ns |
+| `inbound_walk_shuffled_dynamic` | 1,000 | 40.63 µs | 56.91 µs | 58.53 µs | 56.91 µs (median) | 34.4 % | 56.91 ns |
+
+Indexed lists, one run, beside the incumbent of group 2:
+
+| `keyed_update_low` | 10 | 4.35 ns | 2.60 ns | 1.67× |
+| `keyed_update_low` | 100 | 4.35 ns | 2.59 ns | 1.68× |
+| `keyed_update_low` | 1,000 | 4.95 ns | 2.73 ns | 1.81× |
+| `keyed_update_hub` | 100,000 | 31.75 ns | 16.36 µs | 0.00× |
+| `keyed_remove_low` | 10 | 15.06 ns | 7.36 ns | 2.05× |
+| `keyed_remove_low` | 100 | 16.59 ns | 7.30 ns | 2.27× |
+| `keyed_remove_low` | 1,000 | 27.96 ns | 13.89 ns | 2.01× |
+| `keyed_remove_hub` | 100,000 | 502.79 ns | 29.87 µs | 0.02× |
+| `outbound_walk_dynamic` | 10 | 20.42 ns | 14.78 ns | 1.38× |
+| `outbound_walk_dynamic` | 100 | 277.80 ns | 298.10 ns | 0.93× |
+| `outbound_walk_dynamic` | 1,000 | 4.37 µs | 623.51 ns | 7.01× |
+| `inbound_walk_dynamic` | 10 | 20.99 ns | 14.67 ns | 1.43× |
+| `inbound_walk_dynamic` | 100 | 291.13 ns | 239.29 ns | 1.22× |
+| `inbound_walk_dynamic` | 1,000 | 3.70 µs | 629.18 ns | 5.89× |
+| `outbound_walk_shuffled_dynamic` | 10 | 20.68 ns | 14.85 ns | 1.39× |
+| `outbound_walk_shuffled_dynamic` | 100 | 441.19 ns | 305.12 ns | 1.45× |
+| `outbound_walk_shuffled_dynamic` | 1,000 | 5.95 µs | 1.76 µs | 3.38× |
+| `inbound_walk_shuffled_dynamic` | 10 | 20.61 ns | 14.77 ns | 1.40× |
+| `inbound_walk_shuffled_dynamic` | 100 | 442.84 ns | 270.43 ns | 1.64× |
+| `inbound_walk_shuffled_dynamic` | 1,000 | 6.03 µs | 2.22 µs | 2.71× |
+
+**Against the rule, had the gate passed.** On the hub rows both challengers are clearly faster
+than the incumbent's 16.36 µs update and 29.87 µs removal: the snapshot-log arrays at 0.48 µs
+and 15.1 µs (medians), the indexed lists at 32 ns and 0.50 µs. Neither matches the incumbent on
+traversal: the snapshot-log arrays walk at 56 to 61 ns per step against the incumbent's 0.6 to
+3.1 ns, because a read with a non-empty log resolves the log into a list on every call, two sets
+and a vector per node visited; the indexed lists read 1.4 to 7 times the incumbent's walk rows
+in a run whose machine state also carried the log arrays' later runs 1.5 times above their first,
+so that factor is not separable from one run. The snapshot-log arrays also read 4 to 6 times the
+incumbent on every low-degree row, the lookup through a log before each write. The traversal rows
+alone would have taken the snapshot-log arrays out under the rule; the indexed lists' hub rows
+are the one result the gate left on the table.
+
+**Decision (task 3.2).** The `Vec` lists stay. Both challengers, the storage trait they shared and
+the features `edge-log` and `edge-index` were removed from `ultragraph` with Marvin's approval
+(task 3.3); the dynamic graph is the code of group 1 again, and the five tests that pinned the
+log's trigger left with it. The contract tests written for the candidates stay as the keyed-edge
+contract of the dynamic state (`tests/types/storage/graph_dynamic/graph_mut_tests.rs`), and the
+accounting tests keep the `Vec` list's literals.

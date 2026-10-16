@@ -651,33 +651,18 @@ fn test_remove_node_with_many_keyed_edges_to_one_neighbour() {
 
 /// `with_capacity(_, Some(k))` reserves `k` entries for each node's edge list as the node is
 /// added; `new` reserves none. The reservation is observable through the edge-storage
-/// accounting: two nodes reserved for 8 `()` entries each way hold 4 lists × 8 entries beyond
-/// the four list headers, where the unreserved lists of `new` hold the headers alone (the two
-/// outer vectors grown by two pushes to capacity 4).
+/// accounting: two nodes reserved for 8 `()` entries each way hold four 24-byte list headers
+/// and 4 lists × 8 entries × 8 bytes, 96 + 256; the unreserved lists of `new` hold the headers
+/// alone, the two outer vectors grown by two pushes to capacity 4: 2 × 4 × 24.
 #[test]
 fn test_with_capacity_reserves_each_edge_list() {
     let mut g: UltraGraph<u8> = UltraGraph::with_capacity(2, Some(8));
     g.add_node(0).unwrap();
     g.add_node(1).unwrap();
-    let header = header_bytes();
-    assert_eq!(edge_storage_bytes(&g), 4 * header + 4 * 8 * entry_bytes());
+    assert_eq!(edge_storage_bytes(&g), 352);
 
     let mut g: UltraGraph<u8> = UltraGraph::new();
     g.add_node(0).unwrap();
     g.add_node(1).unwrap();
-    assert_eq!(edge_storage_bytes(&g), 2 * 4 * header);
-}
-
-/// The bytes one list header costs the build's candidate, 24 for the `Vec` list and 56 for the
-/// snapshot-log array: a graph reserved for one node and no edge holds two headers.
-fn header_bytes() -> usize {
-    edge_storage_bytes(&UltraGraph::<u8>::with_capacity(1, None)) / 2
-}
-
-/// The bytes one reserved `()` entry costs the build's candidate: 8 for the `Vec` list's
-/// `(usize, ())`, 16 for a snapshot-log entry; measured on a one-node graph reserved for one.
-fn entry_bytes() -> usize {
-    let mut g: UltraGraph<u8> = UltraGraph::with_capacity(1, Some(1));
-    g.add_node(0).unwrap();
-    (edge_storage_bytes(&g) - 2 * header_bytes()) / 2
+    assert_eq!(edge_storage_bytes(&g), 192);
 }

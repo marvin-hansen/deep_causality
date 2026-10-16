@@ -3,7 +3,6 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
-use crate::types::storage::edge_list::EdgeList;
 use crate::{DynamicGraph, EdgeKey, GraphError, GraphTraversal, GraphView};
 
 impl<N, W> GraphTraversal<N, W> for DynamicGraph<N, W>
@@ -19,7 +18,7 @@ where
         if !self.contains_node(a) {
             return Err(GraphError::NodeNotFound(a));
         }
-        Ok(self.edges[a].entries().map(|(target, _)| target))
+        Ok(self.edges[a].iter().map(|(target, _)| *target))
     }
 
     /// The sources of the node's incoming edges, one per edge. The order is not specified:
@@ -31,6 +30,6 @@ where
         if !self.contains_node(a) {
             return Err(GraphError::NodeNotFound(a));
         }
-        Ok(self.backward[a].entries().map(|(source, _)| source))
+        Ok(self.backward[a].iter().map(|(source, _)| *source))
     }
 }

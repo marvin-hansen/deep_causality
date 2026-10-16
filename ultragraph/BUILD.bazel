@@ -139,7 +139,7 @@ rust_test_suite(
 rust_test_suite(
     name = "storage_tests",
     srcs = glob([
-        "tests/types/storage/edge_list/*_tests.rs",
+        "tests/types/storage/graph_dynamic/*_tests.rs",
     ]),
     tags = [
         "ultragraph",

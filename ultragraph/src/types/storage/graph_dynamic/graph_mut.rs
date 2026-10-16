@@ -5,7 +5,6 @@
 
 use alloc::vec::Vec;
 
-use crate::types::storage::edge_list::{Backward, EdgeList, Forward};
 use crate::{DynamicGraph, EdgeKey, GraphError, GraphMut, GraphView};
 
 impl<N, W> GraphMut<N, W> for DynamicGraph<N, W>
@@ -23,13 +22,12 @@ where
 
         match self.num_edges_per_node {
             Some(edge_capacity) => {
-                self.edges.push(Forward::with_capacity(edge_capacity));
-                self.backward
-                    .push(Backward::<W>::with_capacity(edge_capacity));
+                self.edges.push(Vec::with_capacity(edge_capacity));
+                self.backward.push(Vec::with_capacity(edge_capacity));
             }
             None => {
-                self.edges.push(Forward::default());
-                self.backward.push(Backward::<W>::default());
+                self.edges.push(Vec::default());
+                self.backward.push(Vec::default());
             }
         }
 
@@ -72,8 +70,8 @@ where
         // their sources' forward lists. A self-loop sits in both lists of the node and is one edge,
         // counted once with the outgoing edges. Each neighbour's list is scanned once, however
         // many keyed edges join it to the node.
-        let outgoing = core::mem::take(&mut self.edges[index]).into_entries();
-        let incoming = core::mem::take(&mut self.backward[index]).into_entries();
+        let outgoing = core::mem::take(&mut self.edges[index]);
+        let incoming = core::mem::take(&mut self.backward[index]);
         let removed = outgoing.len()
             + incoming
                 .iter()
@@ -84,14 +82,14 @@ where
         targets.sort_unstable();
         targets.dedup();
         for target in targets {
-            self.backward[target].remove_all(index);
+            self.backward[target].retain(|(source, _)| *source != index);
         }
 
         let mut sources: Vec<usize> = incoming.into_iter().map(|(source, _)| source).collect();
         sources.sort_unstable();
         sources.dedup();
         for source in sources {
-            self.edges[source].remove_all(index);
+            self.edges[source].retain(|(target, _)| *target != index);
         }
         self.live_edges -= removed;
 
@@ -114,12 +112,20 @@ where
             });
         }
 
-        // A replacement leaves the backward entry as it is: it holds the source and the key,
-        // and the key is unchanged.
         let key = weight.edge_key();
-        if self.edges[a].put(b, weight) {
-            self.backward[b].put(a, key);
-            self.live_edges += 1;
+        let existing = self.edges[a]
+            .iter()
+            .position(|(target, w)| *target == b && w.edge_key() == key);
+        match existing {
+            Some(position) => {
+                // The backward entry holds the source and the key, and the key is unchanged.
+                self.edges[a][position].1 = weight;
+            }
+            None => {
+                self.edges[a].push((b, weight));
+                self.backward[b].push((a, key));
+                self.live_edges += 1;
+            }
         }
         Ok(())
     }
@@ -134,14 +140,16 @@ where
             return Err(GraphError::NodeNotFound(a));
         }
 
-        let removed = self.edges[a].remove_all(b);
+        let before = self.edges[a].len();
+        self.edges[a].retain(|(target, _)| *target != b);
+        let removed = before - self.edges[a].len();
         if removed == 0 {
             return Err(GraphError::EdgeNotFoundError {
                 source: a,
                 target: b,
             });
         }
-        self.backward[b].remove_all(a);
+        self.backward[b].retain(|(source, _)| *source != a);
         self.live_edges -= removed;
         Ok(())
     }
@@ -156,13 +164,17 @@ where
             return Err(GraphError::NodeNotFound(a));
         }
 
-        if !self.edges[a].remove_keyed(b, key) {
+        let position = self.edges[a]
+            .iter()
+            .position(|(target, w)| *target == b && w.edge_key() == key);
+        let Some(position) = position else {
             return Err(GraphError::EdgeNotFoundError {
                 source: a,
                 target: b,
             });
-        }
-        self.backward[b].remove_keyed(a, key);
+        };
+        self.edges[a].remove(position);
+        self.backward[b].retain(|(source, k)| !(*source == a && *k == key));
         self.live_edges -= 1;
         Ok(())
     }

@@ -5,7 +5,6 @@
 use crate::EdgeKey;
 
 use crate::DynamicGraph;
-use crate::types::storage::edge_list::EdgeList;
 use crate::types::storage::graph_dynamic::DynamicGraphParts;
 
 impl<N, W> DynamicGraph<N, W>
@@ -37,10 +36,6 @@ where
     /// The node table, the forward adjacency lists and the root; the backward lists are not
     /// part of it, `from_parts` derives them.
     pub fn to_parts(self) -> DynamicGraphParts<N, W> {
-        (
-            self.nodes,
-            self.edges.into_iter().map(EdgeList::into_entries).collect(),
-            self.root_index,
-        )
+        (self.nodes, self.edges, self.root_index)
     }
 }

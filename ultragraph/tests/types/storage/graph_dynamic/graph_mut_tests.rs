@@ -3,24 +3,16 @@
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
 
-//! The contract every edge-storage candidate of `ultragraph-live-state-maintained-views` meets,
-//! exercised through the graph's public API: the edges of a node are a map from `(target, key)`
-//! to the payload, and every operation reads and writes that map. The independent source is a
-//! `BTreeMap` model kept beside the graph and compared after every step.
-//!
-//! The snapshot-log candidate compacts a node's log once it holds `max(snapshot.len(), MIN_LOG)`
-//! entries, `MIN_LOG` being 16; the tests below drive a node to one entry below, at and above
-//! that trigger, with a snapshot shorter and longer than `MIN_LOG`, through `freeze` and
-//! `unfreeze`, which rebuild every list as a snapshot with an empty log. The `Vec` lists have
-//! no trigger and pass the same tests.
+//! The keyed-edge contract of the dynamic state, exercised through the graph's public API: the
+//! edges of a node are a map from `(target, key)` to the payload, and every operation reads and
+//! writes that map. The independent source is a `BTreeMap` model kept beside the graph and
+//! compared after every step; the drives include `freeze`/`unfreeze` round trips and
+//! `compact_ids`, which rebuild every list from its entries.
 
 use deep_causality_rand::{Rng, Xoshiro256};
 use std::collections::BTreeMap;
 use std::fmt::Debug;
 use ultragraph::*;
-
-/// The snapshot-log candidate's `MIN_LOG`.
-const TRIGGER: usize = 16;
 
 // --- Payload kinds (row K) -----------------------------------------------------------------
 
@@ -190,9 +182,8 @@ fn nodes<W: Clone + Default + EdgeKey>(n: usize) -> UltraGraphWeighted<u8, W> {
 
 /// Random operations over `n` nodes for `steps` steps, checked against the model after each:
 /// keyed adds (45 %), keyed removals (15 %), pair removals (10 %), a node removal followed by a
-/// fresh node at a new position (5 %), and a `freeze`/`unfreeze` round trip (5 %), which turns
-/// every node's log into a snapshot; the rest are repeated reads. A node's log crosses the
-/// trigger many times over 1,500 steps on five nodes.
+/// fresh node at a new position (5 %), and a `freeze`/`unfreeze` round trip (5 %), which
+/// rebuilds every node's lists; the rest are repeated reads, over 1,500 steps on five nodes.
 fn drive<W, F>(seed: u64, n: usize, steps: usize, keys: &[W::Key], mut draw: F)
 where
     W: Clone + Default + EdgeKey + PartialEq + Debug,
@@ -286,7 +277,7 @@ where
     }
     assert!(
         frozen_round_trips > 0,
-        "the driver never rebuilt the lists as snapshots"
+        "the driver never rebuilt the lists through a round trip"
     );
 }
 
@@ -317,94 +308,9 @@ fn test_model_based_keyed_edges_with_field_keys() {
     });
 }
 
-// --- One node across the compaction trigger (rows C, E, H) --------------------------------
+// --- Operations whose order must hold ------------------------------------------------------
 
-/// A graph of `1 + snapshot + extra` nodes whose node 0 carries one edge to each of the nodes
-/// `1..=snapshot`, rebuilt as a snapshot by a `freeze`/`unfreeze` round trip; the nodes above
-/// `snapshot` are free targets for the operations that follow.
-fn node_with_snapshot(snapshot: usize, extra: usize) -> UltraGraphWeighted<u8, Tagged> {
-    let mut g = nodes(1 + snapshot + extra);
-    for t in 1..=snapshot {
-        g.add_edge(0, t, tagged(0, t as u32)).unwrap();
-    }
-    g.freeze();
-    g.unfreeze();
-    assert_eq!(g.number_edges(), snapshot);
-    g
-}
-
-/// `ops` keyed inserts out of node 0 to the free targets, kinds cycling through 1 and 2, after
-/// which the node holds its snapshot and every inserted edge.
-fn insert_then_check(snapshot: usize, ops: usize) {
-    let g_targets = ops.div_ceil(2);
-    let mut g = node_with_snapshot(snapshot, g_targets);
-    let mut expected: BTreeMap<(usize, u8), u32> =
-        (1..=snapshot).map(|t| ((t, 0), t as u32)).collect();
-    for i in 0..ops {
-        let t = 1 + snapshot + i / 2;
-        let kind = 1 + (i % 2) as u8;
-        g.add_edge(0, t, tagged(kind, 100 + i as u32)).unwrap();
-        expected.insert((t, kind), 100 + i as u32);
-    }
-    let mut listed: Vec<((usize, u8), u32)> = g
-        .get_edges(0)
-        .unwrap()
-        .into_iter()
-        .map(|(t, w)| ((t, w.kind), w.w))
-        .collect();
-    listed.sort_unstable();
-    let expected: Vec<((usize, u8), u32)> = expected.into_iter().collect();
-    assert_eq!(listed, expected, "snapshot {snapshot}, {ops} inserts");
-    assert_eq!(g.number_edges(), snapshot + ops);
-    // Every target reads back from its own side as well: one inbound entry per key it carries.
-    for ((t, kind), _) in &expected {
-        assert!(g.contains_edge_keyed(0, *t, *kind));
-        let keys_of_t = expected.iter().filter(|((u, _), _)| u == t).count();
-        assert_eq!(
-            g.inbound_edges(*t).unwrap().collect::<Vec<_>>(),
-            vec![0; keys_of_t]
-        );
-    }
-}
-
-/// Row E with a snapshot shorter than `MIN_LOG`: the trigger is `MIN_LOG`, so 15, 16 and 17
-/// operations sit one below, at and one above it.
-#[test]
-fn test_inserts_around_the_trigger_with_a_short_snapshot() {
-    for ops in [TRIGGER - 1, TRIGGER, TRIGGER + 1] {
-        insert_then_check(5, ops);
-    }
-}
-
-/// Row C: a snapshot exactly `MIN_LOG` long, where the two arms of the trigger coincide.
-#[test]
-fn test_inserts_around_the_trigger_with_a_snapshot_of_the_trigger_length() {
-    for ops in [TRIGGER - 1, TRIGGER, TRIGGER + 1] {
-        insert_then_check(TRIGGER, ops);
-    }
-}
-
-/// Row E with a snapshot longer than `MIN_LOG`: the trigger is the snapshot's length, 40, so
-/// 39, 40 and 41 operations sit one below, at and one above it.
-#[test]
-fn test_inserts_around_the_trigger_with_a_long_snapshot() {
-    for ops in [39, 40, 41] {
-        insert_then_check(40, ops);
-    }
-}
-
-/// Row H: a second crossing. Operations beyond the trigger keep going for twice the trigger
-/// and more, and every edge is present at the end.
-#[test]
-fn test_inserts_across_two_triggers() {
-    insert_then_check(5, 2 * TRIGGER + 3);
-    insert_then_check(TRIGGER, 3 * TRIGGER);
-}
-
-// --- Operations whose order the log must keep ----------------------------------------------
-
-/// A put, a removal and a put of the same keyed edge, within one log: the newest decides, so
-/// the edge exists with the last payload.
+/// A put, a removal and a put of the same keyed edge: the edge exists with the last payload.
 #[test]
 fn test_a_put_after_a_removal_of_the_same_key_is_kept() {
     let mut g: UltraGraphWeighted<u8, Tagged> = nodes(2);
@@ -414,31 +320,6 @@ fn test_a_put_after_a_removal_of_the_same_key_is_kept() {
     assert_eq!(g.get_edges(0).unwrap(), vec![(1, &tagged(1, 20))]);
     assert_eq!(g.number_edges(), 1);
     assert_eq!(g.inbound_edges(1).unwrap().collect::<Vec<_>>(), vec![0]);
-}
-
-/// The same sequence driven across the trigger, so the put, the removal and the newer put
-/// are resolved by a compaction rather than read from the log.
-#[test]
-fn test_a_put_after_a_removal_survives_a_compaction() {
-    let mut g = node_with_snapshot(3, 1);
-    let free = 4;
-    g.add_edge(0, free, tagged(1, 10)).unwrap();
-    g.remove_edge_keyed(0, free, 1).unwrap();
-    g.add_edge(0, free, tagged(1, 20)).unwrap();
-    // 13 further replacements of an existing payload carry the log past the trigger of 16.
-    for i in 0..TRIGGER - 3 {
-        g.add_edge(0, 1, tagged(0, 1_000 + i as u32)).unwrap();
-    }
-    assert!(g.contains_edge_keyed(0, free, 1));
-    let edges: BTreeMap<usize, Tagged> = g
-        .get_edges(0)
-        .unwrap()
-        .into_iter()
-        .map(|(t, w)| (t, *w))
-        .collect();
-    assert_eq!(edges[&free], tagged(1, 20));
-    assert_eq!(edges[&1], tagged(0, 1_000 + (TRIGGER - 4) as u32));
-    assert_eq!(g.number_edges(), 4);
 }
 
 /// A removal of every key of a pair followed by a put of one key: the pair holds that key alone.
@@ -454,18 +335,14 @@ fn test_a_pair_removal_followed_by_a_put_leaves_the_new_key_alone() {
     assert_eq!(g.number_edges(), 1);
 }
 
-/// Repeated puts of one keyed edge within one log, carried past the trigger: the compaction
-/// resolves them as one edge with the newest payload, never as duplicates.
+/// Thirty-three puts of one keyed edge: one edge with the newest payload, never a duplicate.
 #[test]
-fn test_repeated_puts_of_one_edge_compact_to_one_edge() {
+fn test_repeated_puts_of_one_edge_keep_one_edge() {
     let mut g: UltraGraphWeighted<u8, Tagged> = nodes(2);
-    for i in 0..2 * TRIGGER + 1 {
+    for i in 0..33 {
         g.add_edge(0, 1, tagged(7, i as u32)).unwrap();
     }
-    assert_eq!(
-        g.get_edges(0).unwrap(),
-        vec![(1, &tagged(7, 2 * TRIGGER as u32))]
-    );
+    assert_eq!(g.get_edges(0).unwrap(), vec![(1, &tagged(7, 32))]);
     assert_eq!(g.number_edges(), 1);
     assert_eq!(g.inbound_edges(1).unwrap().collect::<Vec<_>>(), vec![0]);
     g.freeze();
@@ -474,7 +351,7 @@ fn test_repeated_puts_of_one_edge_compact_to_one_edge() {
 }
 
 /// Row F: a weight of zero is a payload, not a removal: it is stored, read back and counted,
-/// before and after a compaction.
+/// through repeated puts.
 #[test]
 fn test_a_zero_weight_is_an_edge() {
     let mut g: UltraGraphWeighted<u8, u64> = nodes(2);
@@ -482,7 +359,7 @@ fn test_a_zero_weight_is_an_edge() {
     assert_eq!(g.get_edges(0).unwrap(), vec![(1, &0)]);
     assert!(g.contains_edge(0, 1));
     assert_eq!(g.number_edges(), 1);
-    for _ in 0..TRIGGER + 1 {
+    for _ in 0..17 {
         g.add_edge(0, 1, 0).unwrap();
     }
     assert_eq!(g.get_edges(0).unwrap(), vec![(1, &0)]);
@@ -492,10 +369,10 @@ fn test_a_zero_weight_is_an_edge() {
     assert!(g.contains_edge(0, 0));
 }
 
-/// A node removed while a neighbour's snapshot still names it: the neighbour lists it no more,
-/// in either direction, and the frozen graph agrees.
+/// A node removed after a `freeze`/`unfreeze` round trip rebuilt its neighbours' lists: the
+/// neighbours list it no more, in either direction, and the frozen graph agrees.
 #[test]
-fn test_a_removed_node_leaves_the_snapshots_of_its_neighbours() {
+fn test_a_removed_node_leaves_its_neighbours_lists() {
     let mut g: UltraGraphWeighted<u8, Tagged> = nodes(3);
     g.add_edge(0, 1, tagged(1, 1)).unwrap();
     g.add_edge(0, 1, tagged(2, 2)).unwrap();
@@ -567,26 +444,23 @@ fn test_one_edge_through_every_operation() {
     assert_eq!(g.number_edges(), 0);
 }
 
-/// The parts round trip after a log has been resolved: `to_parts` lists the current edges of
+/// The parts round trip after replacements and a removal: `to_parts` lists the current edges of
 /// every node, and `from_parts` rebuilds the same graph.
 #[test]
-fn test_parts_list_the_current_edges_after_a_log() {
+fn test_parts_list_the_current_edges() {
     let mut d: DynamicGraph<u8, Tagged> = DynamicGraph::new();
     d.add_node(0).unwrap();
     d.add_node(1).unwrap();
-    for i in 0..TRIGGER + 2 {
+    for i in 0..18 {
         d.add_edge(0, 1, tagged((i % 2) as u8, i as u32)).unwrap();
     }
     d.remove_edge_keyed(0, 1, 0).unwrap();
     let (nodes, edges, root) = d.to_parts();
-    assert_eq!(edges[0], vec![(1, tagged(1, (TRIGGER + 1) as u32))]);
+    assert_eq!(edges[0], vec![(1, tagged(1, 17))]);
     assert!(edges[1].is_empty());
     let rebuilt = DynamicGraph::from_parts((nodes, edges, root));
     assert_eq!(rebuilt.number_edges(), 1);
-    assert_eq!(
-        rebuilt.get_edges(0).unwrap(),
-        vec![(1, &tagged(1, (TRIGGER + 1) as u32))]
-    );
+    assert_eq!(rebuilt.get_edges(0).unwrap(), vec![(1, &tagged(1, 17))]);
     assert_eq!(
         rebuilt.inbound_edges(1).unwrap().collect::<Vec<_>>(),
         vec![0]
@@ -635,19 +509,19 @@ fn test_parts_given_out_of_order_are_looked_up_correctly() {
     assert_eq!(inbound, vec![1]);
 }
 
-// --- A hub across the index threshold (the indexed-lists candidate, rows C, E, H) -----------
+// --- A wide hub, grown and shrunk (rows C, E, H) --------------------------------------------
 
-/// The indexed-lists candidate's `HUB_DEGREE`: a list builds its index at this many entries
-/// and drops it below half of it.
-const HUB_DEGREE: usize = 64;
+/// A wide hub: the degree at which the frozen lookup switches to a binary search, and the
+/// size the hub tests grow a node past and shrink it back below half of.
+const WIDE: usize = 64;
 
 /// Random operations on one hub, node 0, against `targets` targets and the kinds 0, 1 and 2,
 /// checked against the model after each, in three phases: a growing phase (puts 60 %, keyed
 /// removals 20 %, pair removals 6 %), a shrinking phase (20 %, 55 %, 10 %) and a growing phase
 /// again, each with a `freeze`/`unfreeze` round trip and `compact_ids` with no tombstone at
 /// 5 % apiece, both of which rebuild the hub's list from entries; the rest repeated reads. The
-/// hub's degree crosses `HUB_DEGREE` upward in each growing phase and falls below half of it in
-/// the shrinking one; the model is the `BTreeMap` of `drive`.
+/// hub's degree rises past `WIDE` in each growing phase and falls below half of it in the
+/// shrinking one; the model is the `BTreeMap` of `drive`.
 fn drive_hub(seed: u64, targets: usize, steps: usize) {
     let mut rng = Xoshiro256::from_seed(seed);
     let n = targets + 1;
@@ -722,10 +596,10 @@ fn drive_hub(seed: u64, targets: usize, steps: usize) {
             _ => {}
         }
         let after = m.edges_of(0).len();
-        if before < HUB_DEGREE && after >= HUB_DEGREE {
+        if before < WIDE && after >= WIDE {
             crossed_up += 1;
         }
-        if before >= HUB_DEGREE / 2 && after < HUB_DEGREE / 2 {
+        if before >= WIDE / 2 && after < WIDE / 2 {
             below_half += 1;
         }
         peak = peak.max(after);
@@ -733,11 +607,11 @@ fn drive_hub(seed: u64, targets: usize, steps: usize) {
         check(&g, &m, &keys, step);
     }
     assert!(
-        peak > HUB_DEGREE + 8,
-        "the hub never rose clearly above the threshold: {peak}"
+        peak > WIDE + 8,
+        "the hub never rose clearly past WIDE: {peak}"
     );
     assert!(
-        trough < HUB_DEGREE / 2 - 8,
+        trough < WIDE / 2 - 8,
         "the hub never fell clearly below half: {trough}"
     );
     assert!(
@@ -747,17 +621,17 @@ fn drive_hub(seed: u64, targets: usize, steps: usize) {
 }
 
 #[test]
-fn test_model_based_hub_across_the_index_threshold() {
+fn test_model_based_hub_growing_and_shrinking() {
     drive_hub(0x5EED_2005, 40, 2_500);
 }
 
-/// The hub grows one keyed edge at a time to one below, at and one above `HUB_DEGREE`, with
-/// every keyed read and the pair test answered at each size; then it shrinks by keyed removals
-/// to half, one below half and further, the same reads answered; then it grows across the
-/// threshold again. Targets carry one to three keys, so entries and targets differ.
+/// The hub grows one keyed edge at a time to one below, at and one above `WIDE`, with every
+/// keyed read and the pair test answered at each size; then it shrinks by keyed removals to
+/// half, one below half and further, the same reads answered; then it grows past `WIDE`
+/// again. Targets carry one to three keys, so entries and targets differ.
 #[test]
-fn test_a_hub_across_the_threshold_in_both_directions() {
-    let targets = HUB_DEGREE + 8;
+fn test_a_hub_grown_and_shrunk_one_edge_at_a_time() {
+    let targets = WIDE + 8;
     let mut g: UltraGraphWeighted<u8, Tagged> = nodes(targets + 1);
     let mut m: Model<Tagged> = Model::new(targets + 1);
     let keys = [0u8, 1, 2];
@@ -777,12 +651,12 @@ fn test_a_hub_across_the_threshold_in_both_directions() {
         }
         check(g, m, &keys, size);
     };
-    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE - 1);
-    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE);
-    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE + 1);
-    grow_to(&mut g, &mut m, &mut count, HUB_DEGREE + 16);
+    grow_to(&mut g, &mut m, &mut count, WIDE - 1);
+    grow_to(&mut g, &mut m, &mut count, WIDE);
+    grow_to(&mut g, &mut m, &mut count, WIDE + 1);
+    grow_to(&mut g, &mut m, &mut count, WIDE + 16);
 
-    // A pair removal on the indexed hub takes both keys of its target.
+    // A pair removal on the wide hub takes both keys of its target.
     assert_eq!(g.remove_edge(0, 1), Ok(()));
     assert_eq!(m.remove_edge(0, 1), 2);
     check(&g, &m, &keys, 1_000);
@@ -796,31 +670,31 @@ fn test_a_hub_across_the_threshold_in_both_directions() {
         }
         check(g, m, &keys, size);
     };
-    shrink_to(&mut g, &mut m, HUB_DEGREE / 2 + 1);
-    shrink_to(&mut g, &mut m, HUB_DEGREE / 2);
-    shrink_to(&mut g, &mut m, HUB_DEGREE / 2 - 1);
+    shrink_to(&mut g, &mut m, WIDE / 2 + 1);
+    shrink_to(&mut g, &mut m, WIDE / 2);
+    shrink_to(&mut g, &mut m, WIDE / 2 - 1);
     shrink_to(&mut g, &mut m, 3);
 
-    // Back across the threshold, with the removed pair re-added along the way.
+    // Back past `WIDE`, with the removed pair re-added along the way.
     let mut count = m.edges_of(0).len();
-    for i in 0..HUB_DEGREE + 5 {
+    for i in 0..WIDE + 5 {
         let (t, k) = (1 + (i % targets), (i % 3) as u8);
         let w = tagged(k, 5_000 + i as u32);
         m.add_edge(0, t, w);
         g.add_edge(0, t, w).unwrap();
         count += 1;
-        if count == HUB_DEGREE - 1 || count == HUB_DEGREE || count == HUB_DEGREE + 1 {
+        if count == WIDE - 1 || count == WIDE || count == WIDE + 1 {
             check(&g, &m, &keys, 2_000 + count);
         }
     }
     check(&g, &m, &keys, 3_000);
 }
 
-/// A hub above the threshold loses a target node and is compacted: every keyed lookup on the
-/// hub answers at the remapped positions, and keyed removal and insertion still work.
+/// A wide hub loses a target node and is compacted: every keyed lookup on the hub answers at
+/// the remapped positions, and keyed removal and insertion still work.
 #[test]
-fn test_an_indexed_hub_survives_a_removal_and_a_compaction() {
-    let targets = HUB_DEGREE + 6;
+fn test_a_wide_hub_survives_a_removal_and_a_compaction() {
+    let targets = WIDE + 6;
     let mut g: UltraGraphWeighted<u8, Tagged> = nodes(targets + 1);
     for t in 1..=targets {
         g.add_edge(0, t, tagged(1, t as u32)).unwrap();
@@ -854,11 +728,11 @@ fn test_an_indexed_hub_survives_a_removal_and_a_compaction() {
     assert_eq!(g.outbound_edges(0).unwrap().count(), targets);
 }
 
-/// `from_parts` given a hub above the threshold in no particular order: keyed lookups, a keyed
-/// removal and a pair removal answer from the entries, and `unfreeze` of such a hub likewise.
+/// `from_parts` given a wide hub in no particular order: keyed lookups, a keyed removal and a
+/// pair removal answer from the entries, and `unfreeze` of such a hub likewise.
 #[test]
-fn test_parts_and_unfreeze_rebuild_a_hub_above_the_threshold() {
-    let targets = HUB_DEGREE + 10;
+fn test_parts_and_unfreeze_rebuild_a_wide_hub() {
+    let targets = WIDE + 10;
     let nodes: Vec<Option<u8>> = (0..=targets).map(|p| Some(p as u8)).collect();
     let mut hub: Vec<(usize, Tagged)> = (1..=targets).map(|t| (t, tagged(0, t as u32))).collect();
     hub.extend(

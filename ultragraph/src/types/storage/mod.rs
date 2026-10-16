@@ -5,7 +5,6 @@
 
 #![forbid(unsafe_code)]
 
-pub(crate) mod edge_list;
 pub mod graph_csm;
 pub mod graph_dynamic;
 pub mod graph_state;

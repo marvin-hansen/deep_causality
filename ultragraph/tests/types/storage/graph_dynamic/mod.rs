@@ -4,4 +4,4 @@
  */
 
 #[cfg(test)]
-mod edge_list_tests;
+mod graph_mut_tests;

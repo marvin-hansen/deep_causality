@@ -314,6 +314,14 @@ Every candidate implements §1–3; they differ in how a node's edges are held.
 All three are `Vec`s, a `Vec<u64>` bitset and `alloc`'s `BTreeMap`: `no_std` with `alloc`, no
 dependencies, no `unsafe`.
 
+**Outcome (2026-10-16, change `ultragraph-live-state-maintained-views`, group 3).** The Vec lists
+stay. Both challengers were built to the same audited suite behind a crate-internal storage trait
+and measured; neither has a parameter value at or under the 1.25× memory gate in every measured
+configuration, so by the rule of §Benchmark both are out. The rows are in §Benchmark and in
+`BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`; the candidates, the trait and their
+features were removed from `ultragraph/src` after the decision, so the Dynamic state holds a
+forward and a backward `Vec` per node as before.
+
 ### 5. Algorithms on the simple projection
 
 **Every algorithm in `GraphAlgorithms` runs on a projection of the graph in the Live or the Frozen
@@ -626,6 +634,20 @@ Graph shapes: the shapes DeepCausality's tests build, and one power-law graph.
 - Live stays if, for k = 1, 16 and 256 keyed writes followed by `strongly_connected_components`, it
   is clearly faster than Dynamic → `freeze` → algorithm → `unfreeze`. Otherwise the work stops for
   Marvin's decision before Live is removed or maintained views are built.
+
+**Edge-storage outcome (2026-10-16).** The Vec lists stay. The memory gate, 1.25 times the Vec
+lists' bytes per edge in every measured configuration (61.2 on the hub of 10⁵ edges, 220.1 on the
+chain of 1,000), is the row the decision rests on: the snapshot-log arrays read 64.97 on the hub
+and 240.11 on the chain at every `MIN_LOG` from 8 to 1,024 (80.97 on the hub at 4); the indexed
+lists 96.34 and 240.11 at every `HUB_DEGREE` from 8 to 8,192. The parameter moves nothing the gate
+reads: the hub's one list compacts at its snapshot's length and is indexed below any threshold,
+and the chain's figure is the 56-byte list header of either challenger against the Vec list's 24,
+32 bytes per node and direction. Timed at their defaults for the record, both are clearly faster
+on the hub rows (the arrays 0.48 µs and 15.1 µs, the index 32 ns and 0.50 µs, against 16.36 µs
+and 29.87 µs), and the arrays walk at 56 to 61 ns per step against 0.6 to 3.1, a read with a log
+resolving it on every call, which would have failed the traversal match on its own. Tables and
+logs: `BenchAfterChange2LiveView/BenchAfterChange2LiveView.md`, group 3. The candidates, the
+storage trait and their features were removed from `ultragraph` with Marvin's approval.
 
 **API impact, under either outcome:**
 - Signatures: `W` gains the bound `EdgeKey`, from `ultragraph_traits`; `remove_edge_keyed`,

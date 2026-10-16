@@ -2,8 +2,8 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2023 - 2026. The DeepCausality Authors and Contributors. All Rights Reserved.
  */
-use crate::types::storage::edge_list::{Backward, EdgeList, Forward};
 use crate::{DynamicGraph, EdgeKey};
+use alloc::vec::Vec;
 use core::mem::size_of;
 
 impl<N, W> DynamicGraph<N, W>
@@ -14,17 +14,17 @@ where
     /// vectors and of every per-node list, each times its element size. The node table is not
     /// edge storage and is not counted.
     pub(crate) fn edge_storage_bytes(&self) -> usize {
-        let forward = self.edges.capacity() * size_of::<Forward<W>>()
+        let forward = self.edges.capacity() * size_of::<Vec<(usize, W)>>()
             + self
                 .edges
                 .iter()
-                .map(EdgeList::storage_bytes)
+                .map(|list| list.capacity() * size_of::<(usize, W)>())
                 .sum::<usize>();
-        let backward = self.backward.capacity() * size_of::<Backward<W>>()
+        let backward = self.backward.capacity() * size_of::<Vec<(usize, W::Key)>>()
             + self
                 .backward
                 .iter()
-                .map(EdgeList::storage_bytes)
+                .map(|list| list.capacity() * size_of::<(usize, W::Key)>())
                 .sum::<usize>();
         forward + backward
     }
