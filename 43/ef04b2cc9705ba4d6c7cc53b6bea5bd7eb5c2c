@@ -1,0 +1,36 @@
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1.md
+  s_d338a9843489ef::t_46fc768a1ffe9d 2417
+  s_d338a9843489ef::t_27a038aed173c6 479
+  s_d338a9843489ef::t_7b2a092f92f64e 463-467
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Open.md
+  s_d338a9843489ef::t_297d7b71c8f869 6-7
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Impl.md
+  s_d338a9843489ef::t_b4165862de1bd0 145-146
+  s_d338a9843489ef::t_1270218aad2c0f 7-8,12-17,21-28,36,50,63-64,69-73,76-78,80-81,90,101-105,108-144,147-155,191-192,209-212,241,243,265,273-274,276,290-291,293,297,301-303,311-314,316,330-331,333,346,357,373,376,380-384,386,388-394,407-416,425,427-429,431,433,435,439-459,465-468,472-475
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Answered.md
+  s_d338a9843489ef::t_297d7b71c8f869 4,108,1497-1498,1502-1504,1507
+  s_d338a9843489ef::t_c8464075c2d422 9-10
+  s_d338a9843489ef::t_b4165862de1bd0 1499-1501,1505-1506
+  s_d338a9843489ef::t_c83e2ddb3bb59f 1508
+openspec/notes/ultragraph/PersistentStoreUltragraphUpdate.md
+  s_d338a9843489ef::t_bce9d21387a628 37-40,60-61,109-111,194-197,607-609,736-737,746-748,773-777,787-788
+  s_d338a9843489ef::t_6e0ee6b4a57cbe 588-590
+openspec/notes/ultragraph/PersistentStorageFormat.md
+  s_d338a9843489ef::t_bac1f8778165d9 1,18-20,381-382,843-846,1104,1117-1128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "43ef04b2cc9705ba4d6c7cc53b6bea5bd7eb5c2c",
+  "prompts": {},
+  "sessions": {
+    "s_d338a9843489ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac16543d-51d3-4eea-b3cf-3ac968f754c9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
