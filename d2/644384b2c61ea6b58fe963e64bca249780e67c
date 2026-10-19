@@ -1,0 +1,589 @@
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-schema/spec.md
+  s_d338a9843489ef::t_cdd2dd51824117 51
+  s_d338a9843489ef::t_2c008fc5151930 1-50,52-112
+openspec/changes/ultragraph-store-storage-and-simulator/specs/ultragraph-store-storage-interface/spec.md
+  s_d338a9843489ef::t_6f425e793ce2ba 1-14,16-20,23
+  s_d338a9843489ef::t_878e9ef6e6b3e0 15,21-22
+openspec/changes/ultragraph-chunked-snapshots/tasks.md
+  s_d338a9843489ef::t_1d00e902936e32 3-4,51-52
+  s_d338a9843489ef::t_f1db4829d3377f 5-7
+  s_d338a9843489ef::t_bc2746c924de8a 70-73
+  s_d338a9843489ef::t_10bce45ad81c5b 1-2,8-9,14-17,29-33,37,39-43,46-47,53-55,58-69,74-85,88-97,99-106,110-118,121,124-133,138-153,156-158,161,163,166-171,175-176
+  s_d338a9843489ef::t_b951e05fe13a26 10-13,18-28,107-109,172-174
+  s_d338a9843489ef::t_21904ee2f5b429 34-36,38,44-45,48-50,56-57,86-87,98,119-120,122-123,134-137,154-155,159-160,162,164-165
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-reads/spec.md
+  s_d338a9843489ef::t_7ff38cefc0a74b 1-8
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-identifiers/spec.md
+  s_d338a9843489ef::t_b23f467b443fff 7,43
+  s_d338a9843489ef::t_14085d54639ed1 1-6,8-42,44-185
+openspec/changes/ultragraph-store-indexes-and-queries/specs/ultragraph-store-queries/spec.md
+  s_d338a9843489ef::t_ef5c52360f4095 1-56,61-121
+  s_d338a9843489ef::t_6a69513ea03774 57-60
+openspec/changes/ultragraph-reserved-positions/proposal.md
+  s_d338a9843489ef::t_ad61d9a682d08d 1-33,37-40,43-81
+  s_d338a9843489ef::t_e302edf87c4839 35-36
+  s_d338a9843489ef::t_960e37db5d9414 34,41-42,82-84
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-engine/spec.md
+  s_d338a9843489ef::t_218a1549155a17 1-6,8-11
+  s_d338a9843489ef::t_4b27c599d47aa7 7
+openspec/changes/ultragraph-chunked-snapshots/design.md
+  s_d338a9843489ef::t_e64f1cc859e13c 28-31
+  s_d338a9843489ef::t_98e91b644b3f35 107,240
+  s_d338a9843489ef::t_016fd86bc9c33c 135,209-216,243
+  s_d338a9843489ef::t_1e2e0313558c45 189-190
+  s_d338a9843489ef::t_921087078904c3 201-208,217-230
+  s_d338a9843489ef::t_9b49ba901e23ee 141-142
+  s_d338a9843489ef::t_7f05ea289f02ff 26-27,110-111,181-188,191-199
+  s_d338a9843489ef::t_6cfc4715f42102 14-15,56-64,78-80,82-83,87-88,97-101,117-124,147-160,249-298
+  s_d338a9843489ef::t_8b006cc1ad4a79 38
+  s_d338a9843489ef::t_a9bf7f866c3b0b 1-10,12-13,16-25,32-37,39,41-55,65-77,81,91,93-96,102-106,108-109,112-116,125-134,136-140,143,145-146,161-180,200,231-239,241-242,244-248
+  s_d338a9843489ef::t_bf4389d8e447f5 11,40,92,144
+  s_d338a9843489ef::t_1e61dc50f62889 84-86,89-90
+openspec/changes/ultragraph-reserved-positions/.openspec.yaml
+  s_d338a9843489ef::t_70eb07ff2beb4b 1-2
+openspec/changes/ultragraph-store-apply-and-schema/tasks.md
+  s_d338a9843489ef::t_85002862d811e9 22-24,138-141,148-149,185-187,206-207,230-233,240-242,258-260,271-272,274-275
+  s_d338a9843489ef::t_0b0638889365a7 105
+  s_d338a9843489ef::t_60c51667446d22 33-34,39,65-66,68-69,78-82,120-122,131,190-191,195-196,239
+  s_d338a9843489ef::t_b866bf3323cb4a 55-57,132-133,167-172
+  s_d338a9843489ef::t_cb91179401ec6d 10-21,40-42,58-64,70-76,95-101,106-110,134-137,147,150-152,158-159,161-162,176-184,192-194,204-205,208,212-216,227-229,254-257,276-277,282,284-291
+  s_d338a9843489ef::t_0c31dbb5a5d9ac 1-9,25-32,35-38,43-54,67,77,83-94,102-104,111-119,123-130,142-146,153-157,160,163-166,173-175,188-189,197-203,209-211,217-226,234-238,243-253,261-270,273,278-281,283
+openspec/changes/ultragraph-reserved-positions/tasks.md
+  s_d338a9843489ef::t_960e37db5d9414 20-24,67-68,73-75,85-86,122-125,128-129,131
+  s_d338a9843489ef::t_d9a52655d92ec9 7-9
+  s_d338a9843489ef::t_5146e3644728dd 33-35
+  s_d338a9843489ef::t_fea06142832e17 1-6,13-17,25-32,38-50,53-66,69-72,76-84,87-121,126-127,130,132
+  s_d338a9843489ef::t_e302edf87c4839 10-12,36-37
+  s_d338a9843489ef::t_4ef2f4748993e8 18-19,51-52
+openspec/changes/ultragraph-store-checkpoints-and-recovery/design.md
+  s_d338a9843489ef::t_5edfb6954e7334 198-217
+  s_d338a9843489ef::t_ebf6f9023bce35 221-239,243-247
+  s_d338a9843489ef::t_4bccbd9ab3a120 38-39,92-93,95-96,120-122
+  s_d338a9843489ef::t_21ca0a09f72778 50-51,140,144,301,311,317,326-329,332,337,341,345-364
+  s_d338a9843489ef::t_19e05ec930a729 1-20,23,29-37,40-49,52-56,60-73,86-91,97-119,123-136,147,163-173,178-197,218-220,248-275,280-282,292-297,299-300,302-305,308-310
+  s_d338a9843489ef::t_c1b9d92c35bc9d 276-279
+  s_d338a9843489ef::t_ff2cb69c460452 74-79,137-139,141-143,145-146,156-162,174,240-242,283-291
+  s_d338a9843489ef::t_bed4ebb73c3690 298
+  s_d338a9843489ef::t_ff352fff9d8457 21-22,24-28,57-59,80-85,94,148-155,175-177,306-307
+  s_d338a9843489ef::t_0a9d169256d2b3 312-316,318-325,330-331,333-336,338-340,342-344
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_12557e1476408c 23-25,27-29
+  s_d338a9843489ef::t_6bceb8b6a2ef0c 1-7,9,11-13,15-17,19-21
+  s_d338a9843489ef::t_d84f074b453b7d 8,10,14,18,22,26,30
+openspec/changes/ultragraph-store-integrity/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_6a5db7ba6eb2f8 6,15,49,51,55-56,58-60,62-64,74,79-81
+  s_d338a9843489ef::t_871a5c62dcea65 53,57,61,65-73
+  s_d338a9843489ef::t_116302e330f907 1-5,7-14,16-48,50,52,54,75,77-78
+  s_d338a9843489ef::t_ac66309cb400e0 76
+openspec/changes/ultragraph-chunked-snapshots/specs/ultragraph-chunked-snapshots/spec.md
+  s_d338a9843489ef::t_5e14f8af952167 4,9,13,18,32-33,40,47,76-87,99-100,105-110,120-121
+  s_d338a9843489ef::t_02834c39b28aff 1-3,5-8,10-12,14-17,19-31,34-39,41-46,48-65,67-75,88-98,101-104,111-119,122-125
+  s_d338a9843489ef::t_b3b528a0d27094 66
+openspec/changes/ultragraph-views-and-indexes/tasks.md
+  s_d338a9843489ef::t_a2676f7c3d55da 4,34,42,83,91
+  s_d338a9843489ef::t_f9a35224cd4b4f 1-3,5-9,14-19,25-28,32-33,35,46-54,57,63,66-73,80-82,92-107,117-126,129-130
+  s_d338a9843489ef::t_cd654445a02ffc 38-41
+  s_d338a9843489ef::t_bc0545bfa4df36 10-13,20-24,29-31,36-37,43-45,55-56,58-62,64-65,74-79,84-90,108-116,127-128
+openspec/changes/ultragraph-store-checkpoints-and-recovery/specs/ultragraph-store-recovery/spec.md
+  s_d338a9843489ef::t_85e32089a67fc9 6,30-32
+  s_d338a9843489ef::t_a0d0c0f66453dc 1-5,7-29,33-44
+openspec/changes/ultragraph-store-storage-and-simulator/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_1f7628e3ee4ac3 1-44,46,51-86,95-111,114,119-131,133,138-152
+  s_d338a9843489ef::t_c7422e1a74eefe 45,47-50
+  s_d338a9843489ef::t_2b7249af404796 87-94
+  s_d338a9843489ef::t_bea42e52278aa4 117-118
+  s_d338a9843489ef::t_ddbf9a0b858d15 132,134-137
+  s_d338a9843489ef::t_67c6dc9b70e728 112-113,115-116
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-records/spec.md
+  s_d338a9843489ef::t_a99836d94ebeb2 1-28,30-34
+  s_d338a9843489ef::t_cdd2dd51824117 29
+openspec/changes/ultragraph-hyperarcs/design.md
+  s_d338a9843489ef::t_518ea122f3a167 1-27,29-36,39-45,53-118,125-150,156-158,169-180,183-186,196-202,205-222,225-229,232,235-255,263-264,266-274,278-286,289-295,297-299,316-317
+  s_d338a9843489ef::t_47c7620293c130 37-38,46-52,119-124,151-155,159-168,181-182,187-195,223-224,230-231,233-234,265,275-277,287-288,296,300-315,318-351,362-366
+  s_d338a9843489ef::t_e1f6b946511e88 203-204
+  s_d338a9843489ef::t_0150dd83eb3d06 256-262,352-361
+  s_d338a9843489ef::t_01f8265fc8ee36 28
+openspec/changes/ultragraph-store-format/design.md
+  s_d338a9843489ef::t_07063b25ad5361 388-402
+  s_d338a9843489ef::t_f73e7f752b5c10 61,71,81,94,99,108,121,132,141,150,158,169,181,190,224
+  s_d338a9843489ef::t_2c2b0f234ec00d 59-60,91-92,104-106,138-139,155-156,166-167,192-222
+  s_d338a9843489ef::t_52e8e8e407d7c5 261-274,277-278,280-382,384-387
+  s_d338a9843489ef::t_9bd117e33303bb 1-9,13-57,62-64,66-70,72-80,82-87,93,95-98,107,109-111,118-120,122-131,133-137,140,142-149,151-154,157,159-164,168,170,175-180,182-189,191,223,225-238,241-249,252-258,260,275-276,279,383
+  s_d338a9843489ef::t_acbd9d1e147241 10-12,58,65,88-90,100-103,112-117,165,171-174,239-240,250-251,259,403
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_8f9f6e8244a6b1 1-42,44-45,47-53,55-58
+  s_d338a9843489ef::t_85e32089a67fc9 43,46,54
+openspec/changes/ultragraph-store-log-and-commit/tasks.md
+  s_d338a9843489ef::t_4d74fe0a66ecbe 1-4,6-14,17-18,20-22,27-28,30-32,42-46,58,61,63,65-77,84-90,92-95,106-109,112-121,125-133,141-144,147-155,161-162,178-184,186,191-195,208-218,225-226,239-247,249-250,252,255-260,263-267
+  s_d338a9843489ef::t_aaea12294a81c4 5,15-16,19,23-26,29,33-41,47-57,59-60,62,64,78-83,91,96-105,110-111,122-124,134-140,145-146,156-160,163-177,185,187-190,196-207,219-224,227-232,236-238,248,251,253-254,261-262,268-274
+  s_d338a9843489ef::t_fd2fe1e6aca7f2 233-235
+openspec/changes/ultragraph-views-and-indexes/specs/ultragraph-maintained-views/spec.md
+  s_d338a9843489ef::t_0bca049fd93ef8 11,27,39-41
+  s_d338a9843489ef::t_c34a93718b4b9d 42
+  s_d338a9843489ef::t_f605105c781f18 1-10,12-26,28-38
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-dynamic-traversal/spec.md
+  s_d338a9843489ef::t_7289fa1aeab141 1-18
+openspec/changes/ultragraph-store-indexes-and-queries/proposal.md
+  s_d338a9843489ef::t_a251f010d806f4 33-38
+  s_d338a9843489ef::t_66a6cb45f66577 1-25,29-32,39-41,45,52,54-65,70-72,84,90-91
+  s_d338a9843489ef::t_a11548135bb902 26-28,42-44,46-51,53,66-69,73-83,85-89,92-94
+openspec/changes/ultragraph-store-format/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-feed-operations-and-purge/specs/ultragraph-store-transactions/spec.md
+  s_d338a9843489ef::t_661bf172c5040e 1-19,24-28,30-47,49,54-65
+  s_d338a9843489ef::t_1160204750c32f 20-23,29,48,50-53
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_62fc14828bd8c1 1-19
+openspec/changes/ultragraph-store-indexes-and-queries/tasks.md
+  s_d338a9843489ef::t_9dd6edd140faa4 1-4,6,83-86,116,119-122,147,150-153,187,191,215,217-220
+  s_d338a9843489ef::t_35adbd3fee8656 7-8,14-18
+  s_d338a9843489ef::t_28fa2655c889a9 13
+  s_d338a9843489ef::t_4d1f70f08c6984 5,9-12,19,35-37,192-194,211,214,216,223
+  s_d338a9843489ef::t_afd719c0daf6b4 20-34,38-82,87-115,117-118,123-146,148-149,154-186,188-190,195-210,212-213,221-222,224-256
+openspec/changes/ultragraph-store-feed-operations-and-purge/design.md
+  s_d338a9843489ef::t_843e4e1867307c 10-13,16-25,39-40,54,67-86,91-93,95-96,113-125,127-129,132-140,148-153,167,172-175,186-187,194-197,200-210,214-244
+  s_d338a9843489ef::t_d1572c8948b485 1-9,14-15,26-38,41-53,55-66,87-90,94,97-112,126,130-131,141-147,154-166,168-171,176-185,188-193,198-199,211-213
+openspec/changes/ultragraph-store-log-and-commit/design.md
+  s_d338a9843489ef::t_bbfa11556bedc7 118
+  s_d338a9843489ef::t_69c2687e28d624 1-6,15-23,28,30-32,47-65,68-71,73-81,83,90-92,106-108,111,113-116,120-123,125-132,134-142,145-147,149-150,153,155-156,163,168-171,177-181,193,200-203,209-213,215,217-223,225-279,282-283,288-291,299-301,303-307,310-314,317,319-321,323-324,331
+  s_d338a9843489ef::t_9de9e76ad13e98 148,152,167,196-198,214,295,298,302,322,325,327-328,330,336,338,345-346,350,355-363,368,370-371,374
+  s_d338a9843489ef::t_4ef579f41cc8b8 296-297
+  s_d338a9843489ef::t_1b6cfb141a438c 7-14,24-27,29,33-43,66-67,72,82,84-89,93-105,109-110,112,117,119,124,133,143-144,151,154,157-162,164-166,172-176,182-192,194-195,199,204-208,216,224,280-281,284-287,292-294,308-309,332-335,337,339-344,347-349,351-354,366-367,369,372-373,375
+  s_d338a9843489ef::t_fd2fe1e6aca7f2 44-46
+  s_d338a9843489ef::t_9b6c9645a2ea70 315-316,318,326,329,364-365
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-projection-view/spec.md
+  s_d338a9843489ef::t_7f09e2b01f2ac0 1-47
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-stable-node-ids/spec.md
+  s_d338a9843489ef::t_caa1025ebe0db2 1-20,22-28,30-37,40-43
+  s_d338a9843489ef::t_1e8d7e6f51b936 21,29,38-39,44-68
+openspec/changes/ultragraph-store-feed-operations-and-purge/tasks.md
+  s_d338a9843489ef::t_0fdeb370b9e25f 22
+  s_d338a9843489ef::t_50eac411c7c721 108,157-158
+  s_d338a9843489ef::t_620473044b78de 24-25
+  s_d338a9843489ef::t_eb75e6a8cf3557 23
+  s_d338a9843489ef::t_0358fd108d995a 12-16,18-21,26-29,31,33-39,43-53,60,62-63,67-72,76-86,101-106,109-111,113-115,128-131,137-138,140-149,159-160,187-193
+  s_d338a9843489ef::t_df662378584b11 1-11,17,30,32,40-42,54-59,61,64-66,73-75,87-100,112,116-127,132-136,139,150-155,161-186
+  s_d338a9843489ef::t_e1c86d60b18965 107,156
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1.md
+  s_d338a9843489ef::t_a87d89d7f80b4f 1915-1920
+  s_d338a9843489ef::t_ea016abd7ad4f9 978
+  s_d338a9843489ef::t_adc4d76a1979bd 1324-1327
+  s_d338a9843489ef::t_1b5b4b2f238de8 1666-1669
+  s_d338a9843489ef::t_0f70bdf968d22d 2166
+  s_d338a9843489ef::t_dbab01075a7401 1128-1130
+  s_d338a9843489ef::t_0b1a00f3c1507c 2028-2029
+  s_d338a9843489ef::t_95ba45cd275d4a 2149-2152
+  s_d338a9843489ef::t_95df21cc10c814 1037
+  s_d338a9843489ef::t_2044cf72594ca5 1108-1113
+  s_d338a9843489ef::t_fd7b0980821257 1131-1132
+  s_d338a9843489ef::t_2d31de15b06c6f 1962-1964
+  s_d338a9843489ef::t_607d4789727f26 1044-1047
+  s_d338a9843489ef::t_c83d3aa15a3c82 2167-2170
+  s_d338a9843489ef::t_7c41b1d917b516 1579-1582
+openspec/changes/ultragraph-hypergraph-algorithms/design.md
+  s_d338a9843489ef::t_656ddfd2e54978 33-36,51-53,63-65,72-78,82-84,87,113-115,129,149-155
+  s_d338a9843489ef::t_9b49ba901e23ee 124-125
+  s_d338a9843489ef::t_112e9ad37bfd35 1-32,37-50,54-62,66-71,79-81,85-86,88-112,116-123,126-128,130-141,143-147
+  s_d338a9843489ef::t_8b006cc1ad4a79 142
+  s_d338a9843489ef::t_d0c93a649438e3 148
+openspec/changes/ultragraph-store-storage-and-simulator/tasks.md
+  s_d338a9843489ef::t_18342a3571078c 20,30,50
+  s_d338a9843489ef::t_5fb95b7005e89d 5,14-19,21,29,31-32,35,40,49,52-53,56-61,73-80,83-95,98-99,107-108,115-123,139-143
+  s_d338a9843489ef::t_6d29c1b38c6775 1-4,6-13,22-28,33-34,36-39,41-48,51,54-55,62-72,81-82,100-106,109-114,124-138
+  s_d338a9843489ef::t_fd2fe1e6aca7f2 96-97
+openspec/changes/ultragraph-reserved-positions/specs/ultragraph-stable-node-ids/spec.md
+  s_d338a9843489ef::t_f028ab0f4e00b8 1-28,30-45,47-50,52-53,55-72,74-76,78-83,86,104-106,108-112,114-116,118-124,126-127,131-136,138-139,148-153,155-169,171-173,175-177,179-185,187-192,194-203,205-207,209-213
+  s_d338a9843489ef::t_250f1376d60874 125
+  s_d338a9843489ef::t_bf6788dff3950c 29,46,51,54,73,77,84-85,87-103,107,113,117,128-130,137,140-147,154,170,174,178,186,193,204,208,214-217
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-apply/spec.md
+  s_d338a9843489ef::t_59e8bea06b6443 1-20,22-29,31-76,78-84,86-110
+  s_d338a9843489ef::t_b23f467b443fff 21,30,77
+  s_d338a9843489ef::t_aebba44d784ded 85
+openspec/changes/ultragraph-chunked-snapshots/specs/ultragraph-checkpoint-rows/spec.md
+  s_d338a9843489ef::t_bab1fffc9fa2ef 4,22-24,44,48,66,69,84,86-87,91
+  s_d338a9843489ef::t_a15d4bc9839e98 1-3,5-21,25-43,45-47,49,51-64,67-68,70-83,85,89-90,92-107
+  s_d338a9843489ef::t_ee72e0634b06a4 50
+  s_d338a9843489ef::t_d2aa880ff8e13c 65
+  s_d338a9843489ef::t_8b006cc1ad4a79 88
+openspec/changes/ultragraph-store-indexes-and-queries/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_ff47c9e92052a2 1-13,15-27
+  s_d338a9843489ef::t_6a69513ea03774 14
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-apply/spec.md
+  s_d338a9843489ef::t_b3d1e857b559b1 1-12
+openspec/changes/ultragraph-store-format/proposal.md
+  s_d338a9843489ef::t_983d32904ac66c 1-16,22-24,31,39-43,46-67,70-72,79-83
+  s_d338a9843489ef::t_89255d68849740 17-21,32-36,76-78
+  s_d338a9843489ef::t_cbd961a3326e0f 25-30,37-38,44-45,68-69,73-75
+openspec/changes/ultragraph-store-apply-and-schema/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/specs/ultragraph-store-engine/spec.md
+  s_d338a9843489ef::t_b4777ac82a95d2 1-4,6-8,12-31
+  s_d338a9843489ef::t_85e32089a67fc9 5,9-11
+openspec/changes/ultragraph-views-and-indexes/specs/ultragraph-chunked-snapshots/spec.md
+  s_d338a9843489ef::t_2325d225d60c8c 1-18,20-54
+  s_d338a9843489ef::t_b994c37117eda9 19
+openspec/changes/ultragraph-views-and-indexes/design.md
+  s_d338a9843489ef::t_1013aed341be76 49,75-85,88-90,92,117-125,128-131,172-179,199-202,208-258
+  s_d338a9843489ef::t_865a7fa63655a6 1-28,33-48,51-74,86-87,91,93-115,127,132,134-171,180-198,203-207
+  s_d338a9843489ef::t_a2676f7c3d55da 50,116,126,133
+  s_d338a9843489ef::t_5799c45181b3e4 29-32,259
+openspec/changes/ultragraph-store-feed-operations-and-purge/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-integrity/tasks.md
+  s_d338a9843489ef::t_1f1516b1d26bac 103-104
+  s_d338a9843489ef::t_751a60c2d1be1b 13-16
+  s_d338a9843489ef::t_10d5dee8424d21 1-11,17,30-38,44-45,52-72,75-76,85-88,93-102,105-107,111-131,138-153,155-159
+  s_d338a9843489ef::t_112fa15f7edbf7 46-47,73-74,77-79,89,108-110,154,164
+  s_d338a9843489ef::t_929956dd370a1b 22-26
+  s_d338a9843489ef::t_b02edb9c95174d 40-43
+  s_d338a9843489ef::t_91678eae9de222 12,18-21,27-29,48-51,80-84,90-92,132-137,160-163,165-167
+  s_d338a9843489ef::t_a5a9c7adaa18fc 39
+openspec/changes/ultragraph-valid-time-timeline/proposal.md
+  s_d338a9843489ef::t_a02b078664c15a 39
+  s_d338a9843489ef::t_3db47d0ff58875 15-17,45-49,57-58,67-68
+  s_d338a9843489ef::t_f819e6b5291840 1-14,18-38,40-44,50-56,59-66,69-77
+openspec/changes/ultragraph-views-and-indexes/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_cdd2dd51824117 8
+  s_d338a9843489ef::t_d469245b923cc3 1-7,9-15
+openspec/changes/ultragraph-store-feed-operations-and-purge/specs/ultragraph-store-feed/spec.md
+  s_d338a9843489ef::t_1160204750c32f 14,54,56-57,59-61,68-69
+  s_d338a9843489ef::t_133eac3d3fcc58 1-13,15-49,51-52,55,58,62,67,70-73
+  s_d338a9843489ef::t_d1978f528feac0 63-66
+  s_d338a9843489ef::t_85e32089a67fc9 50,53
+openspec/changes/ultragraph-chunked-snapshots/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-transactions/spec.md
+  s_d338a9843489ef::t_cdd2dd51824117 43,54-57,72-75
+  s_d338a9843489ef::t_a626ba24e4d070 40,51-52
+  s_d338a9843489ef::t_45a7e384c0f55b 1-39,41-42,44-50,53,58-71,76-101
+openspec/changes/ultragraph-store-feed-operations-and-purge/specs/ultragraph-store-data-model/spec.md
+  s_d338a9843489ef::t_1160204750c32f 4,10-12,14-17,33-36
+  s_d338a9843489ef::t_20b2cd157e6006 1-3,5-9,13,18-32
+openspec/changes/ultragraph-store-feed-operations-and-purge/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_9a2ad98293b6c8 1-13
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-records/spec.md
+  s_d338a9843489ef::t_f3315687aae37d 49
+  s_d338a9843489ef::t_15c514f239f52f 26,93,110,139,146
+  s_d338a9843489ef::t_549f20b7a8e517 1-13,15-25,27-41,43-48,50-64,66-73,75-92,94-109,111-112,114-138,140-142,144-145,147-155
+  s_d338a9843489ef::t_85e32089a67fc9 14,42,65,74,113,143
+openspec/changes/ultragraph-hypergraph-algorithms/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-log-and-commit/proposal.md
+  s_d338a9843489ef::t_621ac7e58783b4 1-20,26-58,61,64-83
+  s_d338a9843489ef::t_e137e425b0e11c 21-25,59-60,62-63
+openspec/changes/ultragraph-reserved-positions/design.md
+  s_d338a9843489ef::t_eb2806e1c0c1f5 1-48,55-83,89-107,114-126,148-164,169-178,181-184,189-202,204,215-217
+  s_d338a9843489ef::t_960e37db5d9414 165
+  s_d338a9843489ef::t_e302edf87c4839 166-168,186-187
+  s_d338a9843489ef::t_d9a52655d92ec9 185
+  s_d338a9843489ef::t_b866bf3323cb4a 49-54,84-88,108-113,135-137,143-145,188,203,205-214,218-223
+  s_d338a9843489ef::t_4ef2f4748993e8 127-134,138-142,146-147,179-180
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-keyed-edges/spec.md
+  s_d338a9843489ef::t_0f5110b1f74bf1 1-60
+openspec/changes/ultragraph-hypergraph-algorithms/proposal.md
+  s_d338a9843489ef::t_656ddfd2e54978 17-19,40,65
+  s_d338a9843489ef::t_54ffd4345ad56b 1-16,20-39,41-64,66-67
+openspec/changes/ultragraph-store-indexes-and-queries/design.md
+  s_d338a9843489ef::t_725349ee8ff2e6 6-7,10-12,15-21,25-27,31-32,40-44,49-50,61,64-66,68,70,94,99-106,108-109,113-118,122,124-131,135-145,153-161,167-184,187,189-192,197,214-215,221,237-242,246-250,265-266,270-316,324,329-330
+  s_d338a9843489ef::t_0db91a7c64797d 13-14,22-24,34-39,74-83,317-323,325
+  s_d338a9843489ef::t_58449d6762934c 162-166,326-328
+  s_d338a9843489ef::t_69adeee2d7771b 89-91
+  s_d338a9843489ef::t_bd8f60da4edb90 1-5,8-9,28-30,33,45-48,51-60,62-63,67,69,71-73,84-88,92-93,95-98,107,110-112,119-121,123,132-134,146-152,185-186,188,193-196,198-213,216-220,222-236,243-245,251-264,267-269
+openspec/changes/ultragraph-chunked-snapshots/specs/ultragraph-three-states/spec.md
+  s_d338a9843489ef::t_fdbc328f923b70 1-18,20,22-34,39-44
+  s_d338a9843489ef::t_8e4ace80d8de9e 19,21,35-38,45
+openspec/changes/ultragraph-reserved-positions/specs/ultragraph-keyed-edges/spec.md
+  s_d338a9843489ef::t_13f5c15664e064 1-3,5-23,26-32,34-73
+  s_d338a9843489ef::t_85e32089a67fc9 4,24-25,33
+openspec/changes/ultragraph-valid-time-timeline/design.md
+  s_d338a9843489ef::t_1211fa7cbf6b20 55-56
+  s_d338a9843489ef::t_6743224a465da6 1-16,21-54,61-63,66-74,76-79,86-89,104,106-110,112-128,130-131,134-135,137-145,154-173,179
+  s_d338a9843489ef::t_ae36b545c45052 17-20,57-60,64-65,75,80-85,90-96,98-103
+  s_d338a9843489ef::t_fb0c0e03e48dac 97,105,111,129,132-133,136,146-153,174-178,180-234
+openspec/changes/ultragraph-hypergraph-algorithms/tasks.md
+  s_d338a9843489ef::t_ce92e4e245d2e1 1-9,13-17,20-26,31-32,36-55,57-58,61
+  s_d338a9843489ef::t_040d8cde34b9ca 10-12,18-19,27-30,33-35,56,59-60
+openspec/changes/ultragraph-hyperarcs/proposal.md
+  s_d338a9843489ef::t_7705b6ec574b2a 15-19,22-23,48-50,54-56,73-74,104,109-112
+  s_d338a9843489ef::t_25a9bcde2d43df 30-31,33-37
+  s_d338a9843489ef::t_bfdc00c6e1ab03 1-14,20-21,24-29,32,38-47,51-53,57-72,75-103,105-108,113-114
+openspec/changes/ultragraph-store-storage-and-simulator/proposal.md
+  s_d338a9843489ef::t_b5f35b5ce66b7b 21-22
+  s_d338a9843489ef::t_98d206d2d16665 20
+  s_d338a9843489ef::t_29b582b28407ad 6-9
+  s_d338a9843489ef::t_5ee2b9d2c720ec 1-4,10-19,23-67
+  s_d338a9843489ef::t_a773454726ca22 5
+openspec/changes/ultragraph-chunked-snapshots/proposal.md
+  s_d338a9843489ef::t_1d9072ef1ea90a 36,39-42,48-51,68-70,72-74
+  s_d338a9843489ef::t_98e91b644b3f35 44,71
+  s_d338a9843489ef::t_c275c5bf93e9bd 1-35,45-47,53-67,75-82,85-92
+  s_d338a9843489ef::t_c4e8594aabb746 83-84
+  s_d338a9843489ef::t_25b733e9606585 52
+  s_d338a9843489ef::t_bf4389d8e447f5 43
+  s_d338a9843489ef::t_56b17279b599d8 37-38
+openspec/notes/ultragraph/PersistentStoreUltragraphUpdate.md
+  s_d338a9843489ef::t_d636e85132bf60 719-722
+  s_d338a9843489ef::t_5e915617351ed4 78-79
+  s_d338a9843489ef::t_f15f084ec191b5 522-524
+  s_d338a9843489ef::t_bc04cac0d6aa2e 602-603
+  s_d338a9843489ef::t_12f77842b3e084 675-676
+  s_d338a9843489ef::t_75dd513ea5ae08 93-94
+  s_d338a9843489ef::t_a4af08d2a8fe0b 193-194
+openspec/changes/ultragraph-store-apply-and-schema/proposal.md
+  s_d338a9843489ef::t_07c7976a3f29e7 19-24,27-32,47-48,56,84-85,88-89,96-98
+  s_d338a9843489ef::t_b263585bba56f3 1-18,25-26,33-46,49-55,57-83,86-87,90-95
+openspec/changes/ultragraph-store-checkpoints-and-recovery/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/design.md
+  s_d338a9843489ef::t_0eb8d3979cebc0 1-5,11-34,37-58,65-68,75-77,85-93,98-101,105-115,123-146,155-171,173-175,180-190,194-197,201-203
+  s_d338a9843489ef::t_49c57c2905c27b 6-10,35-36,59-62,69-74,78-84,94-97,102-104,116-122,147-154,172,191-193,198-200,204-221
+  s_d338a9843489ef::t_450e3a1e23aaf1 63-64,176-179
+openspec/changes/ultragraph-store-integrity/proposal.md
+  s_d338a9843489ef::t_e4c89836ced3f6 1-25,31-55,60-89,91-97
+  s_d338a9843489ef::t_ac66309cb400e0 26-30,56-59,90
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-namespaces/spec.md
+  s_d338a9843489ef::t_06c65d85ecf290 5
+  s_d338a9843489ef::t_db43745415d395 1-4,6-13
+openspec/changes/ultragraph-store-integrity/specs/ultragraph-store-integrity/spec.md
+  s_d338a9843489ef::t_c983ab5008d753 27-29,33,51-54,56,80-81,86-89,92,98-101,128,134,140-143
+  s_d338a9843489ef::t_e64dfe7c0d71f0 1-26,30-32,34-50,55,57-79,82-85,90-91,93-97,102-127,129-133,135-139,144-147
+openspec/changes/ultragraph-store-feed-operations-and-purge/specs/ultragraph-store-schema/spec.md
+  s_d338a9843489ef::t_f18275c1770e5f 1-37
+openspec/changes/ultragraph-store-feed-operations-and-purge/proposal.md
+  s_d338a9843489ef::t_e1c86d60b18965 16-21
+  s_d338a9843489ef::t_c02a814054731b 31-32,45-47,60-66,94-96
+  s_d338a9843489ef::t_c5f841b528ad4c 7-11
+  s_d338a9843489ef::t_3b4b7e8f5e3c3d 1-6,12-15,22-30,33-44,48-59,67-93,97-106
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-checkpoints/spec.md
+  s_d338a9843489ef::t_85e32089a67fc9 5
+  s_d338a9843489ef::t_15c514f239f52f 18
+  s_d338a9843489ef::t_b9d45cc9b72069 1-4,6-17,19
+openspec/changes/ultragraph-store-checkpoints-and-recovery/specs/ultragraph-store-checkpoints/spec.md
+  s_d338a9843489ef::t_9f82666b3aaf6e 8-11,123
+  s_d338a9843489ef::t_85e32089a67fc9 33-38
+  s_d338a9843489ef::t_2db4dcd36b7809 1-7,12-32,39-122,124-148
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-retraction-and-purge/spec.md
+  s_d338a9843489ef::t_fde041deb187ff 1-12
+openspec/changes/ultragraph-store-feed-operations-and-purge/specs/ultragraph-store-retraction-and-purge/spec.md
+  s_d338a9843489ef::t_1160204750c32f 9,16
+  s_d338a9843489ef::t_5a5179690bcb17 1-7,10-15,17-32
+  s_d338a9843489ef::t_85e32089a67fc9 8
+openspec/changes/ultragraph-store-checkpoints-and-recovery/proposal.md
+  s_d338a9843489ef::t_ebf6f9023bce35 25,32-34
+  s_d338a9843489ef::t_c3bac6a314675d 85
+  s_d338a9843489ef::t_5574b13a819ebb 1-24,28-31,35-37,44-55,59-66,70-81
+  s_d338a9843489ef::t_a72965d68aa09d 41-43,56-58
+  s_d338a9843489ef::t_d9cc9be71e693d 26-27
+  s_d338a9843489ef::t_70866e1645dfb7 38-40,67-69,82-84
+openspec/changes/ultragraph-store-apply-and-schema/design.md
+  s_d338a9843489ef::t_b868006b1803aa 10-14,28-32,57-58,62-63,65-66,98,124,312
+  s_d338a9843489ef::t_1644776021a79a 78-83,94-97,111-116,125-126,130,142-143,167-176,187-188,211-214
+  s_d338a9843489ef::t_be80da6ea39b87 131-132
+  s_d338a9843489ef::t_7f5b4f6844777c 205-206,411,415-416
+  s_d338a9843489ef::t_229be397907fc8 1-9,15-27,33-56,59-61,64,67-74,76-77,86,88-93,99-102,104-107,117,119-123,127,129,133-141,144-146,148-149,154,156-158,161-163,165-166,177-182,186,197,199-204,207-209,219,221-226,228-232,259,307-310,315-319,322-326,330,338-340,344-346,356-358,384-386,390-393
+  s_d338a9843489ef::t_e2015b3148f6ac 233-258,311,313-314,327-329,332,349-355,359-360,368-373,382-383,387-389,394-395
+  s_d338a9843489ef::t_91fefd8cb76d79 110,152-153
+  s_d338a9843489ef::t_03fc4dd6876585 75,87,103,118,128,147,155,164,183,198,210,220,227
+  s_d338a9843489ef::t_4b84d3fd01c362 108-109,150-151
+  s_d338a9843489ef::t_3d9e0308bf7b65 347-348,374-377,405-410,412-414,417-433
+  s_d338a9843489ef::t_4b27c599d47aa7 184-185,320-321,378-381
+  s_d338a9843489ef::t_895282ddeaf641 215-218,333-335
+  s_d338a9843489ef::t_9c22c843845a23 260-306,331,336-337,341-343,361-367,396,403-404,434-454
+  s_d338a9843489ef::t_f31c9b3c08e03f 84-85
+  s_d338a9843489ef::t_e16d96ba79f773 159-160,189-196,397-402
+openspec/changes/ultragraph-hyperarcs/tasks.md
+  s_d338a9843489ef::t_05a2467a1c5431 1-6,17,23,25-30,32,41,44-47,52,54-59,61,85-86,94-96,98-101,103-104,106,108,110,121,125-129,131-132,134,136,138,140-141,145-146,148,169,177,179,184-186,188-189,191,203,205-210,213,222-223,225,228,230-231
+  s_d338a9843489ef::t_2a593c788bee0f 7-16,18-20,24,31,33-40,42-43,48-51,53,60,62-84,87-93,97,102,105,107,109,111-120,122-124,130,133,135,137,139,142,144,147,149-156,166-168,170-176,178,180-183,187,190,192-202,204,211-212,214-221,224,226-227,229
+  s_d338a9843489ef::t_0150dd83eb3d06 21-22,143,157-165
+openspec/changes/ultragraph-views-and-indexes/specs/ultragraph-checkpoint-rows/spec.md
+  s_d338a9843489ef::t_87686f4d5033df 1-79
+openspec/changes/ultragraph-store-checkpoints-and-recovery/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_cc47640f095221 1-9,11-23
+  s_d338a9843489ef::t_9f82666b3aaf6e 10
+openspec/changes/ultragraph-hyperarcs/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-materialized-projection/spec.md
+  s_d338a9843489ef::t_d42e55aea6679f 1-20
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-log/spec.md
+  s_d338a9843489ef::t_a30c7b7e3ccfa0 47
+  s_d338a9843489ef::t_3301a7a7b2ea0e 1-46,48-55
+openspec/changes/ultragraph-views-and-indexes/proposal.md
+  s_d338a9843489ef::t_1d71462dd30004 1-11,15-20,25-35,45-46,52-69,76-87,91-94
+  s_d338a9843489ef::t_b46cc9b997b0ba 21-24,36-44,47-51,70-75,88-90
+  s_d338a9843489ef::t_73af6f9f4415bb 12-14
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-data-model/spec.md
+  s_d338a9843489ef::t_585b9d68aa0d22 1-28
+openspec/changes/ultragraph-store-storage-and-simulator/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-records/spec.md
+  s_d338a9843489ef::t_9378b2bb69675c 85-92,94-95,98-103
+  s_d338a9843489ef::t_efb899d990c519 1-57,62-82,84,93,96-97,104-111
+  s_d338a9843489ef::t_c63a574bdccae6 58-61
+  s_d338a9843489ef::t_85e32089a67fc9 83
+openspec/changes/ultragraph-views-and-indexes/specs/ultragraph-layout-benchmark/spec.md
+  s_d338a9843489ef::t_938876ab600240 1-11,13-18,20-27
+  s_d338a9843489ef::t_56895a4473ba1e 19
+  s_d338a9843489ef::t_7ae5b979f4a42f 12
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-engine/spec.md
+  s_d338a9843489ef::t_c1d50bacd0dc64 1-14,16-43,45-85
+  s_d338a9843489ef::t_8ddc7b6095551a 15
+  s_d338a9843489ef::t_44f18b32784844 44
+openspec/changes/ultragraph-valid-time-timeline/specs/ultragraph-valid-time-timeline/spec.md
+  s_d338a9843489ef::t_ee8a204d1a8b0e 4,6,21,32-33,36,46-49,66,85,89,96,100,105-127,130
+  s_d338a9843489ef::t_a02b078664c15a 78
+  s_d338a9843489ef::t_c66b52aa148ee5 1-3,5,7-20,22-31,34-35,37-45,50-65,67-77,79-84,86-88,90-95,97-99,101-104,128-129,131-134
+openspec/changes/ultragraph-store-checkpoints-and-recovery/specs/ultragraph-store-reads/spec.md
+  s_d338a9843489ef::t_9f82666b3aaf6e 34-35
+  s_d338a9843489ef::t_fd218ff2fb7589 1-4,6-33,36-67
+  s_d338a9843489ef::t_a3e8de894bd0e9 5
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-maintained-views/spec.md
+  s_d338a9843489ef::t_601708ad68d366 1-45
+openspec/changes/ultragraph-store-checkpoints-and-recovery/tasks.md
+  s_d338a9843489ef::t_21ca0a09f72778 13-17,19-24,29-32,35-75,80-99,101-103,108-134,136-137,142-190,192-194,199-224,226-227,235-254,256-267
+  s_d338a9843489ef::t_91ade04642c5c5 25-28
+  s_d338a9843489ef::t_694ef21de672af 1-12,18,33-34,76-79,100,104-107,135,138-141,191,195-198,225,228-234,255
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/tasks.md
+  s_d338a9843489ef::t_a193f03054ae55 1-11,14-18,29-33,39-43,49-50,53-65,69-70,75-81,83-85,89-90,101,105-110,113-122,124,134-135,143-144,146-148,150,155
+  s_d338a9843489ef::t_b1b62bb2619784 66
+  s_d338a9843489ef::t_fe864188e7af12 67-68
+  s_d338a9843489ef::t_3628ba325560d4 12-13,19-21,26-28,34-38,44-48,51-52,71-74,82,86-88,91-100,102-104,111-112,123,125-133,136-142,145,149,151-154,156-166
+  s_d338a9843489ef::t_929956dd370a1b 22-25
+openspec/changes/ultragraph-store-integrity/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Impl.md
+  s_d338a9843489ef::t_c6db044c8fee36 72-73
+  s_d338a9843489ef::t_cdcc51799b524e 525
+  s_d338a9843489ef::t_8b71a932118ba5 385-386
+  s_d338a9843489ef::t_456efa802980b1 335
+  s_d338a9843489ef::t_13df4f894e1769 325-327
+  s_d338a9843489ef::t_0f70bdf968d22d 121
+  s_d338a9843489ef::t_8f0314e6daed2a 357-358,361-367
+  s_d338a9843489ef::t_16da97f6f0340c 59
+  s_d338a9843489ef::t_b63c1e7ff90f5a 390-393,398-399,402
+  s_d338a9843489ef::t_a7da6ae5c84596 25-26
+  s_d338a9843489ef::t_f11af11babde53 328-330
+  s_d338a9843489ef::t_123cc3e43fe012 405-406
+  s_d338a9843489ef::t_d3113f6ba24fd8 412-414
+  s_d338a9843489ef::t_db07fc40fab644 210-213,216-217
+  s_d338a9843489ef::t_3a2005f6d752aa 420-421,424-425
+  s_d338a9843489ef::t_43a8c6f89ec975 331-333
+  s_d338a9843489ef::t_cd0952eea6fa37 110-114
+  s_d338a9843489ef::t_ac1acaf8cd73b3 248
+  s_d338a9843489ef::t_7896d49ae62734 106-109,115-120,122-123
+  s_d338a9843489ef::t_cc5227d535aab3 295-296
+  s_d338a9843489ef::t_a1fc07becd7469 258-260,262-263,265,269-270
+  s_d338a9843489ef::t_b2cfad7e03f9c1 40
+  s_d338a9843489ef::t_5cd65139e585bf 404
+  s_d338a9843489ef::t_aa7f72e596add9 439-440
+  s_d338a9843489ef::t_728201aaf04ad5 78-81,83-84,86-89
+  s_d338a9843489ef::t_1b21e35b61168c 313-314
+  s_d338a9843489ef::t_ebfffcbdd7c926 308-309
+  s_d338a9843489ef::t_efeaca8a8fc764 433-434,436
+  s_d338a9843489ef::t_20468c469881c7 339-343
+  s_d338a9843489ef::t_85f23f9a2c587f 334
+openspec/changes/ultragraph-store-storage-and-simulator/design.md
+  s_d338a9843489ef::t_fd2fe1e6aca7f2 30-31
+  s_d338a9843489ef::t_fbb0128fbf88bb 70,83,259,283,286,288
+  s_d338a9843489ef::t_46d2f477c3f0a6 192-210
+  s_d338a9843489ef::t_f40163d3137741 1-8,15-22,32-51,53-62,64-69,71,86-90,94-95,100-105,107-116,118-125,127-130,133-134,155-159,161-168,170-174,176-180,184,186-191,211-225,230-258,265-269,271-274,276,279
+  s_d338a9843489ef::t_e3dc8ce83c1297 9-14,23-29,52,63,72-82,84-85,91-93,96-99,106,117,126,131-132,135-154,160,169,175,181-183,185,226-229,262-264,270,275,277-278,281-282,284-285,289-291
+  s_d338a9843489ef::t_9b6c9645a2ea70 260-261,280,287
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-three-states/spec.md
+  s_d338a9843489ef::t_202044f43d38f7 1-3,5,7-18,23-41
+  s_d338a9843489ef::t_85e32089a67fc9 4,6,19-22
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-superblock/spec.md
+  s_d338a9843489ef::t_0ed0847c44bafe 1-10,12-19
+  s_d338a9843489ef::t_85e32089a67fc9 11
+openspec/changes/ultragraph-store-integrity/design.md
+  s_d338a9843489ef::t_ac66309cb400e0 13-14,26-27,151-152,158,185-191,198-205
+  s_d338a9843489ef::t_751a60c2d1be1b 88,159-161
+  s_d338a9843489ef::t_d2380caa1da17d 61-62,75-87,89-90,101-108,121-122,130-131,137-142,150,211,222-236
+  s_d338a9843489ef::t_112fa15f7edbf7 237-238
+  s_d338a9843489ef::t_431df86bdbdf91 1-12,15-25,28-53,57-60,63-74,91-100,109-120,123-129,132-136,143-149,153-157,162-184,192-197,209-210,212-218,220-221
+  s_d338a9843489ef::t_aa977f560cff33 54-56,206-208,219
+openspec/changes/ultragraph-chunked-snapshots/specs/ultragraph-layout-benchmark/spec.md
+  s_d338a9843489ef::t_713d25520af216 1-4,6-8,10-26,29-49
+  s_d338a9843489ef::t_3a7d78541a4c28 9,27-28
+  s_d338a9843489ef::t_6e956fa04ffc7e 5
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/specs/ultragraph-store-feed/spec.md
+  s_d338a9843489ef::t_85e32089a67fc9 5,22-25
+  s_d338a9843489ef::t_91cfdcfddb14fe 1-4,6-21,26-42
+openspec/changes/ultragraph-store-integrity/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_167b0f5ee83b1f 1-12
+openspec/changes/ultragraph-store-format/tasks.md
+  s_d338a9843489ef::t_d85e544d237c7e 1-12,15-19,28-30,37-38,40-54,60-63,70-92,96-101,110-118,122-182,187-206,210-224,229-234,240-258
+  s_d338a9843489ef::t_f21aeb9afb0319 68-69
+  s_d338a9843489ef::t_5c3890845aea2e 65-67,225-228,235-239,259-262
+  s_d338a9843489ef::t_0bca049fd93ef8 13-14,20-27,31-36,39,55-59,64
+  s_d338a9843489ef::t_c34a93718b4b9d 93-95,105-109,119-121
+  s_d338a9843489ef::t_626accffaf9db5 102-104,183,207-209,263
+  s_d338a9843489ef::t_4628e54753a3fd 184-186
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-feed/spec.md
+  s_d338a9843489ef::t_85e32089a67fc9 9,11
+  s_d338a9843489ef::t_bafd12505df515 1-8,10,12-16,21-23
+  s_d338a9843489ef::t_15c514f239f52f 17-20
+openspec/changes/ultragraph-store-indexes-and-queries/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_4b27c599d47aa7 12-13
+  s_d338a9843489ef::t_bfd4d031b0affe 1-11
+openspec/changes/ultragraph-hypergraph-algorithms/specs/ultragraph-hypergraph-algorithms/spec.md
+  s_d338a9843489ef::t_0ee64167b2bccc 1-3,5,7-11,13,15-31,33,36-59,61-70,72-82,92-98
+  s_d338a9843489ef::t_845422a6ef12af 4,6,14,32,34-35,60,71,83-91
+  s_d338a9843489ef::t_8b006cc1ad4a79 12
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/proposal.md
+  s_d338a9843489ef::t_9eae947f4fe04c 1-85
+  s_d338a9843489ef::t_ac27892be122f6 86-91
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-hyperarcs/spec.md
+  s_d338a9843489ef::t_3a8b250ae06bf5 37-39,59,65,68,75-78,81,141,144,146,153-154,171,202,212,214-215,218-222,233,264-265,289,293-296,304-312,314-337,339,344-347,354
+  s_d338a9843489ef::t_96532f3f5b9d19 225-226
+  s_d338a9843489ef::t_6fef87d4bf5081 358
+  s_d338a9843489ef::t_459b88291d2972 1-36,40-58,60-64,66-67,69-74,79-80,82-140,142-143,145,147-152,155-170,172-201,203-211,213,216-217,223-224,227-232,234-263,266,268-288,290-292,297-299,313,338,340-343,348-353,355-357,359-394
+  s_d338a9843489ef::t_0150dd83eb3d06 267,300-303
+openspec/changes/ultragraph-store-indexes-and-queries/specs/ultragraph-store-indexes/spec.md
+  s_d338a9843489ef::t_4e42db491ec07d 1-37,42-103,108-113,116-128,130-149
+  s_d338a9843489ef::t_6a69513ea03774 38-41,104-107,114-115,129
+openspec/changes/ultragraph-store-log-and-commit/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-format/specs/ultragraph-binary-format/spec.md
+  s_d338a9843489ef::t_2fedd31e661bff 1-3,5-41,43-56,58-71,76-164,166-195,197-228,231-238,243,248-256,258-260,262-274,276-278,280-301,306,310-392,394-437,439-634
+  s_d338a9843489ef::t_85e32089a67fc9 4
+  s_d338a9843489ef::t_f3315687aae37d 42,438
+  s_d338a9843489ef::t_15c514f239f52f 57,72-75,165,196,229-230,239-242,244-247,257,261,275,279,302-305,307-309,393
+openspec/changes/ultragraph-valid-time-timeline/.openspec.yaml
+  s_d338a9843489ef::t_f095973ce20f83 1-2
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-superblock/spec.md
+  s_d338a9843489ef::t_a19189ad98e0c2 14-17
+  s_d338a9843489ef::t_a5c07fb36eb802 1-13,18-24,26-37,39-44,55-57
+  s_d338a9843489ef::t_8f2f1da90e6c04 25
+  s_d338a9843489ef::t_85e32089a67fc9 45
+  s_d338a9843489ef::t_9378b2bb69675c 38,46-54
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_0edc9d967903c9 1-17
+openspec/changes/ultragraph-views-and-indexes/specs/ultragraph-secondary-indexes/spec.md
+  s_d338a9843489ef::t_2b334eadc2d2f3 1-2,16,18-21,23-31,36-46,54,57-61,66-72,81,90-104,109,111-118,120-126,128-144,146-163,165,169,173,176,180-186
+  s_d338a9843489ef::t_506d6faf0a0788 3-15,17,22,32-35,47-53,55-56,62-65,73-80,82-89,105-108,110,119,127,145,164,166-168,170-172,174-175,177-179
+openspec/changes/ultragraph-valid-time-timeline/tasks.md
+  s_d338a9843489ef::t_6976c7c4eed88c 1-3,5-9,16-18,27-30,36,39,42,45-52,55,58,61,64-71,74-76,85-94,97,101-111,113,136,144-146
+  s_d338a9843489ef::t_c997946018e28f 4,10-15,19-26,31-35,37-38,40-41,43-44,53-54,56-57,59-60,62-63,72-73,77-84,95-96,98-100,112,114-135,137-143,147-149
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d2644384b2c61ea6b58fe963e64bca249780e67c",
+  "prompts": {},
+  "sessions": {
+    "s_d338a9843489ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac16543d-51d3-4eea-b3cf-3ac968f754c9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
