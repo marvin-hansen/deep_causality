@@ -1,0 +1,56 @@
+openspec/notes/ultragraph/PersistentStoreUltragraphUpdate.md
+  s_d338a9843489ef::t_dbe4d06bf47aac 239-241
+  s_d338a9843489ef::t_076f86d1aab525 231-236,560-563
+  s_d338a9843489ef::t_e28efe5e898026 255-257,389,415,468-472,492-495
+  s_d338a9843489ef::t_084ba7a55189a1 390-391
+  s_d338a9843489ef::t_45e906b1954515 575-577
+  s_d338a9843489ef::t_0a64d82a1c4c59 237-238
+  s_d338a9843489ef::t_a77b6e477d7cef 35-37,56,59,565-574,578-589,649-650,706-707,723-725,776-778,801-802
+  s_d338a9843489ef::t_dc78a74d478579 564
+openspec/notes/ultragraph/PersistentStoreStage1Bench.md
+  s_d338a9843489ef::t_e28efe5e898026 47-49,189,310-312
+openspec/notes/ultragraph/PersistentStore.md
+  s_d338a9843489ef::t_e28efe5e898026 780-781,1133-1135
+  s_d338a9843489ef::t_6ad9d972b0d359 29,1174-1175
+openspec/notes/ultragraph/PersistentStoreStage1Open.md
+  s_d338a9843489ef::t_c6ac135330e3da 19
+  s_d338a9843489ef::t_e5913e1c1a289b 135-136
+  s_d338a9843489ef::t_dcb01103c837ad 13
+  s_d338a9843489ef::t_5fe47c1d7e1278 4-7,23
+openspec/notes/ultragraph/PersistentStoreStage1Answered.md
+  s_d338a9843489ef::t_5fe47c1d7e1278 4,9,31,1448-1516
+  s_d338a9843489ef::t_c6ac135330e3da 7,47,94-98,101,1446-1447,1517-1610
+  s_d338a9843489ef::t_d1ea62eddc3dda 102,1426-1445
+  s_d338a9843489ef::t_e5913e1c1a289b 1162-1163
+  s_d338a9843489ef::t_a46ee48d541672 8,21,32,34-35,55,60,1072-1106,1136-1161,1164-1218,1272-1375
+  s_d338a9843489ef::t_f74f02df41dc94 1376
+AGENTS.md
+  s_d338a9843489ef::t_2f8bfbc6acd007 632-636
+openspec/notes/ultragraph/PersistentStoreStage1.md
+  s_d338a9843489ef::t_2772fd4742993e 136,186-187
+  s_d338a9843489ef::t_15210b070253ea 104,146-147,1649-1650
+  s_d338a9843489ef::t_a77b6e477d7cef 67-84,585,982,1090-1091,1309-1311,1317,1627-1648,1652-1657,1931-1932,1937-1941,1983-1984,2231-2232
+  s_d338a9843489ef::t_e5913e1c1a289b 1934-1935,2463
+  s_d338a9843489ef::t_084ba7a55189a1 453-455
+  s_d338a9843489ef::t_45e906b1954515 137,188-189,1362,1383-1422,1445-1446,1458-1460,2300-2306,2444-2446,2462,2464
+  s_d338a9843489ef::t_e28efe5e898026 452,470-471,529-532,544-547,559,1537-1542,1544-1545,1561-1563,1789-1790,1794,1808-1810,2454-2456
+  s_d338a9843489ef::t_d1ea62eddc3dda 1607-1609,1622-1623
+openspec/notes/ultragraph/PersistentStoreStage1.5.md
+  s_d338a9843489ef::t_a77b6e477d7cef 38,336-343,397-398
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fcbed53673627f931600751348051db8249a66e7",
+  "prompts": {},
+  "sessions": {
+    "s_d338a9843489ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac16543d-51d3-4eea-b3cf-3ac968f754c9",
+        "model": "unknown"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
