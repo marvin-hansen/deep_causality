@@ -1,0 +1,24 @@
+package-lock.json
+  h_080fb89ca1f0c4 1-3758
+package.json
+  h_080fb89ca1f0c4 1-5
+website/cfd/.node-version
+  h_080fb89ca1f0c4 1
+website/docs/.node-version
+  h_080fb89ca1f0c4 1
+website/quantum/.node-version
+  h_080fb89ca1f0c4 1
+website/web/.node-version
+  h_080fb89ca1f0c4 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fc8e19791e2133f566188d62df704883c4bdbcf4",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
