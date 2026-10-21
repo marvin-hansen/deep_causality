@@ -1,0 +1,14 @@
+website/web/src/content/blog/en/unified-math.md
+  h_080fb89ca1f0c4 347
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bb1cbc704754333bf6e343a161253d509e788c20",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
