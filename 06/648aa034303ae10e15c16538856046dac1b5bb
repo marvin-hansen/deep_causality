@@ -1,0 +1,472 @@
+openspec/changes/ultragraph-store-format/specs/ultragraph-binary-format/spec.md
+  s_d338a9843489ef::t_c85ba030aa6cec 49,137,149-150
+  s_d338a9843489ef::t_d709a63288b9d6 525
+  s_d338a9843489ef::t_c796473c9c098b 234,237-239,245-248,257-259
+  s_d338a9843489ef::t_ee1380337ec272 206-211
+  s_d338a9843489ef::t_75fa81d9b7c083 289-292,298,301-306
+  s_d338a9843489ef::t_0f2e92af6163ac 312-316,329,335-346,352
+  s_d338a9843489ef::t_740b1179ab91f5 420-421,429-437
+  s_d338a9843489ef::t_0f55422643dc3e 193,196,199,205
+  s_d338a9843489ef::t_2db4346242fcc3 212
+  s_d338a9843489ef::t_bdab8ac1657a90 260
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-apply/spec.md
+  s_d338a9843489ef::t_36e09a2012e250 51-69
+  s_d338a9843489ef::t_db24940d7ddfa2 117
+  s_d338a9843489ef::t_013859db3212e7 122-126
+openspec/changes/ultragraph-views-and-indexes/design.md
+  s_d338a9843489ef::t_aeced13219fd4f 269
+  s_d338a9843489ef::t_9e972442c6ec80 85-86,88,95,103,105,129,136
+  s_d338a9843489ef::t_76a1d45190bece 213-215,226-227
+  s_d338a9843489ef::t_33caa87de4719e 171-173,175-179,203-210,212,216-218,220-224,228-231,233-238,240-248,255-256
+  s_d338a9843489ef::t_70f1b674490d7d 274,276-277,279,282-284
+  s_d338a9843489ef::t_1ab840a2a6ff2f 74
+  s_d338a9843489ef::t_c615b7f325525b 75,87,96,104,135,202,211,219,225,232,239,257
+  s_d338a9843489ef::t_fc5714df26f2e4 13-16
+  s_d338a9843489ef::t_7e4d498a6d41f4 266-268,273,275,278,281,285,287-296
+openspec/changes/ultragraph-store-apply-and-schema/proposal.md
+  s_d338a9843489ef::t_ebf8c417681c40 84-95
+openspec/changes/ultragraph-valid-time-timeline/design.md
+  s_d338a9843489ef::t_aeced13219fd4f 230
+  s_d338a9843489ef::t_f9364289d148ba 57-58,67-71,75-77,82-84,95-98,132,135-136,145-154,172-213,227-229,231,236-239,243,246-268,270-276
+  s_d338a9843489ef::t_70f1b674490d7d 235,242,244-245
+  s_d338a9843489ef::t_61f299e2faa722 240
+openspec/changes/ultragraph-valid-time-timeline/proposal.md
+  s_d338a9843489ef::t_396c045dd7cc7b 32-33,37-44,48-49
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Answered.md
+  s_d338a9843489ef::t_5d3d69a919a813 1948-1950
+  s_d338a9843489ef::t_e33d9fd7af3c08 3
+  s_d338a9843489ef::t_fca1047c0cc431 4,11,115,2581-2618
+  s_d338a9843489ef::t_bba9dc3d934828 10,110-114,116-162,1772-1947,1951-2580
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_33403766bd2c83 5-9
+openspec/changes/ultragraph-store-feed-operations-and-purge/tasks.md
+  s_d338a9843489ef::t_60689ed881c625 43-48,51-56,150-155
+  s_d338a9843489ef::t_573bca7ea6633f 22-23,27-29,34-38,42,50,57,77-79,92-93,113,138-139,148-149,169-170,177-178,200
+  s_d338a9843489ef::t_57ef98c64733a3 94
+openspec/changes/ultragraph-store-indexes-and-queries/design.md
+  s_d338a9843489ef::t_4b0aaa4b64bef0 10,38-40,95,101,126-127,131-137,161-163,197,257-304,310-312,324-326,342,345,348,352,357,361-367
+  s_d338a9843489ef::t_aeced13219fd4f 327
+  s_d338a9843489ef::t_86077fec190af5 106
+  s_d338a9843489ef::t_1bae1872c450b5 105
+  s_d338a9843489ef::t_70f1b674490d7d 335-341,343-344,346-347,349-350,353-356,358-359
+  s_d338a9843489ef::t_d6a17ace0d011e 11-15,102-104,171-172
+  s_d338a9843489ef::t_4fcb53fb4f7c62 107-109
+openspec/changes/ultragraph-store-checkpoints-and-recovery/specs/ultragraph-store-checkpoints/spec.md
+  s_d338a9843489ef::t_aa082401e3d66d 23,31-32,53-54,61-68,91,104-105,109,116-119,126-127,135-141
+  s_d338a9843489ef::t_334c1fb3ebaf72 142
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-hyperarcs/spec.md
+  s_d338a9843489ef::t_9e4039dc5dd9fa 280-296
+  s_d338a9843489ef::t_cce52c7adce931 88
+  s_d338a9843489ef::t_fc41462a6a8f77 87
+  s_d338a9843489ef::t_ac9775559928de 89-90
+  s_d338a9843489ef::t_278aaea9d239b2 277-279
+openspec/changes/ultragraph-views-and-indexes/tasks.md
+  s_d338a9843489ef::t_7712b241583506 14-16,21-24,54-60,76-77,85-90,101-108,114-117,130,136-137
+  s_d338a9843489ef::t_07530a7f715803 72-75
+  s_d338a9843489ef::t_76a1d45190bece 70-71
+openspec/changes/ultragraph-hyperarcs/specs/context-store-crate-identity/spec.md
+  s_d338a9843489ef::t_4ffbfb18804b31 1-19
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/specs/ultragraph-store-feed/spec.md
+  s_d338a9843489ef::t_2fc27f6ce03d08 5,7,19-25
+  s_d338a9843489ef::t_c46659435c7ef9 26
+openspec/changes/ultragraph-store-format/proposal.md
+  s_d338a9843489ef::t_fa93ea94589730 76-78
+  s_d338a9843489ef::t_9827027ee321cc 18-21
+openspec/changes/ultragraph-store-integrity/specs/ultragraph-store-integrity/spec.md
+  s_d338a9843489ef::t_b76c59f70d08e8 61,77-84,101,129,134,142-143,145,147-153,162-165
+openspec/changes/ultragraph-views-and-indexes/specs/ultragraph-secondary-indexes/spec.md
+  s_d338a9843489ef::t_3810679d724812 19-20,23-26,44,62,97,111-114,117,137,140-141,151-158,160,170-190,214
+openspec/changes/ultragraph-store-storage-and-simulator/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_7d4c9614b9d909 44-46,114-119,133,147-149
+  s_d338a9843489ef::t_80bdb66958e5f2 150
+openspec/changes/ultragraph-store-integrity/proposal.md
+  s_d338a9843489ef::t_7712b241583506 43-44,50-57,62-64
+openspec/changes/ultragraph-store-feed-operations-and-purge/design.md
+  s_d338a9843489ef::t_70f1b674490d7d 242-243
+  s_d338a9843489ef::t_037cbb272fa63c 11-14
+  s_d338a9843489ef::t_446ba8b8db9310 74-81
+  s_d338a9843489ef::t_1c0499b4808147 179-181
+  s_d338a9843489ef::t_cca15f5396b117 129-132
+  s_d338a9843489ef::t_106b73bb0cd4ed 205
+  s_d338a9843489ef::t_5b83aae997bf5b 24-28
+  s_d338a9843489ef::t_1ba631c972165a 153-154
+  s_d338a9843489ef::t_0a0178b6684e03 159-172
+  s_d338a9843489ef::t_aeced13219fd4f 236
+  s_d338a9843489ef::t_034012b6433b7d 104
+  s_d338a9843489ef::t_b10f427d5ad5ce 113-116
+  s_d338a9843489ef::t_d3e163201fcdd7 208
+  s_d338a9843489ef::t_abd6d3741643a3 198-204,206-207,209-215
+  s_d338a9843489ef::t_5d9cea31384d61 233-235
+  s_d338a9843489ef::t_cc318b24fa7e9b 237-241
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Open.md
+  s_d338a9843489ef::t_198e805d1e0cd8 3,12-19,26-86,107-198,201-755,758-1173,1504-1509,1512-1529
+  s_d338a9843489ef::t_57c40645537af5 1238-1239,1262-1263,1281-1283,1313-1314
+  s_d338a9843489ef::t_fb8a0a1eb37ee6 5-7,24,87-97,101-103,1174-1237,1240-1261,1264-1280,1284-1312,1315-1373,1510-1511
+  s_d338a9843489ef::t_fca1047c0cc431 4,23
+  s_d338a9843489ef::t_7b5f00b90013b4 8-9
+  s_d338a9843489ef::t_0f84f45f98798e 756-757
+  s_d338a9843489ef::t_9513d63e556f65 199-200
+openspec/changes/ultragraph-store-apply-and-schema/tasks.md
+  s_d338a9843489ef::t_3d3e50c1b7a5a9 21-23,59-66,75-78,100-107,112-115,146-152,160-163,186,190-192,198,246-247,260
+  s_d338a9843489ef::t_c6b751eda338df 193-195,199-205,248-252,261-263
+openspec/changes/ultragraph-hyperarcs/specs/ultragraph-keyed-edges/spec.md
+  s_d338a9843489ef::t_b8e121396f0340 1-5,8-9,14,18,22,29-32,34
+  s_d338a9843489ef::t_091a67883fc728 11
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-records/spec.md
+  s_d338a9843489ef::t_33403766bd2c83 18,28-31,42-44,73,75-79
+  s_d338a9843489ef::t_1a7289ff61c76f 74
+  s_d338a9843489ef::t_26f06d405093d4 80
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-records/spec.md
+  s_d338a9843489ef::t_5036bd44f5592e 45,54
+  s_d338a9843489ef::t_c2b90f2bfddab0 83,169
+  s_d338a9843489ef::t_7559edd2df672a 37-38,40,42,56-62,69-70,75-76,113-124,137,159-162,168,172-177
+  s_d338a9843489ef::t_4883fc934a429a 55
+openspec/changes/ultragraph-reserved-positions/specs/ultragraph-stable-node-ids/spec.md
+  s_d338a9843489ef::t_e2a80fd82b03c5 188
+  s_d338a9843489ef::t_cce52c7adce931 195
+  s_d338a9843489ef::t_466a46995ff463 185-187,189-194,196-197
+openspec/changes/ultragraph-store-format/design.md
+  s_d338a9843489ef::t_ff6ad0fb7004ee 130-131,133-134
+  s_d338a9843489ef::t_b28c6c8bae0c0a 15-18
+  s_d338a9843489ef::t_e4703a322fac03 114-121
+  s_d338a9843489ef::t_9a5a1d5adc8294 199-200
+  s_d338a9843489ef::t_8e8030bc72def2 254-311
+  s_d338a9843489ef::t_8f7c8952d6e1bb 247-252
+  s_d338a9843489ef::t_fd42f01ff003ac 171
+  s_d338a9843489ef::t_001d2aecfaa8fd 322
+  s_d338a9843489ef::t_446814f83e66c4 335-344
+  s_d338a9843489ef::t_70f1b674490d7d 348-350,381-384,386-436
+  s_d338a9843489ef::t_25e83e5e06669e 60-61
+  s_d338a9843489ef::t_aeced13219fd4f 351
+  s_d338a9843489ef::t_835b0afce645bf 253
+  s_d338a9843489ef::t_8bcec66f0869ea 352-353
+  s_d338a9843489ef::t_0d85b9b70ae4fc 437-439
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-engine/spec.md
+  s_d338a9843489ef::t_33403766bd2c83 26,43,64,79-81
+  s_d338a9843489ef::t_5c3e1ee88d7853 82
+openspec/changes/ultragraph-reserved-positions/specs/ultragraph-keyed-edges/spec.md
+  s_d338a9843489ef::t_051f86e16a7419 74-82
+openspec/changes/ultragraph-chunked-snapshots/design.md
+  s_d338a9843489ef::t_c615b7f325525b 59,96,98,147,223,232,240,247,254,260,283
+  s_d338a9843489ef::t_1c8b4fc47cab59 95,97
+  s_d338a9843489ef::t_32c510f11a83c7 132
+  s_d338a9843489ef::t_9b9a5c17c9cce3 204-207
+  s_d338a9843489ef::t_fc21bb086676d4 256-257,308-311
+  s_d338a9843489ef::t_153347749d2e18 289-291,296,298-299,302-303,305,312-317
+  s_d338a9843489ef::t_aeced13219fd4f 292
+  s_d338a9843489ef::t_6c99e51d045c45 224-231,233-239,241-246,248-253,255,258-259,261-271
+  s_d338a9843489ef::t_70f1b674490d7d 297,300-301,306
+  s_d338a9843489ef::t_0c09da7fb49e6b 148
+  s_d338a9843489ef::t_6213e3bc5f5833 282
+openspec/changes/ultragraph-store-integrity/design.md
+  s_d338a9843489ef::t_fce265742b6475 200-203
+  s_d338a9843489ef::t_7cd2e3c5d01f62 198
+  s_d338a9843489ef::t_70f1b674490d7d 237,242,246
+  s_d338a9843489ef::t_e86259d0e2f224 19-21
+  s_d338a9843489ef::t_fb80e654c8db91 233-235,239-241,243-245,247-256
+  s_d338a9843489ef::t_1e3332498fca3c 16-18
+  s_d338a9843489ef::t_c52677559a956e 22
+  s_d338a9843489ef::t_e7a5613558cb1d 195-197
+  s_d338a9843489ef::t_c11c09b22afcee 199
+  s_d338a9843489ef::t_cb8361c0b7e671 204-206
+openspec/changes/ultragraph-store-format/tasks.md
+  s_d338a9843489ef::t_8960b1445770d3 35-37
+  s_d338a9843489ef::t_896fd741e720c4 94-97,103-104,112-125,137-141,180-183,188-189,210-211,225-227,233-238,242-243,256,291-293
+  s_d338a9843489ef::t_ffbde27d0ec6e0 20-21,23-25,56
+  s_d338a9843489ef::t_b4da29996a238d 98-100
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/design.md
+  s_d338a9843489ef::t_6f74f17183e6d5 9-12,75-76,158-185
+  s_d338a9843489ef::t_156bcb4928b317 202-204,207-210,213-229
+  s_d338a9843489ef::t_70f1b674490d7d 206,211
+  s_d338a9843489ef::t_14810057229ea7 85-89
+openspec/changes/ultragraph-store-storage-and-simulator/specs/ultragraph-store-storage-interface/spec.md
+  s_d338a9843489ef::t_7d4c9614b9d909 4-5,8,11-18,25,31-37
+  s_d338a9843489ef::t_181acac7a390db 38
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/specs/ultragraph-store-conformance-and-measurements/spec.md
+  s_d338a9843489ef::t_2fc27f6ce03d08 18-19,26-28
+  s_d338a9843489ef::t_9b9bf31330c8c3 29
+openspec/changes/ultragraph-hyperarcs/tasks.md
+  s_d338a9843489ef::t_cce52c7adce931 101-102
+  s_d338a9843489ef::t_0a8efa148e8b82 28-39,41,45-46
+  s_d338a9843489ef::t_e6baecf33feb6e 25-27
+  s_d338a9843489ef::t_22389cc9fff629 100
+  s_d338a9843489ef::t_1ae231d1625421 103
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-checkpoints/spec.md
+  s_d338a9843489ef::t_3d72f9c32b20b1 4,10-11
+openspec/changes/ultragraph-store-integrity/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_b76c59f70d08e8 6,51
+openspec/changes/ultragraph-chunked-snapshots/proposal.md
+  s_d338a9843489ef::t_311957817db92b 87-89
+  s_d338a9843489ef::t_69fb069f2c70bd 30-32
+  s_d338a9843489ef::t_2b37286b0c118b 42-46
+  s_d338a9843489ef::t_ad510f7607fb1b 65
+openspec/notes/ultragraph/PersistentStoreUltragraphUpdate.md
+  s_d338a9843489ef::t_f06c199ea357c7 356-357
+  s_d338a9843489ef::t_4c51d3e781f737 157-158,166-169
+  s_d338a9843489ef::t_fb94ee00ac8a1b 678
+  s_d338a9843489ef::t_90dcd9c8ec4788 781-782
+  s_d338a9843489ef::t_c0201abdffa68d 159-161
+  s_d338a9843489ef::t_d55bdb099abd24 548-549
+  s_d338a9843489ef::t_f60b74a969c526 421-422
+  s_d338a9843489ef::t_471e763a5283fe 139,141
+  s_d338a9843489ef::t_b4c9f80d81d497 537-543
+  s_d338a9843489ef::t_b3091edf5ad900 377-378
+  s_d338a9843489ef::t_0b348db2bc2422 162-165
+  s_d338a9843489ef::t_fb2b13d341378a 133-136,140
+  s_d338a9843489ef::t_a44be3de517fb6 646-647
+  s_d338a9843489ef::t_5afedfb906258c 640-642,645,648
+  s_d338a9843489ef::t_e7d7b31b20541d 226-227,230
+  s_d338a9843489ef::t_c81c327240a188 485-487
+  s_d338a9843489ef::t_aa163690680152 309
+  s_d338a9843489ef::t_ca55462dcf63bb 310
+  s_d338a9843489ef::t_9912cc9dc189af 355,358-359
+  s_d338a9843489ef::t_86a586de6330b1 530
+  s_d338a9843489ef::t_631689eae919f8 779-780
+  s_d338a9843489ef::t_0c345edf7e11d5 884-885
+  s_d338a9843489ef::t_90480b4a55d858 550-556
+  s_d338a9843489ef::t_0a4542d12c19a9 386-387
+  s_d338a9843489ef::t_13b7c06ccd66bd 92-94
+  s_d338a9843489ef::t_331128d50d3b36 90-91
+  s_d338a9843489ef::t_ec74cf6b4489ba 220-222
+  s_d338a9843489ef::t_d680830cfc85a9 420,423
+  s_d338a9843489ef::t_300a2e56273797 679-682
+  s_d338a9843489ef::t_d15ae1861497ef 687
+  s_d338a9843489ef::t_baf6c0081cb96b 631-632
+  s_d338a9843489ef::t_e3d6277cc6e1cc 9-10,293-296,467-468,694-696
+openspec/changes/ultragraph-store-format/specs/ultragraph-store-feed/spec.md
+  s_d338a9843489ef::t_3d72f9c32b20b1 9
+openspec/changes/ultragraph-reserved-positions/tasks.md
+  s_d338a9843489ef::t_97c24fe6917e08 22-24,61-63,78-81,88-90,93-95,104-105,128,131-136,144
+  s_d338a9843489ef::t_cce52c7adce931 69-71
+openspec/notes/ultragraph/PersistentStorageFormat.md
+  s_d338a9843489ef::t_d06778f9e26dfb 324-326
+  s_d338a9843489ef::t_65765057ff2262 388,397-402
+  s_d338a9843489ef::t_ded21d489f51cf 371,373-376
+  s_d338a9843489ef::t_cc8fd38c587732 951-953
+  s_d338a9843489ef::t_93ac4ac9bb3596 452-453
+  s_d338a9843489ef::t_d26abd637dccaf 510-512
+  s_d338a9843489ef::t_72fa5b16350b04 315-316
+  s_d338a9843489ef::t_264a804c007def 790
+  s_d338a9843489ef::t_3118631fb80c5a 466-471,475-476
+  s_d338a9843489ef::t_02755a08aa8b43 194-195
+  s_d338a9843489ef::t_ffd67c2061f158 472-474
+  s_d338a9843489ef::t_fbe7beed42646c 787-789,791-792
+  s_d338a9843489ef::t_d838134ed18355 389-390
+  s_d338a9843489ef::t_435d78c40a54e3 338-340
+  s_d338a9843489ef::t_161a6d1847a9dc 969-975
+  s_d338a9843489ef::t_a100b2f6dca5e7 1127-1129
+  s_d338a9843489ef::t_9d5f8ef03a94af 1130
+  s_d338a9843489ef::t_dd325279d1162a 963
+  s_d338a9843489ef::t_f0db95b7f0ef50 403
+  s_d338a9843489ef::t_452c9c03ee55f3 976
+openspec/changes/ultragraph-store-storage-and-simulator/tasks.md
+  s_d338a9843489ef::t_1e111a4a6a0547 20-21,29-31,36,52,54-57,62-67,84,91,100-102,119-120,130
+  s_d338a9843489ef::t_b9baa5d2b9d9d5 37,92-93,131-133
+  s_d338a9843489ef::t_8eb345bd23c154 38-40
+openspec/changes/ultragraph-reserved-positions/proposal.md
+  s_d338a9843489ef::t_2e972d7ff68c7f 36-38,49-50,73,83-84
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/proposal.md
+  s_d338a9843489ef::t_d54287239e6923 34-38,51-52,56-59
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1.md
+  s_d338a9843489ef::t_62f4d11c7ee536 1450
+  s_d338a9843489ef::t_fa742f50cca646 1435-1438
+  s_d338a9843489ef::t_b832ac1e787e18 759-762
+  s_d338a9843489ef::t_1f1f3a5d05a61b 675-678
+  s_d338a9843489ef::t_d50ec4db385027 1141-1142
+  s_d338a9843489ef::t_3f7e35d56c4418 1493-1496
+  s_d338a9843489ef::t_0325f42b6213f3 1925-1927
+  s_d338a9843489ef::t_45f32e5242af8d 2195-2200,2204-2206
+  s_d338a9843489ef::t_07e7baf833ad23 2137-2139
+  s_d338a9843489ef::t_66e639a275d7ff 606-614,617-620
+  s_d338a9843489ef::t_2c8b0f3ee6f016 1746-1748
+  s_d338a9843489ef::t_1f2cf3b97a67f8 2036
+  s_d338a9843489ef::t_7b2c89622a5631 2179-2181
+  s_d338a9843489ef::t_e0c1966f287507 1742-1743
+  s_d338a9843489ef::t_4a753c9d75fc5f 1116-1117,1122
+  s_d338a9843489ef::t_e1bbf384731778 703-706
+  s_d338a9843489ef::t_37c548ca4bda39 1740,1750
+  s_d338a9843489ef::t_680c29f191c552 1815-1817
+  s_d338a9843489ef::t_a472526d7a6596 401-402
+  s_d338a9843489ef::t_a8567854eff3a5 825-827,831-832
+  s_d338a9843489ef::t_6db0e70f3fa41d 1205-1208,1211-1212
+  s_d338a9843489ef::t_56641ce338416b 914-927,930-933
+  s_d338a9843489ef::t_41930ae0dd25af 1573-1576
+  s_d338a9843489ef::t_3e0373f8572706 1533
+  s_d338a9843489ef::t_43b4d301e728f1 627-629,633-634
+  s_d338a9843489ef::t_1778b9ce2ecc6c 791-795,799-800
+  s_d338a9843489ef::t_e32f9e26529de3 1903-1907
+  s_d338a9843489ef::t_ed9fe0d14eb79f 1553-1558
+  s_d338a9843489ef::t_6686a1da337144 772
+  s_d338a9843489ef::t_f3146b02e4edc5 2210-2213
+  s_d338a9843489ef::t_b8731727edefdb 1538-1544
+  s_d338a9843489ef::t_dc8936bb5d8cf4 1795-1797
+  s_d338a9843489ef::t_d06c8cc93797cf 1814
+  s_d338a9843489ef::t_063cda3de67870 1475-1476
+  s_d338a9843489ef::t_3da463332244e6 1128-1129,1131
+  s_d338a9843489ef::t_d2fb7edc0339e0 2049
+  s_d338a9843489ef::t_fda387ff6b7b3a 1075-1080,1083-1084
+  s_d338a9843489ef::t_f605ca30f827a3 1741
+  s_d338a9843489ef::t_0a02a873a0f50a 1758-1759,1763
+  s_d338a9843489ef::t_be76e53578fd29 1778
+  s_d338a9843489ef::t_86e08a5da834dd 2431-2434
+  s_d338a9843489ef::t_bc913ff0c33105 1744-1745
+  s_d338a9843489ef::t_9656104b42d6ce 1777,1779-1780
+  s_d338a9843489ef::t_7cec5a487f483f 379-380
+  s_d338a9843489ef::t_cc4651ea830b71 2218-2219,2222-2223,2227,2234-2238,2240-2241
+  s_d338a9843489ef::t_4ff9eea4a55e4a 2188-2189
+  s_d338a9843489ef::t_c7acecdd5b38a8 968-970
+  s_d338a9843489ef::t_851a40e5f8c82b 1464-1466
+  s_d338a9843489ef::t_16ba76216053cd 740-743
+  s_d338a9843489ef::t_73b16201bd3186 594-597,599-600
+  s_d338a9843489ef::t_d8aec3b6d0ea6b 671-674
+  s_d338a9843489ef::t_0f29d55a685995 2037
+  s_d338a9843489ef::t_48806688e33c7f 1132-1133
+  s_d338a9843489ef::t_536d372f52f24f 2295
+  s_d338a9843489ef::t_c2570e858d71ce 744
+  s_d338a9843489ef::t_fdb1217ac14a1e 716-720
+  s_d338a9843489ef::t_3ac4d056de2f73 2119-2122
+  s_d338a9843489ef::t_1884547ec027e2 975-977
+  s_d338a9843489ef::t_598ce7bfbb215d 2323-2325
+  s_d338a9843489ef::t_b5f5a3cea4cc64 2690-2691
+  s_d338a9843489ef::t_9296222cf0dcdc 2224
+  s_d338a9843489ef::t_a5ce37125799f2 2265,2267
+  s_d338a9843489ef::t_fbe8b53df07a45 1751-1753
+  s_d338a9843489ef::t_0682f479d35734 697-700
+  s_d338a9843489ef::t_c9428216361539 1491-1492
+  s_d338a9843489ef::t_5d4b0d8e188fc1 1509-1516,1520-1522
+openspec/changes/ultragraph-chunked-snapshots/specs/ultragraph-checkpoint-rows/spec.md
+  s_d338a9843489ef::t_9c3d96712c1608 84
+  s_d338a9843489ef::t_f300c6ac0451c4 88
+  s_d338a9843489ef::t_bcab31aaf77761 48
+  s_d338a9843489ef::t_e45d1f0c9f5224 69
+  s_d338a9843489ef::t_9c631478aa6571 83,85-86
+openspec/changes/ultragraph-store-checkpoints-and-recovery/tasks.md
+  s_d338a9843489ef::t_aa6cdb4356886d 24-26,81-82,94-96,111-115,127-128,161,185-189,247,263-265
+openspec/changes/ultragraph-hyperarcs/proposal.md
+  s_d338a9843489ef::t_d93de73be39cdd 43-51,77-78,94-97,107-110,114-115,119-120
+openspec/changes/ultragraph-store-apply-and-schema/design.md
+  s_d338a9843489ef::t_324d68d5a5567e 30-33,37-38
+  s_d338a9843489ef::t_ba974b02702c1c 319
+  s_d338a9843489ef::t_d6bd1e39412496 83-87
+  s_d338a9843489ef::t_aeced13219fd4f 400
+  s_d338a9843489ef::t_3a974270cc4021 352-353,356-361,364
+  s_d338a9843489ef::t_d1a7c4cde1b3fe 134-137
+  s_d338a9843489ef::t_b3c18651c0a417 184-190
+  s_d338a9843489ef::t_46f837096f131b 147-149
+  s_d338a9843489ef::t_23c24004823d85 195-196
+  s_d338a9843489ef::t_4545b93c91c512 397-399,415,420,425,430-455,459,466,471,474-477
+  s_d338a9843489ef::t_070c736589eafb 369-373
+  s_d338a9843489ef::t_70f1b674490d7d 426-429,456-458
+  s_d338a9843489ef::t_bde2b370632da9 120
+  s_d338a9843489ef::t_c69ae327a0e69a 171-174
+  s_d338a9843489ef::t_34a11b5faf14ad 284-285,288-318,320-340
+  s_d338a9843489ef::t_7bd205aaa50dd5 165-167
+  s_d338a9843489ef::t_9d8a038b431577 205-206
+  s_d338a9843489ef::t_ff21451cd1c8e0 341
+openspec/changes/ultragraph-hyperarcs/design.md
+  s_d338a9843489ef::t_70f1b674490d7d 395
+  s_d338a9843489ef::t_aeced13219fd4f 385
+  s_d338a9843489ef::t_150487b0211069 281-308,311-346,349-360
+  s_d338a9843489ef::t_74ba1385291184 309-310,382-384,387,394,396-397
+  s_d338a9843489ef::t_b56c00424cc5bf 41-42,182-183,235-236,264
+  s_d338a9843489ef::t_d93de73be39cdd 347-348
+openspec/changes/ultragraph-store-integrity/tasks.md
+  s_d338a9843489ef::t_f6ae395008dcc0 22-24,30-32,47-51,66-70,86-87,108-110,117-119,155-156,171-173
+  s_d338a9843489ef::t_e86259d0e2f224 88-90
+openspec/changes/ultragraph-reserved-positions/design.md
+  s_d338a9843489ef::t_3335975ab68688 86-87
+  s_d338a9843489ef::t_c0fd2a6a9a31ec 169-176,180-185,187-190
+  s_d338a9843489ef::t_6aee4aef661e6a 223-225
+  s_d338a9843489ef::t_f02d9b86920705 207-209
+  s_d338a9843489ef::t_aeced13219fd4f 210
+  s_d338a9843489ef::t_b9042460457341 229
+  s_d338a9843489ef::t_70f1b674490d7d 216,221-222,226,230-231
+  s_d338a9843489ef::t_cce52c7adce931 143-146,177-179
+  s_d338a9843489ef::t_0bf62192edf4bf 186
+openspec/changes/ultragraph-store-log-and-commit/design.md
+  s_d338a9843489ef::t_cce52c7adce931 207,301-345,369-390,392-403
+  s_d338a9843489ef::t_c3a0ccfeefd04e 29-31,41-42,117-118,123,132-133,154,157-159,167,173-176,180-182,224-225,264-265,354,358
+openspec/notes/ultragraph/PersistentStoreStage1/PersistentStoreStage1Impl.md
+  s_d338a9843489ef::t_834ac546451618 253-254
+  s_d338a9843489ef::t_ea793b4bd63f2c 344-345
+  s_d338a9843489ef::t_06c29bb688c00a 357-358
+  s_d338a9843489ef::t_fd99d4a3e83f35 359-360
+  s_d338a9843489ef::t_a041673bc47419 37-38,40,53-54,69-72
+  s_d338a9843489ef::t_5f805bead6ed32 381-383
+  s_d338a9843489ef::t_bb6cb4adf44fee 410
+  s_d338a9843489ef::t_b94cead5cc194d 411-412
+  s_d338a9843489ef::t_5126e4cf0fbd36 206-208
+  s_d338a9843489ef::t_c451cf9900edb6 52
+  s_d338a9843489ef::t_288ecf974b9e49 50
+  s_d338a9843489ef::t_0b1d419860a5b6 63-67
+  s_d338a9843489ef::t_aef2ffe0cb884e 68
+  s_d338a9843489ef::t_cfd3281d175337 73-74
+openspec/changes/ultragraph-store-apply-and-schema/specs/ultragraph-store-simulator/spec.md
+  s_d338a9843489ef::t_6b00edd48631a6 4
+openspec/changes/ultragraph-chunked-snapshots/tasks.md
+  s_d338a9843489ef::t_740bbc7c11d0db 61-64
+  s_d338a9843489ef::t_c615b7f325525b 80,129
+  s_d338a9843489ef::t_5ab77c4d328b15 105
+  s_d338a9843489ef::t_0d0bb44e796ca8 36-37,39,54-55,127
+  s_d338a9843489ef::t_b1ac498c982da9 49-53
+  s_d338a9843489ef::t_1bfad56ab422e6 137-139
+  s_d338a9843489ef::t_26c38532ca0233 163-164
+  s_d338a9843489ef::t_50d316f6982969 128,130
+  s_d338a9843489ef::t_8434fb2d5816c1 20
+  s_d338a9843489ef::t_830f42c94a06db 26-28
+openspec/changes/ultragraph-store-checkpoints-and-recovery/specs/ultragraph-store-recovery/spec.md
+  s_d338a9843489ef::t_aa082401e3d66d 6,26,35,38-39,44-46
+  s_d338a9843489ef::t_e711cbece7da05 47
+openspec/changes/ultragraph-store-storage-and-simulator/design.md
+  s_d338a9843489ef::t_fb439d499d7c5e 238-261,285-287,289,292-305
+  s_d338a9843489ef::t_280e8459f411fd 212-214
+  s_d338a9843489ef::t_aeced13219fd4f 288
+  s_d338a9843489ef::t_d8cb13351c1996 41-43,49,72,85,87,89-90,93-96,99-102,151,154-155
+openspec/changes/ultragraph-store-log-and-commit/specs/ultragraph-store-log/spec.md
+  s_d338a9843489ef::t_33403766bd2c83 26,37-42
+openspec/changes/ultragraph-store-checkpoints-and-recovery/design.md
+  s_d338a9843489ef::t_aeced13219fd4f 350
+  s_d338a9843489ef::t_27a4a16b90c0a6 55-57
+  s_d338a9843489ef::t_b8e121396f0340 140-144,152-153,173-174,210,284-327,337,347-349,366,369,373-376
+  s_d338a9843489ef::t_2855e7a1e9e339 128
+  s_d338a9843489ef::t_4cb449402da5af 159-161
+  s_d338a9843489ef::t_70f1b674490d7d 357-359,362-363,367-368,370-372
+openspec/changes/ultragraph-store-feed-operations-and-purge/proposal.md
+  s_d338a9843489ef::t_10a93848afde80 38-41,43-44,59-60,68-70
+openspec/changes/ultragraph-store-connectors-adapters-and-conformance/tasks.md
+  s_d338a9843489ef::t_a6f770bcf08647 14-17
+  s_d338a9843489ef::t_34cf050763a2f6 41-45
+  s_d338a9843489ef::t_d54287239e6923 39-40,161-162
+  s_d338a9843489ef::t_61f299e2faa722 12-13,22-24,35-38,50-54,58-60,69-71,94,142-143,150-155,159,168-169
+openspec/changes/ultragraph-chunked-snapshots/specs/ultragraph-chunked-snapshots/spec.md
+  s_d338a9843489ef::t_7b720d7fc43fd3 104,106
+  s_d338a9843489ef::t_068a045938f61e 4,6
+  s_d338a9843489ef::t_2823d1df78e67d 114
+  s_d338a9843489ef::t_a2495ba3e2d70e 20-23
+  s_d338a9843489ef::t_061e27386f1386 124-142,144
+  s_d338a9843489ef::t_68fd5598a19990 143
+openspec/changes/ultragraph-store-storage-and-simulator/proposal.md
+  s_d338a9843489ef::t_280e8459f411fd 27-34
+openspec/changes/ultragraph-valid-time-timeline/specs/ultragraph-valid-time-timeline/spec.md
+  s_d338a9843489ef::t_396c045dd7cc7b 36
+  s_d338a9843489ef::t_88e06c78b3164e 49-50
+  s_d338a9843489ef::t_1a7289ff61c76f 4,6,20-23,25,40-42,48,52-55,64-65,75-82,85,107,118,128-130
+  s_d338a9843489ef::t_c65e8870d49b15 51
+  s_d338a9843489ef::t_e95945c8115fc5 131
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "06648aa034303ae10e15c16538856046dac1b5bb",
+  "prompts": {},
+  "sessions": {
+    "s_d338a9843489ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac16543d-51d3-4eea-b3cf-3ac968f754c9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
