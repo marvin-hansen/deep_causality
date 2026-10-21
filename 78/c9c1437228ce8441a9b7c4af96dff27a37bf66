@@ -1,0 +1,18 @@
+website/cfd/wrangler.toml
+  h_080fb89ca1f0c4 3-4,6,8
+website/quantum/wrangler.toml
+  h_080fb89ca1f0c4 3-4,8
+website/web/wrangler.toml
+  h_080fb89ca1f0c4 3,12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "78c9c1437228ce8441a9b7c4af96dff27a37bf66",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
