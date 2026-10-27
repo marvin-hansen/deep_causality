@@ -1,0 +1,19 @@
+Cargo.lock
+  s_e7d9aa044e41ea::t_3b482f941dce47 235,237,1429,1431,1905,1907,2029,2031,2234,2236,2514,2516
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c943bebb0d9fe07dd0d3957167afb37ae6323a8b",
+  "prompts": {},
+  "sessions": {
+    "s_e7d9aa044e41ea": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8004f108-584f-4630-9940-66b141e91cbf",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
