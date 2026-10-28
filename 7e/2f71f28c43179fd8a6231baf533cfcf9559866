@@ -1,0 +1,23 @@
+yanked/deep_causality_sparse/README.md
+  s_087101a28308ac::t_384223c15616b3 5-9,11-16
+yanked/deep_causality_sparse/src/lib.rs
+  s_087101a28308ac::t_b88e67c1d9ce61 1-19
+yanked/deep_causality_sparse/Cargo.toml
+  s_087101a28308ac::t_bdf6496d469932 3-6,10-11,16-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7e2f71f28c43179fd8a6231baf533cfcf9559866",
+  "prompts": {},
+  "sessions": {
+    "s_087101a28308ac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "55737241-0889-41e6-9795-1c376618a701",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
