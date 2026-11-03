@@ -1,0 +1,25 @@
+.github/workflows/deps_update.yml
+  s_bd7ba005887f12::t_99f6086ed17c13 1-134
+scripts/update.sh
+  s_bd7ba005887f12::t_a25a01b0cc6b26 66-67,164
+  s_bd7ba005887f12::t_acaad9436cb099 63,162
+  s_bd7ba005887f12::t_03c741d965354d 9-29,37-40
+.github/dependabot.yml
+  s_bd7ba005887f12::t_f4a575149e0947 9-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "abdfeefb7f5638b0b664d6f5d518ec41c7c4ea20",
+  "prompts": {},
+  "sessions": {
+    "s_bd7ba005887f12": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2b366b9-fdb4-41d0-9a8f-72cfa0df025d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
