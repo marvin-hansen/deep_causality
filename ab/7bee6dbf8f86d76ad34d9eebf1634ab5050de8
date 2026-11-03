@@ -1,0 +1,39 @@
+scripts/sync_pnpm_overrides.mjs
+  s_bd7ba005887f12::t_3f5c451759c27a 1-69
+scripts/update.sh
+  s_bd7ba005887f12::t_402eb1633d8cea 80,84-122,138-145,148
+  s_bd7ba005887f12::t_13626dc93962de 38-51
+website/quantum/pnpm-workspace.yaml
+  s_bd7ba005887f12::t_ac4a07961413f6 53-54
+website/cfd/pnpm-workspace.yaml
+  s_bd7ba005887f12::t_0c24cadef63eaf 54
+  s_bd7ba005887f12::t_ac4a07961413f6 53
+website/docs/pnpm-workspace.yaml
+  s_bd7ba005887f12::t_ac4a07961413f6 32
+website/web/pnpm-workspace.yaml
+  s_bd7ba005887f12::t_ac4a07961413f6 37
+website/cfd/pnpm-lock.yaml
+  s_bd7ba005887f12::t_f8e10359eb2a4c 8-9,17,136-137,144,150-152,1982,2012,2014-2015,2019,2022,2026,2632,2666
+website/docs/pnpm-lock.yaml
+  s_bd7ba005887f12::t_79185939c10704 8,129-130,137,143-145,2165,2167-2168,2172,2175,2179,2190-2191,2839
+website/quantum/pnpm-lock.yaml
+  s_bd7ba005887f12::t_3d04c0f3572064 8-9,17,136-137,144,150-152,1982,2012,2014-2015,2019,2022,2026,2632,2666
+website/web/pnpm-lock.yaml
+  s_bd7ba005887f12::t_af789a70d77015 8,16,144-145,152,158-160,2470,2472-2473,2477,2480,2484,3275
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ab7bee6dbf8f86d76ad34d9eebf1634ab5050de8",
+  "prompts": {},
+  "sessions": {
+    "s_bd7ba005887f12": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2b366b9-fdb4-41d0-9a8f-72cfa0df025d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
