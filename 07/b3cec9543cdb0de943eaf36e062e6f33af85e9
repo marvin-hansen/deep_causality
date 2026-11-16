@@ -1,0 +1,24 @@
+deep_causality_unified_math/deep_causality_num/src/lib.rs
+  s_54162a0fb28191::t_ecb0ff8d6b481b 25
+MODULE.bazel
+  s_54162a0fb28191::t_ecb0ff8d6b481b 12-15
+  s_54162a0fb28191::t_82ef7d8be004f2 16
+MODULE.bazel.lock
+  s_54162a0fb28191::t_0321abba6d7e41 226-227
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "07b3cec9543cdb0de943eaf36e062e6f33af85e9",
+  "prompts": {},
+  "sessions": {
+    "s_54162a0fb28191": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dfe5585f-24e0-44ec-b392-a63f7a873c48",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
