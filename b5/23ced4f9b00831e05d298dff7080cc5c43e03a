@@ -1,0 +1,30 @@
+MODULE.bazel.lock
+  h_080fb89ca1f0c4 702,712,736,739,771,849,880,885,996,1006,1130-1131,1135
+website/cfd/package.json
+  h_080fb89ca1f0c4 26
+website/cfd/pnpm-lock.yaml
+  h_080fb89ca1f0c4 35-36,273-274,279-280,285-286,291-292,297-298,1339-1346,1867-1868,1872-1874,1877,2169,2173,2175,2178,2181,2184,2187,3143,3148,3626,3628-3632,3634,3637,3641,3644,3650
+website/docs/package.json
+  h_080fb89ca1f0c4 17
+website/docs/pnpm-lock.yaml
+  h_080fb89ca1f0c4 18-19,153-154,1318-1320,2262,2278,3410
+website/quantum/package.json
+  h_080fb89ca1f0c4 26
+website/quantum/pnpm-lock.yaml
+  h_080fb89ca1f0c4 35-36,273-274,279-280,285-286,291-292,297-298,1339-1346,1867-1868,1872-1874,1877,2169,2173,2175,2178,2181,2184,2187,3143,3148,3626,3628-3632,3634,3637,3641,3644,3650
+website/web/package.json
+  h_080fb89ca1f0c4 25
+website/web/pnpm-lock.yaml
+  h_080fb89ca1f0c4 40-41,299-300,305-306,311-312,317-318,323-324,1756-1763,2316-2317,2321-2323,2326,2640,2644,2646,2649,2652,2655,2658,4056,4061,4575,4577-4581,4583,4586,4590,4593,4599
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b523ced4f9b00831e05d298dff7080cc5c43e03a",
+  "prompts": {},
+  "humans": {
+    "h_080fb89ca1f0c4": {
+      "author": "Marvin Hansen <marvin.hansen@gmail.com>"
+    }
+  }
+}
